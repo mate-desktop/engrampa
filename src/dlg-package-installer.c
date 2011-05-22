@@ -139,10 +139,12 @@ get_packages_real_names (char **names)
 		real_name = g_key_file_get_string (key_file, "Package Matches", names[i], NULL);
 		if (real_name != NULL)
 			real_name = g_strstrip (real_name);
-		if ((real_name == NULL) || (strncmp (real_name, "", 1) == 0))
-			real_names[i] = g_strdup (real_name);
-
-		g_free (real_name);
+		if ((real_name == NULL) || (strncmp (real_name, "", 1) == 0)) {
+			g_free (real_name);
+			real_name = g_strdup (names[i]);
+		}
+		real_names[i] = real_name;
+		real_name = NULL;
 	}
 
 	g_free (filename);
@@ -200,7 +202,7 @@ install_packages (InstallerData *idata)
 					   "InstallPackageNames",
 					   g_variant_new ("(u^ass)",
 							  xid,
-							  names,
+							  real_names,
 							  "hide-confirm-search,hide-finished,hide-warning"),
 					   G_DBUS_CALL_FLAGS_NONE,
 					   G_MAXINT,
