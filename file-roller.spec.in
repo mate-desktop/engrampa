@@ -1,0 +1,97 @@
+%define release 6
+%define prefix  /usr
+%define name	@PACKAGE@
+%define version @VERSION@
+
+Summary:	An archive manager for MATE.
+Name:		%{name}
+Version:    	%{version}
+Release:	%{release}
+Copyright:	GPL
+Vendor:		MATE
+URL:		http://fileroller.sourceforge.net
+Group:		Applications/Archiving
+Source0:	%{name}-%{version}.tar.gz
+Packager:       Paolo Bacchilega <paolo.bacch@tin.it>
+BuildRoot:	%{_builddir}/%{name}-%{version}-root
+Requires:       glib2 >= @GLIB_REQUIRED@
+Requires:       gtk2 >= @GTK_REQUIRED@
+BuildRequires:	glib2-devel >= @GLIB_REQUIRED@
+BuildRequires:	gtk2-devel >= @GTK_REQUIRED@
+
+Docdir:         %{prefix}/share/doc
+
+%description
+File Roller is an archive manager for the MATE environment.  This means that 
+you can : create and modify archives; view the content of an archive; view a 
+file contained in the archive; extract files from the archive.
+File Roller is only a front-end (a graphical interface) to archiving programs 
+like tar and zip. The supported file types are :
+    * 7-Zip Compressed File (.7z)
+    * WinAce Compressed File (.ace)
+    * ALZip Compressed File (.alz)
+    * AIX Small Indexed Archive  (.ar)
+    * ARJ Compressed Archive (.arj)
+    * Cabinet File (.cab)
+    * UNIX CPIO Archive (.cpio)
+    * Debian Linux Package (.deb) [Read-only mode]
+    * ISO-9660 CD Disc Image (.iso) [Read-only mode]
+    * Java Archive (.jar)
+    * Java Enterprise archive (.ear)
+    * Java Web Archive (.war)
+    * LHA Archive (.lzh, .lha)
+    * WinRAR Compressed Archive (.rar)
+    * RAR Archived Comic Book (.cbr)
+    * RPM Linux Package (.rpm) [Read-only mode]
+    * Tape Archive File:
+          * uncompressed (.tar) 
+      or compressed with:
+          * gzip (.tar.gz , .tgz)
+          * bzip (.tar.bz , .tbz)
+          * bzip2 (.tar.bz2 , .tbz2)
+          * compress (.tar.Z , .taz)
+          * lzip (.tar.lz , .tlz)
+          * lzop (.tar.lzo , .tzo)
+          * 7zip (.tar.7z)
+          * xz (.tar.xz)
+    * Stuffit Archives (.bin, .sit)
+    * ZIP Archive (.zip)
+    * ZIP Archived Comic Book (.cbz)
+    * ZOO Compressed Archive File (.zoo)
+    * Single files compressed with gzip, bzip, bzip2, compress, lzip, lzop, 
+      rzip, xz.
+
+%prep
+%setup 
+
+%build
+%configure --disable-schemas-install
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make DESTDIR=$RPM_BUILD_ROOT install
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+%{_bindir}/file-roller
+%{_datadir}/applications/file-roller.desktop
+%{_datadir}/file-roller/glade/*.glade
+%{_datadir}/locale/*/LC_MESSAGES/file-roller.mo
+%{_datadir}/application-registry/file-roller.applications
+%{_datadir}/mime-info/*
+%{_datadir}/pixmaps/file-roller.png
+%{_datadir}/omf/file-roller/*.omf
+%doc %{_datadir}/mate/help/file-roller
+%doc AUTHORS NEWS README COPYING
+%config %{_sysconfdir}/mateconf/schemas/*
+
+%post
+MATECONF_CONFIG_SOURCE=`mateconftool-2 --get-default-source` mateconftool-2 --makefile-install-rule %{_sysconfdir}/mateconf/schemas/file-roller.schemas
+if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
+
+%postun
+if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi

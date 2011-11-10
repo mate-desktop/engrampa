@@ -1,0 +1,1185 @@
+# translation of file-roller.
+# Copyright (C) 2008 THE file-roller'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the file-roller package.
+# Andrea Decorte <adecorte@gmail.com>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-10 00:14+0100\n"
+"PO-Revision-Date: 2008-04-29 09:53+0100\n"
+"Last-Translator: Andrea Decorte <adecorte@gmail.com>\n"
+"Language-Team: Friulian Language Team\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Friulian\n"
+"X-Poedit-Country: ITALY\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../data/glade/add-options.glade.h:1
+msgid "Load Options"
+msgstr "Cjame opzions"
+
+#: ../data/glade/batch-add-files.glade.h:1
+#: ../src/fr-stock.c:43
+msgid "C_reate"
+msgstr "C_ree"
+
+#: ../data/glade/batch-add-files.glade.h:2
+msgid "Create Archive"
+msgstr "Cree archivi"
+
+#: ../data/glade/batch-add-files.glade.h:3
+#: ../src/fr-window.c:4025
+msgid "Location"
+msgstr "Posizion"
+
+#. current location
+#: ../data/glade/batch-add-files.glade.h:4
+#: ../src/fr-window.c:5050
+msgid "Location:"
+msgstr "Posizion:"
+
+#: ../data/glade/batch-add-files.glade.h:5
+msgid "_Archive:"
+msgstr "_Archivi"
+
+#: ../data/glade/batch-password.glade.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">E covente la password</span>"
+
+#: ../data/glade/batch-password.glade.h:2
+#: ../data/glade/password.glade.h:3
+#: ../src/dlg-extract.c:442
+msgid "_Password:"
+msgstr "_Password:"
+
+#: ../data/glade/delete.glade.h:1
+msgid "Delete"
+msgstr "Elimine"
+
+#: ../data/glade/delete.glade.h:2
+#: ../src/dlg-extract.c:394
+msgid "_All files"
+msgstr "_Ducj i files"
+
+#: ../data/glade/delete.glade.h:3
+#: ../src/dlg-extract.c:380
+msgid "_Files:"
+msgstr "_Files:"
+
+#: ../data/glade/delete.glade.h:4
+#: ../src/dlg-extract.c:401
+msgid "_Selected files"
+msgstr "Files _selezionâts"
+
+#: ../data/glade/delete.glade.h:5
+#: ../src/dlg-extract.c:391
+msgid "example: *.txt; *.doc"
+msgstr "esempli: *.txt; *.doc"
+
+#: ../data/glade/open-with.glade.h:1
+msgid "A_vailable application:"
+msgstr "Aplica_zion disponibil:"
+
+#: ../data/glade/open-with.glade.h:2
+msgid "Open Files"
+msgstr "Vierç files"
+
+#: ../data/glade/open-with.glade.h:3
+msgid "R_ecent applications:"
+msgstr "Ultimis aplicazions:"
+
+#: ../data/glade/open-with.glade.h:4
+msgid "_Application:"
+msgstr "_Aplicazion:"
+
+#: ../data/glade/password.glade.h:1
+msgid "<i><b>Note:</b> the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b>Note:</b> la password e vignarà doprade par cifrâ i files che tu zontis al archivi atuâl, e par decifrâ i files che tu tiris fûr dal archivi atuâl. Cuant che l'archivi al ven sierât, la password e vignarà eliminade.</i>"
+
+#: ../data/glade/password.glade.h:2
+msgid "Password"
+msgstr "Password"
+
+#: ../data/glade/update.glade.h:1
+msgid "S_elect the files you want to update:"
+msgstr "Si_elç i files che tu vuelis inzornâ:"
+
+#. secondary text
+#: ../data/glade/update.glade.h:2
+#: ../src/dlg-update.c:180
+#, c-format
+msgid "The file has been modified with an external application. If you don't update the version in the archive, all of your changes will be lost.There are %d files that have been modified with an external application. If you don't update the files in the archive, all of your changes will be lost."
+msgstr "Il file al è stât modificât cuntune aplicazion esterne. Se no tu inzornis la version tal archivi, ducj i tiei cambiaments a laran pierdûts.A son %d files che a son stâts modificâts cuntuntune aplicazion esterne. Se no tu inzornis i files tal archivi, ducj i tiei cambiaments a laran pierdûts."
+
+#: ../data/glade/update.glade.h:3
+msgid "_Update"
+msgstr "_Inzorne"
+
+#. Create the application.
+#: ../data/file-roller.desktop.in.in.h:1
+#: ../src/fr-window.c:1888
+#: ../src/fr-window.c:4751
+#: ../src/main.c:218
+msgid "Archive Manager"
+msgstr "Gjestôr di archivis"
+
+#: ../data/file-roller.desktop.in.in.h:2
+msgid "Create and modify an archive"
+msgstr "Cree e modifiche un archivi"
+
+#: ../caja/caja-fileroller.c:238
+msgid "Extract Here"
+msgstr "Tire fûr ca"
+
+#: ../caja/caja-fileroller.c:239
+msgid "Extract the selected archive in the current position"
+msgstr "Tirê fûr l'archivi selezionât inte posizion atuâl"
+
+#: ../caja/caja-fileroller.c:256
+msgid "Extract To..."
+msgstr "Tire fûr in..."
+
+#: ../caja/caja-fileroller.c:257
+msgid "Extract the selected archive"
+msgstr "Tire fûr l'archivi selezionât"
+
+#: ../caja/caja-fileroller.c:276
+msgid "Create Archive..."
+msgstr "Cree archivi..."
+
+#: ../caja/caja-fileroller.c:277
+msgid "Create an archive with the selected objects"
+msgstr "Cree un archivi cui ogjets selezionâts"
+
+#: ../src/actions.c:144
+#: ../src/actions.c:182
+#: ../src/actions.c:220
+#: ../src/dlg-batch-add.c:126
+#: ../src/dlg-batch-add.c:141
+#: ../src/dlg-batch-add.c:170
+#: ../src/dlg-batch-add.c:214
+#: ../src/dlg-batch-add.c:261
+#: ../src/fr-window.c:2634
+msgid "Could not create the archive"
+msgstr "No si pues creâ l'archivi"
+
+#: ../src/actions.c:145
+#: ../src/dlg-batch-add.c:127
+#: ../src/dlg-batch-add.c:262
+msgid "You have to specify an archive name."
+msgstr "Tu scugnis specificâ un non pal archivi."
+
+#: ../src/actions.c:183
+msgid "You don't have permission to create an archive in this folder"
+msgstr "No tu âs i permès che a coventi par creâ un archivi in cheste cartele"
+
+#: ../src/actions.c:221
+#: ../src/fr-archive.c:1225
+#: ../src/fr-window.c:5407
+#: ../src/fr-window.c:5556
+msgid "Archive type not supported."
+msgstr "Gjenar di archivi no supuartât."
+
+#: ../src/actions.c:232
+msgid "The archive already exists.  Do you want to overwrite it?"
+msgstr "L'archivi al esist za.  Vuelistu sostituîlu?"
+
+#: ../src/actions.c:235
+msgid "Overwrite"
+msgstr "Sostituìs"
+
+#: ../src/actions.c:254
+msgid "Could not delete the old archive."
+msgstr "Non si pues eliminâ il vecjo archivi."
+
+#: ../src/actions.c:359
+msgid "New"
+msgstr "Gnûf"
+
+#: ../src/actions.c:382
+#: ../src/actions.c:508
+#: ../src/actions.c:621
+#: ../src/fr-window.c:4650
+msgid "All archives"
+msgstr "Ducj i archivis"
+
+#: ../src/actions.c:389
+#: ../src/actions.c:515
+#: ../src/actions.c:628
+msgid "All files"
+msgstr "Ducj i files"
+
+#: ../src/actions.c:399
+#: ../src/actions.c:636
+msgid "Archive type:"
+msgstr "Gjenar di archivi:"
+
+#: ../src/actions.c:403
+#: ../src/actions.c:640
+msgid "Automatic"
+msgstr "Automatic"
+
+#: ../src/actions.c:497
+#: ../src/fr-window.c:5256
+msgid "Open"
+msgstr "Vierç"
+
+#: ../src/actions.c:584
+msgid "Save"
+msgstr "Salve"
+
+#: ../src/actions.c:952
+#: ../src/fr-window.c:6517
+msgid "Last Output"
+msgstr "Ultin output"
+
+#: ../src/actions.c:980
+msgid "File Roller is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+msgstr "File Roller al è software libar; tu puedis tornâ a distribuîlu e/o modificâlu sot dai tiermins de GNU General Public License publicade de Free Software Foundation; sei la version 2 de Licence, sei a to sielte cualsisei version sucessive."
+
+#: ../src/actions.c:984
+msgid "File Roller is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+msgstr "File Roller al è dât fûr cun la sperance che al sedi util, ma CENCE NISSUNE GARANZIE; cence neancje la garanzie di VENDIBILITÂT o di JESSI ADAT A UN FIN PARTICOLÂR. Cjale la GNU General Public License par altris detais."
+
+#: ../src/actions.c:988
+msgid "You should have received a copy of the GNU General Public License along with File Roller; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr "Tu varessis di vê ricevût une copie de GNU General Public License insieme cun File Roller; se nol è cussì, scrîf a Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA "
+
+#: ../src/actions.c:998
+msgid "Copyright Â© 2001-2007 Free Software Foundation, Inc."
+msgstr "Copyright © 2001-2007 Free Software Foundation, Inc."
+
+#: ../src/actions.c:999
+msgid "An archive manager for MATE."
+msgstr "Un gjestôr di archivis par MATE."
+
+#: ../src/actions.c:1002
+msgid "translator-credits"
+msgstr "Andrea Decorte <adecorte@gmail.com>"
+
+#: ../src/dlg-add-files.c:87
+#: ../src/dlg-add-files.c:147
+#: ../src/dlg-add-folder.c:123
+#: ../src/dlg-add-folder.c:211
+msgid "Could not add the files to the archive"
+msgstr "No si pues zontâ i files al archivi"
+
+#: ../src/dlg-add-files.c:88
+#: ../src/dlg-add-files.c:148
+#: ../src/dlg-add-folder.c:124
+#: ../src/dlg-add-folder.c:212
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "No tu âs i permès che a coventin par lei files de cartele \"%s\""
+
+#: ../src/dlg-add-files.c:171
+#: ../src/ui.h:49
+msgid "Add Files"
+msgstr "Zonte files"
+
+#: ../src/dlg-add-files.c:185
+#: ../src/dlg-add-folder.c:274
+msgid "_Add only if newer"
+msgstr "_Zonte dome se a son plui gnûfs"
+
+#: ../src/dlg-add-folder.c:260
+msgid "Add a Folder"
+msgstr "Zonte une cartele"
+
+#: ../src/dlg-add-folder.c:275
+msgid "_Include subfolders"
+msgstr "_Inclût sotcartelis"
+
+#: ../src/dlg-add-folder.c:276
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "Esclût lis cartelis che a son leams simboli_cs"
+
+#: ../src/dlg-add-folder.c:279
+#: ../src/dlg-add-folder.c:284
+msgid "example: *.o; *.bak"
+msgstr "esempli: *.o; *.bak"
+
+#: ../src/dlg-add-folder.c:280
+msgid "_Include files:"
+msgstr "_Inclût files:"
+
+#: ../src/dlg-add-folder.c:285
+msgid "E_xclude files:"
+msgstr "E_sclût files:"
+
+#: ../src/dlg-add-folder.c:288
+msgid "_Load Options"
+msgstr "C_jame opzions"
+
+#: ../src/dlg-add-folder.c:289
+msgid "Sa_ve Options"
+msgstr "Sal_ve opzions"
+
+#: ../src/dlg-add-folder.c:741
+msgid "Save Options"
+msgstr "Salve opzions"
+
+#: ../src/dlg-add-folder.c:742
+msgid "Options Name:"
+msgstr "Non opzions:"
+
+#: ../src/dlg-ask-password.c:123
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr "Met la password pal archivi '%s'."
+
+#: ../src/dlg-batch-add.c:142
+#: ../src/fr-window.c:6813
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"Il non \"%s\" nol è valit parcè che al à dentri i caratars: %s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:145
+#: ../src/fr-window.c:6805
+#: ../src/fr-window.c:6809
+#: ../src/fr-window.c:6813
+#: ../src/fr-window.c:6849
+#: ../src/fr-window.c:6851
+msgid "Please use a different name."
+msgstr "Dopre par plasê un non diviers."
+
+#: ../src/dlg-batch-add.c:171
+msgid "You don't have the right permissions to create an archive in the destination folder."
+msgstr "No tu âs i permès che a coventin par creâ un archivi inte cartele di destinazion."
+
+#: ../src/dlg-batch-add.c:187
+#: ../src/dlg-extract.c:114
+#: ../src/fr-window.c:5907
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"La cartele di destinazion \"%s\" no esist.\n"
+"\n"
+"Vuelistu creâle?"
+
+#: ../src/dlg-batch-add.c:196
+#: ../src/dlg-extract.c:123
+#: ../src/fr-window.c:5916
+msgid "Create _Folder"
+msgstr "Cree carte_le"
+
+#: ../src/dlg-batch-add.c:215
+#: ../src/dlg-extract.c:140
+#: ../src/fr-window.c:5936
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "No si pues creâ la cartele di destinazion: %s."
+
+#: ../src/dlg-batch-add.c:232
+msgid "Archive not created"
+msgstr "Archivi no creât"
+
+#: ../src/dlg-batch-add.c:280
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "L'archivi al è za presint.  Vuelistu sostituîlu?"
+
+#: ../src/dlg-batch-add.c:283
+msgid "_Overwrite"
+msgstr "_Sostituissilu"
+
+#: ../src/dlg-extract.c:145
+#: ../src/dlg-extract.c:163
+#: ../src/dlg-extract.c:189
+#: ../src/fr-window.c:3579
+#: ../src/fr-window.c:5935
+#: ../src/fr-window.c:5952
+msgid "Extraction not performed"
+msgstr "Estrazion no eseguide"
+
+#: ../src/dlg-extract.c:190
+#: ../src/fr-window.c:3737
+#, c-format
+msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr "No tu âs i permès che a coventin par tirâ fûr l'archivi inte cartele \"%s\""
+
+#: ../src/dlg-extract.c:363
+msgid "Files"
+msgstr "Files"
+
+#: ../src/dlg-extract.c:412
+msgid "Actions"
+msgstr "Azions"
+
+#: ../src/dlg-extract.c:428
+msgid "Re-crea_te folders"
+msgstr "_Torne a creâ lis cartelis"
+
+#: ../src/dlg-extract.c:432
+msgid "Over_write existing files"
+msgstr "Sostituìs i files che a esistin"
+
+#: ../src/dlg-extract.c:436
+msgid "Do not e_xtract older files"
+msgstr "No stâ tirâ fûr i files plui vec_jos"
+
+#: ../src/dlg-extract.c:451
+msgid "_Open destination folder after extraction"
+msgstr "_Vierç la cartele di destinazion daspò de estrazion"
+
+#: ../src/dlg-extract.c:482
+#: ../src/ui.h:124
+msgid "Extract"
+msgstr "Tire fûr"
+
+#: ../src/dlg-prop.c:110
+msgid "Path:"
+msgstr "Percors:"
+
+#: ../src/dlg-prop.c:122
+msgid "Name:"
+msgstr "Non:"
+
+#: ../src/dlg-prop.c:128
+#, c-format
+msgid "%s Properties"
+msgstr "Propietâts par %s"
+
+#: ../src/dlg-prop.c:137
+msgid "Modified on:"
+msgstr "Modificât ai:"
+
+#: ../src/dlg-prop.c:147
+msgid "Archive size:"
+msgstr "Dimension archivi:"
+
+#: ../src/dlg-prop.c:158
+msgid "Content size:"
+msgstr "Dimension contignût:"
+
+#: ../src/dlg-prop.c:178
+msgid "Compression ratio:"
+msgstr "Tas di compression:"
+
+#: ../src/dlg-prop.c:193
+msgid "Number of files:"
+msgstr "Numar di files:"
+
+#: ../src/dlg-update.c:157
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr "Vuelistu inzornâ il file \"%s\" intal archivi \"%s\"?"
+
+#: ../src/dlg-update.c:171
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr "Vuelistu inzornâ i files intal archivi \"%s\"?"
+
+#: ../src/fr-archive.c:2397
+msgid "You don't have the right permissions."
+msgstr "No tu âs i permès juscj."
+
+#: ../src/fr-archive.c:2409
+msgid "You can't add an archive to itself."
+msgstr "No tu puedis zontâ un archivi a se stes."
+
+#: ../src/fr-command-tar.c:296
+msgid "Adding file: "
+msgstr "Daûr a zontâ il file: "
+
+#: ../src/fr-command-tar.c:346
+msgid "Removing file: "
+msgstr "Daûr a gjavâ il file: "
+
+#: ../src/fr-command-tar.c:355
+#: ../src/fr-window.c:2170
+msgid "Deleting files from archive"
+msgstr "Daûr a eliminâ i files dal archivi"
+
+#: ../src/fr-command-tar.c:390
+msgid "Extracting file: "
+msgstr "Daûr a tirâ fûr il file: "
+
+#: ../src/fr-command-tar.c:444
+msgid "Recompressing archive"
+msgstr "Daûr a tornâ a comprimi l'archivi"
+
+#: ../src/fr-command-tar.c:611
+msgid "Decompressing archive"
+msgstr "Daûr a decomprimi l'archivi"
+
+#: ../src/fr-stock.c:44
+#: ../src/fr-stock.c:45
+msgid "_Add"
+msgstr "_Zonte"
+
+#: ../src/fr-stock.c:46
+msgid "_Extract"
+msgstr "Tir_e fûr"
+
+#: ../src/fr-stock.c:47
+msgid "_View File"
+msgstr "_Viôt il file"
+
+#: ../src/fr-window.c:1439
+#, c-format
+msgid "%d object (%s)"
+msgstr "%d ogjet(s) (%s)"
+
+#: ../src/fr-window.c:1444
+#, c-format
+msgid "%d object selected (%s)"
+msgstr "%d ogjet(s) selezionât(s) (%s)"
+
+#: ../src/fr-window.c:1512
+msgid "Folder"
+msgstr "Cartele"
+
+#: ../src/fr-window.c:1896
+msgid "[read only]"
+msgstr "[dome leture]"
+
+#: ../src/fr-window.c:2161
+#: ../src/fr-window.c:2191
+msgid "Creating archive"
+msgstr "Creazion archivi"
+
+#: ../src/fr-window.c:2164
+msgid "Loading archive"
+msgstr "Cjamade archivi"
+
+#: ../src/fr-window.c:2167
+msgid "Reading archive"
+msgstr "Leture archivi"
+
+#: ../src/fr-window.c:2173
+msgid "Testing archive"
+msgstr "Prove archivi"
+
+#: ../src/fr-window.c:2176
+msgid "Getting the file list"
+msgstr "Daûr a recuperâ la liste dai files"
+
+#: ../src/fr-window.c:2179
+#: ../src/fr-window.c:2188
+msgid "Copying the file list"
+msgstr "Daûr a copiâ la liste dai files"
+
+#: ../src/fr-window.c:2182
+msgid "Adding files to archive"
+msgstr "Daûr a zontâ files al archivi"
+
+#: ../src/fr-window.c:2185
+msgid "Extracting files from archive"
+msgstr "Daûr a tirâ fûr i files dal archivi"
+
+#: ../src/fr-window.c:2194
+msgid "Saving archive"
+msgstr "Daûr a salvâ l'archivi"
+
+#: ../src/fr-window.c:2380
+msgid "Archive:"
+msgstr "Archivi:"
+
+#: ../src/fr-window.c:2472
+msgid "wait please..."
+msgstr "spiete par plasê..."
+
+#: ../src/fr-window.c:2534
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "No si pues mostrâ la cartele \"%s\""
+
+#: ../src/fr-window.c:2638
+msgid "An error occurred while extracting files."
+msgstr "Al è stât un erôr dilunc la estrazion dai files."
+
+#: ../src/fr-window.c:2646
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "No si pues vierzi \"%s\""
+
+#: ../src/fr-window.c:2651
+msgid "An error occurred while loading the archive."
+msgstr "Al è stât un erôr dilunc la cjamade dal archivi."
+
+#: ../src/fr-window.c:2655
+msgid "An error occurred while deleting files from the archive."
+msgstr "Al è stât un erôr dilunc la eliminazion dai files dal archivi."
+
+#: ../src/fr-window.c:2659
+msgid "An error occurred while adding files to the archive."
+msgstr "Al è stât un erôr dilunc la zonte dai files al archivi."
+
+#: ../src/fr-window.c:2663
+msgid "An error occurred while testing archive."
+msgstr "Al è stât un erôr dilunc la prove dal archivi."
+
+#: ../src/fr-window.c:2672
+msgid "Command not found."
+msgstr "Comant no cjatât."
+
+#: ../src/fr-window.c:2675
+msgid "Command exited abnormally."
+msgstr "Comant terminât no normalmentri."
+
+#: ../src/fr-window.c:2870
+msgid "Test Result"
+msgstr "Risultâts de prove"
+
+#: ../src/fr-window.c:3440
+#: ../src/fr-window.c:7425
+msgid "Could not perform the operation"
+msgstr "No si pues eseguî la operazion"
+
+#: ../src/fr-window.c:3467
+msgid "Do you want to add this file to the current archive or open it as a new archive?"
+msgstr "Vuelistu zontâ chest file al archivi atuâl o vierzilu come un gnûf archivi?"
+
+#: ../src/fr-window.c:3497
+msgid "Do you want to create a new archive with these files?"
+msgstr "Vuelistu creâ un gnûf archivi cun chescj files?"
+
+#: ../src/fr-window.c:3500
+msgid "Create _Archive"
+msgstr "Cree _archivi"
+
+#: ../src/fr-window.c:3984
+#: ../src/fr-window.c:5147
+msgid "Folders"
+msgstr "Cartelis"
+
+#: ../src/fr-window.c:4022
+msgid "Size"
+msgstr "Dimension"
+
+#: ../src/fr-window.c:4023
+msgid "Type"
+msgstr "Gjenar"
+
+#: ../src/fr-window.c:4024
+msgid "Date Modified"
+msgstr "Date modifiche"
+
+#: ../src/fr-window.c:4034
+msgid "Name"
+msgstr "Non"
+
+#: ../src/fr-window.c:5007
+msgid "Go to the previous visited location"
+msgstr "Va ae posizion visitade prime"
+
+#: ../src/fr-window.c:5015
+msgid "Go to the next visited location"
+msgstr "Va ae posizion visitade dopo"
+
+#: ../src/fr-window.c:5023
+msgid "Go up one level"
+msgstr "Va sù di un nivel"
+
+#: ../src/fr-window.c:5031
+msgid "Go to the home location"
+msgstr "Va ae posizion iniziâl (home)"
+
+#: ../src/fr-window.c:5084
+msgid "Find:"
+msgstr "Cjate:"
+
+#: ../src/fr-window.c:5155
+msgid "Close the folders pane"
+msgstr "Siere la bare des cartelis"
+
+#: ../src/fr-window.c:5253
+#: ../src/fr-window.c:5256
+#: ../src/ui.h:142
+#: ../src/ui.h:146
+msgid "Open archive"
+msgstr "Vierç archivi"
+
+#: ../src/fr-window.c:5254
+msgid "Open a recently used archive"
+msgstr "Vierç un archivi doprât ultimamentri"
+
+#: ../src/fr-window.c:5549
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "No si pues salvâ l'archivi \"%s\""
+
+#: ../src/fr-window.c:6805
+msgid "The new name is void."
+msgstr "Il gnûf non al è vueit."
+
+#: ../src/fr-window.c:6809
+msgid "The new name is equal to the old one."
+msgstr "Il gnûf non al è compagn di chel vecjo."
+
+#: ../src/fr-window.c:6849
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Une cartele di non \"%s\" e esist za.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:6851
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Un file di non \"%s\" al esist za.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:6918
+msgid "Rename"
+msgstr "Cambie non"
+
+#: ../src/fr-window.c:6919
+msgid "New folder name"
+msgstr "Gnûf non de cartele"
+
+#: ../src/fr-window.c:6919
+msgid "New file name"
+msgstr "Gnûf non dal file"
+
+#: ../src/fr-window.c:6923
+msgid "_Rename"
+msgstr "_Cambie non"
+
+#: ../src/fr-window.c:6940
+#: ../src/fr-window.c:6959
+msgid "Could not rename the folder"
+msgstr "No si pues cambiâi non ae cartele"
+
+#: ../src/fr-window.c:6940
+#: ../src/fr-window.c:6959
+msgid "Could not rename the file"
+msgstr "No si pues cambiâi non al file"
+
+#: ../src/fr-window.c:7354
+msgid "Paste Selection"
+msgstr "Tache la selezion"
+
+#: ../src/fr-window.c:7355
+msgid "Destination folder"
+msgstr "Cartele di destinazion"
+
+#: ../src/fr-window.c:7920
+msgid "Add files to an archive"
+msgstr "Zonte files a un archivi"
+
+#: ../src/fr-window.c:7963
+msgid "Extract archive"
+msgstr "Tire fûr archivi"
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:514
+msgid "%d %B %Y, %H:%M"
+msgstr "%d di %B %Y, %H:%M"
+
+#. Button
+#: ../src/gtk-utils.c:439
+msgid "Command _Line Output"
+msgstr "Output de rie di comant"
+
+#: ../src/gtk-utils.c:842
+msgid "Could not display help"
+msgstr "No si pues mostrâ il jutori"
+
+#: ../src/main.c:65
+msgid "Ace (.ace)"
+msgstr "Ace (.ace)"
+
+#: ../src/main.c:66
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:67
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:74
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:75
+msgid "Self-extracting zip (.exe)"
+msgstr "Zip a estrazion automatiche (.exe)"
+
+#: ../src/main.c:77
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:78
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:81
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:83
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar cence compression (.tar)"
+
+#: ../src/main.c:84
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar comprimûts cun bzip (.tar.bz)"
+
+#: ../src/main.c:85
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar comprimûts cun bzip2 (.tar.bz2)"
+
+#: ../src/main.c:86
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar comprimûts cun gzip (.tar.gz)"
+
+#: ../src/main.c:87
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr "Tar comprimûts cun lzma (.tar.lzma)"
+
+#: ../src/main.c:88
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar comprimûts cun lzop (.tar.lzo)"
+
+#: ../src/main.c:89
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar comprimûts cun compress (.tar.Z)"
+
+#: ../src/main.c:91
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:92
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:93
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:94
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z)"
+
+#: ../src/main.c:146
+msgid "Add files to the specified archive and quit the program"
+msgstr "Zonte files al archivi specificât e siere il program"
+
+#: ../src/main.c:147
+msgid "ARCHIVE"
+msgstr "ARCHIVI"
+
+#: ../src/main.c:150
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "Zonte i files domandant il non dal archivi e siere il program"
+
+#: ../src/main.c:154
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "Tire fûr i files inte cartele specificade e siere il program"
+
+#: ../src/main.c:155
+#: ../src/main.c:167
+msgid "FOLDER"
+msgstr "CARTELE"
+
+#: ../src/main.c:158
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "Tire fûr i files domandant la cartele di destinazion e siere il program"
+
+#: ../src/main.c:162
+msgid "Extract archives using the archive name as destination folder and quit the program"
+msgstr "Tire fûr i file doprant il non dal archivi come cartele di destinazion e siere il program"
+
+#: ../src/main.c:166
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "Cartele predeterminade di doprâ pai comants '--add' e '--extract'"
+
+#: ../src/main.c:170
+msgid "Create destination folder without asking confirmation"
+msgstr "Cree cartele di destinazion cence domandâ conferme"
+
+#: ../src/main.c:210
+msgid "- Create and modify an archive"
+msgstr "- Cree e modifiche un archivi"
+
+#: ../src/main.c:225
+msgid "File Roller"
+msgstr "File Roller"
+
+#: ../src/ui.h:33
+msgid "_Archive"
+msgstr "_Archivi"
+
+#: ../src/ui.h:34
+msgid "_Edit"
+msgstr "_Modifiche"
+
+#: ../src/ui.h:35
+msgid "_View"
+msgstr "_Viodude"
+
+#: ../src/ui.h:36
+msgid "_Help"
+msgstr "_Jutori"
+
+#: ../src/ui.h:37
+msgid "_Arrange Files"
+msgstr "_Met in ordin i files"
+
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr "Vierç _ultins"
+
+#: ../src/ui.h:42
+msgid "Information about the program"
+msgstr "Informazions sul program"
+
+#: ../src/ui.h:45
+msgid "_Add Files..."
+msgstr "_Zonte files..."
+
+#: ../src/ui.h:46
+#: ../src/ui.h:50
+msgid "Add files to the archive"
+msgstr "Zonte files al archivi"
+
+#: ../src/ui.h:53
+msgid "Add a _Folder..."
+msgstr "Zonte une carte_le..."
+
+#: ../src/ui.h:54
+#: ../src/ui.h:58
+msgid "Add a folder to the archive"
+msgstr "Zonte une cartele al archivi"
+
+#: ../src/ui.h:57
+msgid "Add Folder"
+msgstr "Zonte cartele"
+
+#: ../src/ui.h:62
+msgid "Close the current archive"
+msgstr "Siere l'archivi atuâl"
+
+#: ../src/ui.h:65
+msgid "Contents"
+msgstr "Contignûts"
+
+#: ../src/ui.h:66
+msgid "Display the File Roller Manual"
+msgstr "Mostre il manuâl di File Roller"
+
+#: ../src/ui.h:71
+#: ../src/ui.h:92
+msgid "Copy the selection"
+msgstr "Copie la selezion"
+
+#: ../src/ui.h:75
+#: ../src/ui.h:96
+msgid "Cut the selection"
+msgstr "Taie la selezion"
+
+#: ../src/ui.h:79
+#: ../src/ui.h:100
+msgid "Paste the clipboard"
+msgstr "Tache i Apunts"
+
+#: ../src/ui.h:82
+#: ../src/ui.h:103
+msgid "_Rename..."
+msgstr "Cam_bie non..."
+
+#: ../src/ui.h:83
+#: ../src/ui.h:104
+msgid "Rename the selection"
+msgstr "Cambie non ae selezion"
+
+#: ../src/ui.h:87
+#: ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr "Elimine la selezion dal archivi"
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "Dese_lezione dut"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "Deselezione ducj i files"
+
+#: ../src/ui.h:116
+#: ../src/ui.h:120
+msgid "_Extract..."
+msgstr "Tir_e fûr..."
+
+#: ../src/ui.h:117
+#: ../src/ui.h:121
+#: ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr "Tire fûr files dal archivi"
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "_Ultin output"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr "Viôt l'output produsût dal ultin comant eseguît"
+
+#: ../src/ui.h:138
+msgid "Create a new archive"
+msgstr "Cree un gnûf archivi"
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr "_Vierç cun..."
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "Vierç i file selezionâts cuntune aplicazion"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "Pass_word..."
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr "Specifiche une password par chest archivi"
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "Mostre propietâts archivi"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "Torne a cjamâ l'archivi atuâl"
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr "Salve l'archivi atuâl cuntun non diviers"
+
+#: ../src/ui.h:169
+msgid "_Select All"
+msgstr "_Selezione dut"
+
+#: ../src/ui.h:170
+msgid "Select all files"
+msgstr "Selezione ducj i files"
+
+#: ../src/ui.h:174
+msgid "Stop current operation"
+msgstr "Ferme la operazion atuâl"
+
+#: ../src/ui.h:177
+msgid "_Test Integrity"
+msgstr "Prove la in_tegritât"
+
+#: ../src/ui.h:178
+msgid "Test whether the archive contains errors"
+msgstr "Prove se l'archivi al à erôrs"
+
+#: ../src/ui.h:182
+#: ../src/ui.h:186
+msgid "View the selected file"
+msgstr "Viôt il file selezionât"
+
+#: ../src/ui.h:190
+#: ../src/ui.h:194
+msgid "Open the selected folder"
+msgstr "Vierç la cartele selezionade"
+
+#: ../src/ui.h:202
+msgid "_Toolbar"
+msgstr "_Bare dai imprescj"
+
+#: ../src/ui.h:203
+msgid "View the main toolbar"
+msgstr "Viôt la bare dai imprescj principâl"
+
+#: ../src/ui.h:207
+msgid "Stat_usbar"
+msgstr "Bar_e di stât"
+
+#: ../src/ui.h:208
+msgid "View the statusbar"
+msgstr "Viôt la bare di stât"
+
+#: ../src/ui.h:212
+msgid "_Reversed Order"
+msgstr "O_rdin invertît"
+
+#: ../src/ui.h:213
+msgid "Reverse the list order"
+msgstr "Disledrose l'ordin de liste"
+
+#: ../src/ui.h:217
+msgid "_Folders"
+msgstr "Carte_lis"
+
+#: ../src/ui.h:218
+msgid "View the folders pane"
+msgstr "Viôt la bare des cartelis"
+
+#: ../src/ui.h:227
+msgid "View All _Files"
+msgstr "Viôt ducj i _files"
+
+#: ../src/ui.h:230
+msgid "View as a F_older"
+msgstr "Viôt c_ome une cartele"
+
+#: ../src/ui.h:238
+msgid "by _Name"
+msgstr "par _non"
+
+#: ../src/ui.h:239
+msgid "Sort file list by name"
+msgstr "Met in ordin la liste dai files par non"
+
+#: ../src/ui.h:241
+msgid "by _Size"
+msgstr "par dimen_sion"
+
+#: ../src/ui.h:242
+msgid "Sort file list by file size"
+msgstr "Met in ordin la liste dai files par dimension dai files"
+
+#: ../src/ui.h:244
+msgid "by T_ype"
+msgstr "par g_jenar"
+
+#: ../src/ui.h:245
+msgid "Sort file list by type"
+msgstr "Met in ordin la liste dai files par gjenar"
+
+#: ../src/ui.h:247
+msgid "by _Date modified"
+msgstr "par _date di modifiche"
+
+#: ../src/ui.h:248
+msgid "Sort file list by modification time"
+msgstr "Met in ordin la liste dai files pe date de ultime modifiche"
+
+#: ../src/ui.h:250
+msgid "by _Location"
+msgstr "par posi_zion"
+
+#: ../src/ui.h:251
+msgid "Sort file list by location"
+msgstr "Met in ordin la liste dai files par posizion"
+

@@ -1,0 +1,39 @@
+*Translations
+
+  Translations can be updated without asking, just remember to add 
+  an entry in po/ChangeLog
+
+*Patches
+
+  Send patches to the maintainer (file-roller-maint@gnome.org) and get 
+  approval before committing.
+
+  Patches must contain a ChangeLog entry.
+
+  You have to follow the style of the rest of the code even if you 
+  don't like it.  The code style is K&R with 8 space tabs.
+
+*Roadmap
+
+  *) src/fr-process.c : A class that lets you execute commands in 
+     sequence.  You can define a command as sticky if you want that it must
+     be executed even if a previous command has failed.
+
+  *) src/fr-command.c : An abstract class used as base to define archiving
+     utilities interfaces.  For example fr-command-tar.c implements an 
+     interface for the tar command.  FRCommands use a FRProcess object to
+     execute commands.
+
+  *) src/fr-archive.c : A class that implements the archive concept.  An
+     FRArchive object can load any archive type of which there is a
+     corrisponding FRCommand interface.  It adds high level operations as
+     add_with_wildcard, add_directory, and implements options not supported
+     by the archiving utility.  For example,  you can extract files from a
+     tar archive without recreating the path even if the tar command does not
+     support this feature.  If an option is supported natively the command 
+     line option is used.
+
+  *) src/window.c : Implements the window object.
+
+  *) src/dlg-*.c : All files starting with dlg- implement a dialog. 
+

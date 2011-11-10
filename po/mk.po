@@ -1,0 +1,1249 @@
+# translation of mk.po to Macedonian
+# translation of file-roller.HEAD.mk.po to
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER.
+#
+# Ivan Stojmirov <stojmir@linux.net.mk>, 2002.
+# Maratonec 3 <maraton@unknown3>, 2002.
+# Ime Prezime <email@adresa.com>, 2003.
+# Dushan Vasilevski-DUVIX <dule_boki@mt.net.mk>, 2003.
+# Darko Nikolovski <darkon@macedonia.homelinux.org>, 2003.
+# Arangel Angov <ufo@linux.net.mk>, 2004, 2006, 2007, 2008.
+# Jovan Naumovski <jovan@lugola.net>, 2006, 2007.
+# Arangel Angov <arangel@linux.net.mk>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: mk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-22 04:51+0000\n"
+"PO-Revision-Date: 2008-07-27 22:11+0200\n"
+"Last-Translator: Arangel Angov <ufo@linux.net.mk>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural= n%10==1 && n%100!=11 ? 0 : 1\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/glade/add-options.glade.h:1
+msgid "Load Options"
+msgstr "Вчитај опции"
+
+#: ../data/glade/batch-add-files.glade.h:1 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "К_реирај"
+
+#: ../data/glade/batch-add-files.glade.h:2
+msgid "Create Archive"
+msgstr "Креирај архива"
+
+#: ../data/glade/batch-add-files.glade.h:3 ../src/fr-window.c:4551
+msgid "Location"
+msgstr "Локација"
+
+#. MB means megabytes
+#: ../data/glade/batch-add-files.glade.h:5
+msgid "MB"
+msgstr "MB"
+
+#: ../data/glade/batch-add-files.glade.h:6
+msgid "Split in _volumes of"
+msgstr "Подели на_простори од"
+
+#: ../data/glade/batch-add-files.glade.h:7
+msgid "_Archive:"
+msgstr "_Архива:"
+
+#: ../data/glade/batch-add-files.glade.h:8 ../data/glade/password.glade.h:3
+msgid "_Encrypt the file list too"
+msgstr "_Енкриптирај ја и листата со датотеки"
+
+#: ../data/glade/batch-add-files.glade.h:9 ../src/fr-window.c:5682
+msgid "_Location:"
+msgstr "_Локација:"
+
+#: ../data/glade/batch-add-files.glade.h:10
+msgid "_Other Options"
+msgstr "_Други опции"
+
+#: ../data/glade/batch-add-files.glade.h:11
+#: ../data/glade/batch-password.glade.h:2 ../data/glade/password.glade.h:4
+#: ../src/dlg-extract.c:432
+msgid "_Password:"
+msgstr "_Лозинка:"
+
+#: ../data/glade/batch-password.glade.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Потребна е лозинка</span>"
+
+#: ../data/glade/delete.glade.h:1
+msgid "Delete"
+msgstr "Избриши"
+
+#: ../data/glade/delete.glade.h:2 ../src/dlg-extract.c:384
+msgid "_All files"
+msgstr "_Сите датотеки"
+
+#: ../data/glade/delete.glade.h:3 ../src/dlg-extract.c:370
+msgid "_Files:"
+msgstr "_Датотеки:"
+
+#: ../data/glade/delete.glade.h:4 ../src/dlg-extract.c:391
+msgid "_Selected files"
+msgstr "_Избрани датотеки"
+
+#: ../data/glade/delete.glade.h:5 ../src/dlg-extract.c:381
+msgid "example: *.txt; *.doc"
+msgstr "пример: *.txt; *.doc"
+
+#: ../data/glade/open-with.glade.h:1
+msgid "A_vailable application:"
+msgstr "_Достапна апликација:"
+
+#: ../data/glade/open-with.glade.h:2
+msgid "Open Files"
+msgstr "Отвори датотеки"
+
+#: ../data/glade/open-with.glade.h:3
+msgid "R_ecent applications:"
+msgstr "Н_еодамнешни апликации:"
+
+#: ../data/glade/open-with.glade.h:4
+msgid "_Application:"
+msgstr "_Апликации:"
+
+#: ../data/glade/password.glade.h:1
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+"<i><b>Забелешка:</b> лозинката ќе биде користена за енкриптирање на датотеки "
+"кои се додадени кон архивата, и за декриптирање на датотеки кои се "
+"отпакувани од архивите. Кога архивата ќе се затвори лозинката ќе биде "
+"избришана. </i>"
+
+#: ../data/glade/password.glade.h:2
+msgid "Password"
+msgstr "Лозинка"
+
+#: ../data/glade/update.glade.h:1
+msgid "S_elect the files you want to update:"
+msgstr "И_зберете ги датотеките кои што сакате да ги ажурирате:"
+
+#. secondary text
+#: ../data/glade/update.glade.h:2 ../src/dlg-update.c:181
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update "
+"the version in the archive, all of your changes will be lost."
+msgid_plural ""
+"There are %d files that have been modified with an external application. If "
+"you don't update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+"%d датотека е изменета со екстерна апликација. Ако не ја ажурирате верзијата "
+"на архивата, сите промени ќе бидат загубени."
+msgstr[1] ""
+"Има %d датотеки изменети со екстерна апликација. Ако не ја ажурирате "
+"верзијата на архивата, сите промени ќе бидат загубени."
+msgstr[2] ""
+"Има %d датотеки изменети со екстерна апликација. Ако не ја ажурирате "
+"верзијата на архивата, сите промени ќе бидат загубени."
+
+#: ../data/glade/update.glade.h:3
+msgid "_Update"
+msgstr "_Ажурирај"
+
+#: ../data/file-roller.desktop.in.in.h:1 ../src/fr-window.c:1912
+#: ../src/fr-window.c:5261 ../src/main.c:251
+msgid "Archive Manager"
+msgstr "Менаџер на архиви"
+
+#: ../data/file-roller.desktop.in.in.h:2
+msgid "Create and modify an archive"
+msgstr "Креирај и измени архива"
+
+#: ../caja/caja-fileroller.c:271
+msgid "Extract Here"
+msgstr "Отпакувај тука"
+
+#: ../caja/caja-fileroller.c:272
+msgid "Extract the selected archive in the current position"
+msgstr "Отпакувај ја избраната архива во тековната локација"
+
+#: ../caja/caja-fileroller.c:289
+msgid "Extract To..."
+msgstr "Отпакувај во..."
+
+#: ../caja/caja-fileroller.c:290
+msgid "Extract the selected archive"
+msgstr "Отпакувај ја избраната архива"
+
+#: ../caja/caja-fileroller.c:309
+msgid "Create Archive..."
+msgstr "Креирај архива..."
+
+#: ../caja/caja-fileroller.c:310
+msgid "Create an archive with the selected objects"
+msgstr "Дали сакате да креирате нова архива со овие датотеки?"
+
+#: ../src/actions.c:165 ../src/actions.c:203 ../src/actions.c:238
+#: ../src/dlg-batch-add.c:174 ../src/dlg-batch-add.c:189
+#: ../src/dlg-batch-add.c:218 ../src/dlg-batch-add.c:262
+#: ../src/dlg-batch-add.c:312 ../src/fr-window.c:2845
+msgid "Could not create the archive"
+msgstr "Не можам да ја креирам архивата"
+
+#: ../src/actions.c:166 ../src/dlg-batch-add.c:175 ../src/dlg-batch-add.c:313
+msgid "You have to specify an archive name."
+msgstr "Мора да го внесете името на архивата"
+
+#: ../src/actions.c:204
+msgid "You don't have permission to create an archive in this folder"
+msgstr "Немате дозвола да креирате архива во папката"
+
+#: ../src/actions.c:239 ../src/fr-archive.c:1083 ../src/fr-window.c:5884
+#: ../src/fr-window.c:6058
+msgid "Archive type not supported."
+msgstr "Типот на архивата не е подржан."
+
+#: ../src/actions.c:253
+msgid "Could not delete the old archive."
+msgstr "Не можам да ги избришам старите архиви."
+
+#: ../src/actions.c:381
+msgid "New"
+msgstr "Ново"
+
+#: ../src/actions.c:405 ../src/actions.c:533 ../src/actions.c:655
+#: ../src/fr-window.c:5092
+msgid "All archives"
+msgstr "Сите архиви"
+
+#: ../src/actions.c:412 ../src/actions.c:540 ../src/actions.c:662
+msgid "All files"
+msgstr "Сите датотеки"
+
+#: ../src/actions.c:422
+msgid "Archive type:"
+msgstr "Тип на архива:"
+
+#: ../src/actions.c:426 ../src/actions.c:684
+msgid "Automatic"
+msgstr "Автоматски"
+
+#: ../src/actions.c:522 ../src/fr-window.c:5740
+msgid "Open"
+msgstr "Отвори"
+
+#: ../src/actions.c:615
+msgid "Save"
+msgstr "Зачувај"
+
+#. archive type
+#: ../src/actions.c:677
+msgid "Archive _type:"
+msgstr "Тип на _архива:"
+
+#: ../src/actions.c:697
+msgid "_Encrypt with password:"
+msgstr "_Енкриптирај со лозинка:"
+
+#: ../src/actions.c:1018 ../src/fr-window.c:6836
+msgid "Last Output"
+msgstr "Последен приказ"
+
+#: ../src/actions.c:1082
+msgid ""
+"File Roller is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"File Roller е слободен софтвер; можете да го редистрибуирате и/или менувате "
+"во согласност со општата јавна ГНУ лиценца објавена од страна наФондацијата "
+"за слободен софтвер; можете да ја разгледате втората или пак некоја понова "
+"верзија."
+
+#: ../src/actions.c:1086
+msgid ""
+"File Roller is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"File Roller is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+
+#: ../src/actions.c:1090
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"File Roller; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"File Roller; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+
+#: ../src/actions.c:1100
+msgid "Copyright © 2001-2007 Free Software Foundation, Inc."
+msgstr "Copyright © 2001-2007 Free Software Foundation, Inc."
+
+#: ../src/actions.c:1101
+msgid "An archive manager for MATE."
+msgstr "Менаџер за архиви за MATE"
+
+#: ../src/actions.c:1104
+msgid "translator-credits"
+msgstr ""
+"Арангел Ангов (ufo@linux.net.mk) \n"
+"Иван Стојмиров (stojmir@linux.net.mk)"
+
+#: ../src/dlg-add-files.c:97 ../src/dlg-add-files.c:153
+#: ../src/dlg-add-folder.c:130 ../src/dlg-add-folder.c:218
+msgid "Could not add the files to the archive"
+msgstr "Не можам да ги додадам датотеките во архивата"
+
+#: ../src/dlg-add-files.c:98 ../src/dlg-add-files.c:154
+#: ../src/dlg-add-folder.c:131 ../src/dlg-add-folder.c:219
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr ""
+"Ја немате потребната дозвола за да можете да ја прочитате датотеката од "
+"папката \"%s\""
+
+#: ../src/dlg-add-files.c:178 ../src/ui.h:49
+msgid "Add Files"
+msgstr "Додај датотеки"
+
+#: ../src/dlg-add-files.c:192 ../src/dlg-add-folder.c:280
+msgid "Add only if _newer"
+msgstr "Додај само ако _е поново"
+
+#: ../src/dlg-add-folder.c:266
+msgid "Add a Folder"
+msgstr "Додај папка"
+
+#: ../src/dlg-add-folder.c:281
+msgid "_Include subfolders"
+msgstr "_Влучи и подпапки"
+
+#: ../src/dlg-add-folder.c:282
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "Не вклучувај папки што сe симболични врс_ки"
+
+#: ../src/dlg-add-folder.c:285 ../src/dlg-add-folder.c:291
+#: ../src/dlg-add-folder.c:297
+msgid "example: *.o; *.bak"
+msgstr "пример: *.о; *.bak"
+
+#: ../src/dlg-add-folder.c:286
+msgid "Include _files:"
+msgstr "Вклучи _датотеки:"
+
+#: ../src/dlg-add-folder.c:292
+msgid "E_xclude files:"
+msgstr "Не вклучувај датотеки:"
+
+#: ../src/dlg-add-folder.c:298
+msgid "_Exclude folders:"
+msgstr "_Не вклучувај датотеки:"
+
+#: ../src/dlg-add-folder.c:302
+msgid "_Load Options"
+msgstr "_Вчитај опции"
+
+#: ../src/dlg-add-folder.c:303
+msgid "Sa_ve Options"
+msgstr "Сн_ими опции"
+
+#: ../src/dlg-add-folder.c:304
+msgid "_Reset Options"
+msgstr "_Ресетирај опции"
+
+#: ../src/dlg-add-folder.c:937
+msgid "Save Options"
+msgstr "Сними опции"
+
+#: ../src/dlg-add-folder.c:938
+msgid "Options Name:"
+msgstr "Име на опциите:"
+
+#: ../src/dlg-ask-password.c:124
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr "Внесете ја лозинката за архивата „%s“."
+
+#: ../src/dlg-batch-add.c:190 ../src/fr-window.c:7116
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"Името \"%s\" не е валидно поради тоа што неможе да ги содржи карактерите: %"
+"s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:193 ../src/fr-window.c:7108 ../src/fr-window.c:7112
+#: ../src/fr-window.c:7116 ../src/fr-window.c:7152 ../src/fr-window.c:7154
+msgid "Please use a different name."
+msgstr "Ве молиме користете друго име."
+
+#: ../src/dlg-batch-add.c:219
+msgid ""
+"You don't have the right permissions to create an archive in the destination "
+"folder."
+msgstr "Немате дозвола да креирате архива во папката."
+
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:108 ../src/fr-window.c:6411
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"Дестинационата папка %s не постои.\n"
+"Дали сакате да ја креирате?"
+
+#: ../src/dlg-batch-add.c:244 ../src/dlg-extract.c:117 ../src/fr-window.c:6420
+msgid "Create _Folder"
+msgstr "Креаирај _папка"
+
+#: ../src/dlg-batch-add.c:263 ../src/dlg-extract.c:134 ../src/fr-window.c:6440
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "Не можам да ја креирам дестинационата папка %s. "
+
+#: ../src/dlg-batch-add.c:280
+msgid "Archive not created"
+msgstr "Архивата не е креирана"
+
+#: ../src/dlg-batch-add.c:331
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "Архивата веќе постои.  Дали сакате да ја поклопите?"
+
+#: ../src/dlg-batch-add.c:334
+msgid "_Overwrite"
+msgstr "_Поклопи"
+
+#: ../src/dlg-extract.c:139 ../src/dlg-extract.c:157 ../src/dlg-extract.c:183
+#: ../src/fr-window.c:4019 ../src/fr-window.c:6439 ../src/fr-window.c:6456
+msgid "Extraction not performed"
+msgstr "Отпакувањето не е извршено"
+
+#: ../src/dlg-extract.c:184 ../src/fr-window.c:4181 ../src/fr-window.c:4261
+#, c-format
+msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr ""
+"Ја немате правилната дозвола за да можете да ги отпакувате архивите во "
+"папката \"%s\""
+
+#: ../src/dlg-extract.c:353
+msgid "Files"
+msgstr "_Датотека"
+
+#: ../src/dlg-extract.c:402
+msgid "Actions"
+msgstr "Акции"
+
+#: ../src/dlg-extract.c:418
+msgid "Re-crea_te folders"
+msgstr "Повторно создади ги папките"
+
+#: ../src/dlg-extract.c:422
+msgid "Over_write existing files"
+msgstr "По_клопи ги постоечките датотеки"
+
+#: ../src/dlg-extract.c:426
+msgid "Do not e_xtract older files"
+msgstr "Не отпакувај постари датотеки"
+
+#: ../src/dlg-extract.c:464 ../src/ui.h:124
+msgid "Extract"
+msgstr "Отпакувај"
+
+#: ../src/dlg-prop.c:110
+msgid "Location:"
+msgstr "Локација:"
+
+#: ../src/dlg-prop.c:122
+msgid "Name:"
+msgstr "Име:"
+
+#: ../src/dlg-prop.c:128
+#, c-format
+msgid "%s Properties"
+msgstr "%s Својства"
+
+#: ../src/dlg-prop.c:137
+msgid "Modified on:"
+msgstr "Изменето на:"
+
+#: ../src/dlg-prop.c:147
+msgid "Archive size:"
+msgstr "Големина на архива:"
+
+#: ../src/dlg-prop.c:158
+msgid "Content size:"
+msgstr "Големина на содржината:"
+
+#: ../src/dlg-prop.c:178
+msgid "Compression ratio:"
+msgstr "Ниво на компресија:"
+
+#: ../src/dlg-prop.c:193
+msgid "Number of files:"
+msgstr "Број на датотеки:"
+
+#: ../src/dlg-update.c:158
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr "Да ја ажурирам датотеката \"%s\" во архивата \"%s\"?"
+
+#: ../src/dlg-update.c:172
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr "Да ги ажурирам датотеките во архивата \"%s\"?"
+
+#: ../src/fr-archive.c:1166
+#, c-format
+msgid "The file doesn't exist"
+msgstr "Датотеката не постои"
+
+#: ../src/fr-archive.c:2313
+msgid "You don't have the right permissions."
+msgstr "Ја немате парвилната дозвола."
+
+#: ../src/fr-archive.c:2313
+msgid "This archive type cannot be modified"
+msgstr "Типот на архивата не може да биде изменет"
+
+#: ../src/fr-archive.c:2325
+msgid "You can't add an archive to itself."
+msgstr "Не можете да додадете архива на самата себе."
+
+#: ../src/fr-command-rar.c:283 ../src/fr-command-tar.c:286
+#: ../src/fr-command-7z.c:260
+msgid "Adding file: "
+msgstr "Додавам датотека: "
+
+#: ../src/fr-command-rar.c:361 ../src/fr-command-tar.c:340
+msgid "Removing file: "
+msgstr "Отстранувам датотека: "
+
+#: ../src/fr-command-rar.c:410 ../src/fr-command-tar.c:393
+#: ../src/fr-command-7z.c:367
+msgid "Extracting file: "
+msgstr "Ја отпакувам датотеката: "
+
+#: ../src/fr-command-rar.c:530
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr "Не можам да го најдам просторот: %s"
+
+#: ../src/fr-command-tar.c:349 ../src/fr-window.c:2250
+msgid "Deleting files from archive"
+msgstr "Бришам датотеки од архивата"
+
+#: ../src/fr-command-tar.c:452
+msgid "Recompressing archive"
+msgstr "Повторно ја компресирам архива"
+
+#: ../src/fr-command-tar.c:622
+msgid "Decompressing archive"
+msgstr "Декомпресирам архива"
+
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "_Додај"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "_Отпакувај"
+
+#: ../src/fr-window.c:1449
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] "%d објект (%s)"
+msgstr[1] "%d објекти (%s)"
+msgstr[2] "%d датотеки (%s)"
+
+#: ../src/fr-window.c:1454
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] "%d објекти (%s)"
+msgstr[1] "%d избрани датотеки (%s)"
+msgstr[2] "%d избрани датотеки (%s)"
+
+#: ../src/fr-window.c:1522
+msgid "Folder"
+msgstr "Папка"
+
+#: ../src/fr-window.c:1920
+msgid "[read only]"
+msgstr "[само за читање]"
+
+#: ../src/fr-window.c:2177
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "Не можам да ја прикажам папката \"%s\""
+
+#: ../src/fr-window.c:2241 ../src/fr-window.c:2271
+msgid "Creating archive"
+msgstr "Креирам архива"
+
+#: ../src/fr-window.c:2244
+msgid "Loading archive"
+msgstr "Вчитувам архива"
+
+#: ../src/fr-window.c:2247
+msgid "Reading archive"
+msgstr "Читам архива"
+
+#: ../src/fr-window.c:2253
+msgid "Testing archive"
+msgstr "Тестирам архива"
+
+#: ../src/fr-window.c:2256
+msgid "Getting the file list"
+msgstr "Ја добивам листата на датотеки"
+
+#: ../src/fr-window.c:2259 ../src/fr-window.c:2268
+msgid "Copying the file list"
+msgstr "Ја копирам листата на датотеки"
+
+#: ../src/fr-window.c:2262
+msgid "Adding files to archive"
+msgstr "Додавам датотеки во архивата"
+
+#: ../src/fr-window.c:2265
+msgid "Extracting files from archive"
+msgstr "Отпакувам датотеки од архивата"
+
+#: ../src/fr-window.c:2274
+msgid "Saving archive"
+msgstr "Зачувувам архива"
+
+#: ../src/fr-window.c:2430
+msgid "_Open the Archive"
+msgstr "_Отвори ја архивата"
+
+#: ../src/fr-window.c:2431
+msgid "_Open the Destination"
+msgstr "_Отвори ја дестинацијата"
+
+#: ../src/fr-window.c:2477
+msgid "Archive:"
+msgstr "Архива:"
+
+#: ../src/fr-window.c:2637
+msgid "Extraction completed successfully"
+msgstr "Отпакувањето заврши успешно"
+
+#: ../src/fr-window.c:2660
+msgid "Archive created successfully"
+msgstr "Архивата е креирана успешно"
+
+#: ../src/fr-window.c:2708
+msgid "wait please..."
+msgstr "ве молиме почекајте..."
+
+#: ../src/fr-window.c:2850
+msgid "An error occurred while extracting files."
+msgstr "Се појави грешка при отпакувањето на датотеките."
+
+#: ../src/fr-window.c:2856
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "Не можам да отворам \"%s\""
+
+#: ../src/fr-window.c:2861
+msgid "An error occurred while loading the archive."
+msgstr "Се појави грешка при вчитување на архивата."
+
+#: ../src/fr-window.c:2865
+msgid "An error occurred while deleting files from the archive."
+msgstr "Се појави грешка при бришење на датотеките од архивата."
+
+#: ../src/fr-window.c:2871
+msgid "An error occurred while adding files to the archive."
+msgstr "Се појави грешка при додавање на датотеки во архивата."
+
+#: ../src/fr-window.c:2875
+msgid "An error occurred while testing archive."
+msgstr "Се појави грешка при тестирање на архивата."
+
+#: ../src/fr-window.c:2879
+msgid "An error occurred while saving the archive."
+msgstr "Се појави грешка при зачувување на архивата."
+
+#: ../src/fr-window.c:2883
+msgid "An error occurred."
+msgstr "Се појави грешка."
+
+#: ../src/fr-window.c:2889
+msgid "Command not found."
+msgstr "Командата не е пронајдена."
+
+#: ../src/fr-window.c:2892
+msgid "Command exited abnormally."
+msgstr "Командата е прекината невобичаено."
+
+#: ../src/fr-window.c:3074
+msgid "Test Result"
+msgstr "Тестирај го резултатот"
+
+#: ../src/fr-window.c:3878 ../src/fr-window.c:7727
+msgid "Could not perform the operation"
+msgstr "Не можам да ја спроведам операцијата"
+
+#: ../src/fr-window.c:3904
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr ""
+"Дали сакате да ја додадете датотеката во тековната архива или да ја отворите "
+"како нова архива?"
+
+#: ../src/fr-window.c:3934
+msgid "Do you want to create a new archive with these files?"
+msgstr "Дали сакате да создадете нова архива со овие датотеки?"
+
+#: ../src/fr-window.c:3937
+msgid "Create _Archive"
+msgstr "Креирај _архива"
+
+#: ../src/fr-window.c:4510 ../src/fr-window.c:5589
+msgid "Folders"
+msgstr "Папки"
+
+#: ../src/fr-window.c:4548
+msgid "Size"
+msgstr "Големина"
+
+#: ../src/fr-window.c:4549
+msgid "Type"
+msgstr "Тип"
+
+#: ../src/fr-window.c:4550
+msgid "Date Modified"
+msgstr "Дата на измена"
+
+#: ../src/fr-window.c:4560
+msgid "Name"
+msgstr "Име"
+
+#: ../src/fr-window.c:5509
+msgid "Find:"
+msgstr "Најди:"
+
+#: ../src/fr-window.c:5597
+msgid "Close the folders pane"
+msgstr "Затвори го просторот со папките"
+
+#: ../src/fr-window.c:5737 ../src/fr-window.c:5740 ../src/ui.h:142
+#: ../src/ui.h:146
+msgid "Open archive"
+msgstr "Отвори архива"
+
+#: ../src/fr-window.c:5738
+msgid "Open a recently used archive"
+msgstr "Отвори неодамнешна архива"
+
+#: ../src/fr-window.c:6051
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "Не можам да го зачувам \"%s\""
+
+#: ../src/fr-window.c:7108
+msgid "The new name is void."
+msgstr "Новото име е празно."
+
+#: ../src/fr-window.c:7112
+msgid "The new name is equal to the old one."
+msgstr "Новото име е еднакво на старото."
+
+#: ../src/fr-window.c:7152
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Папка со името \"%s\" веќе постои.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7154
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Папка со името \"%s\" веќе постои.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7221
+msgid "Rename"
+msgstr "Преименувај"
+
+#: ../src/fr-window.c:7222
+msgid "New folder name"
+msgstr "Ново име на папка"
+
+#: ../src/fr-window.c:7222
+msgid "New file name"
+msgstr "Ново име на датотека"
+
+#: ../src/fr-window.c:7226
+msgid "_Rename"
+msgstr "_Преименувај"
+
+#: ../src/fr-window.c:7243 ../src/fr-window.c:7262
+msgid "Could not rename the folder"
+msgstr "Не можам да ја преименувам папката"
+
+#: ../src/fr-window.c:7243 ../src/fr-window.c:7262
+msgid "Could not rename the file"
+msgstr "Не можам да ја преименувам датотеката"
+
+#: ../src/fr-window.c:7653
+msgid "Paste Selection"
+msgstr "Вменти го избраното"
+
+#: ../src/fr-window.c:7654
+msgid "Destination folder"
+msgstr "Дестинациона папка"
+
+#: ../src/fr-window.c:8239
+msgid "Add files to an archive"
+msgstr "Додај датотеки во архивата"
+
+#: ../src/fr-window.c:8283
+msgid "Extract archive"
+msgstr "Отпакувај архива"
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:536
+msgid "%d %B %Y, %H:%M"
+msgstr "%d %B %Y, %H:%M"
+
+#. Expander
+#: ../src/gtk-utils.c:440
+msgid "Command _Line Output"
+msgstr "Приказ на _комадната линија"
+
+#: ../src/gtk-utils.c:752
+msgid "Could not display help"
+msgstr "Не можам да прикажам помош"
+
+#: ../src/main.c:85
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z)"
+
+#: ../src/main.c:86
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr "Tar компресирано со 7z (.tar.7z)"
+
+#: ../src/main.c:87
+msgid "Ace (.ace)"
+msgstr "Ace (.ace)"
+
+#: ../src/main.c:89
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:90
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:92
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar компресирано со bzip2 (.tar.bz2)"
+
+#: ../src/main.c:94
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar компресирано со bzip (.tar.bz)"
+
+#: ../src/main.c:95
+msgid "Cabinet (.cab)"
+msgstr "Cabinet (.cab)"
+
+#: ../src/main.c:96
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr "Rar архивиран стрип (.cbr)"
+
+#: ../src/main.c:97
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr "Zip архивиран стрип (.cbz)"
+
+#: ../src/main.c:100
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar компресирано со gzip (.tar.gz)"
+
+#: ../src/main.c:103
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:104
+msgid "Self-extracting zip (.exe)"
+msgstr "Само-отпакувачки zip (.exe)"
+
+#: ../src/main.c:106
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:107
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:109
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr "Tar компресиран со lzma (.tar.lzma)"
+
+#: ../src/main.c:111
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar компресирано со lzop (.tar.lzo)"
+
+#: ../src/main.c:112
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:115
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar некомпресирано (.tar)"
+
+#: ../src/main.c:116
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar компресирано соmpress (.tar.Z)"
+
+#: ../src/main.c:118
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:119
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:120
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:179
+msgid "Add files to the specified archive and quit the program"
+msgstr "Додај датотеки во означената архива и прикази од програмата"
+
+#: ../src/main.c:180
+msgid "ARCHIVE"
+msgstr "АРХИВА"
+
+#: ../src/main.c:183
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "Додај датотеки прашувајќи за името на архивата и прикази од програмата"
+
+#: ../src/main.c:187
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "Отпакувај архиви во означената папка и прикази од програмата"
+
+#: ../src/main.c:188 ../src/main.c:200
+msgid "FOLDER"
+msgstr "ПАПКА"
+
+#: ../src/main.c:191
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "Отпакувај архиви прашувајќи за дестинационата папка и прикази од програмата."
+
+#: ../src/main.c:195
+msgid ""
+"Extract archives using the archive name as destination folder and quit the "
+"program"
+msgstr ""
+"Отпакувај архиви користејќи го името на архивата за дестинационата папка и "
+"излези од програмата."
+
+#: ../src/main.c:199
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "Примарна папка за употреба за '--add' и '--extract' командите"
+
+#: ../src/main.c:203
+msgid "Create destination folder without asking confirmation"
+msgstr "Креирај дестинациона папка без да бараш потврда"
+
+#: ../src/main.c:243
+msgid "- Create and modify an archive"
+msgstr "- Креирај и измени архива"
+
+#: ../src/main.c:258
+msgid "File Roller"
+msgstr "File Roller"
+
+#: ../src/ui.h:33
+msgid "_Archive"
+msgstr "_Архива"
+
+#: ../src/ui.h:34
+msgid "_Edit"
+msgstr "_Уреди"
+
+#: ../src/ui.h:35
+msgid "_View"
+msgstr "_Поглед"
+
+#: ../src/ui.h:36
+msgid "_Help"
+msgstr "_Помош"
+
+#: ../src/ui.h:37
+msgid "_Arrange Files"
+msgstr "_Нареди ги датотеките"
+
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr "Отвори _скорешни"
+
+#: ../src/ui.h:42
+msgid "Information about the program"
+msgstr "Информации за програмата"
+
+#: ../src/ui.h:45
+msgid "_Add Files..."
+msgstr "_Додај датотеки..."
+
+#: ../src/ui.h:46 ../src/ui.h:50
+msgid "Add files to the archive"
+msgstr "Додај датотеки во архивата"
+
+#: ../src/ui.h:53
+msgid "Add a _Folder..."
+msgstr "Додај _папка..."
+
+#: ../src/ui.h:54 ../src/ui.h:58
+msgid "Add a folder to the archive"
+msgstr "Додај папка во архивата"
+
+#: ../src/ui.h:57
+msgid "Add Folder"
+msgstr "Додај папка"
+
+#: ../src/ui.h:62
+msgid "Close the current archive"
+msgstr "Затвори ја тековната архива"
+
+#: ../src/ui.h:65
+msgid "Contents"
+msgstr "Содржина"
+
+#: ../src/ui.h:66
+msgid "Display the File Roller Manual"
+msgstr "Прикажи го упатството за File Roller"
+
+#: ../src/ui.h:71 ../src/ui.h:92
+msgid "Copy the selection"
+msgstr "Копирај го избраното"
+
+#: ../src/ui.h:75 ../src/ui.h:96
+msgid "Cut the selection"
+msgstr "Отсечи го избраното"
+
+#: ../src/ui.h:79 ../src/ui.h:100
+msgid "Paste the clipboard"
+msgstr "Вметни"
+
+#: ../src/ui.h:82 ../src/ui.h:103
+msgid "_Rename..."
+msgstr "_Преименувај..."
+
+#: ../src/ui.h:83 ../src/ui.h:104
+msgid "Rename the selection"
+msgstr "Преименувај го избраното"
+
+#: ../src/ui.h:87 ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr "Избриши го избраното од архивата"
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "Пони_шти избрано"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "Поништи го изборот на датотеки"
+
+#: ../src/ui.h:116 ../src/ui.h:120
+msgid "_Extract..."
+msgstr "_Отпакувај..."
+
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr "Отпакувај датотеки од архивата"
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "_Последен приказ"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr "Прегледај го приказот произведен од последната извршена команда"
+
+#: ../src/ui.h:138
+msgid "Create a new archive"
+msgstr "Креирај нова архива"
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr "_Отвори со..."
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "Отвори ги избраните датотеки со апликација"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "Лози_нка..."
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr "Одреди лозинка за оваа архива"
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "Покажи ги својствата на архивата"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "Повторно вчитај ја тековната архива"
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr "Зачувај ја тековната архива под друго име"
+
+#: ../src/ui.h:170
+msgid "Select all files"
+msgstr "Избери ги сите датотеки"
+
+#: ../src/ui.h:174
+msgid "Stop current operation"
+msgstr "Прекини ја тековната операција"
+
+#: ../src/ui.h:177
+msgid "_Test Integrity"
+msgstr "_Тестирај го интегритетот"
+
+#: ../src/ui.h:178
+msgid "Test whether the archive contains errors"
+msgstr "Тестирај ја архивата за грешки"
+
+#: ../src/ui.h:182 ../src/ui.h:186
+msgid "Open the selected file"
+msgstr "Отвори ја избраната датотека"
+
+#: ../src/ui.h:190 ../src/ui.h:194
+msgid "Open the selected folder"
+msgstr "Отвори ја избраната папка"
+
+#: ../src/ui.h:199
+msgid "Go to the previous visited location"
+msgstr "Оди на претходно посетената локација"
+
+#: ../src/ui.h:203
+msgid "Go to the next visited location"
+msgstr "Оди до наредната посетена локација"
+
+#: ../src/ui.h:207
+msgid "Go up one level"
+msgstr "Оди едно ниво погоре"
+
+#: ../src/ui.h:211
+msgid "Go to the home location"
+msgstr "Оди дома"
+
+#: ../src/ui.h:219
+msgid "_Toolbar"
+msgstr "_Лента со алатки"
+
+#: ../src/ui.h:220
+msgid "View the main toolbar"
+msgstr "Покажи ја лентата со алатки"
+
+#: ../src/ui.h:224
+msgid "Stat_usbar"
+msgstr "_Статусна лента"
+
+#: ../src/ui.h:225
+msgid "View the statusbar"
+msgstr "Покажи ја статусната лента"
+
+#: ../src/ui.h:229
+msgid "_Reversed Order"
+msgstr "_Обратен редослед"
+
+#: ../src/ui.h:230
+msgid "Reverse the list order"
+msgstr "Пренасочи го распоредот на листата"
+
+#: ../src/ui.h:234
+msgid "_Folders"
+msgstr "_Папки"
+
+#: ../src/ui.h:235
+msgid "View the folders pane"
+msgstr "Види го просторот за папките"
+
+#: ../src/ui.h:244
+msgid "View All _Files"
+msgstr "Прегледај ги сите _датотеки"
+
+#: ../src/ui.h:247
+msgid "View as a F_older"
+msgstr "Поглед како папка"
+
+#: ../src/ui.h:255
+msgid "by _Name"
+msgstr "по _име"
+
+#: ../src/ui.h:256
+msgid "Sort file list by name"
+msgstr "Подреди по азбучен ред"
+
+#: ../src/ui.h:258
+msgid "by _Size"
+msgstr "по _големина"
+
+#: ../src/ui.h:259
+msgid "Sort file list by file size"
+msgstr "Подреди датотеки по големина"
+
+#: ../src/ui.h:261
+msgid "by T_ype"
+msgstr "по т_ип"
+
+#: ../src/ui.h:262
+msgid "Sort file list by type"
+msgstr "Подреди датотеки по тип"
+
+#: ../src/ui.h:264
+msgid "by _Date modified"
+msgstr "по дата"
+
+#: ../src/ui.h:265
+msgid "Sort file list by modification time"
+msgstr "Подредија ја листата по времето кога се направени измени"
+
+#: ../src/ui.h:267
+msgid "by _Location"
+msgstr "по локација"
+
+#: ../src/ui.h:268
+msgid "Sort file list by location"
+msgstr "Подреди датотеки по локација"
+

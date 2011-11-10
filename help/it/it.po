@@ -1,0 +1,3287 @@
+# Copyright (C) 2007-2008 Free Software Foundation, Inc
+# This file is distributed under the same license as the File Roller package.
+# Italian translation of File Roller manual
+#
+#
+# Gruppo traduzione Italiano di Ubuntu <gruppo-traduzione AT ubuntu-it DOT org>, 2007
+# Milo Casagrande <milo AT ubuntu DOT com>, 2007-2008, 2009
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Archive Manager Manual\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-06-15 17:22+0000\n"
+"PO-Revision-Date: 2009-08-16 16:34+0200\n"
+"Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/file-roller.xml:420(None)
+msgid ""
+"@@image: 'figures/file-roller_main_window.png'; "
+"md5=1ffe6686c623c5a279a1ad13fb8eb488"
+msgstr "fatto"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/file-roller.xml:1164(None)
+msgid ""
+"@@image: 'figures/file-roller_leftarrow.png'; "
+"md5=1878b2a4132b673aa79df7660398caa0"
+msgstr "fatto"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/file-roller.xml:1183(None)
+msgid ""
+"@@image: 'figures/file-roller_rightarrow.png'; "
+"md5=45a0479ca13140680220976ccb653bda"
+msgstr "fatto"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/file-roller.xml:1202(None)
+msgid ""
+"@@image: 'figures/file-roller_uparrow.png'; "
+"md5=097f01471c5575ceeb527ea8d50061bd"
+msgstr "fatto"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/file-roller.xml:1221(None)
+msgid ""
+"@@image: 'figures/file-roller_home.png'; md5=1cede2c4f8d21c357d0eb9979f39f18d"
+msgstr "fatto"
+
+#: C/file-roller.xml:29(title)
+msgid "<application>Archive Manager</application> Manual"
+msgstr "Manuale di <application>Gestore di archivi</application>"
+
+#: C/file-roller.xml:31(para)
+#| msgid ""
+#| "You can use the Archive Manager, also known as File Roller, to create, "
+#| "view, modify, or unpack an archive."
+msgid ""
+"Archive Manager, also known as File Roller, allows you to create, view, "
+"modify, or unpack an archive."
+msgstr ""
+"È possibile utilizzare Gestore di archivi, noto anche come File Roller, per "
+"creare, visualizzare, modificare e aprire un archivio."
+
+#: C/file-roller.xml:34(year)
+#| msgid "2006"
+msgid "2009"
+msgstr "2009"
+
+#: C/file-roller.xml:35(holder) C/file-roller.xml:118(para)
+msgid "Paul Cutler"
+msgstr "Paul Cutler"
+
+#: C/file-roller.xml:38(year)
+msgid "2006"
+msgstr "2006"
+
+#: C/file-roller.xml:39(year)
+msgid "2008"
+msgstr "2006"
+
+#: C/file-roller.xml:40(holder) C/file-roller.xml:49(holder)
+#: C/file-roller.xml:127(para) C/file-roller.xml:136(para)
+#: C/file-roller.xml:177(para)
+msgid "Paolo Bacchilega"
+msgstr "Paolo Bacchilega"
+
+#: C/file-roller.xml:43(year) C/file-roller.xml:48(year)
+msgid "2003"
+msgstr "2003"
+
+#: C/file-roller.xml:44(year)
+msgid "2004"
+msgstr "2004"
+
+#: C/file-roller.xml:45(holder) C/file-roller.xml:81(orgname)
+msgid "Sun Microsystems"
+msgstr "Sun Microsystems"
+
+#: C/file-roller.xml:52(year)
+msgid "2002"
+msgstr "2002"
+
+#: C/file-roller.xml:53(holder) C/file-roller.xml:185(para)
+msgid "Alexander Kirillov"
+msgstr "Alexander Kirillov"
+
+#: C/file-roller.xml:69(publishername) C/file-roller.xml:88(orgname)
+#: C/file-roller.xml:95(orgname) C/file-roller.xml:103(orgname)
+#: C/file-roller.xml:119(para) C/file-roller.xml:128(para)
+#: C/file-roller.xml:137(para) C/file-roller.xml:146(para)
+#: C/file-roller.xml:154(para) C/file-roller.xml:162(para)
+#: C/file-roller.xml:170(para) C/file-roller.xml:178(para)
+#: C/file-roller.xml:186(para)
+msgid "MATE Documentation Project"
+msgstr "Progetto di documentazione MATE"
+
+#: C/file-roller.xml:2(para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or "
+"in the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Questo documento può essere copiato, distribuito o modificato in base ai "
+"termini della GNU Free Documentation License (GFDL), versione 1.1 o di "
+"versioni successive pubblicate dalla Free Software Foundation che siano "
+"prive di sezioni invariabili, frontespizi e retrocopertine. La GFDL è "
+"disponibile accedendo a questo <ulink url=\"ghelp:fdl\" type=\"help\">link</"
+"ulink> o nel file COPYING-DOCS distribuito con questo manuale."
+
+#: C/file-roller.xml:12(para)
+msgid ""
+"This manual is part of a collection of MATE manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Questo manuale fa parte di una raccolta di documenti su MATE distribuita "
+"secondo i termini della GFDL. Per distribuire questo manuale separatamente, "
+"è necessario aggiungere al documento una copia della licenza, come descritto "
+"nella sezione 6 di quest'ultima."
+
+#: C/file-roller.xml:19(para)
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any MATE "
+"documentation, and the members of the MATE Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Molti dei nomi utilizzati dalle aziende per distinguere i propri prodotti e "
+"servizi sono rivendicati come marchi. Ove tali nomi sono citati nella "
+"documentazione di MATE e i membri del MATE Documentation Project sono a "
+"conoscenza della loro natura di marchi, tali nomi vengono riportati a "
+"lettere maiuscole o con iniziale maiuscola."
+
+#: C/file-roller.xml:35(para)
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"IL DOCUMENTO VIENE DISTRIBUITO SENZA ALCUNA GARANZIA ESPLICITA O IMPLICITA "
+"DI ALCUN TIPO, INCLUSE, SENZA LIMITAZIONE, LA GARANZIA DI ASSENZA DI DIFETTI "
+"DEL DOCUMENTO O DELLE SUE VERSIONI MODIFICATE O LA GARANZIA CHE IL DOCUMENTO "
+"SIA COMMERCIABILE, SIA ADATTO A UN DETERMINATO SCOPO O NON VIOLI DIRITTI DI "
+"TERZI. TUTTI I RISCHI RIGUARDO ALLA QUALITÀ;, L'ACCURATEZZA E LE PRESTAZIONI "
+"DEL DOCUMENTO O DELLE SUE VERSIONI MODIFICATE SONO A CARICO DELL'UTENTE. "
+"QUALORA UN DOCUMENTO O UNA SUA VERSIONE MODIFICATA SI RIVELINO DIFETTOSI, I "
+"COSTI DEGLI EVENTUALI INTERVENTI DI ASSISTENZA, RIPARAZIONE O CORREZIONE "
+"SARANNO A CARICO DELL'UTENTE (NON DEL REDATTORE INIZIALE, DELL'AUTORE O DI "
+"ALTRI COLLABORATORI). LA PRESENTE ESCLUSIONE DI GARANZIA COSTITUISCE PARTE "
+"ESSENZIALE DELLA LICENZA. SONO AUTORIZZATI SOLO GLI USI DEL DOCUMENTO O "
+"DELLE SUE VERSIONI MODIFICATE PREVISTI DALLA PRESENTE ESCLUSIONE DI "
+"GARANZIA; INOLTRE IN NESSUNA CIRCOSTANZA E"
+
+#: C/file-roller.xml:55(para)
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"IN NESSUNA INTERPRETAZIONE GIURIDICA, INCLUSI I CASI DI ILLECITO (ANCHE PER "
+"NEGLIGENZA), VIOLAZIONE CONTRATTUALE O ALTRO, L'AUTORE, IL REDATTORE "
+"INIZIALE, ALTRI COLLABORATORI, QUALUNQUE DISTRIBUTORE DEL DOCUMENTO O DI UNA "
+"SUA VERSIONE MODIFICATA O QUALUNQUE FORNITORE DELLE PARTI CITATE POTRÀ; "
+"ESSERE RITENUTO RESPONSABILE NEI CONFRONTI DI QUALUNQUE PERSONA PER DANNI "
+"DIRETTI, INDIRETTI, SPECIALI, INCIDENTALI O CONSEQUENZIALI DI QUALUNQUE "
+"NATURA, INCLUSI, SENZA LIMITAZIONE, I DANNI DOVUTI A PERDITA DI AVVIAMENTO, "
+"INTERRUZIONE DEL LAVORO, GUASTO O MALFUNZIONAMENTO DEL COMPUTER O QUALUNQUE "
+"ALTRO DANNO O PERDITA DERIVANTE DA O CORRELATO ALL'USO DEL DOCUMENTO O DI "
+"UNA SUA VERSIONE MODIFICATA, ANCHE NEL CASO IN CUI TALI PARTI FOSSERO STATE "
+"INFORMATE DELLA POSSIBILITÀ; DI TALI DANNI."
+
+#: C/file-roller.xml:28(para)
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<placeholder-1/>"
+msgstr ""
+"QUESTO DOCUMENTO E LE SUE VERSIONI MODIFICATE VENGONO FORNITI IN BASE AI "
+"TERMINI DELLA GNU FREE DOCUMENTATION LICENSE, CON L'INTESA CHE:<placeholder-"
+"1/>"
+
+#: C/file-roller.xml:78(firstname)
+msgid "Sun"
+msgstr "Sun"
+
+#: C/file-roller.xml:79(surname)
+msgid "MATE Documentation Team"
+msgstr "Team di documentazione di MATE"
+
+#: C/file-roller.xml:85(firstname)
+msgid "Paolo"
+msgstr "Paolo"
+
+#: C/file-roller.xml:86(surname)
+msgid "Bacchilega"
+msgstr "Bacchilega"
+
+#: C/file-roller.xml:92(firstname)
+msgid "Alexander"
+msgstr "Alexander"
+
+#: C/file-roller.xml:93(surname)
+msgid "Kirillov"
+msgstr "Kirillov"
+
+#: C/file-roller.xml:96(email)
+msgid "kirillov@math.sunysb.edu"
+msgstr "kirillov@math.sunysb.edu"
+
+#: C/file-roller.xml:100(firstname)
+#| msgid "Paolo"
+msgid "Paul"
+msgstr "Paul"
+
+#: C/file-roller.xml:101(surname)
+msgid "Cutler"
+msgstr "Cutler"
+
+#: C/file-roller.xml:104(email)
+msgid "pcutler@foresightlinux.org"
+msgstr "pcutler@foresightlinux.org"
+
+#: C/file-roller.xml:115(revnumber)
+#| msgid "Archive Manager Manual V2.24.0"
+msgid "Archive Manager Manual V2.26.0"
+msgstr "Manuale di Gestore di archivi V2.26.0"
+
+#: C/file-roller.xml:116(date)
+#| msgid "March 2004"
+msgid "March 2009"
+msgstr "Marzo 2009"
+
+#: C/file-roller.xml:124(revnumber)
+msgid "Archive Manager Manual V2.24.0"
+msgstr "Manuale di Gestore di archivi V2.24.0"
+
+#: C/file-roller.xml:125(date)
+msgid "July 2008"
+msgstr "Giugno 2008"
+
+#: C/file-roller.xml:133(revnumber)
+msgid "Archive Manager Manual V2.6"
+msgstr "Manuale di Gestore di archivi 2.6"
+
+#: C/file-roller.xml:134(date)
+msgid "April 2006"
+msgstr "Aprile 2006"
+
+#: C/file-roller.xml:142(revnumber)
+msgid "File Roller Manual V2.5"
+msgstr "Manuale di File Roller 2.5"
+
+#: C/file-roller.xml:143(date)
+msgid "March 2004"
+msgstr "Marzo 2004"
+
+#: C/file-roller.xml:145(para) C/file-roller.xml:153(para)
+#: C/file-roller.xml:161(para) C/file-roller.xml:169(para)
+msgid "Sun MATE Documentation Team"
+msgstr "Sun MATE Documentation Team"
+
+#: C/file-roller.xml:150(revnumber)
+msgid "File Roller Manual V2.4"
+msgstr "Manuale di File Roller 2.4"
+
+#: C/file-roller.xml:151(date)
+msgid "February 2004"
+msgstr "Febbraio 2004"
+
+#: C/file-roller.xml:158(revnumber)
+msgid "File Roller Manual V2.3"
+msgstr "Manuale di File Roller 2.3"
+
+#: C/file-roller.xml:159(date)
+msgid "August 2003"
+msgstr "Agosto 2003"
+
+#: C/file-roller.xml:166(revnumber)
+msgid "File Roller Manual V2.2"
+msgstr "Manuale di File Roller 2.2"
+
+#: C/file-roller.xml:167(date)
+msgid "June 2003"
+msgstr "Giugno 2003"
+
+#: C/file-roller.xml:174(revnumber)
+msgid "File Roller Manual V2.1"
+msgstr "Manuale di File Roller 2.1"
+
+#: C/file-roller.xml:175(date)
+msgid "January 2003"
+msgstr "Gennaio 2003"
+
+#: C/file-roller.xml:182(revnumber)
+msgid "File Roller Manual V2.0"
+msgstr "Manuale di File Roller 2.0"
+
+#: C/file-roller.xml:183(date)
+msgid "June 2002"
+msgstr "Giugno 2002"
+
+#: C/file-roller.xml:191(releaseinfo)
+#| msgid "This manual describes version 2.24.0 of Archive Manager."
+msgid "This manual describes version 2.26.0 of Archive Manager."
+msgstr "Questo manuale descrive la versione 2.26.0 di Gestore di archivi."
+
+#: C/file-roller.xml:194(title)
+msgid "Feedback"
+msgstr "Commenti"
+
+#: C/file-roller.xml:195(para)
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Archive "
+"Manager</application> application or this manual, follow the directions in "
+"the <ulink url=\"ghelp:mate-feedback\" type=\"help\">MATE Feedback Page</"
+"ulink>."
+msgstr ""
+"Per segnalare un bug o un suggerimento riguardo <application>Gestore di "
+"archivi</application> o questo manuale, seguire le indicazioni presenti "
+"nella <ulink url=\"ghelp:mate-feedback\" type=\"help\">pagina dei commenti "
+"di MATE</ulink>."
+
+#: C/file-roller.xml:202(primary)
+msgid "File Roller"
+msgstr "File Roller"
+
+#: C/file-roller.xml:205(primary)
+msgid "file-roller"
+msgstr "file-roller"
+
+#: C/file-roller.xml:208(primary)
+msgid "Archiving"
+msgstr "Archiviazione"
+
+#: C/file-roller.xml:211(primary) C/file-roller.xml:215(primary)
+#: C/file-roller.xml:219(primary) C/file-roller.xml:223(primary)
+#: C/file-roller.xml:227(primary) C/file-roller.xml:231(primary)
+msgid "Archives"
+msgstr "Archivi"
+
+#: C/file-roller.xml:212(secondary)
+msgid "Adding files to"
+msgstr "Aggiungere file a"
+
+#: C/file-roller.xml:216(secondary)
+msgid "Deleting files from"
+msgstr "Eliminare file da"
+
+#: C/file-roller.xml:220(secondary)
+msgid "Opening"
+msgstr "Apertura"
+
+#: C/file-roller.xml:224(secondary)
+msgid "Viewing"
+msgstr "Visualizzazione"
+
+#: C/file-roller.xml:228(secondary)
+msgid "Extracting"
+msgstr "Estrazione"
+
+#: C/file-roller.xml:232(secondary)
+msgid "Creating"
+msgstr "Creazione"
+
+#: C/file-roller.xml:240(title)
+msgid "Introduction"
+msgstr "Introduzione"
+
+#: C/file-roller.xml:241(para)
+msgid ""
+"You can use the <application>Archive Manager</application> application to "
+"create, view, modify, or unpack an archive. An archive is a file that acts "
+"as a container for other files. An archive can contain many files, folders, "
+"and subfolders, usually in compressed form."
+msgstr ""
+"È possibile utilizzare l'applicazione <application>Gestore di archivi</"
+"application> per creare, visualizzare, modificare o scompattare un archivio. "
+"Un archivio è un file che funge da contenitore per altri file. Un archivio "
+"può contenere molti file, cartelle e sotto-cartelle, solitamente in forma "
+"compressa."
+
+#: C/file-roller.xml:243(para)
+msgid ""
+"<application>Archive Manager</application> provides only a graphical "
+"interface, and relies on command-line utilities such as <command>tar</"
+"command>, <command>gzip</command>, and <command>bzip2</command> for archive "
+"operations."
+msgstr ""
+"<application>Gestore di archivi</application> è solo un'interfaccia grafica; "
+"per le operazioni sugli archivi si fa affidamento su utilità a riga di "
+"comando come <command>tar</command>, <command>gzip</command> e "
+"<command>bzip2</command>."
+
+#: C/file-roller.xml:246(para)
+msgid ""
+"If you have the appropriate command-line tools installed on your system, "
+"<application>Archive Manager</application> supports the archive formats "
+"listed in the following table."
+msgstr ""
+"Se nel sistema sono installati gli appropriati strumenti a riga di comando, "
+"<application>Gestore di archivi</application> supporta i formati di archivio "
+"elencati nella seguente tabella."
+
+#: C/file-roller.xml:255(para)
+msgid "Format"
+msgstr "Formato"
+
+#: C/file-roller.xml:257(para)
+msgid "Filename Extension"
+msgstr "Estensione nome di file"
+
+#: C/file-roller.xml:262(para)
+msgid "7-Zip archive"
+msgstr "Archivio 7-Zip"
+
+#: C/file-roller.xml:263(filename)
+msgid ".7z"
+msgstr ".7z"
+
+#: C/file-roller.xml:266(para)
+msgid "WinAce archive"
+msgstr "Archivio WinAce"
+
+#: C/file-roller.xml:267(filename)
+msgid ".ace"
+msgstr ".ace"
+
+#: C/file-roller.xml:270(para)
+msgid "ALZip archive"
+msgstr "Archivio ALZip"
+
+#: C/file-roller.xml:271(filename)
+msgid ".alz"
+msgstr ".alz"
+
+#: C/file-roller.xml:274(para)
+msgid "AIX small indexed archive"
+msgstr "Archivio AIX small indexed"
+
+#: C/file-roller.xml:275(filename)
+msgid ".ar"
+msgstr ".ar"
+
+#: C/file-roller.xml:278(para)
+msgid "ARJ archive"
+msgstr "Archivio ARJ"
+
+#: C/file-roller.xml:279(filename)
+msgid ".arj"
+msgstr ".arj"
+
+#: C/file-roller.xml:282(para)
+msgid "Cabinet file"
+msgstr "File cabinet"
+
+#: C/file-roller.xml:283(filename)
+msgid ".cab"
+msgstr ".cab"
+
+#: C/file-roller.xml:286(para)
+msgid "UNIX CPIO archive"
+msgstr "Archivio UNIX CPIO"
+
+#: C/file-roller.xml:287(filename)
+msgid ".cpio"
+msgstr ".cpio"
+
+#: C/file-roller.xml:290(para)
+msgid "Debian Linux package"
+msgstr "Pacchetto Debian"
+
+#: C/file-roller.xml:291(filename)
+msgid ".deb"
+msgstr ".deb"
+
+#: C/file-roller.xml:294(para)
+msgid "ISO-9660 CD disc image"
+msgstr "Immagine disco CD ISO-9660"
+
+#: C/file-roller.xml:295(filename)
+msgid ".iso"
+msgstr ".iso"
+
+#: C/file-roller.xml:298(para)
+msgid "Java archive"
+msgstr "Archivio Java"
+
+#: C/file-roller.xml:299(filename)
+msgid ".jar"
+msgstr ".jar"
+
+#: C/file-roller.xml:302(para)
+msgid "Java enterprise archive"
+msgstr "Archivio Java Enterprise"
+
+#: C/file-roller.xml:303(filename)
+msgid ".ear"
+msgstr ".ear"
+
+#: C/file-roller.xml:306(para)
+msgid "Java web archive"
+msgstr "Archivio web Java"
+
+#: C/file-roller.xml:307(filename)
+msgid ".war"
+msgstr ".war"
+
+#: C/file-roller.xml:310(para)
+msgid "LHA archive"
+msgstr "Archivio LHA"
+
+#: C/file-roller.xml:311(para)
+msgid "<filename>.lha</filename>, <filename>.lzh</filename>"
+msgstr "<filename>.lha</filename>, <filename>.lzh</filename>"
+
+#: C/file-roller.xml:314(para)
+msgid "WinRAR compressed archive"
+msgstr "Archivio compresso WinRAR"
+
+#: C/file-roller.xml:315(filename)
+msgid ".rar"
+msgstr ".rar"
+
+#: C/file-roller.xml:318(para)
+msgid "RAR Archived Comic Book"
+msgstr "Archivio RAR Comic Book"
+
+#: C/file-roller.xml:319(filename)
+msgid ".cbr"
+msgstr ".cbr"
+
+#: C/file-roller.xml:322(para)
+msgid "RPM Linux package"
+msgstr "Pacchetto RPM"
+
+#: C/file-roller.xml:323(filename)
+msgid ".rpm"
+msgstr ".rpm"
+
+#: C/file-roller.xml:326(para)
+msgid "Uncompressed tar archive"
+msgstr "Archivio tar non compresso"
+
+#: C/file-roller.xml:327(filename)
+msgid ".tar"
+msgstr ".tar"
+
+#: C/file-roller.xml:330(para)
+msgid "Tar archive compressed with <command>bzip</command>"
+msgstr "Archivio tar compresso con <command>bzip</command>"
+
+#: C/file-roller.xml:331(para)
+msgid "<filename>.tar.bz</filename> or <filename>.tbz</filename>"
+msgstr "<filename>.tar.bz</filename> o <filename>.tbz</filename>"
+
+#: C/file-roller.xml:334(para)
+msgid "Tar archive compressed with <command>bzip2</command>"
+msgstr "Archivio tar compresso con <command>bzip2</command>"
+
+#: C/file-roller.xml:335(para)
+msgid "<filename>.tar.bz2</filename> or <filename>.tbz2</filename>"
+msgstr "<filename>.tar.bz2</filename> o <filename>.tbz2</filename>"
+
+#: C/file-roller.xml:338(para)
+msgid "Tar archive compressed with <command>gzip</command>"
+msgstr "Archivio tar compresso con <command>gzip</command>"
+
+#: C/file-roller.xml:339(para)
+msgid "<filename>.tar.gz</filename> or <filename>.tgz</filename>"
+msgstr "<filename>.tar.gz</filename> o <filename>.tgz</filename>"
+
+#: C/file-roller.xml:342(para)
+#| msgid "Tar archive compressed with <command>bzip</command>"
+msgid "Tar archive compressed with <command>lzip</command>"
+msgstr "Archivio tar compresso con <command>lzip</command>"
+
+#: C/file-roller.xml:343(para)
+#| msgid "<filename>.tar.lzo</filename> or <filename>.tzo</filename>"
+msgid "<filename>.tar.lz</filename> or <filename>.tlz</filename>"
+msgstr "<filename>.tar.lz</filename> o <filename>.tlz</filename>"
+
+#: C/file-roller.xml:346(para)
+msgid "Tar archive compressed with <command>lzop</command>"
+msgstr "Archivio tar compresso con <command>lzop</command>"
+
+#: C/file-roller.xml:347(para)
+msgid "<filename>.tar.lzo</filename> or <filename>.tzo</filename>"
+msgstr "<filename>.tar.lzo</filename> o <filename>.tzo</filename>"
+
+#: C/file-roller.xml:350(para)
+msgid "Tar archive compressed with <command>compress</command>"
+msgstr "Archivio tar compresso con <command>compress</command>"
+
+#: C/file-roller.xml:351(para)
+msgid "<filename>.tar.Z</filename> or <filename>.taz</filename>"
+msgstr "<filename>.tar.Z</filename> o <filename>.taz</filename>"
+
+#: C/file-roller.xml:354(para)
+msgid "Tar archive compressed with <command>7zip</command>"
+msgstr "Archivio tar compresso con <command>7zip</command>"
+
+#: C/file-roller.xml:355(filename)
+msgid ".tar.7z"
+msgstr ".tar.7z"
+
+#: C/file-roller.xml:358(para)
+msgid "Stuffit archives"
+msgstr "Archivi Stuffit"
+
+#: C/file-roller.xml:359(para)
+msgid "<filename>.bin</filename> or <filename>.sit</filename>"
+msgstr "<filename>.bin</filename> o <filename>.sit</filename>"
+
+#: C/file-roller.xml:362(para)
+msgid "PKZIP or WinZip archive"
+msgstr "Archivio PKZIP o WinZip"
+
+#: C/file-roller.xml:363(filename)
+msgid ".zip"
+msgstr ".zip"
+
+#: C/file-roller.xml:366(para)
+msgid "ZIP Archived Comic Book"
+msgstr "Archivio ZIP Comic Book"
+
+#: C/file-roller.xml:367(filename)
+msgid ".cbz"
+msgstr ".cbz"
+
+#: C/file-roller.xml:370(para)
+msgid "Zoo archive"
+msgstr "Archivio zoo"
+
+#: C/file-roller.xml:371(filename)
+msgid ".zoo"
+msgstr ".zoo"
+
+#: C/file-roller.xml:376(para)
+msgid ""
+"The most common archive format on UNIX and Linux systems is the tar archive "
+"compressed with <command>gzip</command> or <command>bzip2</command>."
+msgstr ""
+"Il formato di archivio più utilizzato sui sistemi UNIX e Linux è l'archivio "
+"«tar» compresso con <command>gzip</command> o <command>bzip2</command>."
+
+#: C/file-roller.xml:377(para)
+msgid ""
+"The most common archive format on Microsoft Windows systems is the archive "
+"created with <application>PKZIP</application> or <application>WinZip</"
+"application>."
+msgstr ""
+"Il formato di archivio più utilizzato sui sistemi Microsoft Windows è "
+"l'archivio creato con il programma <application>PKZIP</application> o "
+"<application>WinZip</application>."
+
+#: C/file-roller.xml:379(title)
+msgid "Compressed Non-Archive Files"
+msgstr "File non-archivio compressi"
+
+#: C/file-roller.xml:380(para)
+#| msgid ""
+#| "A compressed non-archive file is a file that is created when you use "
+#| "<command>bzip2</command>, <command>gzip</command>, <command>lzop</"
+#| "command>, <command>compress</command> or <command>rzip</command> to "
+#| "compress a non-archive file. For example, <filename>file.txt.gz</"
+#| "filename> is created when you use <command>gzip</command> to compress "
+#| "<filename>file.txt</filename>."
+msgid ""
+"A compressed non-archive file is a file that is created when you use "
+"<command>bzip2</command>, <command>gzip</command>, <command>lzip</command>, "
+"<command>lzop</command>, <command>compress</command> or <command>rzip</"
+"command> to compress a non-archive file. For example, <filename>file.txt.gz</"
+"filename> is created when you use <command>gzip</command> to compress "
+"<filename>file.txt</filename>."
+msgstr ""
+"Un file non-archivio compresso è un file creato utilizzando <command>bzip2</"
+"command>, <command>gzip</command>, <command>lzip</command>, <command>lzop</"
+"command>, <command>compress</command> o <command>rzip</command> per "
+"comprimere un file che non è un archivio. Per esempio, il file "
+"<filename>file.txt.gz</filename> è creato utilizzando <command>gzip</"
+"command> per comprimere il file <filename>file.txt</filename>."
+
+#: C/file-roller.xml:381(para)
+msgid ""
+"You can use <application>Archive Manager</application> to create, open and "
+"extract a compressed non-archive file."
+msgstr ""
+"È possibile utilizzare <application>Gestore di archivi</application> per "
+"creare, aprire ed estrarre un file non-archivio compresso."
+
+#: C/file-roller.xml:387(title)
+msgid "Getting Started"
+msgstr "Per iniziare"
+
+#: C/file-roller.xml:388(para)
+msgid ""
+"This section provides information on how to start <application>Archive "
+"Manager</application>, and describes the <application>Archive Manager</"
+"application> user interface."
+msgstr ""
+"Questa sezione fornisce informazioni sull'avvio di <application>Gestore di "
+"archivi</application> e sulla sua interfaccia grafica."
+
+#: C/file-roller.xml:393(title)
+msgid "To Start <application>Archive Manager</application>"
+msgstr "Avviare <application>Gestione di archivi</application>"
+
+#: C/file-roller.xml:394(para)
+msgid ""
+"You can start <application>Archive Manager</application> in the following "
+"ways:"
+msgstr ""
+"È possibile avviare <application>Gestore di archivi</application> nei "
+"seguenti modi:"
+
+#: C/file-roller.xml:397(term)
+msgid "<guimenu>Applications</guimenu> menu"
+msgstr "Menù <application>Applicazioni</application>"
+
+#: C/file-roller.xml:399(para)
+msgid ""
+"Choose <menuchoice><guisubmenu>Accessories</guisubmenu><guimenuitem>Archive "
+"Manager</guimenuitem></menuchoice>."
+msgstr ""
+"Scegliere <menuchoice><guisubmenu>Accessori</guisubmenu><guimenuitem>Gestore "
+"di archivi</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:403(term)
+msgid "Command line"
+msgstr "Riga di comando"
+
+#: C/file-roller.xml:405(para)
+msgid "Execute the following command: <command>file-roller</command>"
+msgstr "Eseguire il seguente comando: <command>file-roller</command>"
+
+#: C/file-roller.xml:412(title)
+msgid "When You Start <application>Archive Manager</application>"
+msgstr "Quando si avvia <application>Gestore di archivi</application>"
+
+#: C/file-roller.xml:413(para)
+msgid ""
+"When you start <application>Archive Manager</application>, the following "
+"window is displayed:"
+msgstr ""
+"Quando si avvia <application>Gestore di archivi</application> viene mostrata "
+"la seguente finestra:"
+
+#: C/file-roller.xml:416(title)
+msgid "<application>Archive Manager</application> Window"
+msgstr "Finestra di <application>Gestore di archivi</application>"
+
+#: C/file-roller.xml:422(phrase)
+msgid "Shows File Roller main window."
+msgstr "Mostra la finestra principale di File Roller."
+
+#: C/file-roller.xml:428(para)
+msgid ""
+"The <application>Archive Manager</application> window contains the following "
+"elements:"
+msgstr ""
+"La finestra di <application>Gestore di archivi</application> contiene i "
+"seguenti elementi:"
+
+#: C/file-roller.xml:430(term) C/file-roller.xml:502(para)
+msgid "Menubar"
+msgstr "Barra dei menù"
+
+#: C/file-roller.xml:432(para)
+msgid ""
+"The menus on the menubar contain all of the commands that you need to work "
+"with archives in <application>Archive Manager</application>."
+msgstr ""
+"I menù all'interno della barra dei menù contengono tutti i comandi necessari "
+"per lavorare con gli archivi in <application>Gestore di archivi</"
+"application>."
+
+#: C/file-roller.xml:435(term) C/file-roller.xml:508(para)
+msgid "Toolbar"
+msgstr "Barra degli strumenti"
+
+#: C/file-roller.xml:437(para)
+msgid ""
+"The toolbar contains a subset of the commands that you can access from the "
+"menubar. <application>Archive Manager</application> displays the toolbar by "
+"default. To hide the toolbar, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice>. To show the "
+"toolbar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Toolbar</"
+"guimenuitem></menuchoice> again."
+msgstr ""
+"La barra degli strumenti contiene un sottoinsieme dei comandi accessibili "
+"dalla barra dei menù. In modo predefinito, la barra degli strumenti di "
+"<application>Gestore di archivi</application> è visibile. Per nascondere la "
+"barra degli strumenti, scegliere <menuchoice><guimenu>Visualizza</"
+"guimenu><guimenuitem>Barra degli strumenti</guimenuitem></menuchoice>; per "
+"mostrarla, scegliere nuovamente <menuchoice><guimenu>Visualizza</"
+"guimenu><guimenuitem>Barra degli strumenti</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:440(term)
+msgid "Folderbar"
+msgstr "Barra delle cartelle"
+
+#: C/file-roller.xml:442(para)
+msgid ""
+"The folderbar enables you to navigate among folders within an archive. "
+"<application>Archive Manager</application> displays the folderbar only in "
+"folder view. See <xref linkend=\"file-roller-view-type-folder\"/> for more "
+"information."
+msgstr ""
+"La barra delle cartelle consente l'esplorazione delle cartelle all'interno "
+"di un archivio. La barra delle cartelle di <application>Gestore di archivi</"
+"application> viene mostrata solamente nella vista a cartella. Per maggiori "
+"informazioni, consultare <xref linkend=\"file-roller-view-type-folder\"/>."
+
+#: C/file-roller.xml:445(term)
+msgid "Display area"
+msgstr "Area di visualizzazione"
+
+#: C/file-roller.xml:447(para)
+msgid "The display area displays the contents of the archive."
+msgstr "L'area di visualizzazione mostra il contenuto dell'archivio."
+
+#: C/file-roller.xml:450(term)
+msgid "Statusbar"
+msgstr "Barra di stato"
+
+#: C/file-roller.xml:452(para)
+msgid ""
+"The statusbar displays information about current <application>Archive "
+"Manager</application> activity and contextual information about the archive "
+"contents. <application>Archive Manager</application> displays the statusbar "
+"by default. To hide the statusbar, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Statusbar</guimenuitem></menuchoice>. To show the "
+"statusbar, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Statusbar</"
+"guimenuitem></menuchoice> again."
+msgstr ""
+"La barra di stato mostra informazioni relative all'attuale attività di "
+"<application>Gestore di archivi</application> e informazioni contestuali "
+"relative al contenuto dell'archivio.  In modo predefinito, la barra di stato "
+"di <application>Gestore di archivi</application> è visibile. Per nascondere "
+"la barra di stato, scegliere <menuchoice><guimenu>Visualizza</"
+"guimenu><guimenuitem>Barra di stato</guimenuitem></menuchoice>; per "
+"mostrarla, scegliere nuovamente <menuchoice><guimenu>Visualizza</"
+"guimenu><guimenuitem>Barra di stato</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:456(para)
+msgid ""
+"When you right-click in the <application>Archive Manager</application> "
+"window, the application displays a popup menu. The popup menu contains the "
+"most common contextual archive commands."
+msgstr ""
+"Quando si fa clic col pulsante destro del mouse all'interno della finestra "
+"di <application>Gestore di archivi</application>, viene mostrato un menù a "
+"comparsa. Questo menù contiene i comandi contestuali più usati con gli "
+"archivi."
+
+#: C/file-roller.xml:459(title)
+msgid "Browsing the Filesystem"
+msgstr "Esplorare il file system"
+
+#: C/file-roller.xml:460(para)
+msgid ""
+"Several <application>Archive Manager</application> dialogs (<guilabel>New</"
+"guilabel>, <guilabel>Open</guilabel>, <guilabel>Extract</guilabel>,...) "
+"enable you to browse files and folders on your computer. Refer to the <ulink "
+"type=\"help\" url=\"ghelp:user-guide?filechooser-open\">Desktop User Guide</"
+"ulink> to learn more about using the file browsing dialogs."
+msgstr ""
+"Diversi dialoghi di <application>Gestore di archivi</application> "
+"(<guilabel>Nuovo</guilabel>, <guilabel>Apri</guilabel>, <guilabel>Estrai</"
+"guilabel>,...) consentono di esplorare i file e le cartelle all'interno del "
+"proprio computer. Per maggiori informazioni riguardo l'utilizzo del gestore "
+"di file, consultare la <ulink type=\"help\" url=\"ghelp:user-guide?"
+"filechooser-open\">guida utente</ulink>."
+
+#: C/file-roller.xml:464(para)
+msgid ""
+"You can also refer to the <ulink type=\"help\" url=\"ghelp:user-guide?"
+"caja-bookmarks\">Bookmarks section</ulink> of the Desktop User Guide to "
+"learn how you can use the <guilabel>Places</guilabel> pane to access your "
+"favorite locations."
+msgstr ""
+"Per informazioni su come utilizzare il riquadro <guilabel>Risorse</guilabel> "
+"per accedere alle posizioni preferite, è possibile fare riferimento alla "
+"<ulink type=\"help\" url=\"ghelp:user-guide?caja-bookmarks\">sezione sui "
+"segnalibri</ulink> della guida utente."
+
+#: C/file-roller.xml:476(title)
+msgid "Working With Archives"
+msgstr "Lavorare con gli archivi"
+
+#: C/file-roller.xml:477(para)
+msgid ""
+"When you use <application>Archive Manager</application> to work with an "
+"archive, all changes are saved to disk immediately. For example, if you "
+"delete a file from an archive, <application>Archive Manager</application> "
+"deletes the file as soon as you click <guibutton>OK</guibutton>. This "
+"behavior is different to that of most applications, which save the changes "
+"to disk only when you quit the application or select <guimenuitem>Save</"
+"guimenuitem> in the menu."
+msgstr ""
+"Quando si usa <application>Gestore di archivi</application> per lavorare con "
+"un archivio, tutti i cambiamenti apportati sono salvati immediatamente sul "
+"disco. Per esempio, eliminando un file da un archivio, il file viene "
+"eliminato da <application>Gestore di archivi</application> non appena si fa "
+"clic su <guibutton>OK</guibutton>. Questo comportamento è diverso da quello "
+"della maggior parte delle applicazioni, con le quali i cambiamenti sono "
+"salvati alla chiusura dell'applicazione stessa o alla selezione di "
+"<guimenuitem>Salva</guimenuitem> nel menù."
+
+#: C/file-roller.xml:479(para)
+msgid ""
+"If an archive is very large, or you have a slow system, some archive actions "
+"can take significant time. To abort the current action, press <keycap>Esc</"
+"keycap>. Alternatively, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Stop</guimenuitem></menuchoice>, or click "
+"<guibutton>Stop</guibutton> in the toolbar."
+msgstr ""
+"Se un archivio è molto grande o si possiede un sistema lento, alcune azioni "
+"possono richiedere un tempo considerevole per essere svolte. Per terminare "
+"l'azione in corso, premere <keycap>Esc</keycap>. In alternativa, scegliere "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ferma</guimenuitem></"
+"menuchoice> o fare clic su <guibutton>Ferma</guibutton> nella barra degli "
+"strumenti."
+
+#: C/file-roller.xml:491(para)
+msgid "UI Component"
+msgstr "Componente interfaccia"
+
+#: C/file-roller.xml:493(para)
+msgid "Action"
+msgstr "Azione"
+
+#: C/file-roller.xml:498(para)
+msgid "Window"
+msgstr "Finestra"
+
+#: C/file-roller.xml:499(para)
+msgid ""
+"Drag an archive into the <application>Archive Manager</application> window "
+"from another application such as a file manager."
+msgstr ""
+"Trascinare un archivio all'interno della finestra di <application>Gestore di "
+"archivi</application> da un'altra applicazione come un file manager."
+
+#: C/file-roller.xml:503(para)
+msgid ""
+"Choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Open</"
+"guimenuitem></menuchoice>."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Apri</"
+"guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:504(para)
+msgid ""
+"If you have recently opened the archive, it will be listed directly in the "
+"<menuchoice><guimenu>Archive</guimenu></menuchoice> menu."
+msgstr ""
+"Se l'archivio è stato aperto di recente, questo è elencato direttamente nel "
+"menù <menuchoice><guimenu>Archivio</guimenu></menuchoice>."
+
+#: C/file-roller.xml:509(para)
+msgid "Click on the <guibutton>Open</guibutton> toolbar button."
+msgstr "Fare clic su <guibutton>Apri</guibutton> nella barra degli strumenti."
+
+#: C/file-roller.xml:510(para)
+msgid ""
+"If you have recently opened the archive, click on the down arrow near the "
+"<guibutton>Open</guibutton> toolbar button."
+msgstr ""
+"Se l'archivio è stato aperto di recente, fare clic sulla freccia verso in "
+"basso accanto al pulsante <guibutton>Apri</guibutton> nella barra degli "
+"strumenti."
+
+#: C/file-roller.xml:513(para)
+msgid "Right-click popup menu"
+msgstr "Menù a comparsa (clic tasto destro)"
+
+#: C/file-roller.xml:514(para)
+msgid ""
+"Right-click on the archive, then choose <guilabel>Open</guilabel> from the "
+"popup menu."
+msgstr ""
+"Fare clic col pulsante destro del mouse su un archivio e selezionare "
+"<guilabel>Apri</guilabel> dal menù a comparsa."
+
+#: C/file-roller.xml:517(para)
+msgid "Shortcut keys"
+msgstr "Tasti scorciatoia"
+
+#: C/file-roller.xml:518(para)
+msgid "Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
+msgstr "Premere <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>."
+
+#: C/file-roller.xml:482(para)
+msgid ""
+"In <application>Archive Manager</application>, you can perform the same "
+"action in several ways. For example, you can open an archive in the "
+"following ways: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1\" "
+"rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
+"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
+"tgroup></informaltable>"
+msgstr ""
+"Con <application>Gestore di archivi</application> è possibile eseguire la "
+"stessa azione in diversi modi. Per esempio, è possibile aprire un archivio "
+"nei seguenti modi: <informaltable frame=\"all\"><tgroup cols=\"2\" colsep=\"1"
+"\" rowsep=\"1\"><colspec colname=\"COLSPEC0\" colwidth=\"50*\"/><colspec "
+"colname=\"COLSPEC1\" colwidth=\"50*\"/><placeholder-1/><placeholder-2/></"
+"tgroup></informaltable>"
+
+#: C/file-roller.xml:524(para)
+msgid "This manual documents functionality from the menubar."
+msgstr "Questo manuale espone le funzionalità della barra dei menù."
+
+#: C/file-roller.xml:529(title)
+msgid "Filename Patterns"
+msgstr "Modelli di nomi di file"
+
+#: C/file-roller.xml:530(para)
+msgid ""
+"<application>Archive Manager</application> enables you to add, extract, or "
+"delete several files at once. To apply an action to all files that match a "
+"certain pattern, enter the pattern in the text box. The pattern can include "
+"standard wildcard symbols such as <keycap>*</keycap> to match any string, "
+"and <keycap>?</keycap> to match any single symbol. You can enter several "
+"patterns separated by semicolons. <application>Archive Manager</application> "
+"applies the action to all files that match at least one of the patterns. The "
+"examples in the following table show how to use filename patterns to select "
+"files."
+msgstr ""
+"Con <application>Gestore di archivi</application> è possibile aggiungere, "
+"estrarre o eliminare diversi file in una volta sola. Per applicare un'azione "
+"a tutti i file che corrispondono a un certo modello, inserire il modello "
+"nella casella di testo. Il modello può includere metacaratteri tipici come "
+"<keycap>*</keycap> per avere corrispondenza con una stringa qualsiasi di "
+"caratteri e come <keycap>?</keycap> per avere corrispondenza con un singolo "
+"carattere. È possibile inserire diversi modelli separandoli con dei punti e "
+"virgola. L'azione viene applicata da <application>Gestore di archivi</"
+"application> a tutti i file che corrispondono ad almeno un modello. Gli "
+"esempi nella seguente tabella illustrano come utilizzare i modelli di nomi "
+"di file per selezionare dei file."
+
+#: C/file-roller.xml:539(para)
+msgid "Pattern"
+msgstr "Modello"
+
+#: C/file-roller.xml:541(para)
+msgid "Files Matched"
+msgstr "File corrispondenti"
+
+#: C/file-roller.xml:546(filename)
+msgid "*"
+msgstr "*"
+
+#: C/file-roller.xml:547(para) C/file-roller.xml:916(guilabel)
+#: C/file-roller.xml:1550(guilabel)
+msgid "All files"
+msgstr "Tutti i file"
+
+#: C/file-roller.xml:550(filename)
+msgid "*.tar*"
+msgstr "*.tar*"
+
+#: C/file-roller.xml:551(para)
+msgid ""
+"All files with extension <filename>tar</filename>, including those in which "
+"the <filename>tar</filename> extension is followed by any sequence of "
+"symbols, such as <filename>filename.tar.gz</filename>"
+msgstr ""
+"Tutti i file con estensione <filename>tar</filename>, inclusi quelli nei "
+"quali l'estensione <filename>tar</filename> è seguita da una qualsiasi "
+"sequenza di simboli, come <filename>nomefile.tar.gz</filename>"
+
+#: C/file-roller.xml:554(filename)
+msgid "*.jpg; *.jpeg"
+msgstr "*.jpg; *.jpeg"
+
+#: C/file-roller.xml:555(para)
+msgid ""
+"All files with extension <filename>jpg</filename> and all files with "
+"extension <filename>jpeg</filename>"
+msgstr ""
+"Tutti i file con estensione <filename>jpg</filename> e quelli con estensione "
+"<filename>jpeg</filename>"
+
+#: C/file-roller.xml:558(filename)
+msgid "file?.gz"
+msgstr "file?.gz"
+
+#: C/file-roller.xml:559(para)
+msgid ""
+"All files with extension <filename>gz</filename> that have the name \"file\" "
+"followed by any single character, e.g. <filename>file2.gz</filename>, "
+"<filename>filex.gz</filename>."
+msgstr ""
+"Tutti i file con estensione <filename>gz</filename>, col nome «file» seguito "
+"da un qualsiasi carattere, come <filename>file2.gz</filename>, "
+"<filename>filex.gz</filename>"
+
+#: C/file-roller.xml:569(title)
+msgid "To Open an Archive"
+msgstr "Aprire un archivio"
+
+#: C/file-roller.xml:574(para)
+msgid ""
+"Choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Open</"
+"guimenuitem></menuchoice> to display the <guilabel>Open</guilabel> dialog. "
+"Alternatively press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></"
+"keycombo>, or click <guibutton>Open</guibutton> in the toolbar."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Apri</"
+"guimenuitem></menuchoice> per mostrare il dialogo <guilabel>Apri</guilabel>. "
+"In alternativa, premere <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></"
+"keycombo> o fare clic su <guibutton>Apri</guibutton> nella barra degli "
+"strumenti."
+
+#: C/file-roller.xml:577(para)
+msgid "Select the archive that you want to open."
+msgstr "Selezionare l'archivio da aprire."
+
+#: C/file-roller.xml:580(para)
+msgid "Click <guibutton>Open</guibutton>."
+msgstr "Fare clic su <guibutton>Apri</guibutton>."
+
+#: C/file-roller.xml:570(para)
+msgid "To open an archive, perform the following steps: <placeholder-1/>"
+msgstr "Per aprire un archivio, procedere come segue: <placeholder-1/>"
+
+#: C/file-roller.xml:587(para)
+msgid "The archive name in the window titlebar"
+msgstr "Il nome dell'archivio nella barra del titolo della finestra"
+
+#: C/file-roller.xml:590(para)
+msgid "The archive contents in the display area"
+msgstr "Il contenuto dell'archivio nell'area di visualizzazione"
+
+#: C/file-roller.xml:593(para)
+msgid ""
+"The number files and folders (objects) in the current location, and their "
+"size when uncompressed, in the statusbar"
+msgstr ""
+"Il numero totale di file e cartelle (oggetti) alla posizione corrente, e la "
+"dimensione dell'archivio quando estratto, nella barra di stato"
+
+#: C/file-roller.xml:584(para)
+msgid ""
+"<application>Archive Manager</application> automatically determines the "
+"archive type, and displays: <placeholder-1/>"
+msgstr ""
+"Il tipo di archivio viene determinato in modo automatico da "
+"<application>Gestore di archivi</application> e sono mostrati: <placeholder-"
+"1/>"
+
+#: C/file-roller.xml:597(para)
+msgid ""
+"To open another archive, choose <menuchoice><guimenu>Archive</"
+"guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. "
+"<application>Archive Manager</application> opens each archive in a new "
+"window. You can't open another archive in the same window."
+msgstr ""
+"Per aprire un altro archivio, scegliere nuovamente "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Apri</guimenuitem></"
+"menuchoice>. Ogni archivio viene aperto in una nuova finestra di "
+"<application>Gestore di archivi</application>, non è possibile aprirne un "
+"altro nella stessa finestra."
+
+#: C/file-roller.xml:600(para)
+msgid ""
+"If you try to open an archive that was created in a format that "
+"<application>Archive Manager</application> does not recognize, the "
+"application displays an error message. See <xref linkend=\"file-roller-intro"
+"\"/> for a list of supported formats."
+msgstr ""
+"Se si tenta di aprire un archivio creato in un formato non riconosciuto da "
+"<application>Gestore di archivi</application>, viene mostrato un messaggio "
+"di errore. Consultare <xref linkend=\"file-roller-intro\"/> per un elenco "
+"dei formati supportati."
+
+#: C/file-roller.xml:607(title)
+msgid "To Select Files in an Archive"
+msgstr "Selezionare i file in un archivio"
+
+#: C/file-roller.xml:608(para)
+msgid ""
+"To select all files in an archive, choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Select All</guimenuitem></menuchoice> or press "
+"<keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>."
+msgstr ""
+"Per selezionare tutti i file all'interno di un archivio, scegliere "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Seleziona tutto</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>Ctrl</"
+"keycap><keycap>A</keycap></keycombo>."
+
+#: C/file-roller.xml:610(para)
+msgid ""
+"To deselect all files in an archive, choose <menuchoice><guimenu>Edit</"
+"guimenu><guimenuitem>Deselect All</guimenuitem></menuchoice> or press "
+"<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>A</keycap></"
+"keycombo>."
+msgstr ""
+"Per deselezionare tutti i file all'interno di un archivio, scegliere "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Deseleziona tutto</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>Maiusc</"
+"keycap><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>."
+
+#: C/file-roller.xml:617(title)
+msgid "To Extract Files From an Archive"
+msgstr "Estrarre i file da un archivio"
+
+#: C/file-roller.xml:621(para)
+msgid ""
+"Select the files that you want to extract. To select more files, press-and-"
+"hold <keycap>Ctrl</keycap> and click on the files you want to select."
+msgstr ""
+"Selezionare i file da estrarre. Per selezionarne di più, premere e tenere "
+"premuto <keycap>Ctrl</keycap> e fare clic sui file da selezionare."
+
+#: C/file-roller.xml:624(para)
+msgid ""
+"Choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Extract</"
+"guimenuitem></menuchoice> to display the <guilabel>Extract</guilabel> "
+"dialog. Alternatively click <guibutton>Extract</guibutton> in the toolbar."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Estrai</"
+"guimenuitem></menuchoice> per visualizzare il dialogo <guilabel>Estrai</"
+"guilabel>. In alternativa, fare clic su <guibutton>Estrai</guibutton> nella "
+"barra degli strumenti."
+
+#: C/file-roller.xml:627(para)
+msgid ""
+"Select the folder where <application>Archive Manager</application> extracts "
+"the files."
+msgstr ""
+"Selezionare la cartella dove <application>Gestore di archivi</application> "
+"estrarrà i file."
+
+#: C/file-roller.xml:630(para)
+msgid ""
+"Select the required extract options. For more information about the extract "
+"options, see <xref linkend=\"file-roller-extract-options\"/>."
+msgstr ""
+"Selezionare le opzioni richieste per l'estrazione. Per maggiori informazioni "
+"sulle opzioni di estrazione, consultare <xref linkend=\"file-roller-extract-"
+"options\"/>."
+
+#: C/file-roller.xml:633(para)
+msgid "Click <guibutton>Extract</guibutton>."
+msgstr "Fare clic su <guibutton>Estrai</guibutton>."
+
+#: C/file-roller.xml:636(para) C/file-roller.xml:794(para)
+msgid ""
+"If all of the files in the archive are protected by a password, and you have "
+"not specified it, <application>Archive Manager</application> asks you to "
+"enter the password."
+msgstr ""
+"Se tutti i file presenti nell'archivio sono protetti da una password e tale "
+"password non è stata specificata, <application>Gestore di archivi</"
+"application> chiede l'inserimento della password."
+
+#: C/file-roller.xml:639(para)
+msgid ""
+"If some but not all of the files in the archive are protected by a password, "
+"and you have not specified the password, <application>Archive Manager</"
+"application> does not ask for a password. However, <application>Archive "
+"Manager</application> extracts only the unprotected files."
+msgstr ""
+"Se soltanto alcuni dei file presenti nell'archivio sono protetti da una "
+"password e tale password non è stata specificata, <application>Gestore di "
+"archivi</application> non richiede alcuna password. Tuttavia, solo i file "
+"non protetti vengono estratti da <application>Gestore di archivi</"
+"application>."
+
+#: C/file-roller.xml:642(para) C/file-roller.xml:800(para)
+msgid ""
+"For more information about passwords, see <xref linkend=\"file-roller-"
+"encrypt-files\"/>."
+msgstr ""
+"Per maggiori informazioni riguardo le password, consultare <xref linkend="
+"\"file-roller-encrypt-files\"/>."
+
+#: C/file-roller.xml:618(para)
+msgid ""
+"To extract files from an open archive, perform the following steps: "
+"<placeholder-1/>"
+msgstr ""
+"Per estrarre i file da un archivio già aperto, procedere come segue: "
+"<placeholder-1/>"
+
+#: C/file-roller.xml:649(para)
+msgid ""
+"<application>Archive Manager</application> also provides ways of extracting "
+"files from an archive in a file manager window, without opening a "
+"<application>Archive Manager</application> window. See <xref linkend=\"file-"
+"roller-fmgr\"/> for more information."
+msgstr ""
+"Con <application>Gestore di archivi</application> viene anche fornito un "
+"metodo per estrarre i file in un archivio anche da una finestra del file "
+"manager, senza la necessità di aprire una finestra di <application>Gestore "
+"di archivi</application>. Per maggiori informazioni, consultare <xref "
+"linkend=\"file-roller-fmgr\"/>."
+
+#: C/file-roller.xml:650(para)
+msgid ""
+"The Extract operation extracts a <emphasis>copy</emphasis> of the specified "
+"files from the archive. The extracted files have the same permissions and "
+"modification date as the original files that were added to the archive."
+msgstr ""
+"L'operazione di estrazione estrae dall'archivio una <emphasis>copia</"
+"emphasis> dei file specificati. I file estratti mantengono gli stessi "
+"permessi e la stessa data di modifica dei file originali, così come sono "
+"stati aggiunti all'archivio."
+
+#: C/file-roller.xml:653(para)
+msgid ""
+"The Extract operation does not change the contents of the archive. For "
+"information on how to delete files from an archive, see <xref linkend=\"file-"
+"roller-delete-files\"/>."
+msgstr ""
+"L'operazione di estrazione non cambia il contenuto dell'archivio. Per "
+"maggiori informazioni su come eliminare i file da un archivio, consultare "
+"<xref linkend=\"file-roller-delete-files\"/>."
+
+#: C/file-roller.xml:660(title)
+msgid "To Close an Archive"
+msgstr "Chiudere un archivio"
+
+#: C/file-roller.xml:661(para)
+msgid ""
+"To close the current archive and the current <application>Archive Manager</"
+"application> window, choose <menuchoice><guimenu>Archive</"
+"guimenu><guimenuitem>Close</guimenuitem></menuchoice>, or press "
+"<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>."
+msgstr ""
+"Per chiudere l'archivio attualmente aperto assieme alla finestra di "
+"<application>Gestore di archivi</application>, scegliere "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Chiudi</guimenuitem></"
+"menuchoice> o premere <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></"
+"keycombo>."
+
+#: C/file-roller.xml:664(para)
+msgid ""
+"There is no way to close the current archive but not the "
+"<application>Archive Manager</application> window."
+msgstr ""
+"Non c'è alcun modo per chiudere l'archivio corrente ma non la finestra di "
+"<application>Gestore di archivi</application>."
+
+#: C/file-roller.xml:673(title)
+msgid "Creating Archives"
+msgstr "Creare archivi"
+
+#: C/file-roller.xml:674(para)
+msgid ""
+"In addition to opening existing archives, you can also create new archives "
+"with <application>Archive Manager</application>."
+msgstr ""
+"Oltre ad aprire un archivio esistente, con <application>Gestore di archivi</"
+"application> è possibile creare nuovi archivi."
+
+#: C/file-roller.xml:677(title)
+msgid "To Create an Archive"
+msgstr "Creare un archivio"
+
+#: C/file-roller.xml:682(para)
+msgid ""
+"Choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>New</guimenuitem></"
+"menuchoice> to display the <guilabel>New</guilabel> dialog. Alternatively "
+"press <keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>, or click "
+"<guibutton>New</guibutton> in the toolbar."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Nuovo</"
+"guimenuitem></menuchoice> per mostrare il dialogo <guilabel>Nuovo</"
+"guilabel>. In alternativa, premere <keycombo><keycap>Ctrl</keycap><keycap>N</"
+"keycap></keycombo> o fare clic su <guibutton>Nuovo</guibutton> nella barra "
+"degli strumenti."
+
+#: C/file-roller.xml:686(para)
+msgid ""
+"Specify the folder where <application>Archive Manager</application> places "
+"the new archive clicking on the entry in the <guilabel>Save in folder</"
+"guilabel> drop-down list. If the folder is not present in list, click on "
+"<guilabel>Browse for other folders</guilabel>, and select the folder. "
+"Alternatively, enter the path in the <guilabel>Name</guilabel> text box."
+msgstr ""
+"Facendo clic su una voce nell'elenco a discesa <guilabel>Salva nella "
+"cartella</guilabel>, specificare la cartella in cui il nuovo archivio verrà "
+"salvato da <application>Gestore di archivi</application>. Se la cartella non "
+"è presente nell'elenco, fare clic su <guilabel>Esplora altre cartelle</"
+"guilabel> e selezionarla. In alternativa inserire il percorso nella casella "
+"di testo <guilabel>Nome</guilabel>."
+
+#: C/file-roller.xml:690(para)
+msgid ""
+"Enter the name of the new archive, including the file extension, in the "
+"<guilabel>Name</guilabel> text box. Alternatively you can specify the "
+"archive name without extension, and then select the archive type from the "
+"<guilabel>Archive type</guilabel> drop-down menu, this way the extension "
+"will be added automatically."
+msgstr ""
+"Digitare il nome del nuovo archivio, compresa l'estensione, nella casella di "
+"testo <guilabel>Nome</guilabel>. In alternativa è possibile specificare il "
+"nome dell'archivio senza l'estensione e quindi selezionare il tipo di "
+"archivio dall'elenco a discesa <guilabel>Tipo di archivio</guilabel>; in "
+"questo modo l'estensione viene aggiunta automaticamente."
+
+#: C/file-roller.xml:693(para) C/file-roller.xml:787(para)
+#: C/file-roller.xml:1323(para)
+msgid ""
+"Select the required create options clicking on <guilabel>Other Options</"
+"guilabel>. For more information about the create options, see <xref linkend="
+"\"file-roller-create-options\"/>."
+msgstr ""
+"Selezionare le opzioni richieste per la creazione da <guilabel>Altre "
+"opzioni</guilabel>. Per maggiori informazioni sulle opzioni di creazione, "
+"consultare <xref linkend=\"file-roller-create-options\"/>."
+
+#: C/file-roller.xml:697(para)
+msgid ""
+"Click <guibutton>New</guibutton>. <application>Archive Manager</application> "
+"creates an empty archive, but does not yet write the archive to disk."
+msgstr ""
+"Fare clic sul pulsante <guibutton>Nuovo</guibutton>. Un archivio vuoto viene "
+"creato da <application>Gestore di archivi</application>, senza però che tale "
+"archivio sia scritto sul disco."
+
+#: C/file-roller.xml:703(para)
+msgid ""
+"<application>Archive Manager</application> writes a new archive to disk only "
+"when the archive contains at least one file. If you create a new archive and "
+"quit <application>Archive Manager</application> before you add any files to "
+"the archive, <application>Archive Manager</application> deletes the archive."
+msgstr ""
+"<application>Gestore di archivi</application> scrive i cambiamenti sul disco "
+"quando l'archivio contiene almeno un file. Se viene creato un archivio e si "
+"esce da <application>Gestore di archivi</application> prima di aggiungere un "
+"file, <application>Gestore di archivi</application> cancella l'archivio."
+
+#: C/file-roller.xml:701(para)
+msgid ""
+"Add files to the new archive as described in <xref linkend=\"file-roller-add-"
+"files\"/>. <placeholder-1/>"
+msgstr ""
+"Aggiungere file nel nuovo archivio come descritto in <xref linkend=\"file-"
+"roller-add-files\"/>. <placeholder-1/>"
+
+#: C/file-roller.xml:678(para)
+msgid "To create an archive, perform the following steps: <placeholder-1/>"
+msgstr "Per creare un archivio, procedere come segue: <placeholder-1/>"
+
+#: C/file-roller.xml:714(title)
+msgid "To Add Files to an Archive"
+msgstr "Aggiungere dei file a un archivio"
+
+#: C/file-roller.xml:719(para) C/file-roller.xml:747(para)
+msgid ""
+"Decide where in the archive you want to add the files, then open that "
+"location in the archive."
+msgstr ""
+"Decidere dove aggiungere i file, quindi aprire la relativa posizione "
+"all'interno dell'archivio."
+
+#: C/file-roller.xml:722(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Add Files</"
+"guimenuitem></menuchoice> to display the <guilabel>Add Files</guilabel> "
+"dialog, or click <guibutton>Add Files</guibutton> in the toolbar."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Aggiungi file</"
+"guimenuitem></menuchoice> per mostrare il dialogo <guilabel>Aggiungi file</"
+"guilabel> oppure fare clic su <guibutton>Aggiungi file</guibutton> nella "
+"barra degli strumenti."
+
+#: C/file-roller.xml:725(para)
+msgid ""
+"Select the files that you want to add. To select more files press-and-hold "
+"<keycap>Ctrl</keycap> and click the files."
+msgstr ""
+"Selezionare i file da aggiungere. Per selezionare più file premere e tenere "
+"premuto <keycap>Ctrl</keycap> e fare clic sui file."
+
+#: C/file-roller.xml:728(para)
+msgid ""
+"Click <guibutton>Add</guibutton>. <application>Archive Manager</application> "
+"adds the files to the current folder in the archive."
+msgstr ""
+"Fare clic su <guibutton>Aggiungi</guibutton>. I file sono aggiunti da "
+"<application>Gestore di archivi</application> nella cartella corrente "
+"dell'archivio."
+
+#: C/file-roller.xml:715(para)
+msgid ""
+"To add files to an archive, perform the following steps: <placeholder-1/>"
+msgstr ""
+"Per aggiungere dei file a un archivio, procedere come segue: <placeholder-1/>"
+
+#: C/file-roller.xml:733(para)
+msgid ""
+"You cannot add folders to the archive with the <guilabel>Add Files</"
+"guilabel> dialog. To add a folder see <xref linkend=\"file-roller-add-folder"
+"\"/>."
+msgstr ""
+"Attraverso la finestra di dialogo <guilabel>Aggiungi file</guilabel>, non è "
+"possibile aggiungere cartelle a un archivio. Per aggiungere una cartella, "
+"consultare <xref linkend=\"file-roller-add-folder\"/>."
+
+#: C/file-roller.xml:734(para)
+msgid ""
+"The <guilabel>Add Files</guilabel> dialog provides the <guilabel>Add only if "
+"newer</guilabel> option, see <xref linkend=\"file-roller-add-options\"/> for "
+"more information on this option."
+msgstr ""
+"La finestra di dialogo <guilabel>Aggiungi file</guilabel> fornisce l'opzione "
+"<guilabel>Aggiungi solo se più recente</guilabel>, consultare <xref linkend="
+"\"file-roller-add-options\"/> per maggiori informazioni."
+
+#: C/file-roller.xml:735(para)
+msgid ""
+"You can also add files to an archive in a file manager window, without "
+"opening an <application>Archive Manager</application> window. See <xref "
+"linkend=\"file-roller-fmgr\"/> for more information."
+msgstr ""
+"È possibile aggiungere dei file in un archivio direttamente dal file "
+"manager, senza avviare <application>Gestore di archivi</application>. "
+"Consultare <xref linkend=\"file-roller-fmgr\"/> per maggiori informazioni."
+
+#: C/file-roller.xml:736(para)
+msgid ""
+"The Add operation adds a <emphasis>copy</emphasis> of the specified files or "
+"folders to the archive. <application>Archive Manager</application> does not "
+"remove the original files, which remain unchanged in the file system. The "
+"copies that are added to the archive have the same permissions and "
+"modification date as the original files."
+msgstr ""
+"L'azione Aggiungi, aggiunge una <emphasis>copia</emphasis> dei file o delle "
+"cartelle selezionati all'archivio. <application>Gestore di archivi</"
+"application> non rimuove i file originali, i quali non vengono modificati "
+"all'interno del file system. Le copie aggiunte all'archivio mantengono gli "
+"stessi permessi e la stessa data di modifica dell'originale."
+
+#: C/file-roller.xml:742(title)
+msgid "To Add a Folder to an Archive"
+msgstr "Aggiungere una cartella a un archivio"
+
+#: C/file-roller.xml:750(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Add a Folder</"
+"guimenuitem></menuchoice> to display the <guilabel>Add a Folder</guilabel> "
+"dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Aggiungi una "
+"cartella</guimenuitem></menuchoice> per visualizzare la finestra di dialogo "
+"<guilabel>Aggiungi una cartella</guilabel>."
+
+#: C/file-roller.xml:753(para)
+msgid "Select the folder that you want to add."
+msgstr "Selezionare la cartella da aggiungere."
+
+#: C/file-roller.xml:756(para)
+msgid ""
+"Click <guibutton>Add</guibutton>. <application>Archive Manager</application> "
+"adds the folder to the current folder in the archive."
+msgstr ""
+"Fare clic sul pulsante <guibutton>Aggiungi</guibutton>. <application>Gestore "
+"di archivi</application> aggiunge la cartella all'interno dell'attuale "
+"cartella nell'archivio."
+
+#: C/file-roller.xml:743(para)
+msgid ""
+"To add a folder to an archive, perform the following steps: <placeholder-1/>"
+msgstr ""
+"Per aggiungere una cartella in un archivio procedere come segue: "
+"<placeholder-1/>"
+
+#: C/file-roller.xml:761(para)
+msgid ""
+"The <guilabel>Add a Folder</guilabel> dialog provides several advanced "
+"options. See <xref linkend=\"file-roller-add-options\"/> for more "
+"information."
+msgstr ""
+"La finestra di dialogo <guilabel>Aggiungi una cartella</guilabel> fornisce "
+"molte opzioni avanzate. Consultare <xref linkend=\"file-roller-add-options\"/"
+"> per maggiori informazioni."
+
+#: C/file-roller.xml:766(title)
+msgid "To Convert an Archive to Another Format"
+msgstr "Convertire un archivio in un altro formato"
+
+#: C/file-roller.xml:767(para)
+msgid ""
+"To convert an archive to another format and save as a new file, perform the "
+"following steps:"
+msgstr ""
+"Per convertire un archivio in un altro formato e salvarlo come un nuovo "
+"file, procedere come segue:"
+
+#: C/file-roller.xml:771(para)
+msgid "Open the archive that you want to convert."
+msgstr "Aprire l'archivio che si vuole convertire."
+
+#: C/file-roller.xml:775(para)
+msgid ""
+"Choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Save As</"
+"guimenuitem></menuchoice> to display the <guilabel>Save</guilabel> dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Salva come</"
+"guimenuitem></menuchoice> per aprire la finestra di dialogo <guilabel>Salva</"
+"guilabel>."
+
+#: C/file-roller.xml:779(para)
+msgid "Enter the new archive name in the <guilabel>Name</guilabel> text box."
+msgstr ""
+"Inserire il nuovo nome nella casella di testo <guilabel>Nome</guilabel>."
+
+#: C/file-roller.xml:783(para)
+msgid ""
+"Select the new format from the <guilabel>Archive type</guilabel> drop-down "
+"list. Alternatively, enter the filename extension in the <guilabel>Name</"
+"guilabel> text box, and select <guilabel>Automatic</guilabel> from the "
+"<guilabel>Archive type</guilabel> drop-down list."
+msgstr ""
+"Selezionare il nuovo formato dall'elenco a discesa <guilabel>Tipo di "
+"archivio</guilabel>. In alternativa, inserire l'estensione del file nella "
+"casella di testo <guilabel>Nome</guilabel> e selezionare "
+"<guilabel>Automatico</guilabel> dall'elenco a discesa <guilabel>Tipo di "
+"archivio</guilabel>."
+
+#: C/file-roller.xml:791(para)
+msgid "Click <guibutton>Save</guibutton>."
+msgstr "Fare clic su <guibutton>Salva</guibutton>."
+
+#: C/file-roller.xml:797(para)
+msgid ""
+"If some but not all of the files in the archive are protected by a password, "
+"and you have not specified the password, <application>Archive Manager</"
+"application> does not ask for a password. However, <application>Archive "
+"Manager</application> copies only the unprotected files to the new archive."
+msgstr ""
+"Se alcuni dei file all'interno dell'archivio sono protetti da una password e "
+"tale password non è stata specificata, <application>Gestore di archivi</"
+"application> non chiede alcuna password. Tuttavia, solo i file non protetti "
+"sono copiati nel nuovo archivio da <application>Gestore di archivi</"
+"application>."
+
+#: C/file-roller.xml:811(title)
+msgid "Modifying the Contents of an Archive"
+msgstr "Modificare il contenuto di un archivio"
+
+#: C/file-roller.xml:812(para)
+msgid "You can modify the contents of an archive in several ways."
+msgstr "È possibile modificare il contenuto di un archivio in diversi modi."
+
+#: C/file-roller.xml:818(title)
+msgid "To Encrypt Files in an Archive"
+msgstr "Cifrare i file in un archivio"
+
+#: C/file-roller.xml:819(para)
+msgid ""
+"For security, you might want to encrypt the files that you add to an archive."
+msgstr ""
+"Per motivi di sicurezza potrebbe essere necessario cifrare i file da "
+"aggiungere in un archivio."
+
+#: C/file-roller.xml:820(para)
+msgid ""
+"If the archive format supports encryption, you can specify a password to "
+"encrypt the files that you add to the archive."
+msgstr ""
+"Se il formato dell'archivio supporta la cifratura è possibile specificare "
+"una password per cifrare i file da aggiungere."
+
+#: C/file-roller.xml:822(para)
+msgid "Currently, only 7-Zip, ZIP, RAR and ARJ archives support encryption."
+msgstr ""
+"Al momento, solo gli archivi 7-Zip, ZIP, RAR e ARJ supportano la cifratura."
+
+#: C/file-roller.xml:824(para)
+msgid "To specify a password for file encryption, perform the following steps:"
+msgstr "Per specificare una password per la cifratura procedere come segue:"
+
+#: C/file-roller.xml:826(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Password</"
+"guimenuitem></menuchoice> to display the <guilabel>Password</guilabel> "
+"dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Password</"
+"guimenuitem></menuchoice> per visualizzare la finestra di dialogo "
+"<guilabel>Password</guilabel>."
+
+#: C/file-roller.xml:827(para)
+msgid "Enter the password in the <guilabel>Password</guilabel> text box."
+msgstr ""
+"Inserire la password nella casella di testo <guilabel>Password</guilabel>."
+
+#: C/file-roller.xml:828(para) C/file-roller.xml:942(para)
+msgid "Click <guibutton>OK</guibutton>."
+msgstr "Fare clic su <guibutton>OK</guibutton>."
+
+#: C/file-roller.xml:830(para)
+msgid ""
+"<application>Archive Manager</application> uses the password to encrypt the "
+"files that you add to the current archive, and to decrypt the files that you "
+"extract from the current archive. <application>Archive Manager</application> "
+"deletes the password when you close the archive."
+msgstr ""
+"<application>Gestore di archivi</application> utilizza la password per "
+"criptare i file aggiunti all'archivio e per decriptare i file da estrarre "
+"dall'archivio. <application>Gestore di archivi</application> cancella la "
+"password alla chiusura dell'archivio."
+
+#: C/file-roller.xml:832(para)
+msgid ""
+"For information on how to check whether an archive contains encrypted files, "
+"see <xref linkend=\"file-roller-extra-info\"/>."
+msgstr ""
+"Per maggiori informazioni riguardo al controllo sulla presenza di file "
+"criptati all'interno di un archivio, consultare <xref linkend=\"file-roller-"
+"extra-info\"/>."
+
+#: C/file-roller.xml:835(para)
+msgid ""
+"The encryption provided by archive utilities is weak and insecure. If "
+"security is important, use a strong encryption tool such as <ulink url="
+"\"http://www.gnupg.org\" type=\"http\">GNU Privacy Guard</ulink>."
+msgstr ""
+"La procedura di cifratura fornita dagli strumenti di archiviazione non è "
+"molto sicura. Se la sicurezza è un aspetto importante, utilizzare uno "
+"strumento per la cifratura come <ulink url=\"http://www.gnupg.org\" type="
+"\"http\">GNU Privacy Guard</ulink>."
+
+#: C/file-roller.xml:842(title)
+msgid "To Rename a File in an Archive"
+msgstr "Rinominare un file all'interno di un archivio"
+
+#: C/file-roller.xml:843(para)
+msgid "To rename a file in an archive, perform the following steps:"
+msgstr ""
+"Per rinominare un file all'interno di un archivio procedere come segue:"
+
+#: C/file-roller.xml:846(para)
+msgid "Select the file that you want to rename."
+msgstr "Selezionare il file da rinominare."
+
+#: C/file-roller.xml:849(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Rename</guimenuitem></"
+"menuchoice>, or press <keycombo><keycap>F2</keycap></keycombo>, to display "
+"the <guilabel>Rename</guilabel> dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Rinomina...</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>F2</keycap></keycombo> "
+"per visualizzare il dialogo <guilabel>Rinomina</guilabel>."
+
+#: C/file-roller.xml:852(para)
+msgid ""
+"Enter the new filename in the <guilabel>New file name</guilabel> text box."
+msgstr ""
+"Inserire il nuovo nome nella casella di testo <guilabel>Nome del nuovo file</"
+"guilabel>."
+
+#: C/file-roller.xml:855(para)
+msgid "Click <guibutton>Rename</guibutton>."
+msgstr "Fare clic su <guibutton>Rinomina</guibutton>."
+
+#: C/file-roller.xml:863(title)
+msgid "To Copy Files in an Archive"
+msgstr "Copiare file all'interno di un archivio"
+
+#: C/file-roller.xml:864(para)
+msgid "To copy files in an archive, perform the following steps:"
+msgstr "Per copiare file all'interno di un archivio procedere come segue:"
+
+#: C/file-roller.xml:867(para)
+msgid "Select the files that you want to copy."
+msgstr "Selezionare i file da copiare."
+
+#: C/file-roller.xml:870(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></"
+"menuchoice>, or press <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></"
+"keycombo>."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Copia</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>Ctrl</"
+"keycap><keycap>C</keycap></keycombo>."
+
+#: C/file-roller.xml:873(para)
+msgid "Open the location where you want to put the copied files."
+msgstr "Aprire la posizione in cui si desidera copiare i file."
+
+#: C/file-roller.xml:876(para) C/file-roller.xml:896(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></"
+"menuchoice>, or press <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></"
+"keycombo>."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Incolla</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>Ctrl</"
+"keycap><keycap>V</keycap></keycombo>."
+
+#: C/file-roller.xml:883(title)
+msgid "To Move Files in an Archive"
+msgstr "Spostare file all'interno di un archivio"
+
+#: C/file-roller.xml:884(para)
+msgid "To move files in an archive, perform the following steps:"
+msgstr "Per spostare file all'interno di un archivio procedere come segue:"
+
+#: C/file-roller.xml:887(para)
+msgid "Select the files that you want to move."
+msgstr "Selezionare i file da spostare."
+
+#: C/file-roller.xml:890(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Cut</guimenuitem></"
+"menuchoice>, or press <keycombo><keycap>Ctrl</keycap><keycap>X</keycap></"
+"keycombo>."
+msgstr ""
+"Scegliere <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Taglia</"
+"guimenuitem></menuchoice> o premere <keycombo><keycap>Ctrl</"
+"keycap><keycap>X</keycap></keycombo>."
+
+#: C/file-roller.xml:893(para)
+msgid "Open the location where you want to put the moved files."
+msgstr "Aprire la posizione in cui si desidera spostare i file."
+
+#: C/file-roller.xml:903(title)
+msgid "To Delete Files From an Archive"
+msgstr "Cancellare file da un archivio"
+
+#: C/file-roller.xml:904(para)
+msgid "To delete files from an archive, perform the following steps:"
+msgstr "Per cancellare dei file da un archivio procedere come segue:"
+
+#: C/file-roller.xml:907(para)
+msgid "Select the files that you want to delete."
+msgstr "Selezionare i file da cancellare."
+
+#: C/file-roller.xml:910(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Delete</guimenuitem></"
+"menuchoice> or press <keycap>Delete</keycap> to display the "
+"<guilabel>Delete</guilabel> dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Elimina</"
+"guimenuitem></menuchoice> o premere <keycap>Canc</keycap> per visualizzare "
+"il dialogo <guilabel>Elimina</guilabel>."
+
+#: C/file-roller.xml:913(para)
+msgid "Select one of the following delete options:"
+msgstr "Selezionare una delle seguenti opzioni di eliminazione:"
+
+#: C/file-roller.xml:918(para)
+msgid "Delete all files from the archive."
+msgstr "Elimina tutti i file dall'archivio."
+
+#: C/file-roller.xml:924(guilabel) C/file-roller.xml:1558(guilabel)
+msgid "Selected files"
+msgstr "File selezionati"
+
+#: C/file-roller.xml:926(para)
+msgid "Delete the selected files from the archive."
+msgstr "Elimina i file selezionati dall'archivio."
+
+#: C/file-roller.xml:932(guilabel) C/file-roller.xml:1566(guilabel)
+msgid "Files"
+msgstr "File"
+
+#: C/file-roller.xml:934(para)
+msgid ""
+"Delete from the archive all files that match the specified pattern. See "
+"<xref linkend=\"file-roller-pattern\"/> for more information about filename "
+"patterns."
+msgstr ""
+"Elimina dall'archivio i file che corrispondono al modello specificato. "
+"Consultare <xref linkend=\"file-roller-pattern\"/> per maggiori informazioni "
+"riguardo i modelli di nomi di file."
+
+#: C/file-roller.xml:950(title)
+msgid "To Modify a File in an Archive"
+msgstr "Modificare un file all'interno di un archivio"
+
+#: C/file-roller.xml:954(para)
+msgid ""
+"Double-click the file that you want to open. Alternatively right-click the "
+"file and choose <menuchoice><guimenuitem>Open</guimenuitem></menuchoice>."
+msgstr ""
+"Fare doppio-clic sul file da aprire. In alternativa, fare clic col pulsante "
+"destro del mouse e scegliere <menuchoice><guimenuitem>Apri</guimenuitem></"
+"menuchoice>."
+
+#: C/file-roller.xml:955(para)
+msgid "Edit the file opened in step 1, and then save your changes."
+msgstr ""
+"Modificare il file aperto aperto al primo passo e salvare le modifiche."
+
+#: C/file-roller.xml:956(para)
+msgid ""
+"<application>Archive Manager</application> shows a confirmation dialog, "
+"asking confirmation to update the file in the archive with the changes you "
+"made."
+msgstr ""
+"<application>Gestore di archivi</application> visualizza un dialogo "
+"richiedendo la conferma per aggiornare il file modificato nell'archivio."
+
+#: C/file-roller.xml:957(para)
+msgid "Click on <guilabel>Update</guilabel>."
+msgstr "Fare clic su <guibutton>Aggiorna</guibutton>."
+
+#: C/file-roller.xml:951(para)
+msgid ""
+"To modify a file in an archive perform the following steps: <placeholder-1/>"
+msgstr ""
+"Per modificare un file presente all'interno di un archivio, procedere come "
+"segue: <placeholder-1/>"
+
+#: C/file-roller.xml:960(para)
+msgid ""
+"<application>Archive Manager</application> uses the system-defined "
+"associations between file types and programs to determine the appropriate "
+"application to launch for a specific file. These assocations can be "
+"displayed and modified in the <guilabel>Open With</guilabel> tab of the file "
+"properties dialog. If <application>Archive Manager</application> cannot "
+"determine the appropriate application, <application>Archive Manager</"
+"application> displays the <guilabel>Open Files</guilabel> dialog to let you "
+"choose an application, as described in below."
+msgstr ""
+"<application>Gestore di archivi</application> utilizza le associazioni di "
+"sistema tra tipi di file e programmi per determinare quale applicazione "
+"lanciare in base al tipo di file. Queste associazioni possono essere "
+"visualizzate e modificate nella scheda <guilabel>Apri con</guilabel> del "
+"dialogo di proprietà del file. Se <application>Gestore di archivio</"
+"application> non può determinare l'applicazione appropriata, "
+"<application>Gestore di archivi</application> visualizzerà il dialogo "
+"<guilabel>Apri file</guilabel> per sceglierne una, come descritto in seguito."
+
+#: C/file-roller.xml:963(title)
+msgid "To Modify a File in an Archive with a Custom Application"
+msgstr "Modificare un file in un archivio con un'applicazione personalizzata"
+
+#: C/file-roller.xml:967(para)
+msgid "Right click the file."
+msgstr "Fare clic col pulsante destro del mouse sul file."
+
+#: C/file-roller.xml:968(para)
+msgid ""
+"Choose <menuchoice><guimenuitem>Open With...</guimenuitem></menuchoice>."
+msgstr ""
+"Selezionare <menuchoice><guimenuitem>Apri con...</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:964(para)
+msgid ""
+"You can use an application specified by you, rather than the default "
+"application, to modify a file. To use an external application to open a "
+"file: <placeholder-1/>"
+msgstr ""
+"Per modificare un file è possibile utilizzare un'applicazione personalizzata "
+"al posto di quella predefinita. Per usare un'applicazione esterna per aprire "
+"un file: <placeholder-1/>"
+
+#: C/file-roller.xml:971(para)
+msgid ""
+"<application>Archive Manager</application> displays the <guilabel>Open "
+"Files</guilabel> dialog, which lists all of the applications that can open "
+"files of the specified type. To select one of the applications, double-click "
+"the application name or click on the application name and then click "
+"<guibutton>Open</guibutton>. Alternatively, enter the application name in "
+"the <guilabel>Application</guilabel> text box and then click "
+"<guibutton>Open</guibutton> to launch the application of your choice."
+msgstr ""
+"<application>Gestore di archivi</application> visualizza il dialogo "
+"<guilabel>Apri file</guilabel> che elenca tutte le applicazioni che possono "
+"aprire quel particolare tipo di file. Per selezionare una delle "
+"applicazioni, fare doppio-clic sul nome dell'applicazione o fare clic sul "
+"nome dell'applicazione e quindi su <guibutton>Apri</guibutton>. In "
+"alternativa, digitare il nome dell'applicazione nella casella di testo "
+"<guilabel>Applicazione</guilabel> e quindi fare clic su <guibutton>Apri</"
+"guibutton> per lanciarla."
+
+#: C/file-roller.xml:972(para)
+msgid ""
+"Once the application starts follow the procedure from step 2 as described in "
+"<xref linkend=\"file-roller-modify-archive-file\"/>."
+msgstr ""
+"Una volta avviata l'applicazione, seguire la procedura al secondo passo come "
+"descritta in <xref linkend=\"file-roller-modify-archive-file\"/>."
+
+#: C/file-roller.xml:980(title)
+msgid "Viewing Archives"
+msgstr "Visualizzare gli archivi"
+
+#: C/file-roller.xml:981(para)
+msgid ""
+"<application>Archive Manager</application> enables you to view several "
+"aspects of an archive."
+msgstr ""
+"<application>Gestore di archivi</application> consente di visualizzare "
+"diverse informazioni riguardanti un archivio."
+
+#: C/file-roller.xml:986(title)
+msgid "To View the Properties of an Archive"
+msgstr "Visualizzare le proprietà di un archivio"
+
+#: C/file-roller.xml:990(guilabel) C/file-roller.xml:1038(guilabel)
+msgid "Name"
+msgstr "Nome"
+
+#: C/file-roller.xml:991(para)
+msgid "The name of the archive."
+msgstr "Il nome dell'archivio"
+
+#: C/file-roller.xml:995(guilabel) C/file-roller.xml:1058(guilabel)
+#: C/file-roller.xml:1238(guilabel)
+msgid "Location"
+msgstr "Posizione"
+
+#: C/file-roller.xml:996(para)
+msgid "The position of the archive in the file system."
+msgstr "Lo posizione dell'archivio all'interno del file system."
+
+#: C/file-roller.xml:1000(guilabel)
+msgid "Modified on"
+msgstr "Modificato il"
+
+#: C/file-roller.xml:1001(para)
+msgid "The date and time at which the archive was last modified."
+msgstr "La data e l'ora di ultima modifica dell'archivio."
+
+#: C/file-roller.xml:1005(guilabel)
+msgid "Archive size"
+msgstr "Dimensioni archivio"
+
+#: C/file-roller.xml:1006(para)
+msgid "The size of the archive contents when compressed."
+msgstr "La dimensione del contenuto dell'archivio compresso."
+
+#: C/file-roller.xml:1010(guilabel)
+msgid "Content size"
+msgstr "Dimensioni contenuto"
+
+#: C/file-roller.xml:1011(para)
+msgid ""
+"The size of the archive contents when uncompressed. This information is also "
+"available in the statusbar."
+msgstr ""
+"La dimensione del contenuto dell'archivio non compresso. Questa informazione "
+"è presente anche nella barra di stato."
+
+#: C/file-roller.xml:1016(guilabel)
+msgid "Compression ratio"
+msgstr "Livello di compressione"
+
+#: C/file-roller.xml:1017(para)
+msgid ""
+"The compression ratio is a value used to describe the reduction in size of "
+"the data. For example a compression ratio of 5 means that the compressed "
+"archive is 1/5th the size of the original data."
+msgstr ""
+"Il livello di compressione è un valore che descrive la riduzione della "
+"dimensione dei dati. Per esempio, un livello di compressione di 5 indica che "
+"l'archivio è stato compresso a 1/5 della dimensione originale."
+
+#: C/file-roller.xml:1022(guilabel)
+msgid "Number of files"
+msgstr "Numero di file"
+
+#: C/file-roller.xml:1023(para)
+msgid "The number of files in the archive."
+msgstr "Il numero di file all'interno dell'archivio."
+
+#: C/file-roller.xml:987(para)
+msgid ""
+"To view the properties of an archive, choose <menuchoice><guimenu>Archive</"
+"guimenu><guimenuitem>Properties</guimenuitem></menuchoice> to display the "
+"<guilabel>Properties</guilabel> dialog. The <guilabel>Properties</guilabel> "
+"dialog displays the following information about the archive: <placeholder-1/>"
+msgstr ""
+"Per visualizzare le proprietà di un archivio, scegliere "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Proprietà</guimenuitem></"
+"menuchoice> per visualizzare la finestra di dialogo <guilabel>Proprietà</"
+"guilabel>. La finestra di dialogo <guilabel>Proprietà</guilabel> mostra le "
+"seguenti informazioni riguardanti l'archivio: <placeholder-1/>"
+
+#: C/file-roller.xml:1033(title)
+msgid "To View the Contents of an Archive"
+msgstr "Visualizzare il contenuto di un archivio"
+
+#: C/file-roller.xml:1039(para)
+msgid "The name of a file or folder in the archive."
+msgstr "Il nome di un file o di una cartella nell'archivio."
+
+#: C/file-roller.xml:1043(guilabel)
+msgid "Size"
+msgstr "Dimensione"
+
+#: C/file-roller.xml:1044(para)
+msgid ""
+"The size of the file when the file is extracted from the archive. For a "
+"folder, the <guilabel>Size</guilabel> field is blank. For information on how "
+"to display the size of the compressed file, see <xref linkend=\"file-roller-"
+"extra-info\"/>."
+msgstr ""
+"La dimensione del file non compresso. Per una cartella, il campo "
+"<guilabel>Dimensione</guilabel> è vuoto. Per informazioni su come "
+"visualizzare la dimensione di un file compresso, consultare <xref linkend="
+"\"file-roller-extra-info\"/>."
+
+#: C/file-roller.xml:1048(guilabel)
+msgid "Type"
+msgstr "Tipo"
+
+#: C/file-roller.xml:1049(para)
+msgid ""
+"The type of the file. For a folder, the value in the <guilabel>Type</"
+"guilabel> field is <literal>Folder</literal>."
+msgstr ""
+"Il tipo di file. Per una cartella, il campo <guilabel>Tipo</guilabel> è "
+"<literal>Cartella</literal>."
+
+#: C/file-roller.xml:1053(guilabel)
+msgid "Date modified"
+msgstr "Data di modifica"
+
+#: C/file-roller.xml:1054(para)
+msgid ""
+"The date on which the file was last modified. For a folder, the "
+"<guilabel>Date modified</guilabel> field is blank."
+msgstr ""
+"La data di ultima modifica del file. Per una cartella, il campo "
+"<guilabel>Data di modifica</guilabel> è vuoto."
+
+#: C/file-roller.xml:1059(para)
+msgid ""
+"The path to the file within the archive. This column is visible only when "
+"the window is in file view, when in folder view the location of the files is "
+"displayed in the <guilabel>Location</guilabel> text box of the folderbar. "
+"For more information about view types see <xref linkend=\"file-roller-view-"
+"type-folder\"/>."
+msgstr ""
+"Il percorso del file all'interno dell'archivio. Questa colonna è visibile "
+"solo quando la finestra è nella modalità di visualizzazione a file, se in "
+"modalità di visualizzazione a cartelle, la posizione dei file è mostrata "
+"nella casella di testo <guilabel>Posizione</guilabel>. Per maggiori "
+"informazioni riguardo le modalità di visualizzazione, consultare <xref "
+"linkend=\"file-roller-view-type-folder\"/>."
+
+#: C/file-roller.xml:1035(para)
+msgid ""
+"<application>Archive Manager</application> displays the archive contents in "
+"the main window as a file list with the following columns: <placeholder-1/>"
+msgstr ""
+"<application>Gestore di archivi</application> visualizza i contenuti "
+"dell'archivio nella finestra principale come una lista di file con le "
+"seguenti colonne: <placeholder-1/>"
+
+#: C/file-roller.xml:1064(para)
+msgid ""
+"If another program has modified the archive since <application>Archive "
+"Manager</application> opened the archive, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>Reload</guimenuitem></menuchoice> to reload the archive "
+"contents from disk."
+msgstr ""
+"Se un altro programma ha modificato l'archivio dopo l'ultima apertura con "
+"<application>Gestore di archivi</application>, scegliere "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Aggiorna</"
+"guimenuitem></menuchoice> per ricaricare il contenuto dell'archivio dal "
+"disco."
+
+#: C/file-roller.xml:1066(para)
+msgid ""
+"For information on how to customize the way that <application>Archive "
+"Manager</application> displays the archive contents, see <xref linkend="
+"\"file-roller-archive-custom\"/>."
+msgstr ""
+"Per informazioni su come personalizzare la visualizzazione dei contenuti di "
+"un archivio con <application>Gestore di archivi</application>, consultare "
+"<xref linkend=\"file-roller-archive-custom\"/>."
+
+#: C/file-roller.xml:1068(para)
+msgid ""
+"For more advanced tasks, use an application installed on your system. For "
+"more information, see <xref linkend=\"file-roller-view-archive-file\"/>."
+msgstr ""
+"Per svolgere azioni più complesse, utilizzare un'altra applicazione presente "
+"all'interno del sistema. Per maggiori informazioni consultare <xref linkend="
+"\"file-roller-view-archive-file\"/>."
+
+#: C/file-roller.xml:1074(title)
+msgid "To View a File in an Archive"
+msgstr "Visualizzare un file all'interno di un archivio"
+
+#: C/file-roller.xml:1075(para)
+msgid ""
+"To view a file in an archive follow the steps described in <xref linkend="
+"\"file-roller-modify-archive-file\"/>. If you save the opened file, click "
+"<guilabel>Cancel</guilabel> when <application>Archive Manager</application> "
+"asks confirmation to update the file in the archive."
+msgstr ""
+"Per visualizzare un file in un archivio, seguire i passi descritti in <xref "
+"linkend=\"file-roller-modify-archive-file\"/>. Quando si salva il file "
+"aperto, fare clic su <guilabel>Annulla</guilabel> quando "
+"<application>Gestore di archivi</application> chiede di aggiornare il file "
+"nell'archivio."
+
+#: C/file-roller.xml:1082(title)
+msgid "To Test the Integrity of an Archive"
+msgstr "Verificare l'integrità di un archivio"
+
+#: C/file-roller.xml:1086(para)
+msgid ""
+"If the archive contains no errors, <application>Archive Manager</"
+"application> opens the <guilabel>Test Result</guilabel> dialog to list each "
+"file in the archive, and indicates that each file has status <literal>OK</"
+"literal>."
+msgstr ""
+"Se l'archivio non contiene errori, <application>Gestore di archivi</"
+"application> apre il dialogo <guilabel>Risultato della verifica</guilabel> "
+"per elencare i file presenti nell'archivio indicando, per ogni file, lo "
+"stato <literal>OK</literal>."
+
+#: C/file-roller.xml:1090(para)
+msgid ""
+"If the archive contains some error, <application>Archive Manager</"
+"application> opens the <guilabel>Test Result</guilabel> dialog displaying "
+"the part of the archive contains the error."
+msgstr ""
+"Se l'archivio contiene degli errori, <application>Gestore di archivi</"
+"application> apre il dialogo <guilabel>Risultato della verifica</guilabel> "
+"per mostrare quale parte dell'archivio contiene errori."
+
+#: C/file-roller.xml:1083(para)
+msgid ""
+"Sometimes an archive can be damaged for some reason, to check whether an "
+"archive is damaged, choose <menuchoice><guimenu>Archive</"
+"guimenu><guimenuitem>Test Integrity</guimenuitem></menuchoice>: <placeholder-"
+"1/>"
+msgstr ""
+"Può capitare che un archivio si possa danneggiare. Per verificare "
+"l'integrità di un archivio, scegliere <menuchoice><guimenu>Archivio</"
+"guimenu><guimenuitem>Controlla integrità</guimenuitem></menuchoice>: "
+"<placeholder-1/>"
+
+#: C/file-roller.xml:1095(para)
+msgid ""
+"A damaged archive can be impossible to extract, this can bring to a loss of "
+"data. For this reason you should test the archive integrity before deleting "
+"the original files."
+msgstr ""
+"È impossibile estrarre un archivio danneggiato, portando così alla perdita "
+"di dati. Per questo, è consigliato verificare l'integrità dell'archivio "
+"prima di eliminare i file originali."
+
+#: C/file-roller.xml:1097(para)
+msgid ""
+"If the archive contains encrypted files, <application>Archive Manager</"
+"application> asks the password of the archive before performing the test."
+msgstr ""
+"Se l'archivio contiene file cifrati, <application>Gestore di archivi</"
+"application> richiede la password prima di eseguire il controllo."
+
+#: C/file-roller.xml:1100(para)
+msgid ""
+"Not all the archive types support the integrity testing, the following is "
+"the list of archive types that can be tested for integrity: 7-Zip, RAR, ZIP, "
+"ACE, ARJ and Zoo."
+msgstr ""
+"Non tutti gli archivi supportano il controllo di integrità. Quelli che "
+"seguono sono i tipi di archivi con tale supporto: 7-Zip, RAR, ZIP, ACE, ARJ "
+"e Zoo."
+
+#: C/file-roller.xml:1104(title) C/file-roller.xml:1405(title)
+msgid "Tip"
+msgstr "Suggerimento"
+
+#: C/file-roller.xml:1105(para)
+msgid ""
+"To test the integrity of an archive that doesn't support the integrity "
+"testing, extract all the files from the archive and check that the operation "
+"is completed successfully."
+msgstr ""
+"Per verificare l'integrità di un archivio che non supporta il controllo "
+"dell'integrità, estrarre tutti i file dall'archivio e controllare che "
+"l'operazione venga completata con successo."
+
+#: C/file-roller.xml:1113(title)
+msgid "Customizing the Archive Display"
+msgstr "Personalizzare la visualizzazione di un archivio"
+
+#: C/file-roller.xml:1114(para)
+msgid ""
+"You can customize the way that <application>Archive Manager</application> "
+"displays the archive contents, as follows:"
+msgstr ""
+"Per personalizzare il modo in cui <application>Gestore di archivi</"
+"application> mostra il contenuto di un archivio, procedere come segue:"
+
+#: C/file-roller.xml:1118(para)
+msgid ""
+"Switch between folder view and file view. For more information, see <xref "
+"linkend=\"file-roller-view-type\"/>."
+msgstr ""
+"Passare dalla visualizzazione come una cartella a quella come lista di file. "
+"Per maggiori informazioni consultare <xref linkend=\"file-roller-view-type\"/"
+">."
+
+#: C/file-roller.xml:1122(para)
+msgid ""
+"Specify the order in which to display files in the list. For more "
+"information, see <xref linkend=\"file-roller-view-sort\"/>."
+msgstr ""
+"Specificare l'ordine con cui visualizzare i file all'interno della lista. "
+"Per maggiori informazioni consultare <xref linkend=\"file-roller-view-sort\"/"
+">."
+
+#: C/file-roller.xml:1126(para)
+msgid ""
+"Display additional details about the contents of the archive. For more "
+"information, see <xref linkend=\"file-roller-extra-info\"/>."
+msgstr ""
+"Mostrare maggiori informazioni riguardo il contenuto dell'archivio. Per "
+"maggiori informazioni consultare <xref linkend=\"file-roller-extra-info\"/>."
+
+#: C/file-roller.xml:1130(para)
+msgid ""
+"<application>Archive Manager</application> updates the display immediately, "
+"when you make any of the above customizations."
+msgstr ""
+"<application>Gestore di archivi</application> aggiorna immediatamente la "
+"finestra di visualizzazione."
+
+#: C/file-roller.xml:1134(title)
+msgid "To Set the View Type"
+msgstr "Impostare il tipo di visualizzazione"
+
+#: C/file-roller.xml:1135(para)
+msgid ""
+"If the archive contains folders, you can show the archive contents in either "
+"<link linkend=\"file-roller-view-type-folder\">folder view</link> or <link "
+"linkend=\"file-roller-view-type-file\">file view</link>."
+msgstr ""
+"Se l'archivio contiene delle cartelle è possibile visualizzare il contenuto "
+"dell'archivio in modalità <link linkend=\"file-roller-view-type-folder"
+"\">come una cartella</link> o <link linkend=\"file-roller-view-type-file"
+"\">come lista di file</link>."
+
+#: C/file-roller.xml:1139(title)
+msgid "Folder View"
+msgstr "Vedi come una cartella"
+
+#: C/file-roller.xml:1140(para)
+msgid ""
+"<application>Archive Manager</application> displays the archive contents in "
+"folder view by default. To explicitly select folder view, choose "
+"<menuchoice><guimenu>View</guimenu><guimenuitem>View as a Folder</"
+"guimenuitem></menuchoice>."
+msgstr ""
+"<application>Gestore di archivi</application> mostra il contenuto degli "
+"archivi in modalità come una cartella in modo predefinito. Per impostare "
+"questa modalità scegliere <menuchoice><guimenu>Visualizza</"
+"guimenu><guimenuitem>Vedi come una cartella</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:1142(para)
+msgid ""
+"In folder view, <application>Archive Manager</application> shows folders in "
+"the same way as a file manager shows folders. That is, <application>Archive "
+"Manager</application> indicates folders in the display area with a folder "
+"icon and the folder name. To view the contents of a folder, double-click on "
+"the folder name."
+msgstr ""
+"Nella vista come una cartella, <application>Gestore di archivi</application> "
+"mostra le cartelle come all'interno del file manager. <application>Gestore "
+"di archivi</application> indica una cartella attraverso un'icona e il nome "
+"della cartella. Per visualizzare il contenuto di una cartella, fare doppio "
+"clic col mouse su di essa."
+
+#: C/file-roller.xml:1144(para)
+msgid ""
+"The folderbar, which <application>Archive Manager</application> displays "
+"only in folder view, contains the components described in the following "
+"table."
+msgstr ""
+"La barra delle cartelle, che <application>Gestore di archivi</application> "
+"mostra solamente in questa modalità, contiene i seguenti componenti:"
+
+#: C/file-roller.xml:1153(para)
+msgid "Component"
+msgstr "Componente"
+
+#: C/file-roller.xml:1155(para)
+msgid "Description"
+msgstr "Descrizione"
+
+#: C/file-roller.xml:1167(phrase)
+msgid "Shows icon to navigate backwards in location history list."
+msgstr "Icona per la navigazione all'indietro nella cronologia."
+
+#: C/file-roller.xml:1173(para)
+msgid ""
+"Click on this button to navigate backwards in the location history list."
+msgstr ""
+"Fare clic su questo pulsante per spostarsi all'indietro nella cronologia "
+"delle posizioni."
+
+#: C/file-roller.xml:1186(phrase)
+msgid "Shows icon to navigate forwards in location history list."
+msgstr "Icona per la navigazione in avanti nella cronologia."
+
+#: C/file-roller.xml:1192(para)
+msgid "Click on this button to navigate forwards in the location history list."
+msgstr ""
+"Fare clic su questo pulsante per spostarsi in avanti nella cronologia delle "
+"posizioni."
+
+#: C/file-roller.xml:1205(phrase)
+msgid "Shows icon to navigate up one level in folder tree."
+msgstr "Icona per la navigazione a un livello superiore."
+
+#: C/file-roller.xml:1211(para)
+msgid "Click on this button to navigate up one level in the folder tree."
+msgstr ""
+"Fare clic su questo pulsante per spostarsi un livello in alto nell'albero "
+"delle cartelle."
+
+#: C/file-roller.xml:1224(phrase)
+msgid "Shows icon to open the top-level folder in the archive."
+msgstr "Icona per aprire la cartella iniziale dell'archivio."
+
+#: C/file-roller.xml:1230(para)
+msgid "Click on this button to open the top-level folder in the archive."
+msgstr ""
+"Fare clic su questo pulsante per aprire la cartella iniziale dell'archivio."
+
+#: C/file-roller.xml:1242(para)
+msgid ""
+"This field shows the full pathname, within the archive, of the current "
+"folder."
+msgstr ""
+"Questo campo indica il percorso completo, all'interno dell'archivio, della "
+"cartella attuale."
+
+#: C/file-roller.xml:1245(para)
+msgid ""
+"To change to a different level in the folder tree, type the new location in "
+"the <guilabel>Location</guilabel> text box then press <keycap>Return</"
+"keycap>. <application>Archive Manager</application> displays the contents of "
+"the new location."
+msgstr ""
+"Per spostarsi a un diverso livello nell'albero delle cartelle, inserire la "
+"nuova posizione nella casella di testo <guilabel>Posizione</guilabel> e "
+"premere <keycap>Invio</keycap>. <application>Gestore di archivi</"
+"application> visualizzerà il contenuto della nuova posizione."
+
+#: C/file-roller.xml:1255(title)
+msgid "File View"
+msgstr "Vedi come elenco di file"
+
+#: C/file-roller.xml:1256(para)
+msgid ""
+"To select file view, choose <menuchoice><guimenu>View</"
+"guimenu><guimenuitem>View All Files</guimenuitem></menuchoice>."
+msgstr ""
+"Per selezionare la modalità come elenco di file, scegliere "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Vedi come elenco di "
+"file</guimenuitem></menuchoice>."
+
+#: C/file-roller.xml:1258(para)
+msgid ""
+"In file view, <application>Archive Manager</application> displays all files "
+"in the archive, including files from subfolders, in a single list."
+msgstr ""
+"In questa modalità, <application>Gestore di archivi</application> mostra "
+"tutti i file all'interno dell'archivio, compresi i file in sotto-cartelle, "
+"in un unico elenco."
+
+#: C/file-roller.xml:1265(title)
+msgid "To Sort the File List"
+msgstr "Ordinare l'elenco dei file"
+
+#: C/file-roller.xml:1266(para)
+msgid ""
+"You can sort the file list by name, size, type, modification date, or "
+"location."
+msgstr ""
+"È possibile ordinare l'elenco dei file per nome, dimensione, tipo, data di "
+"modifica o posizione"
+
+#: C/file-roller.xml:1267(para)
+msgid ""
+"To specify a sort order, click on the heading of the corresponding column."
+msgstr ""
+"Per specificare un criterio di ordinamento, fare clic sull'intestazione "
+"della colonna corrispondente."
+
+#: C/file-roller.xml:1268(para)
+msgid "To reverse the sort order, click on the column heading again."
+msgstr ""
+"Per invertire l'ordinamento, fare nuovamente clic sull'intestazione della "
+"colonna."
+
+#: C/file-roller.xml:1270(para)
+msgid ""
+"For example, to sort the file list by modification date, click on the "
+"<guilabel>Date modified</guilabel> heading. <application>Archive Manager</"
+"application> rearranges the file list to display the files by modification "
+"date, starting with the earliest. To display the latest files first, click "
+"on the <guilabel>Date modified</guilabel> heading again."
+msgstr ""
+"Per esempio, per ordinare i file in base alla data di modifica, fare clic "
+"sull'intestazione <guilabel>Data di modifica</guilabel>. "
+"<application>Gestore di archivi</application> ri-arrangia l'elenco dei file "
+"in modo da ordinarli con la data minore in testa. Per visualizzare il file "
+"più recente, fare clic nuovamente sull'intestazione <guilabel>Data di "
+"modifica</guilabel>."
+
+#: C/file-roller.xml:1272(para)
+msgid ""
+"<application>Archive Manager</application> always performs a secondary sort "
+"based on the file name. In the above example, <application>Archive Manager</"
+"application> sorts by name any files that have the same modification date."
+msgstr ""
+"<application>Gestore di archivi</application> esegue un ordinamento "
+"secondario sul nome del file. Nell'esempio precedente, <application>Gestore "
+"di archivi</application> ordina per nome i file con la stessa data."
+
+#: C/file-roller.xml:1277(title)
+msgid "To Display Additional Details"
+msgstr "Visualizzare informazioni aggiuntive"
+
+#: C/file-roller.xml:1281(para)
+msgid ""
+"If you tested the archive in the current <application>Archive Manager</"
+"application> session, the <guilabel>Last Output</guilabel> dialog displays "
+"the results of the last test."
+msgstr ""
+"Se è stato controllato l'archivio nella sessione attuale di "
+"<application>Gestore di archivi</application>, la finestra di dialogo "
+"<guilabel>Ultimo output</guilabel> mostra i risultati dell'ultimo controllo "
+"di integrità."
+
+#: C/file-roller.xml:1285(para)
+msgid ""
+"If you did not test the archive in the current <application>Archive Manager</"
+"application> session, the <guilabel>Last Output</guilabel> dialog displays a "
+"list of all files in the archive, but does not indicate any status for the "
+"files. Instead, the <guilabel>Last Output</guilabel> dialog provides the "
+"compressed size of each file and the percentage of compression, and the date "
+"and time at which the file was last modified."
+msgstr ""
+"Se il controllo non è stato fatto durante l'ultima sessione di "
+"<application>Gestore di archivi</application>, la finestra di dialogo "
+"<guilabel>Ultimo output</guilabel> mostra l'elenco di tutti i file "
+"nell'archivio, ma non indica lo stato di ciascun file. La finestra di "
+"dialogo <guilabel>Ultimo output</guilabel> fornisce invece la dimensione di "
+"ogni file, la percentuale di compressione, la data e l'ora dell'ultima "
+"modifica."
+
+#: C/file-roller.xml:1278(para)
+msgid ""
+"To open the <guilabel>Last Output</guilabel> dialog, choose "
+"<menuchoice><guimenu>View</guimenu><guimenuitem>Last Output</guimenuitem></"
+"menuchoice>: <placeholder-1/>"
+msgstr ""
+"Per aprire la finestra di dialogo <guilabel>Ultimo output</guilabel>, "
+"scegliere <menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ultimo "
+"output</guimenuitem></menuchoice>: <placeholder-1/>"
+
+#: C/file-roller.xml:1296(title)
+msgid "Using the File Manager to Work with an Archive"
+msgstr "Usare il file manager per lavorare con gli archivi"
+
+#: C/file-roller.xml:1297(para)
+msgid ""
+"You can use the file manager to add files to an archive, or to extract files "
+"from an archive."
+msgstr ""
+"È possibile utilizzare il file manager per aggiungere file a un archivio o "
+"per estrarne i file."
+
+#: C/file-roller.xml:1302(title)
+msgid "To Add Files to an Archive by Using the File Manager"
+msgstr "Aggiungere file in un archivio dal file manager"
+
+#: C/file-roller.xml:1305(para)
+msgid ""
+"Drag the files into a <application>Archive Manager</application> window from "
+"a file manager window."
+msgstr ""
+"Trascinando i file da una finestra del file manager all'interno della "
+"finestra di <application>Gestore di archivi</application>."
+
+#: C/file-roller.xml:1307(para)
+msgid "Use the file manager popup menu to add the files to the archive."
+msgstr ""
+"Usando il menù pop-up del file manager per aggiungere file in un archivio."
+
+#: C/file-roller.xml:1303(para)
+msgid ""
+"You can use the file manager to add files to an archive, in the following "
+"ways: <placeholder-1/>"
+msgstr ""
+"È possibile utilizzare il file manager per aggiungere file in un archivio "
+"nei seguenti modi: <placeholder-1/>"
+
+#: C/file-roller.xml:1311(para)
+msgid ""
+"To use the file manager popup menu to add files to an archive, perform the "
+"following steps:"
+msgstr ""
+"Per utilizzare il menù pop-up del file manager per aggiungere file in un "
+"archivio, procedere come segue:"
+
+#: C/file-roller.xml:1313(para)
+msgid "Right-click on the files or folders in a file manager window."
+msgstr ""
+"Fare clic col pulsante destro del mouse su un file o una cartella "
+"all'interno della finestra del file manager."
+
+#: C/file-roller.xml:1315(para)
+msgid ""
+"Choose <guimenuitem>Create Archive</guimenuitem> from the file manager popup "
+"menu to display the <application>Archive Manager</"
+"application><guilabel>Create Archive</guilabel> dialog."
+msgstr ""
+"Scegliere <guimenuitem>Crea archivio...</guimenuitem> dal menù pop-up per "
+"visualizzare la finestra di dialogo <guilabel>Crea archivio</guilabel> di "
+"<application>Gestore di archivi</application>."
+
+#: C/file-roller.xml:1317(para)
+msgid ""
+"Enter the archive name, without the file extension, in the "
+"<guilabel>Archive</guilabel> text box."
+msgstr ""
+"Inserire il nome dell'archivio, senza l'estensione, nella casella di testo "
+"<guilabel>Archivio</guilabel>."
+
+#: C/file-roller.xml:1319(para)
+msgid "Choose the archive type from the drop-down list."
+msgstr "Scegliere il tipo di archivio dall'elenco a discesa."
+
+#: C/file-roller.xml:1321(para)
+msgid ""
+"Choose the location where to save the archive file, from the "
+"<guilabel>Location</guilabel> drop-down list. If the location is not present "
+"in the list choose <guilabel>Other...</guilabel> to select it with the "
+"<guilabel>Location</guilabel> dialog."
+msgstr ""
+"Scegliere la posizione dove salvare l'archivio dall'elenco a discesa "
+"<guilabel>Posizione</guilabel>. Se la posizione non è presente nell'elenco, "
+"scegliere <guilabel>Altro...</guilabel> per selezionarla dal dialogo "
+"<guilabel>Posizione</guilabel>."
+
+#: C/file-roller.xml:1326(para)
+msgid ""
+"Click <guilabel>Create</guilabel> to add the selected files to the root "
+"folder of the specified archive."
+msgstr ""
+"Fare clic su <guilabel>Crea</guilabel> per aggiungere i file selezionati "
+"all'interno dell'archivio."
+
+#: C/file-roller.xml:1328(para)
+msgid ""
+"To select any of the advanced add options, you must invoke "
+"<application>Archive Manager</application> as described in <xref linkend="
+"\"file-roller-to-start\"/>."
+msgstr ""
+"Per selezionare le opzioni avanzate per l'aggiunta di file o cartelle, è "
+"necessario avviare <application>Gestore di archivi</application> come "
+"descritto nella <xref linkend=\"file-roller-to-start\"/>."
+
+#: C/file-roller.xml:1335(title)
+msgid "To Extract Files From an Archive by Using the File Manager"
+msgstr "Estrarre file da un archivio utilizzando il file manager"
+
+#: C/file-roller.xml:1338(para)
+msgid ""
+"Drag the files from a <application>Archive Manager</application> window into "
+"a file manager window."
+msgstr ""
+"Trascinando i file dalla finestra di <application>Gestore di archivi</"
+"application> in una finestra del file manager."
+
+#: C/file-roller.xml:1340(para)
+msgid "Use the file manager popup menu to extract the files from the archive."
+msgstr ""
+"Utilizzando il menù a comparsa del gestore di file per estrarre i file da un "
+"archivio."
+
+#: C/file-roller.xml:1336(para)
+msgid ""
+"You can use the file manager to extract files from an archive, in the "
+"following ways: <placeholder-1/>"
+msgstr ""
+"È possibile utilizzare il gestore di file per estrarre file da un archivio "
+"nei seguenti modi: <placeholder-1/>"
+
+#: C/file-roller.xml:1344(para)
+msgid ""
+"To use the file manager popup menu to extract files from an archive, perform "
+"the following steps:"
+msgstr ""
+"Per utilizzare il menù a comparsa del gestore di file per estrarre i file da "
+"un archivio, procedere come segue:"
+
+#: C/file-roller.xml:1346(para)
+msgid "Right-click on the archive in a file manager window."
+msgstr ""
+"Fare clic col pulsante destro del mouse su un archivio all'interno della "
+"finestra del file manager."
+
+#: C/file-roller.xml:1348(para)
+msgid ""
+"Choose <guimenuitem>Extract Here</guimenuitem> to extract all of the archive "
+"contents into the directory where the archive is located."
+msgstr ""
+"Scegliere <guimenuitem>Estrai qui</guimenuitem> per estrarre il contenuto "
+"dell'archivio nella directory in cui è contenuto l'archivio."
+
+#: C/file-roller.xml:1351(para)
+msgid ""
+"If the archive is encrypted, <application>Archive Manager</application> will "
+"ask to enter the password before extracting the files."
+msgstr ""
+"Se l'archivio è cifrato, <application>Gestore di archivi</application> "
+"chiederà l'inserimento della password prima di estrarre i file."
+
+#: C/file-roller.xml:1358(title)
+msgid "Create Options"
+msgstr "Opzioni di creazione"
+
+# FIXME: sembra sia scritto male.
+#: C/file-roller.xml:1359(para)
+#| msgid ""
+#| "When creating a new archive, or when converting an existing archive to "
+#| "another format, click on <guilabel>Other Options</guilabel> the specify "
+#| "the following advanced options:"
+msgid ""
+"When creating a new archive, or when converting an existing archive to "
+"another format, click on <guilabel>Other Options</guilabel> to specify the "
+"following advanced options:"
+msgstr ""
+"Quando si crea un nuovo archivio, o quando si converte un archivio in un "
+"nuovo formato, fare clic su <guilabel>Altre opzioni</guilabel> per "
+"specificare le seguenti opzioni avanzate:"
+
+#: C/file-roller.xml:1364(guilabel)
+msgid "Password"
+msgstr "Password"
+
+#: C/file-roller.xml:1366(para)
+msgid ""
+"Type the password that will be used to encrypt the archive. If no password "
+"is specified the archive will not be encrypted."
+msgstr ""
+"Digitare la password che da usare per cifrare l'archivio. Se non viene "
+"specificata alcuna password l'archivio non verrà cifrato."
+
+#: C/file-roller.xml:1368(para)
+#| msgid ""
+#| "Not all the archive type support encryption. For more information about "
+#| "file encryption, see <xref linkend=\"file-roller-encrypt-files\"/>."
+msgid ""
+"Not all archive types support encryption. For more information about file "
+"encryption, see <xref linkend=\"file-roller-encrypt-files\"/>."
+msgstr ""
+"Non tutti gli archivi supportano la cifratura. Per maggiori informazioni "
+"riguardo la cifratura dei file, consultare <xref linkend=\"file-roller-"
+"encrypt-files\"/>."
+
+#: C/file-roller.xml:1373(guilabel)
+msgid "Encrypt the file list too"
+msgstr "Cifrare anche l'elenco dei file"
+
+#: C/file-roller.xml:1375(para)
+msgid ""
+"If this option is selected, the password will be requested even to view the "
+"list of files contained in the archive, otherwise it will be requested only "
+"to extract the files from the archive. This option is available only if a "
+"password is specified."
+msgstr ""
+"Se questa opzione è selezionata, la password viene richiesta anche per "
+"visualizzare l'elenco dei file contenuti nell'archivio, altrimenti viene "
+"chiesta solo per estrarre i file. Quest'opzione è disponibile solo se viene "
+"specificata una password."
+
+#: C/file-roller.xml:1379(guilabel)
+msgid "Split in volumes"
+msgstr "Dividere in volumi"
+
+#: C/file-roller.xml:1381(para)
+msgid ""
+"Select this option to split the archive in more files of the specified "
+"dimension."
+msgstr ""
+"Selezionare questa opzione per dividere l'archivio in più file della "
+"dimensione specificata."
+
+#: C/file-roller.xml:1383(para)
+msgid "Only 7-Zip and RAR archives support this feature."
+msgstr "Solo gli archivi 7-Zip e RAR supportano questa caratteristica."
+
+#: C/file-roller.xml:1392(title)
+msgid "Add Options"
+msgstr "Opzioni per l'aggiunta di file/cartelle"
+
+#: C/file-roller.xml:1393(para)
+msgid ""
+"The <guilabel>Add Files</guilabel> and <guilabel>Add a Folder</guilabel> "
+"dialogs provide the following option:"
+msgstr ""
+"Le finestre di dialogo <guilabel>Aggiungi file</guilabel> e "
+"<guilabel>Aggiungi una cartella</guilabel> forniscono le seguenti opzioni:"
+
+#: C/file-roller.xml:1398(guilabel)
+msgid "Add only if newer"
+msgstr "Aggiungi solo se più recente"
+
+#: C/file-roller.xml:1400(para)
+msgid ""
+"Select this option to add the specified file to the archive only if the "
+"archive does not contain the specified file, or if the archive contains an "
+"older version of the specified file. <application>Archive Manager</"
+"application> uses the modification date to determine which file is the most "
+"recent. If the version of the file in the archive is the most recent, "
+"<application>Archive Manager</application> does not add the specified file "
+"to the archive."
+msgstr ""
+"Selezionare questa opzione per aggiungere all'archivio il file specificato "
+"solo se non esiste nell'archivio o se l'archivio ne contiene una versione "
+"più vecchia. <application>Gestore di archivi</application> utilizza la data "
+"di modifica per determinare quale sia il file più recente. Se la versione "
+"nell'archivio è la più recente, <application>Gestore di archivi</"
+"application> non aggiunge il file specificato nell'archivio."
+
+#: C/file-roller.xml:1402(para)
+msgid ""
+"If you do not select this option, <application>Archive Manager</application> "
+"adds the file to the archive and overwrites the previous archive contents."
+msgstr ""
+"Se non si seleziona questa opzione, <application>Gestore di archivi</"
+"application> aggiunge il file nell'archivio sovrascrivendolo se già presente."
+
+#: C/file-roller.xml:1409(para)
+msgid ""
+"Open the <filename>backup.tar.gz</filename> archive in <application>Archive "
+"Manager</application>."
+msgstr ""
+"Aprire il file <filename>backup.tar.gz</filename> in <application>Gestore di "
+"archivi</application>."
+
+#: C/file-roller.xml:1414(para)
+msgid ""
+"Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Add</guimenuitem></"
+"menuchoice> to display the <guilabel>Add a Folder</guilabel> dialog."
+msgstr ""
+"Selezionare <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Aggiungi una "
+"cartella</guimenuitem></menuchoice> per visualizzare la finestra di dialogo "
+"<guilabel>Aggiungi una cartella</guilabel>."
+
+#: C/file-roller.xml:1418(para)
+msgid "Select your home folder."
+msgstr "Selezionare la cartella home."
+
+#: C/file-roller.xml:1423(para)
+msgid "Select the <guilabel>Add only if newer</guilabel> option."
+msgstr ""
+"Selezionare l'opzione <guilabel>Aggiungi solo se più recente</guilabel>."
+
+#: C/file-roller.xml:1428(para)
+msgid "Click <guibutton>Add</guibutton>."
+msgstr "Fare clic su <guibutton>Aggiungi</guibutton>."
+
+# (ndt) messa ipotetica
+#: C/file-roller.xml:1406(para)
+msgid ""
+"If you use <application>Archive Manager</application> to create backups, the "
+"<guilabel>Add only if newer</guilabel> option is very useful. For example, "
+"the archive <filename>backup.tar.gz</filename> contains a week-old backup of "
+"your home folder. To update the archive to contain a current backup of your "
+"home folder, perform the following steps: <placeholder-1/>"
+msgstr ""
+"Se si utilizza <application>Gestore di archivi</application> per eseguire "
+"dei backup, l'opzione <guilabel>Aggiungi solo se più recente</guilabel> è "
+"molto utile. Per esempio, se l'archivio <filename>backup.tar.gz</filename> "
+"contiene un backup della directory home di una settimana fa, per aggiornare "
+"l'archivio affinché contenga un backup corretto della directory home, "
+"procedere come segue: <placeholder-1/>"
+
+#: C/file-roller.xml:1434(para)
+msgid ""
+"<application>Archive Manager</application> automatically adds to the archive "
+"all files that you created during the last week, and updates all files that "
+"you modified during the last week. However, <application>Archive Manager</"
+"application> does not remove from the archive the files that you deleted "
+"during the last week. The archive update operation is much faster than doing "
+"a full backup of your home folder."
+msgstr ""
+"<application>Gestore di archivi</application> aggiunge automaticamente "
+"all'archivio tutti i file creati nell'ultima settimana e aggiorna quelli "
+"modificati. Comunque, <application>Gestore di archivi</application> non "
+"rimuove dall'archivio i file eliminati dalla directory home. L'operazione di "
+"aggiornamento di un archivio è molto più veloce rispetto l'esecuzione di un "
+"backup completo."
+
+#: C/file-roller.xml:1441(title)
+msgid "Add to Folder Options"
+msgstr "Opzioni per «Aggiungi una cartella»"
+
+#: C/file-roller.xml:1442(para)
+msgid ""
+"The following options are available in the <guilabel>Add a Folder</guilabel> "
+"dialog and allow to automatically select and add all files that satisfy "
+"certain criteria:"
+msgstr ""
+"Le seguenti opzioni sono disponibili nella finestra di dialogo "
+"<guilabel>Aggiungi una cartella</guilabel> e consentono di selezionare e "
+"aggiungere automaticamente file che soddisfano alcuni criteri:"
+
+#: C/file-roller.xml:1447(guilabel)
+msgid "Include files"
+msgstr "Includi file"
+
+#: C/file-roller.xml:1449(para)
+msgid ""
+"Type a filename pattern in this text box to include files with names that "
+"match the specified pattern. See <xref linkend=\"file-roller-pattern\"/> for "
+"more information about filename patterns."
+msgstr ""
+"Inserire un modello di nome di file in questa casella di testo per includere "
+"i file che corrispondono al modello specificato. Per maggiori informazioni "
+"riguardo i modelli di nomi di file consultare <xref linkend=\"file-roller-"
+"pattern\"/>."
+
+#: C/file-roller.xml:1455(guilabel)
+msgid "Exclude files"
+msgstr "Escludi file"
+
+#: C/file-roller.xml:1457(para)
+msgid ""
+"Type a filename pattern in this text box to exclude files with names that "
+"match the specified pattern. See <xref linkend=\"file-roller-pattern\"/> for "
+"more information about filename patterns."
+msgstr ""
+"Inserire un modello di nome di file in questa casella di testo per escludere "
+"i file che corrispondono al modello specificato. Per maggiori informazioni "
+"riguardo i modelli di nomi di file consultare <xref linkend=\"file-roller-"
+"pattern\"/>."
+
+#: C/file-roller.xml:1463(guilabel)
+msgid "Exclude folders"
+msgstr "Escludere le cartelle"
+
+#: C/file-roller.xml:1465(para)
+msgid ""
+"Type a filename pattern in this text box to exclude folders with names that "
+"match the specified pattern. See <xref linkend=\"file-roller-pattern\"/> for "
+"more information about filename patterns."
+msgstr ""
+"Digitare un modello di nome di file in questa casella di testo per escludere "
+"le cartelle che corrispondono al modello specificato. Per maggiori "
+"informazioni riguardo i modelli di nomi di file, consultare <xref linkend="
+"\"file-roller-pattern\"/>."
+
+#: C/file-roller.xml:1471(guilabel)
+msgid "Include subfolders"
+msgstr "Includi sottodirectory"
+
+#: C/file-roller.xml:1473(para)
+msgid ""
+"Select this option to add all files that match the specified pattern, from "
+"the current folder and from subfolders."
+msgstr ""
+"Selezionare questa opzione per aggiungere tutti i file che corrispondono al "
+"modello specificato a partire dalla directory corrente e dalle "
+"sottodirectory."
+
+#: C/file-roller.xml:1476(para)
+msgid "The filename, not the subfolder name, must match the specified pattern."
+msgstr ""
+"Il nome del file, non quello della sottodirectory, deve corrispondere al "
+"modello specificato."
+
+#: C/file-roller.xml:1480(para)
+msgid ""
+"If you do not select this option, <application>Archive Manager</application> "
+"adds the matching files from the current folder only."
+msgstr ""
+"Se non viene selezionata questa opzione, <application>Gestore di archivi</"
+"application> aggiunge i file corrispondenti solamente dalla directory "
+"corrente."
+
+#: C/file-roller.xml:1486(guilabel)
+msgid "Exclude folders that are symbolic links"
+msgstr "Escludi cartelle che sono collegamenti simbolici."
+
+#: C/file-roller.xml:1488(para)
+msgid ""
+"Select this option to omit files from folders that are symbolic links. "
+"Symbolic links are pointers or shortcuts to other folders."
+msgstr ""
+"Selezionare questa opzione per escludere i file presenti in cartelle che "
+"sono collegamenti simbolici. I collegamenti simbolici sono dei puntatori o "
+"dei collegamenti verso altre cartelle."
+
+#: C/file-roller.xml:1490(para)
+msgid ""
+"If you do not select this option, <application>Archive Manager</application> "
+"adds the matching files from folders that are symbolic links."
+msgstr ""
+"Se non viene selezionata questa opzione, <application>Gestore di archivi</"
+"application> aggiunge i file corrispondenti dalle cartelle che sono "
+"collegamenti simbolici."
+
+#: C/file-roller.xml:1496(guibutton)
+msgid "Save Options"
+msgstr "Salva opzioni"
+
+#: C/file-roller.xml:1498(para)
+msgid ""
+"Click on this button to save the current selection of advanced add options "
+"to a file. The <guilabel>Save Options</guilabel> dialog is displayed. Enter "
+"a descriptive filename in the <guilabel>Options Name</guilabel> text box, "
+"then click <guibutton>Save</guibutton>."
+msgstr ""
+"Fare clic su questo pulsante per salvare su file le impostazioni avanzate. "
+"Viene visualizzata la finestra di dialogo <guilabel>Salva opzioni</"
+"guilabel>. Inserire un nome descrittivo per il file nella casella di testo "
+"<guilabel>Nome delle opzioni</guilabel> e fare clic su <guibutton>Salva</"
+"guibutton>."
+
+#: C/file-roller.xml:1504(guibutton)
+msgid "Load Options"
+msgstr "Carica opzioni"
+
+#: C/file-roller.xml:1506(para)
+msgid ""
+"Click on this button to load or delete a previously saved selection of "
+"advanced add options. The <guilabel>Load Options</guilabel> dialog is "
+"displayed."
+msgstr ""
+"Fare clic su questo pulsante per caricare o rimuovere le impostazioni "
+"avanzate precedentemente salvate. Viene visualizzata la finestra di dialogo "
+"<guilabel>Carica opzioni</guilabel>."
+
+#: C/file-roller.xml:1509(para)
+msgid ""
+"To load a set of options, select the options file in the list box, then "
+"click <guibutton>Apply</guibutton>."
+msgstr ""
+"Per caricare un insieme di opzioni, selezionare il file delle opzioni "
+"dall'elenco e fare clic su <guibutton>Applica</guibutton>."
+
+#: C/file-roller.xml:1514(para)
+msgid ""
+"To delete a set of options, select the options file in the list box, then "
+"click <guibutton>Remove</guibutton>. Click <guibutton>Close</guibutton> to "
+"close the <guilabel>Load Options</guilabel> dialog."
+msgstr ""
+"Per cancellare un insieme di opzioni, selezionare il file delle opzioni "
+"dall'elenco e fare clic su <guibutton>Rimuovi</guibutton>. Fare clic su "
+"<guibutton>Chiudi</guibutton> per chiudere la finestra di dialogo "
+"<guilabel>Carica opzioni</guilabel>."
+
+#: C/file-roller.xml:1523(guibutton)
+msgid "Reset Options"
+msgstr "Azzera opzioni"
+
+#: C/file-roller.xml:1525(para)
+msgid ""
+"Click on this button to reset the current selection of advanced add options "
+"to the default values."
+msgstr ""
+"Fare clic su questo pulsante per azzerare le impostazioni avanzate "
+"precedentemente selezionate al loro valore predefinito."
+
+#: C/file-roller.xml:1535(title)
+msgid "Extract Options"
+msgstr "Opzioni per l'estrazione"
+
+#: C/file-roller.xml:1537(para)
+msgid ""
+"The <guilabel>Extract</guilabel> dialog provides the following options, "
+"which are saved when you quit <application>Archive Manager</application>:"
+msgstr ""
+"Le seguenti opzioni, salvate alla chiusura di <application>Gestore di "
+"archivi</application>, sono fornite dal dialogo <guilabel>Estrai</guilabel>:"
+
+#: C/file-roller.xml:1543(guilabel)
+msgid "Extract"
+msgstr "Estrai"
+
+#: C/file-roller.xml:1545(para)
+msgid "Select the files to be extracted:"
+msgstr "Selezionare i file da estrarre:"
+
+#: C/file-roller.xml:1552(para)
+msgid "Extract all files from the archive."
+msgstr "Estrae tutti i file dall'archivio."
+
+#: C/file-roller.xml:1560(para)
+msgid "Extract the selected files from the archive."
+msgstr "Estrae dall'archivio i file selezionati."
+
+#: C/file-roller.xml:1568(para)
+msgid ""
+"Extract from the archive all files that match the specified pattern. See "
+"<xref linkend=\"file-roller-pattern\"/> for more information about filename "
+"patterns."
+msgstr ""
+"Estrae dall'archivio tutti i file che corrispondono al modello specificato. "
+"Per maggiori informazioni riguardo i modelli di nomi di file consultare "
+"<xref linkend=\"file-roller-pattern\"/>."
+
+#: C/file-roller.xml:1578(guilabel)
+msgid "Actions"
+msgstr "Azioni"
+
+#: C/file-roller.xml:1580(para)
+msgid "Select the following extract options:"
+msgstr "Selezionare una delle seguenti opzioni di estrazione:"
+
+#: C/file-roller.xml:1585(guilabel)
+msgid "Re-create folders"
+msgstr "Ricreare le cartelle"
+
+#: C/file-roller.xml:1586(para)
+msgid ""
+"Select this option to reconstruct the folder structure when extracting the "
+"specified files."
+msgstr ""
+"Selezionare questa opzione per ricostruire la struttura della cartella "
+"durante la fase di estrazione."
+
+#: C/file-roller.xml:1590(para)
+msgid ""
+"If you select the <guilabel>Re-create folders</guilabel> option, "
+"<application>Archive Manager</application> extracts the contents of the "
+"subfolder to <filename>/tmp/doc</filename>."
+msgstr ""
+"Se si seleziona l'opzione <guilabel>Ricreare le cartelle</guilabel>, "
+"<application>Gestore di archivi</application> estrae il contenuto della "
+"sottocartella in <filename>/tmp/doc</filename>."
+
+#: C/file-roller.xml:1594(para)
+msgid ""
+"If you do not select the <guilabel>Re-create folders</guilabel> option, "
+"<application>Archive Manager</application> does not create any subfolders. "
+"Instead, <application>Archive Manager</application> extracts all files from "
+"the archive, including files from subfolders, to <filename>/tmp</filename>."
+msgstr ""
+"Se non viene selezionata l'opzione <guilabel>Ricreare le cartelle</"
+"guilabel>, <application>Gestore di archivi</application> non crea nessuna "
+"sottocartella. <application>Gestore di archivi</application> estrae tutti i "
+"file dell'archivio, incluse le sottocartelle, in <filename>/tmp</filename>."
+
+#: C/file-roller.xml:1588(para)
+msgid ""
+"For example, you specify <filename>/tmp</filename> in the "
+"<guilabel>Filename</guilabel> text box and choose to extract all files. The "
+"archive contains a subfolder called <filename>doc</filename>. <placeholder-1/"
+">"
+msgstr ""
+"Per esempio, se viene specificata in <guilabel>Estrai nella cartella</"
+"guilabel> la cartella  <filename>/tmp</filename>, e l'archivio contiene una "
+"sotto-cartella <filename>doc</filename>:"
+
+#: C/file-roller.xml:1603(guilabel)
+msgid "Overwrite existing files"
+msgstr "Sovrascrivere file esistenti"
+
+#: C/file-roller.xml:1604(para)
+msgid ""
+"Select this option to overwrite any files in the destination folder that "
+"have the same name as the specified files."
+msgstr ""
+"Selezionare questa opzione per sovrascrivere tutti i file con lo stesso nome "
+"nella cartella di destinazione."
+
+#: C/file-roller.xml:1606(para)
+msgid ""
+"If you do not select this option, <application>Archive Manager</application> "
+"does not extract the specified file if an existing file with the same name "
+"already exists in the destination folder."
+msgstr ""
+"Se non viene selezionata questa opzione, <application>Gestore di archivi</"
+"application> non estrae il file specificato se è già presente un file con lo "
+"stesso nome nella cartella di destinazione."
+
+#: C/file-roller.xml:1612(guilabel)
+msgid "Do not extract older files"
+msgstr "Non estrarre file più vecchi"
+
+#: C/file-roller.xml:1614(para)
+msgid ""
+"This option is only effective while the <guilabel>Overwrite existing files</"
+"guilabel> option is selected."
+msgstr ""
+"Questa opzione è valida solamente se viene selezionata anche l'opzione "
+"<guilabel>Sovrascrivere file esistenti</guilabel>"
+
+#: C/file-roller.xml:1616(para)
+msgid ""
+"Select the <guilabel>Do not extract older files</guilabel> option to extract "
+"the specified file only if the destination folder does not contain the "
+"specified file, or if the destination folder contains an older version of "
+"the specified file. <application>Archive Manager</application> uses the "
+"modification date to determine which file is the most recent. If the version "
+"of the file in the archive is older, <application>Archive Manager</"
+"application> does not extract the specified file to the destination folder."
+msgstr ""
+"Selezionare l'opzione <guilabel>Non estrarre file più vecchi</guilabel> per "
+"estrarre i file specificati solamente se nella cartella di destinazione non "
+"è già presente il file specificato o se ne contiene una versione più "
+"vecchia. <application>Gestore di archivi</application> utilizza la data di "
+"modifica per determinare qual è il file più recente. Se la versione "
+"nell'archivio è più vecchia, <application>Gestore di archivi</application> "
+"non estrae il file specificato nella cartella di destinazione."
+
+#: C/file-roller.xml:1618(para)
+msgid ""
+"If you do not select the <guilabel>Do not extract older files</guilabel> "
+"option while the <guilabel>Overwrite existing files</guilabel> option is "
+"selected, <application>Archive Manager</application> extracts the specified "
+"file from the archive and overwrites the previous contents of the "
+"destination folder."
+msgstr ""
+"Se non viene selezionata l'opzione <guilabel>Non estrarre file più vecchi</"
+"guilabel> assieme a <guilabel>Sovrascrivere file esistenti</guilabel>, "
+"<application>Gestore di archivi</application> estrae dall'archivio i file "
+"specificati e sovrascrive il contenuto della cartella di destinazione."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: C/file-roller.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+"Milo Casagrande <milo@ubuntu.com> 2007-2008\n"
+"Gruppo traduzione Italiano di Ubuntu <gruppo-traduzione@ubuntu-it.org>, 2007"

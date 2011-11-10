@@ -1,0 +1,47 @@
+== Pending ==
+
+[ ] #547727 – file-roller crashed with SIGSEGV in strlen()
+
+== ToDo ==
+
+[ ] #525274 – File roller seems to be unable to create zipfiles without .zip extension
+
+[ ] #512825 – Fails extraction of files within directories named '.'
+
+[ ] #508737 – can't add file to the archive if archive name is without extension
+
+[ ] #482560 – totem-like plugin installer for file-roller
+
+[ ] Progress bar should not be file based, but content size based.
+    Related to bug #153281
+
+[ ] #543225 – File-Roller is unable to open gzip-compressed files like pci.ids if they are missing an .gz extension
+   
+[ ] It's not possible to load, modify, extract remote multi-volume archives.
+
+[?] #501660 – File-roller caja extension creates tarbombs
+
+[ ] #306403 – filenames in non-UTF-8 encodings are not handled correctly
+
+[ ] #547982 – Failure dialog for file extraction should be more useful
+
+[x] #350640 – sending an empty folder doesn't work
+
+[x] LP#26662: file-roller fails to open .Z files
+
+== DONE == 
+
+[x] optimization of the add_folder operation: if the command supports all the
+    requested options add the folder directly instead of reading the folder 
+    and adding the content in chunks.
+    
+    Partially fixed for the commands that allow to specify the file list
+    in a file, that is: tar, rar, 7zip.
+    
+[x] #153281 – Progress bar should be exact
+
+    This is command dependent: fixed for tar, zip, 7zip, rar.
+
+[x] #503940 – Various Archive Manager documentation mistakes
+
+[x] http://ubuntuforums.org/showthread.php?t=882771

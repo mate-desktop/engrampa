@@ -1,0 +1,1393 @@
+# Vietnamese translator for File-Roller.
+# Copyright © 2010 Free Software Foundation, Inc.
+# T.M.Thanh <tmthanh@yahoo.com>, 2002.
+# Nguyễn Thái Ngọc Duy <pclouds@vnlinux.org>, 2004.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller MATE TRUNK\n"
+"Report-Msgid-Bugs-To: http://bugzilla.mate.org/enter_bug.cgi?product=file-roller&component=general\n"
+"POT-Creation-Date: 2010-02-01 18:19+0000\n"
+"PO-Revision-Date: 2010-03-22 23:16+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.8\n"
+
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "Tập tin không phải là một tập tin .desktop hợp lệ"
+
+#: ../copy-n-paste/eggdesktopfile.c:188
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "Không nhận ra tập tin môi trường phiên bản « %s »"
+
+#: ../copy-n-paste/eggdesktopfile.c:958
+#, c-format
+msgid "Starting %s"
+msgstr "Đang khởi chạy %s"
+
+#: ../copy-n-paste/eggdesktopfile.c:1100
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "Ứng dụng không chấp nhận tài liệu trên dòng lệnh"
+
+#: ../copy-n-paste/eggdesktopfile.c:1168
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "Không nhận ra tùy chọn khởi chạy: %d"
+
+#: ../copy-n-paste/eggdesktopfile.c:1373
+#, c-format
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr "Không thể gửi địa chỉ URI của tài liệu qua cho một mục nhập môi trường « Type=Link » (Kiểu=Liên kết)"
+
+#: ../copy-n-paste/eggdesktopfile.c:1392
+#, c-format
+msgid "Not a launchable item"
+msgstr "Không phải là một mục có thể khởi chạy"
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr "Tắt kết nối tới trình quản lý phiên làm việc"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr "Xác định tập tin chứa cấu hình đã lưu"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr "TẬP TIN"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr "Xác định mã số quản lý phiên làm việc"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr "Mã số"
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr "Tùy chọn quản lý phiên làm việc:"
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr "Hiển thị các tùy chọn quản lý phiên làm việc"
+
+#: ../data/file-roller.desktop.in.in.h:1
+#: ../src/fr-window.c:1974
+#: ../src/fr-window.c:5377
+msgid "Archive Manager"
+msgstr "Bộ quản lý kho"
+
+#: ../data/file-roller.desktop.in.in.h:2
+msgid "Create and modify an archive"
+msgstr "Tạo và sửa đổi kho"
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "Nạp tùy chọn"
+
+#: ../data/ui/batch-add-files.ui.h:1
+#: ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "Tạ_o"
+
+#: ../data/ui/batch-add-files.ui.h:2
+#| msgid "Compression ratio:"
+msgid "Compress"
+msgstr "Nén"
+
+#: ../data/ui/batch-add-files.ui.h:3
+#: ../src/fr-window.c:4667
+msgid "Location"
+msgstr "Vị trí"
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:5
+#: ../data/ui/new.ui.h:2
+msgid "MB"
+msgstr "MB"
+
+#: ../data/ui/batch-add-files.ui.h:6
+#: ../data/ui/new.ui.h:3
+#| msgid "Split in _volumes of"
+msgid "Split into _volumes of"
+msgstr "Chia thành nhiều _phần"
+
+#: ../data/ui/batch-add-files.ui.h:7
+#: ../data/ui/new.ui.h:4
+#: ../data/ui/password.ui.h:3
+msgid "_Encrypt the file list too"
+msgstr "_Mã hoá cả danh sách tập tin"
+
+#: ../data/ui/batch-add-files.ui.h:8
+#| msgid "_Files:"
+msgid "_Filename:"
+msgstr "_Tên tập tin:"
+
+#: ../data/ui/batch-add-files.ui.h:9
+#: ../src/fr-window.c:5798
+msgid "_Location:"
+msgstr "_Vị trí:"
+
+#: ../data/ui/batch-add-files.ui.h:10
+#: ../data/ui/new.ui.h:5
+msgid "_Other Options"
+msgstr "Tùy chọn _khác"
+
+#: ../data/ui/batch-add-files.ui.h:11
+#: ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:6
+#: ../data/ui/password.ui.h:4
+msgid "_Password:"
+msgstr "_Mật khẩu:"
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Cần nhập mật khẩu</span>"
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "Xóa"
+
+#: ../data/ui/delete.ui.h:2
+#: ../src/dlg-extract.c:362
+msgid "_All files"
+msgstr "_Mọi tập tin"
+
+#: ../data/ui/delete.ui.h:3
+#: ../src/dlg-extract.c:348
+msgid "_Files:"
+msgstr "_Tập tin:"
+
+#: ../data/ui/delete.ui.h:4
+#: ../src/dlg-extract.c:369
+msgid "_Selected files"
+msgstr "Tập tin đã _chọn"
+
+#: ../data/ui/delete.ui.h:5
+#: ../src/dlg-extract.c:359
+msgid "example: *.txt; *.doc"
+msgstr "ví dụ : *.txt; *.doc"
+
+#: ../data/ui/open-with.ui.h:1
+msgid "A_vailable application:"
+msgstr "Ứng dụng _tự chọn:"
+
+#: ../data/ui/open-with.ui.h:2
+msgid "Open Files"
+msgstr "Mở tập tin"
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr "Ứng dụng _vừa dùng:"
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr "Ứn_g dụng:"
+
+#: ../data/ui/password.ui.h:1
+msgid "<i><b>Note:</b> the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b>Ghi chú:</b> mật khẩu sẽ được dùng để mật mã hoá tập tin được thêm vào kho hiện thời, cũng như để giải mã các tập tin trong quá trình giải nén chúng.Khi đóng kho, mật khẩu sẽ được xoá.</i>"
+
+#: ../data/ui/password.ui.h:2
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: ../data/ui/update.ui.h:1
+msgid "S_elect the files you want to update:"
+msgstr "C_họn những tập tin cần cập nhật:"
+
+#. secondary text
+#: ../data/ui/update.ui.h:2
+#: ../src/dlg-update.c:182
+#, c-format
+msgid "The file has been modified with an external application. If you don't update the version in the archive, all of your changes will be lost."
+msgid_plural "There are %d files that have been modified with an external application. If you don't update the files in the archive, all of your changes will be lost."
+msgstr[0] "Có %d tập tin đã bị ứng dụng ngoài sửa đổi. Nếu bạn không cập nhật phiên bản trong kho lưu thì mọi thay đổi đều bị mất."
+
+#: ../data/ui/update.ui.h:3
+msgid "_Update"
+msgstr "Cậ_p nhật"
+
+#: ../caja/caja-fileroller.c:313
+msgid "Extract Here"
+msgstr "Giải nén vào đây"
+
+#: ../caja/caja-fileroller.c:314
+msgid "Extract the selected archive in the current position"
+msgstr "Giải nén kho đã chọn vào thư mục hiện tại"
+
+#: ../caja/caja-fileroller.c:331
+msgid "Extract To..."
+msgstr "Giải nén vào..."
+
+#: ../caja/caja-fileroller.c:332
+msgid "Extract the selected archive"
+msgstr "Giải nén kho đã chọn"
+
+#: ../caja/caja-fileroller.c:351
+msgid "Compress..."
+msgstr "Nén..."
+
+#: ../caja/caja-fileroller.c:352
+#| msgid "Create an archive with the selected objects"
+msgid "Create a compressed archive with the selected objects"
+msgstr "Tạo một kho nén chứa những đối tượng được chọn"
+
+#: ../src/actions.c:158
+#: ../src/actions.c:197
+#: ../src/actions.c:233
+#: ../src/dlg-batch-add.c:168
+#: ../src/dlg-batch-add.c:184
+#: ../src/dlg-batch-add.c:213
+#: ../src/dlg-batch-add.c:258
+#: ../src/dlg-batch-add.c:304
+#: ../src/fr-window.c:2925
+msgid "Could not create the archive"
+msgstr "Không thể tạo kho"
+
+#: ../src/actions.c:160
+#: ../src/dlg-batch-add.c:170
+#: ../src/dlg-batch-add.c:306
+msgid "You have to specify an archive name."
+msgstr "Cần phải đặt tên cho kho."
+
+#: ../src/actions.c:199
+msgid "You don't have permission to create an archive in this folder"
+msgstr "Bạn không có quyền tạo kho trong thư mục này"
+
+#: ../src/actions.c:235
+#: ../src/dlg-package-installer.c:184
+#: ../src/dlg-package-installer.c:227
+#: ../src/dlg-package-installer.c:268
+#: ../src/dlg-package-installer.c:277
+#: ../src/dlg-package-installer.c:306
+#: ../src/fr-archive.c:891
+#: ../src/fr-window.c:6010
+#: ../src/fr-window.c:6186
+msgid "Archive type not supported."
+msgstr "Không hỗ trợ kiểu kho đó."
+
+#: ../src/actions.c:249
+msgid "Could not delete the old archive."
+msgstr "Không thể xóa kho cũ."
+
+#: ../src/actions.c:383
+#: ../src/fr-window.c:5856
+msgid "Open"
+msgstr "Mở"
+
+#: ../src/actions.c:394
+#: ../src/dlg-new.c:325
+#: ../src/fr-window.c:5208
+msgid "All archives"
+msgstr "Mọi kho"
+
+#: ../src/actions.c:401
+#: ../src/dlg-new.c:332
+msgid "All files"
+msgstr "Mọi tập tin"
+
+#: ../src/actions.c:780
+#: ../src/fr-window.c:7029
+msgid "Last Output"
+msgstr "Kết xuất cuối"
+
+#: ../src/actions.c:844
+msgid "File Roller is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+msgstr "Chương trình này là phần mềm tự do; bạn có thể phát hành lại nó và/hoặc sửa đổi nó với điều kiện của Giấy Phép Công Cộng GNU như được xuất bản bởi Tổ Chức Phần Mềm Tự Do; hoặc phiên bản 2 của Giấy Phép này, hoặc (tùy chọn) bất kỳ phiên bản sau nào."
+
+#: ../src/actions.c:848
+msgid "File Roller is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+msgstr "Chương trình này được phát hành vì mong muốn nó có ích, nhưng KHÔNG CÓ BẢO HÀNH GÌ CẢ, THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC DỨT KHOÁT. Xem Giấy Phép Công Cộng GNU để biết thêm chi tiết."
+
+#: ../src/actions.c:852
+msgid "You should have received a copy of the GNU General Public License along with File Roller; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương trình này; nếu không, hãy viết thư cho Tổ Chức Phần Mềm Tự Do,\n"
+"Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor,\n"
+"Boston, MA  02110-1301, USA (Mỹ)."
+
+#: ../src/actions.c:862
+#| msgid "Copyright © 2001-2007 Free Software Foundation, Inc."
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr "Tác quyền © năm 2001-2010 của Tổ chức Phần mềm Tự do."
+
+#: ../src/actions.c:863
+msgid "An archive manager for MATE."
+msgstr "Trình quản lý kho của MATE."
+
+#: ../src/actions.c:866
+msgid "translator-credits"
+msgstr "Nhóm Việt hóa MATE (http://matevi.sourceforge.net)"
+
+#: ../src/dlg-add-files.c:94
+#: ../src/dlg-add-folder.c:129
+msgid "Could not add the files to the archive"
+msgstr "Không thể thêm tập tin vào kho"
+
+#: ../src/dlg-add-files.c:95
+#: ../src/dlg-add-folder.c:130
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "Bạn không có đủ quyền để đọc tập tin nằm trong thư mục « %s »"
+
+#: ../src/dlg-add-files.c:142
+#: ../src/ui.h:48
+msgid "Add Files"
+msgstr "Thêm tập tin"
+
+#: ../src/dlg-add-files.c:156
+#: ../src/dlg-add-folder.c:231
+msgid "Add only if _newer"
+msgstr "Chỉ thê_m tập tin mới hơn"
+
+#: ../src/dlg-add-folder.c:217
+msgid "Add a Folder"
+msgstr "Thêm thư mục"
+
+#: ../src/dlg-add-folder.c:232
+msgid "_Include subfolders"
+msgstr "_Gồm cả thư mục con"
+
+#: ../src/dlg-add-folder.c:233
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "Bỏ qua các liên kết _tượng trưng"
+
+#: ../src/dlg-add-folder.c:236
+#: ../src/dlg-add-folder.c:242
+#: ../src/dlg-add-folder.c:248
+msgid "example: *.o; *.bak"
+msgstr "ví dụ: *.o; *.bak"
+
+#: ../src/dlg-add-folder.c:237
+msgid "Include _files:"
+msgstr "_Gồm các tập tin:"
+
+#: ../src/dlg-add-folder.c:243
+msgid "E_xclude files:"
+msgstr "Bỏ _qua các tập tin:"
+
+#: ../src/dlg-add-folder.c:249
+msgid "_Exclude folders:"
+msgstr "Bỏ qua các thư _mục:"
+
+#: ../src/dlg-add-folder.c:253
+msgid "_Load Options"
+msgstr "Nạp tùy _chọn"
+
+#: ../src/dlg-add-folder.c:254
+msgid "Sa_ve Options"
+msgstr "_Lưu tùy chọn"
+
+#: ../src/dlg-add-folder.c:255
+msgid "_Reset Options"
+msgstr "Đặt lạ_i các tuỳ chọn"
+
+#: ../src/dlg-add-folder.c:883
+msgid "Save Options"
+msgstr "Lưu tùy chọn"
+
+#: ../src/dlg-add-folder.c:884
+msgid "Options Name:"
+msgstr "Tên tùy chọn:"
+
+#: ../src/dlg-ask-password.c:123
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr "Xác định mật khẩu cho kho '%s'."
+
+#: ../src/dlg-batch-add.c:185
+#: ../src/fr-window.c:7347
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"Tên « %s » không hợp lệ vì không cho phép nó chứa ký tự: %s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:188
+#: ../src/fr-window.c:7339
+#: ../src/fr-window.c:7343
+#: ../src/fr-window.c:7347
+#: ../src/fr-window.c:7383
+#: ../src/fr-window.c:7385
+msgid "Please use a different name."
+msgstr "Hãy chọn tên khác."
+
+#: ../src/dlg-batch-add.c:215
+msgid "You don't have the right permissions to create an archive in the destination folder."
+msgstr "Bạn không có đủ quyền để tạo kho trong thư mục đích."
+
+#: ../src/dlg-batch-add.c:231
+#: ../src/dlg-extract.c:102
+#: ../src/fr-window.c:6604
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"Thư mục đích « %s » không tồn tại.\n"
+"\n"
+"Bạn có muốn tạo nó không?"
+
+#: ../src/dlg-batch-add.c:240
+#: ../src/dlg-extract.c:111
+#: ../src/fr-window.c:6613
+msgid "Create _Folder"
+msgstr "Tạo thư _mục"
+
+#: ../src/dlg-batch-add.c:259
+#: ../src/dlg-extract.c:131
+#: ../src/fr-window.c:6633
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "Không thể tạo thư mục đích: %s."
+
+#: ../src/dlg-batch-add.c:276
+msgid "Archive not created"
+msgstr "Chưa tạo kho."
+
+#: ../src/dlg-batch-add.c:324
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "Kho đã có. Bạn có muốn ghi đè lên nó không?"
+
+#: ../src/dlg-batch-add.c:327
+msgid "_Overwrite"
+msgstr "_Ghi đè"
+
+#: ../src/dlg-extract.c:130
+#: ../src/dlg-extract.c:148
+#: ../src/dlg-extract.c:175
+#: ../src/fr-window.c:4134
+#: ../src/fr-window.c:6632
+#: ../src/fr-window.c:6649
+msgid "Extraction not performed"
+msgstr "Chưa giải nén"
+
+#: ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4297
+#: ../src/fr-window.c:4377
+#, c-format
+msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr "Bạn không có đủ quyền để giải nén kho nằm trong thư mục « %s »"
+
+#: ../src/dlg-extract.c:331
+#: ../src/dlg-extract.c:429
+#: ../src/ui.h:123
+msgid "Extract"
+msgstr "Giải nén"
+
+#: ../src/dlg-extract.c:380
+msgid "Actions"
+msgstr "Hành động"
+
+#: ../src/dlg-extract.c:396
+msgid "Re-crea_te folders"
+msgstr "Tạ_o lại thư mục"
+
+#: ../src/dlg-extract.c:400
+msgid "Over_write existing files"
+msgstr "Ghi đè _lên tập tin đã có"
+
+#: ../src/dlg-extract.c:404
+msgid "Do not e_xtract older files"
+msgstr "Không _giải nén tập tin cũ hơn"
+
+#: ../src/dlg-new.c:449
+msgid "New"
+msgstr "Mới"
+
+#: ../src/dlg-new.c:462
+msgid "Save"
+msgstr "Lưu"
+
+#: ../src/dlg-package-installer.c:91
+msgid "There was an internal error trying to search for applications:"
+msgstr "Gặp lỗi nội bộ trong khi thử tìm kiếm ứng dụng:"
+
+#: ../src/dlg-package-installer.c:231
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+"Không có lệnh nào được cài đặt để xử lý tập tin dạng %s.\n"
+"Bạn có muốn tìm kiếm một lệnh có khả năng mở tập tin này không?"
+
+#: ../src/dlg-package-installer.c:236
+#| msgid "Could not rename the file"
+msgid "Could not open this file type"
+msgstr "Không thể mở tập tin kiểu này"
+
+#: ../src/dlg-package-installer.c:239
+msgid "_Search Command"
+msgstr "_Lệnh tìm kiếm"
+
+#: ../src/dlg-prop.c:106
+msgid "Location:"
+msgstr "Vị trí:"
+
+#: ../src/dlg-prop.c:118
+msgid "Name:"
+msgstr "Tên:"
+
+#: ../src/dlg-prop.c:124
+#, c-format
+msgid "%s Properties"
+msgstr "Thuộc tính của %s"
+
+#: ../src/dlg-prop.c:133
+msgid "Modified on:"
+msgstr "Sửa lúc:"
+
+#: ../src/dlg-prop.c:143
+msgid "Archive size:"
+msgstr "Kích thước kho:"
+
+#: ../src/dlg-prop.c:154
+msgid "Content size:"
+msgstr "Kích thước nội dung:"
+
+#: ../src/dlg-prop.c:174
+msgid "Compression ratio:"
+msgstr "Tỷ lệ nén:"
+
+#: ../src/dlg-prop.c:189
+msgid "Number of files:"
+msgstr "Số tập tin:"
+
+#: ../src/dlg-update.c:159
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr "Cập nhật tập tin « %s » trong kho lưu « %s » không?"
+
+#: ../src/dlg-update.c:173
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr "Cập nhật các tập tin trong kho lưu « %s » không?"
+
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr "Định _dạng tập tin: %s"
+
+#: ../src/eggfileformatchooser.c:397
+#| msgid "All files"
+msgid "All Files"
+msgstr "Mọi tập tin"
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr "Mọi tập tin được hỗ trợ"
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr "Theo phần mở rộng"
+
+#: ../src/eggfileformatchooser.c:422
+#| msgid "File Roller"
+msgid "File Format"
+msgstr "Định dạng Tập tin"
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr "Phần mở rộng"
+
+#: ../src/eggfileformatchooser.c:675
+#, c-format
+msgid "The program was not able to find out the file format you want to use for `%s'. Please make sure to use a known extension for that file or manually choose a file format from the list below."
+msgstr "Chương trình này không thể quyết định định dạng tập tin nào bạn muốn sử dụng cho « %s ». Hãy kiểm tra lại bạn sử dụng một phần mở rộng đúng cho tập tin đó, hoặc tự chọn một định dạng tập tin trong danh sách dưới đây."
+
+#: ../src/eggfileformatchooser.c:682
+msgid "File format not recognized"
+msgstr "Không nhận ra định dạng tập tin"
+
+#: ../src/fr-archive.c:871
+#| msgid "Command not found."
+msgid "File not found."
+msgstr "Không tìm thấy tập tin."
+
+#: ../src/fr-archive.c:1934
+msgid "You don't have the right permissions."
+msgstr "Bạn không có đủ quyền truy cập."
+
+#: ../src/fr-archive.c:1934
+msgid "This archive type cannot be modified"
+msgstr "Kho loại này không thể bị thay đổi"
+
+#: ../src/fr-archive.c:1946
+msgid "You can't add an archive to itself."
+msgstr "Bạn không thể thêm một kho vào chính nó."
+
+#: ../src/fr-command-7z.c:296
+#: ../src/fr-command-rar.c:422
+#: ../src/fr-command-tar.c:301
+msgid "Adding file: "
+msgstr "Đang thêm tập tin: "
+
+#: ../src/fr-command-7z.c:412
+#: ../src/fr-command-rar.c:549
+#: ../src/fr-command-tar.c:418
+msgid "Extracting file: "
+msgstr "Đang giải nén tập tin: "
+
+#: ../src/fr-command-rar.c:500
+#: ../src/fr-command-tar.c:365
+msgid "Removing file: "
+msgstr "Đang gỡ bỏ tập tin: "
+
+#: ../src/fr-command-rar.c:677
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr "Không tìm thấy khối: %s"
+
+#: ../src/fr-command-tar.c:374
+#: ../src/fr-window.c:2310
+msgid "Deleting files from archive"
+msgstr "Đang xóa bỏ tập tin khỏi kho"
+
+#: ../src/fr-command-tar.c:477
+msgid "Recompressing archive"
+msgstr "Đang nén lại kho"
+
+#: ../src/fr-command-tar.c:708
+msgid "Decompressing archive"
+msgstr "Đang giải nén kho"
+
+#: ../src/fr-stock.c:43
+#: ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "Thê_m"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "_Giải nén"
+
+#: ../src/fr-window.c:1509
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] "%d đối tượng (%s)"
+
+#: ../src/fr-window.c:1514
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] "%d đối tượng đã chọn (%s)"
+
+#: ../src/fr-window.c:1584
+msgid "Folder"
+msgstr "Thư mục"
+
+#: ../src/fr-window.c:1982
+msgid "[read only]"
+msgstr "[chỉ đọc]"
+
+#: ../src/fr-window.c:2233
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "Không thể hiển thị thư mục « %s »"
+
+#: ../src/fr-window.c:2301
+#: ../src/fr-window.c:2331
+msgid "Creating archive"
+msgstr "Đang tạo kho"
+
+#: ../src/fr-window.c:2304
+msgid "Loading archive"
+msgstr "Đang nạp kho"
+
+#: ../src/fr-window.c:2307
+msgid "Reading archive"
+msgstr "Đang đọc kho"
+
+#: ../src/fr-window.c:2313
+msgid "Testing archive"
+msgstr "Đang kiểm tra kho"
+
+#: ../src/fr-window.c:2316
+msgid "Getting the file list"
+msgstr "Đang lấy danh sách tập tin"
+
+#: ../src/fr-window.c:2319
+#: ../src/fr-window.c:2328
+msgid "Copying the file list"
+msgstr "Đang sao chép danh sách tập tin"
+
+#: ../src/fr-window.c:2322
+msgid "Adding files to archive"
+msgstr "Đang thêm tập tin vào kho"
+
+#: ../src/fr-window.c:2325
+msgid "Extracting files from archive"
+msgstr "Đang giải nén tập tin khỏi kho"
+
+#: ../src/fr-window.c:2334
+msgid "Saving archive"
+msgstr "Đang lưu kho"
+
+#: ../src/fr-window.c:2491
+msgid "_Open the Archive"
+msgstr "Mở kh_o"
+
+#: ../src/fr-window.c:2492
+#| msgid "_Selected files"
+msgid "_Show the Files"
+msgstr "_Hiện các tập tin"
+
+#: ../src/fr-window.c:2538
+msgid "Archive:"
+msgstr "Kho:"
+
+#: ../src/fr-window.c:2700
+msgid "Extraction completed successfully"
+msgstr "Hoàn tất giải nén"
+
+#: ../src/fr-window.c:2723
+msgid "Archive created successfully"
+msgstr "Đã tạo kho thành công"
+
+#: ../src/fr-window.c:2771
+#| msgid "wait please..."
+msgid "please wait..."
+msgstr "hãy đợi..."
+
+#: ../src/fr-window.c:2930
+msgid "An error occurred while extracting files."
+msgstr "Gặp lỗi khi giải nén tập tin."
+
+#: ../src/fr-window.c:2936
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "Không thể mở « %s »"
+
+#: ../src/fr-window.c:2941
+msgid "An error occurred while loading the archive."
+msgstr "Gặp lỗi khi nạp kho."
+
+#: ../src/fr-window.c:2945
+msgid "An error occurred while deleting files from the archive."
+msgstr "Gặp lỗi khi xóa bỏ tập tin khỏi kho."
+
+#: ../src/fr-window.c:2951
+msgid "An error occurred while adding files to the archive."
+msgstr "Gặp lỗi khi thêm tập tin vào kho."
+
+#: ../src/fr-window.c:2955
+msgid "An error occurred while testing archive."
+msgstr "Gặp lỗi khi kiểm tra kho."
+
+#: ../src/fr-window.c:2959
+msgid "An error occurred while saving the archive."
+msgstr "Gặp lỗi khi lưu kho."
+
+#: ../src/fr-window.c:2963
+msgid "An error occurred."
+msgstr "Gặp lỗi."
+
+#: ../src/fr-window.c:2969
+msgid "Command not found."
+msgstr "Không tìm thấy lệnh."
+
+#: ../src/fr-window.c:2972
+msgid "Command exited abnormally."
+msgstr "Lệnh đã kết thúc bất thường."
+
+#: ../src/fr-window.c:3171
+msgid "Test Result"
+msgstr "Kết quả kiểm tra"
+
+#: ../src/fr-window.c:3993
+#: ../src/fr-window.c:7934
+#: ../src/fr-window.c:7961
+#: ../src/fr-window.c:8216
+msgid "Could not perform the operation"
+msgstr "Không thể thực hiện thao tác"
+
+#: ../src/fr-window.c:4019
+msgid "Do you want to add this file to the current archive or open it as a new archive?"
+msgstr "Bạn có muốn thêm tập tin này vào kho hiện thời, hoặc mở nó như là một kho mới không?"
+
+#: ../src/fr-window.c:4049
+msgid "Do you want to create a new archive with these files?"
+msgstr "Bạn có muốn tạo kho mới bằng các tập tin này không?"
+
+#: ../src/fr-window.c:4052
+msgid "Create _Archive"
+msgstr "Tạo _kho"
+
+#: ../src/fr-window.c:4626
+#: ../src/fr-window.c:5705
+msgid "Folders"
+msgstr "Thư mục"
+
+#: ../src/fr-window.c:4664
+msgid "Size"
+msgstr "Cỡ"
+
+#: ../src/fr-window.c:4665
+msgid "Type"
+msgstr "Kiểu"
+
+#: ../src/fr-window.c:4666
+msgid "Date Modified"
+msgstr "Ngày sửa đổi"
+
+#: ../src/fr-window.c:4676
+msgid "Name"
+msgstr "Tên"
+
+#: ../src/fr-window.c:5626
+msgid "Find:"
+msgstr "Tìm:"
+
+#: ../src/fr-window.c:5713
+msgid "Close the folders pane"
+msgstr "Đóng ô cửa sổ thư mục"
+
+#: ../src/fr-window.c:5853
+#: ../src/fr-window.c:5856
+#: ../src/ui.h:141
+#: ../src/ui.h:145
+msgid "Open archive"
+msgstr "Mở kho"
+
+#: ../src/fr-window.c:5854
+msgid "Open a recently used archive"
+msgstr "Mở kho đã dùng gần đây"
+
+#: ../src/fr-window.c:6178
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "Không thể lưu kho « %s »"
+
+#: ../src/fr-window.c:7339
+msgid "The new name is void."
+msgstr "Tên mới không có giá trị."
+
+#: ../src/fr-window.c:7343
+msgid "The new name is equal to the old one."
+msgstr "Tên mới giống tên cũ."
+
+#: ../src/fr-window.c:7383
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Một thư mục tên \"%s\" đã có.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7385
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Một tập tin tên « %s » đã có.\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7455
+msgid "Rename"
+msgstr "Thay tên"
+
+#: ../src/fr-window.c:7456
+msgid "New folder name"
+msgstr "Tên thư mục mới"
+
+#: ../src/fr-window.c:7456
+msgid "New file name"
+msgstr "Tên tập tin mới"
+
+#: ../src/fr-window.c:7460
+msgid "_Rename"
+msgstr "Th_ay tên"
+
+#: ../src/fr-window.c:7477
+#: ../src/fr-window.c:7497
+msgid "Could not rename the folder"
+msgstr "Không thể thay đổi tên của thư mục"
+
+#: ../src/fr-window.c:7477
+#: ../src/fr-window.c:7497
+msgid "Could not rename the file"
+msgstr "Không thể thay đổi tên của tập tin"
+
+#: ../src/fr-window.c:7895
+msgid "Paste Selection"
+msgstr "Dán vùng chọn"
+
+#: ../src/fr-window.c:7896
+msgid "Destination folder"
+msgstr "Thư mục đích"
+
+#: ../src/fr-window.c:8486
+msgid "Add files to an archive"
+msgstr "Thêm tập tin vào kho"
+
+#: ../src/fr-window.c:8530
+msgid "Extract archive"
+msgstr "Giải nén kho"
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:536
+msgid "%d %B %Y, %H:%M"
+msgstr "%d %B %Y, %H:%M"
+
+#. Expander
+#: ../src/gtk-utils.c:430
+msgid "Command _Line Output"
+msgstr "Kết xuất dòng _lệnh"
+
+#: ../src/gtk-utils.c:767
+msgid "Could not display help"
+msgstr "Không thể hiển thị trợ giúp"
+
+#: ../src/main.c:81
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z)"
+
+#: ../src/main.c:82
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr "Tar nén bằng 7z (.tar.7z)"
+
+#: ../src/main.c:83
+msgid "Ace (.ace)"
+msgstr "Ace (.ace)"
+
+#: ../src/main.c:85
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:86
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:88
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar nén bằng bzip2 (.tar.bz2)"
+
+#: ../src/main.c:90
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar nén bằng bzip (.tar.bz)"
+
+#: ../src/main.c:91
+msgid "Cabinet (.cab)"
+msgstr "Cabinet (.cab)"
+
+#: ../src/main.c:92
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr "Rar Archived Comic Book (.cbr)"
+
+#: ../src/main.c:93
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr "Zip Archived Comic Book (.cbz)"
+
+#: ../src/main.c:96
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar nén bằng gzip (.tar.gz)"
+
+#: ../src/main.c:99
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:100
+msgid "Self-extracting zip (.exe)"
+msgstr "Zip tự giải nén (.exe)"
+
+#: ../src/main.c:102
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:103
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:105
+#| msgid "Tar compressed with lzop (.tar.lzo)"
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr "Tar nén bằng lzip (.tar.lz)"
+
+#: ../src/main.c:107
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr "Tar nén bằng lzma (.tar.lzma)"
+
+#: ../src/main.c:109
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar nén bằng lzop (.tar.lzo)"
+
+#: ../src/main.c:110
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:113
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar chưa nén (.tar)"
+
+#: ../src/main.c:114
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar nén bằng compress (.tar.Z)"
+
+#: ../src/main.c:116
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:117
+msgid "Xz (.xz)"
+msgstr "Xz (.xz)"
+
+#: ../src/main.c:118
+#| msgid "Tar compressed with 7z (.tar.7z)"
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr "Tar nén bằng xz (.tar.xz)"
+
+#: ../src/main.c:119
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:120
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:186
+msgid "Add files to the specified archive and quit the program"
+msgstr "Thêm tập tin vào kho đã xác định rồi thoát khỏi chương trình"
+
+#: ../src/main.c:187
+msgid "ARCHIVE"
+msgstr "KHO"
+
+#: ../src/main.c:190
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "Thêm tập tin yêu cầu đặt tên cho kho rồi thoát khỏi chương trình"
+
+#: ../src/main.c:194
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "Giải nén kho vào thư mục đã xác định rồi thoát khỏi chương trình"
+
+#: ../src/main.c:195
+#: ../src/main.c:207
+msgid "FOLDER"
+msgstr "THƯ MỤC"
+
+#: ../src/main.c:198
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "Giải nén kho, yêu cầu thư mục đích, rồi thoát khỏi chương trình"
+
+#: ../src/main.c:202
+#| msgid "Extract archives to the specified folder and quit the program"
+msgid "Extract the contents of the archives in the archive folder and quit the program"
+msgstr "Giải nén nội dung của kho nén vào thư mục chứa kho nén, sau đó thoát khỏi chương trình"
+
+#: ../src/main.c:206
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "Thư mục mặc định dùng cho lệnh « --add » (thêm) và « --extract » (giải nén)"
+
+#: ../src/main.c:210
+msgid "Create destination folder without asking confirmation"
+msgstr "Tạo thư mục đích, không yêu cầu phải xác nhận"
+
+#: ../src/main.c:292
+msgid "- Create and modify an archive"
+msgstr "- Tạo và sửa kho"
+
+#: ../src/main.c:308
+msgid "File Roller"
+msgstr "Trình quản lí kho File Roller"
+
+#: ../src/ui.h:32
+#| msgid "_Files:"
+msgid "_File"
+msgstr "_Tập tin"
+
+#: ../src/ui.h:33
+msgid "_Edit"
+msgstr "_Sửa"
+
+#: ../src/ui.h:34
+msgid "_View"
+msgstr "_Xem"
+
+#: ../src/ui.h:35
+msgid "_Help"
+msgstr "Trợ g_iúp"
+
+#: ../src/ui.h:36
+msgid "_Arrange Files"
+msgstr "_Sắp xếp tập tin"
+
+#: ../src/ui.h:37
+msgid "Open _Recent"
+msgstr "Mở _gần đây"
+
+#: ../src/ui.h:41
+msgid "Information about the program"
+msgstr "Thông tin về chương trình"
+
+#: ../src/ui.h:44
+msgid "_Add Files..."
+msgstr "Thêm tập ti_n..."
+
+#: ../src/ui.h:45
+#: ../src/ui.h:49
+msgid "Add files to the archive"
+msgstr "Thêm tập tin vào kho"
+
+#: ../src/ui.h:52
+msgid "Add a _Folder..."
+msgstr "T_hêm thư mục..."
+
+#: ../src/ui.h:53
+#: ../src/ui.h:57
+msgid "Add a folder to the archive"
+msgstr "Thêm thư mục vào kho"
+
+#: ../src/ui.h:56
+msgid "Add Folder"
+msgstr "Thêm thư mục"
+
+#: ../src/ui.h:61
+msgid "Close the current archive"
+msgstr "Đóng kho đang mở"
+
+#: ../src/ui.h:64
+msgid "Contents"
+msgstr "Nội dung"
+
+#: ../src/ui.h:65
+msgid "Display the File Roller Manual"
+msgstr "Xem hướng dẫn sử dụng Trình quản lý kho"
+
+#: ../src/ui.h:70
+#: ../src/ui.h:91
+msgid "Copy the selection"
+msgstr "Sao chép vùng chọn"
+
+#: ../src/ui.h:74
+#: ../src/ui.h:95
+msgid "Cut the selection"
+msgstr "Cắt vùng chọn"
+
+#: ../src/ui.h:78
+#: ../src/ui.h:99
+msgid "Paste the clipboard"
+msgstr "Dán bảng nháp"
+
+#: ../src/ui.h:81
+#: ../src/ui.h:102
+msgid "_Rename..."
+msgstr "Tha_y tên..."
+
+#: ../src/ui.h:82
+#: ../src/ui.h:103
+msgid "Rename the selection"
+msgstr "Đổi tên của mục được chọn"
+
+#: ../src/ui.h:86
+#: ../src/ui.h:107
+msgid "Delete the selection from the archive"
+msgstr "Xóa bỏ mục được chọn khỏi kho"
+
+#: ../src/ui.h:111
+msgid "Dese_lect All"
+msgstr "_Bỏ chọn tất cả"
+
+#: ../src/ui.h:112
+msgid "Deselect all files"
+msgstr "Bỏ chọn mọi tập tin"
+
+#: ../src/ui.h:115
+#: ../src/ui.h:119
+msgid "_Extract..."
+msgstr "_Giải nén..."
+
+#: ../src/ui.h:116
+#: ../src/ui.h:120
+#: ../src/ui.h:124
+msgid "Extract files from the archive"
+msgstr "Giải nén tập tin khỏi kho"
+
+#: ../src/ui.h:132
+msgid "_Last Output"
+msgstr "Kết xuất _cuối"
+
+#: ../src/ui.h:133
+msgid "View the output produced by the last executed command"
+msgstr "Xem dữ liệu được xuất ra của lệnh đã thực hiện lần trước"
+
+#: ../src/ui.h:137
+msgid "Create a new archive"
+msgstr "Tạo kho mới"
+
+#: ../src/ui.h:148
+msgid "_Open With..."
+msgstr "Mở _bằng..."
+
+#: ../src/ui.h:149
+msgid "Open selected files with an application"
+msgstr "Mở các tập tin được chọn bằng một ứng dụng"
+
+#: ../src/ui.h:152
+msgid "Pass_word..."
+msgstr "Mật _khẩu..."
+
+#: ../src/ui.h:153
+msgid "Specify a password for this archive"
+msgstr "Xác định mật khẩu cho kho này"
+
+#: ../src/ui.h:157
+msgid "Show archive properties"
+msgstr "Hiển thị thuộc tính kho"
+
+#: ../src/ui.h:161
+msgid "Reload current archive"
+msgstr "Tải lại kho hiện thời"
+
+#: ../src/ui.h:165
+msgid "Save the current archive with a different name"
+msgstr "Lưu kho hiện thời với tên khác"
+
+#: ../src/ui.h:169
+msgid "Select all files"
+msgstr "Chọn tất cả các tập tin"
+
+#: ../src/ui.h:173
+msgid "Stop current operation"
+msgstr "Dừng thao tác hiện thời"
+
+#: ../src/ui.h:176
+msgid "_Test Integrity"
+msgstr "_Kiểm tra tính toàn vẹn"
+
+#: ../src/ui.h:177
+msgid "Test whether the archive contains errors"
+msgstr "Kiểm tra xem kho có bị lỗi không"
+
+#: ../src/ui.h:181
+#: ../src/ui.h:185
+msgid "Open the selected file"
+msgstr "Mở tập tin đã chọn"
+
+#: ../src/ui.h:189
+#: ../src/ui.h:193
+msgid "Open the selected folder"
+msgstr "Mở thư mục đã chọn"
+
+#: ../src/ui.h:198
+msgid "Go to the previous visited location"
+msgstr "Đi về vị trí đã đến lúc trước"
+
+#: ../src/ui.h:202
+msgid "Go to the next visited location"
+msgstr "Đi tới vị trí đã đến kế tiếp"
+
+#: ../src/ui.h:206
+msgid "Go up one level"
+msgstr "Lên một mức"
+
+#: ../src/ui.h:210
+msgid "Go to the home location"
+msgstr "Về vị trí gốc"
+
+#: ../src/ui.h:218
+msgid "_Toolbar"
+msgstr "_Thanh công cụ"
+
+#: ../src/ui.h:219
+msgid "View the main toolbar"
+msgstr "Xem thanh công cụ chính"
+
+#: ../src/ui.h:223
+msgid "Stat_usbar"
+msgstr "Thanh t_rạng thái"
+
+#: ../src/ui.h:224
+msgid "View the statusbar"
+msgstr "Xem thanh trạng thái"
+
+#: ../src/ui.h:228
+msgid "_Reversed Order"
+msgstr "Thứ tự _ngược lại"
+
+#: ../src/ui.h:229
+msgid "Reverse the list order"
+msgstr "Đảo ngược lại thứ tự của danh sách"
+
+#: ../src/ui.h:233
+msgid "_Folders"
+msgstr "Thư _mục"
+
+#: ../src/ui.h:234
+msgid "View the folders pane"
+msgstr "Xem ô cửa sổ thư mục"
+
+#: ../src/ui.h:243
+msgid "View All _Files"
+msgstr "Xem tất cả tậ_p tin"
+
+#: ../src/ui.h:246
+msgid "View as a F_older"
+msgstr "Xem dạng thư _mục"
+
+#: ../src/ui.h:254
+msgid "by _Name"
+msgstr "theo tê_n"
+
+#: ../src/ui.h:255
+msgid "Sort file list by name"
+msgstr "Sắp xếp danh sách tập tin theo tên"
+
+#: ../src/ui.h:257
+msgid "by _Size"
+msgstr "theo _cỡ"
+
+#: ../src/ui.h:258
+msgid "Sort file list by file size"
+msgstr "Sắp xếp danh sách tập tin theo kích cỡ"
+
+#: ../src/ui.h:260
+msgid "by T_ype"
+msgstr "theo _kiểu"
+
+#: ../src/ui.h:261
+msgid "Sort file list by type"
+msgstr "Sắp xếp danh sách tập tin theo kiểu"
+
+#: ../src/ui.h:263
+#| msgid "by _Date modified"
+msgid "by _Date Modified"
+msgstr "theo n_gày sửa đổi"
+
+#: ../src/ui.h:264
+msgid "Sort file list by modification time"
+msgstr "Sắp xếp danh sách tập tin theo thời gian sửa đổi"
+
+#: ../src/ui.h:266
+msgid "by _Location"
+msgstr "theo _vị trí"
+
+#: ../src/ui.h:267
+msgid "Sort file list by location"
+msgstr "Sắp xếp danh sách tập tin theo vị trí"
+

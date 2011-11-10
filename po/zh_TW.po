@@ -1,0 +1,1420 @@
+# Chinese (Taiwan) translation of file-roller.
+# Copyright (C) 2002, 03, 04, 05, 06, 07 Free Software Foundation, Inc.
+# Ben Wu <hpwu@redhat.com>, 2002-2003.
+# Woodman Tuen <wmtuen@gmail.com>, 2004-2007.
+# Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller 2.31.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-20 15:18+0800\n"
+"PO-Revision-Date: 2010-07-16 11:19+0800\n"
+"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+"Language-Team: Chinese/Traditional <zh-l10n@lists.linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "檔案不是有效的 .desktop 檔案"
+
+#: ../copy-n-paste/eggdesktopfile.c:190
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "無法辨識的桌面檔案版本「%s」"
+
+#: ../copy-n-paste/eggdesktopfile.c:960
+#, c-format
+msgid "Starting %s"
+msgstr "準備啟動 %s"
+
+#: ../copy-n-paste/eggdesktopfile.c:1102
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "應用程式不接受以命令列開啟文件"
+
+#: ../copy-n-paste/eggdesktopfile.c:1170
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "無法辨識的啟動選項：%d"
+
+#: ../copy-n-paste/eggdesktopfile.c:1375
+#, c-format
+msgid "Can't pass documents to this desktop element"
+msgstr "不能傳送文件至桌面項目"
+
+#: ../copy-n-paste/eggdesktopfile.c:1394
+#, c-format
+msgid "Not a launchable item"
+msgstr "不是可以啟動的項目"
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr "停用到作業階段管理程式的連線"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr "指定含有已儲存組態的檔案"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr "檔案"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr "指定作業階段管理 ID"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr "ID"
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr "作業階段管理選項:"
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr "顯示作業階段管理選項"
+
+#: ../data/file-roller.desktop.in.in.h:1 ../src/fr-window.c:1969
+#: ../src/fr-window.c:5398
+msgid "Archive Manager"
+msgstr "壓縮檔管理員"
+
+#: ../data/file-roller.desktop.in.in.h:2
+msgid "Create and modify an archive"
+msgstr "建立及更改壓縮檔"
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "載入選項"
+
+#: ../data/ui/batch-add-files.ui.h:1 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "建立(_R)"
+
+#: ../data/ui/batch-add-files.ui.h:2
+msgid "Compress"
+msgstr "壓縮"
+
+#: ../data/ui/batch-add-files.ui.h:3
+msgid "Location"
+msgstr "位置"
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/new.ui.h:2
+msgid "MB"
+msgstr "MB"
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB", where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:7 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr "分割大小為(_V)"
+
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:4
+#: ../data/ui/password.ui.h:3
+msgid "_Encrypt the file list too"
+msgstr "同時加密此檔案清單(_E)"
+
+#: ../data/ui/batch-add-files.ui.h:9
+msgid "_Filename:"
+msgstr "檔案名稱(_F):"
+
+#. Translators: after the colon there is a folder name.
+#: ../data/ui/batch-add-files.ui.h:10 ../src/fr-window.c:5820
+msgid "_Location:"
+msgstr "位置(_L):"
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:5
+msgid "_Other Options"
+msgstr "其他選項(_O)"
+
+#: ../data/ui/batch-add-files.ui.h:12 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:6 ../data/ui/password.ui.h:4
+msgid "_Password:"
+msgstr "密碼(_P):"
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">需要密碼</span>"
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "刪除"
+
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:363
+msgid "_All files"
+msgstr "所有檔案(_A)"
+
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:349
+msgid "_Files:"
+msgstr "檔案(_F):"
+
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:370
+msgid "_Selected files"
+msgstr "已選檔案(_S)"
+
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:360
+msgid "example: *.txt; *.doc"
+msgstr "例如：*.txt; *.doc"
+
+#: ../data/ui/open-with.ui.h:1
+msgid "A_vailable application:"
+msgstr "可用的應用程式(_V):"
+
+#: ../data/ui/open-with.ui.h:2
+msgid "Open Files"
+msgstr "開啟檔案"
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr "最近使用的程式(_E):"
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr "應用程式(_A):"
+
+#: ../data/ui/password.ui.h:1
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+"<i><b>請注意：</b> 密碼是在將檔案加入壓縮檔或者將檔案解壓縮時使用的。當關閉壓"
+"縮檔時，這個密碼將會被刪除。</i>"
+
+#: ../data/ui/password.ui.h:2
+msgid "Password"
+msgstr "密碼"
+
+#: ../data/ui/update.ui.h:1
+msgid "S_elect the files you want to update:"
+msgstr "選擇想要更新的檔案(_E):"
+
+#. secondary text
+#: ../data/ui/update.ui.h:2 ../src/dlg-update.c:181
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update "
+"the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+"這個檔案已經被外部應用程式修改過了。如果不更新壓縮檔中的檔案，您所有的變更都"
+"會消失。"
+msgstr[1] ""
+"這個 %d 檔案已經被外部應用程式修改過了。如果不更新壓縮檔中的檔案，您所有的變"
+"更都會消失。"
+
+#: ../data/ui/update.ui.h:3
+msgid "_Update"
+msgstr "更新(_U)"
+
+#: ../caja/caja-fileroller.c:313
+msgid "Extract Here"
+msgstr "在此解壓縮"
+
+#. Translators: the current position is the current folder
+#: ../caja/caja-fileroller.c:315
+msgid "Extract the selected archive to the current position"
+msgstr "在目前的位置解開已選取的壓縮檔"
+
+#: ../caja/caja-fileroller.c:332
+msgid "Extract To..."
+msgstr "解壓縮至..."
+
+#: ../caja/caja-fileroller.c:333
+msgid "Extract the selected archive"
+msgstr "解開已選的壓縮檔"
+
+#: ../caja/caja-fileroller.c:352
+msgid "Compress..."
+msgstr "壓縮..."
+
+#: ../caja/caja-fileroller.c:353
+msgid "Create a compressed archive with the selected objects"
+msgstr "以選取的物件建立一個新的壓縮檔"
+
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:170 ../src/dlg-batch-add.c:186
+#: ../src/dlg-batch-add.c:215 ../src/dlg-batch-add.c:260
+#: ../src/dlg-batch-add.c:306 ../src/fr-window.c:2920
+msgid "Could not create the archive"
+msgstr "無法建立壓縮檔"
+
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:172 ../src/dlg-batch-add.c:308
+msgid "You have to specify an archive name."
+msgstr "您必須指定壓縮檔的名稱。"
+
+#: ../src/actions.c:198
+msgid "You don't have permission to create an archive in this folder"
+msgstr "您沒有足夠的權限在這個資料夾中建立壓縮檔"
+
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:254
+#: ../src/dlg-package-installer.c:263 ../src/dlg-package-installer.c:291
+#: ../src/fr-archive.c:1146 ../src/fr-window.c:6038 ../src/fr-window.c:6214
+msgid "Archive type not supported."
+msgstr "不支援這種壓縮類型。"
+
+#: ../src/actions.c:248
+msgid "Could not delete the old archive."
+msgstr "無法刪除舊的壓縮檔。"
+
+#: ../src/actions.c:382 ../src/fr-window.c:5878
+msgid "Open"
+msgstr "開啟"
+
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5218
+msgid "All archives"
+msgstr "所有壓縮檔"
+
+#: ../src/actions.c:400 ../src/dlg-new.c:320
+msgid "All files"
+msgstr "所有檔案"
+
+#: ../src/actions.c:794 ../src/fr-window.c:7060
+msgid "Last Output"
+msgstr "上一個輸出訊息"
+
+#: ../src/actions.c:858
+msgid ""
+"File Roller is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"File Roller 是自由軟體，您可以遵照自由軟體基金會 (Free Software Foundation) "
+"出版的 GNU 通用公共許可證條款 (GNU General Public License) 第二版來修改和重新"
+"發佈這一程式，或者自由選擇使用任何更新的版本。"
+
+#: ../src/actions.c:862
+msgid ""
+"File Roller is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"發佈 Fire Roller 的目的是希望它有用，但沒有任何擔保。甚至沒有適合特定目的而隱"
+"含的擔保。更詳細的情況請參閱 GNU 通用公共許可證。"
+
+#: ../src/actions.c:866
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"File Roller; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"您應該已經和 Fire Roller 一起收到一份 GNU 通用公共許可證的副本。如果還沒有，"
+"寫信給：Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, "
+"MA  02110-1301 USA"
+
+#: ../src/actions.c:876
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr "版權所有 © 2001–2010 Free Software Foundation, Inc."
+
+#: ../src/actions.c:877
+msgid "An archive manager for MATE."
+msgstr "MATE 上的壓縮檔管理員程式。"
+
+#: ../src/actions.c:880
+msgid "translator-credits"
+msgstr ""
+"如對翻譯有任何意見，請送一封電子郵件給\n"
+"以下地址，MATE 翻譯團隊會盡快回覆您：\n"
+"zh-l10n@lists.linux.org.tw\n"
+"\n"
+"Woodman Tuen <wmtuen@gmail.com>, 2004-07\n"
+"Ben Wu <hpwu@redhat.com>, 2002-03"
+
+#: ../src/dlg-add-files.c:97 ../src/dlg-add-folder.c:130
+msgid "Could not add the files to the archive"
+msgstr "無法將檔案加入至壓縮檔中"
+
+#: ../src/dlg-add-files.c:98 ../src/dlg-add-folder.c:131
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "您沒有足夠的權限讀取資料夾“%s”中的檔案"
+
+#: ../src/dlg-add-files.c:146 ../src/ui.h:49
+msgid "Add Files"
+msgstr "加入檔案"
+
+#. Translators: add a file to the archive only if the disk version is
+#. * newer than the archive version.
+#: ../src/dlg-add-files.c:162 ../src/dlg-add-folder.c:231
+msgid "Add only if _newer"
+msgstr "只加入較新的(_N)"
+
+#: ../src/dlg-add-folder.c:217
+msgid "Add a Folder"
+msgstr "加入資料夾"
+
+#: ../src/dlg-add-folder.c:232
+msgid "_Include subfolders"
+msgstr "包括子目錄(_I)"
+
+#: ../src/dlg-add-folder.c:233
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "不包括是符號連結的資料夾(_K)"
+
+#: ../src/dlg-add-folder.c:236 ../src/dlg-add-folder.c:242
+#: ../src/dlg-add-folder.c:248
+msgid "example: *.o; *.bak"
+msgstr "例如： *.o; *.bak"
+
+#: ../src/dlg-add-folder.c:237
+msgid "Include _files:"
+msgstr "包含檔案(_F):"
+
+#: ../src/dlg-add-folder.c:243
+msgid "E_xclude files:"
+msgstr "不包括檔案(_X):"
+
+#: ../src/dlg-add-folder.c:249
+msgid "_Exclude folders:"
+msgstr "排除的資料夾(_E):"
+
+#: ../src/dlg-add-folder.c:253
+msgid "_Load Options"
+msgstr "載入選項(_L)"
+
+#: ../src/dlg-add-folder.c:254
+msgid "Sa_ve Options"
+msgstr "儲存選項(_V)"
+
+#: ../src/dlg-add-folder.c:255
+msgid "_Reset Options"
+msgstr "重設選項(_R)"
+
+#: ../src/dlg-add-folder.c:883
+msgid "Save Options"
+msgstr "儲存選項"
+
+#: ../src/dlg-add-folder.c:884
+msgid "Options Name:"
+msgstr "選項名稱："
+
+#: ../src/dlg-ask-password.c:123
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr "請輸入壓縮檔‘%s’的密碼。"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/dlg-batch-add.c:187 ../src/fr-window.c:7381
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"名稱“%s”無效，因為包含字元：%s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:190 ../src/fr-window.c:7371 ../src/fr-window.c:7376
+#: ../src/fr-window.c:7381 ../src/fr-window.c:7417 ../src/fr-window.c:7419
+msgid "Please use a different name."
+msgstr "請使用其它的名字。"
+
+#: ../src/dlg-batch-add.c:217
+msgid ""
+"You don't have the right permissions to create an archive in the destination "
+"folder."
+msgstr "您沒有足夠的權限在目的地資料夾中建立壓縮檔。"
+
+#: ../src/dlg-batch-add.c:233 ../src/dlg-extract.c:103 ../src/fr-window.c:6635
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"目的地資料夾“%s”並不存在。\n"
+"\n"
+"您想要建立它嗎？"
+
+#: ../src/dlg-batch-add.c:242 ../src/dlg-extract.c:112 ../src/fr-window.c:6644
+msgid "Create _Folder"
+msgstr "建立資料夾(_F)"
+
+#: ../src/dlg-batch-add.c:261 ../src/dlg-extract.c:132 ../src/fr-window.c:6664
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "無法建立目的地資料夾：%s。"
+
+#: ../src/dlg-batch-add.c:278
+msgid "Archive not created"
+msgstr "未建立壓縮檔"
+
+#: ../src/dlg-batch-add.c:326
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "壓縮檔已經存在，您要覆寫它嗎？"
+
+#: ../src/dlg-batch-add.c:329
+msgid "_Overwrite"
+msgstr "覆寫(_O)"
+
+#: ../src/dlg-extract.c:131 ../src/dlg-extract.c:149 ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4145 ../src/fr-window.c:6663 ../src/fr-window.c:6680
+msgid "Extraction not performed"
+msgstr "未進行解壓縮"
+
+#: ../src/dlg-extract.c:177 ../src/fr-window.c:4308 ../src/fr-window.c:4388
+#, c-format
+msgid ""
+"You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr "您並沒有足夠的權限在資料夾“%s”中將壓縮檔解壓"
+
+#: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
+msgid "Extract"
+msgstr "解開"
+
+#: ../src/dlg-extract.c:381
+msgid "Actions"
+msgstr "動作"
+
+#: ../src/dlg-extract.c:397
+msgid "Re-crea_te folders"
+msgstr "重新建立資料夾(_E)"
+
+#: ../src/dlg-extract.c:401
+msgid "Over_write existing files"
+msgstr "覆寫既有的檔案(_W)"
+
+#: ../src/dlg-extract.c:405
+msgid "Do not e_xtract older files"
+msgstr "不解開較舊的檔案(_X)"
+
+#: ../src/dlg-new.c:439
+msgctxt "File"
+msgid "New"
+msgstr "新增"
+
+#: ../src/dlg-new.c:452
+msgctxt "File"
+msgid "Save"
+msgstr "儲存"
+
+#: ../src/dlg-package-installer.c:96 ../src/dlg-package-installer.c:205
+msgid "There was an internal error trying to search for applications:"
+msgstr "嘗試搜尋應用程式時發生內部的錯誤："
+
+#: ../src/dlg-package-installer.c:273
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+"並未安裝用於 %s 檔案的應用程式。\n"
+"是否要搜尋可以開啟這個檔案的指令？"
+
+#: ../src/dlg-package-installer.c:278
+msgid "Could not open this file type"
+msgstr "無法開啟這個檔案類型"
+
+#: ../src/dlg-package-installer.c:281
+msgid "_Search Command"
+msgstr "搜尋指令(_S)"
+
+#. Translators: after the colon there is a folder name.
+#: ../src/dlg-prop.c:107
+msgid "Location:"
+msgstr "位置："
+
+#: ../src/dlg-prop.c:119
+msgctxt "File"
+msgid "Name:"
+msgstr "名稱："
+
+#: ../src/dlg-prop.c:125
+#, c-format
+msgid "%s Properties"
+msgstr "%s 的屬性"
+
+#: ../src/dlg-prop.c:134
+msgid "Modified on:"
+msgstr "修改日期："
+
+#: ../src/dlg-prop.c:144
+msgid "Archive size:"
+msgstr "壓縮檔大小："
+
+#: ../src/dlg-prop.c:155
+msgid "Content size:"
+msgstr "內容大小："
+
+#: ../src/dlg-prop.c:175
+msgid "Compression ratio:"
+msgstr "壓縮率："
+
+#: ../src/dlg-prop.c:190
+msgid "Number of files:"
+msgstr "檔案數目："
+
+#: ../src/dlg-update.c:158
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr "是否更新壓縮檔「%2$s」中的檔案「%1$s」？"
+
+#: ../src/dlg-update.c:172
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr "是否更新壓縮檔「%s」中的檔案？"
+
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr "檔案格式(_F)：%s"
+
+#: ../src/eggfileformatchooser.c:397
+msgid "All Files"
+msgstr "所有檔案"
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr "所有支援的檔案"
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr "依延伸檔名"
+
+#: ../src/eggfileformatchooser.c:422
+msgid "File Format"
+msgstr "檔案格式"
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr "延伸檔名"
+
+#: ../src/eggfileformatchooser.c:675
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for `%"
+"s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+"此程式無法找出您要用於「%s」的檔案格式。請確定該檔案使用已知的延伸檔名或手動"
+"從下列清單中選擇檔案格式。"
+
+#: ../src/eggfileformatchooser.c:682
+msgid "File format not recognized"
+msgstr "無法辨識檔案格式"
+
+#: ../src/fr-archive.c:1126
+msgid "File not found."
+msgstr "找不到檔案。"
+
+#: ../src/fr-archive.c:1229
+#, c-format
+msgid "The file doesn't exist"
+msgstr "檔案不存在"
+
+#: ../src/fr-archive.c:2415
+msgid "You don't have the right permissions."
+msgstr "您沒有足夠的權限。"
+
+#: ../src/fr-archive.c:2415
+msgid "This archive type cannot be modified"
+msgstr "不能修改這種壓縮類型"
+
+#: ../src/fr-archive.c:2427
+msgid "You can't add an archive to itself."
+msgstr "您無法將壓縮檔加入壓縮檔自身。"
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:434
+#: ../src/fr-command-tar.c:308
+msgid "Adding file: "
+msgstr "正在加入檔案："
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:412 ../src/fr-command-rar.c:561
+#: ../src/fr-command-tar.c:427
+msgid "Extracting file: "
+msgstr "正在解開檔案："
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-rar.c:512 ../src/fr-command-tar.c:373
+msgid "Removing file: "
+msgstr "正在移除檔案："
+
+#: ../src/fr-command-rar.c:689
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr "找不到儲存裝置：%s"
+
+#: ../src/fr-command-tar.c:382 ../src/fr-window.c:2305
+msgid "Deleting files from archive"
+msgstr "在壓縮檔中刪除檔案"
+
+#: ../src/fr-command-tar.c:486
+msgid "Recompressing archive"
+msgstr "重新壓縮檔案"
+
+#: ../src/fr-command-tar.c:737
+msgid "Decompressing archive"
+msgstr "解壓檔案"
+
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "加入(_A)"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "解開(_E)"
+
+#: ../src/fr-window.c:1504
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] "%d 個物件 (%s)"
+msgstr[1] "%d 個物件 (%s)"
+
+#: ../src/fr-window.c:1509
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] "已選取 %d 個物件 (%s)"
+msgstr[1] "已選取 %d 個物件 (%s)"
+
+#: ../src/fr-window.c:1579
+msgid "Folder"
+msgstr "資料夾"
+
+#: ../src/fr-window.c:1977
+msgid "[read only]"
+msgstr "[唯讀]"
+
+#: ../src/fr-window.c:2228
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "資料夾無法顯示“%s”"
+
+#: ../src/fr-window.c:2296 ../src/fr-window.c:2326
+msgid "Creating archive"
+msgstr "正在建立壓縮檔"
+
+#: ../src/fr-window.c:2299
+msgid "Loading archive"
+msgstr "正在載入壓縮檔"
+
+#: ../src/fr-window.c:2302
+msgid "Reading archive"
+msgstr "正在讀取壓縮檔"
+
+#: ../src/fr-window.c:2308
+msgid "Testing archive"
+msgstr "正在測試壓縮檔"
+
+#: ../src/fr-window.c:2311
+msgid "Getting the file list"
+msgstr "取得檔案清單"
+
+#: ../src/fr-window.c:2314 ../src/fr-window.c:2323
+msgid "Copying the file list"
+msgstr "正在複製檔案清單"
+
+#: ../src/fr-window.c:2317
+msgid "Adding files to archive"
+msgstr "將檔案加入到壓縮檔中"
+
+#: ../src/fr-window.c:2320
+msgid "Extracting files from archive"
+msgstr "正在從壓縮檔中解開檔案"
+
+#: ../src/fr-window.c:2329
+msgid "Saving archive"
+msgstr "正在儲存壓縮檔"
+
+#: ../src/fr-window.c:2486
+msgid "_Open the Archive"
+msgstr "開啟壓縮檔(_O)"
+
+#: ../src/fr-window.c:2487
+msgid "_Show the Files"
+msgstr "顯示檔案(_S)"
+
+#: ../src/fr-window.c:2533
+msgid "Archive:"
+msgstr "壓縮檔："
+
+#: ../src/fr-window.c:2695
+msgid "Extraction completed successfully"
+msgstr "解壓縮成功的結束"
+
+#: ../src/fr-window.c:2718
+msgid "Archive created successfully"
+msgstr "壓縮檔已成功的建立"
+
+#: ../src/fr-window.c:2766
+msgid "please wait..."
+msgstr "請稍候..."
+
+#: ../src/fr-window.c:2925
+msgid "An error occurred while extracting files."
+msgstr "解開檔案時發生錯誤。"
+
+#: ../src/fr-window.c:2931
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "無法開啟“%s”"
+
+#: ../src/fr-window.c:2936
+msgid "An error occurred while loading the archive."
+msgstr "載入壓縮檔時發生錯誤。"
+
+#: ../src/fr-window.c:2940
+msgid "An error occurred while deleting files from the archive."
+msgstr "在壓縮檔中刪除檔案時發生錯誤。"
+
+#: ../src/fr-window.c:2946
+msgid "An error occurred while adding files to the archive."
+msgstr "將檔案加入到壓縮檔時發生錯誤。"
+
+#: ../src/fr-window.c:2950
+msgid "An error occurred while testing archive."
+msgstr "測試壓縮檔時發生錯誤。"
+
+#: ../src/fr-window.c:2954
+msgid "An error occurred while saving the archive."
+msgstr "當儲存壓縮檔時發生錯誤。"
+
+#: ../src/fr-window.c:2958
+msgid "An error occurred."
+msgstr "發生錯誤。"
+
+#: ../src/fr-window.c:2964
+msgid "Command not found."
+msgstr "找不到指令。"
+
+#: ../src/fr-window.c:2967
+msgid "Command exited abnormally."
+msgstr "指令異常地結束。"
+
+#: ../src/fr-window.c:3166
+msgid "Test Result"
+msgstr "測試結果"
+
+#: ../src/fr-window.c:3988 ../src/fr-window.c:7968 ../src/fr-window.c:7995
+#: ../src/fr-window.c:8250
+msgid "Could not perform the operation"
+msgstr "操作無法進行"
+
+#: ../src/fr-window.c:4014
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr "您想要將這檔案加入到目前的壓縮檔中，還是開啟一個新的壓縮檔？"
+
+#: ../src/fr-window.c:4044
+msgid "Do you want to create a new archive with these files?"
+msgstr "您想要為這些檔案建立一個新的壓縮檔嗎？"
+
+#: ../src/fr-window.c:4047
+msgid "Create _Archive"
+msgstr "建立壓縮檔(_A)"
+
+#: ../src/fr-window.c:4641 ../src/fr-window.c:5726
+msgid "Folders"
+msgstr "資料夾"
+
+#: ../src/fr-window.c:4679
+msgctxt "File"
+msgid "Size"
+msgstr "大小"
+
+#: ../src/fr-window.c:4680
+msgctxt "File"
+msgid "Type"
+msgstr "類型"
+
+#: ../src/fr-window.c:4681
+msgctxt "File"
+msgid "Date Modified"
+msgstr "修改日期"
+
+#: ../src/fr-window.c:4682
+msgctxt "File"
+msgid "Location"
+msgstr "位置"
+
+#: ../src/fr-window.c:4691
+msgctxt "File"
+msgid "Name"
+msgstr "名稱"
+
+#: ../src/fr-window.c:5647
+msgid "Find:"
+msgstr "尋找:"
+
+#: ../src/fr-window.c:5734
+msgid "Close the folders pane"
+msgstr "關閉資料夾窗格"
+
+#: ../src/fr-window.c:5875 ../src/fr-window.c:5878 ../src/ui.h:142
+#: ../src/ui.h:146
+msgid "Open archive"
+msgstr "開啟壓縮檔"
+
+#: ../src/fr-window.c:5876
+msgid "Open a recently used archive"
+msgstr "開啟最近使用的壓縮檔"
+
+#: ../src/fr-window.c:6206
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "無法儲存壓縮檔“%s”"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/fr-window.c:7371
+msgid "The new name is void."
+msgstr "新檔名是空的。"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/fr-window.c:7376
+msgid "The new name is equal to the old one."
+msgstr "新舊檔案名稱相同。"
+
+#: ../src/fr-window.c:7417
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"名為“%s”的資料夾已經存在。\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7419
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"名為“%s”的檔案已經存在。\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7489
+msgid "Rename"
+msgstr "重新命名"
+
+#: ../src/fr-window.c:7490
+msgid "New folder name"
+msgstr "新的資料夾名稱"
+
+#: ../src/fr-window.c:7490
+msgid "New file name"
+msgstr "新的檔案名稱"
+
+#: ../src/fr-window.c:7494
+msgid "_Rename"
+msgstr "重新命名(_R)"
+
+#: ../src/fr-window.c:7511 ../src/fr-window.c:7531
+msgid "Could not rename the folder"
+msgstr "資料夾無法重新命名"
+
+#: ../src/fr-window.c:7511 ../src/fr-window.c:7531
+msgid "Could not rename the file"
+msgstr "檔案無法重新命名"
+
+#: ../src/fr-window.c:7929
+msgid "Paste Selection"
+msgstr "將已選的貼上"
+
+#: ../src/fr-window.c:7930
+msgid "Destination folder"
+msgstr "目的地資料夾"
+
+#: ../src/fr-window.c:8520
+msgid "Add files to an archive"
+msgstr "將檔案加入到壓縮檔中"
+
+#: ../src/fr-window.c:8564
+msgid "Extract archive"
+msgstr "解開壓縮檔"
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:561
+msgid "%d %B %Y, %H:%M"
+msgstr "%Y年%m月%d日 %H:%M"
+
+#. Expander
+#: ../src/gtk-utils.c:442
+msgid "Command _Line Output"
+msgstr "命令列輸出(_L)"
+
+#: ../src/gtk-utils.c:779
+msgid "Could not display help"
+msgstr "無法顯示說明文件"
+
+#: ../src/main.c:82
+msgid "7-Zip (.7z)"
+msgstr "7-Zip 格式 (.7z)"
+
+#: ../src/main.c:83
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr "使用 7z 壓縮的 Tar 檔案 (.tar.7z)"
+
+#: ../src/main.c:84
+msgid "Ace (.ace)"
+msgstr "Ace 格式 (.ace)"
+
+#: ../src/main.c:86
+msgid "Ar (.ar)"
+msgstr "Ar 格式 (.ar)"
+
+#: ../src/main.c:87
+msgid "Arj (.arj)"
+msgstr "Arj 格式 (.arj)"
+
+#: ../src/main.c:89
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "使用 bzip2 壓縮的 Tar 檔案 (.tar.bz2)"
+
+#: ../src/main.c:91
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "使用 bzip 壓縮的 Tar 檔案 (.tar.bz)"
+
+#: ../src/main.c:92
+msgid "Cabinet (.cab)"
+msgstr "封包檔 (.cab)"
+
+#: ../src/main.c:93
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr "Rar 壓縮漫畫書 (.cbr)"
+
+#: ../src/main.c:94
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr "Zip 壓縮漫畫書 (.cbz)"
+
+#: ../src/main.c:97
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "使用 gzip 壓縮的 Tar 檔案 (.tar.gz)"
+
+#: ../src/main.c:100
+msgid "Ear (.ear)"
+msgstr "Ear 格式 (.ear)"
+
+#: ../src/main.c:101
+msgid "Self-extracting zip (.exe)"
+msgstr "自動解壓縮 zip 檔 (.exe)"
+
+#: ../src/main.c:103
+msgid "Jar (.jar)"
+msgstr "Jar 格式 (.jar)"
+
+#: ../src/main.c:104
+msgid "Lha (.lzh)"
+msgstr "Lha 格式 (.lzh)"
+
+#: ../src/main.c:105
+msgid "Lrzip (.lrz)"
+msgstr "Lrzip 格式 (.lrz)"
+
+#: ../src/main.c:106
+msgid "Tar compressed with lrzip (.tar.lrz)"
+msgstr "使用 lrzip 壓縮的 Tar 檔案 (.tar.lrz)"
+
+#: ../src/main.c:108
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr "使用 lzip 壓縮的 Tar 檔案 (.tar.lz)"
+
+#: ../src/main.c:110
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr "使用 lzma 壓縮的 Tar 檔案 (.tar.lzma)"
+
+#: ../src/main.c:112
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "使用 lzop 壓縮的 Tar 檔案 (.tar.lzo)"
+
+#: ../src/main.c:113
+msgid "Rar (.rar)"
+msgstr "Rar 格式 (.rar)"
+
+#: ../src/main.c:116
+msgid "Tar uncompressed (.tar)"
+msgstr "未壓縮的 Tar 格式 (.tar)"
+
+#: ../src/main.c:117
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "使用 compress 壓縮的 Tar 檔案 (.tar.Z)"
+
+#: ../src/main.c:119
+msgid "War (.war)"
+msgstr "War 格式 (.war)"
+
+#: ../src/main.c:120
+msgid "Xz (.xz)"
+msgstr "Xz (.xz)"
+
+#: ../src/main.c:121
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr "使用 xz 壓縮的 Tar 檔案 (.tar.xz)"
+
+#: ../src/main.c:122
+msgid "Zoo (.zoo)"
+msgstr "Zoo 格式 (.zoo)"
+
+#: ../src/main.c:123
+msgid "Zip (.zip)"
+msgstr "Zip 格式 (.zip)"
+
+#: ../src/main.c:191
+msgid "Add files to the specified archive and quit the program"
+msgstr "將檔案加入到指定的壓縮檔，然後離開程式"
+
+#: ../src/main.c:192
+msgid "ARCHIVE"
+msgstr "壓縮檔"
+
+#: ../src/main.c:195
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "加入檔案並詢問壓縮檔的名稱，然後離開程式"
+
+#: ../src/main.c:199
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "解開壓縮檔到指定的資料夾，然後離開程式"
+
+#: ../src/main.c:200 ../src/main.c:212
+msgid "FOLDER"
+msgstr "資料夾"
+
+#: ../src/main.c:203
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "解開壓縮檔並詢問目的地資料夾，然後離開程式"
+
+#: ../src/main.c:207
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
+msgstr "在壓縮檔的資料夾下解開壓縮檔的內容，然後結束程式"
+
+#: ../src/main.c:211
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "'--add' 與 '--extract' 選項所使用的預設資料夾"
+
+#: ../src/main.c:215
+msgid "Create destination folder without asking confirmation"
+msgstr "無需確認便建立目的地資料夾"
+
+#: ../src/main.c:297
+msgid "- Create and modify an archive"
+msgstr "- 建立及修改壓縮檔"
+
+#: ../src/main.c:313
+msgid "File Roller"
+msgstr "File Roller"
+
+#: ../src/ui.h:32
+msgid "_Archive"
+msgstr "壓縮檔(_A)"
+
+#: ../src/ui.h:33
+msgid "_Edit"
+msgstr "編輯(_E)"
+
+#: ../src/ui.h:34
+msgid "_View"
+msgstr "檢視(_V)"
+
+#: ../src/ui.h:35
+msgid "_Help"
+msgstr "求助(_H)"
+
+#: ../src/ui.h:36
+msgid "_Arrange Files"
+msgstr "排列檔案(_A)"
+
+#. Translators: this is the label for the "open recent file" sub-menu.
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr "開啟最近使用的(_R)"
+
+#: ../src/ui.h:42
+msgid "Information about the program"
+msgstr "關於這個程式的資訊"
+
+#: ../src/ui.h:45
+msgid "_Add Files..."
+msgstr "加入檔案(_A)..."
+
+#: ../src/ui.h:46 ../src/ui.h:50
+msgid "Add files to the archive"
+msgstr "將檔案加入到壓縮檔"
+
+#: ../src/ui.h:53
+msgid "Add a _Folder..."
+msgstr "加入資料夾(_F)..."
+
+#: ../src/ui.h:54 ../src/ui.h:58
+msgid "Add a folder to the archive"
+msgstr "在壓縮檔中加入資料夾"
+
+#: ../src/ui.h:57
+msgid "Add Folder"
+msgstr "加入資料夾"
+
+#: ../src/ui.h:62
+msgid "Close the current archive"
+msgstr "關閉目前的壓縮檔"
+
+#: ../src/ui.h:65
+msgid "Contents"
+msgstr "內容"
+
+#: ../src/ui.h:66
+msgid "Display the File Roller Manual"
+msgstr "顯示 File Roller 的說明文件"
+
+#: ../src/ui.h:71 ../src/ui.h:92
+msgid "Copy the selection"
+msgstr "複製選取的內容"
+
+#: ../src/ui.h:75 ../src/ui.h:96
+msgid "Cut the selection"
+msgstr "將已選的剪下"
+
+#: ../src/ui.h:79 ../src/ui.h:100
+msgid "Paste the clipboard"
+msgstr "貼到剪貼板"
+
+#: ../src/ui.h:82 ../src/ui.h:103
+msgid "_Rename..."
+msgstr "重新命名(_R)..."
+
+#: ../src/ui.h:83 ../src/ui.h:104
+msgid "Rename the selection"
+msgstr "將已選的檔案重新命名"
+
+#: ../src/ui.h:87 ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr "從壓縮檔中將已選的刪除"
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "全部不選(_L)"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "取消選取檔案"
+
+#: ../src/ui.h:116 ../src/ui.h:120
+msgid "_Extract..."
+msgstr "解壓至(_E)..."
+
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr "從壓縮檔中解開檔案"
+
+#: ../src/ui.h:128
+msgid "Find..."
+msgstr "尋找..."
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "上一個輸出訊息(_L)"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr "顯示上一個已執行命令所產生的輸出訊息"
+
+#: ../src/ui.h:137
+msgctxt "File"
+msgid "New..."
+msgstr "新增..."
+
+#: ../src/ui.h:138
+msgid "Create a new archive"
+msgstr "建立新的壓縮檔"
+
+#: ../src/ui.h:141
+msgctxt "File"
+msgid "Open..."
+msgstr "開啟..."
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr "以其它程式開啟(_O)..."
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "使用其它程式開啟已選取的檔案"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "密碼(_W)..."
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr "指定這壓縮檔的密碼"
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "顯示壓縮檔的屬性"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "重新載入目前的壓縮檔"
+
+#: ../src/ui.h:165
+msgctxt "File"
+msgid "Save As..."
+msgstr "另存新檔..."
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr "以不同的名稱儲存目前的壓縮檔"
+
+#: ../src/ui.h:170
+msgid "Select all files"
+msgstr "選取所有檔案"
+
+#: ../src/ui.h:174
+msgid "Stop current operation"
+msgstr "停止目前的操作"
+
+#: ../src/ui.h:177
+msgid "_Test Integrity"
+msgstr "測試完整性(_T)"
+
+#: ../src/ui.h:178
+msgid "Test whether the archive contains errors"
+msgstr "測試壓縮檔是否含有錯誤"
+
+#: ../src/ui.h:182 ../src/ui.h:186
+msgid "Open the selected file"
+msgstr "開啟選取的檔案"
+
+#: ../src/ui.h:190 ../src/ui.h:194
+msgid "Open the selected folder"
+msgstr "顯示已選的資料夾"
+
+#: ../src/ui.h:199
+msgid "Go to the previous visited location"
+msgstr "回到上一個曾經瀏覽的位置"
+
+#: ../src/ui.h:203
+msgid "Go to the next visited location"
+msgstr "前住下一個曾經瀏覽的位置"
+
+#: ../src/ui.h:207
+msgid "Go up one level"
+msgstr "上一層"
+
+#. Translators: the home location is the home folder.
+#: ../src/ui.h:212
+msgid "Go to the home location"
+msgstr "回到個人資料夾"
+
+#: ../src/ui.h:220
+msgid "_Toolbar"
+msgstr "工具列(_T)"
+
+#: ../src/ui.h:221
+msgid "View the main toolbar"
+msgstr "顯示主工具列"
+
+#: ../src/ui.h:225
+msgid "Stat_usbar"
+msgstr "狀態列(_U)"
+
+#: ../src/ui.h:226
+msgid "View the statusbar"
+msgstr "顯示狀態列"
+
+#: ../src/ui.h:230
+msgid "_Reversed Order"
+msgstr "相反次序(_R)"
+
+#: ../src/ui.h:231
+msgid "Reverse the list order"
+msgstr "清單以相反次序排列"
+
+#: ../src/ui.h:235
+msgid "_Folders"
+msgstr "資料夾(_F)"
+
+#: ../src/ui.h:236
+msgid "View the folders pane"
+msgstr "檢視資料夾窗格"
+
+#: ../src/ui.h:245
+msgid "View All _Files"
+msgstr "顯示所有檔案(_F)"
+
+#: ../src/ui.h:248
+msgid "View as a F_older"
+msgstr "以資料夾方式顯示(_O)"
+
+#: ../src/ui.h:256
+msgid "by _Name"
+msgstr "依名稱(_N)"
+
+#: ../src/ui.h:257
+msgid "Sort file list by name"
+msgstr "依名稱排列檔案清單"
+
+#: ../src/ui.h:259
+msgid "by _Size"
+msgstr "依大小(_S)"
+
+#: ../src/ui.h:260
+msgid "Sort file list by file size"
+msgstr "依檔案大小排列檔案清單"
+
+#: ../src/ui.h:262
+msgid "by T_ype"
+msgstr "依類型(_Y)"
+
+#: ../src/ui.h:263
+msgid "Sort file list by type"
+msgstr "依類型排列檔案清單"
+
+#: ../src/ui.h:265
+msgid "by _Date Modified"
+msgstr "依修改日期(_D)"
+
+#: ../src/ui.h:266
+msgid "Sort file list by modification time"
+msgstr "依修改時間排列檔案清單"
+
+#. Translators: this is the "sort by file location" menu item
+#: ../src/ui.h:269
+msgid "by _Location"
+msgstr "依位置(_L)"
+
+#. Translators: location is the file location
+#: ../src/ui.h:271
+msgid "Sort file list by location"
+msgstr "依路徑排列檔案清單"
+
+#~ msgid "_File"
+#~ msgstr "檔案(_F)"
+
+#~ msgid "Archive _type:"
+#~ msgstr "壓縮檔類型(_T):"
+
+#~ msgid "Automatic"
+#~ msgstr "自動"
+
+#~ msgid "Create Archive..."
+#~ msgstr "建立壓縮檔..."
+
+#~ msgid "_Open the Destination"
+#~ msgstr "開啟目的端(_O)"
+
+#~ msgid ""
+#~ "Extract archives using the archive name as destination folder and quit "
+#~ "the program"
+#~ msgstr "以壓縮檔的名稱作為目的地資料夾的名稱來解開壓縮檔，然後離開程式"

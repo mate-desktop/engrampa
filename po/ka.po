@@ -1,0 +1,1218 @@
+# translation of file-roller.HEAD.po to Georgian
+# Georgian translation for file-roller
+# Copyright (c) (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
+# This file is distributed under the same license as the caja package.
+#
+#
+# Vladimer Sichinava <alinux@siena.linux.it>, 2006.
+# Alexander Didebulidze	,02.2006.
+# Vladimer SIchinava <alinux@siena.linux.it>, 2006.
+# Vladimer Sichinava <vlsichinava@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-27 07:47+0200\n"
+"PO-Revision-Date: 2006-09-10 08:31+0200\n"
+"Last-Translator: Vladimer Sichinava <vlsichinava@gmail.com>\n"
+"Language-Team: Georgian <www.gia.ge>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: ../data/glade/file-roller.glade.h:1
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b> შენიშვნა</b> პაროლი გამოყენებული იქნება არქივში  ფაილების დამატების ან მათი ამოარქივების დასაშიფრად. პროგრამის დახურვის შემდეგ პაროლი განადგურდება.</i>"
+
+#: ../data/glade/file-roller.glade.h:2
+msgid "A_vailable application:"
+msgstr "ხელმისაწვდომი პროგრამა:"
+
+#: ../data/glade/file-roller.glade.h:3
+msgid "C_reate"
+msgstr "შექმნა"
+
+#: ../data/glade/file-roller.glade.h:4
+msgid "Create Archive"
+msgstr "არქივის შექმნა"
+
+#: ../data/glade/file-roller.glade.h:5
+msgid "Delete"
+msgstr "წაშლა"
+
+#: ../data/glade/file-roller.glade.h:6
+msgid "Load Options"
+msgstr "ოფციების ჩატვირთვა"
+
+#: ../data/glade/file-roller.glade.h:7 ../src/window.c:2964
+msgid "Location"
+msgstr "ადგილმდებარეობა"
+
+#. current location
+#: ../data/glade/file-roller.glade.h:8 ../src/window.c:3844
+msgid "Location:"
+msgstr "ადგილმდებარეობა:"
+
+#: ../data/glade/file-roller.glade.h:9
+msgid "Open Files"
+msgstr "ფაილების გახსნა"
+
+#: ../data/glade/file-roller.glade.h:10
+msgid "Password"
+msgstr "პაროლი"
+
+#: ../data/glade/file-roller.glade.h:11
+msgid "R_ecent applications:"
+msgstr ""
+"ცოტახნის წინ გამოყენებული "
+"პროგრამები:"
+
+#: ../data/glade/file-roller.glade.h:12 ../src/dlg-extract.c:393
+msgid "_All files"
+msgstr "ყველა ფაილი"
+
+#: ../data/glade/file-roller.glade.h:13
+msgid "_Application:"
+msgstr "პროგრამა:"
+
+#: ../data/glade/file-roller.glade.h:14
+msgid "_Archive:"
+msgstr "არქივი:"
+
+#: ../data/glade/file-roller.glade.h:15 ../src/dlg-extract.c:379
+msgid "_Files:"
+msgstr "ფაილები:"
+
+#: ../data/glade/file-roller.glade.h:16 ../src/dlg-extract.c:441
+msgid "_Password:"
+msgstr "პაროლი:"
+
+#: ../data/glade/file-roller.glade.h:17 ../src/dlg-extract.c:400
+msgid "_Selected files"
+msgstr "მონიშნული ფაილები"
+
+#: ../data/glade/file-roller.glade.h:18 ../src/dlg-extract.c:390
+msgid "example: *.txt; *.doc"
+msgstr "მაგალითად:·*.txt;·*.doc"
+
+#: ../data/glade/file-roller-extract.glade.h:1 ../src/window.c:6034
+msgid "Destination folder"
+msgstr "დანიშნულების საქაღალდე"
+
+#: ../data/glade/file-roller-extract.glade.h:2
+msgid "Ex_tract in folder:"
+msgstr "ამოარქივება საქაღალდეში:"
+
+#: ../data/glade/file-roller-extract.glade.h:3 ../src/ui.h:86
+msgid "Extract"
+msgstr "ამოარქივება"
+
+#. Create the application.
+#: ../data/file-roller.desktop.in.in.h:1 ../src/gtk-utils.c:391
+#: ../src/main.c:211 ../src/window.c:865 ../src/window.c:3541
+msgid "Archive Manager"
+msgstr "არქივატორი"
+
+#: ../data/file-roller.desktop.in.in.h:2 ../src/main.c:203
+msgid "Create and modify an archive"
+msgstr ""
+"არქივის შექმნა და "
+"რედაქტირება"
+
+#: ../caja/caja-fileroller.c:261
+msgid "Extract Here"
+msgstr "ამოაარქივე აქ"
+
+#: ../caja/caja-fileroller.c:262
+msgid "Extract the selected archive in the current position"
+msgstr ""
+"მონიშნული არქივის "
+"მიმდინარე საქაღალდეში "
+"ამოარქივება"
+
+#: ../caja/caja-fileroller.c:279
+msgid "Extract To..."
+msgstr "ამოაარქივე..."
+
+#: ../caja/caja-fileroller.c:280
+msgid "Extract the selected archive"
+msgstr ""
+"მონიშნული არქივის "
+"ამოარქივება"
+
+#: ../caja/caja-fileroller.c:299
+msgid "Create Archive..."
+msgstr "არქივის შექმნა..."
+
+#: ../caja/caja-fileroller.c:300
+msgid "Create an archive with the selected objects"
+msgstr ""
+"მონიშნული ობიექტებით ახალი "
+"არქივის შექმნა"
+
+#: ../src/actions.c:161 ../src/actions.c:181 ../src/actions.c:222
+#: ../src/dlg-batch-add.c:130 ../src/dlg-batch-add.c:149
+#: ../src/dlg-batch-add.c:172 ../src/dlg-batch-add.c:223
+#: ../src/dlg-batch-add.c:270 ../src/window.c:4293
+msgid "Could not create the archive"
+msgstr "ვერ ვქმნი საარქივო ფაილს."
+
+#: ../src/actions.c:162 ../src/dlg-batch-add.c:131 ../src/dlg-batch-add.c:271
+msgid "You have to specify an archive name."
+msgstr ""
+"საჭიროა არქივის სახელის "
+"მითითება."
+
+#: ../src/actions.c:182
+msgid "You don't have permission to create an archive in this folder"
+msgstr ""
+"თქვენ არ გაქვთ შესაბამისი "
+"უფლებები არქივის "
+"საქაღალდეში შესაქმნელად."
+
+#: ../src/actions.c:223 ../src/fr-archive.c:741 ../src/window.c:4294
+#: ../src/window.c:4449
+msgid "Archive type not supported."
+msgstr ""
+"მსგავსი ტიპის არქივის "
+"მხარდაჭერა არ გაგვაჩნია."
+
+#: ../src/actions.c:236
+msgid "The archive already exists.  Do you want to overwrite it?"
+msgstr ""
+"მსგავსი სახელის არქივი უკვე "
+"არსებობს. გადავაწერო?"
+
+#: ../src/actions.c:239
+msgid "Overwrite"
+msgstr "გადაწერა"
+
+#: ../src/actions.c:256
+msgid "Could not delete the old archive."
+msgstr ""
+"ვერ ვახერხებ ძველი არქივის "
+"წაშლას."
+
+#: ../src/actions.c:348
+msgid "New"
+msgstr "ახალი"
+
+#: ../src/actions.c:386 ../src/actions.c:497 ../src/actions.c:594
+#: ../src/window.c:3496
+msgid "All archives"
+msgstr "ყველა არქივი"
+
+#: ../src/actions.c:393 ../src/actions.c:504 ../src/actions.c:601
+msgid "All files"
+msgstr "ყველა ფაილი"
+
+#: ../src/actions.c:403 ../src/actions.c:609
+msgid "Archive type:"
+msgstr "არქივის ტიპი:"
+
+#: ../src/actions.c:407 ../src/actions.c:613
+msgid "Automatic"
+msgstr "ავტომატური"
+
+#: ../src/actions.c:485 ../src/window.c:3942
+msgid "Open"
+msgstr "გახსენი"
+
+#: ../src/actions.c:578
+msgid "Save"
+msgstr "შენახვა"
+
+#: ../src/actions.c:847 ../src/window.c:5431
+msgid "Last Output"
+msgstr "ბოლო გამონატანი"
+
+#: ../src/actions.c:867 ../src/gtk-utils.c:790
+msgid "Could not display help"
+msgstr ""
+"ვერ ვახერხებ დამხმარე "
+"სახელმძღვანელოს გამოტანას"
+
+#: ../src/actions.c:923
+msgid "An archive manager for MATE."
+msgstr "MATE არქივატორი."
+
+#: ../src/actions.c:926
+msgid "translator-credits"
+msgstr "Vladimer Sichinava ვლადიმერ სიჭინავა <vlsichinava@gmail.com>"
+
+#: ../src/dlg-add-files.c:91 ../src/dlg-add-files.c:153
+#: ../src/dlg-add-folder.c:123 ../src/dlg-add-folder.c:252
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr ""
+"თქვენ არ გაგაჩნიათ  "
+"შესაბამისი უფლებები "
+"საქაღალდე \"%s\"-დან ფაილების "
+"წასაკითხად."
+
+#: ../src/dlg-add-files.c:97 ../src/dlg-add-files.c:159
+#: ../src/dlg-add-folder.c:129 ../src/dlg-add-folder.c:258
+#: ../src/window.c:2273 ../src/window.c:2311
+msgid "Could not add the files to the archive"
+msgstr ""
+"ვერ ვახერხებ ფაილების "
+"არქივში დამატებას"
+
+#: ../src/dlg-add-files.c:185
+msgid "Add Files"
+msgstr "ფაილების დამატება"
+
+#: ../src/dlg-add-files.c:196 ../src/dlg-add-folder.c:328
+msgid "_Add only if newer"
+msgstr "მხოლოდ ახლის დამატება"
+
+#: ../src/dlg-add-folder.c:317
+msgid "Add a Folder"
+msgstr "საქაღალდის დამატება"
+
+#: ../src/dlg-add-folder.c:329
+msgid "_Include subfolders"
+msgstr "ქვე საქაღალდეების ჩამატება"
+
+#: ../src/dlg-add-folder.c:330
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr ""
+"სიმბოლური მისამართის მქონე "
+"საქაღალდეების გამოტოვება"
+
+#: ../src/dlg-add-folder.c:333 ../src/dlg-add-folder.c:338
+msgid "example: *.o; *.bak"
+msgstr "მაგალითად: *.o; *.bak"
+
+#: ../src/dlg-add-folder.c:334
+msgid "_Include files:"
+msgstr "ფაილების ჩამატება:"
+
+#: ../src/dlg-add-folder.c:339
+msgid "E_xclude files:"
+msgstr "გამოყავი ფაილები:"
+
+#: ../src/dlg-add-folder.c:342
+msgid "_Load Options"
+msgstr "ოფციების ჩატვირთვა"
+
+#: ../src/dlg-add-folder.c:343
+msgid "Sa_ve Options"
+msgstr "ოფციების სენახვა"
+
+#: ../src/dlg-add-folder.c:790
+msgid "Save Options"
+msgstr "ოფციების შენახვა"
+
+#: ../src/dlg-add-folder.c:791
+msgid "Options Name:"
+msgstr "ოფციების სახელი:"
+
+#: ../src/dlg-batch-add.c:144 ../src/window.c:5714
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"სახელი \"%s\" დაუშვებელია, მასში "
+"მიუღებელი სიმბოლოების "
+"არსებობის გამო: %s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:144 ../src/window.c:5706 ../src/window.c:5710
+#: ../src/window.c:5714 ../src/window.c:5771 ../src/window.c:5773
+msgid "Please use a different name."
+msgstr "გამოიყენეთ სხვა სახელი"
+
+#: ../src/dlg-batch-add.c:173
+msgid ""
+"You don't have the right permissions to create an archive in the destination "
+"folder."
+msgstr ""
+"თქვენ არ გაგაჩნიათ "
+"შესაბამისი უფლებები, "
+"მითითებულ საქაღალდეში "
+"არქივის შესაქმნელად."
+
+#: ../src/dlg-batch-add.c:192 ../src/dlg-extract.c:126 ../src/window.c:4820
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"საქაღალდე  \"%s\" არ არსებობს.\n"
+"\n"
+"გსურთ  მისი შექმნა?"
+
+#: ../src/dlg-batch-add.c:201 ../src/dlg-extract.c:135 ../src/window.c:4829
+msgid "Create _Folder"
+msgstr "საქაღალდის შექმნა"
+
+#: ../src/dlg-batch-add.c:219 ../src/dlg-extract.c:154 ../src/window.c:4848
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "ვერ შევქმენი საქაღალდე  %s."
+
+#: ../src/dlg-batch-add.c:243
+msgid "Archive not created"
+msgstr "არქივი არ შეიქმნა"
+
+#: ../src/dlg-batch-add.c:296
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr ""
+"ამ სახელის არქივი უკვე "
+"არსებობს. გადავაწერო?"
+
+#: ../src/dlg-batch-add.c:299
+msgid "_Overwrite"
+msgstr "გადაწერა"
+
+#: ../src/dlg-extract.c:158 ../src/dlg-extract.c:178 ../src/dlg-extract.c:206
+#: ../src/window.c:4852 ../src/window.c:4872
+msgid "Extraction not performed"
+msgstr ""
+"ამოარქივების პროცესი არ "
+"შედგა"
+
+#: ../src/dlg-extract.c:201
+#, c-format
+msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr ""
+"თქვენ არ გაგაჩნიათ "
+"შესაბამისი უფლებები "
+"არქივის  \"%s\" საქაღალდეში "
+"ამოსაარქივებლად."
+
+#: ../src/dlg-extract.c:362
+msgid "Files"
+msgstr "ფაილები"
+
+#: ../src/dlg-extract.c:411
+msgid "Actions"
+msgstr "მოქმედებები"
+
+#: ../src/dlg-extract.c:427
+msgid "R_e-create folders"
+msgstr "საქაღალდეების აღდგენა"
+
+#: ../src/dlg-extract.c:431
+msgid "Over_write existing files"
+msgstr "არსებულ ფაილებზე გადაწერა"
+
+#: ../src/dlg-extract.c:435
+msgid "Do not e_xtract older files"
+msgstr ""
+"არ ამოაარქივო მოძველებული "
+"ფაილები"
+
+#: ../src/dlg-extract.c:450
+msgid "_Open destination folder after extraction"
+msgstr ""
+"ამოარქივების შემდეგ "
+"საქაღალდის გახსნა"
+
+#: ../src/dlg-prop.c:114
+msgid "Path:"
+msgstr "გეზი:"
+
+#: ../src/dlg-prop.c:127
+msgid "Name:"
+msgstr "სახელი:"
+
+#: ../src/dlg-prop.c:133
+#, c-format
+msgid "%s Properties"
+msgstr "%s პარამეტრები"
+
+#: ../src/dlg-prop.c:142
+msgid "Modified on:"
+msgstr "მოდიფიცირებულია:"
+
+#: ../src/dlg-prop.c:148 ../src/window.c:429
+msgid "%d %B %Y, %H:%M"
+msgstr "%d %B %Y, %H:%M"
+
+#: ../src/dlg-prop.c:156
+msgid "Archive size:"
+msgstr "არქივის ზომა:"
+
+#: ../src/dlg-prop.c:167
+msgid "Content size:"
+msgstr "შიგთავსის ზომა:"
+
+#: ../src/dlg-prop.c:186
+msgid "Compression ratio:"
+msgstr "კომპრესიის ხაისხი:"
+
+#: ../src/dlg-prop.c:201
+msgid "Number of files:"
+msgstr "ფაილების რაოდენობა:"
+
+#: ../src/file-data.c:29
+msgid "Unknown type"
+msgstr "უცნობი ტიპი"
+
+#: ../src/file-data.c:30
+msgid "Symbolic link"
+msgstr "სიმბოლური ბმული"
+
+#: ../src/fr-archive.c:715
+msgid "The file does not exist."
+msgstr "ასეთი ფაილი არ არსებობს."
+
+#: ../src/fr-command-tar.c:289
+msgid "Adding file: "
+msgstr "ფაილის დამატება:"
+
+#: ../src/fr-command-tar.c:336
+msgid "Removing file: "
+msgstr "ფაილის ამოშლა:"
+
+#: ../src/fr-command-tar.c:345 ../src/window.c:1237
+msgid "Deleting files from archive"
+msgstr ""
+"მიმდინარეობს არქივიდან "
+"ფაილების ამოშლა"
+
+#: ../src/fr-command-tar.c:378
+msgid "Extracting file: "
+msgstr "ფაილის ამოარქივება: "
+
+#: ../src/fr-command-tar.c:424
+msgid "Recompressing archive"
+msgstr "გადაარქივება"
+
+#: ../src/fr-command-tar.c:558
+msgid "Decompressing archive"
+msgstr "არქივის დეკომპრესია"
+
+#: ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "დამატება"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "ამოარქივება"
+
+#: ../src/fr-stock.c:46 ../src/ui.h:36 ../src/ui.h:150 ../src/ui.h:154
+msgid "_View"
+msgstr "_ხედი"
+
+#. Button
+#: ../src/gtk-utils.c:422
+msgid "Command _Line Output"
+msgstr ""
+"ბრძანებათა სტრიქონის "
+"გამოტანა"
+
+#: ../src/main.c:69
+msgid "Ar (.ar)"
+msgstr "Ar·(.ar)"
+
+#: ../src/main.c:71
+msgid "Arj (.arj)"
+msgstr "Arj·(.arj)"
+
+#: ../src/main.c:76
+msgid "Ear (.ear)"
+msgstr "Ear·(.ear)"
+
+#: ../src/main.c:78
+msgid "Jar (.jar)"
+msgstr "Jar·(.jar)"
+
+#: ../src/main.c:79
+msgid "Lha (.lzh)"
+msgstr "Lha·(.lzh)"
+
+#: ../src/main.c:81
+msgid "Rar (.rar)"
+msgstr "Rar·(.rar)"
+
+#: ../src/main.c:83
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar შეუკუმშავი (.tar)"
+
+#: ../src/main.c:84
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar შეკუმშულია bzip-ით·(.tar.bz)"
+
+#: ../src/main.c:85
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar შეკუმშულია·bzip2-ით·(.tar.bz2)"
+
+#: ../src/main.c:86
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar შეკუმშულია·gzip-ით·(.tar.gz)"
+
+#: ../src/main.c:87
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar შეკუმშულია·lzop-ით·(.tar.lzo)"
+
+#: ../src/main.c:88
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar შეკუმშულია (.tar.Z)-ით"
+
+#: ../src/main.c:90
+msgid "War (.war)"
+msgstr "War·(.war)"
+
+#: ../src/main.c:91
+msgid "Zip (.zip)"
+msgstr "Zip·(.zip)"
+
+#: ../src/main.c:92
+msgid "Zoo (.zoo)"
+msgstr "Zoo·(.zoo)"
+
+#: ../src/main.c:93
+msgid "7-Zip (.7z)"
+msgstr "7-Zip·(.7z)"
+
+#: ../src/main.c:138
+msgid "Add files to the specified archive and quit the program"
+msgstr ""
+"ფაილების არქივში ჩამატება "
+"და პროგრამიდან გასვლა"
+
+#: ../src/main.c:139
+msgid "ARCHIVE"
+msgstr "არქივი"
+
+#: ../src/main.c:142
+msgid "Add files asking the name of the archive and quit the program"
+msgstr ""
+"ფაილების დაარქივება "
+"არქივის სახელის მითითებით "
+"და პროგრამიდან გასვლა"
+
+#: ../src/main.c:146
+msgid "Extract archives to the specified folder and quit the program"
+msgstr ""
+"არქივის ამოარქივება "
+"მითითებულ საქაღალდეში და "
+"პროგრამიდან გასვლა."
+
+#: ../src/main.c:147 ../src/main.c:159
+msgid "FOLDER"
+msgstr "საქაღალდე"
+
+#: ../src/main.c:150
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr ""
+"არქივის ამოარქივება სხვა "
+"სახელის საქაღალდის შექმნით  "
+"და პროგრამიდან გასვლა"
+
+#: ../src/main.c:154
+msgid ""
+"Extract archives using the archive name as destination folder and quit the "
+"program"
+msgstr ""
+"არქივის ამოარქივება მის "
+"სეხნია საქაღალდეში და "
+"პროგრამიდან გასვლა."
+
+#: ../src/main.c:158
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr ""
+"ბრძანება '--დამატება' და  "
+"'--ამოარქივება'-ის "
+"სტანდარტული საქაღალდეები"
+
+#: ../src/main.c:162
+msgid "Create destination folder without asking confirmation"
+msgstr ""
+"საქაღალდის, დადასტურების "
+"გარეშე შექმნა"
+
+#: ../src/main.c:218
+msgid "File Roller"
+msgstr "ფაილთა არქივიატორი"
+
+#: ../src/ui.h:34
+msgid "_Archive"
+msgstr "არქივი"
+
+#: ../src/ui.h:35
+msgid "_Edit"
+msgstr "დამუშავება"
+
+#: ../src/ui.h:37
+msgid "_Help"
+msgstr "_დახმარება"
+
+#: ../src/ui.h:38
+msgid "_Arrange Files"
+msgstr "ფაილების მოწესრიგება"
+
+#: ../src/ui.h:39
+msgid "Open R_ecent"
+msgstr "გახსენი წინა"
+
+#: ../src/ui.h:43
+msgid "Information about the program"
+msgstr ""
+"ინფორმაცია პროგრამის "
+"შესახებ"
+
+#: ../src/ui.h:46
+msgid "_Add Files..."
+msgstr "ფაილების დამატება..."
+
+#: ../src/ui.h:47 ../src/ui.h:51
+msgid "Add files to the archive"
+msgstr "ფაილების დაარქივება"
+
+#: ../src/ui.h:50
+msgid "Add"
+msgstr "დამატება"
+
+#: ../src/ui.h:54
+msgid "Add a _Folder..."
+msgstr "საქაღალდის დამატება..."
+
+#: ../src/ui.h:55
+msgid "Add a folder to the archive"
+msgstr "საქაღალდის დაარქივება"
+
+#: ../src/ui.h:59
+msgid "Close the current archive"
+msgstr "მიმდინარე არქივის დახურვა"
+
+#: ../src/ui.h:63
+msgid "Display the File Roller Manual"
+msgstr ""
+"აჩვენე დამხმარე "
+"სახელმძღვანელო"
+
+#: ../src/ui.h:67
+msgid "Copy the selection"
+msgstr "მონიშნულის კოპირება"
+
+#: ../src/ui.h:71
+msgid "Cut the selection"
+msgstr "მონიშნულის ამოჭრა"
+
+#: ../src/ui.h:75
+msgid "Delete the selection from the archive"
+msgstr "მონიშნულის არქივიდან წაშლა"
+
+#: ../src/ui.h:78
+msgid "Dese_lect All"
+msgstr "ყველა მონიშვნის მოხსნა"
+
+#: ../src/ui.h:79
+msgid "Deselect all files"
+msgstr ""
+"მონიშვნის მოხსნა ყველა "
+"ფაილისთვის"
+
+#: ../src/ui.h:82
+msgid "_Extract..."
+msgstr "ამოარქივება..."
+
+#: ../src/ui.h:83 ../src/ui.h:87
+msgid "Extract files from the archive"
+msgstr ""
+"ფაილების არქივიდან "
+"ამოარქივება"
+
+#: ../src/ui.h:90
+msgid "_Last Output"
+msgstr "ბოლო გამონატანი"
+
+#: ../src/ui.h:91
+msgid "View the output produced by the last executed command"
+msgstr ""
+"აჩვენე უკანასკნელი "
+"შესრულებული მოქმედების "
+"ამსახველი გამონატანი"
+
+#: ../src/ui.h:95
+msgid "Create a new archive"
+msgstr "ახალი არქივის შექმნა"
+
+#: ../src/ui.h:99 ../src/ui.h:103 ../src/window.c:3939 ../src/window.c:3942
+msgid "Open archive"
+msgstr "არქივის გახსნა"
+
+#: ../src/ui.h:106
+msgid "Op_en With..."
+msgstr "გახსენი პროგრამით..."
+
+#: ../src/ui.h:107
+msgid "Open selected files with an application"
+msgstr ""
+"მონიშნული ფაილის მისთვის "
+"განკუთვნილ პროგრამაში "
+"გახსნა"
+
+#: ../src/ui.h:110
+msgid "Pass_word..."
+msgstr "პაროლი..."
+
+#: ../src/ui.h:111
+msgid "Specify a password for this archive"
+msgstr ""
+"მიუთითეთ პაროლი ამ "
+"არქივისთვის"
+
+#: ../src/ui.h:115
+msgid "Paste the clipboard"
+msgstr "ბუფერის ჩასმა"
+
+#: ../src/ui.h:119
+msgid "Show archive properties"
+msgstr ""
+"აჩვენე არქივის "
+"მახასიათებლები"
+
+#: ../src/ui.h:123
+msgid "Quit the application"
+msgstr "პროგრამიდან გამოსვლა"
+
+#: ../src/ui.h:127
+msgid "Reload current archive"
+msgstr "გადაიკითხე მიმდინარე არქივი"
+
+#: ../src/ui.h:130
+msgid "_Rename..."
+msgstr "სახელის გადარქმევა..."
+
+#: ../src/ui.h:131
+msgid "Rename the selection"
+msgstr ""
+"მონიშნულზე სახელის "
+"გადარქმევა"
+
+#: ../src/ui.h:135
+msgid "Save the current archive with a different name"
+msgstr ""
+"მიმდინარე არქივის სხვა "
+"სახელით შენახვა"
+
+#: ../src/ui.h:138
+msgid "Select _All"
+msgstr "მონიშნე ყველა"
+
+#: ../src/ui.h:139
+msgid "Select all files"
+msgstr "ყველა ფაილის მონიშვნა"
+
+#: ../src/ui.h:143
+msgid "Stop current operation"
+msgstr ""
+"მიმდინარე მოქმედების "
+"შეჩერება"
+
+#: ../src/ui.h:146
+msgid "_Test Integrity"
+msgstr "შეამოწმე მთლიანობა"
+
+#: ../src/ui.h:147
+msgid "Test whether the archive contains errors"
+msgstr ""
+"შეამოწმე არის თუ არა "
+"შეცდომები არქივში."
+
+#: ../src/ui.h:151 ../src/ui.h:155
+msgid "View the selected file"
+msgstr "აჩვენე მონიშნული ფაილი"
+
+#: ../src/ui.h:163
+msgid "_Toolbar"
+msgstr "ხელსაწყოთა ველი"
+
+#: ../src/ui.h:164
+msgid "View the main toolbar"
+msgstr "აჩვენე ხელსაწყოთა ველი"
+
+#: ../src/ui.h:168
+msgid "Stat_usbar"
+msgstr "სტატუსის ველი"
+
+#: ../src/ui.h:169
+msgid "View the statusbar"
+msgstr "აჩვენე სტატუსის ველი"
+
+#: ../src/ui.h:173
+msgid "_Reversed Order"
+msgstr "გადაბრუნებული რიგი"
+
+#: ../src/ui.h:174
+msgid "Reverse the list order"
+msgstr ""
+"სორტირების რიგის "
+"გადაბრუნება"
+
+#: ../src/ui.h:183
+msgid "View All _Files"
+msgstr "აჩვენე ყველა ფაილი"
+
+#: ../src/ui.h:186
+msgid "View as a F_older"
+msgstr "აჩვენე მიმდინარე საქაღალდე"
+
+#: ../src/ui.h:194
+msgid "by _Name"
+msgstr "სახელის მიხედვით"
+
+#: ../src/ui.h:195
+msgid "Sort file list by name"
+msgstr ""
+"ფაილთა სიის სახელების "
+"მიხედვით სორტირება"
+
+#: ../src/ui.h:197
+msgid "by _Size"
+msgstr "ზომის მიხედვით"
+
+#: ../src/ui.h:198
+msgid "Sort file list by file size"
+msgstr ""
+"ფაილთა სიის ზომების "
+"მიხედვით სორტირება"
+
+#: ../src/ui.h:200
+msgid "by T_ype"
+msgstr "ტიპის მიხედვით"
+
+#: ../src/ui.h:201
+msgid "Sort file list by type"
+msgstr ""
+"ფაილთა სიის ტიპების "
+"მიხედვით სორტირება"
+
+#: ../src/ui.h:203
+msgid "by _Date modified"
+msgstr "შეცვლის თარიღის მიხედვით"
+
+#: ../src/ui.h:204
+msgid "Sort file list by modification time"
+msgstr ""
+"ფაილთა სიის შეცვლის დროის "
+"მიხედვით სორტირება "
+
+#: ../src/ui.h:206
+msgid "by _Location"
+msgstr "მდებარეობის მიხედვით"
+
+#: ../src/ui.h:207
+msgid "Sort file list by location"
+msgstr ""
+"ფაილთა სიის "
+"ადგილმდებარეობის მიხედვით "
+"სორტირება"
+
+#: ../src/window.c:712
+msgid "Folder"
+msgstr "საქაღალდე"
+
+#: ../src/window.c:873
+msgid "[read only]"
+msgstr "[მხოლოდ წაკითხვადი]"
+
+#: ../src/window.c:967
+#, c-format
+msgid "%d file (%s)"
+msgid_plural "%d files (%s)"
+msgstr[0] "%d·ფაილი·(%s)"
+msgstr[1] "%d ფაილები (%s)"
+
+#: ../src/window.c:972
+#, c-format
+msgid "%d file selected (%s)"
+msgid_plural "%d files selected (%s)"
+msgstr[0] "%d·მონიშნული ფაილი·(%s)"
+msgstr[1] "არჩეულია %d ფაილი (%s)"
+
+#: ../src/window.c:1234
+msgid "Reading archive"
+msgstr "მიმდინარეობს არქივის კითხვა"
+
+#: ../src/window.c:1240
+msgid "Adding files to archive"
+msgstr ""
+"მიმდინარეობს ფაილების "
+"დაარქივება"
+
+#: ../src/window.c:1243
+msgid "Extracting files from archive"
+msgstr ""
+"მიმდინარეობს ფაილების "
+"ამოარქივება"
+
+#: ../src/window.c:1246
+msgid "Testing archive"
+msgstr "არქივის ტესტირება"
+
+#: ../src/window.c:1249
+msgid "Getting the file list"
+msgstr "ფაილების სია"
+
+#: ../src/window.c:1252
+msgid "Saving archive"
+msgstr "ვიმახსოვრებ არქივს"
+
+#: ../src/window.c:1430
+msgid "Archive:"
+msgstr "არქივი:"
+
+#: ../src/window.c:1543
+msgid "wait please..."
+msgstr "გთხოვთ მოიცადოთ..."
+
+#: ../src/window.c:1618
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr ""
+"ვერ ვახერხებ საქაღალდე  "
+"\"%s\"-ის გამოტანას"
+
+#: ../src/window.c:1683
+msgid ""
+"This archive is password protected.\n"
+"Please specify a password with the command: Edit->Password"
+msgstr ""
+"ეს არქივი პაროლითაა დაცული.\n"
+"მიუთითეთ პაროლი მენიუ "
+"დამუშავება->პაროლი...-ს "
+"გამოყენებით"
+
+#: ../src/window.c:1685
+msgid ""
+"The specified password is not valid, please specify a new password with the "
+"command: Edit->Password"
+msgstr ""
+"პაროლი არასწორადაა "
+"შეყვანილი. მიუთითეთ ახალი "
+"პაროლი მენიუ დამუშავება-> "
+"პაროლი...-ს გამოყენებით."
+
+#: ../src/window.c:1690 ../src/window.c:2497 ../src/window.c:6119
+msgid "Could not perform the operation"
+msgstr "ვერ ვასრულებ ოპერაციას"
+
+#: ../src/window.c:1718
+msgid "An error occurred while extracting files."
+msgstr ""
+"ფაილების ამოარქივების დროს "
+"დაშვებულია შეცდომა."
+
+#: ../src/window.c:1722
+msgid "An error occurred while loading the archive."
+msgstr ""
+"არქივის კითხვის დროს "
+"დაშვებულია შეცდომა."
+
+#: ../src/window.c:1726
+msgid "An error occurred while deleting files from the archive."
+msgstr ""
+"ფაილების არქივიდან წაშლის "
+"დროს დაშვებულია შეცდომა."
+
+#: ../src/window.c:1730
+msgid "An error occurred while adding files to the archive."
+msgstr ""
+"ფაილების არქივში ჩამატების "
+"დროს დაშვებულია შეცდომა."
+
+#: ../src/window.c:1734
+msgid "An error occurred while testing archive."
+msgstr ""
+"არქივის ტესტირების დროს "
+"დაშვებულია შეცდომა."
+
+#: ../src/window.c:1747
+msgid "Command not found."
+msgstr "ასეთი ბრძანება არ არსებობს."
+
+#: ../src/window.c:1750
+msgid "Command exited abnormally."
+msgstr ""
+"პროგრამის მუშაობა "
+"არაკორექტულად დასრულდა."
+
+#: ../src/window.c:1885
+msgid "Test Result"
+msgstr "ტესტირების შედეგი"
+
+#: ../src/window.c:2274
+msgid "You don't have the right permissions."
+msgstr ""
+"თქვენ არ გაქვთ საკმარისი "
+"უფლებები."
+
+#: ../src/window.c:2312
+msgid "You can't add an archive to itself."
+msgstr ""
+"არქივის თავისივე თავში "
+"ჩაწერა შეუძლებელია."
+
+#: ../src/window.c:2531
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr ""
+"ჩავამატო ეს ფაილები "
+"მიმდინარე არქივში თუ "
+"გავხსნა ახალი?"
+
+#: ../src/window.c:2568
+msgid "Do you want to create a new archive with these files?"
+msgstr ""
+"შევქმნა ახალი არქივის ფაილი "
+"და დავამატო მასში ეს "
+"მონიშნული ფაილები? "
+
+#: ../src/window.c:2571
+msgid "Create _Archive"
+msgstr "არქივის შექმნა"
+
+#: ../src/window.c:2961
+msgid "Size"
+msgstr "ზომა"
+
+#: ../src/window.c:2962
+msgid "Type"
+msgstr "ტიპი"
+
+#: ../src/window.c:2963
+msgid "Date Modified"
+msgstr "შეცვლის თარიღი"
+
+#: ../src/window.c:2972
+msgid "Name"
+msgstr "სახელი"
+
+#: ../src/window.c:3801
+msgid "Go to the previous visited location"
+msgstr ""
+"გადადი წინა მონახულებულ "
+"პოზიციაზე"
+
+#: ../src/window.c:3809
+msgid "Go to the next visited location"
+msgstr ""
+"გადადი შემდეგ მონახულებულ "
+"პოზიციაზე"
+
+#: ../src/window.c:3817
+msgid "Go up one level"
+msgstr ""
+"გადასვლა ერთი საფეხურით "
+"ზემოთ"
+
+#: ../src/window.c:3825
+msgid "Go to the home location"
+msgstr ""
+"საწყისი კატალოგისკენ "
+"გადასვლა"
+
+#: ../src/window.c:3940
+msgid "Open a recently used archive"
+msgstr ""
+"გახსენი ცოტახნის წინ "
+"გამოყენებული არქივი"
+
+#: ../src/window.c:4384
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "ვერ ვხსნი \"%s\"-ს"
+
+#: ../src/window.c:4442
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr ""
+"ვერ ვახერხებ არქივ \"%s\"-ის "
+"შენახვას"
+
+#: ../src/window.c:5706
+msgid "The new name is void."
+msgstr ""
+"ახალი სახელის ადგილი "
+"ცარიელია."
+
+#: ../src/window.c:5710
+msgid "The new name is equal to the old one."
+msgstr ""
+"ახალი სახელი ისეთივეა "
+"როგორც ძველი."
+
+#: ../src/window.c:5771
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"საქაღალდე სახელად \"%s\" უკვე "
+"არსებობს.\n"
+"\n"
+"%s"
+
+#: ../src/window.c:5773
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"ფაილი სახელით \"%s\" უკვე "
+"არსებობს.\n"
+"\n"
+"%s"
+
+#: ../src/window.c:5811
+msgid "Rename"
+msgstr "სახელის გადარქმევა"
+
+#: ../src/window.c:5812
+msgid "New folder name"
+msgstr "ახალი საქაღალდის სახელი"
+
+#: ../src/window.c:5812
+msgid "New file name"
+msgstr "ახალი ფაილ სახელი"
+
+#: ../src/window.c:5816
+msgid "_Rename"
+msgstr "სახელის გადარქმევა"
+
+#: ../src/window.c:5832 ../src/window.c:5861
+msgid "Could not rename the folder"
+msgstr ""
+"ვერ ვახერხებ საქაღალდეზე "
+"სახელის გადარქმევას."
+
+#: ../src/window.c:5832 ../src/window.c:5861
+msgid "Could not rename the file"
+msgstr ""
+"ვერ ვახერხებ ფაილზე სახელის "
+"გადარქმევას"
+
+#: ../src/window.c:6033
+msgid "Paste Selection"
+msgstr "მონიშნულის ჩასმა"
+
+#: ../src/window.c:6038
+msgid "_Paste"
+msgstr "ჩასმა"
+
+#: ../src/window.c:6437
+msgid "Add files to an archive"
+msgstr "ფაილების დაარქივება"
+
+#: ../src/window.c:6483
+msgid "Extract archive"
+msgstr "ამოაარქივე არქივი"
+

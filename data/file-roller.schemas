@@ -1,0 +1,426 @@
+<mateconfschemafile>
+    <schemalist>    
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/sort_method</key>
+	<applyto>/apps/file-roller/listing/sort_method</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default>name</default>
+        <locale name="C">
+          <short>How to sort files</short>
+          <long>What criteria must be used to arrange files. Possible values:
+	    name, size, type, time, path.
+	  </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/sort_type</key>
+	<applyto>/apps/file-roller/listing/sort_type</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default>ascending</default>
+        <locale name="C">
+          <short>Sort type</short>
+          <long>Whether to sort in ascending or descending direction. Possible
+	    values: ascending, descending.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/list_mode</key>
+	<applyto>/apps/file-roller/listing/list_mode</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default>as_folder</default>
+        <locale name="C">
+          <short>List Mode</short>
+          <long>Whether to view all files in the archive (all_files), or
+	    view the archive as a folder (as_folder).</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/show_type</key>
+	<applyto>/apps/file-roller/listing/show_type</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Display type</short>
+          <long>Display the Type column in the main window.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/show_size</key>
+	<applyto>/apps/file-roller/listing/show_size</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Display size</short>
+          <long>Display the Size column in the main window.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/show_time</key>
+	<applyto>/apps/file-roller/listing/show_time</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Display time</short>
+          <long>Display the Time column in the main window.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/show_path</key>
+	<applyto>/apps/file-roller/listing/show_path</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Display path</short>
+          <long>Display the Path column in the main window.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/use_mime_icons</key>
+	<applyto>/apps/file-roller/listing/use_mime_icons</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Use mime icons</short>
+          <long>if TRUE will display icons depending on the file type (slower),
+	    otherwise will use always the same icon for all files (faster).
+	  </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/listing/name_column_width</key>
+	<applyto>/apps/file-roller/listing/name_column_width</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>250</default>
+        <locale name="C">
+          <short>Name column width</short>
+          <long>The default width ofthe name column the file list.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/history_len</key>
+	<applyto>/apps/file-roller/ui/history_len</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>5</default>
+        <locale name="C">
+          <short>Max history length</short>
+          <long>Max number of items in the Open Recents menu.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/window_width</key>
+        <applyto>/apps/file-roller/ui/window_width</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>600</default>
+        <locale name="C">
+          <short></short>
+          <long>
+          </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/window_height</key>
+        <applyto>/apps/file-roller/ui/window_height</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>480</default>
+        <locale name="C">
+          <short></short>
+          <long>
+          </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/sidebar_width</key>
+        <applyto>/apps/file-roller/ui/sidebar_width</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>200</default>
+        <locale name="C">
+          <short></short>
+          <long>
+          </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/view_toolbar</key>
+	<applyto>/apps/file-roller/ui/view_toolbar</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>View toolbar</short>
+          <long>Whether to display the toolbar.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/view_statusbar</key>
+	<applyto>/apps/file-roller/ui/view_statusbar</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>View statusbar</short>
+          <long>Whether to display the statusbar.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/ui/view_folders</key>
+	<applyto>/apps/file-roller/ui/view_folders</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>View the folders pane</short>
+          <long>Whether to display the folders pane.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/general/editors</key>
+	<applyto>/apps/file-roller/general/editors</applyto>
+        <owner>file-roller</owner>
+        <type>list</type>
+	<list_type>string</list_type>
+        <default>[]</default>
+        <locale name="C">
+          <short>Editors</short>
+          <long>List of applications entered in the Open file dialog and not 
+	    associated with the file type.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/general/compression_level</key>	
+	<applyto>/apps/file-roller/general/compression_level</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default>normal</default>
+        <locale name="C">
+          <short>Compression level</short>
+          <long>Compression level used when adding files to an archive. 
+	    Possible values : very_fast, fast, normal, maximum.</long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/general/encrypt_header</key>	
+	<applyto>/apps/file-roller/general/encrypt_header</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Encrypt the archive header</short>
+          <long>Whether to encrypt the archive header.  If the header is encrypted the password will be required to list the archive content as well.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/general/migrate_directories</key>
+        <applyto>/apps/file-roller/general/migrate_directories</applyto>
+        <owner>gthumb</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short></short>
+          <long>
+          </long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/overwrite</key>
+	<applyto>/apps/file-roller/dialogs/extract/overwrite</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Overwrite existing files</short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/skip_newer</key>
+	<applyto>/apps/file-roller/dialogs/extract/skip_newer</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Do not overwrite newer files</short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/recreate_folders</key>
+	<applyto>/apps/file-roller/dialogs/extract/recreate_folders</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Recreate the folders stored in the archive</short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/add/current_folder</key>
+	<applyto>/apps/file-roller/dialogs/add/current_folder</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/add/filename</key>
+	<applyto>/apps/file-roller/dialogs/add/filename</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/add/include_files</key>
+	<applyto>/apps/file-roller/dialogs/add/include_files</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/add/exclude_files</key>
+	<applyto>/apps/file-roller/dialogs/add/exclude_files</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/add/exclude_folders</key>
+	<applyto>/apps/file-roller/dialogs/add/exclude_folders</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default></default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/update</key>
+	<applyto>/apps/file-roller/dialogs/extract/update</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/recursive</key>
+	<applyto>/apps/file-roller/dialogs/extract/recursive</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/extract/no_symlinks</key>
+	<applyto>/apps/file-roller/dialogs/extract/no_symlinks</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/batch-add/default_extension</key>
+	<applyto>/apps/file-roller/dialogs/batch-add/default_extension</applyto>
+        <owner>file-roller</owner>
+        <type>string</type>
+        <default>.tar.gz</default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+      
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/batch-add/other_options</key>
+	<applyto>/apps/file-roller/dialogs/batch-add/other_options</applyto>
+        <owner>file-roller</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short></short>
+          <long></long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/file-roller/dialogs/batch-add/volume_size</key>
+	<applyto>/apps/file-roller/dialogs/batch-add/volume_size</applyto>
+        <owner>file-roller</owner>
+        <type>int</type>
+        <default>0</default>
+        <locale name="C">
+          <short>Default volume size</short>
+          <long>The default size for volumes.</long>
+        </locale>
+      </schema>
+
+  </schemalist>
+</mateconfschemafile>

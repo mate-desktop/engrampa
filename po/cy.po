@@ -1,0 +1,1085 @@
+# file-roller yn Gymraeg.
+# Copyright (C) 2003 Chris Jackson.
+# This file is distributed under the same license as the file-roller package.
+# Chris Jackson <chriscf@gmail.com>, 2003, 2005.
+# Dafydd Harries <daf@muse.19inch.net>, 2003.
+#
+# Is msgstr "Gwirhtrediadau" a typo? -- Telsa
+#
+# I assumed it was. -- Daf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-03-02 17:40+0000\n"
+"PO-Revision-Date: 2006-03-02 12:13-0000\n"
+"Last-Translator: Rhys Jones <rhys@sucs.org>\n"
+"Language-Team: Cymraeg <mate-cy@pengwyn.linux.org.uk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../data/glade/file-roller.glade.h:1
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+"<i><b>Sylwer</b>: defnyddir y cyfrinair i amgryptio ffeiliau a ychwanegir "
+"i'r archif cyfredol, ac i ddadgryptio ffeiliau a echdynnir o'r archif "
+"cyfredol. Pan gaiff yr archif ei gau, dilëir y cyfrinair.</i>"
+
+#: ../data/glade/file-roller.glade.h:2
+msgid "A_vailable application:"
+msgstr "Rhaglen ar _gael:"
+
+#: ../data/glade/file-roller.glade.h:3
+msgid "C_reate"
+msgstr "_Creu"
+
+#: ../data/glade/file-roller.glade.h:4
+msgid "Create Archive"
+msgstr "Creu Archif"
+
+#: ../data/glade/file-roller.glade.h:5
+msgid "Delete"
+msgstr "Dileu"
+
+#: ../data/glade/file-roller.glade.h:6
+msgid "Load Options"
+msgstr "Opsiynau Llwytho"
+
+#: ../data/glade/file-roller.glade.h:7 ../src/window.c:2910
+msgid "Location"
+msgstr "Lleoliad"
+
+#. current location
+#: ../data/glade/file-roller.glade.h:8 ../src/window.c:3768
+msgid "Location:"
+msgstr "Lleoliad:"
+
+#: ../data/glade/file-roller.glade.h:9
+msgid "Open Files"
+msgstr "Ffeiliau Agor"
+
+#: ../data/glade/file-roller.glade.h:10
+msgid "Password"
+msgstr "Cyfrinair"
+
+#: ../data/glade/file-roller.glade.h:11
+msgid "R_ecent applications:"
+msgstr "Rhaglenni _diweddar"
+
+#: ../data/glade/file-roller.glade.h:12 ../src/dlg-extract.c:427
+msgid "_All files"
+msgstr "_Pob ffeil"
+
+#: ../data/glade/file-roller.glade.h:13
+msgid "_Application:"
+msgstr "_Rhaglen:"
+
+#: ../data/glade/file-roller.glade.h:14
+msgid "_Archive:"
+msgstr "_Archif:"
+
+#: ../data/glade/file-roller.glade.h:15 ../src/dlg-extract.c:413
+msgid "_Files:"
+msgstr "_Ffeiliau:"
+
+#: ../data/glade/file-roller.glade.h:16 ../src/dlg-extract.c:475
+msgid "_Password:"
+msgstr "_Cyfrinair:"
+
+#: ../data/glade/file-roller.glade.h:17 ../src/dlg-extract.c:434
+msgid "_Selected files"
+msgstr "Ffeiliau _dewisedig"
+
+#: ../data/glade/file-roller.glade.h:18 ../src/dlg-extract.c:424
+msgid "example: *.txt; *.doc"
+msgstr "e.e.: *.txt; *.doc"
+
+#: ../data/glade/file-roller-extract.glade.h:1 ../src/window.c:5758
+msgid "Destination folder"
+msgstr "Plygell allbwn"
+
+#: ../data/glade/file-roller-extract.glade.h:2
+msgid "Ex_tract in folder:"
+msgstr "Echdynnu o fewn y _blygell:"
+
+#: ../data/glade/file-roller-extract.glade.h:3 ../src/ui.h:86
+msgid "Extract"
+msgstr "Echdynnu"
+
+#. Create the application.
+#: ../data/file-roller.desktop.in.h:1 ../src/gtk-utils.c:390 ../src/main.c:201
+#: ../src/window.c:845 ../src/window.c:3471
+msgid "Archive Manager"
+msgstr "Rheolydd Archifau"
+
+#: ../data/file-roller.desktop.in.h:2
+msgid "Create and modify an archive"
+msgstr "Creu a newid archif"
+
+#: ../caja/caja-fileroller.c:261
+msgid "Extract Here"
+msgstr "Echdynnu Yma"
+
+#: ../caja/caja-fileroller.c:262
+msgid "Extract the selected archive in the current position"
+msgstr "Echdynnu'r archif a ddewiswyd yn y safle cyfredol"
+
+#: ../caja/caja-fileroller.c:279
+msgid "Extract To..."
+msgstr "Echdynnu i..."
+
+#: ../caja/caja-fileroller.c:280
+msgid "Extract the selected archive"
+msgstr "Echdynnu'r archif a dewiswyd"
+
+#: ../caja/caja-fileroller.c:299
+msgid "Create Archive..."
+msgstr "Creu Archif..."
+
+#: ../caja/caja-fileroller.c:300
+msgid "Create an archive with the selected objects"
+msgstr "Creu archif gyda'r ffeiliau a dewiswyd"
+
+#: ../src/actions.c:161 ../src/actions.c:181 ../src/actions.c:222
+#: ../src/dlg-batch-add.c:130 ../src/dlg-batch-add.c:149
+#: ../src/dlg-batch-add.c:172 ../src/dlg-batch-add.c:223
+#: ../src/dlg-batch-add.c:270 ../src/window.c:4268
+msgid "Could not create the archive"
+msgstr "Methwyd creu'r archif"
+
+#: ../src/actions.c:162 ../src/dlg-batch-add.c:131 ../src/dlg-batch-add.c:271
+msgid "You have to specify an archive name."
+msgstr "Rhaid darparu enw archif."
+
+#: ../src/actions.c:182
+msgid "You don't have permission to create an archive in this folder"
+msgstr "Does gennych chi ddim hawl i greu archif yn y plygell yma"
+
+#: ../src/actions.c:223 ../src/fr-archive.c:736 ../src/window.c:4269
+#: ../src/window.c:4425
+msgid "Archive type not supported."
+msgstr "Ni chynhelir y math yma o archif."
+
+#: ../src/actions.c:236
+msgid "The archive already exists.  Do you want to overwrite it?"
+msgstr "Mae'r archif yn bodoli eisoes. Ydych eisiau ei drosysgrifo?"
+
+#: ../src/actions.c:239
+msgid "Overwrite"
+msgstr "Trosysgrifo"
+
+#: ../src/actions.c:256
+msgid "Could not delete the old archive."
+msgstr "Methu dileu'r hen archif."
+
+#: ../src/actions.c:343
+msgid "New"
+msgstr "Newydd"
+
+#: ../src/actions.c:380 ../src/actions.c:491 ../src/actions.c:582
+msgid "All archives"
+msgstr "Pob archif"
+
+#: ../src/actions.c:387 ../src/actions.c:498 ../src/actions.c:589
+msgid "All files"
+msgstr "Pob ffeil"
+
+#: ../src/actions.c:397 ../src/actions.c:597
+msgid "Archive type:"
+msgstr "Math archif:"
+
+#: ../src/actions.c:401 ../src/actions.c:601
+msgid "Automatic"
+msgstr "Awtomatig"
+
+#: ../src/actions.c:479 ../src/window.c:3856
+msgid "Open"
+msgstr "Agor"
+
+#: ../src/actions.c:567
+msgid "Save"
+msgstr "Cadw"
+
+#: ../src/actions.c:835 ../src/window.c:5310
+msgid "Last Output"
+msgstr "Allbwn Diwethaf"
+
+#: ../src/actions.c:855 ../src/dlg-extract.c:100
+msgid "Could not display help"
+msgstr "Methu dangos cymorth"
+
+#: ../src/actions.c:887
+msgid "translator-credits"
+msgstr ""
+"Chris Jackson <chriscf@gmail.com>\n"
+"Dafydd Harries <daf@muse.19inch.net>"
+
+#: ../src/actions.c:897
+msgid "File Roller"
+msgstr "File Roller"
+
+#: ../src/actions.c:900
+msgid "An archive manager for MATE."
+msgstr "Rheolydd archifau ar gyfer MATE."
+
+#: ../src/dlg-add-files.c:85 ../src/dlg-add-files.c:147
+#: ../src/dlg-add-folder.c:118 ../src/dlg-add-folder.c:247
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "Does gennych chi ddim hawl i ddarllen ffeiliau o \"%s\""
+
+#: ../src/dlg-add-files.c:91 ../src/dlg-add-files.c:153
+#: ../src/dlg-add-folder.c:124 ../src/dlg-add-folder.c:253
+#: ../src/window.c:2263 ../src/window.c:2301
+msgid "Could not add the files to the archive"
+msgstr "Methwyd ychwanegu ffeiliau i'r archif"
+
+#: ../src/dlg-add-files.c:179
+msgid "Add Files"
+msgstr "Ychwanegu Ffeiliau"
+
+#: ../src/dlg-add-files.c:191 ../src/dlg-add-folder.c:324
+msgid "_Add only if newer"
+msgstr "_Ychwanegu ddim ond os yw'n fwy newydd"
+
+#: ../src/dlg-add-folder.c:312
+msgid "Add a Folder"
+msgstr "Ychwanegu Plygell"
+
+#: ../src/dlg-add-folder.c:325
+msgid "_Include subfolders"
+msgstr "_Cynnwys is-blygellau"
+
+#: ../src/dlg-add-folder.c:326
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "Eithrio unrhyw blygell sy'n _gyswllt symbolaidd"
+
+#: ../src/dlg-add-folder.c:329 ../src/dlg-add-folder.c:334
+msgid "example: *.o; *.bak"
+msgstr "e.e.: *.o; *.bak"
+
+#: ../src/dlg-add-folder.c:330
+msgid "_Include files:"
+msgstr "_Cynnwys ffeiliau:"
+
+#: ../src/dlg-add-folder.c:335
+msgid "E_xclude files:"
+msgstr "Eithrio _ffeiliau:"
+
+#: ../src/dlg-add-folder.c:338
+msgid "_Load Options"
+msgstr "Opsiynau _Llwytho"
+
+#: ../src/dlg-add-folder.c:339
+msgid "Sa_ve Options"
+msgstr "Opsiynau _Cadw"
+
+#: ../src/dlg-add-folder.c:786
+msgid "Save Options"
+msgstr "Opsiynau Cadw"
+
+#: ../src/dlg-add-folder.c:787
+msgid "Options Name:"
+msgstr "Enw Opsiynau:"
+
+#: ../src/dlg-batch-add.c:144 ../src/window.c:5536
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"Nid yw'r enw \"%s\" yn ddilys oherwydd ni chaiff gynnwys y nodau canlynol:%"
+"s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:144 ../src/window.c:5528 ../src/window.c:5532
+#: ../src/window.c:5536 ../src/window.c:5593 ../src/window.c:5595
+msgid "Please use a different name."
+msgstr "Defnyddiwch enw gwahanol os gwelwch yn dda."
+
+#: ../src/dlg-batch-add.c:173
+msgid ""
+"You don't have the right permissions to create an archive in the destination "
+"folder."
+msgstr "Does gennych chi ddim caniatâd i greu archif yn y plygell yma."
+
+#: ../src/dlg-batch-add.c:192 ../src/dlg-extract.c:160 ../src/window.c:4707
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"Dydi'r blygell \"%s\" ddim yn bodoli.\n"
+"\n"
+"Hoffech chi ei greu?"
+
+#: ../src/dlg-batch-add.c:201 ../src/dlg-extract.c:169 ../src/window.c:4716
+msgid "Create _Folder"
+msgstr "Creu _Plygell"
+
+#: ../src/dlg-batch-add.c:219 ../src/dlg-extract.c:188 ../src/window.c:4735
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "Methwyd creu'r blygell allbwn: %s."
+
+#: ../src/dlg-batch-add.c:243
+msgid "Archive not created"
+msgstr "Ni chrëwyd yr archif"
+
+#: ../src/dlg-batch-add.c:296
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "Mae'r archif yn bodoli eisoes.  Ydych eisiau ei drosysgrifo?"
+
+#: ../src/dlg-batch-add.c:299
+msgid "_Overwrite"
+msgstr "_Trosysgrifo"
+
+#: ../src/dlg-extract.c:192 ../src/dlg-extract.c:212 ../src/dlg-extract.c:240
+#: ../src/window.c:4739 ../src/window.c:4759
+msgid "Extraction not performed"
+msgstr "Ni wnaethpwyd yr echdyniad"
+
+#: ../src/dlg-extract.c:235
+#, c-format
+msgid ""
+"You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr "Does gennych chi ddim hawl i echdynnu ffeiliau yn y plygell \"%s\""
+
+#: ../src/dlg-extract.c:396
+msgid "Files"
+msgstr "Ffeiliau"
+
+#: ../src/dlg-extract.c:445
+msgid "Actions"
+msgstr "Gweithredoedd"
+
+#: ../src/dlg-extract.c:461
+msgid "R_e-create folders"
+msgstr "_Ail-greu plygellau"
+
+#: ../src/dlg-extract.c:465
+msgid "Over_write existing files"
+msgstr "_Trosysgrifo ffeiliau sy'n bodoli'n barod"
+
+#: ../src/dlg-extract.c:469
+msgid "Do not e_xtract older files"
+msgstr "Peidio ag echdynnu ffeiliau _hynach"
+
+#: ../src/dlg-extract.c:484
+msgid "_Open destination folder after extraction"
+msgstr "_Agor y blygell allbwn ar ôl echdynnu"
+
+#: ../src/dlg-prop.c:102
+msgid "Path:"
+msgstr "Llwybr:"
+
+#: ../src/dlg-prop.c:115
+msgid "Name:"
+msgstr "Enw:"
+
+#: ../src/dlg-prop.c:121
+#, c-format
+msgid "%s Properties"
+msgstr "Priodweddau %s"
+
+#: ../src/dlg-prop.c:130
+msgid "Modified on:"
+msgstr "Newidiwyd ar:"
+
+#: ../src/dlg-prop.c:136 ../src/window.c:427
+msgid "%d %B %Y, %H:%M"
+msgstr "%d %B %Y, %H:%M"
+
+#: ../src/dlg-prop.c:144
+msgid "Archive size:"
+msgstr "Maint archif:"
+
+#: ../src/dlg-prop.c:155
+msgid "Content size:"
+msgstr "Main y cynnwys:"
+
+#: ../src/dlg-prop.c:174
+msgid "Compression ratio:"
+msgstr "Cyfradd cywasgiad:"
+
+#: ../src/dlg-prop.c:189
+msgid "Number of files:"
+msgstr "Ffeiliau:"
+
+#: ../src/file-data.c:28
+msgid "Unknown type"
+msgstr "Ffeil anhysbys"
+
+#: ../src/file-data.c:29
+msgid "Symbolic link"
+msgstr "Cyswllt symbolaidd"
+
+#: ../src/fr-archive.c:711
+msgid "The file does not exist."
+msgstr "Nid yw'r ffeil yn bodoli."
+
+#: ../src/fr-command-tar.c:286
+msgid "Adding file: "
+msgstr "Ychwanegu'r ffeil: "
+
+#: ../src/fr-command-tar.c:332
+msgid "Removing file: "
+msgstr "Dileu'r ffeil: "
+
+#: ../src/fr-command-tar.c:341 ../src/window.c:1241
+msgid "Deleting files from archive"
+msgstr "Dileu ffeiliau o'r archif"
+
+#: ../src/fr-command-tar.c:374
+msgid "Extracting file: "
+msgstr "Echdynnu'r ffeil: "
+
+#: ../src/fr-command-tar.c:419
+msgid "Recompressing archive"
+msgstr "Ail-gywasgu’r archif"
+
+#: ../src/fr-command-tar.c:553
+msgid "Decompressing archive"
+msgstr "Datgywasgu’r archif"
+
+#: ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "_Ychwanegu"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "_Echdynnu"
+
+#: ../src/fr-stock.c:46 ../src/ui.h:36 ../src/ui.h:154
+msgid "_View"
+msgstr "G_olwg"
+
+#. Button
+#: ../src/gtk-utils.c:421
+msgid "Command _Line Output"
+msgstr "Allbwn _Llinell Orchymyn"
+
+#: ../src/main.c:66
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:68
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:73
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:75
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:76
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:78
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:80
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar heb ei gywasgu (.tar)"
+
+#: ../src/main.c:81
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar cywasg bzip (.tar.bz)"
+
+#: ../src/main.c:82
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar cywasg bzip2 (.tar.bz2)"
+
+#: ../src/main.c:83
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar cywasg gzip (.tar.gz)"
+
+#: ../src/main.c:84
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar cywasg lzop (.tar.lzo)"
+
+#: ../src/main.c:85
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar cywasg compress (.tar.Z)"
+
+#: ../src/main.c:87
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:88
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:89
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:90
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z)"
+
+#: ../src/main.c:135
+msgid "Add files to the specified archive and quit the program"
+msgstr "Ychwanegu ffeiliau i'r archif, ac wedyn gadael y rhaglen"
+
+#: ../src/main.c:136
+msgid "ARCHIVE"
+msgstr "ARCHIF"
+
+#: ../src/main.c:139
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "Ychwanegu ffeiliau, gofyn am enw archif, ac wedyn gadael y rhaglen"
+
+#: ../src/main.c:143
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "Echdynnu archifau i'r plygell ag enwebwyd, ac wedyn gadael y rhaglen"
+
+#: ../src/main.c:144 ../src/main.c:156
+msgid "FOLDER"
+msgstr "PLYGELL"
+
+#: ../src/main.c:147
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "Echdynnu'r archifau gan ofyn am y blygell allbwn a gorffen"
+
+#: ../src/main.c:151
+msgid ""
+"Extract archives using the archive name as destination folder and quit the "
+"program"
+msgstr ""
+"Echdynnu'r archifau gan ddefnyddio enw'r archif fel plygell allbwn a gorffen"
+
+#: ../src/main.c:155
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "Plygell arferol ar gyfer y gorchmynion '--add' a '--extract'"
+
+#: ../src/main.c:159
+msgid "Create destination folder without asking confirmation"
+msgstr "Creu'r blygell allbwn heb ofyn am gadarnhad"
+
+#: ../src/recent-files/egg-recent-view-gtk.c:344 ../src/window.c:3387
+#, c-format
+msgid "Open '%s'"
+msgstr "Agor '%s'"
+
+#: ../src/recent-files/egg-recent-view-gtk.c:442
+msgid "Empty"
+msgstr "Gwag"
+
+#: ../src/ui.h:34
+msgid "_Archive"
+msgstr "_Archif"
+
+#: ../src/ui.h:35
+msgid "_Edit"
+msgstr "_Golygu"
+
+#: ../src/ui.h:37
+msgid "_Help"
+msgstr "_Cymorth"
+
+#: ../src/ui.h:38
+msgid "_Arrange Files"
+msgstr "_Trefnu Ffeiliau"
+
+#: ../src/ui.h:39
+msgid "Open R_ecent"
+msgstr "Agor _Diweddar"
+
+#: ../src/ui.h:43
+msgid "Information about the program"
+msgstr "Gwybodaeth ynghylch y rhaglen hon"
+
+#: ../src/ui.h:46
+msgid "_Add Files..."
+msgstr "_Ychwanegu Ffeiliau..."
+
+#: ../src/ui.h:47 ../src/ui.h:51
+msgid "Add files to the archive"
+msgstr "Ychwanegu ffeiliau i'r archif"
+
+#: ../src/ui.h:50
+msgid "Add"
+msgstr "Ychwanegu"
+
+#: ../src/ui.h:54
+msgid "Add a _Folder..."
+msgstr "Ychwanegu _Plygell..."
+
+#: ../src/ui.h:55
+msgid "Add a folder to the archive"
+msgstr "Ychwanegu plygell i'r archif"
+
+#: ../src/ui.h:59
+msgid "Close the current archive"
+msgstr "Cau'r archif cyfredol"
+
+#: ../src/ui.h:63
+msgid "Display the File Roller Manual"
+msgstr "Dangos y Llawlyfr File Roller"
+
+#: ../src/ui.h:67
+msgid "Copy the selection"
+msgstr "Copïo'r dewisiad"
+
+#: ../src/ui.h:71
+msgid "Cut the selection"
+msgstr "Torri'r dewisiad"
+
+#: ../src/ui.h:75
+msgid "Delete the selection from the archive"
+msgstr "Dileu'r dewisiad o'r archif"
+
+#: ../src/ui.h:78
+msgid "Dese_lect All"
+msgstr "Da_tddewis Popeth"
+
+#: ../src/ui.h:79
+msgid "Deselect all files"
+msgstr "Datddewis pob un o'r ffeiliau"
+
+#: ../src/ui.h:82
+msgid "_Extract..."
+msgstr "_Echdynnu..."
+
+#: ../src/ui.h:83 ../src/ui.h:87
+msgid "Extract files from the archive"
+msgstr "Echdynnu ffeiliau o'r archif"
+
+#: ../src/ui.h:90
+msgid "_Last Output"
+msgstr "Allbwn _Diwethaf"
+
+#: ../src/ui.h:91
+msgid "View the output produced by the last executed command"
+msgstr "Gweld yr allbwn a gynhyrchwyd gan y gorchymyn a weithredwyd diwethaf"
+
+#: ../src/ui.h:95
+msgid "Create a new archive"
+msgstr "Creu archif newydd"
+
+#: ../src/ui.h:99 ../src/ui.h:103 ../src/window.c:3853 ../src/window.c:3856
+msgid "Open archive"
+msgstr "Agor archif"
+
+#: ../src/ui.h:106
+msgid "Open Fi_les..."
+msgstr "Agor _Ffeiliau..."
+
+#: ../src/ui.h:107
+msgid "Open selected files with an application"
+msgstr "Agor y ffeiliau dewisedig gyda rhaglen"
+
+#: ../src/ui.h:110
+msgid "Pass_word..."
+msgstr "Cyf_rinair..."
+
+#: ../src/ui.h:111
+msgid "Specify a password for this archive"
+msgstr "Penodi cyfrinair ar gyfer yr archif hwn"
+
+#: ../src/ui.h:115
+msgid "Paste the clipboard"
+msgstr "Gludo'r clipfwrdd"
+
+#: ../src/ui.h:119
+msgid "Show archive properties"
+msgstr "Dangos priodweddau'r archif"
+
+#: ../src/ui.h:123
+msgid "Quit the application"
+msgstr "Gadael y rhaglen"
+
+#: ../src/ui.h:127
+msgid "Reload current archive"
+msgstr "Ail-lwytho'r archif cyfredol"
+
+#: ../src/ui.h:130
+msgid "_Rename..."
+msgstr "_Ailenwi..."
+
+#: ../src/ui.h:131
+msgid "Rename the selection"
+msgstr "Ailenwi’r dewisiad"
+
+#: ../src/ui.h:135
+msgid "Save the current archive with a different name"
+msgstr "Cadw'r archif cyfredol gydag enw gwahanol"
+
+#: ../src/ui.h:138
+msgid "Select _All"
+msgstr "Dethol _Popeth"
+
+#: ../src/ui.h:139
+msgid "Select all files"
+msgstr "Dethol pob un o'r ffeiliau"
+
+#: ../src/ui.h:143
+msgid "Stop current operation"
+msgstr "Atal y weithred gyfredol"
+
+#: ../src/ui.h:146
+msgid "_Test Integrity"
+msgstr "_Profi Cywirdeb"
+
+#: ../src/ui.h:147
+msgid "Test whether the archive contains errors"
+msgstr "Profi os mai'r archif yn cynnwys gwallau"
+
+#: ../src/ui.h:150
+msgid "_View File"
+msgstr "_Dangos Ffeil"
+
+#: ../src/ui.h:151 ../src/ui.h:155
+msgid "View the selected file"
+msgstr "Gweld y ffeil a ddewiswyd"
+
+#: ../src/ui.h:163
+msgid "_Toolbar"
+msgstr "_Bar Offer"
+
+#: ../src/ui.h:164
+msgid "View the main toolbar"
+msgstr "Gweld y prif far offer"
+
+#: ../src/ui.h:168
+msgid "Stat_usbar"
+msgstr "Bar _Statws"
+
+#: ../src/ui.h:169
+msgid "View the statusbar"
+msgstr "Gweld y bar statws"
+
+#: ../src/ui.h:173
+msgid "_Reversed Order"
+msgstr "Trefn _Gwrthdroëdig"
+
+#: ../src/ui.h:174
+msgid "Reverse the list order"
+msgstr "Gwrthdroi trefn y rhestr"
+
+#: ../src/ui.h:183
+msgid "View All _Files"
+msgstr "Gweld Pob _Ffeil"
+
+#: ../src/ui.h:186
+msgid "View as a F_older"
+msgstr "Gweld fel _Plygell"
+
+#: ../src/ui.h:194
+msgid "by _Name"
+msgstr "yn ôl _Enw"
+
+#: ../src/ui.h:195
+msgid "Sort file list by name"
+msgstr "Trefnu’r rhestr ffeiliau yn ôl enw"
+
+#: ../src/ui.h:197
+msgid "by _Size"
+msgstr "yn ôl _Maint"
+
+#: ../src/ui.h:198
+msgid "Sort file list by file size"
+msgstr "Trefnu'r rhestr ffeiliau yn ôl maint ffeil"
+
+#: ../src/ui.h:200
+msgid "by T_ype"
+msgstr "yn ôl M_ath"
+
+#: ../src/ui.h:201
+msgid "Sort file list by type"
+msgstr "Trefnu'r rhestr ffeiliau yn ôl math"
+
+#: ../src/ui.h:203
+msgid "by _Date modified"
+msgstr "yn ôl _Dyddiad newid"
+
+#: ../src/ui.h:204
+msgid "Sort file list by modification time"
+msgstr "Trefnu'r rhestr ffeiliau yn ôl y dyddiad newid"
+
+#: ../src/ui.h:206
+msgid "by _Location"
+msgstr "yn ôl _Lleoliad"
+
+#: ../src/ui.h:207
+msgid "Sort file list by location"
+msgstr "Trefnu'r rhestr ffeiliau yn ôl lleoliad"
+
+#: ../src/window.c:692
+msgid "Folder"
+msgstr "Plygell"
+
+#: ../src/window.c:853
+msgid "[read only]"
+msgstr "[darllen yn unig]"
+
+#: ../src/window.c:947
+#, c-format
+msgid "%d file (%s)"
+msgid_plural "%d files (%s)"
+msgstr[0] "%d ffeil (%s)"
+
+#: ../src/window.c:952
+#, c-format
+msgid "%d file selected (%s)"
+msgid_plural "%d files selected (%s)"
+msgstr[0] "Detholwyd %d ffeil (%s)"
+
+#: ../src/window.c:1238
+msgid "Reading archive"
+msgstr "Yn darllen yr archif"
+
+#: ../src/window.c:1244
+msgid "Adding files to archive"
+msgstr "Yn ychwanegu ffeiliau i'r archif"
+
+#: ../src/window.c:1247
+msgid "Extracting files from archive"
+msgstr "Yn echdynnu ffeiliau o'r archif"
+
+#: ../src/window.c:1250
+msgid "Testing archive"
+msgstr "Yn profi'r archif"
+
+#: ../src/window.c:1253
+msgid "Getting the file list"
+msgstr "Yn cyrchu'r rhestr ffeiliau"
+
+#: ../src/window.c:1256
+msgid "Saving archive"
+msgstr "Yn cadw'r archif"
+
+#: ../src/window.c:1434
+msgid "Archive:"
+msgstr "Archif:"
+
+#: ../src/window.c:1547
+msgid "wait please..."
+msgstr "arhoswch os gwelwch yn dda..."
+
+#: ../src/window.c:1624
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "Methwyd dangos y blygell \"%s\""
+
+#: ../src/window.c:1683
+msgid ""
+"This archive is password protected.\n"
+"Please specify a password with the command: Edit->Password"
+msgstr ""
+"Mae'r archif hwn wedi ei amddiffyn gyda chyfrinair.\n"
+"Os gwelwch yn dda, penodwch gyfrinair gyda'r gorchymyn: Golygu->Cyfrinair"
+
+#: ../src/window.c:1685
+msgid ""
+"The specified password is not valid, please specify a new password with the "
+"command: Edit->Password"
+msgstr ""
+"Nid yw'r cyfrinair a benodwyd yn ddilys, penodwch gyfrinair newydd gyda'r "
+"gorchymyn: Golygu->Cyfrinair os gwelwch yn dda"
+
+#: ../src/window.c:1690 ../src/window.c:2487 ../src/window.c:5929
+msgid "Could not perform the operation"
+msgstr "Methwyd cwblhau'r weithred"
+
+#: ../src/window.c:1715
+msgid "An error occurred while extracting files."
+msgstr "Digwyddodd gwall wrth echdynnu ffeiliau."
+
+#: ../src/window.c:1719
+msgid "An error occurred while loading the archive."
+msgstr "Digwyddodd gwall wrth lwytho'r archif."
+
+#: ../src/window.c:1723
+msgid "An error occurred while deleting files from the archive."
+msgstr "Digwyddodd gwall wrth ddileu ffeiliau o'r archif."
+
+#: ../src/window.c:1727
+msgid "An error occurred while adding files to the archive."
+msgstr "Digwyddodd gwall wrth ychwanegu ffeiliau i'r archif."
+
+#: ../src/window.c:1731
+msgid "An error occurred while testing archive."
+msgstr "Digwyddodd gwall wrth brofi'r archif."
+
+#: ../src/window.c:1744
+msgid "Command not found."
+msgstr "Ni chanfuwyd y gorchymyn."
+
+#: ../src/window.c:1747
+msgid "Command exited abnormally."
+msgstr "Gorffennodd y gorchymyn yn annaturiol."
+
+#: ../src/window.c:1877
+msgid "Test Result"
+msgstr "Canlyniad Prawf"
+
+#: ../src/window.c:2264
+msgid "You don't have the right permissions."
+msgstr "Does gennych chi mo'r hawliau cywir."
+
+#: ../src/window.c:2302
+msgid "You can't add an archive to itself."
+msgstr "Ni allwch ychwanegu archif i'w hunan."
+
+#: ../src/window.c:2521
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr ""
+"Ydych chi eisiau ychwanegu'r ffeil hwn i'r archif cyfredol neu ei agor fel "
+"archif newydd?"
+
+#: ../src/window.c:2558
+msgid "Do you want to create a new archive with these files?"
+msgstr "Ydych chi eisiau creu archif newydd gyda'r ffeiliau yma?"
+
+#: ../src/window.c:2561
+msgid "Create _Archive"
+msgstr "Creu _Archif"
+
+#: ../src/window.c:2907
+msgid "Size"
+msgstr "Maint"
+
+#: ../src/window.c:2908
+msgid "Type"
+msgstr "Math"
+
+#: ../src/window.c:2909
+msgid "Date Modified"
+msgstr "Dyddiad Newidiwyd"
+
+#: ../src/window.c:2918
+msgid "Name"
+msgstr "Enw"
+
+#: ../src/window.c:3725
+msgid "Go to the previous visited location"
+msgstr "Mynd i'r lleoliad ymwelwyd diwethaf"
+
+#: ../src/window.c:3733
+msgid "Go to the next visited location"
+msgstr "Mynd i'r lleoliad ymwelwyd nesaf"
+
+#: ../src/window.c:3741
+msgid "Go up one level"
+msgstr "Mynd i fyny un lefel"
+
+#: ../src/window.c:3749
+msgid "Go to the home location"
+msgstr "Mynd i'r lleoliad cartref"
+
+#: ../src/window.c:3854
+msgid "Open a recently used archive"
+msgstr "Agor archif ag agorwyd yn ddiweddar"
+
+#: ../src/window.c:4360
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "Methwyd agor \"%s\""
+
+#: ../src/window.c:4418
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "Methwyd cadw'r archif \"%s\""
+
+#: ../src/window.c:5528
+msgid "The new name is void."
+msgstr "Mae'r enw newydd yn ddi-rym."
+
+#: ../src/window.c:5532
+msgid "The new name is equal to the old one."
+msgstr "Mae'r enw newydd yr un peth a'r hen un."
+
+#: ../src/window.c:5593
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Mae plygell o'r enw \"%s\" yn bodoli eisoes.\n"
+"\n"
+"%s"
+
+#: ../src/window.c:5595
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"Mae ffeil o'r enw \"%s\" yn bodoli eisoes.\n"
+"\n"
+"%s"
+
+#: ../src/window.c:5633
+msgid "Rename"
+msgstr "Ailenwi"
+
+#: ../src/window.c:5634
+msgid "New folder name"
+msgstr "Enw plygell newydd"
+
+#: ../src/window.c:5634
+msgid "New file name"
+msgstr "Enw ffeil newydd"
+
+#: ../src/window.c:5638
+msgid "_Rename"
+msgstr "_Ailenwi"
+
+#: ../src/window.c:5654 ../src/window.c:5683
+msgid "Could not rename the folder"
+msgstr "Methwyd ailenwi'r blygell"
+
+#: ../src/window.c:5654 ../src/window.c:5683
+msgid "Could not rename the file"
+msgstr "Methwyd ailenwi'r ffeil"
+
+#: ../src/window.c:5757
+msgid "Paste Selection"
+msgstr "Gludo'r Dewisiad"
+
+#: ../src/window.c:5762
+msgid "_Paste"
+msgstr "_Gludo"
+
+#: ../src/window.c:6285
+msgid "Add files to an archive"
+msgstr "Ychwanegu ffeiliau at archif"
+
+#: ../src/window.c:6316
+msgid "Extract archive"
+msgstr "Echdynnu archif"
+
+#~ msgid "File Roller Component add operations"
+#~ msgstr "Gweithrediadau ychwanegu'r Gydran File Roller"
+
+#~ msgid "File Roller Component extract operations"
+#~ msgstr "Gweithrediadau echdynnu'r Gydran File Roller"
+
+#~ msgid "File roller component"
+#~ msgstr "Cydran File Roller"
+
+#~ msgid "Could not save the archive"
+#~ msgstr "Methwyd cadw'r archif"
+
+#~ msgid "    "
+#~ msgstr "    "

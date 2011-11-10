@@ -1,0 +1,79 @@
+
+			   * File Roller *
+
+		  an archive manager utility for the
+			  MATE Environment.
+
+* What is it ?
+
+  File Roller is an archive manager for the MATE environment.  This means
+  that you can create and modify archives; view the content of an archive;
+  view and modify a file contained in the archive; extract files from the
+  archive.
+
+  File Roller is only a front-end (a graphical interface) to archiving programs
+  like tar and zip. The supported file types are :
+    * 7-Zip Compressed File (.7z)
+    * WinAce Compressed File (.ace)
+    * ALZip Compressed File (.alz)
+    * AIX Small Indexed Archive  (.ar)
+    * ARJ Compressed Archive (.arj)
+    * Cabinet File (.cab)
+    * UNIX CPIO Archive (.cpio)
+    * Debian Linux Package (.deb) [Read-only mode]
+    * ISO-9660 CD Disc Image (.iso) [Read-only mode]
+    * Java Archive (.jar)
+    * Java Enterprise archive (.ear)
+    * Java Web Archive (.war)
+    * LHA Archive (.lzh, .lha)
+    * WinRAR Compressed Archive (.rar)
+    * RAR Archived Comic Book (.cbr)
+    * RPM Linux Package (.rpm) [Read-only mode]
+    * Tape Archive File:
+          * uncompressed (.tar)
+      or compressed with:
+          * gzip (.tar.gz , .tgz)
+          * bzip (.tar.bz , .tbz)
+          * bzip2 (.tar.bz2 , .tbz2)
+          * compress (.tar.Z , .taz)
+          * lrzip (.tar.lrz , .tlrz)
+          * lzip (.tar.lz , .tlz)
+          * lzop (.tar.lzo , .tzo)
+          * 7zip (.tar.7z)
+          * xz (.tar.xz)
+    * Stuffit Archives (.bin, .sit)
+    * ZIP Archive (.zip)
+    * ZIP Archived Comic Book (.cbz)
+    * ZOO Compressed Archive File (.zoo)
+    * Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip,
+      lzop, rzip, xz.
+
+* Home Page
+
+  http://fileroller.sourceforge.net
+
+* Licensing
+
+  This program is released under the terms of the GNU General Public
+  License (GNU GPL) version 2 or greater.
+  You can find a copy of the license in the file COPYING.
+
+* Dependencies
+
+  In order to build this program from the source code you need a working
+  MATE environment version 2.x, with the development tools installed
+  properly.
+
+  Also you need the following libraries:
+  	* glib >= 2.16.0
+  	* gtk+ >= 2.12.0
+  	* libmate >= 2.6.0
+  	* libmateui >= 2.6.0
+        * libglade >= 2.4.0
+        * libcaja-extension >= 2.22.2 (optional)
+
+* Install
+
+  ./configure
+  make
+  make install

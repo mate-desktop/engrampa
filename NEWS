@@ -1,0 +1,1964 @@
+version 2.32.0
+--------------
+
+        Bugs fixed:
+
+        * Fixed call to the package installer. (#629604)
+
+        New or updated application translations:
+
+        * Basque (Iñaki Larrañaga Murgoitio)
+        * Dutch (Wouter Bolsterlee)
+        * Italian (Davide Falanga)
+        * Japanese (Yasumichi Akahoshi)
+        * Kazakh (Baurzhan Muftakhidinov)
+        * Korea (Changwoo Ryu)
+        * Russian (Yuri Myasoedov)
+        * Turkish (Baris Cicek)
+
+        New or updated manual translations:
+
+        * Japanese (Yasumichi Akahoshi)
+
+version 2.31.92
+---------------
+
+        Bugs fixed:
+
+        * Truncated file names in iso images. (Munsch) (#550946)
+        * Fixed update of files in .tar.xz archives (#628717)
+	* Fixed some memleaks (Pablo Castellano)
+
+        New or updated application translations:
+
+        * Brazilian Portuguese (Antonio Fernandes C. Neto)
+        * British English (Bruce Cowan)
+        * Greek (Michael Kotsarinis)
+        * Indonesian (Dirgita)
+        * Polish (Piotr Drąg)
+        * Portuguese (Duarte Loreto)
+
+version 2.31.91
+---------------
+
+        Bugs fixed:
+
+        * 7zip: do not allow to specify a password if only 7zr is installed.
+          The 7zr command does not support encryption. (#618908)
+        * Fixed extraction of cpio archives with absolute paths (#558023)
+        * Unexpected msgstr appears in update dialog, when Plural Forms
+          definition in .po file is "Plural-Forms: nplurals=1; plural=0;\n"
+          (e.g. ja.po). (Kiyotaka NISHIBORI) (#627387)
+	* Use MateConf instead of GSettings
+	
+        New or updated application translations:
+
+        * Arabic (Khaled Hosny)
+        * Bulgarian (Alexander Shopov)
+        * Danish (Kenneth Nielsen)
+        * Hungarian (Gabor Kelemen)
+        * Japanese (Yasumichi Akahoshi)
+        * Serbian (Милош Поповић)
+        * Serbian (Miloš Popović)
+
+        New or updated manual translations:
+
+        * Japanese (Yasumichi Akahoshi)
+
+version 2.31.90
+---------------
+
+	New features and user visible changes:
+	
+	* Use MateConf instead of GSettings
+
+        New or updated application translations:
+
+        * Chinese (simplified) (Aron Xu)
+        * Czech (Adrian Guniš)
+        * Indonesian (Andika Triwidada)
+        * Punjabi/Panjabi (A S Alam)
+        * Uyghur (Sahran)
+
+        New or updated manual translations:
+
+        * Chinese (China) (YunQiang Su)
+
+version 2.31.5
+--------------
+
+        Bugs fixed:
+
+        * Make it possible to build against GTK+ 3. (#624564)
+	* Make it compile again with GSEAL and DEPRECATED macros enabled
+	
+        New or updated application translations:
+
+        * Bengali INDIA (Runa Bhattacharjee)
+        * Chinese (Hong Kong) (Chao-Hsiung Liao)
+        * Chinese (simplified) (Aron Xu)
+        * Chinese/Traditional (Chao-Hsiung Liao)
+        * Español (Jorge González)
+        * French (Claude Paroz)
+        * Frisian (Sense Hofstede)
+        * Galician (Fran Diéguez)
+        * German (Mario Blättermann)
+        * Hebrew (Yaron Shahrabani)
+        * Kazakh (Baurzhan Muftakhidinov)
+        * Marathi (Sandeep Shedmake)
+        * Norwegian Bokmål (Kjartan Maraas)
+        * Slovenian Translation (Matej Urbančič)
+        * Swedish (Daniel Nylander)
+        * Tamil (Dr.T.Vasudevan)
+
+        New or updated manual translations:
+
+        * Chinese (China) (YunQiang Su)
+
+version 2.31.4
+--------------
+
+        New features and user visible changes:
+
+        * Migrated from dbus-glib to glib's GDBus (#622900)
+	* Ported to GSettings
+	
+        New or updated application translations:
+
+        * Estonian (Priit Laes)
+        * Kazakh (Baurzhan Muftakhidinov)
+        * Norwegian Bokmål (Kjartan Maraas)
+
+version 2.31.3
+--------------
+
+        Bugs fixed:
+
+	* Fixed segmentation fault when opening some rar archives.
+        * Use dpkg-deb to view and extract .deb files. (Josselin Mouette)
+          (#576436)
+
+        New or updated application translations:
+
+        * Esperanto (Kristjan SCHMIDT)
+        * Galician (Fran Diéguez)
+
+        New or updated manual translations:
+
+        * catalan (Carles Ferrando Garcia)
+
+version 2.31.2
+--------------
+
+        Bugs fixed:
+
+        * improved the "encrypt header" button usability. always keep the
+          "encrypt header" button clickable even when the password field is
+          void. (#620172)
+
+        New or updated application translations:
+
+        * Brenux (Alan Monfort)
+        * Estonian (Ivar Smolin)
+        * Hebrew (Yaron Shahrabani)
+        * zh_CN (Fan Qijiang)
+
+version 2.31.1
+--------------
+
+	New features and user visible changes:
+
+	* Added support for lrzip archives and lrzip compressed tar archives.
+	* Bring back support for archives on remote GIO mounts when the fuse
+	  daemon is not available. (Tomas Bzatek) (#617769)
+
+	Bugs fixed:
+
+	* Fixed crashes when trying to create a tar.z7 archive. due to a
+	  missing sentinel in a varargs call. (Matthias Clasen) (#617840)
+
+	New or updated application translations:
+
+	* Español (Jorge González)
+	* Galician (Fran Diéguez)
+	* Norwegian Bokmål (Kjartan Maraas)
+	* Shavian (Thomas Thurman)
+	* Slovenian Translation (Matej Urbančič)
+
+version 2.30.1.1
+----------------
+
+        Bugs fixed:
+
+        * Extract multi-byte filename from URI in case of DND. (Takao
+          Fujiwara) (#613298)
+
+version 2.30.1
+--------------
+
+        Bugs fixed:
+
+	* Fixed build error when dbus is not available. (Josselin
+          Mouette) (#615127)
+
+        New or updated application translations:
+
+        * Bengali INDIA (Runa Bhattacharjee)
+        * Catalan (Gil Forcada)
+        * Dutch (Wouter Bolsterlee)
+        * Indonesian (Andika Triwidada)
+        * Japanese (KUSANO Takayuki)
+        * Latviešu (Peteris Krisjanis)
+        * Occitan (Yannig Marchegay (Kokoyaya))
+        * Thai (Theppitak Karoonboonyanan)
+
+version 2.30.0
+--------------
+
+        Bugs fixed:
+
+        * removed multipart/x-zip from .desktop file (#612677)
+
+        New or updated application translations:
+
+        * Bengali (Sadia Afroz)
+        * Brazilian Portuguese (Vladimir Melo)
+        * Catalan (Gil Forcada)
+        * Danish (Kenneth Nielsen)
+        * Finnish (Tommi Vainikainen)
+        * Greek (Bakaoukas Nikolaos)
+        * Italian (Davide Falanga)
+        * Korea (Changwoo Ryu)
+        * Lithuanian (Žygimantas Beručka)
+        * Norwegian Nynorsk (Torstein Adolf Winterseth)
+        * Punjabi/Panjabi (A S Alam)
+        * Russian (Alexander Saprykin)
+        * Serbian (sr) (Горан Ракић)
+        * Serbian (sr) (Goran Rakić)
+        * Ukrainian (Maxim Dziumanenko)
+        * Vietnamese (Clytie Siddall)
+
+        New or updated manual translations:
+
+        * Greek (Marios Zindilis)
+
+version 2.29.92
+---------------
+
+        Bugs fixed:
+
+        * Allow to start the PackageKit service if it's not available. Removed
+          the call to NameHashOwner. (#610813)
+        * Recheck commands presence after package installation.. Clear the
+          program cache before updating the capabilities. (#610815)
+
+        New or updated application translations:
+
+        * Arabic (Khaled Hosny)
+        * Basque (Iñaki Larrañaga Murgoitio)
+        * British English (Bruce Cowan)
+        * Bulgarian (Alexander Shopov)
+        * Hungarian (Gabor Kelemen)
+        * Portuguese (Duarte Loreto)
+        * Russian (Alexander Saprykin)
+        * Slovak (Peter Mráz)
+
+version 2.29.91
+---------------
+
+        Bugs fixed:
+
+        * Ensure that strcmp gets non-NULL values (#609449)
+
+        New or updated application translations:
+
+        * Chinese (Hong Kong) (Chao-Hsiung Liao)
+        * Chinese/Traditional (Chao-Hsiung Liao)
+        * Czech (Adrian Guniš)
+        * Gallician (Fran Diéguez)
+        * German (Nathan-J. Hirschauer)
+        * Norwegian Bokmål (Kjartan Maraas)
+        * Polish (Piotr Drąg)
+        * Romanian (Lucian Adrian Grijincu)
+        * Slovenian (Matej Urbančič)
+        * Swedish (Daniel Nylander)
+        * Tamil (Dr,T,Vasudevan)
+
+version 2.29.90
+---------------
+
+        Bugs fixed:
+
+        * Fixed some file renaming issues (#608556)
+
+        New or updated application translations:
+
+        * Bengali (Israt Jahan)
+        * Brazilian Portuguese (Vladimir Melo)
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * French (Claude Paroz)
+        * Thai (Theppitak Karoonboonyanan)
+
+version 2.29.5
+--------------
+
+        New or updated application translations:
+
+        * Arabic (Khaled Hosny)
+        * Bulgarian (Alexander Shopov)
+        * German (Christian Kirbach)
+        * Tamil (Dr,T,Vasudevan)
+        * zh_CN (Tao Wei)
+
+        New or updated manual translations:
+
+        * Chinese (China) (Zhang Miao)
+
+version 2.29.4
+--------------
+
+        Bugs fixed:
+
+        * [arj] Fixed the way to get the filename from the command output
+          (#606074)
+        * Do not show the password dialog if not needed. check only the files
+          to extract to see if the password prompt is needed. (#605244)
+
+        New or updated application translations:
+
+        * Greek (Kostas Papadimas)
+        * Swedish (Daniel Nylander)
+        * Thai (Theppitak Karoonboonyanan)
+        * Ukrainian (Maxim Dziumanenko)
+
+version 2.29.3
+--------------
+
+	New features and user visible changes
+
+	* Allow to specify different package names using a configuration
+	  file (#603757)
+	* Use the zip format to create cbz files
+	* Use AES128 as encryption type when creating zip files with 7zip
+	* Fixed wrong use of gdk_property_get (#604535)
+
+        New or updated application translations:
+
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * Hebrew (Yaron Shahrabani)
+        * Norwegian Bokmål (Kjartan Maraas)
+        * Romanian (Adi Roiban)
+        * Slovenian Translation (Matej Urbančič)
+
+version 2.29.2
+--------------
+
+	New features and user visible changes:
+
+	* Use the eggfileformatchooser widget to select the file format
+
+        New or updated application translations:
+
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * Low German (Nils-Christoph Fiedler)
+        * Slovenian (Matej Urbančič)
+        * zh_CN (Tao Wei)
+
+version 2.29.1
+--------------
+
+	New features and user visible changes
+
+	* Install the missing packages if a command is not available
+          (#482560)
+
+	Bugs fixed:
+
+	* #590606: drag and drop bug makes file-roller UI unusable as
+          a whole
+	* #600131: encrypt_header is left enabled when creating zip
+          archives
+	* #580624: Visual refresh issues while browsing into the
+          directories included in the archive
+	* #326017: 4th and 5th mouse buttons should control back /
+	  forward
+	* #590027: file-roller will not update files
+
+        New or updated application translations:
+
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * Lithuanian (Gintautas Miliauskas)
+        * Slovenian Translation (Matej Urbančič)
+        * Swedish (Daniel Nylander)
+        * Tamil (Dr.T.Vasudevan)
+
+version 2.28.1
+--------------
+
+        New or updated application translations:
+
+        * Russian (Leonid Kanter)
+
+version 2.28.0
+--------------
+
+        New or updated application translations:
+
+        * Assamese
+        * Breton (Denis)
+        * British English (Philip Withnall)
+        * Catalan (Gil Forcada)
+        * Danish (Kenneth Nielsen)
+        * Hindi (Rajesh Ranjan)
+        * Italian (Milo Casagrande)
+        * Lithuanian (Gintautas Miliauskas)
+        * Marathi (Sandeep Shedmake)
+        * Punjabi/Panjabi (A S Alam)
+        * Romanian (Mișu Moldovan)
+        * Slovenian (Matej Urbančič)
+        * Telugu (Krishna Babu K)
+        * Ukrainian (wanderlust)
+
+        New or updated manual translations:
+
+        * French (Claude Paroz)
+
+version 2.27.92
+---------------
+
+        New or updated application translations:
+
+        * Basque (Iñaki Larrañaga Murgoitio)
+        * Bengali INDIA (Runa Bhattacharjee)
+        * French (Claude Paroz)
+        * Gujarati (Sweta Kothari)
+        * Hungarian (Gabor Kelemen)
+        * Kannada (Shankar Prasad)
+        * Oriya (Manoj Kumar Giri)
+        * Portuguese (Duarte Loreto)
+        * Serbian (sr) (Горан Ракић)
+        * Serbian (sr) (Goran Rakić)
+
+version 2.27.91
+---------------
+
+        Bugs fixed:
+
+        * Fixed bug that prevented to add files with spaces. (#589920)
+        * Fixed opening of cab files (William Jon McCann) (#591868)
+
+        New or updated application translations:
+
+        * Arabic (Khaled Hosny)
+        * Bulgarian (Alexander Shopov)
+        * Deutsch (Mario Blättermann)
+        * Galician (Antón Méixome)
+        * Irish (Seán de Búrca)
+        * Korea (Changwoo Ryu)
+        * Polish (Piotr Drąg)
+        * Romanian (Lucian Adrian Grijincu)
+        * Thai (Theppitak Karoonboonyanan)
+
+        New or updated manual translations:
+
+        * German (Mario Blättermann)
+        * Italian (Milo Casagrande)
+
+version 2.27.90
+---------------
+
+        Bugs fixed:
+
+        * Allow to archive files with spaces and other special characters
+          (#590468)
+        * Support different types of RPM payloads (#590262, #574005)
+        * Fixed building error (#591243)
+
+        New or updated application translations:
+
+        * Brazilian Portuguese (Krix Apolinário)
+        * Breton (Denis Arnaud)
+        * Czech (Adrian Guniš)
+        * Galician (Antón Méixome)
+        * Norwegian Bokmål (Kjartan Maraas)
+        * Swedish (Daniel Nylander)
+        * Vietnamese (Clytie Siddall)
+
+version 2.27.3
+--------------
+
+        Bugs fixed:
+
+        * Do not execute the extraction operation twice when the archive is
+          encrypted. (#392994)
+        * Fixed bug that prevented in some cases the correct extraction of
+          encrypted files. (#588547)
+
+        New or updated application translations:
+
+        * Chinese (Hong Kong) (Chao-Hsiung Liao)
+        * Chinese/Traditional (Chao-Hsiung Liao)
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * Finnish (Ilkka Tuohela)
+        * Hebrew (Yaron Shahrabani)
+        * Tamil (Dr.T.Vasudevan)
+
+        New or updated manual translations:
+
+        * Czech (Marek Černocký)
+        * German (Mario Blättermann)
+
+version 2.27.2
+--------------
+
+        Bugs fixed:
+
+	* Renamed the "Open Destination" button as "Show the Files" (#587501)
+	* Renamed the "Create Archive" command as "Compress" (#300655)
+	* Added a Quit button to the extract dialog. (#586014)
+        * Do not distribute built sources. (#587491)
+        * Auto-resize the property dialog to view the content correctly
+          (#586189)
+
+	Internal changes:
+
+	* Do not copy remote files to a local folder, use gvfs directly.
+
+        New or updated application translations:
+
+        * Czech (Adrian Guniš)
+        * Español (Jorge González)
+        * Estonian (Ivar Smolin)
+        * Hebrew (Mark Krapivner)
+        * Swedish (Daniel Nylander)
+        * Ukrainian (wanderlust)
+
+        New or updated manual translations:
+
+        * Español (Jorge González)
+
+version 2.27.1
+--------------
+
+	New features and user visible changes
+
+	* Added support for lzip compressed archives  (#579467)
+	* Added support for xz compressed archives (#582237)
+
+	Bugs fixed:
+
+	* #582712: Opening multipart encrypted .7z files does not work (file-roller-created .7z)
+	* #584675: Untracked files on fresh clone
+	* #580070: Garbage is displayed when adding a folder
+	* #583863: Wrong explanation for the command 'extract-here'.
+	* #584810: File-roller uses libsexy
+	* #584718: File-roller crashes when opening certain archives with wierd characters in filename
+	* #581102: build error in copy-n-paste/
+	* #578467: Should not use deprecated gtk symbols
+
+	New or updated application translations:
+
+	* Danish (Kenneth Nielsen)
+	* Español (Jorge González)
+	* Estonian (Ivar Smolin)
+	* Greek (Thanos Lefteris)
+	* Kazakh (Baurzhan M.)
+
+	New or updated manual translations:
+
+	* Greek (Μάριος Ζηντίλης)
+
+version 2.26.1
+--------------
+
+	Bugs fixed:
+
+	* #574657: support corrupted rar archives.
+        * #576960: file-roller shows random filesize for zero bytes files.
+        * #577389: File roller hangs and leaks memory when file is dragged /
+          dropped from archive
+
+	New or updated application translations:
+
+	* Estonian (Ivar Smolin)
+	* Swedish (Daniel Nylander)
+	* Serbian (Miloš Popović)
+	* Greek (Thanos Lefteris)
+	* Dutch (Wouter Bolsterlee)
+	* Kannada (Shankar Prasad)
+	* Arabic (خالد حسني)
+	* Assamese (Amitakhya Phukan)
+
+	New or updated manual translations:
+
+	* Español (Jorge González)
+	* French (Claude Paroz)
+	* German (Mario Blättermann)
+	* Greek (Μάριος Ζηντίλης)
+
+version 2.26.0
+--------------
+
+	New or updated application translations:
+
+	* Assamese (Amitakhya Phukan)
+	* Bengali INDIA (Runa Bhattacharjee)
+	* Español (Jorge González)
+	* Estonian (Ivar Smolin)
+	* Galego (Suso Baleato)
+	* Greek (Jennie Petoumenou)
+	* Gujarati (Ankit Patel)
+	* Hebrew (Gil Osher)
+	* Hindi (Rajesh Ranjan)
+	* Lithuanian (Vytautas Rekus)
+	* Maithili (Sangeeta Kumari)
+	* marathi (Sandeep Shedmake)
+	* Oriya (Manoj Kumar Giri)
+	* Russian (Anton Shestakov)
+	* Swathanthra Malayalam Computing|സ്വതന്ത്ര
+	  മലയാളം കമ്പ്യൂട്ടിങ് (Ani Peter)
+	* Tamil (I. Felix)
+	* Telugu (Krishna Babu K)
+
+	New or updated manual translations:
+
+	* British English (Philip Withnall)
+
+version 2.25.92
+---------------
+
+	New or updated application translations:
+
+	* English (British) (David Lodge)
+	* Bulgarian (Alexander Shopov)
+	* Czech (Adrian Guniš)
+	* Hungarian (Gabor Kelemen)
+	* Italian (Milo Casagrande)
+	* Japanese (Takeshi AIHANA)
+	* Swedish (Daniel Nylander)
+	* Turkish (Baris Cicek)
+
+	New or updated manual translations:
+
+	* Swedish (Daniel Nylander)
+
+version 2.25.91
+---------------
+
+	Bugs fixed:
+
+	* #571273: crash in Archive Manager: Opening an archive (ISO)
+	  Patch by Tom Parker.
+	* #560429: MATE Goal: Remove deprecated GLib symbols
+	* #570505: file-roller crashed with signal 5 in IA__g_malloc()
+
+	New or updated application translations:
+
+	* Asturian (Astur)
+	* Aviary.pl (Tomasz Dominikowski)
+	* Basque (Iñaki Larrañaga Murgoitio)
+	* Belarusian Latin (Ihar Hrachyshka)
+	* Brazilian Portuguese (Fabrício Godoy)
+	* Bulgarian (Alexander Shopov)
+	* Chinese (Hong Kong) (Chao-Hsiung Liao)
+	* Chinese/Traditional (Chao-Hsiung Liao)
+	* Danish (Kenneth Nielsen)
+	* Dutch (Wouter Bolsterlee)
+	* Español (Jorge González)
+	* French (Claude Paroz)
+	* Kannada (Shankar Prasad)
+	* Macedonian (Arangel Angov)
+	* Portuguese (Duarte Loreto)
+	* Romanian (Adi Roiban)
+	* Serbian (sr) (Горан Ракић)
+	* Serbian (sr) (Goran Rakić)
+	* Thai (Theppitak Karoonboonyanan)
+	* Ukrainian (Maxim Dziumanenko)
+	* Vietnamese (Clytie Siddall)
+	* zh_CN (甘露(Gan Lu))
+
+version 2.25.90
+---------------
+
+	New features and user visible changes:
+
+	* Use gtkbuilder instead of libglade.
+
+	Bugs fixed:
+
+	* #568881: don't rely on gtk implementation details
+	* #569825: file-roller should use TMPDIR or XDG_CACHE_HOME for
+	  temporary files.
+
+	New or updated application translations:
+
+	* Brazilian Portuguese (Fabrício Godoy)
+	* Catalan (Jordi Mallach)
+	* Deutsch (Christian Kirbach)
+	* Finnish (Ilkka Tuohela)
+	* Hungarian (Gabor Kelemen)
+	* Korea (Changwoo Ryu)
+	* Swedish (Daniel Nylander)
+
+version 2.25.2
+--------------
+
+	Bugs fixed:
+
+	* #567554: An error occurred while adding files to the archive after
+	  encrypt the zip archive.
+	* #566591: File roller cannot create splitted archives with pieces
+	  smaller than 1 Mb
+	* #560647: file-roller wakes up the CPU 2 times per second.
+	* #563208: file-roller can't extract to an ftp mounted directory.
+	  Patch by Gerard Lommerse.
+	* #564029: Unziping an archive from caja fails with certain
+	  characters.
+	* #565879: isoinfo.sh has shebang but is installed -x Patch by Loïc
+	  Minier.
+	* #567901: renaming directory in tarball creates duplicate files
+	* #568260: file-roller installs static libraries by default (for
+	  caja extension)
+	* #566683: remove redundant figures
+
+	New or updated application translations:
+
+	* Español (Jorge González)
+	* Norwegian Bokmål (Kjartan Maraas)
+	* zh_CN (甘露(Gan Lu))
+
+version 2.25.1
+--------------
+
+	Bugs fixed:
+
+	* #564805: Drop libmate/ui dependency. Patch by Saleem Abdulrasool.
+	* #561535: Unable to create archive with OpenOffice document using
+	  caja integration. Patch by Gerard Lommerse.
+	* #559481: Can't open/view file directly from File Roller if there
+	  is a bracket in the directory/file name. Patch by Gerard Lommerse.
+
+	New or updated manual translations:
+
+	* Catalan (Joan Duran)
+
+version 2.24.2
+--------------
+
+	New or updated application translations:
+
+	* Estonian (Ivar Smolin)
+
+version 2.24.1
+--------------
+
+	Bugs fixed:
+
+	* #556623: correct spacings in glade dialogues. Patch by Christian
+	  Persch.
+	* #556619: format not a string literal and no format arguments.
+	  Patch by Christian Persch.
+	* #556571: non secret password typing.
+	* #555282: opening archive on remote directory fails with "Operation
+	  not supported".
+
+	New or updated application translations:
+
+	* Arabic (Anas Afif Emad)
+	* Brazilian Portuguese (Fábio Nogueira)
+	* Czech (Adrian Guniš)
+
+	New or updated manual translations:
+
+	* Finnish (Valto Wirkola)
+
+version 2.24.0
+--------------
+
+	Bugs fixed:
+
+	* #546799: file-roller crashed with SIGSEGV in g_str_hash()
+	* #552031: Add archiving and compression to desktop categories.
+	  Patch by Patryk Zawadzki.
+
+	New or updated application translations:
+
+	* Afrikaans (F Wolff)
+	* Arabic (Anas Afif Emad)
+	* Catalan (Jordi Mallach)
+	* Croatian
+	* Danish (Ask Hjorth Larsen)
+	* Dzongkha (Dawa pemo)
+	* French (Claude Paroz)
+	* Greek (Kostas Papadimas)
+	* Gujarati (Sweta Kothari)
+	* Hungarian (Gabor Kelemen)
+	* Italian (Milo Casagrande)
+	* Kannada (Shankar Prasad)
+	* Lithuanian (Gintautas Miliauskas)
+	* Malayalam (Santhosh Thottingal)
+	* marathi (Sandeep Shedmake)
+	* Romanian (Mișu Moldovan)
+	* Russian (Yuriy Penkin)
+	* Serbian (sr) (Горан Ракић)
+	* Serbian (sr) (Goran Rakić)
+	* Telugu (Krishna Babu K)
+	* Turkish (Baris Cicek)
+
+	New or updated manual translations:
+
+	* Español (Jorge González)
+	* Finnish (Valto Wirkola)
+	* French (Claude Paroz)
+	* German (Mario Blättermann)
+	* Italian (Milo Casagrande)
+
+version 2.23.92
+---------------
+
+	Bugs fixed:
+
+	* #551153: [PATCH] rpm: display empty directories and support device
+	  files. Patch by Eric Piel.
+	* #551146: [PATCH] cpio: escaped filenames and block devices
+	  support. Patch by Eric Piel.
+	* #546541: File associations paragraph corrected. Patch by Claude
+	  Paroz.
+
+	New or updated application translations:
+
+	* British English (David Lodge)
+	* albanian (Laurent Dhima)
+	* Bulgarian (Alexander Shopov)
+	* Croatian (Robert Sedak)
+	* Korean (Changwoo Ryu)
+	* Vietnamese (Nguyễn Đình Trung)
+	* zh_CN (甘露(Lu Gan))
+
+	New or updated manual translations:
+
+	* Vietnamese (Nguyễn Đình Trung)
+
+version 2.23.91
+---------------
+
+	Bugs fixed:
+
+	* #544766: file-roller doesn't remember open-with application.
+	* Sort the archive type list to make it easier to find the desired
+	  type.
+
+	New or updated application translations:
+
+	* Basque (Iñaki Larrañaga Murgoitio)
+	* Chinese (Hong Kong) (Chao-Hsiung Liao)
+	* Chinese/Traditional (Chao-Hsiung Liao)
+	* Español (Jorge González)
+	* French (Claude Paroz)
+	* German (Hendrik Richter)
+	* Oriya (Manoj Kumar Giri)
+	* Polish (Tomasz Dominikowski)
+	* Serbian (Goran Rakić)
+
+	New or updated manual translations:
+
+	* German (Mario Blättermann)
+
+version 2.23.6
+--------------
+
+	Bugs fixed:
+
+	* #350640: sending an empty folder doesn't work.
+	* #548020: "create archive" directory selection not working
+	  correctly. Patch by Marcel Stimberg.
+	* #546698: file-roller-2.23.1/2.23.5 removes r/x bit for anyone but
+	  root from /
+	* #547733: 7-zip tells about invalid command line
+	* #547297: Crash reading zip/7za files with 7z version 4.55.
+	* #546978: wrong icon for folders. Patch by Matthias Clasen.
+	* #547017: segfault in "Open with". Patch by Matthias Clasen.
+	* #546505: Debian packages not supported anymore.
+	* #542424: Tar.bz2 archives create uncompressed archive files.
+	* #546541: Typo and little errors in documentation. Suggested by
+	  Frederic Peters. Patch by Claude Paroz.
+	* LP#26662: file-roller fails to open .Z files.
+
+	New or updated application translations:
+
+	* Arabic (Djihed Afifi)
+	* Belarusian Latin (Ihar Hrachyshka)
+	* Bengali INDIA (Runa Bhattacharjee)
+	* Brazilian Portuguese (Fábio Nogueira)
+	* Español (Jorge González)
+	* Estonian (Ivar Smolin)
+	* Finnish (Ilkka Tuohela)
+	* Hebrew (Gil Osher)
+	* Japanese (Takeshi AIHANA)
+	* Portuguese (Duarte Loreto)
+	* Swedish (Daniel Nylander)
+	* Thai (Theppitak Karoonboonyanan)
+
+	New or updated manual translations:
+
+	* Español (Jorge González)
+	* German (Mario Blättermann)
+
+version 2.23.5
+--------------
+
+	New features and user visible changes:
+
+	* Added a help button to the window used to create archives from the
+	  file manager menu.
+	* Unified the "new" and "save as" dialogs. Allow to specify other
+	  options in these dialogs, such as whether to encrypt the header and
+	  whether to split the archive in volumes.
+	* User's manual: now describes the current file-roller version.
+
+	Bugfixes:
+
+	* #545188: Has incorrect start text for 7zip version 4.43
+	* #545168: no longer possible to open a multi-volume rar from any
+	  part
+	* #545161: file-roller crashed with SIGSEGV in strlen() when
+	  extracting tarball.
+	* #544613: file-roller crashed with SIGSEGV in remove_directory()
+	* #544296: desktop entry does not validate. Patch by Götz Waschk.
+	* #544184: extra space in the mimetype lists. Patch by Sebastien
+	  Bacher.
+	* #544182: configure.ac should use AC_PROG_CC. Patch by Sebastien
+	  Bacher.
+	* Allow to create multi-volume archives from the main window.
+
+	Updated application translations:
+
+	* Arabic (Djihed Afifi)
+	* Dutch (Wouter Bolsterlee)
+	* Norwegian Bokmål (Kjartan Maraas)
+	* Macedonian (Arangel Angov)
+	* Occitan (Yannig Marchegay (Kokoyaya))
+	* Galego (Ignacio Casal Quinteiro)
+	* Brazilian Portuguese (Fabrício Godoy)
+	* Español (Jorge González)
+	* Czech (Adrian Guniš)
+	* Estonian (Ivar Smolin)
+
+	Updated manual translations:
+
+	* Swedish (Daniel Nylander)
+
+version 2.23.4
+--------------
+
+        New features and user visible changes:
+
+	* Added support for reading and extracting alz archives (#521324).
+	* Added support for rzip compressed files (#503000).
+	* Added support for creating self-extracting zip archives.
+	* Added ability to create multi-volume archives.
+	* Added support for header encryption.  Implemented header encryption for
+	  7zip and rar archives.
+	* Use the 7z command to read/write zip, cbr, cbz archives, and to
+	  read cabinet, arj, rar and iso archives.
+	* Try to get the mime type from magic numbers if all other methods
+	  fail.
+	* Now the progress dialog is exact when adding, extracting or deleting
+	  files for tar, zip, rar and 7zip archives (#153281).
+	* Do not add the backup files, that is files ending with ~, to the
+	  archive.
+	* Operations are now more efficient for archives with a long file
+	  list.
+
+	Bugfixes:
+
+	* Fixed bug #343201 – Use p7zip for RAR archives?
+	* Fixed bug #529395 – file-roller will not open 256 AES zip files
+	* Fixed bug #515194 – PK 4.5 Zip files
+	* Fixed bug #519046 – add x-cbr and x-cbz support
+	* Fixed bug #336790 – file-roller can't open winzip-10 encrypted files (AES)
+	* Fixed bug #539629 – Create archive for Trash/Computer
+	* Fixed bug #506698 – 7z Filename (header) Encryption request
+	* Fixed bug #542541 – icon lookup code is broken
+	* Fixed bug #504584 – Incorrect comportment when extracting multi part
+	  rar files.
+
+	Internal code:
+
+	* Simplified the way to register commands.
+	* Allow to compile with Gtk+ 2.12 as well.
+
+version 2.23.3
+--------------
+	* Added partial support for tar archives compressed with 7zip.
+	* Display the progress dialog if the operation lasts more than 5
+	  seconds.
+	  Display the progress dialog without delay if extracting or converting
+	  an archive.  After the extraction add to the progress dialog the
+	  button to open the destination folder and after the conversion add
+	  the button to open the newly created archive.
+	  Removed the 'view folder after extraction' option from the
+	  extraction dialog.
+	* Removed the preview-file stock item, use gtk_stock_open instead.
+	* Do not use the sh command to exec the process, use the utility command
+	  directly to allow to stop the process properly
+	* Use g_io_channel to read the command output.
+
+version 2.23.2
+--------------
+
+	* Fixed bug #480190 – files added to archive are wrongly placed in root
+	* Fixed bug #535967 – Meaningless message: Open Go to the next visited
+	  location selected folder
+	* Fixed bug #536055 – Support for special characters in rpm archives
+	* Fixed bug #527271 – Ctrl-Q should quit file-roller.
+	* Fixed bug #532789 – file-roller crashes when modifying archive,
+	  data destroyed
+	* Fixed bug #532255 – file-roller silently allows the user to exit in
+	  the middle of an operation.
+
+version 2.23.1
+--------------
+
+        New features and user visible changes:
+
+	* Show an alert dialog when the 'save as' operation is completed, and
+	  allow the user the open the newly created archive.
+	* Load and save the 'add folder' dialog options.  Allow to clear the
+	  options as well.
+	* Allow to specify a password when converting an archive to another
+	  format.
+	* Added keyboard shortcut to deselect all.  Moved add files and add
+	  folders down in the edit menu.  Moved stop and reaload at the bottom of
+	  the view menu.  Removed the 'sort by' submenu.
+	* Added an exclude folder filter to specify sub-folders to ignore when
+	  adding a folder recursively.
+	* Added ability to extract folders from the folder
+	  pane using drag & drop.
+
+	Bugfixes:
+
+	* Fixed bug #523158 – exclamation mark in RAR password
+	* Fixed bug #516043 – status bar / progress bar artifact
+	* Fixed bug #512474 – Visual glitches at startup
+
+	Internal code has been modified in order to remove the usage of
+	deprecated libraries and API:
+
+	* now the GIO library is used to access the filesystem instead of
+	  the deprecated mate-vfs library.
+	* gtk+ is used to get the applications and mime types icons.
+	* replaced mate_url_show with g_app_info_launch_default_for_uri.
+	* use g_app_info_launch_default_for_uri to show the help dialog.
+	* use the new tooltips API.
+	* use g_key_file instead of mate_config for loading/saving sessions.
+	* use GRegex instead of the custom utf8_fnmatch function.
+
+version 2.22.0
+--------------
+
+	* Fixed bug #518680 – Right click "Extract Here" action: Password dialogue
+	  doesn't have its title set.
+	* Fixed bug #504155 – Crash when click on create before it selects the
+	  current directory
+	* Updated translations.
+
+version 2.21.92
+---------------
+	* Updated translations.
+
+version 2.21.91
+---------------
+	* Updated translations.
+
+version 2.21.2
+--------------
+
+	New features:
+
+	* Added the ability to find the files of the archive with the
+	  specified filename.
+
+	Bug fixes:
+
+	* Fixed bug #303213 – default to extract in home instead of tmp
+	* Fixed bug #509933 – 2.21.1 does not compile
+
+version 2.21.1
+--------------
+
+	New features:
+
+	* Implemented the ability to update the files in an archive
+	  when the files are modified with an external application (#109767).
+	* Added support for lzma files, both normal files and tar-files
+	  compressed by lzma (#502999).
+
+	Bugfixes:
+
+	* Fixed bug #487012: Check for the existence of 'filename.tar.{bz2,gz}'
+	  and only if it doesn't exist it makes file-roller call tar with
+	  the '-cf' switch.
+	* Fixed bug #487079: Key F10 can not activate the main menu.
+	* Fixed bug #499958: file size displayed incorrectly on .Z file
+	* Fixed bug #499558: File-roller is unable to expand some zip files
+	* Fixed bug #458399: fix duplicated hotkeys, assign new hotkeys, add
+	  some user-friendly features
+	* Fixed bug #475166: Failed assertion when --extract-here is used
+ 	  without --extract-to
+ 	* Fixed bug #505987: Caja extension directory changed to -2.0
+ 	* Fixed bug #487012: file-roller causes gnu tar >= 1.19 to give
+	  warnings when creating tar-archives
+	* Fixed bug #490891: skips files when opening an old ARJ archive
+	* Fixed bug #504597: Direct compare on string
+
+version 2.20.2
+--------------
+	* Updated translations: Occitan (oc), Galician (gl), Arabic (ar),
+	Slovenian (sl), Hebrew (he), Hungarian (hu).
+
+version 2.20.1
+--------------
+	* Fixed crash after cancelling an archive creation from the Caja
+	context menu. (bug #482203)
+
+version 2.20.0
+--------------
+	* Fixed bug #473158 - ask-password.glade is missing
+	* Fixes bug #463968 - file-roller crashed with SIGSEGV in
+	  g_closure_invoke()
+	* Removed old check that prevented extraction to remote locations
+	  via DnD.
+
+version 2.19.92
+---------------
+	* Display empty folders in 7zip archives.
+
+version 2.19.91
+---------------
+	* Fixed bug #467482 - [gutsy regression] "extract here" no longer puts
+	  extracted file "here".
+	* Fixed bug #468677 - file-roller doesn't open folders if you go up
+	  one level.
+	* Fixed bug #469528 - file-roller crashed with SIGSEGV in strlen()
+	* Fixed bug #469221 - extract a package on an NTFS partition doesn't
+	  work.
+
+version 2.19.90
+---------------
+	* Fixed copy & paste of folders with tar archives.
+	* Fixed execution of the sidebar context menu commands.
+	* Fixed renaming of files.  Do not change the current location when
+	reloading the archive after a rename.
+	* Fixed bug #144216 - can't open compressed .EXE files
+	* Fixed bug #463251 - remove #include <mate.h> lines
+	* Fixed bug #463235 - Can't add an empty directory with --add option.
+	* Fixed bug #463753 - replace mate_help_display.
+	* Fixed bug #463887 - Progress bar height should be smaller.
+
+version 2.19.4
+--------------
+	* Get the mime type from the file content to find out the default
+	  application to use when viewing a file.
+	* Added a sidebar context menu.
+	* Unescape the archive filename in the tree view.
+	* Fixed bug #450150 - Translate program description correctly.
+	* Fixesd bug #461356 - Please add comment to this time string.
+
+version 2.19.3
+--------------
+	* Added support for Drag&Drop among file-roller	windows.
+	* Added a folders pane.
+	* Fixed daylight saving time calculation.
+	* Save and restore the filename column width.
+	* Fixed bug #402756 - Can not open a file whose name is in
+	non-ascii encoding.
+
+version 2.19.2
+--------------
+	* Added support for cut/copy and paste among different windows.
+	* Fixed bug #171619 - uses MateIconTheme which is deprecated
+	* Fixed bug #398824 - crash in Archive Manager: Opened a lha-archiv
+	* Fixed bug #438340 - file-roller has problems with files starting
+	  with a dash ("-")
+	* Fixed bug #402760 - "modified time" column is displayed blank in
+	  zh_CN.GB18030 locale when creating a new archive
+	* Fixes bug #440662 - extraction of files with special characters only
+	  when in directory.
+	* Fixes bug #439154 - file-roller: fails to create archives from
+	  files starting with '#'
+
+version 2.19.1
+--------------
+	* Added ability to load and save remote archives, to add remote files
+	  to an archive and to extract to remote locations.
+	* Make sure the extract_here destination is unique.
+	* View the destination folder after performing an
+	  extract_here operation if the corrisponding mateconf key is active.
+	* The encrypted emblem is now shown on the right of the name column,
+	  this way the mime-type icon is alway visible.
+	* The error dialog is now HIG compliant.
+
+version 2.18.0
+--------------
+	* Use standard password blank character instead of stars (#407461)
+	* Removed Application from the .desktop categories.
+	* Updated translations: zh_CN, lt, gu, mg, sl, ku, sr, bn_IN, ca,
+	  nl, hu, ru, ro.
+
+version 2.17.92
+---------------
+	* Fixed bug #409433 – Feisty Herd4: File-Roller shows directory
+	  name twice.
+
+version 2.17.91
+---------------
+	* The password dialog is HIG compliant (#396775)
+	* Disable the ok button in the 'open with' dialog if no
+	  application has been selected (#395074).
+
+version 2.17.90
+---------------
+	* Updated translations: th, de, sv.
+
+version 2.17.5
+--------------
+	* Fixed bug #387602 – Cannot open self-extracting files (*.exe)
+	* Fixed bug #384499 – File-roller does not handle filenames starting with
+	  a dash (-) correctly.
+	* Fixed bug #384504 – File-roller does not handle filenames containing
+	  a backquote (`) correctly.
+	* Fixed bug #374478 – crash in Archive Manager: using archive
+	  manager to...
+
+version 2.17.4
+--------------
+	* Use the XDS protocol to extract dragged files.
+ 	  Fixes bug #102501 – Drag-and-drop extract operation should run
+ 	  instantly in background.
+	* New app icons from Jakub Steiner
+	* Made action icons themable.
+	* Fixed bug #324154 – file-roller can't display modified time on
+	  non-utf8 locale
+
+version 2.17.3
+--------------
+	* Fixed ISO images extraction.
+	* Fixes bug #371582 – Dead code in window.c
+	* Fixed bug #367385 – [WISHLIST] file-roller does not close after
+	  closing last open archive in violation of HIG
+
+version 2.17.2
+--------------
+	* Make stock icons themable. (#362922)
+	* Do not add temp archives to the recent files list
+	* View as Java Archive (jar) (#43975)
+	* Do not display a 100% progress bar when the last file is processed.
+	* Rename the extraction folder if a folder with	the same name already
+	  exists.
+	* Fixed bug #349824 – does not work with 7zr.
+	* Fixed bug #350192 – [PATCH] Make the Ok button to be default in
+	  delete dialog.
+	* Fixed bug #160991 – Crash while trying to extract from a .sit
+	* Fixed bug #355307 – If uncompressed name not specified in compressed
+	  file, cannot view, bad extracted filename.
+	* Fixed bug #348211 – Please distinguish "View" menus/buttons for
+	  translation.
+	* Fixed bug #347019 – incorrect error message shown when trying to open
+	  incomplete archive
+	* Fixed bug #338210 – Context menu option "open files" not available
+	  for folders.
+	* Fixed bug #348524 – rar archives give ERROR: Unknown option: idp
+	* Fixed bug #370754 – Manual menu item should be 'Contents' not 'Help'
+
+version 2.17.1
+--------------
+	* Added ace and cpio support.
+	* Allow to store, view and extract empty folders (#162792).
+	* Use the file-chooser dialog to extract files.
+	* Fixed bug #303213 - default to extract in home instead of tmp
+	* Fixed bug #304362 - crash extratcting .sit stuffit files
+	* Fixed bug #359629 - rpm support on solaris failing
+
+version 2.16.1
+--------------
+	* Updated translations: ar, en_GB, et, ka, nn.
+
+version 2.16.0
+--------------
+	* Updated translations: ja, sv, or, zh_CN, ml, ca, mr, lv, de, mk,
+	  pt_BR, lt, pt, hu, mk, el, ta, bg, bn_IN, ro.
+
+version 2.15.93
+---------------
+	* Prompt for the password when an archive is encrypted
+	  instead of simply displaying a warning on how to spicify a password
+	* Do not use the encrypted emblem for folders.
+	* Added X-MATE-Bugzilla-Version field to the .desktop file.
+	* Fixed bug #349095: Filetypes seriously screwed up in .zip files
+	* Fixes bug #153642: Temporary files are created on the current
+	  directory
+
+version 2.15.92
+---------------
+	* Fixed tar archives creation.
+
+version 2.15.91
+---------------
+	* Fixed bug #343739 – Seems to not escape file names correctly.
+	* Fixes bug #340050 – tar permissions are not preserved.
+	* Fixed bug #339913 – "create archive" option does not work on some
+	  filenames.
+	* Fixed bug #347624 – fix build with gcc 2.95
+	* Fixed bug #347416 – RecentFilesMenu - OpenRecentMenu converting
+	* Update translations: eu, zh_HK, zh_TW, nb, et, fr.
+
+version 2.15.90
+---------------
+	* Update translations: cs, dz, fi, gu, ko, sk, sv.
+	* Update manual translations: sv.
+
+version 2.15.1
+--------------
+	* Migrated from EggRecent to GtkRecent.
+	* Fixed bug #345052 – file roller should remember the size of the
+	  window when it closes.
+	* Fixed bug #345278 – File operations on the Edit menu should be moved
+	  to the Archive menu.
+	* Fixed bug #342251 – backspace does not go up a directory (ala
+	  Caja)
+	* Fixed bug #336078 - [PATCH] Convert from popt to GOption
+	* Fixed bug #317782 - file-roller Cygwin build fixes
+	* Fixed bug #152039 - Password Protected Files must be displayed
+	  differently.
+
+version 2.14.3
+--------------
+	* Fixed bug #338944 - Open Files..., can't delete programs
+	* Updated translations: et.
+	* Updated manual Spanish translation.
+
+version 2.14.2
+--------------
+	* Fixed filename escaping in tar archives.
+
+version 2.14.1
+--------------
+	* Ask for the password when trying to open a password protected rar
+	  or arj archive.
+	* Updated the user's guide.
+	* Added help button to all the dialogs.
+	* Install theme-friendly icon.
+	* Fixed bug #335035 - mistake in file-roller's License.
+	* Fixed bug #336908 - backshalshes not supported in paths.
+	* Fixed bug #336632 - Help for Extract Dialog pointing to incorrect
+	  location.
+	* Fixed bug #336854 - crash on twice unpacking to the same location.
+	* Fixed bug #335659 - File Roller should move not copy files.
+	* Fixed bug #335368 - Crash when opening large 7z-archive.
+	* Fixed buf #326193 - file-roller creates empty 7zip archives.
+	* Fixed bug #337754 - Drag and Drop extraction only works when source
+	  already has focus.
+	* Fixed bug #337331 - Cut/Paste same file results in loss of file.
+
+version 2.14.0
+--------------
+	* Added license button to the about dialog.
+	* New translations: Georgian (ka) and Breton (br).
+	* Updated translations: Ukrainian (uk), Welsh (cy), Hindi (hi),
+	  Swedish (sv), et, Czech (cs), Italian (it), Romanian (ro).
+
+version 2.13.92
+---------------
+	* Fixed bug #331601 – Caja doesn't display the "Extract here" menu
+	  option for files which have a ".ps.gz"
+
+version 2.13.91
+---------------
+	* Fixed bug #330315 - ps.gz files not associated
+	* Fixed bug #328942 - Don't translate empty strings
+
+version 2.13.90
+---------------
+	* Fixed bug #328473 – should not distribute pre-mate-2.8 mime files
+	* Fixed bug #328331 - Crashes on extraction
+	* Fixed bug #328036 - Add GTK category to the .desktop file
+
+version 2.13.4
+---------------
+	* Fixed bug #139912 - file roller is not a "system tool".
+	* Fixed bug #168388 - file roller shouldn't create an ARCHIVE_FILES
+	  folder if the archive only have one root folder
+	* Fixed bug #326810 - file-roller escaping issue with '#' by example.
+	* Removed obsolete .applications file.
+
+version 2.13.3
+---------------
+	* Updated translations: ca, zh_HK, zh_TW, vi, fi, ja, be, hy.
+
+version 2.13.2
+---------------
+	* Fixed bug #323713: "Save as" should default to current archive
+	  filename
+	* Fixed bug #315069: file-roller: drag 'n drop doesn't work for more
+	  than 1 file.
+	* Fixed bug #323534: Passwords improperly escaped for zip files
+	* Do not open a progress dialog	when dragging files, use a progressbar
+	  in the statusbar instead.
+	* Fixed bug #316364: Caja dependency should be optional
+	* Fixed bug #311821: ascending and descending indicators are opposite
+	  from expected.
+	* Fixed bug #317423: Conflicting mnemonic in "Extract" dialog.
+	* Fixed bug #323068: file-roller fails in chosing extract-to directory
+	* Fixed bug #322197: Improve Naming Filename when create new Archive
+	  file
+	* Fixed bug #316564: needs unzip AND zip.
+	* Simplified the add dialog populating the file type combobox with the
+	  extensions instead of the descriptions.
+	* Set progress dialog display delay to 1 second.
+	* More HIG compliant progress dialog.
+	* Use a single command execution to add many files and folders to an
+	  archive to speed up the operation.
+	* Allow to stop creation of a new archive.
+	* Correctly associate fr to 7zip files.
+
+version 2.13.1
+---------------
+	* Fixed bug #319600: compilation under AIX 5.1 aborts with ".atoll
+	  not found".
+	* Fixed bug #319343: file-roller won't let me delete files from an
+	  archive which contain a dollar sign ($).
+	* Removed the matecomponent component.
+
+version 2.12.1
+---------------
+	* Updated translations: it, bn, sv, ku, vi, eu.
+
+version 2.12.0
+---------------
+	* New and updated translations.
+
+version 2.11.92
+---------------
+	* Do not allow Drag and Drop on the same window.
+
+version 2.11.91
+---------------
+	* Fixed bug #311437: [breezy] can't extract a filename from a directory
+	  with a space in it from ISO.
+	* Ported the help documents to mate-doc-utils.
+	* Fixed bug #312243: wrong zoo and 7-zip extensions.
+	* Fixed bug #312240: escape sequences in rar output.
+	* Fixed bug #312246: FR does not read all pending output.
+
+version 2.11.90
+---------------
+	* Fixed bug #105521: single click: list view should have mouse-over.
+	* Fixed bug #310015: crash when listing 7-zip archive with 7za 4.x
+	* Updated translations: de bg zh_TW gl sr sr@Latn gu ja fi
+
+version 2.11.2
+--------------
+	* Removed copy/move/rename/delete archive commands.
+	* The recent files items are in the Archive menu instead of a submenu.
+	* Changes in the properties dialog: align labels to left, allow window
+	  resizing, ellipsize filename and path labels.
+	* Fixed bug #142860: File-roller displays files larger
+	  than 2GB as 2GB.
+
+version 2.11.1
+--------------
+	* Do not create a _FILES folder anymore (#167261).
+	* Allow to extract more archives at once.  Added an --extract-here
+	  command line option.
+	* Use g_filename_display_name and g_filename_display_basename when
+	  appropriate.
+	* Prevent renaming of files to silently overwrite other existing
+	  files (#168287).
+	* Header cleanup (#171618).
+	* Allow stock labels to show through, be nice to translators (#172867).
+
+version 2.10.2
+--------------
+	* Fixed bug #300238: Unable to gunzip "gzip'd ubuntu mail archives".
+	* Plugged a little memory leak related tooltips.
+
+version 2.10.1
+--------------
+	* Fixed bug #171195: File-Roller will not tar up any subdirectories
+	  directly under /
+	* Fixed bug #170842: Toolbar buttons too wide.
+	* Fixed bug #170329: Aborting File Add can sometimes crash the
+	  application.
+	* Fixed bug #170258: file-roller can't open for preview files with a
+	  white space in filename.
+	* Fixed bug #169818: Archive menu item to be disabled if no files are
+	  selected.
+	* Fixed bug #172219: Select All and Deselect all doesnt work properly.
+	* Added ellipsize property to the list view.
+	* Do not activate the first row after reordering the list in single
+	  click mode.
+	* Fixed bug in recent files view.
+
+version 2.10.0
+--------------
+	* Updated translations: it, sr, sr@Latn, lt, hu.
+
+version 2.9.92
+--------------
+	* Fixed bug #157698: Default new archive name as the first-added object.
+	* Fixed bug #168477: Create Archive should leave status window in the
+	  background while creating multiple folder archives.
+	* Fixed bug #159952: file-roller compilation error.
+	* Fixed bug #166658: Archives should only be processed if command-line
+	  utility is present.
+	* Fixed bug #144953: ISO reading assumes Joliet and Rock Ridge
+	  extensions.
+
+version 2.9.91
+--------------
+	* Updated recent-files from libegg.
+
+version 2.9.4
+-------------
+	* Fixed bug #100927: should use MATE mouse click settings.
+
+version 2.9.3
+-------------
+	* Fixed bug #132555: file-roller does not honor system-wide toolbar
+	  setting.
+	* Fixed bug #162188: RAR archives' directories are not recognized
+	  properly.
+	* Fixed bug #162324: Cannot drag files from gthumb to file-roller
+
+version 2.9.2
+-------------
+	* Fixed bug #152129: Unnecessary call to _window_update_sensitivity()
+	* Fixed bug #154821: file-roller can't open archives with extension
+	  .lha
+	* Fixed bug #154398: Remove some useless code.
+	* Fixed bug #154233: load_icon_file optimization.
+	* Fixed bug #161141: Time of modifcation incorrect
+	* Fixed bug #161147: View->Toolbars inconsistent across multiple
+	  instance.
+	* Fixed bug #160617: "Create archive" context menu item does not
+	  support single-file bz2 or gz
+	* Fixed bug #160401: create archive doesn't work on read-only CD-ROM
+	* Fixed bug #159906: the configure.in should update its mate-vfs
+	  requirement.
+	* Fixed bug #160221: No more "extract here" entry in Caja
+ 	  context menu.
+	* Use 'extract to...' if the archive location is write only.
+	* Fixed loading of rar archives with directories.
+
+version 2.9.1
+-------------
+	* Added a 'Open Recent' menu item on the toolbar.
+	* Added password support and testing to RAR archives.
+	* Fixed bug #145162] .omf.out and omf_timestamp files should not be in
+	  cvs.
+	* Fixed bug #159172: tooltips leaked.
+	* Fixed bug #159464: Should not use deprecate mime API
+	* Make logo icon to use the theme icon.
+
+version 2.9.0
+-------------
+	* Added AR, Debian and 7-zip archives support.
+	* Open the "open with" dialog if the file type does not
+	  have a registered application; get rid of the internal viewer.
+	* Make the text invisible for the password entries.
+	* Removed Select All/Deselect All from the context menu.
+
+version 2.8.0
+-------------
+	* Updated translations.
+
+version 2.7.5
+-------------
+	* Fixed bug #151427: Compilation error.
+	* Fixed bug #150672: Back button is broken
+	* Fixed bug #150329: File roller creates predictable /tmp directories
+	* Fixed bug #150327: Adding a directory to archive hangs file roller
+	* Fixed BUG #150328: avoid crashing while DND of 'Home' icon into
+ 	  file-roller.
+	* Updated the recent-files sources from libegg.
+
+version 2.7.4
+-------------
+	* Updated the recent-files sources from libegg.
+	* Added more mime types to the desktop file.
+
+version 2.7.3
+-------------
+	* Added the supported mime types to file-roller.desktop
+
+version 2.7.2
+-------------
+	* Fixed bug #144041: [Solaris] gtar will not be in path
+	* Do not display the "operation stopped" dialog (bug #144171).
+	* Fixed a leak and the display of the error message (bug #145440).
+
+version 2.7.1
+-------------
+	* Fixed bug #144455: Make file-roller session aware even when no
+	  archive is opened.
+	* Fixed bug #144079 (iso is not listed as a archive in open dialog)
+	* Hide the main window when in batch mode.
+	* Allow to extract all the files, not only the selected files, from
+	  an ISO image.
+
+version 2.7.0
+-------------
+	* Added read/extract support for ISO files. (bug #142316)
+	* Split the add dialog into two dialogs, one used to add files and the
+	  other one used to add folders.
+	* Ask the distination folder after pasting a selection, this allows
+	  the user to create new folders in the archive.
+	* Added content size and compression ratio in the properties dialog.
+	* Extract selection without creating the whole path. (bug #140971)
+
+version 2.6.1
+-------------
+	* Fixes reading of filenames with spaces in tar archives.
+	* Fixes bug #138154 (File-Roller Crash when dropping a file dragged
+	  from archive).
+	* Remove a file from the recent file list if the file could not be
+	  loaded.
+	* Add RPM and Stuffit to the recent file list mime types.
+
+version 2.6.0
+-------------
+	* Updated translations.
+
+version 2.5.7
+-------------
+	* Fixed bug #137183 (Crash when opening tar-file when using 24 hour
+	  time format).
+	* Updated manual.
+	* Added localized manuals for de, es, fr, it, ja, ko, sv,
+	  zh_TW, zh_HK, zh_CN.
+
+version 2.5.6
+-------------
+	* Use a better logic to parse the tar output.
+	* Updated to work with the new filechooser api.
+
+version 2.5.5
+-------------
+	* Use gtar if present, otherwise use tar.
+	* Fix the "Zip Objects" command.
+	* Remove C++ style comments.
+	* Fix bug #133998 (schemas file must not be removed during distclean).
+	* Updated manual.
+	* Fix the password protected detection code.
+	* Handle the delete_event event for the progress dialog.
+	* Add a filter for the "save archive" and "new archive" dialogs,
+	  simplify the filter for the "open archive" dialog.
+
+version 2.5.4
+-------------
+	* Fix bug #105739 (Can't open tar.gz files on Solaris).
+	* Fix bug #133358 (Small HIG fix for column header).
+	* Allow to extract more archives at once with the "Extract Here"
+	  command.
+	* Use GType instead of guint.  Fixes segfaults on 64-bit architectures.
+	* Do not show the new window until we are sure that the archive
+	  has been opened with success.
+
+version 2.5.3
+-------------
+	* Simplify the "Load Options" and "Save Options" commands in the
+	  Add dialog.
+	* Make the path column visible only if the list mode is set to flat.
+	* Fix the "Save as" dialog.
+	* Updated the recent-files stuff from libegg.
+	* Changed Caja context menu item to "Zip Objects" and simplied
+	  the dialog.
+	* Always use a close button in the error dialogs.
+
+version 2.5.2
+-------------
+	* Replace GtkFileSelection with GtkFileChooser everywhere.
+	* Use mate_url_show instead of calling caja explicitly.
+	* Do not use mkdtemp which does not exist on Solaris9.
+	* Do not destroy the file selector if the archive was not created
+	  successfully.
+	* Do not add the password argument if the password is an empty string.
+	* Use the stock system for the commands Add, Extract and View.
+	* Updated the egg_recent stuff.
+	* Changed name to "Zip Creator" and category to System Utility.
+	* The preferences dialog has been removed.
+	* The add dialog has been simplyfied.
+	* The extract dialog is a GtkFileChooser in folder mode now.
+
+version 2.5.1
+-------------
+	* Fix crash upon LZH file opening (#129794).
+
+version 2.5.0
+-------------
+	* Added unstuff and RPM support.
+	* Added ability to rename files and folders.
+	* Added Cut/Copy/Paste operations.
+ 	* Add files and folders to the current directory.
+	* Added ability to go back and forward in location history.
+	* Open the archive in a new window if the current window already has
+	  an archive opened.
+	* Exit closes only the current window instead of closing all the
+	  windows.
+	* Zip archives: ask to enter a password if the archive is password
+	  protected.
+	* Remember extraction dialog options.
+	* Substitute "Extract To.." with "Extract Here" in the Caja
+	  context menu.
+
+version 2.4.2
+-------------
+	* Do not compile with the DISABLE_DEPRECATED macros defined.
+	* Handle filenames with ambiguous chars (like []*) in zip archives.
+	* Handle passwords with spaces in zip archives.
+
+version 2.4.1
+-------------
+	* Fixed bug that prevented the user to view the content of a
+	  compressed file.
+
+version 2.4.0
+-------------
+	* Updated recent files stuff from libegg.
+
+version 2.3.6
+-------------
+	* Use unrar if rar is not available.
+
+version 2.3.5
+-------------
+	* Minor bugfixes.
+
+version 2.3.4
+-------------
+	* Updated manual.
+	* Minor bugfixes.
+
+version 2.3.3
+-------------
+	* Updated manual.
+	* Make dialogs more HIG compliant.
+	* Removed "Extract Here" and "Extract in a Folder" from the
+	  Caja context menu.
+	* Minor bugfixes.
+
+version 2.3.2
+-------------
+	* Added ARJ archives support.
+	* The delete operation move the archive to the trash instead of
+	  deleting it from the disk.
+
+version 2.3.1
+-------------
+	* Added ability to convert archives.
+	* Popup a progress dialog when a long operation is underway,
+	  instead of using a progress bar in the status bar.
+	* Give more detailed information about the current operation (only
+	  for tar archives at the moment).
+	* When creating new archives, if the user does not specify the
+	  extension, use 'tgz' as default instead of giving an 'archive
+	  type not supported' error.
+	* Associate File Roller to the zoo archive format.
+	* Use a text entry instead of the option menu for the location.
+	* Do not allow dangerous operations, that is operations that if stopped
+	  can cause the lost of the archive, such as adding and
+	  removing files, to be stopped.
+	* Allow to stop folders reading.
+	* Added ability to test zoo archives.
+	* New toolbar icons.
+	* Bugfixes.
+
+version 2.3.0
+-------------
+	* Added ZOO archives support.
+	* Read folders asynchronously.
+	* Display a better error message when the user forgets to specify
+	  the archive name in the "add to archive" dialog.
+	* Handle tar archives with a ':' in the path.
+
+version 2.2.0
+-------------
+	* Updated the manual.
+
+version 2.1.5
+-------------
+	* Handle LHA archives created on Windows.
+	* Bugfixes.
+
+version 2.1.4
+-------------
+	* Bugfixes.
+
+version 2.1.3
+-------------
+	* Multi Drag & Drop support.
+	* Session management support.
+	* HIG compliant dialogs.
+	* Added archive operations in the caja context menu.
+	* Scripts removed.
+	* Bugfixes.
+
+version 2.1.2
+-------------
+	* Archive loading is 3 times faster.
+	* Recognize zip archives regardless of the file extension.
+
+version 2.1.1
+-------------
+	* Use egg-recent for handling recent files.
+	* Use mate-icon-lookup to get icons.
+
+version 2.1.0
+-------------
+	* Do not read the archive in non-interative mode, this speeds up
+	  extraction with Caja scripts.
+	* Fixed russian manual.
+
+version 2.0.2
+-------------
+	* Bugfixes.
+
+version 2.0.1
+-------------
+	* Added a compression level option.
+	* Added ability to extract multiple archives from command line.
+	* Removed the "install Caja scripts" option, now simply install
+	  scripts the first time you start File Roller.
+	* Added ability to hide toolbar and statusbar.
+	* Re-arranged menus.
+	* Recent archives are shown in a submenu.
+	* Uses mateconf instead of mate-config.
+	* Builds on systems that do not have the FNM_CASEFOLD constant
+	  defined (e.g. Solaris).
+
+version 2.0.0
+-------------
+	* New option to install and remove the caja scripts automatically.
+
+version 1.109
+-------------
+	* Added option to view the destination folder after extraction.
+	* Updated documentation.
+	* bugfixes.
+
+version 1.108
+-------------
+	* re-arranged menus.
+	* bugfixes.
+
+version 1.107
+-------------
+	* added support for encrypted zip archives.
+	* added test operation for zip archives.
+	* added mnemonics to all dialogs.
+	* use Caja as document viewer.
+	* user manual.
+	* handle archives with a ';' in the name.
+	* use g_spawn to create processes.
+
+version 1.106
+-------------
+	* the user can specify files to exclude when adding files with
+	  the wildcard.
+	* the user can save and load add dialog options.
+	* ask whether to overwrite the file when copying, moving or renaming
+	  an archive.
+	* added ability to rename compressed files.
+
+version 1.105
+-------------
+	* The document viewer shows the components list in a submenu.
+	* bugfixes.
+
+version 1.104
+-------------
+	* bugfixes.
+
+version 1.103
+-------------
+	* bugfixes.
+
+version 1.102
+-------------
+	* bugfixes.
+
+version 1.101
+-------------
+	* ported to MATE 2.
+
+version 0.8
+-----------
+	* added support for single files compressed with gzip, bzip, bzip2,
+	  compress, lzop.
+	* non-interactive mode to automatically add files to archives.
+	* added two Caja scripts to extract archives and add files to
+	  archives.
+	* use the MIME database to decide whether to use the viewer or
+	  the associated application when double-clicking on a file, or
+	  ask the user what to do if no entry is available in the database.
+	* bugfixes.
+
+version 0.7
+-----------
+	* the user can choose the columns to show in the file list.
+	* when extracting to a non existing directory ask the user whether
+	  to create it.
+	* bugfixes.
+
+version 0.6
+-----------
+	* non-interactive mode to automatically extract archives.
+	* can open multiple files at command line.
+	* works faster when adding and removing a lot of files from
+	  compressed tar archives.
+	* works better when files in archives have strange characters.
+	* fixed a bug when adding files with wildcard.
+	* fixed a bug when 'view all files' mode is used.
+	* fixed a bug when using tbz and tbz2 extensions.
+	* minor bugfixes.
+
+version 0.5
+-----------
+	* added support for ear, war, tbz and tbz2 archives (me, Claudio Bley).
+	* better rar archives support (Claudio Bley).
+	* new icon (Jakub Steiner).
+	* the document viewer uses the locale language.
+
+version 0.4
+-----------
+	* added support for multiple windows.
+	* fixed some bugs concerning old versions of tar.
+
+version 0.3
+-----------
+	* added rar and lha support.
+	* the user can add, remove, extract files with wildcard.
+	* fixed drag and drop of directories.
+
+version 0.2
+-----------
+	* added jar archives support.
+	* works even with big archives.
+	* full drag & drop support.
+	* double clicking on an file views its content.
+	* added a file context menu.
+	* the user can specify the file type when creating a new archive.
+	* the user can specify the max length of the history list.
+	* the user can interrupt a long operation.
+	* toolbar buttons show the insensitive state correctly.
+
+version 0.1
+-----------
+	* first public version.
+

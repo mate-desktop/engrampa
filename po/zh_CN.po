@@ -1,0 +1,1425 @@
+# zh_CN translation for file-roller.
+# Copyright (C) 2003, 2004, 2005, 2006, 2008, 2009, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the file-roller package.
+# Funda Wang <fundawang@gmail.com>, 2003-2006.
+# 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2008, 2009.
+# Fan Qijiang <fqj1994@linux.com>, 2010.
+# Aron Xu <aronxu@gnome.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: file-roller master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.mate.org/enter_bug.cgi?product=file-"
+"roller&component=general\n"
+"POT-Creation-Date: 2010-07-13 15:12+0000\n"
+"PO-Revision-Date: 2010-08-14 00:57+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr "不是一个有效的 .desktop 文件"
+
+#: ../copy-n-paste/eggdesktopfile.c:190
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr "不能识别的桌面文件版本“%s”"
+
+#: ../copy-n-paste/eggdesktopfile.c:960
+#, c-format
+msgid "Starting %s"
+msgstr "正在启动 %s"
+
+#: ../copy-n-paste/eggdesktopfile.c:1102
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr "程序在命令行中不接收文档"
+
+#: ../copy-n-paste/eggdesktopfile.c:1170
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr "不能识别的启动选项：%d"
+
+#: ../copy-n-paste/eggdesktopfile.c:1375
+#, c-format
+msgid "Can't pass documents to this desktop element"
+msgstr "无法传递文档到此桌面元素"
+
+#: ../copy-n-paste/eggdesktopfile.c:1394
+#, c-format
+msgid "Not a launchable item"
+msgstr "不是一个可启动项目"
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr "禁止连接到会话管理器"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr "指定包含有已保存配置的文件"
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr "文件"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr "指定会话管理 ID"
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr "ID"
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr "会话管理选项："
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr "显示会话管理选项"
+
+#: ../data/file-roller.desktop.in.in.h:1 ../src/fr-window.c:1969
+#: ../src/fr-window.c:5398
+msgid "Archive Manager"
+msgstr "归档管理器"
+
+#: ../data/file-roller.desktop.in.in.h:2
+msgid "Create and modify an archive"
+msgstr "创建并修改归档文件"
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "载入选项"
+
+#: ../data/ui/batch-add-files.ui.h:1 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "创建(_R)"
+
+#: ../data/ui/batch-add-files.ui.h:2
+msgid "Compress"
+msgstr "压缩"
+
+#: ../data/ui/batch-add-files.ui.h:3
+msgid "Location"
+msgstr "位置"
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/new.ui.h:2
+msgid "MB"
+msgstr "MB"
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB", where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:7 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr "将归档文件拆分为(_V)"
+
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:4
+#: ../data/ui/password.ui.h:3
+msgid "_Encrypt the file list too"
+msgstr "文件列表也加密(_E)"
+
+#: ../data/ui/batch-add-files.ui.h:9
+msgid "_Filename:"
+msgstr "文件名(_F)："
+
+#. Translators: after the colon there is a folder name.
+#: ../data/ui/batch-add-files.ui.h:10 ../src/fr-window.c:5820
+msgid "_Location:"
+msgstr "位置(_L)："
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:5
+msgid "_Other Options"
+msgstr "其它选项(_O)"
+
+#: ../data/ui/batch-add-files.ui.h:12 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:6 ../data/ui/password.ui.h:4
+msgid "_Password:"
+msgstr "密码(_P)："
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">需要密码</span>"
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "删除"
+
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:363
+msgid "_All files"
+msgstr "全部文件(_A)"
+
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:349
+msgid "_Files:"
+msgstr "文件(_F)："
+
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:370
+msgid "_Selected files"
+msgstr "已选定文件(_S)"
+
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:360
+msgid "example: *.txt; *.doc"
+msgstr "例：*.txt; *.doc"
+
+#: ../data/ui/open-with.ui.h:1
+msgid "A_vailable application:"
+msgstr "可用的应用程序(_V)："
+
+#: ../data/ui/open-with.ui.h:2
+msgid "Open Files"
+msgstr "打开文件"
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr "最近的应用程序(_E)："
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr "应用程序(_A)："
+
+#: ../data/ui/password.ui.h:1
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+"<i><b>注意：</b>您添加到当前归档文件中的文件会使用该密码加密，而从当前归档文"
+"件解压缩文件时会使用该密码解密。关闭归档文件时，密码会被删除。</i>"
+
+#: ../data/ui/password.ui.h:2
+msgid "Password"
+msgstr "密码"
+
+#: ../data/ui/update.ui.h:1
+msgid "S_elect the files you want to update:"
+msgstr "选择您要更新的文件(_E)："
+
+#. secondary text
+#: ../data/ui/update.ui.h:2 ../src/dlg-update.c:181
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update "
+"the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+"文件已被外部应用程序修改。如果您不更新归档中的版本，您的所有更改将会丢失。"
+msgstr[1] ""
+"%d 个文件已被外部应用程序修改。如果您不更新归档中的文件，您的所有更改将会丢"
+"失。"
+
+#: ../data/ui/update.ui.h:3
+msgid "_Update"
+msgstr "更新(_U)"
+
+#: ../caja/caja-fileroller.c:313
+msgid "Extract Here"
+msgstr "解压缩到此处"
+
+#. Translators: the current position is the current folder
+#: ../caja/caja-fileroller.c:315
+msgid "Extract the selected archive to the current position"
+msgstr "将选中的归档文件解压缩到当前位置"
+
+#: ../caja/caja-fileroller.c:332
+msgid "Extract To..."
+msgstr "解压缩到..."
+
+#: ../caja/caja-fileroller.c:333
+msgid "Extract the selected archive"
+msgstr "解压缩选中的归档文件"
+
+#: ../caja/caja-fileroller.c:352
+msgid "Compress..."
+msgstr "压缩..."
+
+#: ../caja/caja-fileroller.c:353
+msgid "Create a compressed archive with the selected objects"
+msgstr "使用选择的对象创建一个压缩的归档"
+
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:170 ../src/dlg-batch-add.c:186
+#: ../src/dlg-batch-add.c:215 ../src/dlg-batch-add.c:260
+#: ../src/dlg-batch-add.c:306 ../src/fr-window.c:2920
+msgid "Could not create the archive"
+msgstr "无法创建归档文件"
+
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:172 ../src/dlg-batch-add.c:308
+msgid "You have to specify an archive name."
+msgstr "您必须指定归档文件名称。"
+
+#: ../src/actions.c:198
+msgid "You don't have permission to create an archive in this folder"
+msgstr "您没有在此文件夹中创建归档文件的权限"
+
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:254
+#: ../src/dlg-package-installer.c:263 ../src/dlg-package-installer.c:291
+#: ../src/fr-archive.c:1146 ../src/fr-window.c:6038 ../src/fr-window.c:6214
+msgid "Archive type not supported."
+msgstr "不支持的归档文件类型。"
+
+#: ../src/actions.c:248
+msgid "Could not delete the old archive."
+msgstr "无法删除旧归档文件。"
+
+#: ../src/actions.c:382 ../src/fr-window.c:5878
+msgid "Open"
+msgstr "打开"
+
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5218
+msgid "All archives"
+msgstr "全部归档文件"
+
+#: ../src/actions.c:400 ../src/dlg-new.c:320
+msgid "All files"
+msgstr "全部文件"
+
+#: ../src/actions.c:794 ../src/fr-window.c:7060
+msgid "Last Output"
+msgstr "上次的输出"
+
+#: ../src/actions.c:858
+msgid ""
+"File Roller is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"File Roller 是自由软件；您可以在自由软件基金会发布的 GNU 公共许可证的条款下重"
+"新发布或修改它；您应当使用该许可证的第二版本或更高版本。"
+
+#: ../src/actions.c:862
+msgid ""
+"File Roller is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+"File Roller 发布的目的是希望它对您有用，但没有任何担保，即使针对商业或其它特"
+"定应用目的。请查阅 GNU 公共许可证以获得更多细节。"
+
+#: ../src/actions.c:866
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"File Roller; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"您应当在收到 File Roller 的同时收到了一份 GNU 公共许可证的副本；如果没有收"
+"到，请给自由软件基金会写信。地址是：51 Franklin St, Fifth Floor, Boston, MA  "
+"02110-1301 USA"
+
+#: ../src/actions.c:876
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr "版权 © 2001-2010 自由软件基金会"
+
+#: ../src/actions.c:877
+msgid "An archive manager for MATE."
+msgstr "MATE 的归档管理器。"
+
+#: ../src/actions.c:880
+msgid "translator-credits"
+msgstr ""
+"MATE 简体中文翻译 <i18n-translation@lists.linux.net.cn\n"
+"Yang Zhang <zyang@gmail.com> 2007.\n"
+"甘露(Gan Lu) <rhythm.gan@gmail.com>，2008, 2009\n"
+"Fan Qijiang <fqj1994@linux.com>, 2010\n"
+"Aron Xu <aronxu@gnome.org>, 2010"
+
+#: ../src/dlg-add-files.c:97 ../src/dlg-add-folder.c:130
+msgid "Could not add the files to the archive"
+msgstr "无法将文件添加到归档文件中"
+
+#: ../src/dlg-add-files.c:98 ../src/dlg-add-folder.c:131
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "您没有读取文件夹“%s”内文件的权限"
+
+#: ../src/dlg-add-files.c:146 ../src/ui.h:49
+msgid "Add Files"
+msgstr "添加文件"
+
+#. Translators: add a file to the archive only if the disk version is
+#. * newer than the archive version.
+#: ../src/dlg-add-files.c:162 ../src/dlg-add-folder.c:231
+msgid "Add only if _newer"
+msgstr "仅添加新文件(_N)"
+
+#: ../src/dlg-add-folder.c:217
+msgid "Add a Folder"
+msgstr "添加文件夹"
+
+#: ../src/dlg-add-folder.c:232
+msgid "_Include subfolders"
+msgstr "包含子文件夹(_I)"
+
+#: ../src/dlg-add-folder.c:233
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr "排除为符号链接的文件夹(_K)"
+
+#: ../src/dlg-add-folder.c:236 ../src/dlg-add-folder.c:242
+#: ../src/dlg-add-folder.c:248
+msgid "example: *.o; *.bak"
+msgstr "例：*.o; *.bak"
+
+#: ../src/dlg-add-folder.c:237
+msgid "Include _files:"
+msgstr "包含文件(_F)："
+
+#: ../src/dlg-add-folder.c:243
+msgid "E_xclude files:"
+msgstr "排除文件(_X)："
+
+#: ../src/dlg-add-folder.c:249
+msgid "_Exclude folders:"
+msgstr "排除文件(_E)："
+
+#: ../src/dlg-add-folder.c:253
+msgid "_Load Options"
+msgstr "装入选项(_L)"
+
+#: ../src/dlg-add-folder.c:254
+msgid "Sa_ve Options"
+msgstr "保存选项(_V)"
+
+#: ../src/dlg-add-folder.c:255
+msgid "_Reset Options"
+msgstr "保存选项(_R)"
+
+#: ../src/dlg-add-folder.c:883
+msgid "Save Options"
+msgstr "保存选项"
+
+#: ../src/dlg-add-folder.c:884
+msgid "Options Name:"
+msgstr "选项名称："
+
+#: ../src/dlg-ask-password.c:123
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr "输入归档文件“%s”的密码。"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/dlg-batch-add.c:187 ../src/fr-window.c:7381
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+"文件名“%s”是非法的，因为它不能含有字符：%s\n"
+"\n"
+"%s"
+
+#: ../src/dlg-batch-add.c:190 ../src/fr-window.c:7371 ../src/fr-window.c:7376
+#: ../src/fr-window.c:7381 ../src/fr-window.c:7417 ../src/fr-window.c:7419
+msgid "Please use a different name."
+msgstr "请使用其它不同的文件名。"
+
+#: ../src/dlg-batch-add.c:217
+msgid ""
+"You don't have the right permissions to create an archive in the destination "
+"folder."
+msgstr "您没有在目标文件夹中创建归档文件的权限。"
+
+#: ../src/dlg-batch-add.c:233 ../src/dlg-extract.c:103 ../src/fr-window.c:6635
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+"目的文件夹“%s”不存在。\n"
+"\n"
+"您是否想要创建？"
+
+#: ../src/dlg-batch-add.c:242 ../src/dlg-extract.c:112 ../src/fr-window.c:6644
+msgid "Create _Folder"
+msgstr "创建文件夹(_F)"
+
+#: ../src/dlg-batch-add.c:261 ../src/dlg-extract.c:132 ../src/fr-window.c:6664
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr "无法创建目的文件夹：%s。"
+
+#: ../src/dlg-batch-add.c:278
+msgid "Archive not created"
+msgstr "归档文件未创建"
+
+#: ../src/dlg-batch-add.c:326
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr "归档文件已经存在。您是否想要覆盖？"
+
+#: ../src/dlg-batch-add.c:329
+msgid "_Overwrite"
+msgstr "覆盖(_O)"
+
+#: ../src/dlg-extract.c:131 ../src/dlg-extract.c:149 ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4145 ../src/fr-window.c:6663 ../src/fr-window.c:6680
+msgid "Extraction not performed"
+msgstr "解压缩操作未执行"
+
+#: ../src/dlg-extract.c:177 ../src/fr-window.c:4308 ../src/fr-window.c:4388
+#, c-format
+msgid ""
+"You don't have the right permissions to extract archives in the folder \"%s\""
+msgstr "您没有权限将归档文件解压缩到文件夹“%s”中"
+
+#: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
+msgid "Extract"
+msgstr "解压缩"
+
+#: ../src/dlg-extract.c:381
+msgid "Actions"
+msgstr "操作"
+
+#: ../src/dlg-extract.c:397
+msgid "Re-crea_te folders"
+msgstr "重建文件夹(_T)"
+
+#: ../src/dlg-extract.c:401
+msgid "Over_write existing files"
+msgstr "覆盖已有文件(_W)"
+
+#: ../src/dlg-extract.c:405
+msgid "Do not e_xtract older files"
+msgstr "不解压缩旧文件(_X)"
+
+#: ../src/dlg-new.c:439
+msgctxt "File"
+msgid "New"
+msgstr "新建"
+
+#: ../src/dlg-new.c:452
+msgctxt "File"
+msgid "Save"
+msgstr "保存"
+
+#: ../src/dlg-package-installer.c:96 ../src/dlg-package-installer.c:205
+msgid "There was an internal error trying to search for applications:"
+msgstr "在试图搜索应用程序时出现了一个内部错误："
+
+#: ../src/dlg-package-installer.c:273
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+"没有为 %s 文件安装的命令。\n"
+"您想搜索一个命令来打开这个文件吗？"
+
+#: ../src/dlg-package-installer.c:278
+msgid "Could not open this file type"
+msgstr "不能打开这个文件类型"
+
+#: ../src/dlg-package-installer.c:281
+msgid "_Search Command"
+msgstr "搜索命令(_S)"
+
+#. Translators: after the colon there is a folder name.
+#: ../src/dlg-prop.c:107
+msgid "Location:"
+msgstr "位置："
+
+#: ../src/dlg-prop.c:119
+msgctxt "File"
+msgid "Name:"
+msgstr "名称："
+
+#: ../src/dlg-prop.c:125
+#, c-format
+msgid "%s Properties"
+msgstr "%s 的属性"
+
+#: ../src/dlg-prop.c:134
+msgid "Modified on:"
+msgstr "修改时间："
+
+#: ../src/dlg-prop.c:144
+msgid "Archive size:"
+msgstr "归档文件大小："
+
+#: ../src/dlg-prop.c:155
+msgid "Content size:"
+msgstr "目录大小："
+
+#: ../src/dlg-prop.c:175
+msgid "Compression ratio:"
+msgstr "压缩率："
+
+#: ../src/dlg-prop.c:190
+msgid "Number of files:"
+msgstr "文件数："
+
+#: ../src/dlg-update.c:158
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr "更新归档“%2$s”中的文件“%1$s”"
+
+#: ../src/dlg-update.c:172
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr "更新归档“%s”中的文件"
+
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr "文件格式(_F)：%s"
+
+#: ../src/eggfileformatchooser.c:397
+msgid "All Files"
+msgstr "全部文件"
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr "全部支持的文件"
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr "按扩展名"
+
+#: ../src/eggfileformatchooser.c:422
+msgid "File Format"
+msgstr "文件格式"
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr "扩展名"
+
+#: ../src/eggfileformatchooser.c:675
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for `%"
+"s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+"本程序无法确定 %s 所使用的文件格式。请确定您使用了正确的文件扩展名，或者从下"
+"表选择一个格式。"
+
+#: ../src/eggfileformatchooser.c:682
+msgid "File format not recognized"
+msgstr "无法识别文件格式"
+
+#: ../src/fr-archive.c:1126
+msgid "File not found."
+msgstr "文件没有找到。"
+
+#: ../src/fr-archive.c:1229
+#, c-format
+msgid "The file doesn't exist"
+msgstr "文件不存在"
+
+#: ../src/fr-archive.c:2415
+msgid "You don't have the right permissions."
+msgstr "您没有正确的权限。"
+
+#: ../src/fr-archive.c:2415
+msgid "This archive type cannot be modified"
+msgstr "此归档文件类型无法修改"
+
+#: ../src/fr-archive.c:2427
+msgid "You can't add an archive to itself."
+msgstr "您无法将归档文件添加到其自身。"
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:434
+#: ../src/fr-command-tar.c:308
+msgid "Adding file: "
+msgstr "添加文件："
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:412 ../src/fr-command-rar.c:561
+#: ../src/fr-command-tar.c:427
+msgid "Extracting file: "
+msgstr "归档文件："
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-rar.c:512 ../src/fr-command-tar.c:373
+msgid "Removing file: "
+msgstr "删除文件："
+
+#: ../src/fr-command-rar.c:689
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr "找不到卷：%s"
+
+#: ../src/fr-command-tar.c:382 ../src/fr-window.c:2305
+msgid "Deleting files from archive"
+msgstr "从归档文件中删除文件"
+
+#: ../src/fr-command-tar.c:486
+msgid "Recompressing archive"
+msgstr "重新归档文件"
+
+#: ../src/fr-command-tar.c:737
+msgid "Decompressing archive"
+msgstr "解压缩文件"
+
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
+msgid "_Add"
+msgstr "添加(_A)"
+
+#: ../src/fr-stock.c:45
+msgid "_Extract"
+msgstr "解压缩(_E)"
+
+#: ../src/fr-window.c:1504
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] "%d 个对象(%s)"
+msgstr[1] "%d 个对象(%s)"
+
+#: ../src/fr-window.c:1509
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] "选中了 %d 个对象(%s)"
+msgstr[1] "选中了 %d 个对象(%s)"
+
+#: ../src/fr-window.c:1579
+msgid "Folder"
+msgstr "文件夹"
+
+#: ../src/fr-window.c:1977
+msgid "[read only]"
+msgstr "[只读]"
+
+#: ../src/fr-window.c:2228
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr "无法显示文件夹“%s”"
+
+#: ../src/fr-window.c:2296 ../src/fr-window.c:2326
+msgid "Creating archive"
+msgstr "创建归档文件"
+
+#: ../src/fr-window.c:2299
+msgid "Loading archive"
+msgstr "装入归档文件"
+
+#: ../src/fr-window.c:2302
+msgid "Reading archive"
+msgstr "读取归档文件"
+
+#: ../src/fr-window.c:2308
+msgid "Testing archive"
+msgstr "测试归档文件"
+
+#: ../src/fr-window.c:2311
+msgid "Getting the file list"
+msgstr "获取文件列表"
+
+#: ../src/fr-window.c:2314 ../src/fr-window.c:2323
+msgid "Copying the file list"
+msgstr "复制文件列表"
+
+#: ../src/fr-window.c:2317
+msgid "Adding files to archive"
+msgstr "将文件添加到归档文件"
+
+#: ../src/fr-window.c:2320
+msgid "Extracting files from archive"
+msgstr "从归档文件中解压缩文件"
+
+#: ../src/fr-window.c:2329
+msgid "Saving archive"
+msgstr "保存归档文件"
+
+#: ../src/fr-window.c:2486
+msgid "_Open the Archive"
+msgstr "打开归档文件(_O)"
+
+#: ../src/fr-window.c:2487
+msgid "_Show the Files"
+msgstr "显示文件(_S)"
+
+#: ../src/fr-window.c:2533
+msgid "Archive:"
+msgstr "归档文件："
+
+#: ../src/fr-window.c:2695
+msgid "Extraction completed successfully"
+msgstr "解压缩成功完成"
+
+#: ../src/fr-window.c:2718
+msgid "Archive created successfully"
+msgstr "归档文件成功创建"
+
+#: ../src/fr-window.c:2766
+msgid "please wait..."
+msgstr "请稍候..."
+
+#: ../src/fr-window.c:2925
+msgid "An error occurred while extracting files."
+msgstr "解压缩文件时发生了错误。"
+
+#: ../src/fr-window.c:2931
+#, c-format
+msgid "Could not open \"%s\""
+msgstr "无法打开“%s”"
+
+#: ../src/fr-window.c:2936
+msgid "An error occurred while loading the archive."
+msgstr "装入归档文件时出现了一个错误。"
+
+#: ../src/fr-window.c:2940
+msgid "An error occurred while deleting files from the archive."
+msgstr "从归档文件中删除文件时出现了一个错误。"
+
+#: ../src/fr-window.c:2946
+msgid "An error occurred while adding files to the archive."
+msgstr "将文件添加到归档文件时出现了一个错误。"
+
+#: ../src/fr-window.c:2950
+msgid "An error occurred while testing archive."
+msgstr "测试归档文件时出现了一个错误。"
+
+#: ../src/fr-window.c:2954
+msgid "An error occurred while saving the archive."
+msgstr "保存归档文件时出现了一个错误。"
+
+#: ../src/fr-window.c:2958
+msgid "An error occurred."
+msgstr "出现了一个错误。"
+
+#: ../src/fr-window.c:2964
+msgid "Command not found."
+msgstr "命令没有找到。"
+
+#: ../src/fr-window.c:2967
+msgid "Command exited abnormally."
+msgstr "命令异常退出。"
+
+#: ../src/fr-window.c:3166
+msgid "Test Result"
+msgstr "测试结果"
+
+#: ../src/fr-window.c:3988 ../src/fr-window.c:7968 ../src/fr-window.c:7995
+#: ../src/fr-window.c:8250
+msgid "Could not perform the operation"
+msgstr "无法执行这个操作"
+
+#: ../src/fr-window.c:4014
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr "您想要将此文件添加到当前归档文件还是打开为新归档文件？"
+
+#: ../src/fr-window.c:4044
+msgid "Do you want to create a new archive with these files?"
+msgstr "您是否想要创建包含这些文件在内的新归档文件？"
+
+#: ../src/fr-window.c:4047
+msgid "Create _Archive"
+msgstr "创建归档文件(_A)"
+
+#: ../src/fr-window.c:4641 ../src/fr-window.c:5726
+msgid "Folders"
+msgstr "文件夹"
+
+#: ../src/fr-window.c:4679
+msgctxt "File"
+msgid "Size"
+msgstr "大小"
+
+#: ../src/fr-window.c:4680
+msgctxt "File"
+msgid "Type"
+msgstr "类型"
+
+#: ../src/fr-window.c:4681
+msgctxt "File"
+msgid "Date Modified"
+msgstr "修改日期"
+
+#: ../src/fr-window.c:4682
+msgctxt "File"
+msgid "Location"
+msgstr "位置"
+
+#: ../src/fr-window.c:4691
+msgctxt "File"
+msgid "Name"
+msgstr "名称"
+
+#: ../src/fr-window.c:5647
+msgid "Find:"
+msgstr "查找："
+
+#: ../src/fr-window.c:5734
+msgid "Close the folders pane"
+msgstr "关闭文件夹面板"
+
+#: ../src/fr-window.c:5875 ../src/fr-window.c:5878 ../src/ui.h:142
+#: ../src/ui.h:146
+msgid "Open archive"
+msgstr "打开归档文件"
+
+#: ../src/fr-window.c:5876
+msgid "Open a recently used archive"
+msgstr "打开最近使用的归档文件"
+
+#: ../src/fr-window.c:6206
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr "无法保存归档文件“%s”"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/fr-window.c:7371
+msgid "The new name is void."
+msgstr "新文件名是空的。"
+
+#. Translators: the name references to a filename.  This message can appear when renaming a file.
+#: ../src/fr-window.c:7376
+msgid "The new name is equal to the old one."
+msgstr "新文件名与旧的相同。"
+
+#: ../src/fr-window.c:7417
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"已经存在名为“%s”的文件夹。\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7419
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+"已经存在名为“%s”的文件。\n"
+"\n"
+"%s"
+
+#: ../src/fr-window.c:7489
+msgid "Rename"
+msgstr "重命名"
+
+#: ../src/fr-window.c:7490
+msgid "New folder name"
+msgstr "新文件夹名"
+
+#: ../src/fr-window.c:7490
+msgid "New file name"
+msgstr "新文件名"
+
+#: ../src/fr-window.c:7494
+msgid "_Rename"
+msgstr "重命名(_R)"
+
+#: ../src/fr-window.c:7511 ../src/fr-window.c:7531
+msgid "Could not rename the folder"
+msgstr "无法重命名文件夹"
+
+#: ../src/fr-window.c:7511 ../src/fr-window.c:7531
+msgid "Could not rename the file"
+msgstr "无法重命名文件"
+
+#: ../src/fr-window.c:7929
+msgid "Paste Selection"
+msgstr "粘贴选中内容"
+
+#: ../src/fr-window.c:7930
+msgid "Destination folder"
+msgstr "目的文件夹"
+
+#: ../src/fr-window.c:8520
+msgid "Add files to an archive"
+msgstr "向归档文件中添加文件"
+
+#: ../src/fr-window.c:8564
+msgid "Extract archive"
+msgstr "解压缩文件"
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:561
+msgid "%d %B %Y, %H:%M"
+msgstr "%Y年%-m月%-d日 %H:%M"
+
+#. Expander
+#: ../src/gtk-utils.c:442
+msgid "Command _Line Output"
+msgstr "命令行输出(_L)"
+
+#: ../src/gtk-utils.c:779
+msgid "Could not display help"
+msgstr "无法显示帮助"
+
+#: ../src/main.c:82
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z)"
+
+#: ../src/main.c:83
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr "用 7z 压缩的 Tar 归档文件(.tar.7z)"
+
+#: ../src/main.c:84
+msgid "Ace (.ace)"
+msgstr "Ace (.ace)"
+
+#: ../src/main.c:86
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:87
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:89
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "用 bzip2 压缩的 Tar 归档文件(.tar.bz2)"
+
+#: ../src/main.c:91
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "用 bzip 压缩的 Tar 归档文件(.tar.bz)"
+
+#: ../src/main.c:92
+msgid "Cabinet (.cab)"
+msgstr "Cabinet (.cab)"
+
+#: ../src/main.c:93
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr "RAR 压缩的 Comic Book 归档文件(.cbr)"
+
+#: ../src/main.c:94
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr "ZIP 压缩的 Comic Book 归档文件(.cbz)"
+
+#: ../src/main.c:97
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "用 gzip 压缩的 Tar 归档文件(.tar.gz)"
+
+#: ../src/main.c:100
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:101
+msgid "Self-extracting zip (.exe)"
+msgstr "自解压 Zip 归档文件(.exe)"
+
+#: ../src/main.c:103
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:104
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:105
+msgid "Lrzip (.lrz)"
+msgstr "Lrzip (.lrz)"
+
+#: ../src/main.c:106
+msgid "Tar compressed with lrzip (.tar.lrz)"
+msgstr "用 lrzip 压缩的 Tar 归档文件(.tar.lrz)"
+
+#: ../src/main.c:108
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr "用 lzip 压缩的 Tar 归档文件(.tar.lz)"
+
+#: ../src/main.c:110
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr "用 lzma 压缩的 Tar 归档文件(.tar.lzma)"
+
+#: ../src/main.c:112
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "用 lzop 压缩的 Tar 归档文件(.tar.lzo)"
+
+#: ../src/main.c:113
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:116
+msgid "Tar uncompressed (.tar)"
+msgstr "未压缩的 Tar 归档文件(.tar)"
+
+#: ../src/main.c:117
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "用 compress 压缩的 (.tar.Z)"
+
+#: ../src/main.c:119
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:120
+msgid "Xz (.xz)"
+msgstr "Xz (.xz)"
+
+#: ../src/main.c:121
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr "用 xz 压缩的 Tar 归档文件(.tar.xz)"
+
+#: ../src/main.c:122
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:123
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:191
+msgid "Add files to the specified archive and quit the program"
+msgstr "将文件添加到指定归档文件，然后退出程序"
+
+#: ../src/main.c:192
+msgid "ARCHIVE"
+msgstr "归档文件"
+
+#: ../src/main.c:195
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "添加文件，询问归档文件的名称，然后退出程序"
+
+#: ../src/main.c:199
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "将归档文件解压缩到指定文件夹，然后退出程序"
+
+#: ../src/main.c:200 ../src/main.c:212
+msgid "FOLDER"
+msgstr "文件夹"
+
+#: ../src/main.c:203
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "解压缩文件，询问目的文件夹的名称，然后退出程序"
+
+#: ../src/main.c:207
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
+msgstr "将归档文件的内容解压缩到归档文件夹，然后退出程序"
+
+#: ../src/main.c:211
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "“--add”和“--extract”命令所使用的默认文件夹"
+
+#: ../src/main.c:215
+msgid "Create destination folder without asking confirmation"
+msgstr "不请求确认就创建目的文件夹"
+
+#: ../src/main.c:297
+msgid "- Create and modify an archive"
+msgstr "- 创建并修改归档文件"
+
+#: ../src/main.c:313
+msgid "File Roller"
+msgstr "文件打包器"
+
+#: ../src/ui.h:32
+msgid "_Archive"
+msgstr "归档文件(_A)"
+
+#: ../src/ui.h:33
+msgid "_Edit"
+msgstr "编辑(_E)"
+
+#: ../src/ui.h:34
+msgid "_View"
+msgstr "查看(_V)"
+
+#: ../src/ui.h:35
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../src/ui.h:36
+msgid "_Arrange Files"
+msgstr "排列文件(_A)"
+
+#. Translators: this is the label for the "open recent file" sub-menu.
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr "打开最近访问的(_R)"
+
+#: ../src/ui.h:42
+msgid "Information about the program"
+msgstr "关于程序的信息"
+
+#: ../src/ui.h:45
+msgid "_Add Files..."
+msgstr "添加文件(_A)..."
+
+#: ../src/ui.h:46 ../src/ui.h:50
+msgid "Add files to the archive"
+msgstr "向归档文件中添加文件"
+
+#: ../src/ui.h:53
+msgid "Add a _Folder..."
+msgstr "添加文件夹(_F)..."
+
+#: ../src/ui.h:54 ../src/ui.h:58
+msgid "Add a folder to the archive"
+msgstr "向归档文件中添加文件夹"
+
+#: ../src/ui.h:57
+msgid "Add Folder"
+msgstr "添加文件夹"
+
+#: ../src/ui.h:62
+msgid "Close the current archive"
+msgstr "关闭当前归档文件"
+
+#: ../src/ui.h:65
+msgid "Contents"
+msgstr "目录"
+
+#: ../src/ui.h:66
+msgid "Display the File Roller Manual"
+msgstr "显示文件打包器的手册"
+
+#: ../src/ui.h:71 ../src/ui.h:92
+msgid "Copy the selection"
+msgstr "复制选中内容"
+
+#: ../src/ui.h:75 ../src/ui.h:96
+msgid "Cut the selection"
+msgstr "剪切选中内容"
+
+#: ../src/ui.h:79 ../src/ui.h:100
+msgid "Paste the clipboard"
+msgstr "粘贴剪贴板中的内容"
+
+#: ../src/ui.h:82 ../src/ui.h:103
+msgid "_Rename..."
+msgstr "重命名(_R)..."
+
+#: ../src/ui.h:83 ../src/ui.h:104
+msgid "Rename the selection"
+msgstr "重命名选中内容"
+
+#: ../src/ui.h:87 ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr "从归档文件中删除选中内容"
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "全部不选(_L)"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "不选任何文件"
+
+#: ../src/ui.h:116 ../src/ui.h:120
+msgid "_Extract..."
+msgstr "解压缩(_E)..."
+
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr "从归档文件中解压缩文件"
+
+#: ../src/ui.h:128
+msgid "Find..."
+msgstr "查找..."
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "上次输出(_L)"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr "查看上次执行的命令所生成的输出"
+
+#: ../src/ui.h:137
+msgctxt "File"
+msgid "New..."
+msgstr "新建..."
+
+#: ../src/ui.h:138
+msgid "Create a new archive"
+msgstr "创建新归档文件"
+
+#: ../src/ui.h:141
+msgctxt "File"
+msgid "Open..."
+msgstr "打开..."
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr "打开方式(_O)..."
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "用应用程序打开选中文件"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "密码(_W)..."
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr "为此归档文件指定密码"
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "显示归档文件属性"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "重新装入当前归档文件"
+
+#: ../src/ui.h:165
+msgctxt "File"
+msgid "Save As..."
+msgstr "另存为..."
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr "将当前归档文件以不同的名称保存"
+
+#: ../src/ui.h:170
+msgid "Select all files"
+msgstr "选中全部文件"
+
+#: ../src/ui.h:174
+msgid "Stop current operation"
+msgstr "停止当前操作"
+
+#: ../src/ui.h:177
+msgid "_Test Integrity"
+msgstr "测试完整性(_T)"
+
+#: ../src/ui.h:178
+msgid "Test whether the archive contains errors"
+msgstr "测试归档文件是否有错"
+
+#: ../src/ui.h:182 ../src/ui.h:186
+msgid "Open the selected file"
+msgstr "打开选中文件"
+
+#: ../src/ui.h:190 ../src/ui.h:194
+msgid "Open the selected folder"
+msgstr "打开选中文件夹"
+
+#: ../src/ui.h:199
+msgid "Go to the previous visited location"
+msgstr "转到上一次访问的位置"
+
+#: ../src/ui.h:203
+msgid "Go to the next visited location"
+msgstr "转到下一次访问的位置"
+
+#: ../src/ui.h:207
+msgid "Go up one level"
+msgstr "转到上一层"
+
+#. Translators: the home location is the home folder.
+#: ../src/ui.h:212
+msgid "Go to the home location"
+msgstr "转到起始位置"
+
+#: ../src/ui.h:220
+msgid "_Toolbar"
+msgstr "工具栏(_T)"
+
+#: ../src/ui.h:221
+msgid "View the main toolbar"
+msgstr "查看主工具栏"
+
+#: ../src/ui.h:225
+msgid "Stat_usbar"
+msgstr "状态栏(_U)"
+
+#: ../src/ui.h:226
+msgid "View the statusbar"
+msgstr "查看状态栏"
+
+#: ../src/ui.h:230
+msgid "_Reversed Order"
+msgstr "逆序排列(_R)"
+
+#: ../src/ui.h:231
+msgid "Reverse the list order"
+msgstr "列表逆序排列"
+
+#: ../src/ui.h:235
+msgid "_Folders"
+msgstr "文件夹(_F)"
+
+#: ../src/ui.h:236
+msgid "View the folders pane"
+msgstr "查看文件夹面板"
+
+#: ../src/ui.h:245
+msgid "View All _Files"
+msgstr "查看全部文件(_F)"
+
+#: ../src/ui.h:248
+msgid "View as a F_older"
+msgstr "以文件夹查看(_O)"
+
+#: ../src/ui.h:256
+msgid "by _Name"
+msgstr "按名称(_N)"
+
+#: ../src/ui.h:257
+msgid "Sort file list by name"
+msgstr "按名称排序文件列表"
+
+#: ../src/ui.h:259
+msgid "by _Size"
+msgstr "按大小(_S)"
+
+#: ../src/ui.h:260
+msgid "Sort file list by file size"
+msgstr "按文件大小排序文件列表"
+
+#: ../src/ui.h:262
+msgid "by T_ype"
+msgstr "按类型(_Y)"
+
+#: ../src/ui.h:263
+msgid "Sort file list by type"
+msgstr "按类型排序文件列表"
+
+#: ../src/ui.h:265
+msgid "by _Date Modified"
+msgstr "按修改日期(_D)"
+
+#: ../src/ui.h:266
+msgid "Sort file list by modification time"
+msgstr "按修改时间排序文件列表"
+
+#. Translators: this is the "sort by file location" menu item
+#: ../src/ui.h:269
+msgid "by _Location"
+msgstr "按位置(_L)"
+
+#. Translators: location is the file location
+#: ../src/ui.h:271
+msgid "Sort file list by location"
+msgstr "按位置排序文件列表"
+
+#~ msgid "_File"
+#~ msgstr "文件(_F)"
+
+#~ msgid "Archive _type:"
+#~ msgstr "归档文件类型(_T)："
+
+#~ msgid "Automatic"
+#~ msgstr "自动"
+
+#~ msgid "Create Archive"
+#~ msgstr "创建归档文件"
+
+#~ msgid "_Archive:"
+#~ msgstr "归档文件(_A)："
+
+#~ msgid "Create Archive..."
+#~ msgstr "创建归档文件..."
+
+#~ msgid "_Open the Destination"
+#~ msgstr "打开目标位置(_O)"
+
+#~ msgid ""
+#~ "Extract archives using the archive name as destination folder and quit "
+#~ "the program"
+#~ msgstr "解压缩文件，使用归档文件名称作为目标文件夹，然后退出程序"
