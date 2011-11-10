@@ -281,7 +281,7 @@ new_file_response_cb (GtkWidget  *w,
 	}
 
 	if (response == GTK_RESPONSE_HELP) {
-		show_help_dialog (GTK_WINDOW (data->dialog), "file-roller-create");
+		show_help_dialog (GTK_WINDOW (data->dialog), "engrampa-create");
 		return;
 	}
 
@@ -435,7 +435,7 @@ save_file_response_cb (GtkWidget  *w,
 	}
 
 	if (response == GTK_RESPONSE_HELP) {
-		show_help_dialog (GTK_WINDOW (data->dialog), "file-roller-convert-archive");
+		show_help_dialog (GTK_WINDOW (data->dialog), "engrampa-convert-archive");
 		return;
 	}
 
@@ -864,7 +864,7 @@ activate_action_about (GtkAction *action,
 			       "authors", authors,
 			       "documenters", documenters,
 			       "translator-credits", _("translator-credits"),
-			       "logo-icon-name", "file-roller",
+			       "logo-icon-name", "engrampa",
 			       "license", license_text,
 			       "wrap-license", TRUE,
 			       NULL);

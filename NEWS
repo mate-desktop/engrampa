@@ -377,7 +377,7 @@ version 2.29.1
 
 	Bugs fixed:
 
-	* #590606: drag and drop bug makes file-roller UI unusable as
+	* #590606: drag and drop bug makes engrampa UI unusable as
           a whole
 	* #600131: encrypt_header is left enabled when creating zip
           archives
@@ -385,7 +385,7 @@ version 2.29.1
           directories included in the archive
 	* #326017: 4th and 5th mouse buttons should control back /
 	  forward
-	* #590027: file-roller will not update files
+	* #590027: engrampa will not update files
 
         New or updated application translations:
 
@@ -552,7 +552,7 @@ version 2.27.1
 
 	Bugs fixed:
 
-	* #582712: Opening multipart encrypted .7z files does not work (file-roller-created .7z)
+	* #582712: Opening multipart encrypted .7z files does not work (engrampa-created .7z)
 	* #584675: Untracked files on fresh clone
 	* #580070: Garbage is displayed when adding a folder
 	* #583863: Wrong explanation for the command 'extract-here'.
@@ -579,7 +579,7 @@ version 2.26.1
 	Bugs fixed:
 
 	* #574657: support corrupted rar archives.
-        * #576960: file-roller shows random filesize for zero bytes files.
+        * #576960: engrampa shows random filesize for zero bytes files.
         * #577389: File roller hangs and leaks memory when file is dragged /
           dropped from archive
 
@@ -655,7 +655,7 @@ version 2.25.91
 	* #571273: crash in Archive Manager: Opening an archive (ISO)
 	  Patch by Tom Parker.
 	* #560429: MATE Goal: Remove deprecated GLib symbols
-	* #570505: file-roller crashed with signal 5 in IA__g_malloc()
+	* #570505: engrampa crashed with signal 5 in IA__g_malloc()
 
 	New or updated application translations:
 
@@ -692,7 +692,7 @@ version 2.25.90
 	Bugs fixed:
 
 	* #568881: don't rely on gtk implementation details
-	* #569825: file-roller should use TMPDIR or XDG_CACHE_HOME for
+	* #569825: engrampa should use TMPDIR or XDG_CACHE_HOME for
 	  temporary files.
 
 	New or updated application translations:
@@ -714,15 +714,15 @@ version 2.25.2
 	  encrypt the zip archive.
 	* #566591: File roller cannot create splitted archives with pieces
 	  smaller than 1 Mb
-	* #560647: file-roller wakes up the CPU 2 times per second.
-	* #563208: file-roller can't extract to an ftp mounted directory.
+	* #560647: engrampa wakes up the CPU 2 times per second.
+	* #563208: engrampa can't extract to an ftp mounted directory.
 	  Patch by Gerard Lommerse.
 	* #564029: Unziping an archive from caja fails with certain
 	  characters.
 	* #565879: isoinfo.sh has shebang but is installed -x Patch by Loïc
 	  Minier.
 	* #567901: renaming directory in tarball creates duplicate files
-	* #568260: file-roller installs static libraries by default (for
+	* #568260: engrampa installs static libraries by default (for
 	  caja extension)
 	* #566683: remove redundant figures
 
@@ -782,7 +782,7 @@ version 2.24.0
 
 	Bugs fixed:
 
-	* #546799: file-roller crashed with SIGSEGV in g_str_hash()
+	* #546799: engrampa crashed with SIGSEGV in g_str_hash()
 	* #552031: Add archiving and compression to desktop categories.
 	  Patch by Patryk Zawadzki.
 
@@ -849,7 +849,7 @@ version 2.23.91
 
 	Bugs fixed:
 
-	* #544766: file-roller doesn't remember open-with application.
+	* #544766: engrampa doesn't remember open-with application.
 	* Sort the archive type list to make it easier to find the desired
 	  type.
 
@@ -877,7 +877,7 @@ version 2.23.6
 	* #350640: sending an empty folder doesn't work.
 	* #548020: "create archive" directory selection not working
 	  correctly. Patch by Marcel Stimberg.
-	* #546698: file-roller-2.23.1/2.23.5 removes r/x bit for anyone but
+	* #546698: engrampa-2.23.1/2.23.5 removes r/x bit for anyone but
 	  root from /
 	* #547733: 7-zip tells about invalid command line
 	* #547297: Crash reading zip/7za files with 7z version 4.55.
@@ -887,7 +887,7 @@ version 2.23.6
 	* #542424: Tar.bz2 archives create uncompressed archive files.
 	* #546541: Typo and little errors in documentation. Suggested by
 	  Frederic Peters. Patch by Claude Paroz.
-	* LP#26662: file-roller fails to open .Z files.
+	* LP#26662: engrampa fails to open .Z files.
 
 	New or updated application translations:
 
@@ -919,16 +919,16 @@ version 2.23.5
 	* Unified the "new" and "save as" dialogs. Allow to specify other
 	  options in these dialogs, such as whether to encrypt the header and
 	  whether to split the archive in volumes.
-	* User's manual: now describes the current file-roller version.
+	* User's manual: now describes the current engrampa version.
 
 	Bugfixes:
 
 	* #545188: Has incorrect start text for 7zip version 4.43
 	* #545168: no longer possible to open a multi-volume rar from any
 	  part
-	* #545161: file-roller crashed with SIGSEGV in strlen() when
+	* #545161: engrampa crashed with SIGSEGV in strlen() when
 	  extracting tarball.
-	* #544613: file-roller crashed with SIGSEGV in remove_directory()
+	* #544613: engrampa crashed with SIGSEGV in remove_directory()
 	* #544296: desktop entry does not validate. Patch by Götz Waschk.
 	* #544184: extra space in the mimetype lists. Patch by Sebastien
 	  Bacher.
@@ -978,10 +978,10 @@ version 2.23.4
 	Bugfixes:
 
 	* Fixed bug #343201 – Use p7zip for RAR archives?
-	* Fixed bug #529395 – file-roller will not open 256 AES zip files
+	* Fixed bug #529395 – engrampa will not open 256 AES zip files
 	* Fixed bug #515194 – PK 4.5 Zip files
 	* Fixed bug #519046 – add x-cbr and x-cbz support
-	* Fixed bug #336790 – file-roller can't open winzip-10 encrypted files (AES)
+	* Fixed bug #336790 – engrampa can't open winzip-10 encrypted files (AES)
 	* Fixed bug #539629 – Create archive for Trash/Computer
 	* Fixed bug #506698 – 7z Filename (header) Encryption request
 	* Fixed bug #542541 – icon lookup code is broken
@@ -1016,10 +1016,10 @@ version 2.23.2
 	* Fixed bug #535967 – Meaningless message: Open Go to the next visited
 	  location selected folder
 	* Fixed bug #536055 – Support for special characters in rpm archives
-	* Fixed bug #527271 – Ctrl-Q should quit file-roller.
-	* Fixed bug #532789 – file-roller crashes when modifying archive,
+	* Fixed bug #527271 – Ctrl-Q should quit engrampa.
+	* Fixed bug #532789 – engrampa crashes when modifying archive,
 	  data destroyed
-	* Fixed bug #532255 – file-roller silently allows the user to exit in
+	* Fixed bug #532255 – engrampa silently allows the user to exit in
 	  the middle of an operation.
 
 version 2.23.1
@@ -1102,7 +1102,7 @@ version 2.21.1
 	Bugfixes:
 
 	* Fixed bug #487012: Check for the existence of 'filename.tar.{bz2,gz}'
-	  and only if it doesn't exist it makes file-roller call tar with
+	  and only if it doesn't exist it makes engrampa call tar with
 	  the '-cf' switch.
 	* Fixed bug #487079: Key F10 can not activate the main menu.
 	* Fixed bug #499958: file size displayed incorrectly on .Z file
@@ -1112,7 +1112,7 @@ version 2.21.1
 	* Fixed bug #475166: Failed assertion when --extract-here is used
  	  without --extract-to
  	* Fixed bug #505987: Caja extension directory changed to -2.0
- 	* Fixed bug #487012: file-roller causes gnu tar >= 1.19 to give
+ 	* Fixed bug #487012: engrampa causes gnu tar >= 1.19 to give
 	  warnings when creating tar-archives
 	* Fixed bug #490891: skips files when opening an old ARJ archive
 	* Fixed bug #504597: Direct compare on string
@@ -1130,7 +1130,7 @@ version 2.20.1
 version 2.20.0
 --------------
 	* Fixed bug #473158 - ask-password.glade is missing
-	* Fixes bug #463968 - file-roller crashed with SIGSEGV in
+	* Fixes bug #463968 - engrampa crashed with SIGSEGV in
 	  g_closure_invoke()
 	* Removed old check that prevented extraction to remote locations
 	  via DnD.
@@ -1143,9 +1143,9 @@ version 2.19.91
 ---------------
 	* Fixed bug #467482 - [gutsy regression] "extract here" no longer puts
 	  extracted file "here".
-	* Fixed bug #468677 - file-roller doesn't open folders if you go up
+	* Fixed bug #468677 - engrampa doesn't open folders if you go up
 	  one level.
-	* Fixed bug #469528 - file-roller crashed with SIGSEGV in strlen()
+	* Fixed bug #469528 - engrampa crashed with SIGSEGV in strlen()
 	* Fixed bug #469221 - extract a package on an NTFS partition doesn't
 	  work.
 
@@ -1172,7 +1172,7 @@ version 2.19.4
 
 version 2.19.3
 --------------
-	* Added support for Drag&Drop among file-roller	windows.
+	* Added support for Drag&Drop among engrampa	windows.
 	* Added a folders pane.
 	* Fixed daylight saving time calculation.
 	* Save and restore the filename column width.
@@ -1184,13 +1184,13 @@ version 2.19.2
 	* Added support for cut/copy and paste among different windows.
 	* Fixed bug #171619 - uses MateIconTheme which is deprecated
 	* Fixed bug #398824 - crash in Archive Manager: Opened a lha-archiv
-	* Fixed bug #438340 - file-roller has problems with files starting
+	* Fixed bug #438340 - engrampa has problems with files starting
 	  with a dash ("-")
 	* Fixed bug #402760 - "modified time" column is displayed blank in
 	  zh_CN.GB18030 locale when creating a new archive
 	* Fixes bug #440662 - extraction of files with special characters only
 	  when in directory.
-	* Fixes bug #439154 - file-roller: fails to create archives from
+	* Fixes bug #439154 - engrampa: fails to create archives from
 	  files starting with '#'
 
 version 2.19.1
@@ -1243,14 +1243,14 @@ version 2.17.4
  	  instantly in background.
 	* New app icons from Jakub Steiner
 	* Made action icons themable.
-	* Fixed bug #324154 – file-roller can't display modified time on
+	* Fixed bug #324154 – engrampa can't display modified time on
 	  non-utf8 locale
 
 version 2.17.3
 --------------
 	* Fixed ISO images extraction.
 	* Fixes bug #371582 – Dead code in window.c
-	* Fixed bug #367385 – [WISHLIST] file-roller does not close after
+	* Fixed bug #367385 – [WISHLIST] engrampa does not close after
 	  closing last open archive in violation of HIG
 
 version 2.17.2
@@ -1333,7 +1333,7 @@ version 2.15.1
 	* Fixed bug #342251 – backspace does not go up a directory (ala
 	  Caja)
 	* Fixed bug #336078 - [PATCH] Convert from popt to GOption
-	* Fixed bug #317782 - file-roller Cygwin build fixes
+	* Fixed bug #317782 - engrampa Cygwin build fixes
 	* Fixed bug #152039 - Password Protected Files must be displayed
 	  differently.
 
@@ -1354,14 +1354,14 @@ version 2.14.1
 	* Updated the user's guide.
 	* Added help button to all the dialogs.
 	* Install theme-friendly icon.
-	* Fixed bug #335035 - mistake in file-roller's License.
+	* Fixed bug #335035 - mistake in engrampa's License.
 	* Fixed bug #336908 - backshalshes not supported in paths.
 	* Fixed bug #336632 - Help for Extract Dialog pointing to incorrect
 	  location.
 	* Fixed bug #336854 - crash on twice unpacking to the same location.
 	* Fixed bug #335659 - File Roller should move not copy files.
 	* Fixed bug #335368 - Crash when opening large 7z-archive.
-	* Fixed buf #326193 - file-roller creates empty 7zip archives.
+	* Fixed buf #326193 - engrampa creates empty 7zip archives.
 	* Fixed bug #337754 - Drag and Drop extraction only works when source
 	  already has focus.
 	* Fixed bug #337331 - Cut/Paste same file results in loss of file.
@@ -1394,7 +1394,7 @@ version 2.13.4
 	* Fixed bug #139912 - file roller is not a "system tool".
 	* Fixed bug #168388 - file roller shouldn't create an ARCHIVE_FILES
 	  folder if the archive only have one root folder
-	* Fixed bug #326810 - file-roller escaping issue with '#' by example.
+	* Fixed bug #326810 - engrampa escaping issue with '#' by example.
 	* Removed obsolete .applications file.
 
 version 2.13.3
@@ -1405,7 +1405,7 @@ version 2.13.2
 ---------------
 	* Fixed bug #323713: "Save as" should default to current archive
 	  filename
-	* Fixed bug #315069: file-roller: drag 'n drop doesn't work for more
+	* Fixed bug #315069: engrampa: drag 'n drop doesn't work for more
 	  than 1 file.
 	* Fixed bug #323534: Passwords improperly escaped for zip files
 	* Do not open a progress dialog	when dragging files, use a progressbar
@@ -1414,7 +1414,7 @@ version 2.13.2
 	* Fixed bug #311821: ascending and descending indicators are opposite
 	  from expected.
 	* Fixed bug #317423: Conflicting mnemonic in "Extract" dialog.
-	* Fixed bug #323068: file-roller fails in chosing extract-to directory
+	* Fixed bug #323068: engrampa fails in chosing extract-to directory
 	* Fixed bug #322197: Improve Naming Filename when create new Archive
 	  file
 	* Fixed bug #316564: needs unzip AND zip.
@@ -1431,7 +1431,7 @@ version 2.13.1
 ---------------
 	* Fixed bug #319600: compilation under AIX 5.1 aborts with ".atoll
 	  not found".
-	* Fixed bug #319343: file-roller won't let me delete files from an
+	* Fixed bug #319343: engrampa won't let me delete files from an
 	  archive which contain a dollar sign ($).
 	* Removed the matecomponent component.
 
@@ -1495,7 +1495,7 @@ version 2.10.1
 	* Fixed bug #170842: Toolbar buttons too wide.
 	* Fixed bug #170329: Aborting File Add can sometimes crash the
 	  application.
-	* Fixed bug #170258: file-roller can't open for preview files with a
+	* Fixed bug #170258: engrampa can't open for preview files with a
 	  white space in filename.
 	* Fixed bug #169818: Archive menu item to be disabled if no files are
 	  selected.
@@ -1514,7 +1514,7 @@ version 2.9.92
 	* Fixed bug #157698: Default new archive name as the first-added object.
 	* Fixed bug #168477: Create Archive should leave status window in the
 	  background while creating multiple folder archives.
-	* Fixed bug #159952: file-roller compilation error.
+	* Fixed bug #159952: engrampa compilation error.
 	* Fixed bug #166658: Archives should only be processed if command-line
 	  utility is present.
 	* Fixed bug #144953: ISO reading assumes Joliet and Rock Ridge
@@ -1530,16 +1530,16 @@ version 2.9.4
 
 version 2.9.3
 -------------
-	* Fixed bug #132555: file-roller does not honor system-wide toolbar
+	* Fixed bug #132555: engrampa does not honor system-wide toolbar
 	  setting.
 	* Fixed bug #162188: RAR archives' directories are not recognized
 	  properly.
-	* Fixed bug #162324: Cannot drag files from gthumb to file-roller
+	* Fixed bug #162324: Cannot drag files from gthumb to engrampa
 
 version 2.9.2
 -------------
 	* Fixed bug #152129: Unnecessary call to _window_update_sensitivity()
-	* Fixed bug #154821: file-roller can't open archives with extension
+	* Fixed bug #154821: engrampa can't open archives with extension
 	  .lha
 	* Fixed bug #154398: Remove some useless code.
 	* Fixed bug #154233: load_icon_file optimization.
@@ -1585,7 +1585,7 @@ version 2.7.5
 	* Fixed bug #150329: File roller creates predictable /tmp directories
 	* Fixed bug #150327: Adding a directory to archive hangs file roller
 	* Fixed BUG #150328: avoid crashing while DND of 'Home' icon into
- 	  file-roller.
+ 	  engrampa.
 	* Updated the recent-files sources from libegg.
 
 version 2.7.4
@@ -1595,7 +1595,7 @@ version 2.7.4
 
 version 2.7.3
 -------------
-	* Added the supported mime types to file-roller.desktop
+	* Added the supported mime types to engrampa.desktop
 
 version 2.7.2
 -------------
@@ -1605,7 +1605,7 @@ version 2.7.2
 
 version 2.7.1
 -------------
-	* Fixed bug #144455: Make file-roller session aware even when no
+	* Fixed bug #144455: Make engrampa session aware even when no
 	  archive is opened.
 	* Fixed bug #144079 (iso is not listed as a archive in open dialog)
 	* Hide the main window when in batch mode.

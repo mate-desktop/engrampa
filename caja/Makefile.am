@@ -9,14 +9,14 @@ INCLUDES =						\
 
 caja_extensiondir=$(CAJA_EXTENSION_DIR)
 
-caja_extension_LTLIBRARIES=libcaja-fileroller.la
+caja_extension_LTLIBRARIES=libcaja-engrampa.la
 
-libcaja_fileroller_la_SOURCES =     \
-	caja-fileroller.c           \
-	caja-fileroller.h           \
-	fileroller-module.c
+libcaja_engrampa_la_SOURCES =     \
+	caja-engrampa.c           \
+	caja-engrampa.h           \
+	engrampa-module.c
 
-libcaja_fileroller_la_LDFLAGS = -module -avoid-version -no-undefined
-libcaja_fileroller_la_LIBADD  = $(CAJA_LIBS)
+libcaja_engrampa_la_LDFLAGS = -module -avoid-version -no-undefined
+libcaja_engrampa_la_LIBADD  = $(CAJA_LIBS)
 
 -include $(top_srcdir)/git.mk

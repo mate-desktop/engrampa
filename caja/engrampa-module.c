@@ -25,7 +25,7 @@
 #include <libcaja-extension/caja-extension-types.h>
 #include <libcaja-extension/caja-column-provider.h>
 #include <glib/gi18n-lib.h>
-#include "caja-fileroller.h"
+#include "caja-engrampa.h"
 
 
 void

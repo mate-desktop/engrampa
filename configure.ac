@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.61)
 
-AC_INIT(file-roller, 2.32.0, [http://bugzilla.mate.org/enter_bug.cgi?product=file-roller])
+AC_INIT([engrampa], [2011.11.9], [http://bugzilla.mate.org/enter_bug.cgi?product=engrampa])
 AM_INIT_AUTOMAKE([1.9 foreign])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
@@ -122,7 +122,7 @@ fi
 
 dnl ******************************
 
-GETTEXT_PACKAGE=file-roller
+GETTEXT_PACKAGE=engrampa
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
@@ -164,9 +164,9 @@ AC_SUBST(CAJA_EXTENSION_DIR)
 dnl ******************************
 
 AC_CONFIG_FILES([Makefile
-		 file-roller.spec
+		 engrampa.spec
 		 data/Makefile
-		 data/file-roller.desktop.in
+		 data/engrampa.desktop.in
 		 data/ui/Makefile
 		 data/icons/Makefile
 		 data/icons/16x16/Makefile

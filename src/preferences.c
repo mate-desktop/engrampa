@@ -30,7 +30,7 @@
 #include "fr-window.h"
 
 
-#define DIALOG_PREFIX "/apps/file-roller/dialogs/"
+#define DIALOG_PREFIX "/apps/engrampa/dialogs/"
 
 
 typedef struct {

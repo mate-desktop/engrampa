@@ -24,8 +24,8 @@ EXTRA_DIST = 			\
 	MAINTAINERS		\
 	NEWS			\
 	README			\
-	file-roller.spec	\
-	file-roller.spec.in	\
+	engrampa.spec	\
+	engrampa.spec.in	\
 	intltool-merge.in	\
 	intltool-update.in	\
 	intltool-extract.in	\

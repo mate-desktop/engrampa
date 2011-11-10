@@ -9,7 +9,7 @@ Version:    	%{version}
 Release:	%{release}
 Copyright:	GPL
 Vendor:		MATE
-URL:		http://fileroller.sourceforge.net
+URL:		http://engrampa.sourceforge.net
 Group:		Applications/Archiving
 Source0:	%{name}-%{version}.tar.gz
 Packager:       Paolo Bacchilega <paolo.bacch@tin.it>
@@ -77,20 +77,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_bindir}/file-roller
-%{_datadir}/applications/file-roller.desktop
-%{_datadir}/file-roller/glade/*.glade
-%{_datadir}/locale/*/LC_MESSAGES/file-roller.mo
-%{_datadir}/application-registry/file-roller.applications
+%{_bindir}/engrampa
+%{_datadir}/applications/engrampa.desktop
+%{_datadir}/engrampa/glade/*.glade
+%{_datadir}/locale/*/LC_MESSAGES/engrampa.mo
+%{_datadir}/application-registry/engrampa.applications
 %{_datadir}/mime-info/*
-%{_datadir}/pixmaps/file-roller.png
-%{_datadir}/omf/file-roller/*.omf
-%doc %{_datadir}/mate/help/file-roller
+%{_datadir}/pixmaps/engrampa.png
+%{_datadir}/omf/engrampa/*.omf
+%doc %{_datadir}/mate/help/engrampa
 %doc AUTHORS NEWS README COPYING
 %config %{_sysconfdir}/mateconf/schemas/*
 
 %post
-MATECONF_CONFIG_SOURCE=`mateconftool-2 --get-default-source` mateconftool-2 --makefile-install-rule %{_sysconfdir}/mateconf/schemas/file-roller.schemas
+MATECONF_CONFIG_SOURCE=`mateconftool-2 --get-default-source` mateconftool-2 --makefile-install-rule %{_sysconfdir}/mateconf/schemas/engrampa.schemas
 if which scrollkeeper-update>/dev/null 2>&1; then scrollkeeper-update; fi
 
 %postun

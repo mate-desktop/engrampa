@@ -91,22 +91,22 @@ static int             dir_tree_icon_size = 0;
 #define XDS_ATOM   gdk_atom_intern  ("XdndDirectSave0", FALSE)
 #define TEXT_ATOM  gdk_atom_intern  ("text/plain", FALSE)
 #define OCTET_ATOM gdk_atom_intern  ("application/octet-stream", FALSE)
-#define XFR_ATOM   gdk_atom_intern  ("XdndFileRoller0", FALSE)
+#define XFR_ATOM   gdk_atom_intern  ("XdndEngrampa0", FALSE)
 
-#define FR_CLIPBOARD (gdk_atom_intern_static_string ("_FILE_ROLLER_SPECIAL_CLIPBOARD"))
-#define FR_SPECIAL_URI_LIST (gdk_atom_intern_static_string ("application/file-roller-uri-list"))
+#define FR_CLIPBOARD (gdk_atom_intern_static_string ("_RNGRAMPA_SPECIAL_CLIPBOARD"))
+#define FR_SPECIAL_URI_LIST (gdk_atom_intern_static_string ("application/engrampa-uri-list"))
 
 static GtkTargetEntry clipboard_targets[] = {
-	{ "application/file-roller-uri-list", 0, 1 }
+	{ "application/engrampa-uri-list", 0, 1 }
 };
 
 static GtkTargetEntry target_table[] = {
-	{ "XdndFileRoller0", 0, 0 },
+	{ "XdndEngrampa0", 0, 0 },
 	{ "text/uri-list", 0, 1 },
 };
 
 static GtkTargetEntry folder_tree_targets[] = {
-	{ "XdndFileRoller0", 0, 0 },
+	{ "XdndEngrampa0", 0, 0 },
 	{ "XdndDirectSave0", 0, 2 }
 };
 
@@ -2811,7 +2811,7 @@ fr_window_add_to_recent_list (FrWindow *window,
 		recent_data = g_new0 (GtkRecentData, 1);
 		recent_data->mime_type = g_content_type_get_mime_type (window->archive->content_type);
 		recent_data->app_name = "File Roller";
-		recent_data->app_exec = "file-roller";
+		recent_data->app_exec = "engrampa";
 		gtk_recent_manager_add_full (window->priv->recent_manager, uri, recent_data);
 
 		g_free (recent_data);

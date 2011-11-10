@@ -5,7 +5,7 @@ context = apps
 iconsdir = $(themedir)/$(size)/$(context)
 
 icons_DATA = \
-	file-roller.png
+	engrampa.png
 
 noinst_DATA =
 

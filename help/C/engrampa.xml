@@ -202,32 +202,32 @@
     <primary>File Roller</primary> 
   </indexterm> 
   <indexterm zone="index"> 
-    <primary>file-roller</primary> 
+    <primary>engrampa</primary> 
   </indexterm>
   <indexterm zone="index"> 
     <primary>Archiving</primary> 
   </indexterm>
-  <indexterm zone="file-roller-add-files"> 
+  <indexterm zone="engrampa-add-files"> 
     <primary>Archives</primary> 
     <secondary>Adding files to</secondary>
   </indexterm> 
-  <indexterm zone="file-roller-delete-files"> 
+  <indexterm zone="engrampa-delete-files"> 
     <primary>Archives</primary> 
     <secondary>Deleting files from</secondary>
   </indexterm> 
-  <indexterm zone="file-roller-open"> 
+  <indexterm zone="engrampa-open"> 
     <primary>Archives</primary> 
     <secondary>Opening</secondary>
   </indexterm> 
-  <indexterm zone="file-roller-view"> 
+  <indexterm zone="engrampa-view"> 
     <primary>Archives</primary> 
     <secondary>Viewing</secondary>
   </indexterm> 
-  <indexterm zone="file-roller-extract"> 
+  <indexterm zone="engrampa-extract"> 
     <primary>Archives</primary> 
     <secondary>Extracting</secondary>
   </indexterm> 
-  <indexterm zone="file-roller-create"> 
+  <indexterm zone="engrampa-create"> 
     <primary>Archives</primary> 
     <secondary>Creating</secondary>
   </indexterm> 
@@ -236,7 +236,7 @@
 <!-- ============= Introduction ============================== -->
 <!-- Use the Introduction section to give a brief overview of what
      the application is and what it does. -->
-  <sect1 id="file-roller-intro"> 
+  <sect1 id="engrampa-intro"> 
     <title>Introduction</title> 
     <para>You can use the &app; application to create, view, modify, or unpack an archive. An archive is a file that acts as a container for other files. An archive can contain many files, folders, and subfolders, usually in compressed form. 
     </para>
@@ -375,7 +375,7 @@
       </informaltable>
     <para>The most common archive format on UNIX and Linux systems is the tar archive compressed with <command>gzip</command> or <command>bzip2</command>.  </para>  
     <para>The most common archive format on Microsoft Windows systems is the archive created with <application>PKZIP</application> or <application>WinZip</application>.  </para>
-    <sect2 id="file-roller-intro-nonarchive">
+    <sect2 id="engrampa-intro-nonarchive">
       <title>Compressed Non-Archive Files</title> 
       <para>A compressed non-archive file is a file that is created when you use <command>bzip2</command>, <command>gzip</command>, <command>lzip</command>, <command>lzop</command>, <command>compress</command> or <command>rzip</command> to compress a non-archive file. For example, <filename>file.txt.gz</filename> is created when you use <command>gzip</command> to compress <filename>file.txt</filename>.</para>
       <para>You can use &app; to create, open and extract a compressed non-archive file.</para> 
@@ -383,13 +383,13 @@
   </sect1>
 
 <!-- ============= Getting Started =========================== -->
-  <sect1 id="file-roller-get-start">
+  <sect1 id="engrampa-get-start">
     <title>Getting Started</title>
     <para>This section provides information on how to start &app;, and describes the &app; user interface.
     </para>
 
 <!-- ============= To Start File Roller ============================ -->
-         <sect2 id="file-roller-to-start">
+         <sect2 id="engrampa-to-start">
                 <title>To Start &app;</title>
                 <para>You can start &app; in the following ways:</para>
                 <variablelist>
@@ -402,22 +402,22 @@
                 <varlistentry>
                 <term>Command line</term>
                 <listitem>
-                <para>Execute the following command: <command>file-roller</command></para>
+                <para>Execute the following command: <command>engrampa</command></para>
                 </listitem>
                 </varlistentry>
                 </variablelist>
         </sect2>
 
-         <sect2 id="file-roller-when-start">
+         <sect2 id="engrampa-when-start">
                 <title>When You Start &app;</title>
                 <para>When you start &app;, the following window is displayed:</para>
 
-                <figure id="file-roller-FIG-main-window">
+                <figure id="engrampa-FIG-main-window">
                   <title>&app; Window</title>
                   <screenshot>
                          <mediaobject>
                                 <imageobject>
-                                  <imagedata fileref="figures/file-roller_main_window.png" format="PNG"/>
+                                  <imagedata fileref="figures/engrampa_main_window.png" format="PNG"/>
                                          </imageobject>
                                 <textobject> <phrase>Shows File Roller main window.</phrase>
                                 </textobject>
@@ -439,7 +439,7 @@
                   </varlistentry>
                   <varlistentry> <term>Folderbar</term>
                          <listitem>
-                                <para>The folderbar enables you to navigate among folders within an archive. &app; displays the folderbar only in folder view. See <xref linkend="file-roller-view-type-folder"/> for more information.</para>
+                                <para>The folderbar enables you to navigate among folders within an archive. &app; displays the folderbar only in folder view. See <xref linkend="engrampa-view-type-folder"/> for more information.</para>
                          </listitem>
                   </varlistentry>
                   <varlistentry> <term>Display area</term>
@@ -455,7 +455,7 @@
                 </variablelist>
                 <para>When you right-click in the &app; window, the application displays a popup menu. The popup menu contains the most common contextual archive commands. </para>
 
-     <sect3 id="file-roller-bookmarks">
+     <sect3 id="engrampa-bookmarks">
         <title>Browsing the Filesystem</title>
         <para>Several &app; dialogs (<guilabel>New</guilabel>, <guilabel>Open</guilabel>, <guilabel>Extract</guilabel>,...) enable you
         to browse files and folders on your computer. Refer to the <ulink type="help" 
@@ -472,7 +472,7 @@
 
 <!-- ======= Working with archives ============= --> 
 
-<sect1 id="file-roller-working">
+<sect1 id="engrampa-working">
       <title>Working With Archives</title>
       <para>
         When you use &app; to work with an archive, all changes are saved to disk immediately. For example, if you delete a file from an archive, &app; deletes the file as soon as you click <guibutton>OK</guibutton>. This behavior is different to that of most applications, which save the changes to disk only when you quit the application or select <guimenuitem>Save</guimenuitem> in the menu.</para>
@@ -525,7 +525,7 @@
       This manual documents functionality from the menubar.
       </para>
 
-    <sect2 id="file-roller-pattern">
+    <sect2 id="engrampa-pattern">
       <title>Filename Patterns</title>
       <para>&app; enables you to add, extract, or delete several files at once. To apply an action to all files that match a certain pattern, enter the pattern in the text box. The pattern can include standard wildcard symbols such as <keycap>*</keycap> to match any string, and <keycap>?</keycap> to match any single symbol. You can enter several patterns separated by semicolons. &app; applies the action to all files that match at least one of the patterns. The examples in the following table show how to use filename patterns to select files.
       </para>
@@ -565,7 +565,7 @@
 
 <!-- ======= To open an archive ============= --> 
 
-<sect2 id="file-roller-open">
+<sect2 id="engrampa-open">
       <title>To Open an Archive</title>
       <para>
 	To open an archive, perform the following steps:
@@ -598,12 +598,12 @@
         To open another archive, choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Open</guimenuitem></menuchoice> again. &app; opens each archive in a new window. You can't open another archive in the same window.
       </para>
       <para>
-	If you try to open an archive that was created in a format that &app; does not recognize, the application displays an error message. See <xref linkend="file-roller-intro"/> for a list of supported formats.
+	If you try to open an archive that was created in a format that &app; does not recognize, the application displays an error message. See <xref linkend="engrampa-intro"/> for a list of supported formats.
       </para>
   </sect2>
 
 <!-- ======= Selecting files in an archive  ============= --> 
-    <sect2 id="file-roller-select-files">
+    <sect2 id="engrampa-select-files">
       <title>To Select Files in an Archive</title>
     <para>
       To select all files in an archive, choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Select All</guimenuitem></menuchoice> or press <keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>. </para>
@@ -613,7 +613,7 @@
 
   <!-- =========== Extracting Files From an Archive ==================== -->
 
-  <sect2 id="file-roller-extract"> 
+  <sect2 id="engrampa-extract"> 
     <title>To Extract Files From an Archive</title> 
     <para>
 	To extract files from an open archive, perform the following steps:
@@ -628,7 +628,7 @@
         Select the folder where &app; extracts the files.</para>
         </listitem>
         <listitem><para>
-        Select the required extract options. For more information about the extract options, see <xref linkend="file-roller-extract-options"/>.</para>
+        Select the required extract options. For more information about the extract options, see <xref linkend="engrampa-extract-options"/>.</para>
         </listitem>
         <listitem><para>
         Click <guibutton>Extract</guibutton>.</para>
@@ -640,23 +640,23 @@
             If some but not all of the files in the archive are protected by a password, and you have not specified the password, &app; does not ask for a password. However, &app; extracts only the unprotected files.
           </para>
           <para>
-            For more information about passwords, see <xref linkend="file-roller-encrypt-files"/>.
+            For more information about passwords, see <xref linkend="engrampa-encrypt-files"/>.
           </para>
         </note>
         </listitem>
         </orderedlist>
         </para>
-      <para>&app; also provides ways of extracting files from an archive in a file manager window, without opening a &app; window. See <xref linkend="file-roller-fmgr"/> for more information.</para>
+      <para>&app; also provides ways of extracting files from an archive in a file manager window, without opening a &app; window. See <xref linkend="engrampa-fmgr"/> for more information.</para>
     <para>
       The Extract operation extracts a <emphasis>copy</emphasis> of the specified files from the archive. The extracted files have the same permissions and modification date as the original files that were added to the archive.
     </para>
     <para>
-      The Extract operation does not change the contents of the archive. For information on how to delete files from an archive, see <xref linkend="file-roller-delete-files"/>. 
+      The Extract operation does not change the contents of the archive. For information on how to delete files from an archive, see <xref linkend="engrampa-delete-files"/>. 
     </para>
   </sect2>
     
 <!-- ======= Closing the Archive ============= --> 
-  <sect2 id="file-roller-archive-close">
+  <sect2 id="engrampa-archive-close">
     <title>To Close an Archive</title>
     <para>To close the current archive and the current &app; window, choose <menuchoice> <guimenu>Archive</guimenu> <guimenuitem>Close</guimenuitem> </menuchoice>, or press <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>.
     </para>
@@ -669,11 +669,11 @@
 
 
 <!-- =============  Creating Archives ============================= -->
-<sect1 id="file-roller-creating"> 
+<sect1 id="engrampa-creating"> 
     <title>Creating Archives</title> 
     <para>
       In addition to opening existing archives, you can also create new archives with &app;.</para>
-    <sect2 id="file-roller-create"> 
+    <sect2 id="engrampa-create"> 
     <title>To Create an Archive</title> 
     <para>
       To create an archive, perform the following steps:
@@ -691,14 +691,14 @@
           </para>
         </listitem>
         <listitem><para>
-        Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="file-roller-create-options"/>.</para>
+        Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="engrampa-create-options"/>.</para>
         </listitem>
         <listitem>
           <para>Click <guibutton>New</guibutton>. &app; creates an empty archive, but does not yet write the archive to disk. 
           </para>
         </listitem>
         <listitem>
-          <para>Add files to the new archive as described in <xref linkend="file-roller-add-files"/>.  
+          <para>Add files to the new archive as described in <xref linkend="engrampa-add-files"/>.  
                 <note>
                   <para>&app; writes a new archive to disk only when the archive contains at least one file. If you create a new archive and quit &app; before you add any files to the archive, &app; deletes the archive.
                   </para>
@@ -710,7 +710,7 @@
 </sect2>
 
     <!-- ======= Adding files to an archive  ============= --> 
-  <sect2 id="file-roller-add-files">
+  <sect2 id="engrampa-add-files">
     <title>To Add Files to an Archive</title>
     <para>
       To add files to an archive, perform the following steps:
@@ -730,15 +730,15 @@
          </listitem>
       </orderedlist>
     </para>
-    <para>You cannot add folders to the archive with the <guilabel>Add Files</guilabel> dialog. To add a folder see <xref linkend="file-roller-add-folder"/>.</para>
-    <para>The <guilabel>Add Files</guilabel> dialog provides the <guilabel>Add only if newer</guilabel> option, see <xref linkend="file-roller-add-options"/> for more information on this option.</para>
-    <para>You can also add files to an archive in a file manager window, without opening an &app; window. See <xref linkend="file-roller-fmgr"/> for more information.</para>
+    <para>You cannot add folders to the archive with the <guilabel>Add Files</guilabel> dialog. To add a folder see <xref linkend="engrampa-add-folder"/>.</para>
+    <para>The <guilabel>Add Files</guilabel> dialog provides the <guilabel>Add only if newer</guilabel> option, see <xref linkend="engrampa-add-options"/> for more information on this option.</para>
+    <para>You can also add files to an archive in a file manager window, without opening an &app; window. See <xref linkend="engrampa-fmgr"/> for more information.</para>
     <para>The Add operation adds a <emphasis>copy</emphasis> of the specified files or folders to the archive. &app; does not remove the original files, which remain unchanged in the file system. The copies that are added to the archive have the same permissions and modification date as the original files. 
     </para>
     </sect2>
 
 <!-- ======= Adding files - Adding folder  ============= --> 
-    <sect2 id="file-roller-add-folder">
+    <sect2 id="engrampa-add-folder">
       <title>To Add a Folder to an Archive</title>
     <para>
       To add a folder to an archive, perform the following steps:
@@ -758,11 +758,11 @@
          </listitem>
       </orderedlist>
     </para>
-    <para>The <guilabel>Add a Folder</guilabel> dialog provides several advanced options. See <xref linkend="file-roller-add-options"/> for more information.</para>
+    <para>The <guilabel>Add a Folder</guilabel> dialog provides several advanced options. See <xref linkend="engrampa-add-options"/> for more information.</para>
     </sect2>
 
   <!-- ======= Converting an Archive to Another Format ============= --> 
-  <sect2 id="file-roller-convert-archive">
+  <sect2 id="engrampa-convert-archive">
     <title>To Convert an Archive to Another Format</title>
     <para>To convert an archive to another format and save as a new file, perform the following steps:
     </para>
@@ -784,7 +784,7 @@
         </para>
       </listitem>
       <listitem>
-        <para>Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="file-roller-create-options"/>.
+        <para>Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="engrampa-create-options"/>.
         </para>
       </listitem>      
       <listitem>
@@ -798,7 +798,7 @@
             If some but not all of the files in the archive are protected by a password, and you have not specified the password, &app; does not ask for a password. However, &app; copies only the unprotected files to the new archive.
           </para>
           <para>
-            For more information about passwords, see <xref linkend="file-roller-encrypt-files"/>.
+            For more information about passwords, see <xref linkend="engrampa-encrypt-files"/>.
           </para>
         </note>
       </listitem>
@@ -807,14 +807,14 @@
 </sect1>
 
 <!-- ======= Operations on Archive Contents ============= --> 
-<sect1 id="file-roller-modify-contents">
+<sect1 id="engrampa-modify-contents">
   <title>Modifying the Contents of an Archive</title>
   <para>
     You can modify the contents of an archive in several ways.
   </para>
 
 <!-- ======= Encrypting files in an archive  ============= --> 
-    <sect2 id="file-roller-encrypt-files">
+    <sect2 id="engrampa-encrypt-files">
       <title>To Encrypt Files in an Archive</title>
     <para>For security, you might want to encrypt the files that you add to an archive. </para>
       <para>If the archive format supports encryption, you can specify a password to encrypt the files that you add to the archive.</para>
@@ -829,7 +829,7 @@
        </orderedlist>
     <para>&app; uses the password to encrypt the files that you add to the current archive, and to decrypt the files that you extract from the current archive. &app; deletes the password when you close the archive.
       </para>
-      <para>For information on how to check whether an archive contains encrypted files, see <xref linkend="file-roller-extra-info"/>.
+      <para>For information on how to check whether an archive contains encrypted files, see <xref linkend="engrampa-extra-info"/>.
       </para>
       <note>
       <para>The encryption provided by archive utilities is weak and insecure. If security is important, use a strong encryption tool such as <ulink url="http://www.gnupg.org" type="http">GNU Privacy Guard</ulink>.
@@ -838,7 +838,7 @@
     </sect2>
 
 <!-- ======= Renaming files in an archive  ============= --> 
-  <sect2 id="file-roller-rename-files">
+  <sect2 id="engrampa-rename-files">
     <title>To Rename a File in an Archive</title>
     <para>To rename a file in an archive, perform the following steps:</para>
       <orderedlist>
@@ -859,7 +859,7 @@
   </sect2>
 
 <!-- ======= Copying files in an archive  ============= --> 
-  <sect2 id="file-roller-copy-files">
+  <sect2 id="engrampa-copy-files">
     <title>To Copy Files in an Archive</title>
     <para>To copy files in an archive, perform the following steps:</para>
       <orderedlist>
@@ -879,7 +879,7 @@
   </sect2>
 
 <!-- ======= Moving files in an archive  ============= --> 
-  <sect2 id="file-roller-move-files">
+  <sect2 id="engrampa-move-files">
     <title>To Move Files in an Archive</title>
     <para>To move files in an archive, perform the following steps:</para>
       <orderedlist>
@@ -899,7 +899,7 @@
   </sect2>
 
 <!-- ======= Deleting files from an archive  ============= --> 
-  <sect2 id="file-roller-delete-files">
+  <sect2 id="engrampa-delete-files">
     <title>To Delete Files From an Archive</title>
     <para>To delete files from an archive, perform the following steps:</para>
       <orderedlist>
@@ -932,7 +932,7 @@
               <term><guilabel>Files</guilabel></term>
               <listitem>
                 <para>
-                  Delete from the archive all files that match the specified pattern. See <xref linkend="file-roller-pattern"/> for more information about filename patterns. 
+                  Delete from the archive all files that match the specified pattern. See <xref linkend="engrampa-pattern"/> for more information about filename patterns. 
                 </para>
               </listitem>
             </varlistentry>
@@ -946,7 +946,7 @@
   </sect2>
 
 <!-- =============  Modify a File in an Archive ==================== -->
-  <sect2 id="file-roller-modify-archive-file"> 
+  <sect2 id="engrampa-modify-archive-file"> 
     <title>To Modify a File in an Archive</title> 
     <para>
       To modify a file in an archive perform the following steps:
@@ -959,7 +959,7 @@
     </para>
     <para>&app; uses the system-defined associations between file types and programs to determine the appropriate application to launch for a specific file. These assocations can be displayed and modified in the <guilabel>Open With</guilabel> tab of the file properties dialog. If &app; cannot determine the appropriate application, &app; displays the <guilabel>Open Files</guilabel> dialog to let you choose an application, as described in below.
     </para>
-    <sect3 id="file-roller-modifiy-archive-file-custom-app">
+    <sect3 id="engrampa-modifiy-archive-file-custom-app">
     <title>To Modify a File in an Archive with a Custom Application</title>
     <para>
       You can use an application specified by you, rather than the default application, to modify a file. To use an external application to open a file:
@@ -969,20 +969,20 @@
       </orderedlist>
     </para>    
     <para>&app; displays the <guilabel>Open Files</guilabel> dialog, which lists all of the applications that can open files of the specified type. To select one of the applications, double-click the application name or click on the application name and then click <guibutton>Open</guibutton>. Alternatively, enter the application name in the <guilabel>Application</guilabel> text box and then click <guibutton>Open</guibutton> to launch the application of your choice.</para>
-    <para>Once the application starts follow the procedure from step 2 as described in <xref linkend="file-roller-modify-archive-file"/>.</para>
+    <para>Once the application starts follow the procedure from step 2 as described in <xref linkend="engrampa-modify-archive-file"/>.</para>
     </sect3>
   </sect2>
 </sect1>
 
 
 <!-- ======= Viewing an archive ============= --> 
-<sect1 id="file-roller-view">
+<sect1 id="engrampa-view">
   <title>Viewing Archives</title>
   <para>&app; enables you to view several aspects of an archive.
   </para>
 
 <!-- ======= Archive Properties ============= --> 
-    <sect2 id="file-roller-view-archive-properties">
+    <sect2 id="engrampa-view-archive-properties">
       <title>To View the Properties of an Archive</title>
       <para>To view the properties of an archive, choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Properties</guimenuitem></menuchoice> to display the <guilabel>Properties</guilabel> dialog. The <guilabel>Properties</guilabel> dialog displays the following information about the archive:
             <variablelist>
@@ -1029,7 +1029,7 @@
  
 
 <!-- ======= Archive Contents ============= --> 
-    <sect2 id="file-roller-view-archive-contents">
+    <sect2 id="engrampa-view-archive-contents">
       <title>To View the Contents of an Archive</title>
 
       <para> &app; displays the archive contents in the main window as a file list with the following columns:
@@ -1041,7 +1041,7 @@
 	  </varlistentry>
 	  <varlistentry>
 	    <term><guilabel>Size</guilabel></term>
-	    <listitem><para>The size of the file when the file is extracted from the archive. For a folder, the <guilabel>Size</guilabel> field is blank. For information on how to display the size of the compressed file, see <xref linkend="file-roller-extra-info"/>.
+	    <listitem><para>The size of the file when the file is extracted from the archive. For a folder, the <guilabel>Size</guilabel> field is blank. For information on how to display the size of the compressed file, see <xref linkend="engrampa-extra-info"/>.
             </para></listitem>
 	  </varlistentry>
 	  <varlistentry>
@@ -1056,29 +1056,29 @@
 	  </varlistentry>
 	  <varlistentry>
 	    <term><guilabel>Location</guilabel></term>
-	    <listitem><para>The path to the file within the archive. This column is visible only when the window is in file view, when in folder view the location of the files is displayed in the <guilabel>Location</guilabel> text box of the folderbar. For more information about view types see <xref linkend="file-roller-view-type-folder"/>.
+	    <listitem><para>The path to the file within the archive. This column is visible only when the window is in file view, when in folder view the location of the files is displayed in the <guilabel>Location</guilabel> text box of the folderbar. For more information about view types see <xref linkend="engrampa-view-type-folder"/>.
             </para></listitem>
 	  </varlistentry>
         </variablelist>
       </para>
       <para>If another program has modified the archive since &app; opened the archive, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Reload</guimenuitem></menuchoice> to reload the archive contents from disk.
       </para>
-      <para>For information on how to customize the way that &app; displays the archive contents, see <xref linkend="file-roller-archive-custom"/>.
+      <para>For information on how to customize the way that &app; displays the archive contents, see <xref linkend="engrampa-archive-custom"/>.
       </para>
-      <para>For more advanced tasks, use an application installed on your system. For more information, see <xref linkend="file-roller-view-archive-file"/>. 
+      <para>For more advanced tasks, use an application installed on your system. For more information, see <xref linkend="engrampa-view-archive-file"/>. 
       </para>
     </sect2>
 
   <!-- =============  Viewing a File in an Archive ==================== -->
-  <sect2 id="file-roller-view-archive-file"> 
+  <sect2 id="engrampa-view-archive-file"> 
     <title>To View a File in an Archive</title> 
     <para>
-      To view a file in an archive follow the steps described in <xref linkend="file-roller-modify-archive-file"/>.  If you save the opened file, click <guilabel>Cancel</guilabel> when &app; asks confirmation to update the file in the archive.
+      To view a file in an archive follow the steps described in <xref linkend="engrampa-modify-archive-file"/>.  If you save the opened file, click <guilabel>Cancel</guilabel> when &app; asks confirmation to update the file in the archive.
     </para>
   </sect2>
 
 <!-- =============  Testing the Integrity of an Archive ==================== -->
-  <sect2 id="file-roller-test-archive"> 
+  <sect2 id="engrampa-test-archive"> 
     <title>To Test the Integrity of an Archive</title> 
     <para>Sometimes an archive can be damaged for some reason, to check whether an archive is damaged, choose <menuchoice><guimenu>Archive</guimenu><guimenuitem>Test Integrity</guimenuitem></menuchoice>:
             <itemizedlist>
@@ -1109,33 +1109,33 @@
 </sect1>
     
 <!-- ======= Customizing the Archive Display ============= --> 
-<sect1 id="file-roller-archive-custom">
+<sect1 id="engrampa-archive-custom">
   <title>Customizing the Archive Display</title>
   <para>You can customize the way that &app; displays the archive contents, as follows:
   </para>
   <itemizedlist>
     <listitem>
-      <para>Switch between folder view and file view. For more information, see <xref linkend="file-roller-view-type"/>.
+      <para>Switch between folder view and file view. For more information, see <xref linkend="engrampa-view-type"/>.
       </para>
     </listitem>
     <listitem>
-      <para>Specify the order in which to display files in the list. For more information, see <xref linkend="file-roller-view-sort"/>. 
+      <para>Specify the order in which to display files in the list. For more information, see <xref linkend="engrampa-view-sort"/>. 
       </para>
     </listitem> 
     <listitem>
-      <para>Display additional details about the contents of the archive. For more information, see <xref linkend="file-roller-extra-info"/>. 
+      <para>Display additional details about the contents of the archive. For more information, see <xref linkend="engrampa-extra-info"/>. 
       </para>
     </listitem> 
   </itemizedlist>
   <para>&app; updates the display immediately, when you make any of the above customizations.
   </para>
 
-  <sect2 id="file-roller-view-type">
+  <sect2 id="engrampa-view-type">
     <title>To Set the View Type</title>
-    <para>If the archive contains folders, you can show the archive contents in either <link linkend="file-roller-view-type-folder">folder view</link> or <link linkend="file-roller-view-type-file">file view</link>. 
+    <para>If the archive contains folders, you can show the archive contents in either <link linkend="engrampa-view-type-folder">folder view</link> or <link linkend="engrampa-view-type-file">file view</link>. 
     </para>
 
-    <sect3 id="file-roller-view-type-folder">
+    <sect3 id="engrampa-view-type-folder">
       <title>Folder View</title>
       <para>&app; displays the archive contents in folder view by default. To explicitly select folder view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>View as a Folder</guimenuitem></menuchoice>.
       </para>
@@ -1161,7 +1161,7 @@
                 <para>
                   <inlinemediaobject>
                     <imageobject>
-                      <imagedata fileref="figures/file-roller_leftarrow.png" format="PNG"/>
+                      <imagedata fileref="figures/engrampa_leftarrow.png" format="PNG"/>
                     </imageobject>
                     <textobject>
                       <phrase>Shows icon to navigate backwards in location history list.</phrase>
@@ -1180,7 +1180,7 @@
                 <para>
                   <inlinemediaobject>
                     <imageobject>
-                      <imagedata fileref="figures/file-roller_rightarrow.png" format="PNG"/>
+                      <imagedata fileref="figures/engrampa_rightarrow.png" format="PNG"/>
                     </imageobject>
                     <textobject>
                       <phrase>Shows icon to navigate forwards in location history list.</phrase>
@@ -1199,7 +1199,7 @@
                 <para>
                   <inlinemediaobject>
                     <imageobject>
-                      <imagedata fileref="figures/file-roller_uparrow.png" format="PNG"/>
+                      <imagedata fileref="figures/engrampa_uparrow.png" format="PNG"/>
                     </imageobject>
                     <textobject>
                       <phrase>Shows icon to navigate up one level in folder tree.</phrase>
@@ -1218,7 +1218,7 @@
                 <para>
                   <inlinemediaobject>
                     <imageobject>
-                      <imagedata fileref="figures/file-roller_home.png" format="PNG"/>
+                      <imagedata fileref="figures/engrampa_home.png" format="PNG"/>
                     </imageobject>
                     <textobject>
                       <phrase>Shows icon to open the top-level folder in the archive.</phrase>
@@ -1251,7 +1251,7 @@
       </informaltable>
     </sect3>
 
-    <sect3 id="file-roller-view-type-file">
+    <sect3 id="engrampa-view-type-file">
       <title>File View</title>
       <para>To select file view, choose <menuchoice><guimenu>View</guimenu><guimenuitem>View All Files</guimenuitem></menuchoice>.
       </para>
@@ -1261,7 +1261,7 @@
 
   </sect2>
 
-  <sect2 id="file-roller-view-sort">
+  <sect2 id="engrampa-view-sort">
     <title>To Sort the File List</title>
     <para>You can sort the file list by name, size, type, modification date, or location. </para>
     <para>To specify a sort order, click on the heading of the corresponding column. </para>
@@ -1273,7 +1273,7 @@
     </para>
   </sect2>
 
-  <sect2 id="file-roller-extra-info">
+  <sect2 id="engrampa-extra-info">
     <title>To Display Additional Details</title>
       <para>To open the <guilabel>Last Output</guilabel> dialog, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Last Output</guimenuitem></menuchoice>: 
             <itemizedlist>
@@ -1292,13 +1292,13 @@
 
 <!-- ====== Using the File Manager Popup Menu to Manipulate an Archive ===== -->
 
-<sect1 id="file-roller-fmgr"> 
+<sect1 id="engrampa-fmgr"> 
     <title>Using the File Manager to Work with an Archive</title> 
     <para>
 	You can use the file manager to add files to an archive, or to extract files from an archive.</para>
 
 <!-- ======= Adding files Using File Manager Menu  ============= --> 
-    <sect2 id="file-roller-fmgr-add">
+    <sect2 id="engrampa-fmgr-add">
       <title>To Add Files to an Archive by Using the File Manager</title>
            <para>You can use the file manager to add files to an archive, in the following ways:
            <itemizedlist>
@@ -1321,17 +1321,17 @@
         <listitem><para>Choose the location where to save the archive file, from the <guilabel>Location</guilabel> drop-down list.  If the location is not present in the list choose <guilabel>Other...</guilabel> to select it with the <guilabel>Location</guilabel> dialog.</para>
         </listitem>
         <listitem><para>
-        Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="file-roller-create-options"/>.</para>
+        Select the required create options clicking on <guilabel>Other Options</guilabel>. For more information about the create options, see <xref linkend="engrampa-create-options"/>.</para>
         </listitem>
         <listitem><para>Click <guilabel>Create</guilabel> to add the selected files to the root folder of the specified archive.
       </para>
-                 <note><para>To select any of the advanced add options, you must invoke &app; as described in <xref linkend="file-roller-to-start"/>.</para></note>
+                 <note><para>To select any of the advanced add options, you must invoke &app; as described in <xref linkend="engrampa-to-start"/>.</para></note>
         </listitem>
       </orderedlist>
     </sect2>
 
 <!-- ======= Extracting files Using File Manager Menu  ============= --> 
-  <sect2 id="file-roller-fmgr-extract">
+  <sect2 id="engrampa-fmgr-extract">
       <title>To Extract Files From an Archive by Using the File Manager</title>
            <para>You can use the file manager to extract files from an archive, in the following ways:
            <itemizedlist>
@@ -1354,7 +1354,7 @@
 </sect1>
 
 <!-- ======= Create Archive Advanced Options  ============= --> 
-    <sect1 id="file-roller-create-options">
+    <sect1 id="engrampa-create-options">
       <title>Create Options</title>
       <para>When creating a new archive, or when converting an existing archive to another format, click on <guilabel>Other Options</guilabel> to specify the following advanced options: 
       </para>
@@ -1365,7 +1365,7 @@
 	  <listitem>
 	  <para>Type the password that will be used to encrypt the archive.  If no password is specified the archive will not be encrypted.</para>
 	  <note>
-	    <para>Not all archive types support encryption.  For more information about file encryption, see <xref linkend="file-roller-encrypt-files"/>.</para>
+	    <para>Not all archive types support encryption.  For more information about file encryption, see <xref linkend="engrampa-encrypt-files"/>.</para>
 	  </note>
 	  </listitem>
 	</varlistentry>
@@ -1388,7 +1388,7 @@
     </sect1>
 
 <!-- ======= Add Advanced Options  ============= --> 
-    <sect1 id="file-roller-add-options">
+    <sect1 id="engrampa-add-options">
       <title>Add Options</title>
       <para>The <guilabel>Add Files</guilabel> and <guilabel>Add a Folder</guilabel> dialogs provide the following option: 
       </para>
@@ -1437,7 +1437,7 @@
 	</listitem>
       </varlistentry>
       </variablelist>
-      <sect2 id="file-roller-add-folder-options">
+      <sect2 id="engrampa-add-folder-options">
       <title>Add to Folder Options</title>
       <para>The following options are available in the <guilabel>Add a Folder</guilabel> dialog and allow to automatically select and add all files that satisfy certain criteria: 
       </para>
@@ -1446,7 +1446,7 @@
 	<varlistentry>
 	  <term><guilabel>Include files</guilabel></term>
 	  <listitem>
-            <para>Type a filename pattern in this text box to include files with names that match the specified pattern. See <xref linkend="file-roller-pattern"/> for more information about filename patterns.
+            <para>Type a filename pattern in this text box to include files with names that match the specified pattern. See <xref linkend="engrampa-pattern"/> for more information about filename patterns.
             </para>
           </listitem>
 	</varlistentry>
@@ -1454,7 +1454,7 @@
 	<varlistentry>
 	  <term><guilabel>Exclude files</guilabel></term>
 	  <listitem>
-            <para>Type a filename pattern in this text box to exclude files with names that match the specified pattern. See <xref linkend="file-roller-pattern"/> for more information about filename patterns.
+            <para>Type a filename pattern in this text box to exclude files with names that match the specified pattern. See <xref linkend="engrampa-pattern"/> for more information about filename patterns.
             </para>
           </listitem>
 	</varlistentry>
@@ -1462,7 +1462,7 @@
 	<varlistentry>
 	  <term><guilabel>Exclude folders</guilabel></term>
 	  <listitem>
-            <para>Type a filename pattern in this text box to exclude folders with names that match the specified pattern. See <xref linkend="file-roller-pattern"/> for more information about filename patterns.
+            <para>Type a filename pattern in this text box to exclude folders with names that match the specified pattern. See <xref linkend="engrampa-pattern"/> for more information about filename patterns.
             </para>
           </listitem>
 	</varlistentry>      
@@ -1531,7 +1531,7 @@
   </sect1>
 
 <!-- ======= Extract Options  ============= --> 
-  <sect1 id="file-roller-extract-options">
+  <sect1 id="engrampa-extract-options">
     <title>Extract Options</title>
       
     <para>
@@ -1566,7 +1566,7 @@
                 <term><guilabel>Files</guilabel></term>
                 <listitem>
                   <para>
-                    Extract from the archive all files that match the specified pattern. See <xref linkend="file-roller-pattern"/> for more information about filename patterns. 
+                    Extract from the archive all files that match the specified pattern. See <xref linkend="engrampa-pattern"/> for more information about filename patterns. 
                   </para>
                 </listitem>
               </varlistentry>

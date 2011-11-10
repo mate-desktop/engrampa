@@ -1,6 +1,6 @@
 SUBDIRS = commands sh
 
-bin_PROGRAMS = file-roller
+bin_PROGRAMS = engrampa
 
 if MKDTEMP_MISSING
 MKDTEMP_FILES=mkdtemp.c mkdtemp.h
@@ -14,10 +14,10 @@ uidir = $(top_srcdir)/data/ui
 privexecdir = $(abs_top_builddir)/src/commands/
 shdir = $(top_srcdir)/src/sh/
 else
-privdatadir = $(datadir)/file-roller/
-uidir = $(datadir)/file-roller/ui
-privexecdir = $(libexecdir)/file-roller/
-shdir = $(libexecdir)/file-roller/
+privdatadir = $(datadir)/engrampa/
+uidir = $(datadir)/engrampa/ui
+privexecdir = $(libexecdir)/engrampa/
+shdir = $(libexecdir)/engrampa/
 endif
 
 INCLUDES =						\
@@ -44,7 +44,7 @@ BUILT_SOURCES =			\
 	fr-enum-types.h		\
 	fr-enum-types.c
 
-file_roller_SOURCES = 			\
+engrampa_SOURCES = 			\
 	actions.h			\
 	actions.c			\
 	dlg-add-files.c			\
@@ -179,7 +179,7 @@ fr-enum-types.c: typedefs.h fr-enum-types.h
 	&& (cmp -s xgen-$(@F) fr-enum-types.c || cp xgen-$(@F) fr-enum-types.c ) \
 	&& rm -f xgen-$(@F) )
 
-file_roller_LDADD =							\
+engrampa_LDADD =							\
 		    $(top_builddir)/copy-n-paste/libeggsmclient.la	\
 		    $(FR_LIBS)
 

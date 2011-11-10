@@ -1,4 +1,4 @@
-uidir = $(datadir)/file-roller/ui
+uidir = $(datadir)/engrampa/ui
 ui_DATA = 			\
 	add-options.ui	\
 	batch-add-files.ui	\

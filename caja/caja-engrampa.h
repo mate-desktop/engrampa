@@ -21,8 +21,8 @@
  * 
  */
 
-#ifndef CAJA_FILEROLLER_H
-#define CAJA_FILEROLLER_H
+#ifndef CAJA_RNGRAMPA_H
+#define CAJA_RNGRAMPA_H
 
 #include <glib-object.h>
 
@@ -48,4 +48,4 @@ void  caja_fr_register_type (GTypeModule *module);
 
 G_END_DECLS
 
-#endif /* CAJA_FILEROLLER_H */
+#endif /* CAJA_RNGRAMPA_H */

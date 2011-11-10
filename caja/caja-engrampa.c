@@ -28,7 +28,7 @@
 #include <libcaja-extension/caja-extension-types.h>
 #include <libcaja-extension/caja-file-info.h>
 #include <libcaja-extension/caja-menu-provider.h>
-#include "caja-fileroller.h"
+#include "caja-engrampa.h"
 
 
 static GObjectClass *parent_class;
@@ -49,7 +49,7 @@ extract_to_callback (CajaMenuItem *item,
 	uri = caja_file_info_get_uri (file);
 	default_dir = caja_file_info_get_parent_uri (file);
 
-	cmd = g_string_new ("file-roller");
+	cmd = g_string_new ("engrampa");
 	g_string_append_printf (cmd,
 				" --default-dir=%s --extract %s",
 				g_shell_quote (default_dir),
@@ -81,7 +81,7 @@ extract_here_callback (CajaMenuItem *item,
 
 	dir = caja_file_info_get_parent_uri (file);
 
-	cmd = g_string_new ("file-roller");
+	cmd = g_string_new ("engrampa");
 	g_string_append_printf (cmd," --extract-here");
 
 	g_free (dir);
@@ -120,7 +120,7 @@ add_callback (CajaMenuItem *item,
 	uri = caja_file_info_get_uri (file);
 	dir = g_path_get_dirname (uri);
 
-	cmd = g_string_new ("file-roller");
+	cmd = g_string_new ("engrampa");
 	g_string_append_printf (cmd," --default-dir=%s --add", g_shell_quote (dir));
 
 	g_free (dir);
@@ -421,7 +421,7 @@ caja_fr_register_type (GTypeModule *module)
 
 	fr_type = g_type_module_register_type (module,
 					       G_TYPE_OBJECT,
-					       "CajaFileRoller",
+					       "CajaEngrampa",
 					       &info, 0);
 
 	g_type_module_add_interface (module,

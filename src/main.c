@@ -312,7 +312,7 @@ main (int argc, char **argv)
 	g_option_context_free (context);
 
 	g_set_application_name (_("File Roller"));
-	gtk_window_set_default_icon_name ("file-roller");
+	gtk_window_set_default_icon_name ("engrampa");
 
 	client = egg_sm_client_get ();
 	g_signal_connect (client, "save-state", G_CALLBACK (fr_save_state), NULL);
@@ -335,7 +335,7 @@ main (int argc, char **argv)
 static void
 initialize_data (void)
 {
-	eel_mateconf_monitor_add ("/apps/file-roller");
+	eel_mateconf_monitor_add ("/apps/engrampa");
 	eel_mateconf_monitor_add (PREF_CAJA_CLICK_POLICY);
 
 	ProgramsCache = g_hash_table_new_full (g_str_hash,

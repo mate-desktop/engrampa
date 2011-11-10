@@ -2,17 +2,17 @@
 
 SUBDIRS = ui icons
 
-desktop_in_in_files = file-roller.desktop.in.in
+desktop_in_in_files = engrampa.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in) 
 
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop) 
 
-matchdir = $(datadir)/file-roller
+matchdir = $(datadir)/engrampa
 match_DATA = packages.match
 
 schemadir = @MATECONF_SCHEMA_FILE_DIR@
-schema_DATA = file-roller.schemas
+schema_DATA = engrampa.schemas
 
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
