@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 
 /*
- *  File-Roller
+ *  Engrampa
  *
  *  Copyright (C) 2004 Free Software Foundation, Inc.
  *
@@ -63,7 +63,7 @@ static GtkActionEntry action_entries[] = {
 	  G_CALLBACK (activate_action_close) },
 	{ "Contents", GTK_STOCK_HELP,
 	  N_("Contents"), "F1",
-	  N_("Display the File Roller Manual"),
+	  N_("Display the Engrampa Manual"),
 	  G_CALLBACK (activate_action_manual) },
 
 	{ "Copy", GTK_STOCK_COPY,

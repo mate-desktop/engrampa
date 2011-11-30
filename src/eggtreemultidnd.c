@@ -1,5 +1,5 @@
 /*
- * File-Roller
+ * Engrampa
  *
  * Copyright (C) 2005 Free Software Foundation, Inc.
  * Author: Paolo Bacchilega
