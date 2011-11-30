@@ -1,5 +1,5 @@
 /*
- *  File-Roller
+ *  Engrampa
  *
  *  Copyright (C) 2004 Free Software Foundation, Inc.
  *

@@ -1,7 +1,7 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
 
 /*
- *  File-Roller
+ *  Engrampa
  *
  *  Copyright (C) 2007 Free Software Foundation, Inc.
  *
@@ -2810,7 +2810,7 @@ fr_window_add_to_recent_list (FrWindow *window,
 
 		recent_data = g_new0 (GtkRecentData, 1);
 		recent_data->mime_type = g_content_type_get_mime_type (window->archive->content_type);
-		recent_data->app_name = "File Roller";
+		recent_data->app_name = "Engrampa";
 		recent_data->app_exec = "engrampa";
 		gtk_recent_manager_add_full (window->priv->recent_manager, uri, recent_data);
 
@@ -5230,7 +5230,7 @@ fr_window_init_recent_chooser (FrWindow         *window,
 	gtk_recent_filter_set_name (filter, _("All archives"));
 	for (i = 0; open_type[i] != -1; i++)
 		gtk_recent_filter_add_mime_type (filter, mime_type_desc[open_type[i]].mime_type);
-	gtk_recent_filter_add_application (filter, "File Roller");
+	gtk_recent_filter_add_application (filter, "Engrampa");
 	gtk_recent_chooser_add_filter (chooser, filter);
 
 	gtk_recent_chooser_set_local_only (chooser, FALSE);
