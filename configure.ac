@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.61)
 
-AC_INIT([engrampa], [2011.12.01], [http://bugzilla.mate.org/enter_bug.cgi?product=engrampa])
+AC_INIT([engrampa], [1.1.0], [http://bugzilla.mate.org/enter_bug.cgi?product=engrampa])
 AM_INIT_AUTOMAKE([1.9 foreign])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
@@ -27,8 +27,8 @@ dnl ==========================================================================
 
 GLIB_REQUIRED=2.25.5
 GIO_REQUIRED=2.25.5
-MATECONF_REQUIRED=2.6.0
-CAJA_REQUIRED=2.22.2
+MATECONF_REQUIRED=1.1.0
+CAJA_REQUIRED=1.1.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
