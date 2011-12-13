@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.61)
 
-AC_INIT([engrampa], [1.1.0], [http://bugzilla.mate.org/enter_bug.cgi?product=engrampa])
+AC_INIT([engrampa], [1.1.0], [http://www.mate-desktop.org/])
 AM_INIT_AUTOMAKE([1.9 foreign])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
