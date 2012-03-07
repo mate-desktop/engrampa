@@ -6,6 +6,8 @@
 
 * What is it ?
 
+  Engrampa is a fork of File-Roller.
+
   Engrampa is an archive manager for the MATE environment.  This means
   that you can create and modify archives; view the content of an archive;
   view and modify a file contained in the archive; extract files from the
@@ -50,7 +52,7 @@
 
 * Home Page
 
-  http://engrampa.sourceforge.net
+  http://www.mate-desktop.org/
 
 * Licensing
 
@@ -61,19 +63,19 @@
 * Dependencies
 
   In order to build this program from the source code you need a working
-  MATE environment version 2.x, with the development tools installed
+  MATE environment version 1.2, with the development tools installed
   properly.
 
   Also you need the following libraries:
   	* glib >= 2.16.0
   	* gtk+ >= 2.12.0
-  	* libmate >= 2.6.0
-  	* libmateui >= 2.6.0
+  	* libmate >= 1.1.0
+  	* libmateui >= 1.1.0
         * libglade >= 2.4.0
-        * libcaja-extension >= 2.22.2 (optional)
+        * libcaja-extension >= 1.1.0 (optional)
 
 * Install
 
-  ./configure
+  ./autogen.sh
   make
   make install
