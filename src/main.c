@@ -311,7 +311,7 @@ main (int argc, char **argv)
 
 	g_option_context_free (context);
 
-	g_set_application_name (_("File Roller"));
+	g_set_application_name (_("Engrampa"));
 	gtk_window_set_default_icon_name ("engrampa");
 
 	client = egg_sm_client_get ();
