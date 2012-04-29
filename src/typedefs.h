@@ -25,10 +25,10 @@
 
 #define MEGABYTE (1024 * 1024)
 
-#define RC_DIR              ".mate2/engrampa"
-#define RC_BOOKMARKS_FILE   ".mate2/engrampa/bookmarks"
-#define RC_RECENT_FILE      ".mate2/engrampa/recents"
-#define RC_OPTIONS_DIR      ".mate2/engrampa/options"
+#define RC_DIR              ".config/mate/engrampa"
+#define RC_BOOKMARKS_FILE   ".config/mate/engrampa/bookmarks"
+#define RC_RECENT_FILE      ".config/mate/engrampa/recents"
+#define RC_OPTIONS_DIR      ".config/mate/engrampa/options"
 
 #define OLD_RC_BOOKMARKS_FILE   ".engrampa/bookmarks"
 #define OLD_RC_RECENT_FILE      ".engrampa/recents"
