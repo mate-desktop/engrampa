@@ -28,7 +28,6 @@ dnl ==========================================================================
 
 GLIB_REQUIRED=2.25.5
 GIO_REQUIRED=2.25.5
-MATECONF_REQUIRED=1.1.0
 CAJA_REQUIRED=1.1.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
@@ -79,8 +78,7 @@ PKG_CHECK_MODULES(FR,					\
 	glib-2.0 >= $GLIB_REQUIRED			\
 	gthread-2.0					\
 	gio-unix-2.0 >= $GIO_REQUIRED			\
-	gtk+-$GTK_API_VERSION >= $GTK_REQUIRED		\
-	mateconf-2.0 >= $MATECONF_REQUIRED)
+	gtk+-$GTK_API_VERSION >= $GTK_REQUIRED)
 AC_SUBST(FR_CFLAGS)
 AC_SUBST(FR_LIBS)
 
