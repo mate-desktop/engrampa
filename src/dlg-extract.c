@@ -29,11 +29,11 @@
 #include "gtk-utils.h"
 #include "fr-window.h"
 #include "typedefs.h"
-#include "mateconf-utils.h"
 
 
 typedef struct {
 	FrWindow     *window;
+	GSettings    *settings;
 	GList        *selected_files;
 	char         *base_dir_for_selection;
 
@@ -63,6 +63,7 @@ destroy_cb (GtkWidget  *widget,
 	}
 	path_list_free (data->selected_files);
 	g_free (data->base_dir_for_selection);
+	g_object_unref (data->settings);
 	g_free (data);
 }
 
@@ -190,10 +191,10 @@ extract_cb (GtkWidget   *w,
 	skip_newer = ! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton)) && gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton));
 	junk_paths = ! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton));
 
-	eel_mateconf_set_boolean (PREF_EXTRACT_OVERWRITE, overwrite);
-	if (!gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton)))
-		eel_mateconf_set_boolean (PREF_EXTRACT_SKIP_NEWER, skip_newer);
-	eel_mateconf_set_boolean (PREF_EXTRACT_RECREATE_FOLDERS, !junk_paths);
+	g_settings_set_boolean (data->settings, PREF_EXTRACT_OVERWRITE, overwrite);
+	if (! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton)))
+	g_settings_set_boolean (data->settings, PREF_EXTRACT_SKIP_NEWER, skip_newer);
+	g_settings_set_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS, ! junk_paths);
 
 	selected_files = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_selected_radiobutton));
 	pattern_files = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_files_radiobutton));
@@ -419,7 +420,7 @@ dlg_extract__common (FrWindow *window,
 	GtkWidget  *file_sel;
 
 	data = g_new0 (DialogData, 1);
-
+	data->settings = g_settings_new (ENGRAMPA_SCHEMA_EXTRACT);
 	data->window = window;
 	data->selected_files = selected_files;
 	data->base_dir_for_selection = base_dir_for_selection;
@@ -453,14 +454,15 @@ dlg_extract__common (FrWindow *window,
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_all_radiobutton), TRUE);
 	}
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton), eel_mateconf_get_boolean (PREF_EXTRACT_OVERWRITE, FALSE));
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), eel_mateconf_get_boolean (PREF_EXTRACT_SKIP_NEWER, FALSE));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_OVERWRITE));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_SKIP_NEWER));
 	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton))) {
 		gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), TRUE);
 		gtk_widget_set_sensitive (data->e_not_newer_checkbutton, FALSE);
 	}
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton), eel_mateconf_get_boolean (PREF_EXTRACT_RECREATE_FOLDERS, TRUE));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS));
+
 
 	/* Set the signals handlers. */
 

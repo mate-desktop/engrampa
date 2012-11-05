@@ -36,7 +36,6 @@
 
 #include <glib.h>
 #include <gio/gio.h>
-#include <mateconf/mateconf-client.h>
 #include "file-utils.h"
 #include "glib-utils.h"
 #include "main.h"
@@ -954,7 +953,7 @@ gboolean
 is_temp_work_dir (const char *dir)
 {
 	int i;
-	const char *folder;
+	char *folder;
 
 	if (strncmp (dir, "file://", 7) == 0)
 		dir = dir + 7;
