@@ -28,7 +28,6 @@
 #include <gtk/gtk.h>
 #include "file-utils.h"
 #include "fr-stock.h"
-#include "mateconf-utils.h"
 #include "fr-window.h"
 #include "typedefs.h"
 #include "gtk-utils.h"
@@ -38,12 +37,13 @@
 
 
 #define ARCHIVE_ICON_SIZE (48)
-#define DEFAULT_EXTENSION ".tar.gz"
 #define BAD_CHARS "/\\*"
 
 
 typedef struct {
 	FrWindow   *window;
+	GSettings *settings;
+	GSettings *settings_general;
 	GtkBuilder *builder;
 	int        *supported_types;
 
@@ -83,9 +83,10 @@ static void
 destroy_cb (GtkWidget  *widget,
 	    DialogData *data)
 {
-	eel_mateconf_set_string (PREF_BATCH_ADD_DEFAULT_EXTENSION, get_ext (data));
-	/*eel_mateconf_set_boolean (PREF_BATCH_OTHER_OPTIONS, data->add_clicked ? FALSE : gtk_expander_get_expanded (GTK_EXPANDER (data->a_other_options_expander)));*/
-	eel_mateconf_set_boolean (PREF_ENCRYPT_HEADER, gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->a_encrypt_header_checkbutton)));
+	g_settings_set_string (data->settings, PREF_BATCH_ADD_DEFAULT_EXTENSION, get_ext (data));
+	/*g_settings_set_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS, data->add_clicked ? FALSE : gtk_expander_get_expanded (GTK_EXPANDER (data->a_other_options_expander)));*/
+	g_settings_set_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER, gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->a_encrypt_header_checkbutton)));
+
 
 	if (! data->add_clicked) {
 		fr_window_pop_message (data->window);
@@ -93,6 +94,8 @@ destroy_cb (GtkWidget  *widget,
 	}
 
 	g_object_unref (data->builder);
+	g_object_unref (data->settings_general);
+	g_object_unref (data->settings);
 	g_free (data);
 }
 
@@ -124,7 +127,7 @@ set_archive_options (DialogData *data)
 
 		value = gtk_spin_button_get_value (GTK_SPIN_BUTTON (data->a_volume_spinbutton));
 		size = floor (value * MEGABYTE);
-		eel_mateconf_set_integer (PREF_BATCH_VOLUME_SIZE, size);
+		g_settings_set_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE, size);
 		fr_window_set_volume_size (data->window, (guint) size);
 	}
 }
@@ -479,6 +482,8 @@ dlg_batch_add_files (FrWindow *window,
 		return;
 
 	data = g_new0 (DialogData, 1);
+	data->settings = g_settings_new (ENGRAMPA_SCHEMA_BATCH_ADD);
+	data->settings_general = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
 
 	data->builder = _gtk_builder_new_from_file ("batch-add-files.ui");
 	if (data->builder == NULL) {
@@ -521,9 +526,10 @@ dlg_batch_add_files (FrWindow *window,
 
 	gtk_button_set_use_stock (GTK_BUTTON (add_button), TRUE);
 	gtk_button_set_label (GTK_BUTTON (add_button), FR_STOCK_CREATE_ARCHIVE);
-	gtk_expander_set_expanded (GTK_EXPANDER (data->a_other_options_expander), FALSE /*eel_mateconf_get_boolean (PREF_BATCH_OTHER_OPTIONS, FALSE)*/);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->a_encrypt_header_checkbutton), eel_mateconf_get_boolean (PREF_ENCRYPT_HEADER, FALSE));
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->a_volume_spinbutton), (double) eel_mateconf_get_integer (PREF_BATCH_VOLUME_SIZE, 0) / MEGABYTE);
+	gtk_expander_set_expanded (GTK_EXPANDER (data->a_other_options_expander), FALSE /*g_settings_get_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS)*/);
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->a_encrypt_header_checkbutton), g_settings_get_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER));
+	gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->a_volume_spinbutton), (double) g_settings_get_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
+
 
 	first_filename = (char*) file_list->data;
 	parent = remove_level_from_path (first_filename);
@@ -596,7 +602,7 @@ dlg_batch_add_files (FrWindow *window,
 
 	/* Run dialog. */
 
-	default_ext = eel_mateconf_get_string (PREF_BATCH_ADD_DEFAULT_EXTENSION, DEFAULT_EXTENSION);
+	default_ext = g_settings_get_string (data->settings, PREF_BATCH_ADD_DEFAULT_EXTENSION);
 	update_archive_type_combo_box_from_ext (data, default_ext);
 	g_free (default_ext);
 

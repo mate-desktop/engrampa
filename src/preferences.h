@@ -27,63 +27,61 @@
 #include "typedefs.h"
 #include "fr-window.h"
 
-#define PREF_LIST_SORT_METHOD      "/apps/engrampa/listing/sort_method"
-#define PREF_LIST_SORT_TYPE        "/apps/engrampa/listing/sort_type"
-#define PREF_LIST_MODE             "/apps/engrampa/listing/list_mode"
-#define PREF_LIST_SHOW_TYPE        "/apps/engrampa/listing/show_type"
-#define PREF_LIST_SHOW_SIZE        "/apps/engrampa/listing/show_size"
-#define PREF_LIST_SHOW_TIME        "/apps/engrampa/listing/show_time"
-#define PREF_LIST_SHOW_PATH        "/apps/engrampa/listing/show_path"
-#define PREF_LIST_USE_MIME_ICONS   "/apps/engrampa/listing/use_mime_icons"
-#define PREF_NAME_COLUMN_WIDTH     "/apps/engrampa/listing/name_column_width"
+#define ENGRAMPA_SCHEMA			"org.mate.engrampa"
+#define ENGRAMPA_SCHEMA_LISTING		ENGRAMPA_SCHEMA	".listing"
+#define ENGRAMPA_SCHEMA_UI		ENGRAMPA_SCHEMA	".ui"
+#define ENGRAMPA_SCHEMA_GENERAL		ENGRAMPA_SCHEMA	".general"
+#define ENGRAMPA_SCHEMA_DIALOGS		ENGRAMPA_SCHEMA	".dialogs"
+#define ENGRAMPA_SCHEMA_ADD		ENGRAMPA_SCHEMA_DIALOGS	".add"
+#define ENGRAMPA_SCHEMA_BATCH_ADD 	ENGRAMPA_SCHEMA_DIALOGS ".batch-add"
+#define ENGRAMPA_SCHEMA_EXTRACT		ENGRAMPA_SCHEMA_DIALOGS ".extract"
+#define ENGRAMPA_SCHEMA_LAST_OUTPUT	ENGRAMPA_SCHEMA_DIALOGS ".last-output"
 
-#define PREF_UI_WINDOW_WIDTH       "/apps/engrampa/ui/window_width"
-#define PREF_UI_WINDOW_HEIGHT      "/apps/engrampa/ui/window_height"
-#define PREF_UI_SIDEBAR_WIDTH      "/apps/engrampa/ui/sidebar_width"
-#define PREF_UI_HISTORY_LEN        "/apps/engrampa/ui/history_len"
-#define PREF_UI_TOOLBAR            "/apps/engrampa/ui/view_toolbar"
-#define PREF_UI_STATUSBAR          "/apps/engrampa/ui/view_statusbar"
-#define PREF_UI_FOLDERS            "/apps/engrampa/ui/view_folders"
+#define PREF_LISTING_SORT_METHOD	"sort-method"
+#define PREF_LISTING_SORT_TYPE		"sort-type"
+#define PREF_LISTING_LIST_MODE		"list-mode"
+#define PREF_LISTING_SHOW_TYPE		"show-type"
+#define PREF_LISTING_SHOW_SIZE		"show-size"
+#define PREF_LISTING_SHOW_TIME		"show-time"
+#define PREF_LISTING_SHOW_PATH		"show-path"
+#define PREF_LISTING_USE_MIME_ICONS	"use-mime-icons"
+#define PREF_LISTING_NAME_COLUMN_WIDTH	"name-column-width"
 
-#define PREF_EDIT_EDITORS          "/apps/engrampa/general/editors"
-#define PREF_ADD_COMPRESSION_LEVEL "/apps/engrampa/general/compression_level"
-#define PREF_ENCRYPT_HEADER        "/apps/engrampa/general/encrypt_header"
-#define PREF_MIGRATE_DIRECTORIES   "/apps/engrampa/general/migrate_directories"
+#define PREF_UI_WINDOW_WIDTH		"window-width"
+#define PREF_UI_WINDOW_HEIGHT		"window-height"
+#define PREF_UI_SIDEBAR_WIDTH		"sidebar-width"
+#define PREF_UI_HISTORY_LEN		"history-len"
+#define PREF_UI_VIEW_TOOLBAR		"view-toolbar"
+#define PREF_UI_VIEW_STATUSBAR		"view-statusbar"
+#define PREF_UI_VIEW_FOLDERS		"view-folders"
 
-#define PREF_EXTRACT_OVERWRITE        "/apps/engrampa/dialogs/extract/overwrite"
-#define PREF_EXTRACT_SKIP_NEWER       "/apps/engrampa/dialogs/extract/skip_newer"
-#define PREF_EXTRACT_RECREATE_FOLDERS "/apps/engrampa/dialogs/extract/recreate_folders"
+#define PREF_GENERAL_EDITORS		"editors"
+#define PREF_GENERAL_COMPRESSION_LEVEL	"compression-level"
+#define PREF_GENERAL_ENCRYPT_HEADER	"encrypt-header"
 
-#define PREF_ADD_CURRENT_FOLDER       "/apps/engrampa/dialogs/add/current_folder"
-#define PREF_ADD_FILENAME             "/apps/engrampa/dialogs/add/filename"
-#define PREF_ADD_INCLUDE_FILES        "/apps/engrampa/dialogs/add/include_files"
-#define PREF_ADD_EXCLUDE_FILES        "/apps/engrampa/dialogs/add/exclude_files"
-#define PREF_ADD_EXCLUDE_FOLDERS      "/apps/engrampa/dialogs/add/exclude_folders"
-#define PREF_ADD_UPDATE               "/apps/engrampa/dialogs/add/update"
-#define PREF_ADD_RECURSIVE            "/apps/engrampa/dialogs/add/recursive"
-#define PREF_ADD_NO_SYMLINKS          "/apps/engrampa/dialogs/add/no_symlinks"
+#define PREF_EXTRACT_OVERWRITE		"overwrite"
+#define PREF_EXTRACT_SKIP_NEWER		"skip-newer"
+#define PREF_EXTRACT_RECREATE_FOLDERS	"recreate-folders"
 
-#define PREF_BATCH_ADD_DEFAULT_EXTENSION "/apps/engrampa/dialogs/batch-add/default_extension"
-#define PREF_BATCH_OTHER_OPTIONS         "/apps/engrampa/dialogs/batch-add/other_options"
-#define PREF_BATCH_VOLUME_SIZE           "/apps/engrampa/dialogs/batch-add/volume_size"
+#define PREF_ADD_CURRENT_FOLDER		"current-folder"
+#define PREF_ADD_FILENAME		"filename"
+#define PREF_ADD_INCLUDE_FILES		"include-files"
+#define PREF_ADD_EXCLUDE_FILES		"exclude-files"
+#define PREF_ADD_EXCLUDE_FOLDERS	"exclude-folders"
+#define PREF_ADD_UPDATE			"update"
+#define PREF_ADD_RECURSIVE		"recursive"
+#define PREF_ADD_NO_SYMLINKS		"no-symlinks"
 
-#define PREF_DESKTOP_ICON_THEME         "/desktop/mate/file_views/icon_theme"
-#define PREF_DESKTOP_MENUS_HAVE_TEAROFF "/desktop/mate/interface/menus_have_tearoff"
-#define PREF_DESKTOP_MENUBAR_DETACHABLE "/desktop/mate/interface/menubar_detachable"
-#define PREF_DESKTOP_TOOLBAR_DETACHABLE "/desktop/mate/interface/toolbar_detachable"
-#define PREF_CAJA_CLICK_POLICY "/apps/caja/preferences/click_policy"
+#define PREF_BATCH_ADD_DEFAULT_EXTENSION "default-extension"
+#define PREF_BATCH_ADD_OTHER_OPTIONS	 "other-options"
+#define PREF_BATCH_ADD_VOLUME_SIZE	 "volume-size"
 
-FrWindowSortMethod  preferences_get_sort_method       (void);
-void                preferences_set_sort_method       (FrWindowSortMethod  i_value);
-GtkSortType         preferences_get_sort_type         (void);
-void                preferences_set_sort_type         (GtkSortType         i_value);
-FrWindowListMode    preferences_get_list_mode         (void);
-void                preferences_set_list_mode         (FrWindowListMode    i_value);
-FrCompression       preferences_get_compression_level (void);
-void                preferences_set_compression_level (FrCompression       i_value);
-void                pref_util_save_window_geometry    (GtkWindow          *window,
-						       const char         *dialog);
-void                pref_util_restore_window_geometry (GtkWindow          *window,
-						       const char         *dialog);
+#define CAJA_SCHEMA			"org.mate.caja.preferences"
+#define CAJA_CLICK_POLICY		"click-policy"
+
+void pref_util_save_window_geometry (GtkWindow *window,
+                                     const char *dialog_id);
+void pref_util_restore_window_geometry (GtkWindow *window,
+                                       const char *dialog_id);
 
 #endif /* PREFERENCES_H */

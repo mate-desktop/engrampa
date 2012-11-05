@@ -28,7 +28,6 @@
 #include "dlg-new.h"
 #include "file-utils.h"
 #include "fr-stock.h"
-#include "mateconf-utils.h"
 #include "gtk-utils.h"
 #include "main.h"
 #include "preferences.h"
@@ -271,6 +270,7 @@ dlg_new_archive (FrWindow  *window,
 	DlgNewData    *data;
 	GtkWidget     *n_new_button;
 	GtkFileFilter *filter;
+        GSettings *settings;
 	/*char          *default_ext;*/
 	int            i;
 
@@ -306,16 +306,8 @@ dlg_new_archive (FrWindow  *window,
 	gtk_dialog_set_default_response (GTK_DIALOG (data->dialog), GTK_RESPONSE_OK);
 	gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (data->dialog), fr_window_get_open_default_dir (window));
 
-	if (default_name != NULL) {
+	if (default_name != NULL)
 		gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (data->dialog), default_name);
-		/*char *ext, *name_ext;
-
-		ext = eel_mateconf_get_string (PREF_BATCH_ADD_DEFAULT_EXTENSION, ".tgz");
-		name_ext = g_strconcat (default_name, ext, NULL);
-		gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (data->dialog), name_ext);
-		g_free (name_ext);
-		g_free (ext);*/
-	}
 
 	filter = gtk_file_filter_new ();
 	gtk_file_filter_set_name (filter, _("All archives"));
@@ -334,8 +326,13 @@ dlg_new_archive (FrWindow  *window,
 	gtk_button_set_use_stock (GTK_BUTTON (n_new_button), TRUE);
 	gtk_button_set_label (GTK_BUTTON (n_new_button), FR_STOCK_CREATE_ARCHIVE);
 	gtk_expander_set_expanded (GTK_EXPANDER (data->n_other_options_expander), FALSE);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->n_encrypt_header_checkbutton), eel_mateconf_get_boolean (PREF_ENCRYPT_HEADER, FALSE));
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton), (double) eel_mateconf_get_integer (PREF_BATCH_VOLUME_SIZE, 0) / MEGABYTE);
+	settings = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->n_encrypt_header_checkbutton), g_settings_get_boolean (settings, PREF_GENERAL_ENCRYPT_HEADER));
+        g_object_unref (settings);
+
+        settings = g_settings_new (ENGRAMPA_SCHEMA_BATCH_ADD);
+        gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton), (double) g_settings_get_int (settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
+        g_object_unref (settings);
 
 	/* format chooser */
 
@@ -421,10 +418,6 @@ dlg_new_archive (FrWindow  *window,
 				data->format_chooser);
 
 	/* Run dialog. */
-
-/*	default_ext = eel_mateconf_get_string (PREF_BATCH_ADD_DEFAULT_EXTENSION, DEFAULT_EXTENSION);
-	update_archive_type_combo_box_from_ext (data, default_ext);
-	g_free (default_ext);*/
 
 	update_sensitivity (data);
 

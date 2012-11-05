@@ -14,6 +14,7 @@ MATE_COMMON_INIT
 AC_PROG_CC
 AM_DISABLE_STATIC
 AC_PROG_LIBTOOL
+GLIB_GSETTINGS
 
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 AC_PATH_PROG(GLIB_MKENUMS, glib-mkenums)
@@ -150,13 +151,6 @@ AC_SUBST(DISABLE_DEPRECATED)
 
 dnl ******************************
 
-AC_PATH_PROG(MATECONFTOOL, mateconftool-2, no)
-if test x"$MATECONFTOOL" = xno; then
-	AC_MSG_ERROR([mateconftool-2 executable not found in your path - should be installed with MateConf])
-fi
-AM_MATECONF_SOURCE_2
-
-dnl ******************************
 
 CAJA_EXTENSION_DIR=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
 AC_SUBST(CAJA_EXTENSION_DIR)
