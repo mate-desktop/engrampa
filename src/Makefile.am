@@ -130,8 +130,6 @@ engrampa_SOURCES = 			\
 	fr-process.h			\
 	fr-window.c			\
 	fr-window.h			\
-	mateconf-utils.c			\
-	mateconf-utils.h			\
 	gio-utils.c			\
 	gio-utils.h			\
 	glib-utils.c			\

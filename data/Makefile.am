@@ -1,29 +1,31 @@
-@INTLTOOL_DESKTOP_RULE@
-
 SUBDIRS = ui icons
 
+desktopdir = $(datadir)/applications
 desktop_in_in_files = engrampa.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in) 
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-desktopdir = $(datadir)/applications
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop) 
+@INTLTOOL_DESKTOP_RULE@
 
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
 
-schemadir = @MATECONF_SCHEMA_FILE_DIR@
-schema_DATA = engrampa.schemas
+gsettingsschema_in_files = org.mate.engrampa.gschema.xml.in
+gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
+.PRECIOUS: $(gsettings_SCHEMAS)
+
+@INTLTOOL_XML_NOMERGE_RULE@
+
+@GSETTINGS_RULES@
+
+convertdir = $(datadir)/MateConf/gsettings
+convert_DATA = engrampa.convert
 
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
-install-data-local:
-if MATECONF_SCHEMAS_INSTALL
-	MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
-endif
-
-install-data-hook: update-icon-cache
-uninstall-hook: update-icon-cache
-update-icon-cache:
+install-data-hook: update-cache
+uninstall-hook: update-cache
+update-cache:
 	if test -z "$(DESTDIR)"; then \
 		echo "Updating Gtk icon cache."; \
 		$(gtk_update_icon_cache); \
@@ -32,18 +34,25 @@ update-icon-cache:
 		echo "***   $(gtk_update_icon_cache)"; \
 	fi
 
+EXTRA_DIST = \
+       engrampa.convert \
+       packages.match.in \
+       packages.match \
+       $(desktop_in_in_files) \
+       $(desktop_in_files) \
+       $(desktop_DATA) \
+       $(gsettingsschema_in_files) \
+       $(NULL)
 
-EXTRA_DIST = 			\
-	$(desktop_in_in_files)	\
-	$(desktop_in_files)	\
-	$(desktop_DATA)		\
-	packages.match.in	\
-	packages.match		\
-	$(schema_DATA)
+DISTCLEANFILES = \
+       $(desktop_in_files) \
+       $(desktop_DATA) \
+       $(NULL)
 
+CLEANFILES = \
+       $(gsettings_SCHEMAS) \
+       $(NULL)
 
-DISTCLEANFILES =                \
-	$(desktop_in_files)	\
-	$(desktop_DATA)	
+dist-hook: cd $(distdir); rm -f $(CLEANFILES)
 
 -include $(top_srcdir)/git.mk
