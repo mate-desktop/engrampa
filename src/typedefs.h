@@ -23,6 +23,9 @@
 #ifndef TYPEDEFS_H
 #define TYPEDEFS_H
 
+#include <glib.h>
+#include <glib-object.h>
+
 #define MEGABYTE (1024 * 1024)
 
 #define RC_DIR              ".config/mate/engrampa"

@@ -49,7 +49,6 @@
 #include "glib-utils.h"
 #include "main.h"
 #include "gtk-utils.h"
-#include "mateconf-utils.h"
 #include "open-file.h"
 #include "typedefs.h"
 #include "ui.h"
@@ -387,7 +386,11 @@ struct _FrWindowPrivateData {
 
 	/* misc */
 
-	guint             cnxn_id[MATECONF_NOTIFICATIONS];
+	GSettings *settings_listing;
+	GSettings *settings_ui;
+	GSettings *settings_general;
+	GSettings *settings_dialogs;
+	GSettings *settings_caja;
 
 	gulong            theme_changed_handler_id;
 	gboolean          non_interactive;
@@ -403,17 +406,6 @@ struct _FrWindowPrivateData {
 
 
 /* -- fr_window_free_private_data -- */
-
-
-static void
-fr_window_remove_notifications (FrWindow *window)
-{
-	int i;
-
-	for (i = 0; i < MATECONF_NOTIFICATIONS; i++)
-		if (window->priv->cnxn_id[i] != -1)
-			eel_mateconf_notification_remove (window->priv->cnxn_id[i]);
-}
 
 
 static void
@@ -545,52 +537,48 @@ fr_window_convert_data_free (FrWindow   *window,
 static void
 fr_window_free_private_data (FrWindow *window)
 {
-	FrWindowPrivateData *priv = window->priv;
-
-	if (priv->update_timeout_handle != 0) {
-		g_source_remove (priv->update_timeout_handle);
-		priv->update_timeout_handle = 0;
+	if (window->priv->update_timeout_handle != 0) {
+		g_source_remove (window->priv->update_timeout_handle);
+		window->priv->update_timeout_handle = 0;
 	}
 
-	fr_window_remove_notifications (window);
-
-	if (priv->open_action != NULL) {
-		g_object_unref (priv->open_action);
-		priv->open_action = NULL;
+	if (window->priv->open_action != NULL) {
+		g_object_unref (window->priv->open_action);
+		window->priv->open_action = NULL;
 	}
 
-	if (priv->recent_toolbar_menu != NULL) {
-		gtk_widget_destroy (priv->recent_toolbar_menu);
-		priv->recent_toolbar_menu = NULL;
+	if (window->priv->recent_toolbar_menu != NULL) {
+		gtk_widget_destroy (window->priv->recent_toolbar_menu);
+		 window->priv->recent_toolbar_menu = NULL;
 	}
 
-	while (priv->activity_ref > 0)
+	while (window->priv->activity_ref > 0)
 		fr_window_stop_activity_mode (window);
 
-	if (priv->progress_timeout != 0) {
-		g_source_remove (priv->progress_timeout);
-		priv->progress_timeout = 0;
+	if (window->priv->progress_timeout != 0) {
+		g_source_remove (window->priv->progress_timeout);
+		window->priv->progress_timeout = 0;
 	}
 
-	if (priv->hide_progress_timeout != 0) {
-		g_source_remove (priv->hide_progress_timeout);
-		priv->hide_progress_timeout = 0;
+	if (window->priv->hide_progress_timeout != 0) {
+		g_source_remove (window->priv->hide_progress_timeout);
+		window->priv->hide_progress_timeout = 0;
 	}
 
-	if (priv->theme_changed_handler_id != 0)
-		g_signal_handler_disconnect (icon_theme, priv->theme_changed_handler_id);
+	if (window->priv->theme_changed_handler_id != 0)
+		g_signal_handler_disconnect (icon_theme, window->priv->theme_changed_handler_id);
 
 	fr_window_history_clear (window);
 
-	g_free (priv->open_default_dir);
-	g_free (priv->add_default_dir);
-	g_free (priv->extract_default_dir);
-	g_free (priv->archive_uri);
+	g_free (window->priv->open_default_dir);
+	g_free (window->priv->add_default_dir);
+	g_free (window->priv->extract_default_dir);
+	g_free (window->priv->archive_uri);
 
-	g_free (priv->password);
-	g_free (priv->password_for_paste);
+	g_free (window->priv->password);
+	g_free (window->priv->password_for_paste);
 
-	g_object_unref (priv->list_store);
+	g_object_unref (window->priv->list_store);
 
 	if (window->priv->clipboard_data != NULL) {
 		fr_clipboard_data_unref (window->priv->clipboard_data);
@@ -600,32 +588,32 @@ fr_window_free_private_data (FrWindow *window)
 		fr_clipboard_data_unref (window->priv->copy_data);
 		window->priv->copy_data = NULL;
 	}
-	if (priv->copy_from_archive != NULL) {
-		g_object_unref (priv->copy_from_archive);
-		priv->copy_from_archive = NULL;
+	if (window->priv->copy_from_archive != NULL) {
+		g_object_unref (window->priv->copy_from_archive);
+		window->priv->copy_from_archive = NULL;
 	}
 
 	fr_window_free_open_files (window);
 
 	fr_window_convert_data_free (window, TRUE);
 
-	g_clear_error (&priv->drag_error);
-	path_list_free (priv->drag_file_list);
-	priv->drag_file_list = NULL;
+	g_clear_error (&window->priv->drag_error);
+	path_list_free (window->priv->drag_file_list);
+	window->priv->drag_file_list = NULL;
 
-	if (priv->file_popup_menu != NULL) {
-		gtk_widget_destroy (priv->file_popup_menu);
-		priv->file_popup_menu = NULL;
+	if (window->priv->file_popup_menu != NULL) {
+		gtk_widget_destroy (window->priv->file_popup_menu);
+		window->priv->file_popup_menu = NULL;
 	}
 
-	if (priv->folder_popup_menu != NULL) {
-		gtk_widget_destroy (priv->folder_popup_menu);
-		priv->folder_popup_menu = NULL;
+	if (window->priv->folder_popup_menu != NULL) {
+		gtk_widget_destroy (window->priv->folder_popup_menu);
+		window->priv->folder_popup_menu = NULL;
 	}
 
-	if (priv->sidebar_folder_popup_menu != NULL) {
-		gtk_widget_destroy (priv->sidebar_folder_popup_menu);
-		priv->sidebar_folder_popup_menu = NULL;
+	if (window->priv->sidebar_folder_popup_menu != NULL) {
+		gtk_widget_destroy (window->priv->sidebar_folder_popup_menu);
+		window->priv->sidebar_folder_popup_menu = NULL;
 	}
 
 	g_free (window->priv->last_location);
@@ -633,13 +621,19 @@ fr_window_free_private_data (FrWindow *window)
 	fr_window_free_batch_data (window);
 	fr_window_reset_current_batch_action (window);
 
-	g_free (priv->pd_last_archive);
-	g_free (priv->extract_here_dir);
-	g_free (priv->last_status_message);
+	g_free (window->priv->pd_last_archive);
+	g_free (window->priv->extract_here_dir);
+	g_free (window->priv->last_status_message);
 
-	preferences_set_sort_method (priv->sort_method);
-	preferences_set_sort_type (priv->sort_type);
-	preferences_set_list_mode (priv->last_list_mode);
+	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_SORT_METHOD, window->priv->sort_method);
+	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_SORT_TYPE, window->priv->sort_type);
+	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_LIST_MODE, window->priv->last_list_mode);
+
+	_g_object_unref (window->priv->settings_listing);
+	_g_object_unref (window->priv->settings_ui);
+	_g_object_unref (window->priv->settings_general);
+	_g_object_unref (window->priv->settings_dialogs);
+	_g_object_unref (window->priv->settings_caja);
 }
 
 
@@ -710,16 +704,16 @@ fr_window_close (FrWindow *window)
 			gdk_drawable_get_size(gtk_widget_get_window(GTK_WIDGET(window)), &width, &height);
 		#endif
 
-		eel_mateconf_set_integer (PREF_UI_WINDOW_WIDTH, width);
-		eel_mateconf_set_integer (PREF_UI_WINDOW_HEIGHT, height);
+		g_settings_set_int (window->priv->settings_ui, PREF_UI_WINDOW_WIDTH, width);
+		g_settings_set_int (window->priv->settings_ui, PREF_UI_WINDOW_HEIGHT, height);
 
 		width = gtk_paned_get_position (GTK_PANED (window->priv->paned));
 		if (width > 0)
-			eel_mateconf_set_integer (PREF_UI_SIDEBAR_WIDTH, width);
+			g_settings_set_int (window->priv->settings_ui, PREF_UI_SIDEBAR_WIDTH, width);
 
 		width = gtk_tree_view_column_get_width (window->priv->filename_column);
 		if (width > 0)
-			eel_mateconf_set_integer (PREF_NAME_COLUMN_WIDTH, width);
+			g_settings_set_int (window->priv->settings_listing, PREF_LISTING_NAME_COLUMN_WIDTH, width);
 	}
 
 	g_idle_add (close__step2, window);
@@ -4583,13 +4577,13 @@ fr_window_delete_event_cb (GtkWidget *caller,
 
 
 static gboolean
-is_single_click_policy (void)
+is_single_click_policy (FrWindow *window)
 {
 	char     *value;
 	gboolean  result;
 
-	value = eel_mateconf_get_string (PREF_CAJA_CLICK_POLICY, "double");
-	result = strncmp (value, "single", 6) == 0;
+	value = g_settings_get_string (window->priv->settings_caja, CAJA_CLICK_POLICY);
+	result = (value != NULL) && (strncmp (value, "single", 6) == 0);
 	g_free (value);
 
 	return result;
@@ -4715,7 +4709,7 @@ add_file_list_columns (FrWindow    *window,
 
 	/* name */
 
-	window->priv->single_click = is_single_click_policy ();
+	window->priv->single_click = is_single_click_policy (window);
 
 	renderer = gtk_cell_renderer_text_new ();
 
@@ -4732,7 +4726,7 @@ add_file_list_columns (FrWindow    *window,
 					     NULL);
 
 	gtk_tree_view_column_set_sizing (column, GTK_TREE_VIEW_COLUMN_FIXED);
-	w = eel_mateconf_get_integer (PREF_NAME_COLUMN_WIDTH, DEFAULT_NAME_COLUMN_WIDTH);
+	w = g_settings_get_int (window->priv->settings_listing, PREF_LISTING_NAME_COLUMN_WIDTH);
 	if (w <= 0)
 		w = DEFAULT_NAME_COLUMN_WIDTH;
 	gtk_tree_view_column_set_fixed_width (column, w);
@@ -4883,10 +4877,10 @@ fr_window_show_cb (GtkWidget *widget,
 {
 	fr_window_update_current_location (window);
 
-	set_active (window, "ViewToolbar", eel_mateconf_get_boolean (PREF_UI_TOOLBAR, TRUE));
-	set_active (window, "ViewStatusbar", eel_mateconf_get_boolean (PREF_UI_STATUSBAR, TRUE));
+	set_active (window, "ViewToolbar", g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_TOOLBAR));
+	set_active (window, "ViewStatusbar", g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_STATUSBAR));
 
-	window->priv->view_folders = eel_mateconf_get_boolean (PREF_UI_FOLDERS, FALSE);
+	window->priv->view_folders = g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_FOLDERS);
 	set_active (window, "ViewFolders", window->priv->view_folders);
 
 	fr_window_update_filter_bar_visibility (window);
@@ -4899,61 +4893,56 @@ fr_window_show_cb (GtkWidget *widget,
 
 
 static void
-pref_history_len_changed (MateConfClient *client,
-			  guint        cnxn_id,
-			  MateConfEntry  *entry,
-			  gpointer     user_data)
+pref_history_len_changed (GSettings *settings,
+				const char *key,
+				gpointer user_data)
 {
 	FrWindow *window = user_data;
 
-	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_menu), eel_mateconf_get_integer (PREF_UI_HISTORY_LEN, MAX_HISTORY_LEN));
-	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_toolbar), eel_mateconf_get_integer (PREF_UI_HISTORY_LEN, MAX_HISTORY_LEN));
+	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_menu),
+                                      g_settings_get_int (settings, PREF_UI_HISTORY_LEN));
+	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_toolbar),
+                                      g_settings_get_int (settings, PREF_UI_HISTORY_LEN));
 }
 
 
 static void
-pref_view_toolbar_changed (MateConfClient *client,
-			   guint        cnxn_id,
-			   MateConfEntry  *entry,
-			   gpointer     user_data)
+pref_view_toolbar_changed (GSettings *settings,
+                           const char *key,
+                           gpointer user_data)
 {
 	FrWindow *window = user_data;
 
-	g_return_if_fail (window != NULL);
-
-	fr_window_set_toolbar_visibility (window, mateconf_value_get_bool (mateconf_entry_get_value (entry)));
+	fr_window_set_toolbar_visibility (window, g_settings_get_boolean (settings, key));
 }
 
 
 static void
-pref_view_statusbar_changed (MateConfClient *client,
-			     guint        cnxn_id,
-			     MateConfEntry  *entry,
-			     gpointer     user_data)
+pref_view_statusbar_changed (GSettings *settings,
+                             const char *key,
+                             gpointer user_data)
 {
 	FrWindow *window = user_data;
 
-	fr_window_set_statusbar_visibility (window, mateconf_value_get_bool (mateconf_entry_get_value (entry)));
+	fr_window_set_statusbar_visibility (window, g_settings_get_boolean (settings, key));
 }
 
 
 static void
-pref_view_folders_changed (MateConfClient *client,
-			   guint        cnxn_id,
-			   MateConfEntry  *entry,
-			   gpointer     user_data)
+pref_view_folders_changed (GSettings *settings,
+                           const char *key,
+                           gpointer user_data)
 {
 	FrWindow *window = user_data;
 
-	fr_window_set_folders_visibility (window, mateconf_value_get_bool (mateconf_entry_get_value (entry)));
+	fr_window_set_folders_visibility (window, g_settings_get_boolean (settings, key));
 }
 
 
 static void
-pref_show_field_changed (MateConfClient *client,
-			 guint        cnxn_id,
-			 MateConfEntry  *entry,
-			 gpointer     user_data)
+pref_show_field_changed (GSettings *settings,
+                         const char *key,
+                         gpointer user_data)
 {
 	FrWindow *window = user_data;
 
@@ -4962,16 +4951,15 @@ pref_show_field_changed (MateConfClient *client,
 
 
 static void
-pref_click_policy_changed (MateConfClient *client,
-			   guint        cnxn_id,
-			   MateConfEntry  *entry,
-			   gpointer     user_data)
+pref_click_policy_changed (GSettings *settings,
+                           const char *key,
+                           gpointer user_data)
 {
 	FrWindow   *window = user_data;
 	GdkWindow  *win = gtk_tree_view_get_bin_window (GTK_TREE_VIEW (window->priv->list_view));
 	GdkDisplay *display;
 
-	window->priv->single_click = is_single_click_policy ();
+	window->priv->single_click = is_single_click_policy (window);
 
 	gdk_window_set_cursor (win, NULL);
 	display = gtk_widget_get_display (GTK_WIDGET (window->priv->list_view));
@@ -4986,10 +4974,9 @@ static void gh_unref_pixbuf (gpointer  key,
 
 
 static void
-pref_use_mime_icons_changed (MateConfClient *client,
-			     guint        cnxn_id,
-			     MateConfEntry  *entry,
-			     gpointer     user_data)
+pref_use_mime_icons_changed (GSettings *settings,
+                             const char *key,
+                             gpointer user_data)
 {
 	FrWindow *window = user_data;
 
@@ -5234,7 +5221,7 @@ fr_window_init_recent_chooser (FrWindow         *window,
 	gtk_recent_chooser_add_filter (chooser, filter);
 
 	gtk_recent_chooser_set_local_only (chooser, FALSE);
-	gtk_recent_chooser_set_limit (chooser, eel_mateconf_get_integer (PREF_UI_HISTORY_LEN, MAX_HISTORY_LEN));
+	gtk_recent_chooser_set_limit (chooser, g_settings_get_int (window->priv->settings_ui, PREF_UI_HISTORY_LEN));
 	gtk_recent_chooser_set_show_not_found (chooser, TRUE);
 	gtk_recent_chooser_set_sort_type (chooser, GTK_RECENT_SORT_MRU);
 
@@ -5390,6 +5377,14 @@ fr_window_construct (FrWindow *window)
 	if (icon_theme == NULL)
 		icon_theme = gtk_icon_theme_get_default ();
 
+        /* Create the settings objects */
+
+	window->priv->settings_listing = g_settings_new (ENGRAMPA_SCHEMA_LISTING);
+	window->priv->settings_ui = g_settings_new (ENGRAMPA_SCHEMA_UI);
+	window->priv->settings_general = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
+	window->priv->settings_dialogs = g_settings_new (ENGRAMPA_SCHEMA_DIALOGS);
+	window->priv->settings_caja = g_settings_new (CAJA_SCHEMA);
+
 	/* Create the application. */
 
 	window->priv->layout = gtk_table_new (4, 1, FALSE);
@@ -5425,8 +5420,8 @@ fr_window_construct (FrWindow *window)
 	dir_tree_icon_size = MAX (icon_width, icon_height);
 
 	gtk_window_set_default_size (GTK_WINDOW (window),
-				     eel_mateconf_get_integer (PREF_UI_WINDOW_WIDTH, DEF_WIN_WIDTH),
-				     eel_mateconf_get_integer (PREF_UI_WINDOW_HEIGHT, DEF_WIN_HEIGHT));
+				g_settings_get_int (window->priv->settings_ui, PREF_UI_WINDOW_WIDTH),
+				g_settings_get_int (window->priv->settings_ui, PREF_UI_WINDOW_HEIGHT));
 
 	gtk_drag_dest_set (GTK_WIDGET (window),
 			   GTK_DEST_DEFAULT_ALL,
@@ -5482,16 +5477,16 @@ fr_window_construct (FrWindow *window)
 					      fr_window_add_is_stoppable,
 					      window);
 
-	window->priv->sort_method = preferences_get_sort_method ();
-	window->priv->sort_type = preferences_get_sort_type ();
+	window->priv->sort_method = g_settings_get_enum (window->priv->settings_listing, PREF_LISTING_SORT_METHOD);
+	window->priv->sort_type = g_settings_get_enum (window->priv->settings_listing, PREF_LISTING_SORT_TYPE);
 
-	window->priv->list_mode = window->priv->last_list_mode = preferences_get_list_mode ();
+	window->priv->list_mode = window->priv->last_list_mode = g_settings_get_enum (window->priv->settings_listing, PREF_LISTING_LIST_MODE);
+	g_settings_set_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_PATH, (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT));
+
 	window->priv->history = NULL;
 	window->priv->history_current = NULL;
 
 	window->priv->action = FR_ACTION_NONE;
-
-	eel_mateconf_set_boolean (PREF_LIST_SHOW_PATH, (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT));
 
 	window->priv->open_default_dir = g_strdup (get_home_uri ());
 	window->priv->add_default_dir = g_strdup (get_home_uri ());
@@ -5520,8 +5515,8 @@ fr_window_construct (FrWindow *window)
 	window->priv->non_interactive = FALSE;
 
 	window->priv->password = NULL;
-	window->priv->compression = preferences_get_compression_level ();
-	window->priv->encrypt_header = eel_mateconf_get_boolean (PREF_ENCRYPT_HEADER, FALSE);
+	window->priv->compression = g_settings_get_enum (window->priv->settings_general, PREF_GENERAL_COMPRESSION_LEVEL);
+        window->priv->encrypt_header = g_settings_get_boolean (window->priv->settings_general, PREF_GENERAL_ENCRYPT_HEADER);
 	window->priv->volume_size = 0;
 
 	window->priv->convert_data.converting = FALSE;
@@ -5747,7 +5742,7 @@ fr_window_construct (FrWindow *window)
 	window->priv->paned = gtk_hpaned_new ();
 	gtk_paned_pack1 (GTK_PANED (window->priv->paned), window->priv->sidepane, FALSE, TRUE);
 	gtk_paned_pack2 (GTK_PANED (window->priv->paned), list_scrolled_window, TRUE, TRUE);
-	gtk_paned_set_position (GTK_PANED (window->priv->paned), eel_mateconf_get_integer (PREF_UI_SIDEBAR_WIDTH, DEF_SIDEBAR_WIDTH));
+	gtk_paned_set_position (GTK_PANED (window->priv->paned), g_settings_get_int (window->priv->settings_ui, PREF_UI_SIDEBAR_WIDTH));
 
 	fr_window_attach (FR_WINDOW (window), window->priv->paned, FR_WINDOW_AREA_CONTENTS);
 	gtk_widget_show_all (window->priv->paned);
@@ -5890,7 +5885,7 @@ fr_window_construct (FrWindow *window)
 	/**/
 
 	fr_window_attach (FR_WINDOW (window), window->priv->toolbar, FR_WINDOW_AREA_TOOLBAR);
-	if (eel_mateconf_get_boolean (PREF_UI_TOOLBAR, TRUE))
+	if (g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_TOOLBAR))
 		gtk_widget_show (toolbar);
 	else
 		gtk_widget_hide (toolbar);
@@ -5936,7 +5931,7 @@ fr_window_construct (FrWindow *window)
 	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (window->priv->statusbar), TRUE);
 
 	fr_window_attach (FR_WINDOW (window), window->priv->statusbar, FR_WINDOW_AREA_STATUSBAR);
-	if (eel_mateconf_get_boolean (PREF_UI_STATUSBAR, TRUE))
+	if (g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_STATUSBAR))
 		gtk_widget_show (window->priv->statusbar);
 	else
 		gtk_widget_hide (window->priv->statusbar);
@@ -5952,49 +5947,46 @@ fr_window_construct (FrWindow *window)
 
 	/* Add notification callbacks. */
 
-	i = 0;
-
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_UI_HISTORY_LEN,
-					   pref_history_len_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_UI_TOOLBAR,
-					   pref_view_toolbar_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_UI_STATUSBAR,
-					   pref_view_statusbar_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_UI_FOLDERS,
-					   pref_view_folders_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_LIST_SHOW_TYPE,
-					   pref_show_field_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_LIST_SHOW_SIZE,
-					   pref_show_field_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_LIST_SHOW_TIME,
-					   pref_show_field_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_LIST_SHOW_PATH,
-					   pref_show_field_changed,
-					   window);
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_LIST_USE_MIME_ICONS,
-					   pref_use_mime_icons_changed,
-					   window);
-
-	window->priv->cnxn_id[i++] = eel_mateconf_notification_add (
-					   PREF_CAJA_CLICK_POLICY,
-					   pref_click_policy_changed,
-					   window);
+	g_signal_connect (window->priv->settings_ui,
+			"changed::" PREF_UI_HISTORY_LEN,
+			G_CALLBACK (pref_history_len_changed),
+			window);
+	g_signal_connect (window->priv->settings_ui,
+			"changed::" PREF_UI_VIEW_TOOLBAR,
+			G_CALLBACK (pref_view_toolbar_changed),
+			window);
+	g_signal_connect (window->priv->settings_ui,
+			"changed::" PREF_UI_VIEW_STATUSBAR,
+			G_CALLBACK (pref_view_statusbar_changed),
+			window);
+        g_signal_connect (window->priv->settings_ui,
+			"changed::" PREF_UI_VIEW_FOLDERS,
+			G_CALLBACK (pref_view_folders_changed),
+			window);
+	g_signal_connect (window->priv->settings_listing,
+			"changed::" PREF_LISTING_SHOW_TYPE,
+			G_CALLBACK (pref_show_field_changed),
+			window);
+	g_signal_connect (window->priv->settings_listing,
+			"changed::" PREF_LISTING_SHOW_SIZE,
+			G_CALLBACK (pref_show_field_changed),
+			window);
+        g_signal_connect (window->priv->settings_listing,
+			"changed::" PREF_LISTING_SHOW_TIME,
+			G_CALLBACK (pref_show_field_changed),
+			window);
+	g_signal_connect (window->priv->settings_listing,
+			"changed::" PREF_LISTING_SHOW_PATH,
+			G_CALLBACK (pref_show_field_changed),
+			window);
+	g_signal_connect (window->priv->settings_listing,
+			"changed::" PREF_LISTING_USE_MIME_ICONS,
+			G_CALLBACK (pref_use_mime_icons_changed),
+			window);
+	g_signal_connect (window->priv->settings_caja,
+			"changed::" CAJA_CLICK_POLICY,
+			G_CALLBACK (pref_click_policy_changed),
+			window);
 
 	/* Give focus to the list. */
 
@@ -6910,8 +6902,8 @@ fr_window_set_list_mode (FrWindow         *window,
 		fr_window_history_add (window, "/");
 	}
 
-	preferences_set_list_mode (window->priv->last_list_mode);
-	eel_mateconf_set_boolean (PREF_LIST_SHOW_PATH, (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT));
+	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_LIST_MODE, window->priv->last_list_mode);
+	g_settings_set_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_PATH, (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT));
 
 	fr_window_update_file_list (window, TRUE);
 	fr_window_update_dir_tree (window);
@@ -8429,16 +8421,16 @@ fr_window_update_columns_visibility (FrWindow *window)
 	GtkTreeViewColumn *column;
 
 	column = gtk_tree_view_get_column (tree_view, 1);
-	gtk_tree_view_column_set_visible (column, eel_mateconf_get_boolean (PREF_LIST_SHOW_SIZE, TRUE));
+	gtk_tree_view_column_set_visible (column, g_settings_get_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_SIZE));
 
 	column = gtk_tree_view_get_column (tree_view, 2);
-	gtk_tree_view_column_set_visible (column, eel_mateconf_get_boolean (PREF_LIST_SHOW_TYPE, TRUE));
+	gtk_tree_view_column_set_visible (column, g_settings_get_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_TYPE));
 
 	column = gtk_tree_view_get_column (tree_view, 3);
-	gtk_tree_view_column_set_visible (column, eel_mateconf_get_boolean (PREF_LIST_SHOW_TIME, TRUE));
+	gtk_tree_view_column_set_visible (column, g_settings_get_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_TIME));
 
 	column = gtk_tree_view_get_column (tree_view, 4);
-	gtk_tree_view_column_set_visible (column, eel_mateconf_get_boolean (PREF_LIST_SHOW_PATH, TRUE));
+	gtk_tree_view_column_set_visible (column, g_settings_get_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_PATH));
 }
 
 

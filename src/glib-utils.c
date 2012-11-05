@@ -25,11 +25,35 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <glib/gprintf.h>
+#include <glib-object.h>
 #include "glib-utils.h"
 
 
 #define MAX_PATTERNS 128
 
+
+/* gobject utils*/
+
+
+gpointer
+_g_object_ref (gpointer object)
+{
+	if (object != NULL)
+		return g_object_ref (object);
+	else
+		return NULL;
+}
+
+
+void
+_g_object_unref (gpointer object)
+{
+	if (object != NULL)
+		g_object_unref (object);
+}
+
+
+/* string utils */
 
 gboolean
 strchrs (const char *str,
@@ -643,3 +667,47 @@ g_uri_display_basename (const char  *uri)
 	
 	return name;
 }
+
+
+char **
+_g_strv_prepend (char **str_array,
+                 const char *str)
+{
+       char **result;
+       int i;
+       int j;
+
+       result = g_new (char *, g_strv_length (str_array) + 1);
+       i = 0;
+       result[i++] = g_strdup (str);
+       for (j = 0; str_array[j] != NULL; j++)
+               result[i++] = g_strdup (str_array[j]);
+       result[i] = NULL;
+
+       return result;
+}
+
+
+gboolean
+_g_strv_remove (char **str_array,
+               const char *str)
+{
+        int i;
+        int j;
+
+        if (str == NULL)
+                return FALSE;
+
+        for (i = 0; str_array[i] != NULL; i++)
+                if (strcmp (str_array[i], str) == 0)
+                        break;
+
+        if (str_array[i] == NULL)
+                return FALSE;
+
+        for (j = i; str_array[j] != NULL; j++)
+                str_array[j] = str_array[j + 1];
+
+        return TRUE;
+}
+

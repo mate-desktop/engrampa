@@ -29,6 +29,13 @@
     g_signal_handlers_disconnect_matched ((instance), G_SIGNAL_MATCH_DATA, \
 					  0, 0, NULL, NULL, (data))
 
+/* gobject utils */
+
+gpointer _g_object_ref (gpointer object);
+void _g_object_unref (gpointer object);
+
+/* string utils */
+
 gboolean            strchrs                      (const char *str,
 						  const char *chars);
 char *              str_substitute               (const char *str,
@@ -69,6 +76,10 @@ int                 g_ptr_array_binary_search    (GPtrArray   *array,
 						  GCompareFunc func);
 const char *        get_static_string            (const char  *s);
 char*               g_uri_display_basename       (const char  *uri);
+char **            _g_strv_prepend               (char **str_array,
+                                                  const char *str);
+gboolean           _g_strv_remove                (char **str_array,
+                                                  const char *str);
 
 /**/
 

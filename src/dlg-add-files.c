@@ -28,13 +28,13 @@
 #include "file-utils.h"
 #include "fr-stock.h"
 #include "fr-window.h"
-#include "mateconf-utils.h"
 #include "gtk-utils.h"
 #include "preferences.h"
 
 
 typedef struct {
 	FrWindow  *window;
+	GSettings *settings;
 	GtkWidget *dialog;
 	GtkWidget *add_if_newer_checkbutton;
 } DialogData;
@@ -44,6 +44,7 @@ static void
 open_file_destroy_cb (GtkWidget  *file_sel,
 		      DialogData *data)
 {
+	g_object_unref (data->settings);
 	g_free (data);
 }
 
@@ -63,8 +64,8 @@ file_sel_response_cb (GtkWidget      *widget,
 
 	current_folder = gtk_file_chooser_get_current_folder_uri (file_sel);
 	uri = gtk_file_chooser_get_uri (file_sel);
-	eel_mateconf_set_string (PREF_ADD_CURRENT_FOLDER, current_folder);
-	eel_mateconf_set_string (PREF_ADD_FILENAME, uri);
+	g_settings_set_string (data->settings, PREF_ADD_CURRENT_FOLDER, current_folder);
+	g_settings_set_string (data->settings, PREF_ADD_FILENAME, uri);
 	fr_window_set_add_default_dir (window, current_folder);
 	g_free (uri);
 
@@ -138,6 +139,7 @@ add_files_cb (GtkWidget *widget,
 
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
+	data->settings = g_settings_new (ENGRAMPA_SCHEMA_ADD);
 	data->dialog = file_sel =
 		gtk_file_chooser_dialog_new (_("Add Files"),
 					     GTK_WINDOW (data->window),
@@ -168,7 +170,7 @@ add_files_cb (GtkWidget *widget,
 
 	/* set data */
 
-	folder = eel_mateconf_get_string (PREF_ADD_CURRENT_FOLDER, "");
+	folder = g_settings_get_string (data->settings, PREF_ADD_CURRENT_FOLDER);
 	if ((folder == NULL) || (strcmp (folder, "") == 0))
 		folder = g_strdup (fr_window_get_add_default_dir (data->window));
 	gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (file_sel), folder);
