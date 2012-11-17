@@ -51,12 +51,12 @@ list__process_line (char     *line,
 	fdata->size = g_ascii_strtoull (get_last_field (line, 4), NULL, 10);
 
 	struct stat st;
-	time_t tt;
+	
 	if (stat (comm->filename, &st) == 0)
 		fdata->modified = st.st_mtim.tv_sec;
 	else
 		time(&(fdata->modified));
-	fdata->modified;
+
 	fdata->encrypted = FALSE;
 
 	char *new_fname = g_strdup (file_name_from_path (comm->filename));

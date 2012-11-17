@@ -159,10 +159,7 @@ create_button (const char *stock_id,
 	       const char *text)
 {
 	GtkWidget    *button;
-	GtkWidget    *hbox;
 	GtkWidget    *image;
-	GtkWidget    *label;
-	GtkWidget    *align;
 	const char   *label_text;
 	gboolean      text_is_stock;
 	GtkStockItem  stock_item;
