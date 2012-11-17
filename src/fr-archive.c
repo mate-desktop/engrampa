@@ -1371,7 +1371,7 @@ create_tmp_base_dir (const char *base_dir,
 	dir = g_build_filename (temp_dir, "/", dest_dir, NULL);
 	debug (DEBUG_INFO, "symlink %s --> %s\n", dir, base_dir);
 	if (! symlink (base_dir, dir))
-		/* void */;
+		g_warning("Could not create the symbolic link '%s', pointing to '%s'", dir, base_dir);
 
 	g_free (dir);
 	g_free (dest_dir);
