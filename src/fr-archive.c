@@ -1447,26 +1447,6 @@ fr_archive_set_add_is_stoppable_func (FrArchive     *archive,
 	archive->priv->add_is_stoppable_data = data;
 }
 
-
-static GList *
-convert_to_local_file_list (GList *file_list)
-{
-	GList *local_file_list = NULL;
-	GList *scan;
-
-	for (scan = file_list; scan; scan = scan->next) {
-		char *uri = scan->data;
-		char *local_filename;
-
-		local_filename = g_uri_unescape_string (uri, G_URI_RESERVED_CHARS_ALLOWED_IN_PATH);
-		if (local_filename != NULL)
-			local_file_list = g_list_prepend (local_file_list, local_filename);
-	}
-
-	return local_file_list;
-}
-
-
 static gboolean
 save_list_to_temp_file (GList   *file_list,
 		        char   **list_dir,
@@ -1591,7 +1571,6 @@ fr_archive_add (FrArchive     *archive,
 
 	fr_archive_stoppable (archive, fr_archive_add_is_stoppable (archive));
 
-	file_list = convert_to_local_file_list (file_list);
 	tmp_base_dir = g_strdup (base_dir);
 
 	if ((dest_dir != NULL) && (*dest_dir != '\0') && (strcmp (dest_dir, "/") != 0)) {
@@ -1608,10 +1587,9 @@ fr_archive_add (FrArchive     *archive,
 			char *filename = scan->data;
 			new_file_list = g_list_prepend (new_file_list, g_build_filename (rel_dest_dir, filename, NULL));
 		}
-		path_list_free (file_list);
 	}
 	else
-		new_file_list = file_list;
+		new_file_list = path_list_dup(file_list);
 
 	/* if the command cannot update,  get the list of files that are
 	 * newer than the ones in the archive. */
