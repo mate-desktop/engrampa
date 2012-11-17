@@ -675,6 +675,12 @@ fr_command_rar_handle_error (FrCommand   *comm,
 			break;
 		}
 
+		if (strstr (line, "wrong password") != NULL)
+		{
+			error->type = FR_PROC_ERROR_ASK_PASSWORD;
+			break;
+		}
+		
 		if (strncmp (line, "Unexpected end of archive", 25) == 0) {
 			/* FIXME: handle this type of errors at a higher level when the freeze is over. */
 		}
