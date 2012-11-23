@@ -94,7 +94,7 @@ dlg_ask_password__common (FrWindow       *window,
 	DialogData *data;
 	GtkWidget  *label;
 	char       *text;
-	char       *name;
+	char       *name = NULL;
 
 	data = g_new0 (DialogData, 1);
 
@@ -120,6 +120,7 @@ dlg_ask_password__common (FrWindow       *window,
 		name = g_uri_display_basename (fr_window_get_archive_uri (window));
 	else if (data->pwd_type == FR_PASSWORD_TYPE_PASTE_FROM)
 		name = g_uri_display_basename (fr_window_get_paste_archive_uri (window));
+        g_assert (name != NULL);
 	text = g_strdup_printf (_("Enter the password for the archive '%s'."), name);
 	gtk_label_set_label (GTK_LABEL (label), text);
 	g_free (text);
