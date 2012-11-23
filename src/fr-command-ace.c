@@ -93,8 +93,8 @@ process_line (char     *line,
 	FileData      *fdata;
 	FrCommandAce  *ace_comm = FR_COMMAND_ACE (data);
 	FrCommand     *comm = FR_COMMAND (data);
-	char         **fields;
-	const char    *field_name;
+	char         **fields = NULL;
+	const char    *field_name = NULL;
 
 	g_return_if_fail (line != NULL);
 
@@ -140,6 +140,7 @@ process_line (char     *line,
 	else if (ace_comm->command_type == FR_ACE_COMMAND_NONFREE)
 		field_name = get_last_field (line, 6);
 
+        g_assert (field_name != NULL);
 	if (field_name[0] != '/') {
 		fdata->full_path = g_strconcat ("/", field_name, NULL);
 		fdata->original_path = fdata->full_path + 1;

@@ -201,10 +201,10 @@ fr_command_cfile_add (FrCommand     *comm,
 		      gboolean       update,
 		      gboolean       recursive)
 {
-	const char *filename;
-	char       *temp_dir;
-	char       *temp_file;
-	char       *compressed_filename;
+	const char *filename = NULL;
+	char       *temp_dir = NULL;
+	char       *temp_file = NULL;
+	char       *compressed_filename = NULL;
 
 	if ((file_list == NULL) || (file_list->data == NULL))
 		return;
