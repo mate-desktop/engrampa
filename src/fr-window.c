@@ -53,6 +53,11 @@
 #include "typedefs.h"
 #include "ui.h"
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
 
 #define LAST_OUTPUT_DIALOG_NAME "last-output"
 #define MAX_HISTORY_LEN 5
@@ -724,7 +729,7 @@ static void
 fr_window_class_init (FrWindowClass *class)
 {
 	GObjectClass   *gobject_class;
-	GtkWidgetClass *widget_class;
+	GtkWidgetClass UNUSED_VARIABLE *widget_class;
 
 	parent_class = g_type_class_peek_parent (class);
 
@@ -1500,8 +1505,13 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 		g_list_free (selection);
 	}
 
+#if GLIB_CHECK_VERSION (2, 30, 0)
+	size_txt = g_format_size (tot_size);
+	sel_size_txt = g_format_size (sel_size);
+#else
 	size_txt = g_format_size_for_display (tot_size);
 	sel_size_txt = g_format_size_for_display (sel_size);
+#endif
 
 	if (tot_n == 0)
 		archive_info = g_strdup ("");
@@ -1569,7 +1579,11 @@ fr_window_populate_file_list (FrWindow  *window,
 			utf8_path = g_filename_display_name (tmp);
 			g_free (tmp);
 
+#if GLIB_CHECK_VERSION (2, 30, 0)
+			s_size = g_format_size (fdata->dir_size);
+#else
 			s_size = g_format_size_for_display (fdata->dir_size);
+#endif
 
 			if (fdata->list_dir)
 				s_time = g_strdup ("");
@@ -1598,7 +1612,11 @@ fr_window_populate_file_list (FrWindow  *window,
 
 			utf8_path = g_filename_display_name (fdata->path);
 
+#if GLIB_CHECK_VERSION (2, 30, 0)
+			s_size = g_format_size (fdata->size);
+#else
 			s_size = g_format_size_for_display (fdata->size);
+#endif
 			s_time = get_time_string (fdata->modified);
 			desc = g_content_type_get_description (fdata->content_type);
 
@@ -5359,7 +5377,7 @@ fr_window_construct (FrWindow *window)
 	GtkWidget        *sidepane_title_label;
 	GtkWidget        *close_sidepane_button;
 	GtkTreeSelection *selection;
-	int               i;
+	int              UNUSED_VARIABLE i;
 	int               icon_width, icon_height;
 	GtkActionGroup   *actions;
 	GtkUIManager     *ui;
@@ -7517,7 +7535,7 @@ fr_window_rename_selection (FrWindow *window,
 
 		if (name_is_present (window, parent_dir, new_name, &reason)) {
 			GtkWidget *dlg;
-			int        r;
+			int        UNUSED_VARIABLE r;
 
 			dlg = _gtk_message_dialog_new (GTK_WINDOW (window),
 						       GTK_DIALOG_MODAL,
@@ -7746,7 +7764,7 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 				       gpointer     data)
 {
 	FrWindow *window = data;
-	gboolean  continue_batch = FALSE;
+	gboolean  UNUSED_VARIABLE continue_batch = FALSE;
 
 #ifdef DEBUG
 	debug (DEBUG_INFO, "%s [DONE] (FR::Window)\n", action_names[action]);

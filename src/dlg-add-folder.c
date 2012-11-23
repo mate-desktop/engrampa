@@ -34,6 +34,12 @@
 #include "gtk-utils.h"
 #include "preferences.h"
 
+#ifdef __GNUC__
+#define UNUSED_VARIABLE __attribute__ ((unused))
+#else
+#define UNUSED_VARIABLE
+#endif
+
 typedef struct {
 	FrWindow    *window;
 	GSettings   *settings;
@@ -94,7 +100,7 @@ file_sel_response_cb (GtkWidget    *widget,
 	GtkFileChooser *file_sel = GTK_FILE_CHOOSER (widget);
 	FrWindow       *window = data->window;
 	char           *selected_folder;
-	gboolean        update, recursive, follow_links;
+	gboolean        update, UNUSED_VARIABLE recursive, follow_links;
 	const char     *include_files;
 	const char     *exclude_files;
 	const char     *exclude_folders;
