@@ -4195,6 +4195,8 @@ file_list_drag_end (GtkWidget      *widget,
 static char *
 get_xds_atom_value (GdkDragContext *context)
 {
+	gint actual_length;
+	char *data;
 	char *ret;
 
 	g_return_val_if_fail (context != NULL, NULL);
@@ -4203,9 +4205,13 @@ get_xds_atom_value (GdkDragContext *context)
 	if (gdk_property_get (gdk_drag_context_get_source_window (context),
 			      XDS_ATOM, TEXT_ATOM,
 			      0, MAX_XDS_ATOM_VAL_LEN,
-			      FALSE, NULL, NULL, NULL,
-			      (unsigned char **) &ret))
+			      FALSE, NULL, NULL, &actual_length,
+			      (unsigned char **) &data)) {
+		/* add not included \0 to the end of the string */
+		ret = g_strndup ((gchar *) data, actual_length);
+		g_free (data);
 		return ret;
+	}
 
 	return NULL;
 }
