@@ -29,6 +29,7 @@ dnl ==========================================================================
 GLIB_REQUIRED=2.25.5
 GIO_REQUIRED=2.25.5
 CAJA_REQUIRED=1.1.0
+JSON_GLIB_REQUIRED=0.14.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
@@ -99,6 +100,23 @@ AM_CONDITIONAL(ENABLE_CAJA_ACTIONS, test "x$build_caja_actions" = xyes)
 AC_SUBST(CAJA_CFLAGS)
 AC_SUBST(CAJA_LIBS)
 
+
+PKG_CHECK_MODULES(JSON_GLIB,
+		  [json-glib-1.0 >= $JSON_GLIB_REQUIRED
+		   glib-2.0],
+		  [enable_json_glib=yes],
+		  [enable_json_glib=no])
+
+if test x$enable_json_glib = xyes ; then
+	AC_DEFINE(HAVE_JSON_GLIB, 1, [Define to 1 if json-glib support is included])
+fi
+
+AC_SUBST(JSON_GLIB_CFLAGS)
+AC_SUBST(JSON_GLIB_LIBS)
+
+AM_CONDITIONAL(ENABLE_JSON_GLIB, test x"$enable_json_glib" != x"no")
+
+dnl ******************************
 
 dnl Checks for mkdtemp function
 
@@ -191,4 +209,5 @@ Configuration:
 	Caja support:       ${build_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}
+	JSON support:           ${enable_json_glib}
 "
