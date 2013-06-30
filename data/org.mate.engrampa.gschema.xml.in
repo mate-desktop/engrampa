@@ -148,15 +148,6 @@
       <default>true</default>
       <summary>Recreate the folders stored in the archive</summary>
     </key>
-    <key name="update" type="b">
-      <default>false</default>
-    </key>
-    <key name="recursive" type="b">
-      <default>true</default>
-    </key>
-    <key name="no-symlinks" type="b">
-      <default>false</default>
-    </key>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.engrampa.dialogs.add" path="/org/mate/engrampa/dialogs/add/">
     <key name="current-folder" type="s">
@@ -174,7 +165,16 @@
     <key name="exclude-folders" type="s">
       <default>''</default>
     </key>
-  </schema>
+    <key name="update" type="b">
+      <default>false</default>
+    </key>
+    <key name="recursive" type="b">
+      <default>true</default>
+    </key>
+    <key name="no-symlinks" type="b">
+      <default>false</default>
+    </key>
+</schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.engrampa.dialogs.batch-add" path="/org/mate/engrampa/dialogs/batch-add/">
     <key name="default-extension" type="s">
       <default>'.tar.gz'</default>
