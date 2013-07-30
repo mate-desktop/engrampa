@@ -20,7 +20,7 @@ privexecdir = $(libexecdir)/engrampa/
 shdir = $(libexecdir)/engrampa/
 endif
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-I$(top_srcdir)/copy-n-paste/			\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\

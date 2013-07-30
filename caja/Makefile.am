@@ -1,4 +1,4 @@
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-DFR_DATADIR=\"$(datadir)\"			\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\
