@@ -28,11 +28,9 @@ EXTRA_DIST = 			\
 	engrampa.spec.in	\
 	intltool-merge.in	\
 	intltool-update.in	\
-	intltool-extract.in	\
-	mate-doc-utils.make
+	intltool-extract.in
 
 DISTCLEANFILES =                        \
-	mate-doc-utils.make		\
 	po/.intltool-merge-cache        \
 	intltool-extract                \
 	intltool-merge                  \
