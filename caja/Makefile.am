@@ -5,7 +5,8 @@ AM_CPPFLAGS =						\
 	-I$(top_builddir)				\
 	$(DISABLE_DEPRECATED)				\
 	$(CAJA_CFLAGS)				\
-	$(FR_CFLAGS)
+	$(FR_CFLAGS)					\
+	$(JSON_GLIB_CFLAGS)
 
 caja_extensiondir=$(CAJA_EXTENSION_DIR)
 

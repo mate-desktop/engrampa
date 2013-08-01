@@ -36,7 +36,8 @@ AM_CPPFLAGS =						\
 	-DPRIVEXECDIR=\"$(privexecdir)\"		\
 	-DSHDIR=\"$(shdir)\"				\
 	$(DISABLE_DEPRECATED)				\
-	$(FR_CFLAGS)
+	$(FR_CFLAGS)					\
+	$(JSON_GLIB_CFLAGS)
 
 BUILT_SOURCES =			\
 	fr-marshal.c		\
@@ -149,6 +150,12 @@ engrampa_SOURCES = 			\
 	$(MKDTEMP_FILES)		\
 	$(BUILT_SOURCES)
 
+if ENABLE_JSON_GLIB
+engrampa_SOURCES +=			\
+	fr-command-unarchiver.h		\
+	fr-command-unarchiver.c
+endif
+
 fr-marshal.h: fr-marshal.list $(GLIB_GENMARSHAL)
 	$(AM_V_GEN)( $(GLIB_GENMARSHAL) $< --header --prefix=fr_marshal > $@ )
 
@@ -179,7 +186,8 @@ fr-enum-types.c: typedefs.h fr-enum-types.h
 
 engrampa_LDADD =							\
 		    $(top_builddir)/copy-n-paste/libeggsmclient.la	\
-		    $(FR_LIBS)
+		    $(FR_LIBS)	\
+			${JSON_GLIB_LIBS}
 
 EXTRA_DIST = fr-marshal.list
 
