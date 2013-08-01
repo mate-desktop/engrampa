@@ -137,7 +137,8 @@ fi
 dnl ******************************
 
 PKG_PROG_PKG_CONFIG
-MATE_DOC_INIT
+
+YELP_HELP_INIT
 
 dnl ******************************
 
