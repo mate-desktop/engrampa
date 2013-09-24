@@ -136,11 +136,11 @@ parse_name_field (char         *line,
 
 	fdata->encrypted = (line[0] == '*') ? TRUE : FALSE;
 
-	if (rar_comm->rar4_odd_line)
-		name_field = g_strdup (line + 1);
-	else
+	if (rar_comm->rar5)
 		/* rar-5 output adds trailing spaces to short file names :( */
 		name_field = g_strchomp (g_strdup (get_last_field (line, 8)));
+	else
+		name_field = g_strdup (line + 1);
 
 	if (*name_field == '/') {
 		fdata->full_path = g_strdup (name_field);
