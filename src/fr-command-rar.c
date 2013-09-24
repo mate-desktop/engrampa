@@ -185,6 +185,11 @@ process_line (char     *line,
 			sscanf (line, "RAR %d.", &version);
 			rar_comm->rar5 = (version >= 5);
 		}
+		else if (strncmp (line, "UNRAR ", 6) == 0) {
+			int version;
+			sscanf (line, "UNRAR %d.", &version);
+			rar_comm->rar5 = (version >= 5);
+		}
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
 			if (! rar_comm->rar5)
