@@ -180,9 +180,10 @@ process_line (char     *line,
 	g_return_if_fail (line != NULL);
 
 	if (! rar_comm->list_started) {
-		if (strncmp (line, "Details:", 8) == 0) {
-			rar_comm->rar5 = TRUE;
-			return;
+		if (strncmp (line, "RAR ", 4) == 0) {
+			int version;
+			sscanf (line, "RAR %d.", &version);
+			rar_comm->rar5 = (version >= 5);
 		}
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
