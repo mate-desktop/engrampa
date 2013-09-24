@@ -159,8 +159,11 @@ process_line (char     *line,
 					fdata->name = dir_name_from_path (fdata->full_path);
 					fdata->dir = TRUE;
 				}
-				else
+				else {
 					fdata->name = g_strdup (file_name_from_path (fdata->full_path));
+					if (fields[5][0] == 'l')
+						fdata->link = g_strdup (file_name_from_path (fdata->full_path));
+				}
 
 				fr_command_add_file (comm, fdata);
 				rar_comm->fdata = NULL;
