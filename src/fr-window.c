@@ -8005,6 +8005,8 @@ fr_window_open_files_with_application (FrWindow *window,
 	if (window->priv->activity_ref > 0)
 		return;
 
+	g_assert (file_list != NULL);
+
 	for (scan = file_list; scan; scan = scan->next)
 		uris = g_list_prepend (uris, g_filename_to_uri (scan->data, NULL, NULL));
 
