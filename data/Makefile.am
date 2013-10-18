@@ -53,6 +53,7 @@ CLEANFILES = \
        $(gsettings_SCHEMAS) \
        $(NULL)
 
-dist-hook: cd $(distdir); rm -f $(CLEANFILES)
+dist-hook: 
+	cd $(distdir); rm -f $(CLEANFILES)
 
 -include $(top_srcdir)/git.mk
