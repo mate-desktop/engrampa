@@ -188,7 +188,7 @@ Configuration:
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
 	Internal mkdtemp:       ${mkdtemp_missing}
-	Caja support:       ${build_caja_actions}
+	Caja support:           ${build_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}
 "
