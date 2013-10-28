@@ -526,6 +526,7 @@ const char *sevenz_mime_types[] = { "application/x-7z-compressed",
 				    /*"application/x-cbr",*/
 				    "application/x-cbz",
 				    "application/x-ms-dos-executable",
+				    "application/x-ms-wim",
 				    "application/x-rar",
 				    "application/zip",
 				    NULL };
