@@ -301,7 +301,7 @@ dlg_package_installer (FrWindow  *window,
 
 #else /* ! ENABLE_PACKAGEKIT */
 
-	package_installer_terminated (idata, _("Archive type not supported."));
+	package_installer_terminated (idata, FR_PROC_ERROR_GENERIC, _("Archive type not supported."));
 
 #endif /* ENABLE_PACKAGEKIT */
 }
