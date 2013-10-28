@@ -48,8 +48,9 @@ installer_data_free (InstallerData *idata)
 
 
 static void
-package_installer_terminated (InstallerData *idata,
-			      const char    *error)
+package_installer_terminated (InstallerData   *idata,
+			      FrProcErrorType  error_type,
+			      const char      *error_message)
 {
 	GdkWindow *window;
 
@@ -57,11 +58,11 @@ package_installer_terminated (InstallerData *idata,
 	if (window != NULL)
 		gdk_window_set_cursor (window, NULL);
 
-	if (error != NULL) {
+	if (error_type != FR_PROC_ERROR_NONE) {
 		fr_archive_action_completed (idata->archive,
 					     FR_ACTION_CREATING_NEW_ARCHIVE,
-					     FR_PROC_ERROR_GENERIC,
-					     error);
+					     error_type,
+					     error_message);
 	}
 	else {
 		update_registered_commands_capabilities ();
@@ -83,24 +84,36 @@ packagekit_install_package_names_ready_cb (GObject      *source_object,
 					   GAsyncResult *res,
 					   gpointer      user_data)
 {
-	InstallerData *idata = user_data;
-	GDBusProxy    *proxy;
-	GVariant      *values;
-	GError        *error = NULL;
-	char          *message = NULL;
+	InstallerData   *idata = user_data;
+	GDBusProxy      *proxy;
+	GVariant        *values;
+	GError          *error = NULL;
+	FrProcErrorType  error_type = FR_PROC_ERROR_NONE;
+	char            *error_message = NULL;
 
 	proxy = G_DBUS_PROXY (source_object);
 	values = g_dbus_proxy_call_finish (proxy, res, &error);
 	if (values == NULL) {
-		message = g_strdup_printf ("%s\n%s",
-					   _("There was an internal error trying to search for applications:"),
-					   error->message);
+		if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED)
+		    || (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_DBUS_ERROR)
+			&& (error->message != NULL)
+			&& (strstr (error->message, "org.freedesktop.Packagekit.Modify.Cancelled") != NULL)))
+		{
+			error_type = FR_PROC_ERROR_STOPPED;
+			error_message = NULL;
+		}
+		else {
+			error_type = FR_PROC_ERROR_GENERIC;
+			error_message = g_strdup_printf ("%s\n%s",
+							 _("There was an internal error trying to search for applications:"),
+							 error->message);
+		}
 		g_clear_error (&error);
 	}
 
-	package_installer_terminated (idata, message);
+	package_installer_terminated (idata, error_type, error_message);
 
-	g_free (message);
+	g_free (error_message);
 	if (values != NULL)
 		g_variant_unref (values);
 	g_object_unref (proxy);
@@ -204,7 +217,7 @@ install_packages (InstallerData *idata)
 		message = g_strdup_printf ("%s\n%s",
 					   _("There was an internal error trying to search for applications:"),
 					   error->message);
-		package_installer_terminated (idata, message);
+		package_installer_terminated (idata, FR_PROC_ERROR_GENERIC, message);
 
 		g_clear_error (&error);
 	}
@@ -251,7 +264,7 @@ dlg_package_installer (FrWindow  *window,
 	if (command_type == 0)
 		command_type = get_preferred_command_for_mime_type (idata->archive->content_type, FR_COMMAND_CAN_READ);
 	if (command_type == 0) {
-		package_installer_terminated (idata, _("Archive type not supported."));
+		package_installer_terminated (idata, FR_PROC_ERROR_GENERIC, _("Archive type not supported."));
 		return;
 	}
 
@@ -260,7 +273,7 @@ dlg_package_installer (FrWindow  *window,
 	g_object_unref (command);
 
 	if (idata->packages == NULL) {
-		package_installer_terminated (idata, _("Archive type not supported."));
+		package_installer_terminated (idata, FR_PROC_ERROR_GENERIC, _("Archive type not supported."));
 		return;
 	}
 
