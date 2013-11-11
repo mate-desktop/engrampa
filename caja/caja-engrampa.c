@@ -173,6 +173,7 @@ static char *mime_types[] = {
 	"application/x-lzma-compressed-tar",
 	"application/x-lzop",
 	"application/x-lzop-compressed-tar",
+	"application/x-ms-wim",
 	"application/x-rar",
 	"application/x-rar-compressed",
 	"application/x-rpm",

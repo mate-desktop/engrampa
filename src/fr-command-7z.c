@@ -347,13 +347,18 @@ fr_command_7z_add (FrCommand     *comm,
 
 	switch (comm->compression) {
 	case FR_COMPRESSION_VERY_FAST:
-		fr_process_add_arg (comm->process, "-mx=1"); break;
+		fr_process_add_arg (comm->process, "-mx=1");
+		break;
 	case FR_COMPRESSION_FAST:
-		fr_process_add_arg (comm->process, "-mx=5"); break;
+		fr_process_add_arg (comm->process, "-mx=5");
+		break;
 	case FR_COMPRESSION_NORMAL:
-		fr_process_add_arg (comm->process, "-mx=5"); break;
+		fr_process_add_arg (comm->process, "-mx=7");
+		break;
 	case FR_COMPRESSION_MAXIMUM:
-		fr_process_add_arg (comm->process, "-mx=7"); break;
+		fr_process_add_arg (comm->process, "-mx=9");
+		fr_process_add_arg (comm->process, "-m0=lzma2");;
+		break;
 	}
 
 	if (is_mime_type (comm->mime_type, "application/x-ms-dos-executable"))
@@ -526,6 +531,7 @@ const char *sevenz_mime_types[] = { "application/x-7z-compressed",
 				    /*"application/x-cbr",*/
 				    "application/x-cbz",
 				    "application/x-ms-dos-executable",
+				    "application/x-ms-wim",
 				    "application/x-rar",
 				    "application/zip",
 				    NULL };
