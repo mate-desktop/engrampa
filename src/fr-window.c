@@ -2159,9 +2159,9 @@ location_entry_key_press_event_cb (GtkWidget   *widget,
 				   GdkEventKey *event,
 				   FrWindow    *window)
 {
-	if ((event->keyval == GDK_Return)
-	    || (event->keyval == GDK_KP_Enter)
-	    || (event->keyval == GDK_ISO_Enter))
+	if ((event->keyval == GDK_KEY_Return)
+	    || (event->keyval == GDK_KEY_KP_Enter)
+	    || (event->keyval == GDK_KEY_ISO_Enter))
 	{
 		fr_window_go_to_location (window, gtk_entry_get_text (GTK_ENTRY (window->priv->location_entry)), FALSE);
 	}
@@ -4474,7 +4474,7 @@ key_press_cb (GtkWidget   *widget,
 
 	if (gtk_widget_has_focus (window->priv->filter_entry)) {
 		switch (event->keyval) {
-		case GDK_Escape:
+		case GDK_KEY_Escape:
 			fr_window_deactivate_filter (window);
 			retval = TRUE;
 			break;
@@ -4487,14 +4487,14 @@ key_press_cb (GtkWidget   *widget,
 	alt = (event->state & GDK_MOD1_MASK) == GDK_MOD1_MASK;
 
 	switch (event->keyval) {
-	case GDK_Escape:
+	case GDK_KEY_Escape:
 		activate_action_stop (NULL, window);
 		if (window->priv->filter_mode)
 			fr_window_deactivate_filter (window);
 		retval = TRUE;
 		break;
 
-	case GDK_F10:
+	case GDK_KEY_F10:
 		if (event->state & GDK_SHIFT_MASK) {
 			GtkTreeSelection *selection;
 
@@ -4511,37 +4511,37 @@ key_press_cb (GtkWidget   *widget,
 		}
 		break;
 
-	case GDK_Up:
-	case GDK_KP_Up:
+	case GDK_KEY_Up:
+	case GDK_KEY_KP_Up:
 		if (alt) {
 			fr_window_go_up_one_level (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_BackSpace:
+	case GDK_KEY_BackSpace:
 		fr_window_go_up_one_level (window);
 		retval = TRUE;
 		break;
 
-	case GDK_Right:
-	case GDK_KP_Right:
+	case GDK_KEY_Right:
+	case GDK_KEY_KP_Right:
 		if (alt) {
 			fr_window_go_forward (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_Left:
-	case GDK_KP_Left:
+	case GDK_KEY_Left:
+	case GDK_KEY_KP_Left:
 		if (alt) {
 			fr_window_go_back (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_Home:
-	case GDK_KP_Home:
+	case GDK_KEY_Home:
+	case GDK_KEY_KP_Home:
 		if (alt) {
 			fr_window_go_to_location (window, "/", FALSE);
 			retval = TRUE;
@@ -5809,7 +5809,7 @@ fr_window_construct (FrWindow *window)
 
 	/* Add a hidden short cut Ctrl-Q for power users */
 	gtk_accel_group_connect (gtk_ui_manager_get_accel_group (ui),
-				 GDK_q, GDK_CONTROL_MASK, 0,
+				 GDK_KEY_q, GDK_CONTROL_MASK, 0,
 				 g_cclosure_new_swap (G_CALLBACK (fr_window_close), window, NULL));
 
 
