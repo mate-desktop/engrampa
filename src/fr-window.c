@@ -1919,7 +1919,7 @@ fr_window_update_file_list (FrWindow *window,
 		}
 		else {
 			gtk_widget_set_sensitive (window->priv->list_view, FALSE);
-			gtk_widget_hide_all (gtk_widget_get_parent (window->priv->list_view));
+			gtk_widget_hide (gtk_widget_get_parent (window->priv->list_view));
 		}
 
 		return;
@@ -2512,7 +2512,6 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
 
 	d = GTK_DIALOG (window->priv->progress_dialog);
-	gtk_dialog_set_has_separator (d, FALSE);
 	gtk_window_set_resizable (GTK_WINDOW (d), TRUE);
 	gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 	gtk_window_set_default_size (GTK_WINDOW (d), PROGRESS_DIALOG_DEFAULT_WIDTH, -1);
@@ -5952,7 +5951,6 @@ fr_window_construct (FrWindow *window)
 		gtk_widget_show (vbox);
 	}
 	gtk_widget_show (statusbar_box);
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (window->priv->statusbar), TRUE);
 
 	fr_window_attach (FR_WINDOW (window), window->priv->statusbar, FR_WINDOW_AREA_STATUSBAR);
 	if (g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_STATUSBAR))
@@ -7085,7 +7083,6 @@ fr_window_view_last_output (FrWindow   *window,
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
 
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
-	gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
 	gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 6);
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 8);
