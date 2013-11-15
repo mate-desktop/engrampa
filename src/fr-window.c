@@ -5823,6 +5823,9 @@ fr_window_construct (FrWindow *window)
 
 	window->priv->toolbar = toolbar = gtk_ui_manager_get_widget (ui, "/ToolBar");
 	gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), TRUE);
+#if GTK_CHECK_VERSION(3,0,0)
+	gtk_style_context_add_class (gtk_widget_get_style_context (toolbar), GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+#endif
 	set_action_important (ui, "/ToolBar/Extract_Toolbar");
 
 	/* location bar */
