@@ -1926,8 +1926,7 @@ fr_window_update_file_list (FrWindow *window,
 	}
 	else {
 		gtk_widget_set_sensitive (window->priv->list_view, TRUE);
-		if (! gtk_widget_get_visible (window->priv->list_view))
-			gtk_widget_show_all (gtk_widget_get_parent (window->priv->list_view));
+		gtk_widget_show_all (gtk_widget_get_parent (window->priv->list_view));
 	}
 
 	if (window->priv->give_focus_to_the_list) {
@@ -2512,6 +2511,9 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
 
 	d = GTK_DIALOG (window->priv->progress_dialog);
+#if !GTK_CHECK_VERSION(2,22,0)
+	gtk_dialog_set_has_separator (d, FALSE);
+#endif
 	gtk_window_set_resizable (GTK_WINDOW (d), TRUE);
 	gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 	gtk_window_set_default_size (GTK_WINDOW (d), PROGRESS_DIALOG_DEFAULT_WIDTH, -1);
@@ -7086,6 +7088,9 @@ fr_window_view_last_output (FrWindow   *window,
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
 
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
+#if !GTK_CHECK_VERSION(2,22,0)
+	gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
+#endif
 	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
 	gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 6);
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 8);
