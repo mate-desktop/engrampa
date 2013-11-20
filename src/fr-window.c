@@ -1919,15 +1919,14 @@ fr_window_update_file_list (FrWindow *window,
 		}
 		else {
 			gtk_widget_set_sensitive (window->priv->list_view, FALSE);
-			gtk_widget_hide_all (gtk_widget_get_parent (window->priv->list_view));
+			gtk_widget_hide (gtk_widget_get_parent (window->priv->list_view));
 		}
 
 		return;
 	}
 	else {
 		gtk_widget_set_sensitive (window->priv->list_view, TRUE);
-		if (! gtk_widget_get_visible (window->priv->list_view))
-			gtk_widget_show_all (gtk_widget_get_parent (window->priv->list_view));
+		gtk_widget_show_all (gtk_widget_get_parent (window->priv->list_view));
 	}
 
 	if (window->priv->give_focus_to_the_list) {
@@ -2159,9 +2158,9 @@ location_entry_key_press_event_cb (GtkWidget   *widget,
 				   GdkEventKey *event,
 				   FrWindow    *window)
 {
-	if ((event->keyval == GDK_Return)
-	    || (event->keyval == GDK_KP_Enter)
-	    || (event->keyval == GDK_ISO_Enter))
+	if ((event->keyval == GDK_KEY_Return)
+	    || (event->keyval == GDK_KEY_KP_Enter)
+	    || (event->keyval == GDK_KEY_ISO_Enter))
 	{
 		fr_window_go_to_location (window, gtk_entry_get_text (GTK_ENTRY (window->priv->location_entry)), FALSE);
 	}
@@ -2512,7 +2511,9 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
 
 	d = GTK_DIALOG (window->priv->progress_dialog);
+#if !GTK_CHECK_VERSION(2,22,0)
 	gtk_dialog_set_has_separator (d, FALSE);
+#endif
 	gtk_window_set_resizable (GTK_WINDOW (d), TRUE);
 	gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 	gtk_window_set_default_size (GTK_WINDOW (d), PROGRESS_DIALOG_DEFAULT_WIDTH, -1);
@@ -4474,7 +4475,7 @@ key_press_cb (GtkWidget   *widget,
 
 	if (gtk_widget_has_focus (window->priv->filter_entry)) {
 		switch (event->keyval) {
-		case GDK_Escape:
+		case GDK_KEY_Escape:
 			fr_window_deactivate_filter (window);
 			retval = TRUE;
 			break;
@@ -4487,14 +4488,14 @@ key_press_cb (GtkWidget   *widget,
 	alt = (event->state & GDK_MOD1_MASK) == GDK_MOD1_MASK;
 
 	switch (event->keyval) {
-	case GDK_Escape:
+	case GDK_KEY_Escape:
 		activate_action_stop (NULL, window);
 		if (window->priv->filter_mode)
 			fr_window_deactivate_filter (window);
 		retval = TRUE;
 		break;
 
-	case GDK_F10:
+	case GDK_KEY_F10:
 		if (event->state & GDK_SHIFT_MASK) {
 			GtkTreeSelection *selection;
 
@@ -4511,37 +4512,37 @@ key_press_cb (GtkWidget   *widget,
 		}
 		break;
 
-	case GDK_Up:
-	case GDK_KP_Up:
+	case GDK_KEY_Up:
+	case GDK_KEY_KP_Up:
 		if (alt) {
 			fr_window_go_up_one_level (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_BackSpace:
+	case GDK_KEY_BackSpace:
 		fr_window_go_up_one_level (window);
 		retval = TRUE;
 		break;
 
-	case GDK_Right:
-	case GDK_KP_Right:
+	case GDK_KEY_Right:
+	case GDK_KEY_KP_Right:
 		if (alt) {
 			fr_window_go_forward (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_Left:
-	case GDK_KP_Left:
+	case GDK_KEY_Left:
+	case GDK_KEY_KP_Left:
 		if (alt) {
 			fr_window_go_back (window);
 			retval = TRUE;
 		}
 		break;
 
-	case GDK_Home:
-	case GDK_KP_Home:
+	case GDK_KEY_Home:
+	case GDK_KEY_KP_Home:
 		if (alt) {
 			fr_window_go_to_location (window, "/", FALSE);
 			retval = TRUE;
@@ -5809,7 +5810,7 @@ fr_window_construct (FrWindow *window)
 
 	/* Add a hidden short cut Ctrl-Q for power users */
 	gtk_accel_group_connect (gtk_ui_manager_get_accel_group (ui),
-				 GDK_q, GDK_CONTROL_MASK, 0,
+				 GDK_KEY_q, GDK_CONTROL_MASK, 0,
 				 g_cclosure_new_swap (G_CALLBACK (fr_window_close), window, NULL));
 
 
@@ -5824,6 +5825,9 @@ fr_window_construct (FrWindow *window)
 
 	window->priv->toolbar = toolbar = gtk_ui_manager_get_widget (ui, "/ToolBar");
 	gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), TRUE);
+#if GTK_CHECK_VERSION(3,0,0)
+	gtk_style_context_add_class (gtk_widget_get_style_context (toolbar), GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+#endif
 	set_action_important (ui, "/ToolBar/Extract_Toolbar");
 
 	/* location bar */
@@ -5952,7 +5956,6 @@ fr_window_construct (FrWindow *window)
 		gtk_widget_show (vbox);
 	}
 	gtk_widget_show (statusbar_box);
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (window->priv->statusbar), TRUE);
 
 	fr_window_attach (FR_WINDOW (window), window->priv->statusbar, FR_WINDOW_AREA_STATUSBAR);
 	if (g_settings_get_boolean (window->priv->settings_ui, PREF_UI_VIEW_STATUSBAR))
@@ -7085,7 +7088,9 @@ fr_window_view_last_output (FrWindow   *window,
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
 
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
+#if !GTK_CHECK_VERSION(2,22,0)
 	gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
+#endif
 	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
 	gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 6);
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 8);
