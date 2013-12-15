@@ -190,6 +190,7 @@ fr_command_zip_list (FrCommand  *comm)
 	fr_process_begin_command (comm->process, "unzip");
 	fr_process_set_begin_func (comm->process, list__begin, comm);
 	fr_process_add_arg (comm->process, "-ZTs");
+	fr_process_add_arg (comm->process, "--");
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
@@ -253,6 +254,8 @@ fr_command_zip_add (FrCommand     *comm,
 	}
 
 	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_add_arg (comm->process, "--");
+
 	for (scan = file_list; scan; scan = scan->next)
 		fr_process_add_arg (comm->process, scan->data);
 
@@ -275,6 +278,8 @@ fr_command_zip_delete (FrCommand  *comm,
 	fr_process_add_arg (comm->process, "-d");
 
 	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_add_arg (comm->process, "--");
+
 	for (scan = file_list; scan; scan = scan->next) {
 		char *escaped;
 
@@ -319,6 +324,8 @@ fr_command_zip_extract (FrCommand  *comm,
 	add_password_arg (comm, comm->password);
 
 	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_add_arg (comm->process, "--");
+
 	for (scan = file_list; scan; scan = scan->next) {
 		char *escaped;
 
@@ -337,6 +344,7 @@ fr_command_zip_test (FrCommand   *comm)
 	fr_process_begin_command (comm->process, "unzip");
 	fr_process_add_arg (comm->process, "-t");
 	add_password_arg (comm, comm->password);
+	fr_process_add_arg (comm->process, "--");
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 }
