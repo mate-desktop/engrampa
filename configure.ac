@@ -3,11 +3,12 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.61)
 
 AC_INIT([engrampa], [1.6.0], [http://www.mate-desktop.org/])
-AM_INIT_AUTOMAKE([1.9 foreign])
+AM_INIT_AUTOMAKE([1.9 foreign dist-xz no-dist-gzip])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADER([config.h])
+AC_CONFIG_MACRO_DIR([m4])
 
 MATE_COMMON_INIT
 
@@ -150,8 +151,17 @@ AC_SUBST(DISABLE_DEPRECATED)
 dnl ******************************
 
 
-CAJA_EXTENSION_DIR=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
-AC_SUBST(CAJA_EXTENSION_DIR)
+AC_ARG_WITH(cajadir,
+        AS_HELP_STRING([--with-cajadir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+        [ac_with_cajadir=$withval],
+        [ac_with_cajadir=""])
+if test "${ac_with_cajadir}" = ""; then
+        ac_with_cajadir=`pkg-config --variable=extensiondir libcaja-extension`
+fi
+
+AC_MSG_NOTICE([installing caja plugin in ${ac_with_cajadir}])
+AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_cajadir}])
+
 
 dnl ******************************
 

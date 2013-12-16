@@ -1,4 +1,6 @@
 ## Process this file with automake to produce Makefile.in.
+ACLOCAL_AMFLAGS = -I m4
+
 if ENABLE_CAJA_ACTIONS
 CAJA = caja
 else
@@ -38,7 +40,8 @@ DISTCLEANFILES =                        \
 	intltool-merge                  \
 	intltool-update
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper
+DISTCHECK_CONFIGURE_FLAGS = --with-cajadir='$${libdir}/caja/extensions-2.0-distcheck'
+
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
