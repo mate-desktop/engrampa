@@ -26,6 +26,7 @@ EXTRA_DIST = 			\
 	MAINTAINERS		\
 	NEWS			\
 	README			\
+	autogen.sh		\
 	engrampa.spec	\
 	engrampa.spec.in	\
 	intltool-merge.in	\
