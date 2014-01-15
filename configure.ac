@@ -185,7 +185,6 @@ AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_cajadir}])
 dnl ******************************
 
 AC_CONFIG_FILES([Makefile
-		 engrampa.spec
 		 data/Makefile
 		 data/engrampa.desktop.in
 		 data/ui/Makefile

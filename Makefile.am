@@ -27,8 +27,6 @@ EXTRA_DIST = 			\
 	NEWS			\
 	README			\
 	autogen.sh		\
-	engrampa.spec	\
-	engrampa.spec.in	\
 	intltool-merge.in	\
 	intltool-update.in	\
 	intltool-extract.in
