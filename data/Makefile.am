@@ -18,6 +18,8 @@ gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 
 @GSETTINGS_RULES@
 
+man_MANS = engrampa.1
+
 convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = engrampa.convert
 
@@ -42,6 +44,7 @@ EXTRA_DIST = \
        $(desktop_in_files) \
        $(desktop_DATA) \
        $(gsettingsschema_in_files) \
+       $(man_MANS) \
        $(NULL)
 
 DISTCLEANFILES = \
