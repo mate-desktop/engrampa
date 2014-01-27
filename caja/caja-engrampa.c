@@ -326,7 +326,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 
 		items = g_list_append (items, item);
 	}
-	else if (all_archives && ! can_write) {
+	if (all_archives) {
 		CajaMenuItem *item;
 
 		item = caja_menu_item_new ("CajaFr::extract_to",
