@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.61)
 
-AC_INIT([engrampa], [1.6.1], [http://www.mate-desktop.org/])
+AC_INIT([engrampa], [1.6.1], [http://www.mate-desktop.org/], [mate-file-archiver])
 AM_INIT_AUTOMAKE([1.9 foreign dist-xz no-dist-gzip])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
