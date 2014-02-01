@@ -1,4 +1,4 @@
-themedir = $(pkgdatadir)/icons/hicolor
+themedir = $(datadir)/$(PACKAGE_NAME)/icons/hicolor
 size = 24x24
 context = actions
 

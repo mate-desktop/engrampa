@@ -1,4 +1,4 @@
-privexecdir = $(libexecdir)/$(PACKAGE)
+privexecdir = $(libexecdir)/$(PACKAGE_NAME)
 privexec_PROGRAMS = rpm2cpio
 
 AM_CPPFLAGS = $(DISABLE_DEPRECATED) $(FR_CFLAGS)

@@ -1,4 +1,4 @@
-shdir = $(libexecdir)/$(PACKAGE)
+shdir = $(libexecdir)/$(PACKAGE_NAME)
 sh_DATA = isoinfo.sh 
 
 EXTRA_DIST = $(sh_DATA)
