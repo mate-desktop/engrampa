@@ -1,46 +1,25 @@
-# translation of el.po to Greek
-# Copyright (C) 2001 - 2009 Free Software Foundation, Inc.
-#
-#
-# ##############################################
-# ##############################################
-# Mate 2.4 (engrampa 2.4.xx)
-# ##############################################
-# kostas:25May2003, updated translation for Mate 2.4xx
-# kostas: 06Jul2003, one more update
-# Nikos: 7jul2003, fixes for access keys
-# kostas: 03Aug2003, one more update
-# ##############################################
-# Mate 2.6
-# ##############################################
-# kostas: 12Nov2003, updates and fixes
-# Nikos: 28Nov2003, pass updates made for 2.4 branch to HEAD
-# kostas: 7Mar2004, update
-# ##############################################
-# Mate 2.8
-# ##############################################
-# nikos 30Aug2004, update
-#
-#
-#
-# kostas:249 messages, 05Jan2003, updated translation.
-# kostas: 256 messages,25Jan2004.
-# Simos Xenitellis <simos@hellug.gr>, 2001.
-# Nikos Charonitakis <charosn@her.forthnet.gr>, 2003, 2004, 2005.
-# Kostas Papadimas <pkst@gnome.org>, 2002,2003, 2004, 2006, 2007, 2008.
-# Konstantinos Kouratoras <kouratoras@gmail.com>, 2008.
-# Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2009
+# Konstantinos Kouratoras <kouratoras@gmail.com>, 2008
+# Kostas Papadimas <pkst@gnome.org>, 2002, 2003, 2004, 2006, 2007, 2008
+# Nikos Charonitakis <charosn@her.forthnet.gr>, 2003, 2004, 2005
+# Simos Xenitellis <simos@hellug.gr>, 2001
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
-"Report-Msgid-Bugs-To: http://bugzilla.mate.org/enter_bug.cgi?product=engrampa&component=general\n"
-"POT-Creation-Date: 2010-08-23 11:40+0000\n"
-"PO-Revision-Date: 2010-08-27 13:53+0200\n"
-"Last-Translator: Michael Kotsarinis <mk73628@hotmail.com>\n"
-"Language-Team: Greek <team@mate.gr>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-09 18:21+0100\n"
+"PO-Revision-Date: 2014-02-09 18:19+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/MATE/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../copy-n-paste/eggdesktopfile.c:165
@@ -70,7 +49,6 @@ msgstr "Μη αναγνωρίσιμη επιλογή εκκίνησης: %d"
 
 #: ../copy-n-paste/eggdesktopfile.c:1375
 #, c-format
-#| msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgid "Can't pass documents to this desktop element"
 msgstr "Δε μπορούν να διαβιβαστούν έγγραφα σε αυτό το στοιχείο της επιφάνειας εργασίας"
 
@@ -108,74 +86,67 @@ msgid "Show session management options"
 msgstr "Εμφάνιση επιλογών διαχείρισης συνεδρίας"
 
 #: ../data/engrampa.desktop.in.in.h:1
-#: ../src/fr-window.c:1974
-#: ../src/fr-window.c:5393
+msgid "Engrampa Archive Manager"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1991
+#: ../src/fr-window.c:5419
 msgid "Archive Manager"
 msgstr "Διαχειριστής συμπιεσμένων αρχείων"
 
-#: ../data/engrampa.desktop.in.in.h:2
+#: ../data/engrampa.desktop.in.in.h:3
 msgid "Create and modify an archive"
 msgstr "Δημιουργία και τροποποίηση ενός συμπιεσμένου αρχείου"
 
-#
 #: ../data/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "Επιλογές φόρτωσης"
 
 #: ../data/ui/batch-add-files.ui.h:1
-#: ../src/fr-stock.c:42
-msgid "C_reate"
-msgstr "_Δημιουργία"
-
-#: ../data/ui/batch-add-files.ui.h:2
 msgid "Compress"
 msgstr "Συμπίεση"
 
-#
-#: ../data/ui/batch-add-files.ui.h:3
-msgid "Location"
-msgstr "Τοποθεσία"
-
-#. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:5
-#: ../data/ui/new.ui.h:2
-msgid "MB"
-msgstr "MB"
-
-#. this is part of a sentence, for example "split into volumes of 10.0 MB", where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:7
-#: ../data/ui/new.ui.h:3
-msgid "Split into _volumes of"
-msgstr "_Διάσπαση σε τόμους των"
-
-#: ../data/ui/batch-add-files.ui.h:8
-#: ../data/ui/new.ui.h:4
-#: ../data/ui/password.ui.h:3
-msgid "_Encrypt the file list too"
-msgstr "_Κρυπτογράφηση και της λίστας αρχείων"
-
-#: ../data/ui/batch-add-files.ui.h:9
+#: ../data/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr "Όνομα α_ρχείου:"
 
-#
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:10
-#: ../src/fr-window.c:5815
+#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5844
 msgid "_Location:"
 msgstr "_Τοποθεσία:"
 
-#: ../data/ui/batch-add-files.ui.h:11
-#: ../data/ui/new.ui.h:5
+#: ../data/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "Τοποθεσία"
+
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+msgid "_Password:"
+msgstr "_Κωδικός πρόσβασης:"
+
+#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../data/ui/password.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr "_Κρυπτογράφηση και της λίστας αρχείων"
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr "_Διάσπαση σε τόμους των"
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+msgid "MB"
+msgstr "MB"
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "Ά_λλες επιλογές"
 
-#: ../data/ui/batch-add-files.ui.h:12
-#: ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:6
-#: ../data/ui/password.ui.h:4
-msgid "_Password:"
-msgstr "_Κωδικός πρόσβασης:"
+#: ../data/ui/batch-add-files.ui.h:12 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "_Δημιουργία"
 
 #: ../data/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
@@ -185,33 +156,29 @@ msgstr "<span weight=\"bold\" size=\"larger\">Απαιτείται κωδικό�
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: ../data/ui/delete.ui.h:2
-#: ../src/dlg-extract.c:362
-msgid "_All files"
-msgstr "Ό_λα τα αρχεία"
-
-#: ../data/ui/delete.ui.h:3
-#: ../src/dlg-extract.c:348
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:349
 msgid "_Files:"
 msgstr "Αρ_χεία:"
 
-#: ../data/ui/delete.ui.h:4
-#: ../src/dlg-extract.c:369
-msgid "_Selected files"
-msgstr "Επι_λεγμένα αρχεία"
-
-#: ../data/ui/delete.ui.h:5
-#: ../src/dlg-extract.c:359
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:360
 msgid "example: *.txt; *.doc"
 msgstr "παράδειγμα: *.txt; *.doc"
 
-#: ../data/ui/open-with.ui.h:1
-msgid "A_vailable application:"
-msgstr "Δ_ιαθέσιμη εφαρμογή:"
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:363
+msgid "_All files"
+msgstr "Ό_λα τα αρχεία"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:370
+msgid "_Selected files"
+msgstr "Επι_λεγμένα αρχεία"
+
+#: ../data/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "Άνοιγμα αρχείων"
+
+#: ../data/ui/open-with.ui.h:2
+msgid "A_vailable application:"
+msgstr "Δ_ιαθέσιμη εφαρμογή:"
 
 #: ../data/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
@@ -222,373 +189,327 @@ msgid "_Application:"
 msgstr "_Εφαρμογή:"
 
 #: ../data/ui/password.ui.h:1
-msgid "<i><b>Note:</b> the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.</i>"
-msgstr "<i><b>Σημείωση:</b> ο κωδικός θα χρησιμοποιηθεί για την κρυπτογράφηση των αρχείων που θα προσθέσετε στο τρέχον συμπιεσμένο αρχείο και θα αποκωδικοποιεί τα αρχεία που θα αποσυμπιέζετε από το τρέχον αρχείο. Όταν το συμπιεσμένο αρχείο κλείσει ο κωδικός θα διαγραφεί.</i>"
-
-#: ../data/ui/password.ui.h:2
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
-#: ../data/ui/update.ui.h:1
-msgid "S_elect the files you want to update:"
-msgstr "_Επιλέξτε τα αρχεία που θέλετε να ενημερώσετε:"
+#: ../data/ui/password.ui.h:4
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b>Σημείωση:</b> ο κωδικός θα χρησιμοποιηθεί για την κρυπτογράφηση των αρχείων που θα προσθέσετε στο τρέχον συμπιεσμένο αρχείο και θα αποκωδικοποιεί τα αρχεία που θα αποσυμπιέζετε από το τρέχον αρχείο. Όταν το συμπιεσμένο αρχείο κλείσει ο κωδικός θα διαγραφεί.</i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:2
-#: ../src/dlg-update.c:177
-#: ../src/dlg-update.c:205
+#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
-#| msgid ""
-#| "The file has been modified with an external application. If you don't "
-#| "update the version in the archive, all of your changes will be lost."
-#| msgid_plural ""
-#| "There are %d files that have been modified with an external application. "
-#| "If you don't update the files in the archive, all of your changes will be "
-#| "lost."
-msgid "The file has been modified with an external application. If you don't update the file in the archive, all of your changes will be lost."
-msgid_plural "%d files have been modified with an external application. If you don't update the files in the archive, all of your changes will be lost."
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
 msgstr[0] "Το αρχείο τροποποιήθηκε με μια άλλη εξωτερική εφαρμογή. Αν δεν ενημερώσετε την έκδοση που υπάρχει στο συμπιεσμένο αρχείο, όλες οι αλλαγές σας θα χαθούν."
 msgstr[1] "Υπήρξαν %d αρχεία που τροποποιήθηκαν με μια άλλη εξωτερική εφαρμογή. Αν δεν ενημερώσετε τα αρχεία που υπάρχουν στο συμπιεσμένο αρχείο, όλες οι αλλαγές σας θα χαθούν."
 
-#: ../data/ui/update.ui.h:3
+#: ../data/ui/update.ui.h:2
 msgid "_Update"
 msgstr "_Ενημέρωση"
 
-#: ../caja/caja-engrampa.c:313
+#: ../data/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
+msgstr "_Επιλέξτε τα αρχεία που θέλετε να ενημερώσετε:"
+
+#: ../caja/caja-engrampa.c:314
 msgid "Extract Here"
 msgstr "Αποσυμπίεση εδώ"
 
 #. Translators: the current position is the current folder
-#: ../caja/caja-engrampa.c:315
-#| msgid "Extract the selected archive in the current position"
+#: ../caja/caja-engrampa.c:316
 msgid "Extract the selected archive to the current position"
 msgstr "Αποσυμπίεση του επιλεγμένου αρχείου στην τρέχουσα θέση"
 
-#: ../caja/caja-engrampa.c:332
+#: ../caja/caja-engrampa.c:333
 msgid "Extract To..."
 msgstr "Αποσυμπίεση σε..."
 
-#: ../caja/caja-engrampa.c:333
+#: ../caja/caja-engrampa.c:334
 msgid "Extract the selected archive"
 msgstr "Αποσυμπίεση του επιλεγμένου αρχείου"
 
-#: ../caja/caja-engrampa.c:352
+#: ../caja/caja-engrampa.c:353
 msgid "Compress..."
 msgstr "Συμπίεση..."
 
-#: ../caja/caja-engrampa.c:353
+#: ../caja/caja-engrampa.c:354
 msgid "Create a compressed archive with the selected objects"
 msgstr "Δημιουργία ενός συμπιεσμένου αρχείου με τα επιλεγμένα αντικείμενα"
 
-#: ../src/actions.c:158
-#: ../src/actions.c:197
-#: ../src/actions.c:233
-#: ../src/dlg-batch-add.c:168
-#: ../src/dlg-batch-add.c:184
-#: ../src/dlg-batch-add.c:213
-#: ../src/dlg-batch-add.c:258
-#: ../src/dlg-batch-add.c:304
-#: ../src/fr-window.c:2925
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:171 ../src/dlg-batch-add.c:187
+#: ../src/dlg-batch-add.c:216 ../src/dlg-batch-add.c:261
+#: ../src/dlg-batch-add.c:307 ../src/fr-window.c:2944
 msgid "Could not create the archive"
 msgstr "Αδυναμία δημιουργίας του συμπιεσμένου αρχείου"
 
-#: ../src/actions.c:160
-#: ../src/dlg-batch-add.c:170
-#: ../src/dlg-batch-add.c:306
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:173 ../src/dlg-batch-add.c:309
 msgid "You have to specify an archive name."
 msgstr "Θα πρέπει να καθορίσετε ένα όνομα συμπιεσμένου αρχείου."
 
-#: ../src/actions.c:199
+#: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
 msgstr "Δεν έχετε δικαίωμα να δημιουργήσετε ένα συμπιεσμένο αρχείο σε αυτόν το φάκελο"
 
-#: ../src/actions.c:235
-#: ../src/dlg-package-installer.c:254
-#: ../src/dlg-package-installer.c:263
-#: ../src/dlg-package-installer.c:291
-#: ../src/fr-archive.c:1146
-#: ../src/fr-window.c:6034
-#: ../src/fr-window.c:6210
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:267
+#: ../src/dlg-package-installer.c:276 ../src/dlg-package-installer.c:304
+#: ../src/fr-archive.c:1146 ../src/fr-window.c:6059 ../src/fr-window.c:6235
 msgid "Archive type not supported."
 msgstr "Ο τύπος αρχείου δεν υποστηρίζεται."
 
-#: ../src/actions.c:249
+#: ../src/actions.c:248
 msgid "Could not delete the old archive."
 msgstr "Αδυναμία διαγραφής παλιού συμπιεσμένου αρχείου."
 
-#: ../src/actions.c:383
-#: ../src/fr-window.c:5873
+#: ../src/actions.c:382 ../src/fr-window.c:5902
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: ../src/actions.c:394
-#: ../src/dlg-new.c:321
-#: ../src/fr-window.c:5224
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5242
 msgid "All archives"
 msgstr "Όλα τα συμπιεσμένα αρχεία"
 
-#: ../src/actions.c:401
-#: ../src/dlg-new.c:328
+#: ../src/actions.c:400 ../src/dlg-new.c:320
 msgid "All files"
 msgstr "Όλα τα αρχεία"
 
-#: ../src/actions.c:780
-#: ../src/fr-window.c:7056
+#: ../src/actions.c:794 ../src/fr-window.c:7081
 msgid "Last Output"
 msgstr "Τελευταία έξοδος"
 
-#: ../src/actions.c:844
-msgid "Engrampa is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
+#: ../src/actions.c:860
+msgid ""
+"Engrampa is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
 msgstr "Το Engrampa είναι ελεύθερο λογισμικό. Επιτρέπεται η αναδιανομή ή/και τροποποίησή του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GNU General Public License), όπως αυτή έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού (Free Software Foundation) – είτε της έκδοσης 2 της Άδειας, είτε (κατ' επιλογήν) οποιασδήποτε μεταγενέστερης έκδοσης."
 
-#: ../src/actions.c:848
-msgid "Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
+#: ../src/actions.c:864
+msgid ""
+"Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
 msgstr "Το Engrampa διανέμεται με την ελπίδα ότι θα αποδειχθεί χρήσιμο, παρόλα αυτά ΧΩΡΙΣ ΚΑΜΙΑ ΕΓΓΥΗΣΗ – χωρίς ούτε και την σιωπηρή εγγύηση ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΚΕΚΡΙΜΕΝΗ ΧΡΗΣΗ. Για περισσότερες λεπτομέρειες ανατρέξτε στη Γενική Άδεια Δημόσιας Χρήσης GNU (GNU General Public License)."
 
-#: ../src/actions.c:852
-msgid "You should have received a copy of the GNU General Public License along with Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+#: ../src/actions.c:868
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr "Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης GNU (GNU General Public License) μαζί με το Engrampa. Εάν όχι, επικοινωνήστε γραπτώς με το Ίδρυμα Ελεύθερου Λογισμικού (Free Software Foundation), Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA"
 
-#: ../src/actions.c:862
+#: ../src/actions.c:878
 msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
 msgstr "Πνευματικά δικαιώματα © 2001-2010 Free Software Foundation, Inc."
 
-#: ../src/actions.c:863
+#: ../src/actions.c:879
 msgid "An archive manager for MATE."
 msgstr "Ένας διαχειριστής συμπιεσμένων αρχείων του MATE."
 
-#: ../src/actions.c:866
+#: ../src/actions.c:882
 msgid "translator-credits"
-msgstr ""
-"Ελληνική μεταφραστική ομάδα MATE\n"
-" Κώστας Παπαδήμας <pkst@gnome.org>\n"
-" Κωνσταντίνος Κουράτορας <kouratoras@gmail.com>\n"
-"\n"
-"Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.mate.gr/"
+msgstr "Ελληνική μεταφραστική ομάδα MATE\n Κώστας Παπαδήμας <pkst@gnome.org>\n Κωνσταντίνος Κουράτορας <kouratoras@gmail.com>\n\nΓια περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.mate.gr/"
 
-#: ../src/dlg-add-files.c:94
-#: ../src/dlg-add-folder.c:129
+#: ../src/dlg-add-files.c:100 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "Αδυναμία προσθήκης αρχείων στο συμπιεσμένο αρχείο"
 
-#: ../src/dlg-add-files.c:95
-#: ../src/dlg-add-folder.c:130
+#: ../src/dlg-add-files.c:101 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
 msgstr "Δεν έχετε τα απαραίτητα δικαιώματα ανάγνωσης αρχείων από το φάκελο \"%s\""
 
-#: ../src/dlg-add-files.c:142
-#: ../src/ui.h:49
+#: ../src/dlg-add-files.c:149 ../src/ui.h:49
 msgid "Add Files"
 msgstr "Προσθήκη αρχείων"
 
 #. Translators: add a file to the archive only if the disk version is
 #. * newer than the archive version.
-#: ../src/dlg-add-files.c:158
-#: ../src/dlg-add-folder.c:231
+#: ../src/dlg-add-files.c:165 ../src/dlg-add-folder.c:238
 msgid "Add only if _newer"
 msgstr "_Προσθήκη μόνο αν είναι νεώτερο"
 
-#: ../src/dlg-add-folder.c:217
+#: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
 msgstr "Προσθήκη ενός φακέλου"
 
-#: ../src/dlg-add-folder.c:232
+#: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
 msgstr "_Να περιλαμβάνονται οι υποφάκελοι"
 
-#: ../src/dlg-add-folder.c:233
+#: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "Εξαίρεση φακέλων που είναι συμβολικοί σύνδεσ_μοι"
 
-#: ../src/dlg-add-folder.c:236
-#: ../src/dlg-add-folder.c:242
-#: ../src/dlg-add-folder.c:248
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:255
 msgid "example: *.o; *.bak"
 msgstr "παράδειγμα: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:237
+#: ../src/dlg-add-folder.c:244
 msgid "Include _files:"
 msgstr "Να _συμπεριληφθούν τα αρχεία:"
 
-#: ../src/dlg-add-folder.c:243
+#: ../src/dlg-add-folder.c:250
 msgid "E_xclude files:"
 msgstr "Ε_ξαίρεση αρχείων:"
 
-#: ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:256
 msgid "_Exclude folders:"
 msgstr "Να _εξαιρεθούν οι φάκελοι:"
 
-#
-#: ../src/dlg-add-folder.c:253
+#: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
 msgstr "_Επιλογές φόρτωσης"
 
-#: ../src/dlg-add-folder.c:254
+#: ../src/dlg-add-folder.c:261
 msgid "Sa_ve Options"
 msgstr "Επιλογές αποθή_κευσης"
 
-#: ../src/dlg-add-folder.c:255
+#: ../src/dlg-add-folder.c:262
 msgid "_Reset Options"
 msgstr "_Επιλογές επανατοποθέτησης"
 
-#: ../src/dlg-add-folder.c:883
+#: ../src/dlg-add-folder.c:890
 msgid "Save Options"
 msgstr "Επιλογές αποθήκευσης"
 
-#: ../src/dlg-add-folder.c:884
+#: ../src/dlg-add-folder.c:891
 msgid "Options Name:"
 msgstr "Όνομα επιλογών:"
 
-#: ../src/dlg-ask-password.c:123
+#: ../src/dlg-ask-password.c:124
 #, c-format
 msgid "Enter the password for the archive '%s'."
 msgstr "Εισάγετε ένα κωδικό για το αρχείο '%s'."
 
-#. Translators: the name references to a filename.  This message can appear when renaming a file.
-#: ../src/dlg-batch-add.c:185
-#: ../src/fr-window.c:7377
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/dlg-batch-add.c:188 ../src/fr-window.c:7404
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
 "\n"
 "%s"
-msgstr ""
-"Το όνομα \"%s\" δεν είναι έγκυρο επειδή περιέχει τους χαρακτήρες: %s\n"
-"\n"
-"%s"
+msgstr "Το όνομα \"%s\" δεν είναι έγκυρο επειδή περιέχει τους χαρακτήρες: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:188
-#: ../src/fr-window.c:7367
-#: ../src/fr-window.c:7372
-#: ../src/fr-window.c:7377
-#: ../src/fr-window.c:7413
-#: ../src/fr-window.c:7415
+#: ../src/dlg-batch-add.c:191 ../src/fr-window.c:7394 ../src/fr-window.c:7399
+#: ../src/fr-window.c:7404 ../src/fr-window.c:7440 ../src/fr-window.c:7442
 msgid "Please use a different name."
 msgstr "Παρακαλώ κάντε χρήση ενός διαφορετικού ονόματος."
 
-#: ../src/dlg-batch-add.c:215
-msgid "You don't have the right permissions to create an archive in the destination folder."
+#: ../src/dlg-batch-add.c:218
+msgid ""
+"You don't have the right permissions to create an archive in the destination"
+" folder."
 msgstr "Δεν έχετε τα απαραίτητα δικαιώματα να δημιουργήσετε ένα συμπιεσμένο αρχείο σε αυτόν το φάκελο προορισμού."
 
-#: ../src/dlg-batch-add.c:231
-#: ../src/dlg-extract.c:102
-#: ../src/fr-window.c:6631
+#: ../src/dlg-batch-add.c:234 ../src/dlg-extract.c:103 ../src/fr-window.c:6656
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr ""
-"Ο φάκελος προορισμού \"%s\" δεν υπάρχει.\n"
-"\n"
-"Θέλετε να δημιουργηθεί;"
+msgstr "Ο φάκελος προορισμού \"%s\" δεν υπάρχει.\n\nΘέλετε να δημιουργηθεί;"
 
-#: ../src/dlg-batch-add.c:240
-#: ../src/dlg-extract.c:111
-#: ../src/fr-window.c:6640
+#: ../src/dlg-batch-add.c:243 ../src/dlg-extract.c:112 ../src/fr-window.c:6665
 msgid "Create _Folder"
 msgstr "Δημιουργία _φακέλου"
 
-#: ../src/dlg-batch-add.c:259
-#: ../src/dlg-extract.c:131
-#: ../src/fr-window.c:6660
+#: ../src/dlg-batch-add.c:262 ../src/dlg-extract.c:132 ../src/fr-window.c:6685
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Αδυναμία δημιουργίας φακέλου προορισμού: %s."
 
-#: ../src/dlg-batch-add.c:276
+#: ../src/dlg-batch-add.c:279
 msgid "Archive not created"
 msgstr "Το συμπιεσμένο αρχείο δεν δημιουργήθηκε"
 
-#: ../src/dlg-batch-add.c:324
+#: ../src/dlg-batch-add.c:327
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Το συμπιεσμένο αρχείο υπάρχει ήδη.  Να αντικατασταθεί;"
 
-#: ../src/dlg-batch-add.c:327
+#: ../src/dlg-batch-add.c:330
 msgid "_Overwrite"
 msgstr "_Αντικατάσταση"
 
-#: ../src/dlg-extract.c:130
-#: ../src/dlg-extract.c:148
-#: ../src/dlg-extract.c:175
-#: ../src/fr-window.c:4150
-#: ../src/fr-window.c:6659
-#: ../src/fr-window.c:6676
+#: ../src/dlg-extract.c:131 ../src/dlg-extract.c:149 ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4169 ../src/fr-window.c:6684 ../src/fr-window.c:6701
 msgid "Extraction not performed"
 msgstr "Η αποσυμπίεση δεν πραγματοποιήθηκε"
 
-#: ../src/dlg-extract.c:176
-#: ../src/fr-window.c:4313
-#: ../src/fr-window.c:4393
+#: ../src/dlg-extract.c:177 ../src/fr-window.c:4338 ../src/fr-window.c:4418
 #, c-format
-msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgid ""
+"You don't have the right permissions to extract archives in the folder "
+"\"%s\""
 msgstr "Δεν έχετε τα σωστά δικαιώματα για την αποσυμπίεση αρχείων στο φάκελο \"%s\""
 
-#: ../src/dlg-extract.c:331
-#: ../src/dlg-extract.c:429
-#: ../src/ui.h:124
+#: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
 msgid "Extract"
 msgstr "Αποσυμπίεση"
 
-#: ../src/dlg-extract.c:380
+#: ../src/dlg-extract.c:381
 msgid "Actions"
 msgstr "Ενέργειες"
 
-#: ../src/dlg-extract.c:396
+#: ../src/dlg-extract.c:397
 msgid "Re-crea_te folders"
 msgstr "Α_ναδημιουργία φακέλων"
 
-#: ../src/dlg-extract.c:400
+#: ../src/dlg-extract.c:401
 msgid "Over_write existing files"
 msgstr "Αν_τικατάσταση υπαρχόντων αρχείων"
 
-#: ../src/dlg-extract.c:404
+#: ../src/dlg-extract.c:405
 msgid "Do not e_xtract older files"
 msgstr "Να _μην αποσυμπιέζονται παλιά αρχεία"
 
-#: ../src/dlg-new.c:445
-#| msgid "New"
+#: ../src/dlg-new.c:438
 msgctxt "File"
 msgid "New"
 msgstr "Νέο"
 
-#: ../src/dlg-new.c:458
-#| msgid "Save"
+#: ../src/dlg-new.c:451
 msgctxt "File"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: ../src/dlg-package-installer.c:96
-#: ../src/dlg-package-installer.c:205
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:218
 msgid "There was an internal error trying to search for applications:"
 msgstr "Συνέβηκε ένα εσωτερικό σφάλμα κατά την προσπάθεια αναζήτησης εφαρμογών:"
 
-#: ../src/dlg-package-installer.c:273
+#: ../src/dlg-package-installer.c:286
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
 "Do you want to search for a command to open this file?"
-msgstr ""
-"Δεν υπάρχει εγκατεστημένη εντολή για τα αρχεία %s .\n"
-"Θέλετε να κάνετε αναζήτηση για μια εντολή που να ανοίγει τα αρχεία αυτού του τύπου;"
+msgstr "Δεν υπάρχει εγκατεστημένη εντολή για τα αρχεία %s .\nΘέλετε να κάνετε αναζήτηση για μια εντολή που να ανοίγει τα αρχεία αυτού του τύπου;"
 
-#: ../src/dlg-package-installer.c:278
+#: ../src/dlg-package-installer.c:291
 msgid "Could not open this file type"
 msgstr "Αδυναμία ανοίγματος αυτού του τύπου αρχείου"
 
-#: ../src/dlg-package-installer.c:281
+#: ../src/dlg-package-installer.c:294
 msgid "_Search Command"
 msgstr "Ανα_ζήτηση εντολής"
 
-#
 #. Translators: after the colon there is a folder name.
 #: ../src/dlg-prop.c:107
 msgid "Location:"
 msgstr "Τοποθεσία:"
 
 #: ../src/dlg-prop.c:119
-#| msgid "Name:"
 msgctxt "File"
 msgid "Name:"
 msgstr "Όνομα:"
@@ -606,24 +527,24 @@ msgstr "Τροποποιήθηκε στις:"
 msgid "Archive size:"
 msgstr "Μέγεθος συμπιεσμένου αρχείου:"
 
-#: ../src/dlg-prop.c:155
+#: ../src/dlg-prop.c:159
 msgid "Content size:"
 msgstr "Μέγεθος περιεχομένων:"
 
-#: ../src/dlg-prop.c:175
+#: ../src/dlg-prop.c:183
 msgid "Compression ratio:"
 msgstr "Επίπεδο συμπίεσης:"
 
-#: ../src/dlg-prop.c:190
+#: ../src/dlg-prop.c:198
 msgid "Number of files:"
 msgstr "Αριθμός αρχείων:"
 
-#: ../src/dlg-update.c:165
+#: ../src/dlg-update.c:164
 #, c-format
 msgid "Update the file \"%s\" in the archive \"%s\"?"
 msgstr "Ενημέρωση του αρχείου \"%s\" στο συμπιεσμένο αρχείο \"%s\";"
 
-#: ../src/dlg-update.c:194
+#: ../src/dlg-update.c:193
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
 msgstr "Ενημέρωση των αρχείων μέσα στο συμπιεσμένο αρχείο \"%s\";"
@@ -655,7 +576,10 @@ msgstr "Επεκτάσεις"
 
 #: ../src/eggfileformatchooser.c:675
 #, c-format
-msgid "The program was not able to find out the file format you want to use for `%s'. Please make sure to use a known extension for that file or manually choose a file format from the list below."
+msgid ""
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
 msgstr "Δεν ήταν δυνατή η εύρεση του τύπου αρχείου που θέλετε να χρησιμοποιήσετε  για το `%s'. Παρακαλώ βεβαιωθείτε ότι χρησιμοποιείτε μια γνωστή επέκταση για αυτό το αρχείο ή επιλέξτε ένα τύπο αρχείου από την παρακάτω λίστα."
 
 #: ../src/eggfileformatchooser.c:682
@@ -671,45 +595,41 @@ msgstr "Το αρχείο δε βρέθηκε."
 msgid "The file doesn't exist"
 msgstr "Το αρχείο δεν υπάρχει"
 
-#: ../src/fr-archive.c:2415
+#: ../src/fr-archive.c:2394
 msgid "You don't have the right permissions."
 msgstr "Δεν έχετε τα απαραίτητα δικαιώματα."
 
-#: ../src/fr-archive.c:2415
+#: ../src/fr-archive.c:2394
 msgid "This archive type cannot be modified"
 msgstr "Ο τύπος συμπιεσμένου αρχείου δε μπορεί να μετατραπεί"
 
-#: ../src/fr-archive.c:2427
+#: ../src/fr-archive.c:2406
 msgid "You can't add an archive to itself."
 msgstr "Δεν μπορείτε να προσθέσετε ένα συμπιεσμένο αρχείο στον εαυτό του."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:296
-#: ../src/fr-command-rar.c:434
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:518
 #: ../src/fr-command-tar.c:308
 msgid "Adding file: "
 msgstr "Προσθήκη αρχείου: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:412
-#: ../src/fr-command-rar.c:561
+#: ../src/fr-command-7z.c:417 ../src/fr-command-rar.c:645
 #: ../src/fr-command-tar.c:427
 msgid "Extracting file: "
 msgstr "Αποσυμπίεση αρχείου: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-rar.c:512
-#: ../src/fr-command-tar.c:373
+#: ../src/fr-command-rar.c:596 ../src/fr-command-tar.c:373
 msgid "Removing file: "
 msgstr "Απομάκρυνση αρχείου: "
 
-#: ../src/fr-command-rar.c:689
+#: ../src/fr-command-rar.c:779
 #, c-format
 msgid "Could not find the volume: %s"
 msgstr "Αδυναμία εύρεσης ενότητας: %s"
 
-#: ../src/fr-command-tar.c:382
-#: ../src/fr-window.c:2310
+#: ../src/fr-command-tar.c:382 ../src/fr-window.c:2327
 msgid "Deleting files from archive"
 msgstr "Διαγραφή αρχείων από το συμπιεσμένο αρχείο"
 
@@ -721,8 +641,7 @@ msgstr "Επανασυμπίεση αρχείου"
 msgid "Decompressing archive"
 msgstr "Αποσυμπίεση αρχείου"
 
-#: ../src/fr-stock.c:43
-#: ../src/fr-stock.c:44
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
 msgid "_Add"
 msgstr "Προσ_θήκη"
 
@@ -730,465 +649,451 @@ msgstr "Προσ_θήκη"
 msgid "_Extract"
 msgstr "Αποσυ_μπίεση"
 
-#: ../src/fr-window.c:1509
+#: ../src/fr-window.c:1519
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "%d αντικείμενο (%s)"
 msgstr[1] "%d αντικείμενα (%s)"
 
-#: ../src/fr-window.c:1514
+#: ../src/fr-window.c:1524
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "%d αντικείμενο επιλέχθηκε (%s)"
 msgstr[1] "%d αντικείμενα επιλέχθηκαν (%s)"
 
-#: ../src/fr-window.c:1584
+#: ../src/fr-window.c:1598
 msgid "Folder"
 msgstr "Φάκελος"
 
-#: ../src/fr-window.c:1982
+#: ../src/fr-window.c:1999
 msgid "[read only]"
 msgstr "[μόνο για ανάγνωση]"
 
-#: ../src/fr-window.c:2233
+#: ../src/fr-window.c:2250
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "Αδυναμία προβολής του φακέλου \"%s\""
 
-#: ../src/fr-window.c:2301
-#: ../src/fr-window.c:2331
+#: ../src/fr-window.c:2318 ../src/fr-window.c:2348
 msgid "Creating archive"
 msgstr "Δημιουργία συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:2304
+#: ../src/fr-window.c:2321
 msgid "Loading archive"
 msgstr "Φόρτωση αρχείου"
 
-#: ../src/fr-window.c:2307
+#: ../src/fr-window.c:2324
 msgid "Reading archive"
 msgstr "Ανάγνωση συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:2313
+#: ../src/fr-window.c:2330
 msgid "Testing archive"
 msgstr "Δοκιμή συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:2316
+#: ../src/fr-window.c:2333
 msgid "Getting the file list"
 msgstr "Λήψη της λίστας αρχείου"
 
-#: ../src/fr-window.c:2319
-#: ../src/fr-window.c:2328
+#: ../src/fr-window.c:2336 ../src/fr-window.c:2345
 msgid "Copying the file list"
 msgstr "Αντιγραφή της λίστας αρχείων"
 
-#: ../src/fr-window.c:2322
+#: ../src/fr-window.c:2339
 msgid "Adding files to archive"
 msgstr "Προσθήκη αρχείων στο συμπιεσμένο αρχείο"
 
-#: ../src/fr-window.c:2325
+#: ../src/fr-window.c:2342
 msgid "Extracting files from archive"
 msgstr "Αποσυμπίεση αρχείων από το συμπιεσμένο αρχείο"
 
-#: ../src/fr-window.c:2334
+#: ../src/fr-window.c:2351
 msgid "Saving archive"
 msgstr "Αποθήκευση συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:2491
+#: ../src/fr-window.c:2508
 msgid "_Open the Archive"
 msgstr "Άν_οιγμα συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:2492
+#: ../src/fr-window.c:2509
 msgid "_Show the Files"
 msgstr "Προβολή των αρ_χείων"
 
-#: ../src/fr-window.c:2538
+#: ../src/fr-window.c:2557
 msgid "Archive:"
 msgstr "Συμπιεσμένο αρχείο:"
 
-#: ../src/fr-window.c:2700
+#: ../src/fr-window.c:2719
 msgid "Extraction completed successfully"
 msgstr "Η αποσυμπίεση ολοκληρώθηκε επιτυχώς"
 
-#: ../src/fr-window.c:2723
+#: ../src/fr-window.c:2742
 msgid "Archive created successfully"
 msgstr "Το συμπιεσμένο αρχείο δημιουργήθηκε επιτυχώς"
 
-#: ../src/fr-window.c:2771
+#: ../src/fr-window.c:2790
 msgid "please wait..."
 msgstr "παρακαλώ περιμένετε..."
 
-#: ../src/fr-window.c:2930
+#: ../src/fr-window.c:2949
 msgid "An error occurred while extracting files."
 msgstr "Δημιουργήθηκε σφάλμα κατά την αποσυμπίεση αρχείων."
 
-#: ../src/fr-window.c:2936
+#: ../src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "Αδυναμία ανοίγματος \"%s\""
 
-#: ../src/fr-window.c:2941
+#: ../src/fr-window.c:2960
 msgid "An error occurred while loading the archive."
 msgstr "Δημιουργήθηκε σφάλμα κατά τη φόρτωση του συμπιεσμένου αρχείου."
 
-#: ../src/fr-window.c:2945
+#: ../src/fr-window.c:2964
 msgid "An error occurred while deleting files from the archive."
 msgstr "Δημιουργήθηκε σφάλμα κατά τη διαγραφή αρχείων από το συμπιεσμένο αρχείο."
 
-#: ../src/fr-window.c:2951
+#: ../src/fr-window.c:2970
 msgid "An error occurred while adding files to the archive."
 msgstr "Δημιουργήθηκε σφάλμα κατά την προσθήκη αρχείων στο συμπιεσμένο αρχείο."
 
-#: ../src/fr-window.c:2955
+#: ../src/fr-window.c:2974
 msgid "An error occurred while testing archive."
 msgstr "Δημιουργήθηκε σφάλμα κατά τη δοκιμή του συμπιεσμένου αρχείου."
 
-#: ../src/fr-window.c:2959
+#: ../src/fr-window.c:2978
 msgid "An error occurred while saving the archive."
 msgstr "Δημιουργήθηκε σφάλμα κατά την αποθήκευση του συμπιεσμένου αρχείου."
 
-#: ../src/fr-window.c:2963
+#: ../src/fr-window.c:2982
 msgid "An error occurred."
 msgstr "Παρουσιάστηκε ένα σφάλμα."
 
-#: ../src/fr-window.c:2969
+#: ../src/fr-window.c:2988
 msgid "Command not found."
 msgstr "Η εντολή δε βρέθηκε."
 
-#: ../src/fr-window.c:2972
+#: ../src/fr-window.c:2991
 msgid "Command exited abnormally."
 msgstr "Η εντολή τερματίστηκε αφύσικα."
 
-#: ../src/fr-window.c:3171
+#: ../src/fr-window.c:3190
 msgid "Test Result"
 msgstr "Αποτέλεσμα δοκιμής"
 
-#: ../src/fr-window.c:3993
-#: ../src/fr-window.c:7964
-#: ../src/fr-window.c:7991
-#: ../src/fr-window.c:8246
+#: ../src/fr-window.c:4012 ../src/fr-window.c:7991 ../src/fr-window.c:8020
+#: ../src/fr-window.c:8275
 msgid "Could not perform the operation"
 msgstr "Αδυναμία εκτέλεσης της λειτουργίας"
 
-#: ../src/fr-window.c:4019
-msgid "Do you want to add this file to the current archive or open it as a new archive?"
+#: ../src/fr-window.c:4038
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
 msgstr "Θέλετε να προσθέσετε αυτό το αρχείο στο τρέχον συμπιεσμένο αρχείο ή να το ανοίξετε ως νέο συμπιεσμένο αρχείο;"
 
-#: ../src/fr-window.c:4049
+#: ../src/fr-window.c:4068
 msgid "Do you want to create a new archive with these files?"
 msgstr "Θέλετε να δημιουργήσετε ένα νέο συμπιεσμένο αρχείο με αυτά τα αρχεία;"
 
-#: ../src/fr-window.c:4052
+#: ../src/fr-window.c:4071
 msgid "Create _Archive"
 msgstr "Δημιουργία συμπιεσμένου _αρχείου"
 
-#: ../src/fr-window.c:4642
-#: ../src/fr-window.c:5721
+#: ../src/fr-window.c:4667 ../src/fr-window.c:5747
 msgid "Folders"
 msgstr "Φάκελοι"
 
-#: ../src/fr-window.c:4680
-#| msgid "Size"
+#: ../src/fr-window.c:4705
 msgctxt "File"
 msgid "Size"
 msgstr "Μέγεθος"
 
-#: ../src/fr-window.c:4681
-#| msgid "Type"
+#: ../src/fr-window.c:4706
 msgctxt "File"
 msgid "Type"
 msgstr "Τύπος"
 
-#: ../src/fr-window.c:4682
-#| msgid "Date Modified"
+#: ../src/fr-window.c:4707
 msgctxt "File"
 msgid "Date Modified"
 msgstr "Ημερομηνία τροποποίησης"
 
-#
-#: ../src/fr-window.c:4683
-#| msgid "Location"
+#: ../src/fr-window.c:4708
 msgctxt "File"
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: ../src/fr-window.c:4692
-#| msgid "Name"
+#: ../src/fr-window.c:4717
 msgctxt "File"
 msgid "Name"
 msgstr "Όνομα"
 
-#: ../src/fr-window.c:5642
+#: ../src/fr-window.c:5668
 msgid "Find:"
 msgstr "Εύρεση:"
 
-#: ../src/fr-window.c:5729
+#: ../src/fr-window.c:5755
 msgid "Close the folders pane"
 msgstr "Κλείσιμο της πλευρικής στήλης φακέλων"
 
-#: ../src/fr-window.c:5870
-#: ../src/fr-window.c:5873
-#: ../src/ui.h:142
+#: ../src/fr-window.c:5899 ../src/fr-window.c:5902 ../src/ui.h:142
 #: ../src/ui.h:146
 msgid "Open archive"
 msgstr "Άνοιγμα συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:5871
+#: ../src/fr-window.c:5900
 msgid "Open a recently used archive"
 msgstr "Άνοιγμα ενός πρόσφατα χρησιμοποιημένου συμπιεσμένου αρχείου"
 
-#: ../src/fr-window.c:6202
+#: ../src/fr-window.c:6227
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "Αδυναμία αποθήκευσης συμπιεσμένου αρχείου \"%s\""
 
-#. Translators: the name references to a filename.  This message can appear when renaming a file.
-#: ../src/fr-window.c:7367
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7394
 msgid "The new name is void."
 msgstr "Το νέο όνομα είναι δεν είναι έγκυρο."
 
-#. Translators: the name references to a filename.  This message can appear when renaming a file.
-#: ../src/fr-window.c:7372
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7399
 msgid "The new name is equal to the old one."
 msgstr "Το νέο όνομα είναι ίδιο με το παλιό."
 
-#: ../src/fr-window.c:7413
+#: ../src/fr-window.c:7440
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-"Ένας φάκελος με το όνομα \"%s\" υπάρχει ήδη.\n"
-"\n"
-"%s"
+msgstr "Ένας φάκελος με το όνομα \"%s\" υπάρχει ήδη.\n\n%s"
 
-#: ../src/fr-window.c:7415
+#: ../src/fr-window.c:7442
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-"Ένα αρχείο με το όνομα \"%s\" υπάρχει ήδη.\n"
-"\n"
-"%s"
+msgstr "Ένα αρχείο με το όνομα \"%s\" υπάρχει ήδη.\n\n%s"
 
-#: ../src/fr-window.c:7485
+#: ../src/fr-window.c:7512
 msgid "Rename"
 msgstr "Μετονομασία"
 
-#: ../src/fr-window.c:7486
+#: ../src/fr-window.c:7513
 msgid "New folder name"
 msgstr "Νέο όνομα φακέλου"
 
-#: ../src/fr-window.c:7486
+#: ../src/fr-window.c:7513
 msgid "New file name"
 msgstr "Νέο όνομα αρχείου"
 
-#: ../src/fr-window.c:7490
+#: ../src/fr-window.c:7517
 msgid "_Rename"
 msgstr "_Μετονομασία"
 
-#: ../src/fr-window.c:7507
-#: ../src/fr-window.c:7527
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the folder"
 msgstr "Αδυναμία μετονομασίας του φακέλου"
 
-#: ../src/fr-window.c:7507
-#: ../src/fr-window.c:7527
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the file"
 msgstr "Αδυναμία μετονομασίας του αρχείου"
 
-#: ../src/fr-window.c:7925
+#: ../src/fr-window.c:7952
 msgid "Paste Selection"
 msgstr "Επικόλληση επιλογής"
 
-#: ../src/fr-window.c:7926
+#: ../src/fr-window.c:7953
 msgid "Destination folder"
 msgstr "Φάκελος προορισμού"
 
-#: ../src/fr-window.c:8516
+#: ../src/fr-window.c:8545
 msgid "Add files to an archive"
 msgstr "Προσθήκη αρχείων σε ένα συμπιεσμένο αρχείο"
 
-#: ../src/fr-window.c:8560
+#: ../src/fr-window.c:8589
 msgid "Extract archive"
 msgstr "Αποσυμπίεση συμπιεσμένου αρχείου"
 
 #. This is the time format used in the "Date Modified" column and
 #. * in the Properties dialog.  See the man page of strftime for an
 #. * explanation of the values.
-#: ../src/glib-utils.c:536
+#: ../src/glib-utils.c:560
 msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
 #. Expander
-#: ../src/gtk-utils.c:442
+#: ../src/gtk-utils.c:447
 msgid "Command _Line Output"
 msgstr "Αποτέλεσμα Γραμμής _Εντολών"
 
-#: ../src/gtk-utils.c:779
+#: ../src/gtk-utils.c:784
 msgid "Could not display help"
 msgstr "Αδυναμία προβολής βοήθειας"
 
-#: ../src/main.c:83
+#: ../src/main.c:85
 msgid "7-Zip (.7z)"
 msgstr "7-Zip (.7z)"
 
-#: ../src/main.c:84
+#: ../src/main.c:86
 msgid "Tar compressed with 7z (.tar.7z)"
 msgstr "Tar συμπιεσμένο με 7z (.tar.7z)"
 
-#: ../src/main.c:85
+#: ../src/main.c:87
 msgid "Ace (.ace)"
 msgstr "Ace (.ace)"
 
-#: ../src/main.c:87
+#: ../src/main.c:89
 msgid "Ar (.ar)"
 msgstr "Ar (.ar)"
 
-#: ../src/main.c:88
+#: ../src/main.c:90
 msgid "Arj (.arj)"
 msgstr "Arj (.arj)"
 
-#: ../src/main.c:90
+#: ../src/main.c:92
 msgid "Tar compressed with bzip2 (.tar.bz2)"
 msgstr "Tar συμπιεσμένο με bzip2 (.tar.bz2)"
 
-#: ../src/main.c:92
+#: ../src/main.c:94
 msgid "Tar compressed with bzip (.tar.bz)"
 msgstr "Tar συμπιεσμένο με bzip (.tar.bz)"
 
-#: ../src/main.c:93
+#: ../src/main.c:95
 msgid "Cabinet (.cab)"
 msgstr "Cabinet (.cab)"
 
-#: ../src/main.c:94
+#: ../src/main.c:96
 msgid "Rar Archived Comic Book (.cbr)"
 msgstr "Βιβλίο κόμικ με συμπίεση rar (.cbr)"
 
-#: ../src/main.c:95
+#: ../src/main.c:97
 msgid "Zip Archived Comic Book (.cbz)"
 msgstr "Βιβλίο κόμικ με συμπίεση zip (.cbz)"
 
-#: ../src/main.c:98
+#: ../src/main.c:100
 msgid "Tar compressed with gzip (.tar.gz)"
 msgstr "Tar συμπιεσμένο με gzip (.tar.gz)"
 
-#: ../src/main.c:101
+#: ../src/main.c:103
 msgid "Ear (.ear)"
 msgstr "Ear (.ear)"
 
-#: ../src/main.c:102
+#: ../src/main.c:104
 msgid "Self-extracting zip (.exe)"
 msgstr "Self-extracting zip (.exe)"
 
-#: ../src/main.c:104
+#: ../src/main.c:106
 msgid "Jar (.jar)"
 msgstr "Jar (.jar)"
 
-#: ../src/main.c:105
+#: ../src/main.c:107
 msgid "Lha (.lzh)"
 msgstr "Lha (.lzh)"
 
-#: ../src/main.c:106
-#| msgid "Lha (.lzh)"
+#: ../src/main.c:108
 msgid "Lrzip (.lrz)"
 msgstr "Lrzip (.lrz)"
 
-#: ../src/main.c:107
-#| msgid "Tar compressed with lzip (.tar.lz)"
+#: ../src/main.c:109
 msgid "Tar compressed with lrzip (.tar.lrz)"
 msgstr "Tar συμπιεσμένο με lzip (.tar.lz)"
 
-#: ../src/main.c:109
+#: ../src/main.c:111
 msgid "Tar compressed with lzip (.tar.lz)"
 msgstr "Tar συμπιεσμένο με lzip (.tar.lz)"
 
-#: ../src/main.c:111
+#: ../src/main.c:113
 msgid "Tar compressed with lzma (.tar.lzma)"
 msgstr "Tar συμπιεσμένο με lzma (.tar.lzma)"
 
-#: ../src/main.c:113
+#: ../src/main.c:115
 msgid "Tar compressed with lzop (.tar.lzo)"
 msgstr "Tar συμπιεσμένο με lzop (.tar.lzo)"
 
-#: ../src/main.c:114
+#: ../src/main.c:116
+msgid "Windows Imaging Format (.wim)"
+msgstr ""
+
+#: ../src/main.c:117
 msgid "Rar (.rar)"
 msgstr "Rar (.rar)"
 
-#: ../src/main.c:117
+#: ../src/main.c:120
 msgid "Tar uncompressed (.tar)"
 msgstr "Tar χωρίς συμπίεση (.tar)"
 
-#: ../src/main.c:118
+#: ../src/main.c:121
 msgid "Tar compressed with compress (.tar.Z)"
 msgstr "Tar συμπιεσμένο με compress (.tar.Z)"
 
-#: ../src/main.c:120
+#: ../src/main.c:123
 msgid "War (.war)"
 msgstr "War (.war)"
 
-#: ../src/main.c:121
+#: ../src/main.c:124
 msgid "Xz (.xz)"
 msgstr "Xz (.xz)"
 
-#: ../src/main.c:122
+#: ../src/main.c:125
 msgid "Tar compressed with xz (.tar.xz)"
 msgstr "Tar συμπιεσμένο με xz (.tar.xz)"
 
-#: ../src/main.c:123
+#: ../src/main.c:126
 msgid "Zoo (.zoo)"
 msgstr "Zoo (.zoo)"
 
-#: ../src/main.c:124
+#: ../src/main.c:127
 msgid "Zip (.zip)"
 msgstr "Zip (.zip)"
 
-#: ../src/main.c:192
+#: ../src/main.c:197
 msgid "Add files to the specified archive and quit the program"
 msgstr "Προσθήκη αρχείων στο καθορισμένο συμπιεσμένο αρχείο και έξοδος από το πρόγραμμα"
 
-#: ../src/main.c:193
+#: ../src/main.c:198
 msgid "ARCHIVE"
 msgstr "ARCHIVE"
 
-#: ../src/main.c:196
+#: ../src/main.c:201
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "Προσθήκη αρχείων με ερώτηση για το όνομα του συμπιεσμένου αρχείου και έξοδος από το πρόγραμμα"
 
-#: ../src/main.c:200
+#: ../src/main.c:205
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "Αποσυμπίεση στον καθορισμένο φάκελο και έξοδος από το πρόγραμμα"
 
-#: ../src/main.c:201
-#: ../src/main.c:213
+#: ../src/main.c:206 ../src/main.c:218
 msgid "FOLDER"
 msgstr "ΦΑΚΕΛΟΣ"
 
-#: ../src/main.c:204
+#: ../src/main.c:209
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr "Προσθήκη αρχείων με ερώτηση για το φάκελο προορισμού και έξοδος από το πρόγραμμα"
 
-#: ../src/main.c:208
-msgid "Extract the contents of the archives in the archive folder and quit the program"
+#: ../src/main.c:213
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
 msgstr "Αποσυμπίεση του περιεχομένου στον φάκελο αρχειοθήκης και έξοδος από το πρόγραμμα"
 
-#: ../src/main.c:212
+#: ../src/main.c:217
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "Προεπιλεγμένος φάκελος που θα χρησιμοποιείται για τις εντολές '--add' και '--extract'"
 
-#: ../src/main.c:216
+#: ../src/main.c:221
 msgid "Create destination folder without asking confirmation"
 msgstr "Δημιουργία φακέλου προορισμού χωρίς ερώτηση επιβεβαίωσης"
 
-#: ../src/main.c:298
+#: ../src/main.c:303
 msgid "- Create and modify an archive"
 msgstr "- Δημιουργία και τροποποίηση ενός συμπιεσμένου αρχείου"
 
-#: ../src/main.c:314
+#: ../src/main.c:319
 msgid "Engrampa"
 msgstr "Engrampa"
 
@@ -1225,8 +1130,7 @@ msgstr "Πληροφορίες για το πρόγραμμα"
 msgid "_Add Files..."
 msgstr "Προσ_θήκη αρχείων..."
 
-#: ../src/ui.h:46
-#: ../src/ui.h:50
+#: ../src/ui.h:46 ../src/ui.h:50
 msgid "Add files to the archive"
 msgstr "Προσθήκη αρχείων στο συμπιεσμένο αρχείο"
 
@@ -1234,8 +1138,7 @@ msgstr "Προσθήκη αρχείων στο συμπιεσμένο αρχεί
 msgid "Add a _Folder..."
 msgstr "Δημιουργία ενός _φακέλου..."
 
-#: ../src/ui.h:54
-#: ../src/ui.h:58
+#: ../src/ui.h:54 ../src/ui.h:58
 msgid "Add a folder to the archive"
 msgstr "Προσθήκη ενός φακέλου στο συμπιεσμένο αρχείο"
 
@@ -1255,33 +1158,27 @@ msgstr "Περιεχόμενα"
 msgid "Display the Engrampa Manual"
 msgstr "Προβολή του Εγχειριδίου του Engrampa"
 
-#: ../src/ui.h:71
-#: ../src/ui.h:92
+#: ../src/ui.h:71 ../src/ui.h:92
 msgid "Copy the selection"
 msgstr "Αντιγραφή της επιλογής"
 
-#: ../src/ui.h:75
-#: ../src/ui.h:96
+#: ../src/ui.h:75 ../src/ui.h:96
 msgid "Cut the selection"
 msgstr "Αποκοπή της επιλογής"
 
-#: ../src/ui.h:79
-#: ../src/ui.h:100
+#: ../src/ui.h:79 ../src/ui.h:100
 msgid "Paste the clipboard"
 msgstr "Επικόλληση του προχείρου"
 
-#: ../src/ui.h:82
-#: ../src/ui.h:103
+#: ../src/ui.h:82 ../src/ui.h:103
 msgid "_Rename..."
 msgstr "_Μετονομασία..."
 
-#: ../src/ui.h:83
-#: ../src/ui.h:104
+#: ../src/ui.h:83 ../src/ui.h:104
 msgid "Rename the selection"
 msgstr "Μετονομασία της επιλογής"
 
-#: ../src/ui.h:87
-#: ../src/ui.h:108
+#: ../src/ui.h:87 ../src/ui.h:108
 msgid "Delete the selection from the archive"
 msgstr "Διαγραφή επιλογής από το συμπιεσμένο αρχείο"
 
@@ -1293,19 +1190,15 @@ msgstr "Αποεπι_λογή όλων"
 msgid "Deselect all files"
 msgstr "Αποεπιλογή όλων των αρχείων"
 
-#: ../src/ui.h:116
-#: ../src/ui.h:120
+#: ../src/ui.h:116 ../src/ui.h:120
 msgid "_Extract..."
 msgstr "_Αποσυμπίεση..."
 
-#: ../src/ui.h:117
-#: ../src/ui.h:121
-#: ../src/ui.h:125
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
 msgid "Extract files from the archive"
 msgstr "Αποσυμπίεση αρχείων από το συμπιεσμένο αρχείο"
 
 #: ../src/ui.h:128
-#| msgid "Find:"
 msgid "Find..."
 msgstr "Εύρεση…"
 
@@ -1318,20 +1211,16 @@ msgid "View the output produced by the last executed command"
 msgstr "Προβολή του αποτελέσματος που παράχθηκε από την τελευταία εντολή"
 
 #: ../src/ui.h:137
-#| msgid "New"
-msgctxt "File"
 msgid "New..."
-msgstr "Νέο…"
+msgstr ""
 
 #: ../src/ui.h:138
 msgid "Create a new archive"
 msgstr "Δημιουργία νέου συμπιεσμένου αρχείου"
 
 #: ../src/ui.h:141
-#| msgid "Open"
-msgctxt "File"
 msgid "Open..."
-msgstr "Άνοιγμα…"
+msgstr ""
 
 #: ../src/ui.h:149
 msgid "_Open With..."
@@ -1358,9 +1247,8 @@ msgid "Reload current archive"
 msgstr "Ανανέωση τρέχοντος συμπιεσμένου αρχείου"
 
 #: ../src/ui.h:165
-msgctxt "File"
 msgid "Save As..."
-msgstr "Αποθήκευση ως…"
+msgstr ""
 
 #: ../src/ui.h:166
 msgid "Save the current archive with a different name"
@@ -1382,13 +1270,11 @@ msgstr "Δοκι_μή ακεραιότητας"
 msgid "Test whether the archive contains errors"
 msgstr "Δοκιμή αν το συμπιεσμένο αρχείο περιέχει σφάλματα"
 
-#: ../src/ui.h:182
-#: ../src/ui.h:186
+#: ../src/ui.h:182 ../src/ui.h:186
 msgid "Open the selected file"
 msgstr "Άνοιγμα επιλεγμένου αρχείου"
 
-#: ../src/ui.h:190
-#: ../src/ui.h:194
+#: ../src/ui.h:190 ../src/ui.h:194
 msgid "Open the selected folder"
 msgstr "Άνοιγμα επιλεγμένου φακέλου"
 
@@ -1481,7 +1367,6 @@ msgstr "κατά _ημερομηνία τροποποίησης"
 msgid "Sort file list by modification time"
 msgstr "Ταξινόμηση λίστας αρχείου κατά ώρα τροποποίησης"
 
-#
 #. Translators: this is the "sort by file location" menu item
 #: ../src/ui.h:269
 msgid "by _Location"
@@ -1491,25 +1376,3 @@ msgstr "κατά τοπο_θεσία"
 #: ../src/ui.h:271
 msgid "Sort file list by location"
 msgstr "Ταξινόμηση λίστας αρχείου κατά τοποθεσία"
-
-#~ msgid "_File"
-#~ msgstr "Αρ_χείο"
-#~ msgid "Create Archive"
-#~ msgstr "Δημιουργία συμπιεσμένου αρχείου"
-#~ msgid "_Archive:"
-#~ msgstr "Συμπιεσμένο _αρχείο:"
-#~ msgid "Archive _type:"
-#~ msgstr "_Τύπος συμπιεσμένου αρχείου:"
-#~ msgid "Create Archive..."
-#~ msgstr "Δημιουργία συμπιεσμένου αρχείου..."
-#~ msgid "Automatic"
-#~ msgstr "Αυτόματη"
-#~ msgid "_Open the Destination"
-#~ msgstr "Άν_οιγμα προορισμού"
-#~ msgid ""
-#~ "Extract archives using the archive name as destination folder and quit "
-#~ "the program"
-#~ msgstr ""
-#~ "Αποσυμπίεση αρχείων με χρήση του ονόματος αρχείου ως φακέλου προορισμού "
-#~ "και έξοδος από το πρόγραμμα"
-

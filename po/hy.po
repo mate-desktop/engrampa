@@ -1,529 +1,645 @@
-# translation of engrampa.HEAD.po to armenian
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+# 
+# Translators:
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005
 # Norayr Chilingaryan <norik@freenet.am>, 2005
 # Ruzanna Khachatryan <ruzannak@hotmail.com>, 2005
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa.HEAD\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-28 18:21+0000\n"
-"PO-Revision-Date: 2005-09-04 20:06+0500\n"
-"Last-Translator: Norayr Chilingaryan\n"
-"Language-Team:  <norik@freenet.am>\n"
+"POT-Creation-Date: 2014-02-09 18:21+0100\n"
+"PO-Revision-Date: 2014-02-09 18:19+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Armenian (http://www.transifex.com/projects/p/MATE/language/hy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 16bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: KBabel 1.9.1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/glade/engrampa.glade.h:1
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:190
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:960
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1102
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1170
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1375
+#, c-format
+msgid "Can't pass documents to this desktop element"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1394
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:1
+msgid "Engrampa Archive Manager"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1991
+#: ../src/fr-window.c:5419
+msgid "Archive Manager"
+msgstr "Արխիվի մենեջեր"
+
+#: ../data/engrampa.desktop.in.in.h:3
+msgid "Create and modify an archive"
+msgstr "Կերտել և մոդիֆիկացնել արխիվը"
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "Բեռնման տարբերակներ"
+
+#: ../data/ui/batch-add-files.ui.h:1
+msgid "Compress"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:2
+msgid "_Filename:"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5844
+msgid "_Location:"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "Տեղակայություն"
+
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+msgid "_Password:"
+msgstr "_Գաղտնաբառ"
+
+#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../data/ui/password.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr ""
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr ""
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+msgid "MB"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+msgid "_Other Options"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:12 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "Կ_երտել"
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr ""
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "Ոչնչացնել"
+
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:349
+msgid "_Files:"
+msgstr "_Ֆայլեր:"
+
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:360
+msgid "example: *.txt; *.doc"
+msgstr "օրինակ: *.txt; *.doc"
+
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:363
+msgid "_All files"
+msgstr "_Բոլոր ֆայլերը"
+
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:370
+msgid "_Selected files"
+msgstr "_Ընտրել ֆայլերը:"
+
+#: ../data/ui/open-with.ui.h:1
+msgid "Open Files"
+msgstr "Բացել ֆայլերը"
+
+#: ../data/ui/open-with.ui.h:2
+msgid "A_vailable application:"
+msgstr "Մ-ատչելի կիրառական ծրագիր"
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr "Վ_երջին կիրառված ծրագրերը"
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr "_Կիրառական ծրագիր:"
+
+#: ../data/ui/password.ui.h:1
+msgid "Password"
+msgstr "Գաղտնաբառ"
+
+#: ../data/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b>Տեղեկացում։</b> գաղտնաբառը օգտագործվում է ընթացիկ արխիվին ավելացվող ֆայլերի գաղտնագրման և դուրս բերվող ֆայլերի վերծանման համար։ Արխիվը փակելիս նշանաբառը ոչնչացվում է </i>"
+
+#. secondary text
+#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../data/ui/update.ui.h:2
+msgid "_Update"
 msgstr ""
-"<i><b>Տեղեկացում։</b> գաղտնաբառը օգտագործվում է ընթացիկ արխիվին ավելացվող "
-"ֆայլերի գաղտնագրման և դուրս բերվող ֆայլերի վերծանման համար։ Արխիվը փակելիս "
-"նշանաբառը ոչնչացվում է </i>"
 
-#: ../data/glade/engrampa.glade.h:2
-msgid "A_vailable application:"
-msgstr "Մ-ատչելի կիրառական ծրագիր"
+#: ../data/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
+msgstr ""
 
-#: ../data/glade/engrampa.glade.h:3
-msgid "C_reate"
-msgstr "Կ_երտել"
-
-#: ../data/glade/engrampa.glade.h:4
-msgid "Create Archive"
-msgstr "Կերտել արխիվ"
-
-#: ../data/glade/engrampa.glade.h:5
-msgid "Delete"
-msgstr "Ոչնչացնել"
-
-#: ../data/glade/engrampa.glade.h:6
-msgid "Load Options"
-msgstr "Բեռնման տարբերակներ"
-
-#: ../data/glade/engrampa.glade.h:7 ../src/window.c:2727
-msgid "Location"
-msgstr "Տեղակայություն"
-
-#. current location
-#: ../data/glade/engrampa.glade.h:8 ../src/window.c:3619
-msgid "Location:"
-msgstr "Տեղակայություն"
-
-#: ../data/glade/engrampa.glade.h:9
-msgid "Open Files"
-msgstr "Բացել ֆայլերը"
-
-#: ../data/glade/engrampa.glade.h:10
-msgid "Password"
-msgstr "Գաղտնաբառ"
-
-#: ../data/glade/engrampa.glade.h:11
-msgid "R_ecent applications:"
-msgstr "Վ_երջին կիրառված ծրագրերը"
-
-#: ../data/glade/engrampa.glade.h:12 ../src/dlg-extract.c:427
-msgid "_All files"
-msgstr "_Բոլոր ֆայլերը"
-
-#: ../data/glade/engrampa.glade.h:13
-msgid "_Application:"
-msgstr "_Կիրառական ծրագիր:"
-
-#: ../data/glade/engrampa.glade.h:14
-msgid "_Archive:"
-msgstr "_Արխիվ:"
-
-#: ../data/glade/engrampa.glade.h:15 ../src/dlg-extract.c:413
-msgid "_Files:"
-msgstr "_Ֆայլեր:"
-
-#: ../data/glade/engrampa.glade.h:16 ../src/dlg-extract.c:475
-msgid "_Password:"
-msgstr "_Գաղտնաբառ"
-
-#: ../data/glade/engrampa.glade.h:17 ../src/dlg-extract.c:434
-msgid "_Selected files"
-msgstr "_Ընտրել ֆայլերը:"
-
-#: ../data/glade/engrampa.glade.h:18 ../src/dlg-extract.c:424
-msgid "example: *.txt; *.doc"
-msgstr "օրինակ: *.txt; *.doc"
-
-#: ../data/glade/engrampa-extract.glade.h:1 ../src/window.c:5409
-msgid "Destination folder"
-msgstr "Նշանակման վայրի պանակ"
-
-#: ../data/glade/engrampa-extract.glade.h:2 ../src/ui.h:86
-msgid "Extract"
-msgstr "Դուրս բերում"
-
-#: ../data/glade/engrampa-extract.glade.h:3
-msgid "Extract in _folder:"
-msgstr "Բացել _պանակը:"
-
-#. Create the application.
-#: ../data/engrampa.desktop.in.h:1 ../src/gtk-utils.c:390 ../src/main.c:134
-#: ../src/window.c:846 ../src/window.c:1276 ../src/window.c:3319
-msgid "Archive Manager"
-msgstr "Արխիվի մենեջեր"
-
-#: ../data/engrampa.desktop.in.h:2
-msgid "Create and modify an archive"
-msgstr "Կերտել և մոդիֆիկացնել արխիվը"
-
-#: ../caja/caja-engrampa.c:259
+#: ../caja/caja-engrampa.c:314
 msgid "Extract Here"
 msgstr "Բացել այստեղ"
 
-#: ../caja/caja-engrampa.c:260
-msgid "Extract the selected archive in the current position"
-msgstr "Բացել արխիվը ընթացիկ դիրքում"
+#. Translators: the current position is the current folder
+#: ../caja/caja-engrampa.c:316
+msgid "Extract the selected archive to the current position"
+msgstr ""
 
-#: ../caja/caja-engrampa.c:277
+#: ../caja/caja-engrampa.c:333
 msgid "Extract To..."
 msgstr "Բացել այնտեղ…"
 
-#: ../caja/caja-engrampa.c:278
+#: ../caja/caja-engrampa.c:334
 msgid "Extract the selected archive"
 msgstr "Բացել ընտրված արխիվը"
 
-#: ../caja/caja-engrampa.c:297
-msgid "Create Archive..."
-msgstr "Կերտել արխիվ"
+#: ../caja/caja-engrampa.c:353
+msgid "Compress..."
+msgstr ""
 
-#: ../caja/caja-engrampa.c:298
-msgid "Create an archive with the selected objects"
-msgstr "Կերտել արխիվ ընտրված առարկաների հետ"
+#: ../caja/caja-engrampa.c:354
+msgid "Create a compressed archive with the selected objects"
+msgstr ""
 
-#: ../src/actions.c:112
-msgid "Automatic"
-msgstr "Ավտոմատ"
-
-#: ../src/actions.c:117
-msgid "Ar (.ar)"
-msgstr "Ar (.ar)"
-
-#: ../src/actions.c:129
-msgid "Arj (.arj)"
-msgstr "Arj (.arj)"
-
-#: ../src/actions.c:158
-msgid "Ear (.ear)"
-msgstr "Ear (.ear)"
-
-#: ../src/actions.c:171
-msgid "Jar (.jar)"
-msgstr "Jar (.jar)"
-
-#: ../src/actions.c:185
-msgid "Lha (.lzh)"
-msgstr "Lha (.lzh)"
-
-#: ../src/actions.c:202
-msgid "Rar (.rar)"
-msgstr "Rar (.rar)"
-
-#: ../src/actions.c:217
-msgid "Tar uncompressed (.tar)"
-msgstr "Tar չսեղմված (.tar)"
-
-#: ../src/actions.c:226
-msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Tar սեղմված bzip –ով (.tar.bz)"
-
-#: ../src/actions.c:232
-msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Tar սեղմված bzip2 –ով (.tar.bz2)"
-
-#: ../src/actions.c:242
-msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Tar սեղմված gzip –ով (.tar.gz)"
-
-#: ../src/actions.c:252
-msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Tar սեղմված lzop –ով(.tar.lzo)"
-
-#: ../src/actions.c:260
-msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Tar սեղմված սեղմիչով (.tar.Z)"
-
-#: ../src/actions.c:291
-msgid "War (.war)"
-msgstr "War (.war)"
-
-#: ../src/actions.c:294
-msgid "Zip (.zip)"
-msgstr "Zip (.zip)"
-
-#: ../src/actions.c:302
-msgid "Zoo (.zoo)"
-msgstr "Zoo (.zoo)"
-
-#: ../src/actions.c:312
-msgid "7-Zip (.7z)"
-msgstr "7-Zip (.7z"
-
-#: ../src/actions.c:415 ../src/actions.c:435 ../src/actions.c:467
-#: ../src/actions.c:783 ../src/dlg-batch-add.c:107 ../src/dlg-batch-add.c:126
-#: ../src/dlg-batch-add.c:153 ../src/dlg-batch-add.c:175
-#: ../src/dlg-batch-add.c:226 ../src/dlg-batch-add.c:271 ../src/window.c:4112
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:171 ../src/dlg-batch-add.c:187
+#: ../src/dlg-batch-add.c:216 ../src/dlg-batch-add.c:261
+#: ../src/dlg-batch-add.c:307 ../src/fr-window.c:2944
 msgid "Could not create the archive"
 msgstr "Չի հաջողվում կերտել արխիվ"
 
-#: ../src/actions.c:416 ../src/actions.c:741 ../src/dlg-batch-add.c:108
-#: ../src/dlg-batch-add.c:272
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:173 ../src/dlg-batch-add.c:309
 msgid "You have to specify an archive name."
 msgstr "Դուք պետք է նշեք արխիվի անուն"
 
-#: ../src/actions.c:436 ../src/actions.c:761
+#: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
 msgstr "Դուք այս արխիվում պանակ կերտելու թույլտվություններ չունեք"
 
-#: ../src/actions.c:468 ../src/actions.c:784 ../src/dlg-batch-add.c:154
-#: ../src/fr-archive.c:719 ../src/window.c:4113 ../src/window.c:4269
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:267
+#: ../src/dlg-package-installer.c:276 ../src/dlg-package-installer.c:304
+#: ../src/fr-archive.c:1146 ../src/fr-window.c:6059 ../src/fr-window.c:6235
 msgid "Archive type not supported."
 msgstr "Արխիվի տեսակը աջակցում չունի"
 
-#: ../src/actions.c:481 ../src/actions.c:797
-msgid "The archive already exists.  Do you want to overwrite it?"
-msgstr "Արխիվն արդեն գոյություն ունի։ Դուք ցանկանու՞մ եք կրկին գրել այն։"
-
-#: ../src/actions.c:484 ../src/actions.c:800
-msgid "Overwrite"
-msgstr "Կրկին գրել"
-
-#: ../src/actions.c:501 ../src/actions.c:817
+#: ../src/actions.c:248
 msgid "Could not delete the old archive."
 msgstr "Անկարող է ոչնչացնել հին արխիվը"
 
-#: ../src/actions.c:530
-msgid "New"
-msgstr "Նոր"
-
-#: ../src/actions.c:567 ../src/actions.c:674 ../src/actions.c:859
-msgid "All archives"
-msgstr "Բոլոր արխիվները"
-
-#: ../src/actions.c:574 ../src/actions.c:681 ../src/actions.c:866
-msgid "All files"
-msgstr "Բոլոր ֆայլերը"
-
-#: ../src/actions.c:584 ../src/actions.c:874
-msgid "Archive type:"
-msgstr "Արխիվի տեսակը"
-
-#: ../src/actions.c:662 ../src/window.c:3707
+#: ../src/actions.c:382 ../src/fr-window.c:5902
 msgid "Open"
 msgstr "Բացել"
 
-#: ../src/actions.c:740 ../src/actions.c:760
-msgid "Could not save the archive"
-msgstr "Չի հաղոջվում պահպանել արխիվը"
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5242
+msgid "All archives"
+msgstr "Բոլոր արխիվները"
 
-#: ../src/actions.c:847
-msgid "Save"
-msgstr "Պահպանել"
+#: ../src/actions.c:400 ../src/dlg-new.c:320
+msgid "All files"
+msgstr "Բոլոր ֆայլերը"
 
-#: ../src/actions.c:1108 ../src/window.c:4961
+#: ../src/actions.c:794 ../src/fr-window.c:7081
 msgid "Last Output"
 msgstr "Վերջին հաղորդագրությունը"
 
-#: ../src/actions.c:1128 ../src/dlg-extract.c:100
-msgid "Could not display help"
-msgstr "Չի հաղոջվում պատկերել ձեռնարկը"
-
-#: ../src/actions.c:1160
-msgid "translator-credits"
+#: ../src/actions.c:860
+msgid ""
+"Engrampa is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
 msgstr ""
 
-#: ../src/actions.c:1170
-msgid "Engrampa"
-msgstr "Ֆայլ Ռոլեր"
+#: ../src/actions.c:864
+msgid ""
+"Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
 
-#: ../src/actions.c:1173
+#: ../src/actions.c:868
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+
+#: ../src/actions.c:878
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr ""
+
+#: ../src/actions.c:879
 msgid "An archive manager for MATE."
 msgstr "Արխիվի մենեջեր գնոմի համար"
 
-#: ../src/dlg-add-files.c:85 ../src/dlg-add-files.c:147
-#: ../src/dlg-add-folder.c:118 ../src/dlg-add-folder.c:247
-#, c-format
-msgid "You don't have the right permissions to read files from folder \"%s\""
+#: ../src/actions.c:882
+msgid "translator-credits"
 msgstr ""
-"Դուք չունեք ճշգրիտ թույլտվություններ ֆայլը պանակից կարդալու համար \"%s\""
 
-#: ../src/dlg-add-files.c:91 ../src/dlg-add-files.c:153
-#: ../src/dlg-add-folder.c:124 ../src/dlg-add-folder.c:253
-#: ../src/window.c:2071 ../src/window.c:2109
+#: ../src/dlg-add-files.c:100 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "Չի հաղոջվում ֆայլերը ավելացնել արխիվ"
 
-#: ../src/dlg-add-files.c:179
+#: ../src/dlg-add-files.c:101 ../src/dlg-add-folder.c:137
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr "Դուք չունեք ճշգրիտ թույլտվություններ ֆայլը պանակից կարդալու համար \"%s\""
+
+#: ../src/dlg-add-files.c:149 ../src/ui.h:49
 msgid "Add Files"
 msgstr "Ավելացնել ֆայլերը"
 
-#: ../src/dlg-add-files.c:191 ../src/dlg-add-folder.c:324
-msgid "_Add only if newer"
-msgstr "_Ավելացնել միայն նորացված ֆայլերը"
+#. Translators: add a file to the archive only if the disk version is
+#. * newer than the archive version.
+#: ../src/dlg-add-files.c:165 ../src/dlg-add-folder.c:238
+msgid "Add only if _newer"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:312
+#: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
 msgstr "Ավելացնել պանակ"
 
-#: ../src/dlg-add-folder.c:325
+#: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
 msgstr "_Ներառել ենթապանակներ"
 
-#: ../src/dlg-add-folder.c:326
+#: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "Բացառել այն պանակները որոնք սիմվոլիկ հղում_ներ են"
 
-#: ../src/dlg-add-folder.c:329 ../src/dlg-add-folder.c:334
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:255
 msgid "example: *.o; *.bak"
 msgstr "օրինակ: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:330
-msgid "_Include files:"
-msgstr "_Ներառել ֆայլեր"
+#: ../src/dlg-add-folder.c:244
+msgid "Include _files:"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:335
+#: ../src/dlg-add-folder.c:250
 msgid "E_xclude files:"
 msgstr "Բ_ացառել ֆայլեր"
 
-#: ../src/dlg-add-folder.c:338
+#: ../src/dlg-add-folder.c:256
+msgid "_Exclude folders:"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
 msgstr "_Բեռնել տարբերակները"
 
-#: ../src/dlg-add-folder.c:339
+#: ../src/dlg-add-folder.c:261
 msgid "Sa_ve Options"
 msgstr "Պա-հել տարբերակները"
 
-#: ../src/dlg-add-folder.c:791
+#: ../src/dlg-add-folder.c:262
+msgid "_Reset Options"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:890
 msgid "Save Options"
 msgstr "Պահել տարբերակները"
 
-#: ../src/dlg-add-folder.c:792
+#: ../src/dlg-add-folder.c:891
 msgid "Options Name:"
 msgstr "Տարբերակների անունը։"
 
-#: ../src/dlg-batch-add.c:121 ../src/window.c:5187
+#: ../src/dlg-ask-password.c:124
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr ""
+
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/dlg-batch-add.c:188 ../src/fr-window.c:7404
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
 "\n"
 "%s"
-msgstr ""
-"\"%s\" անունը համապատասխան անուն չէ, որովհետև չի կարող պարունակել սիմվոլները "
-"%s\n"
-"\n"
-"%s"
+msgstr "\"%s\" անունը համապատասխան անուն չէ, որովհետև չի կարող պարունակել սիմվոլները %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:121 ../src/window.c:5179 ../src/window.c:5183
-#: ../src/window.c:5187 ../src/window.c:5244 ../src/window.c:5246
+#: ../src/dlg-batch-add.c:191 ../src/fr-window.c:7394 ../src/fr-window.c:7399
+#: ../src/fr-window.c:7404 ../src/fr-window.c:7440 ../src/fr-window.c:7442
 msgid "Please use a different name."
 msgstr "Խնդրվում է օգտագործել այլ անուն"
 
-#: ../src/dlg-batch-add.c:176
+#: ../src/dlg-batch-add.c:218
 msgid ""
-"You don't have the right permissions to create an archive in the destination "
-"folder."
-msgstr ""
-"Դուք չունեք ճշգրիտ թույլտվությունները նշանակման վայրի պանակներում արխիվ "
-"կերտելու համար"
+"You don't have the right permissions to create an archive in the destination"
+" folder."
+msgstr "Դուք չունեք ճշգրիտ թույլտվությունները նշանակման վայրի պանակներում արխիվ կերտելու համար"
 
-#: ../src/dlg-batch-add.c:195 ../src/dlg-extract.c:160 ../src/window.c:4510
+#: ../src/dlg-batch-add.c:234 ../src/dlg-extract.c:103 ../src/fr-window.c:6656
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr ""
-"Նշանակման վայրի պանակը \"%s\" գոյություն չունի \n"
-"\n"
-"Դուք ցանկանու՞մ եք կերտել այն"
+msgstr "Նշանակման վայրի պանակը \"%s\" գոյություն չունի \n\nԴուք ցանկանու՞մ եք կերտել այն"
 
-#: ../src/dlg-batch-add.c:204 ../src/dlg-extract.c:169 ../src/window.c:4519
+#: ../src/dlg-batch-add.c:243 ../src/dlg-extract.c:112 ../src/fr-window.c:6665
 msgid "Create _Folder"
 msgstr "Կերտել _պանակ"
 
-#: ../src/dlg-batch-add.c:222 ../src/dlg-extract.c:188 ../src/window.c:4538
+#: ../src/dlg-batch-add.c:262 ../src/dlg-extract.c:132 ../src/fr-window.c:6685
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Չի հաղոջվում կերտել նշանակման վայրի պանակը %s."
 
-#: ../src/dlg-batch-add.c:246
+#: ../src/dlg-batch-add.c:279
 msgid "Archive not created"
 msgstr "Արխիվը կերտված չէ"
 
-#: ../src/dlg-batch-add.c:297
+#: ../src/dlg-batch-add.c:327
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Արխիվն արդեն գոյություն ունի։ Ցանկանու՞մ եք կրկին գրել այն։"
 
-#: ../src/dlg-batch-add.c:300
+#: ../src/dlg-batch-add.c:330
 msgid "_Overwrite"
 msgstr "_Կրկին գրել"
 
-#: ../src/dlg-extract.c:192 ../src/dlg-extract.c:212 ../src/dlg-extract.c:240
-#: ../src/window.c:4542 ../src/window.c:4562
+#: ../src/dlg-extract.c:131 ../src/dlg-extract.c:149 ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4169 ../src/fr-window.c:6684 ../src/fr-window.c:6701
 msgid "Extraction not performed"
 msgstr "Դուրս բերումը չի իրականացվել"
 
-#: ../src/dlg-extract.c:235
+#: ../src/dlg-extract.c:177 ../src/fr-window.c:4338 ../src/fr-window.c:4418
 #, c-format
 msgid ""
-"You don't have the right permissions to extract archives in the folder \"%s\""
-msgstr ""
-"Դուք չունեք ճշգրիտ թույլտվություններ արխիվները պանակներում բացելու համար \"%s"
-"\""
+"You don't have the right permissions to extract archives in the folder "
+"\"%s\""
+msgstr "Դուք չունեք ճշգրիտ թույլտվություններ արխիվները պանակներում բացելու համար \"%s\""
 
-#: ../src/dlg-extract.c:396
-msgid "Files"
-msgstr "Ֆայլեր"
+#: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
+msgid "Extract"
+msgstr "Դուրս բերում"
 
-#: ../src/dlg-extract.c:404 ../src/dlg-extract.c:454
-msgid "    "
-msgstr "    "
-
-#: ../src/dlg-extract.c:445
+#: ../src/dlg-extract.c:381
 msgid "Actions"
 msgstr "Գործողություններ"
 
-#: ../src/dlg-extract.c:461
-msgid "R_e-create folders"
-msgstr "Վ_երակերտել պանակներ"
+#: ../src/dlg-extract.c:397
+msgid "Re-crea_te folders"
+msgstr ""
 
-#: ../src/dlg-extract.c:465
+#: ../src/dlg-extract.c:401
 msgid "Over_write existing files"
 msgstr "Գո_յություն ունեցող ֆայլերը կրկին գրել"
 
-#: ../src/dlg-extract.c:469
+#: ../src/dlg-extract.c:405
 msgid "Do not e_xtract older files"
 msgstr "Հին ֆայլերը դուրս չբերել"
 
-#: ../src/dlg-extract.c:484
-msgid "_Open destination folder after extraction"
-msgstr "_Նշանակման վայրի պանակները բացել դուրս բերումից հետո"
+#: ../src/dlg-new.c:438
+msgctxt "File"
+msgid "New"
+msgstr ""
 
-#: ../src/dlg-prop.c:102
-msgid "Path:"
-msgstr "ՈՒղի"
+#: ../src/dlg-new.c:451
+msgctxt "File"
+msgid "Save"
+msgstr ""
 
-#: ../src/dlg-prop.c:115
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:218
+msgid "There was an internal error trying to search for applications:"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:286
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:291
+msgid "Could not open this file type"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:294
+msgid "_Search Command"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../src/dlg-prop.c:107
+msgid "Location:"
+msgstr "Տեղակայություն"
+
+#: ../src/dlg-prop.c:119
+msgctxt "File"
 msgid "Name:"
-msgstr "Անուն"
+msgstr ""
 
-#: ../src/dlg-prop.c:121
+#: ../src/dlg-prop.c:125
 #, c-format
 msgid "%s Properties"
 msgstr "%s Հատկություններ"
 
-#: ../src/dlg-prop.c:130
+#: ../src/dlg-prop.c:134
 msgid "Modified on:"
 msgstr "Մոդիֆիկացված է"
-
-#: ../src/dlg-prop.c:136 ../src/window.c:426
-msgid "%d %B %Y, %H:%M"
-msgstr "%d %B %Y, %H:%M"
 
 #: ../src/dlg-prop.c:144
 msgid "Archive size:"
 msgstr "Արխիվի չափսը"
 
-#: ../src/dlg-prop.c:155
+#: ../src/dlg-prop.c:159
 msgid "Content size:"
 msgstr "Բովանդակության չափսը"
 
-#: ../src/dlg-prop.c:174
+#: ../src/dlg-prop.c:183
 msgid "Compression ratio:"
 msgstr "Սեղմման աստիճանը"
 
-#: ../src/dlg-prop.c:189
+#: ../src/dlg-prop.c:198
 msgid "Number of files:"
 msgstr "Ֆայլերի համարները"
 
-#: ../src/file-data.c:28
-msgid "Unknown type"
-msgstr "Անհայտ տեսակ"
+#: ../src/dlg-update.c:164
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/file-data.c:29
-msgid "Symbolic link"
-msgstr "Սիմվոլիկ հղում"
+#: ../src/dlg-update.c:193
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/fr-archive.c:694
-msgid "The file does not exist."
-msgstr "Ֆայլը գոյություն չունի"
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr ""
 
-#: ../src/fr-command-tar.c:281
+#: ../src/eggfileformatchooser.c:397
+msgid "All Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:422
+msgid "File Format"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:675
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:682
+msgid "File format not recognized"
+msgstr ""
+
+#: ../src/fr-archive.c:1126
+msgid "File not found."
+msgstr ""
+
+#: ../src/fr-archive.c:1229
+#, c-format
+msgid "The file doesn't exist"
+msgstr ""
+
+#: ../src/fr-archive.c:2394
+msgid "You don't have the right permissions."
+msgstr "Դուք չունեք ճշգրիտ թույլտվությունները"
+
+#: ../src/fr-archive.c:2394
+msgid "This archive type cannot be modified"
+msgstr ""
+
+#: ../src/fr-archive.c:2406
+msgid "You can't add an archive to itself."
+msgstr "Դուք արխիվին արխիվ ավելացնել չեք կարող"
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:518
+#: ../src/fr-command-tar.c:308
 msgid "Adding file: "
 msgstr "Ֆայլերի ավելացում"
 
-#: ../src/fr-command-tar.c:327
-msgid "Removing file: "
-msgstr "Ֆայլերի հեռացում"
-
-#: ../src/fr-command-tar.c:336 ../src/window.c:1377
-msgid "Deleting files from archive"
-msgstr "Ֆայլերը արխիվից ոչնչացնել"
-
-#: ../src/fr-command-tar.c:369
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:417 ../src/fr-command-rar.c:645
+#: ../src/fr-command-tar.c:427
 msgid "Extracting file: "
 msgstr "Ֆայլերը բացել"
 
-#: ../src/fr-command-tar.c:414
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-rar.c:596 ../src/fr-command-tar.c:373
+msgid "Removing file: "
+msgstr "Ֆայլերի հեռացում"
+
+#: ../src/fr-command-rar.c:779
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr ""
+
+#: ../src/fr-command-tar.c:382 ../src/fr-window.c:2327
+msgid "Deleting files from archive"
+msgstr "Ֆայլերը արխիվից ոչնչացնել"
+
+#: ../src/fr-command-tar.c:486
 msgid "Recompressing archive"
 msgstr "Վերասեղմել արխիվը"
 
-#: ../src/fr-command-tar.c:548
+#: ../src/fr-command-tar.c:737
 msgid "Decompressing archive"
 msgstr "Արխիվի հակասեղմում"
 
-#: ../src/fr-stock.c:44
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
 msgid "_Add"
 msgstr "_Ավելացնել"
 
@@ -531,549 +647,730 @@ msgstr "_Ավելացնել"
 msgid "_Extract"
 msgstr "_Բացել"
 
-#: ../src/fr-stock.c:46 ../src/ui.h:36 ../src/ui.h:154
-msgid "_View"
-msgstr "_Տեսաբերում"
-
-#. Button
-#: ../src/gtk-utils.c:421
-msgid "Command _Line Output"
-msgstr "Հրահանգների _գծի հաղորդագրությունը"
-
-#: ../src/main.c:69
-msgid "Add files to the specified archive and quit the program"
-msgstr "Ավելացնել ֆայլեր մասնավորեցված արխիվին և ծրագրից դուրս գալ"
-
-#: ../src/main.c:70
-msgid "ARCHIVE"
-msgstr "ԱՐԽԻՎ"
-
-#: ../src/main.c:73
-msgid "Add files asking the name of the archive and quit the program"
-msgstr "Ավելացնել ֆայլերը հարցնելով արխիվի անունը և ծրագրից դուրս գալ"
-
-#: ../src/main.c:77
-msgid "Extract archives to the specified folder and quit the program"
-msgstr "Բացել արխիվը դեպի մասնավորեցված պանակ և ծրագրից դուրս գալ"
-
-#: ../src/main.c:78 ../src/main.c:90
-msgid "FOLDER"
-msgstr "ՖՈԼԴԵՐ"
-
-#: ../src/main.c:81
-msgid "Extract archives asking the destination folder and quit the program"
-msgstr "Արխիվները բացել պահանջելով նշանակման պանակը և ծրագրից դուրս գալ"
-
-#: ../src/main.c:85
-msgid ""
-"Extract archives using the archive name as destination folder and quit the "
-"program"
-msgstr ""
-"Արխիվները բացել օգտագործելով արխիվների անունները որպես նշանակման վայրի "
-"պանակներ և ծրագրից դուրս գալ"
-
-#: ../src/main.c:89
-msgid "Default folder to use for the '--add' and '--extract' commands"
-msgstr "Նախնական պանակ '--add' և '--extract' հրահանգները օգտագործելու համար"
-
-#: ../src/main.c:93
-msgid "Create destination folder without asking confirmation"
-msgstr "Կերտել նշանակման վայրի պանակ առանց հաստատում խնդրելու"
-
-#: ../src/ui.h:34
-msgid "_Archive"
-msgstr "_Արխիվ"
-
-#: ../src/ui.h:35
-msgid "_Edit"
-msgstr "_Խմբագրել"
-
-#: ../src/ui.h:37
-msgid "_Help"
-msgstr "_Ձեռնարկ"
-
-#: ../src/ui.h:38
-msgid "_Arrange Files"
-msgstr "_Դասավորել ֆայլերը"
-
-#: ../src/ui.h:39
-msgid "Open R_ecent"
-msgstr "Բացել վեր_ջինը"
-
-#: ../src/ui.h:43
-msgid "Information about the program"
-msgstr "Տեղեկատվություն ծրագրի մասին"
-
-#: ../src/ui.h:46
-msgid "_Add Files..."
-msgstr "_Ավելացնել ֆայլեր"
-
-#: ../src/ui.h:47 ../src/ui.h:51
-msgid "Add files to the archive"
-msgstr "Ֆայլերը ավելացնել արխիվ"
-
-#: ../src/ui.h:50
-msgid "Add"
-msgstr "Ավելացնել"
-
-#: ../src/ui.h:54
-msgid "Add a _Folder..."
-msgstr "Ավելացնել _պանակ..."
-
-#: ../src/ui.h:55
-msgid "Add a folder to the archive"
-msgstr "Արխիվին ավելացնել պանակ"
-
-#: ../src/ui.h:59
-msgid "Close the current archive"
-msgstr "Փակել ընթացիկ արխիվը"
-
-#: ../src/ui.h:63
-msgid "Display the Engrampa Manual"
-msgstr "Պատկերել Ֆայլ Ռոլեր ձեռնարկը"
-
-#: ../src/ui.h:67
-msgid "Copy the selection"
-msgstr "Ընտրված հատվածը պատճենել"
-
-#: ../src/ui.h:71
-msgid "Cut the selection"
-msgstr "Ընտրված հատվածը կտրել"
-
-#: ../src/ui.h:75
-msgid "Delete the selection from the archive"
-msgstr "Ընտրված հատվածը արխիվից ոչնչացնել"
-
-#: ../src/ui.h:78
-msgid "Dese_lect All"
-msgstr "Հակա_ընտրել ամբողջը"
-
-#: ../src/ui.h:79
-msgid "Deselect all files"
-msgstr "Հակաընտրել բոլոր ֆայլերը"
-
-#: ../src/ui.h:82
-msgid "_Extract..."
-msgstr "_Դուրս բերում..."
-
-#: ../src/ui.h:83 ../src/ui.h:87
-msgid "Extract files from the archive"
-msgstr "Ֆայլերը բացել արխիվից"
-
-#: ../src/ui.h:90
-msgid "_Last Output"
-msgstr "_Վերջին հաղորդագրությունը"
-
-#: ../src/ui.h:91
-msgid "View the output produced by the last executed command"
-msgstr ""
-"Տեսաբերել հաղորդագրությունը, որը ներկայացվել է վերջին գործարկված հրահանգով"
-
-#: ../src/ui.h:95
-msgid "Create a new archive"
-msgstr "Կերտել նոր արխիվ"
-
-#: ../src/ui.h:99 ../src/ui.h:103 ../src/window.c:3704 ../src/window.c:3707
-msgid "Open archive"
-msgstr "Բացել արխիվը"
-
-#: ../src/ui.h:106
-msgid "Open Fi_les..."
-msgstr "Բացել ֆայ_լերը"
-
-#: ../src/ui.h:107
-msgid "Open selected files with an application"
-msgstr "Ընտրված ֆայլերը բացել կիրառական ծրագրով"
-
-#: ../src/ui.h:110
-msgid "Pass_word..."
-msgstr "Նշանա_բառ..."
-
-#: ../src/ui.h:111
-msgid "Specify a password for this archive"
-msgstr "Այս արխիվի համար մասնավոր նշանաբառ ընտրել"
-
-#: ../src/ui.h:115
-msgid "Paste the clipboard"
-msgstr "Զետեղել"
-
-#: ../src/ui.h:119
-msgid "Show archive properties"
-msgstr "Ցույց տալ արխիվի հատկությունները"
-
-#: ../src/ui.h:123
-msgid "Quit the application"
-msgstr "Դուրս գալ կիրառական ծրագրից"
-
-#: ../src/ui.h:127
-msgid "Reload current archive"
-msgstr "Վերաբեռնել ընթացիկ արխիվը"
-
-#: ../src/ui.h:130
-msgid "_Rename..."
-msgstr "_Վերանվանել"
-
-#: ../src/ui.h:131
-msgid "Rename the selection"
-msgstr "Վերանվանել ընտրված հատվածը"
-
-#: ../src/ui.h:135
-msgid "Save the current archive with a different name"
-msgstr "Ընթացիկ արխիվը պահել այլ անվամբ"
-
-#: ../src/ui.h:138
-msgid "Select _All"
-msgstr "Ընտրել _ամբողջը"
-
-#: ../src/ui.h:139
-msgid "Select all files"
-msgstr "Ընտրել բոլոր ֆայլերը"
-
-#: ../src/ui.h:143
-msgid "Stop current operation"
-msgstr "Դադարեցնել ընթացիկ գործողությունը"
-
-#: ../src/ui.h:146
-msgid "_Test Integrity"
-msgstr ""
-
-#: ../src/ui.h:147
-msgid "Test whether the archive contains errors"
-msgstr "Ստուգել արդյո՞ք արխիվը սխալներ է պարունակում"
-
-#: ../src/ui.h:150
-msgid "_View File"
-msgstr "_Տեսաբերել ֆայլը"
-
-#: ../src/ui.h:151 ../src/ui.h:155
-msgid "View the selected file"
-msgstr "Տեսաբերել ընտրված ֆայլը"
-
-#: ../src/ui.h:163
-msgid "_Toolbar"
-msgstr "_Գործիքների վահանակ"
-
-#: ../src/ui.h:164
-msgid "View the main toolbar"
-msgstr "Տեսաբերել հիմնական գործիքների վահանակը"
-
-#: ../src/ui.h:168
-msgid "Stat_usbar"
-msgstr "Կարգ_ավիճակի վահանակ"
-
-#: ../src/ui.h:169
-msgid "View the statusbar"
-msgstr "Տեսաբերել կարգավիճակի վահանակը"
-
-#: ../src/ui.h:173
-msgid "_Reversed Order"
-msgstr "_Հետադարձ կարգ"
-
-#: ../src/ui.h:174
-msgid "Reverse the list order"
-msgstr "Հետադարձել ցուցակի կարգը"
-
-#: ../src/ui.h:183
-msgid "View All _Files"
-msgstr "Տեսաբերել բոլոր _ֆայլերը"
-
-#: ../src/ui.h:186
-msgid "View as a F_older"
-msgstr "Տեսաբերել որպես ֆ_ոլդեր"
-
-#: ../src/ui.h:194
-msgid "by _Name"
-msgstr "Ըստ _անվան"
-
-#: ../src/ui.h:195
-msgid "Sort file list by name"
-msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ անվան"
-
-#: ../src/ui.h:197
-msgid "by _Size"
-msgstr "Ըստ _չափսի"
-
-#: ../src/ui.h:198
-msgid "Sort file list by file size"
-msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ չափսի"
-
-#: ../src/ui.h:200
-msgid "by T_ype"
-msgstr "Ըստ _տեսակի"
-
-#: ../src/ui.h:201
-msgid "Sort file list by type"
-msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ տեսակի"
-
-#: ../src/ui.h:203
-msgid "by _Date modified"
-msgstr "Մոդիֆիկացիա ըստ _ամսաթվի"
-
-#: ../src/ui.h:204
-msgid "Sort file list by modification time"
-msgstr "Տեսակավորել ցուցակը ըստ մոդիֆիկացիայի ժամանակի"
-
-#: ../src/ui.h:206
-msgid "by _Location"
-msgstr "Ըստ _տեղակայության"
-
-#: ../src/ui.h:207
-msgid "Sort file list by location"
-msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ տեղակայության"
-
-#: ../src/window.c:691
+#: ../src/fr-window.c:1519
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/fr-window.c:1524
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/fr-window.c:1598
 msgid "Folder"
 msgstr "Ֆոլդեր"
 
-#: ../src/window.c:854
+#: ../src/fr-window.c:1999
 msgid "[read only]"
 msgstr "[միայն կարդալ]"
 
-#: ../src/window.c:948
-#, c-format
-msgid "%d file (%s)"
-msgid_plural "%d files (%s)"
-msgstr[0] "%d ֆայլ (%s)"
-msgstr[1] "%d ֆայլեր (%s)"
-
-#: ../src/window.c:953
-#, c-format
-msgid "%d file selected (%s)"
-msgid_plural "%d files selected (%s)"
-msgstr[0] "%d ընտրված ֆայլ (%s)"
-msgstr[1] "%d ընտրված ֆայլեր (%s)"
-
-#: ../src/window.c:1374
-msgid "Reading archive"
-msgstr "Ֆայլի ընթերցում"
-
-#: ../src/window.c:1380
-msgid "Adding files to archive"
-msgstr "Ֆայլերն ավելացնել արխիվ"
-
-#: ../src/window.c:1383
-msgid "Extracting files from archive"
-msgstr "Ֆայլերը բացել արխիվից"
-
-#: ../src/window.c:1386
-msgid "Testing archive"
-msgstr "Արխիվի ստուգում"
-
-#: ../src/window.c:1389
-msgid "Getting the file list"
-msgstr "Ստանալ ֆայլերի ցուցակը"
-
-#: ../src/window.c:1396
-msgid "wait please..."
-msgstr "սպասեք խնդրեմ"
-
-#: ../src/window.c:1473
+#: ../src/fr-window.c:2250
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "Չի հաղոջվում պատկերել պանակը \"%s\""
 
-#: ../src/window.c:1532
-msgid ""
-"This archive is password protected.\n"
-"Please specify a password with the command: Edit->Password"
+#: ../src/fr-window.c:2318 ../src/fr-window.c:2348
+msgid "Creating archive"
 msgstr ""
-"Այս արխիվը պաշտպանված է նշանաբառով \n"
-"Խնդրվում է նշել նշանաբառը Edit->Password հրահանգով"
 
-#: ../src/window.c:1534
-msgid ""
-"The specified password is not valid, please specify a new password with the "
-"command: Edit->Password"
+#: ../src/fr-window.c:2321
+msgid "Loading archive"
 msgstr ""
-"Նշված նշանաբառը չի համապատասխանում, խնդրվում է նոր նշանաբառ ընտրել "
-"օգտագործելով Edit->Password հրահանգը"
 
-#: ../src/window.c:1539 ../src/window.c:2295 ../src/window.c:5582
-msgid "Could not perform the operation"
-msgstr "Չի հաղոջվում կատարել գործողությունը"
+#: ../src/fr-window.c:2324
+msgid "Reading archive"
+msgstr "Ֆայլի ընթերցում"
 
-#: ../src/window.c:1564
+#: ../src/fr-window.c:2330
+msgid "Testing archive"
+msgstr "Արխիվի ստուգում"
+
+#: ../src/fr-window.c:2333
+msgid "Getting the file list"
+msgstr "Ստանալ ֆայլերի ցուցակը"
+
+#: ../src/fr-window.c:2336 ../src/fr-window.c:2345
+msgid "Copying the file list"
+msgstr ""
+
+#: ../src/fr-window.c:2339
+msgid "Adding files to archive"
+msgstr "Ֆայլերն ավելացնել արխիվ"
+
+#: ../src/fr-window.c:2342
+msgid "Extracting files from archive"
+msgstr "Ֆայլերը բացել արխիվից"
+
+#: ../src/fr-window.c:2351
+msgid "Saving archive"
+msgstr ""
+
+#: ../src/fr-window.c:2508
+msgid "_Open the Archive"
+msgstr ""
+
+#: ../src/fr-window.c:2509
+msgid "_Show the Files"
+msgstr ""
+
+#: ../src/fr-window.c:2557
+msgid "Archive:"
+msgstr ""
+
+#: ../src/fr-window.c:2719
+msgid "Extraction completed successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2742
+msgid "Archive created successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2790
+msgid "please wait..."
+msgstr ""
+
+#: ../src/fr-window.c:2949
 msgid "An error occurred while extracting files."
 msgstr "Ֆայլերը բացելիս սխալ է կատարվել"
 
-#: ../src/window.c:1568
-msgid "An error occurred while loading the archive."
-msgstr "Արխիվը բեռնելիս սխալ է կատարվել"
-
-#: ../src/window.c:1572
-msgid "An error occurred while deleting files from the archive."
-msgstr "Ֆայլերը արխիվից ոչնչացնելիս սխալ է կատարվել"
-
-#: ../src/window.c:1576
-msgid "An error occurred while adding files to the archive."
-msgstr "Ֆայլերը արխիվ ավելացելիս սխալ է կատարվել"
-
-#: ../src/window.c:1580
-msgid "An error occurred while testing archive."
-msgstr "Արխիվը ստուգելիս սխալ է կատարվել"
-
-#: ../src/window.c:1589
-msgid "Command not found."
-msgstr "Չի հաղոջվում գտնել հրահանգը"
-
-#: ../src/window.c:1592
-msgid "Command exited abnormally."
-msgstr "Հրահանգը "
-
-#: ../src/window.c:1722
-msgid "Test Result"
-msgstr "Ստուգման արդյունքներ"
-
-#: ../src/window.c:2072
-msgid "You don't have the right permissions."
-msgstr "Դուք չունեք ճշգրիտ թույլտվությունները"
-
-#: ../src/window.c:2110
-msgid "You can't add an archive to itself."
-msgstr "Դուք արխիվին արխիվ ավելացնել չեք կարող"
-
-#: ../src/window.c:2329
-msgid ""
-"Do you want to add this file to the current archive or open it as a new "
-"archive?"
-msgstr ""
-"Դուք ցանկանու՞մ եք ավելացնել այս ֆայլը ընթացիկ արխիվին կամ բացել այն որպես "
-"նոր արխիվ"
-
-#: ../src/window.c:2366
-msgid "Do you want to create a new archive with these files?"
-msgstr "Դուք ցանկանու՞մ եք նոր արխիվ կերտել այս ֆայլերով"
-
-#: ../src/window.c:2369
-msgid "Create _Archive"
-msgstr "Կերտել _արխիվ"
-
-#: ../src/window.c:2724
-msgid "Size"
-msgstr "Չափս"
-
-#: ../src/window.c:2725
-msgid "Type"
-msgstr "Տեսակ"
-
-#: ../src/window.c:2726
-msgid "Date Modified"
-msgstr "Մոդիֆիկացիայի ամսաթիվ"
-
-#: ../src/window.c:2735
-msgid "Name"
-msgstr "Անուն"
-
-#: ../src/window.c:3235
-#, c-format
-msgid "Open '%s'"
-msgstr "Բացել '%s'"
-
-#: ../src/window.c:3576
-msgid "Go to the previous visited location"
-msgstr "Գնալ դեպի նախորդ այցելած տեղակայությունը"
-
-#: ../src/window.c:3584
-msgid "Go to the next visited location"
-msgstr "Գնալ դեպի նախորդ այցելած տեղակայություն"
-
-#: ../src/window.c:3592
-msgid "Go up one level"
-msgstr "Մեկ մակարդակ վերև գնալ"
-
-#: ../src/window.c:3600
-msgid "Go to the home location"
-msgstr "Գնալ դեպի սեփական տուն տեղակայությունը"
-
-#: ../src/window.c:3705
-msgid "Open a recently used archive"
-msgstr "Բացել վերջերս օգտագործված արխիվը"
-
-#: ../src/window.c:4204
+#: ../src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "Չի հաղոջվում բացել \"%s\""
 
-#: ../src/window.c:4262
+#: ../src/fr-window.c:2960
+msgid "An error occurred while loading the archive."
+msgstr "Արխիվը բեռնելիս սխալ է կատարվել"
+
+#: ../src/fr-window.c:2964
+msgid "An error occurred while deleting files from the archive."
+msgstr "Ֆայլերը արխիվից ոչնչացնելիս սխալ է կատարվել"
+
+#: ../src/fr-window.c:2970
+msgid "An error occurred while adding files to the archive."
+msgstr "Ֆայլերը արխիվ ավելացելիս սխալ է կատարվել"
+
+#: ../src/fr-window.c:2974
+msgid "An error occurred while testing archive."
+msgstr "Արխիվը ստուգելիս սխալ է կատարվել"
+
+#: ../src/fr-window.c:2978
+msgid "An error occurred while saving the archive."
+msgstr ""
+
+#: ../src/fr-window.c:2982
+msgid "An error occurred."
+msgstr ""
+
+#: ../src/fr-window.c:2988
+msgid "Command not found."
+msgstr "Չի հաղոջվում գտնել հրահանգը"
+
+#: ../src/fr-window.c:2991
+msgid "Command exited abnormally."
+msgstr "Հրահանգը "
+
+#: ../src/fr-window.c:3190
+msgid "Test Result"
+msgstr "Ստուգման արդյունքներ"
+
+#: ../src/fr-window.c:4012 ../src/fr-window.c:7991 ../src/fr-window.c:8020
+#: ../src/fr-window.c:8275
+msgid "Could not perform the operation"
+msgstr "Չի հաղոջվում կատարել գործողությունը"
+
+#: ../src/fr-window.c:4038
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr "Դուք ցանկանու՞մ եք ավելացնել այս ֆայլը ընթացիկ արխիվին կամ բացել այն որպես նոր արխիվ"
+
+#: ../src/fr-window.c:4068
+msgid "Do you want to create a new archive with these files?"
+msgstr "Դուք ցանկանու՞մ եք նոր արխիվ կերտել այս ֆայլերով"
+
+#: ../src/fr-window.c:4071
+msgid "Create _Archive"
+msgstr "Կերտել _արխիվ"
+
+#: ../src/fr-window.c:4667 ../src/fr-window.c:5747
+msgid "Folders"
+msgstr ""
+
+#: ../src/fr-window.c:4705
+msgctxt "File"
+msgid "Size"
+msgstr ""
+
+#: ../src/fr-window.c:4706
+msgctxt "File"
+msgid "Type"
+msgstr ""
+
+#: ../src/fr-window.c:4707
+msgctxt "File"
+msgid "Date Modified"
+msgstr ""
+
+#: ../src/fr-window.c:4708
+msgctxt "File"
+msgid "Location"
+msgstr ""
+
+#: ../src/fr-window.c:4717
+msgctxt "File"
+msgid "Name"
+msgstr ""
+
+#: ../src/fr-window.c:5668
+msgid "Find:"
+msgstr ""
+
+#: ../src/fr-window.c:5755
+msgid "Close the folders pane"
+msgstr ""
+
+#: ../src/fr-window.c:5899 ../src/fr-window.c:5902 ../src/ui.h:142
+#: ../src/ui.h:146
+msgid "Open archive"
+msgstr "Բացել արխիվը"
+
+#: ../src/fr-window.c:5900
+msgid "Open a recently used archive"
+msgstr "Բացել վերջերս օգտագործված արխիվը"
+
+#: ../src/fr-window.c:6227
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "Չի հաղոջվում պահել արխիվը \"%s\""
 
-#: ../src/window.c:5179
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7394
 msgid "The new name is void."
 msgstr "Նոր անունը անվավեր է"
 
-#: ../src/window.c:5183
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7399
 msgid "The new name is equal to the old one."
 msgstr "Նոր անունը հավասարազոր է նախորդին"
 
-#: ../src/window.c:5244
+#: ../src/fr-window.c:7440
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-"\"%s\" անվամբ պանակ արդեն գոյություն ունի\n"
-"\n"
-"%s"
+msgstr "\"%s\" անվամբ պանակ արդեն գոյություն ունի\n\n%s"
 
-#: ../src/window.c:5246
+#: ../src/fr-window.c:7442
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-"\"%s\" անվամբ ֆայլ արդեն գոյություն ունի \n"
-"\n"
-"%s"
+msgstr "\"%s\" անվամբ ֆայլ արդեն գոյություն ունի \n\n%s"
 
-#: ../src/window.c:5284
+#: ../src/fr-window.c:7512
 msgid "Rename"
 msgstr "Վերանվանել"
 
-#: ../src/window.c:5285
+#: ../src/fr-window.c:7513
 msgid "New folder name"
 msgstr "Ֆոլդերի նոր անուն"
 
-#: ../src/window.c:5285
+#: ../src/fr-window.c:7513
 msgid "New file name"
 msgstr "Ֆայլի նոր անուն"
 
-#: ../src/window.c:5289
+#: ../src/fr-window.c:7517
 msgid "_Rename"
 msgstr "_Վերանվանել"
 
-#: ../src/window.c:5305 ../src/window.c:5334
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the folder"
 msgstr "Չի հաղոջվում վերանվանել պանակը"
 
-#: ../src/window.c:5305 ../src/window.c:5334
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the file"
 msgstr "Չի հաղոջվում վերանվանել ֆայլը"
 
-#: ../src/window.c:5408
+#: ../src/fr-window.c:7952
 msgid "Paste Selection"
 msgstr "Ընտրված հատվածը զետեղել"
 
-#: ../src/window.c:5413
-msgid "_Paste"
-msgstr "_Զետեղել"
+#: ../src/fr-window.c:7953
+msgid "Destination folder"
+msgstr "Նշանակման վայրի պանակ"
 
-#: ../src/window.c:5942
+#: ../src/fr-window.c:8545
 msgid "Add files to an archive"
 msgstr "Ֆայլերն ավելացնել արխիվ"
 
-#: ../src/window.c:5975
+#: ../src/fr-window.c:8589
 msgid "Extract archive"
 msgstr "Բացել արխիվը"
 
-#~ msgid "Engrampa Component add operations"
-#~ msgstr "Ֆայլ Ռոլեր ծրագրի գործողությունների ավելացման կոմպենենտ"
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:560
+msgid "%d %B %Y, %H:%M"
+msgstr "%d %B %Y, %H:%M"
 
-#~ msgid "Engrampa Component extract operations"
-#~ msgstr "Ֆայլ Ռոլեր ծրագրի գործողությունների դուրս բերման կոմպոնենտ"
+#. Expander
+#: ../src/gtk-utils.c:447
+msgid "Command _Line Output"
+msgstr "Հրահանգների _գծի հաղորդագրությունը"
 
-#~ msgid "Engrampa component"
-#~ msgstr "Ֆայլ ռոլեր կոմպոնենտ"
+#: ../src/gtk-utils.c:784
+msgid "Could not display help"
+msgstr "Չի հաղոջվում պատկերել ձեռնարկը"
+
+#: ../src/main.c:85
+msgid "7-Zip (.7z)"
+msgstr "7-Zip (.7z"
+
+#: ../src/main.c:86
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr ""
+
+#: ../src/main.c:87
+msgid "Ace (.ace)"
+msgstr ""
+
+#: ../src/main.c:89
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:90
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:92
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "Tar սեղմված bzip2 –ով (.tar.bz2)"
+
+#: ../src/main.c:94
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "Tar սեղմված bzip –ով (.tar.bz)"
+
+#: ../src/main.c:95
+msgid "Cabinet (.cab)"
+msgstr ""
+
+#: ../src/main.c:96
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr ""
+
+#: ../src/main.c:97
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr ""
+
+#: ../src/main.c:100
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "Tar սեղմված gzip –ով (.tar.gz)"
+
+#: ../src/main.c:103
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:104
+msgid "Self-extracting zip (.exe)"
+msgstr ""
+
+#: ../src/main.c:106
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:107
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:108
+msgid "Lrzip (.lrz)"
+msgstr ""
+
+#: ../src/main.c:109
+msgid "Tar compressed with lrzip (.tar.lrz)"
+msgstr ""
+
+#: ../src/main.c:111
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr ""
+
+#: ../src/main.c:113
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr ""
+
+#: ../src/main.c:115
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "Tar սեղմված lzop –ով(.tar.lzo)"
+
+#: ../src/main.c:116
+msgid "Windows Imaging Format (.wim)"
+msgstr ""
+
+#: ../src/main.c:117
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:120
+msgid "Tar uncompressed (.tar)"
+msgstr "Tar չսեղմված (.tar)"
+
+#: ../src/main.c:121
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "Tar սեղմված սեղմիչով (.tar.Z)"
+
+#: ../src/main.c:123
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:124
+msgid "Xz (.xz)"
+msgstr ""
+
+#: ../src/main.c:125
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr ""
+
+#: ../src/main.c:126
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:127
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:197
+msgid "Add files to the specified archive and quit the program"
+msgstr "Ավելացնել ֆայլեր մասնավորեցված արխիվին և ծրագրից դուրս գալ"
+
+#: ../src/main.c:198
+msgid "ARCHIVE"
+msgstr "ԱՐԽԻՎ"
+
+#: ../src/main.c:201
+msgid "Add files asking the name of the archive and quit the program"
+msgstr "Ավելացնել ֆայլերը հարցնելով արխիվի անունը և ծրագրից դուրս գալ"
+
+#: ../src/main.c:205
+msgid "Extract archives to the specified folder and quit the program"
+msgstr "Բացել արխիվը դեպի մասնավորեցված պանակ և ծրագրից դուրս գալ"
+
+#: ../src/main.c:206 ../src/main.c:218
+msgid "FOLDER"
+msgstr "ՖՈԼԴԵՐ"
+
+#: ../src/main.c:209
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr "Արխիվները բացել պահանջելով նշանակման պանակը և ծրագրից դուրս գալ"
+
+#: ../src/main.c:213
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
+msgstr ""
+
+#: ../src/main.c:217
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr "Նախնական պանակ '--add' և '--extract' հրահանգները օգտագործելու համար"
+
+#: ../src/main.c:221
+msgid "Create destination folder without asking confirmation"
+msgstr "Կերտել նշանակման վայրի պանակ առանց հաստատում խնդրելու"
+
+#: ../src/main.c:303
+msgid "- Create and modify an archive"
+msgstr ""
+
+#: ../src/main.c:319
+msgid "Engrampa"
+msgstr "Ֆայլ Ռոլեր"
+
+#: ../src/ui.h:32
+msgid "_Archive"
+msgstr "_Արխիվ"
+
+#: ../src/ui.h:33
+msgid "_Edit"
+msgstr "_Խմբագրել"
+
+#: ../src/ui.h:34
+msgid "_View"
+msgstr "_Տեսաբերում"
+
+#: ../src/ui.h:35
+msgid "_Help"
+msgstr "_Ձեռնարկ"
+
+#: ../src/ui.h:36
+msgid "_Arrange Files"
+msgstr "_Դասավորել ֆայլերը"
+
+#. Translators: this is the label for the "open recent file" sub-menu.
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr ""
+
+#: ../src/ui.h:42
+msgid "Information about the program"
+msgstr "Տեղեկատվություն ծրագրի մասին"
+
+#: ../src/ui.h:45
+msgid "_Add Files..."
+msgstr "_Ավելացնել ֆայլեր"
+
+#: ../src/ui.h:46 ../src/ui.h:50
+msgid "Add files to the archive"
+msgstr "Ֆայլերը ավելացնել արխիվ"
+
+#: ../src/ui.h:53
+msgid "Add a _Folder..."
+msgstr "Ավելացնել _պանակ..."
+
+#: ../src/ui.h:54 ../src/ui.h:58
+msgid "Add a folder to the archive"
+msgstr "Արխիվին ավելացնել պանակ"
+
+#: ../src/ui.h:57
+msgid "Add Folder"
+msgstr ""
+
+#: ../src/ui.h:62
+msgid "Close the current archive"
+msgstr "Փակել ընթացիկ արխիվը"
+
+#: ../src/ui.h:65
+msgid "Contents"
+msgstr ""
+
+#: ../src/ui.h:66
+msgid "Display the Engrampa Manual"
+msgstr "Պատկերել Ֆայլ Ռոլեր ձեռնարկը"
+
+#: ../src/ui.h:71 ../src/ui.h:92
+msgid "Copy the selection"
+msgstr "Ընտրված հատվածը պատճենել"
+
+#: ../src/ui.h:75 ../src/ui.h:96
+msgid "Cut the selection"
+msgstr "Ընտրված հատվածը կտրել"
+
+#: ../src/ui.h:79 ../src/ui.h:100
+msgid "Paste the clipboard"
+msgstr "Զետեղել"
+
+#: ../src/ui.h:82 ../src/ui.h:103
+msgid "_Rename..."
+msgstr "_Վերանվանել"
+
+#: ../src/ui.h:83 ../src/ui.h:104
+msgid "Rename the selection"
+msgstr "Վերանվանել ընտրված հատվածը"
+
+#: ../src/ui.h:87 ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr "Ընտրված հատվածը արխիվից ոչնչացնել"
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "Հակա_ընտրել ամբողջը"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "Հակաընտրել բոլոր ֆայլերը"
+
+#: ../src/ui.h:116 ../src/ui.h:120
+msgid "_Extract..."
+msgstr "_Դուրս բերում..."
+
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr "Ֆայլերը բացել արխիվից"
+
+#: ../src/ui.h:128
+msgid "Find..."
+msgstr ""
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "_Վերջին հաղորդագրությունը"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr "Տեսաբերել հաղորդագրությունը, որը ներկայացվել է վերջին գործարկված հրահանգով"
+
+#: ../src/ui.h:137
+msgid "New..."
+msgstr ""
+
+#: ../src/ui.h:138
+msgid "Create a new archive"
+msgstr "Կերտել նոր արխիվ"
+
+#: ../src/ui.h:141
+msgid "Open..."
+msgstr ""
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr ""
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "Ընտրված ֆայլերը բացել կիրառական ծրագրով"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "Նշանա_բառ..."
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr "Այս արխիվի համար մասնավոր նշանաբառ ընտրել"
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "Ցույց տալ արխիվի հատկությունները"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "Վերաբեռնել ընթացիկ արխիվը"
+
+#: ../src/ui.h:165
+msgid "Save As..."
+msgstr ""
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr "Ընթացիկ արխիվը պահել այլ անվամբ"
+
+#: ../src/ui.h:170
+msgid "Select all files"
+msgstr "Ընտրել բոլոր ֆայլերը"
+
+#: ../src/ui.h:174
+msgid "Stop current operation"
+msgstr "Դադարեցնել ընթացիկ գործողությունը"
+
+#: ../src/ui.h:177
+msgid "_Test Integrity"
+msgstr ""
+
+#: ../src/ui.h:178
+msgid "Test whether the archive contains errors"
+msgstr "Ստուգել արդյո՞ք արխիվը սխալներ է պարունակում"
+
+#: ../src/ui.h:182 ../src/ui.h:186
+msgid "Open the selected file"
+msgstr ""
+
+#: ../src/ui.h:190 ../src/ui.h:194
+msgid "Open the selected folder"
+msgstr ""
+
+#: ../src/ui.h:199
+msgid "Go to the previous visited location"
+msgstr "Գնալ դեպի նախորդ այցելած տեղակայությունը"
+
+#: ../src/ui.h:203
+msgid "Go to the next visited location"
+msgstr "Գնալ դեպի նախորդ այցելած տեղակայություն"
+
+#: ../src/ui.h:207
+msgid "Go up one level"
+msgstr "Մեկ մակարդակ վերև գնալ"
+
+#. Translators: the home location is the home folder.
+#: ../src/ui.h:212
+msgid "Go to the home location"
+msgstr "Գնալ դեպի սեփական տուն տեղակայությունը"
+
+#: ../src/ui.h:220
+msgid "_Toolbar"
+msgstr "_Գործիքների վահանակ"
+
+#: ../src/ui.h:221
+msgid "View the main toolbar"
+msgstr "Տեսաբերել հիմնական գործիքների վահանակը"
+
+#: ../src/ui.h:225
+msgid "Stat_usbar"
+msgstr "Կարգ_ավիճակի վահանակ"
+
+#: ../src/ui.h:226
+msgid "View the statusbar"
+msgstr "Տեսաբերել կարգավիճակի վահանակը"
+
+#: ../src/ui.h:230
+msgid "_Reversed Order"
+msgstr "_Հետադարձ կարգ"
+
+#: ../src/ui.h:231
+msgid "Reverse the list order"
+msgstr "Հետադարձել ցուցակի կարգը"
+
+#: ../src/ui.h:235
+msgid "_Folders"
+msgstr ""
+
+#: ../src/ui.h:236
+msgid "View the folders pane"
+msgstr ""
+
+#: ../src/ui.h:245
+msgid "View All _Files"
+msgstr "Տեսաբերել բոլոր _ֆայլերը"
+
+#: ../src/ui.h:248
+msgid "View as a F_older"
+msgstr "Տեսաբերել որպես ֆ_ոլդեր"
+
+#: ../src/ui.h:256
+msgid "by _Name"
+msgstr "Ըստ _անվան"
+
+#: ../src/ui.h:257
+msgid "Sort file list by name"
+msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ անվան"
+
+#: ../src/ui.h:259
+msgid "by _Size"
+msgstr "Ըստ _չափսի"
+
+#: ../src/ui.h:260
+msgid "Sort file list by file size"
+msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ չափսի"
+
+#: ../src/ui.h:262
+msgid "by T_ype"
+msgstr "Ըստ _տեսակի"
+
+#: ../src/ui.h:263
+msgid "Sort file list by type"
+msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ տեսակի"
+
+#: ../src/ui.h:265
+msgid "by _Date Modified"
+msgstr ""
+
+#: ../src/ui.h:266
+msgid "Sort file list by modification time"
+msgstr "Տեսակավորել ցուցակը ըստ մոդիֆիկացիայի ժամանակի"
+
+#. Translators: this is the "sort by file location" menu item
+#: ../src/ui.h:269
+msgid "by _Location"
+msgstr "Ըստ _տեղակայության"
+
+#. Translators: location is the file location
+#: ../src/ui.h:271
+msgid "Sort file list by location"
+msgstr "Տեսակավորել ֆայլերի ցուցակը ըստ տեղակայության"

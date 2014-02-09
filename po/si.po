@@ -1,207 +1,287 @@
-# translation of si.po to Sinhala
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Danishka Navin <snavin@redhat.com>, 2007.
+# 
+# Translators:
+# Danishka Navin <snavin@redhat.com>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: si\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-23 03:30+0100\n"
-"PO-Revision-Date: 2007-08-08 13:31+0530\n"
-"Last-Translator: Danishka Navin <snavin@redhat.com>\n"
-"Language-Team: Sinhala <en@li.org>\n"
+"POT-Creation-Date: 2014-02-09 18:21+0100\n"
+"PO-Revision-Date: 2014-02-09 18:19+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Sinhala (http://www.transifex.com/projects/p/MATE/language/si/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: si\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
 
-#: ../data/glade/engrampa.glade.h:1
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:190
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:960
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1102
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1170
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1375
+#, c-format
+msgid "Can't pass documents to this desktop element"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1394
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:1
+msgid "Engrampa Archive Manager"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1991
+#: ../src/fr-window.c:5419
+msgid "Archive Manager"
+msgstr "සංරක්‍ෂණ කළමණාකරු"
+
+#: ../data/engrampa.desktop.in.in.h:3
+msgid "Create and modify an archive"
+msgstr "සංරක්‍ෂණයක් නිර්මාණය කරන්න සහ වෙනස් කරන්න"
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "පූරණ විකල්ප"
+
+#: ../data/ui/batch-add-files.ui.h:1
+msgid "Compress"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:2
+msgid "_Filename:"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5844
+msgid "_Location:"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "පිහිටිම"
+
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+msgid "_Password:"
+msgstr "රහස්පදය: (_P)"
+
+#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../data/ui/password.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr ""
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr ""
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+msgid "MB"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+msgid "_Other Options"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:12 ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr "නිර්මාණය කරන්න (_r)"
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">රහස්පදය අවශ්‍යවේ</span>"
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "මකන්න"
+
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:349
+msgid "_Files:"
+msgstr "ගොනු: (_F)"
+
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:360
+msgid "example: *.txt; *.doc"
+msgstr "උදාහරණය: *.txt; *.doc"
+
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:363
+msgid "_All files"
+msgstr "සියළුම ගොනු (_A)"
+
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:370
+msgid "_Selected files"
+msgstr "තෝරාගත් ගොනු (_S)"
+
+#: ../data/ui/open-with.ui.h:1
+msgid "Open Files"
+msgstr "ගොනු විවෘත කරන්න"
+
+#: ../data/ui/open-with.ui.h:2
+msgid "A_vailable application:"
+msgstr "භාවිතයට ඇති යෙදුම් (_v):"
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr "මැතකදි භාවිතා කළ යෙදුම් (_e):"
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr "යෙදුම: (_A)"
+
+#: ../data/ui/password.ui.h:1
+msgid "Password"
+msgstr "රහස්පදය"
+
+#: ../data/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
 
-#: ../data/glade/engrampa.glade.h:2
-msgid "A_vailable application:"
-msgstr "භාවිතයට ඇති යෙදුම් (_v):"
+#. secondary text
+#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../data/glade/engrampa.glade.h:3 ../src/fr-stock.c:43
-msgid "C_reate"
-msgstr "නිර්මාණය කරන්න (_r)"
+#: ../data/ui/update.ui.h:2
+msgid "_Update"
+msgstr ""
 
-#: ../data/glade/engrampa.glade.h:4
-msgid "Create Archive"
-msgstr "සංරක්‍ෂණය නිර්මාණය කරන්න"
+#: ../data/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
+msgstr ""
 
-#: ../data/glade/engrampa.glade.h:5
-msgid "Delete"
-msgstr "මකන්න"
-
-#: ../data/glade/engrampa.glade.h:6
-msgid "Load Options"
-msgstr "පූරණ විකල්ප"
-
-#: ../data/glade/engrampa.glade.h:7 ../src/fr-window.c:3266
-msgid "Location"
-msgstr "පිහිටිම"
-
-#. current location
-#: ../data/glade/engrampa.glade.h:8 ../src/fr-window.c:4183
-msgid "Location:"
-msgstr "පිහිටිම:"
-
-#: ../data/glade/engrampa.glade.h:9
-msgid "Open Files"
-msgstr "ගොනු විවෘත කරන්න"
-
-#: ../data/glade/engrampa.glade.h:10
-msgid "Password"
-msgstr "රහස්පදය"
-
-#: ../data/glade/engrampa.glade.h:11
-msgid "R_ecent applications:"
-msgstr "මැතකදි භාවිතා කළ යෙදුම් (_e):"
-
-#: ../data/glade/engrampa.glade.h:12 ../src/dlg-extract.c:383
-msgid "_All files"
-msgstr "සියළුම ගොනු (_A)"
-
-#: ../data/glade/engrampa.glade.h:13
-msgid "_Application:"
-msgstr "යෙදුම: (_A)"
-
-#: ../data/glade/engrampa.glade.h:14
-msgid "_Archive:"
-msgstr "සංරක්‍ෂණය: (_A)"
-
-#: ../data/glade/engrampa.glade.h:15 ../src/dlg-extract.c:369
-msgid "_Files:"
-msgstr "ගොනු: (_F)"
-
-#: ../data/glade/engrampa.glade.h:16 ../data/glade/ask-password.glade.h:2
-#: ../src/dlg-extract.c:431
-msgid "_Password:"
-msgstr "රහස්පදය: (_P)"
-
-#: ../data/glade/engrampa.glade.h:17 ../src/dlg-extract.c:390
-msgid "_Selected files"
-msgstr "තෝරාගත් ගොනු (_S)"
-
-#: ../data/glade/engrampa.glade.h:18 ../src/dlg-extract.c:380
-msgid "example: *.txt; *.doc"
-msgstr "උදාහරණය: *.txt; *.doc"
-
-#: ../data/glade/ask-password.glade.h:1
-msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">රහස්පදය අවශ්‍යවේ</span>"
-
-#. Create the application.
-#: ../data/engrampa.desktop.in.in.h:1 ../src/fr-window.c:1416
-#: ../src/fr-window.c:3888 ../src/main.c:216
-msgid "Archive Manager"
-msgstr "සංරක්‍ෂණ කළමණාකරු"
-
-#: ../data/engrampa.desktop.in.in.h:2 ../src/main.c:207
-msgid "Create and modify an archive"
-msgstr "සංරක්‍ෂණයක් නිර්මාණය කරන්න සහ වෙනස් කරන්න"
-
-#: ../caja/caja-engrampa.c:240
+#: ../caja/caja-engrampa.c:314
 msgid "Extract Here"
 msgstr "මෙතන විසුරුවන්න"
 
-#: ../caja/caja-engrampa.c:241
-msgid "Extract the selected archive in the current position"
+#. Translators: the current position is the current folder
+#: ../caja/caja-engrampa.c:316
+msgid "Extract the selected archive to the current position"
 msgstr ""
 
-#: ../caja/caja-engrampa.c:258
+#: ../caja/caja-engrampa.c:333
 msgid "Extract To..."
 msgstr "වෙත විසුරුවන්න..."
 
-#: ../caja/caja-engrampa.c:259
+#: ../caja/caja-engrampa.c:334
 msgid "Extract the selected archive"
 msgstr "තෝරාගත් සංරක්‍ෂණය විසුරුවන්න"
 
-#: ../caja/caja-engrampa.c:278
-msgid "Create Archive..."
-msgstr "සංරක්‍ෂණ නිර්මාණය කරන්න..."
+#: ../caja/caja-engrampa.c:353
+msgid "Compress..."
+msgstr ""
 
-#: ../caja/caja-engrampa.c:279
-msgid "Create an archive with the selected objects"
-msgstr "තෝරාගත් වස්තුවන් සමඟ සංරක්‍ෂණය නිර්මාණය කරන්න"
+#: ../caja/caja-engrampa.c:354
+msgid "Create a compressed archive with the selected objects"
+msgstr ""
 
-#: ../src/actions.c:145 ../src/actions.c:163 ../src/actions.c:201
-#: ../src/dlg-batch-add.c:129 ../src/dlg-batch-add.c:144
-#: ../src/dlg-batch-add.c:168 ../src/dlg-batch-add.c:212
-#: ../src/dlg-batch-add.c:259 ../src/fr-window.c:2136
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:171 ../src/dlg-batch-add.c:187
+#: ../src/dlg-batch-add.c:216 ../src/dlg-batch-add.c:261
+#: ../src/dlg-batch-add.c:307 ../src/fr-window.c:2944
 msgid "Could not create the archive"
 msgstr "සංරක්‍ෂණ නිර්මාණය කළ නොහැකි විය"
 
-#: ../src/actions.c:146 ../src/dlg-batch-add.c:130 ../src/dlg-batch-add.c:260
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:173 ../src/dlg-batch-add.c:309
 msgid "You have to specify an archive name."
 msgstr "ඔබට සංරක්‍ෂණ නාමය විශේෂිතව දැක්විය යුතුයි."
 
-#: ../src/actions.c:164
+#: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
 msgstr "මෙම බහලුම තුළ සංරක්‍ෂණයක් නිර්මාණයට ඔබට අවසර නැත"
 
-#: ../src/actions.c:202 ../src/fr-archive.c:1311 ../src/fr-window.c:4419
-#: ../src/fr-window.c:4559
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:267
+#: ../src/dlg-package-installer.c:276 ../src/dlg-package-installer.c:304
+#: ../src/fr-archive.c:1146 ../src/fr-window.c:6059 ../src/fr-window.c:6235
 msgid "Archive type not supported."
 msgstr "සංරක්‍ෂණ වර්‍ගය සහය දක්වන්නේ නැත."
 
-#: ../src/actions.c:213
-msgid "The archive already exists.  Do you want to overwrite it?"
-msgstr "සංරක්‍ෂණය දැනටමත් ඇත. ඔබට එය මත යළි ලිවීමට අවශ්‍යද?"
-
-#: ../src/actions.c:216
-msgid "Overwrite"
-msgstr "මත ලියන්න"
-
-#: ../src/actions.c:234
+#: ../src/actions.c:248
 msgid "Could not delete the old archive."
 msgstr "පැරණි සංරක්‍ෂණය මකාදැමිය නොහැක."
 
-#: ../src/actions.c:325
-msgid "New"
-msgstr "නව"
-
-#: ../src/actions.c:348 ../src/actions.c:474 ../src/actions.c:565
-#: ../src/fr-window.c:3844
-msgid "All archives"
-msgstr "සියළුම සංරක්‍ෂණ"
-
-#: ../src/actions.c:355 ../src/actions.c:481 ../src/actions.c:572
-msgid "All files"
-msgstr "සියළු ගොනු"
-
-#: ../src/actions.c:365 ../src/actions.c:580
-msgid "Archive type:"
-msgstr "සංරක්‍ෂණ වර්‍ග:"
-
-#: ../src/actions.c:369 ../src/actions.c:584
-msgid "Automatic"
-msgstr "ස්වයංක්‍රිය"
-
-#: ../src/actions.c:463 ../src/fr-window.c:4282
+#: ../src/actions.c:382 ../src/fr-window.c:5902
 msgid "Open"
 msgstr "විවෘත කරන්න"
 
-#: ../src/actions.c:550
-msgid "Save"
-msgstr "සුරකින්න"
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5242
+msgid "All archives"
+msgstr "සියළුම සංරක්‍ෂණ"
 
-#: ../src/actions.c:821 ../src/fr-window.c:5442
+#: ../src/actions.c:400 ../src/dlg-new.c:320
+msgid "All files"
+msgstr "සියළු ගොනු"
+
+#: ../src/actions.c:794 ../src/fr-window.c:7081
 msgid "Last Output"
 msgstr "අවසාන ප්‍රථිධානය"
 
-#: ../src/actions.c:841 ../src/gtk-utils.c:810
-msgid "Could not display help"
-msgstr "සහාය දර්ශනය කළ නොහැක"
-
-#: ../src/actions.c:867
+#: ../src/actions.c:860
 msgid ""
 "Engrampa is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -209,98 +289,109 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/actions.c:871
+#: ../src/actions.c:864
 msgid ""
-"Engrampa is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details."
+"Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
 msgstr ""
 
-#: ../src/actions.c:875
+#: ../src/actions.c:868
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"Engrampa; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+"You should have received a copy of the GNU General Public License along with"
+" Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 
-#: ../src/actions.c:885
-msgid "Copyright © 2001-2007 Free Software Foundation, Inc."
-msgstr "සියළුම හිමිකම් සහිතයි © 2001-2007 Free Software Foundation, Inc."
+#: ../src/actions.c:878
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr ""
 
-#: ../src/actions.c:886
+#: ../src/actions.c:879
 msgid "An archive manager for MATE."
 msgstr "MATE සඳහා සංරක්‍ෂණ කළමණාකරු."
 
-#: ../src/actions.c:889
+#: ../src/actions.c:882
 msgid "translator-credits"
 msgstr "පරිවර්තන ස්තුතිය"
 
-#: ../src/dlg-add-files.c:90 ../src/dlg-add-files.c:150
-#: ../src/dlg-add-folder.c:126 ../src/dlg-add-folder.c:214
+#: ../src/dlg-add-files.c:100 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "සංරක්‍ෂණ සඳහා ගොනු ඇතුලත් කළ නොහැකි විය"
 
-#: ../src/dlg-add-files.c:91 ../src/dlg-add-files.c:151
-#: ../src/dlg-add-folder.c:127 ../src/dlg-add-folder.c:215
+#: ../src/dlg-add-files.c:101 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
 msgstr "\"%s\" බහලුම තුලින් ගොනු කියවීම සඳහා ඔබට නිසි අවසර නැත"
 
-#: ../src/dlg-add-files.c:174 ../src/ui.h:50
+#: ../src/dlg-add-files.c:149 ../src/ui.h:49
 msgid "Add Files"
 msgstr "ගොනු එක් කරන්න"
 
-#: ../src/dlg-add-files.c:188 ../src/dlg-add-folder.c:277
-msgid "_Add only if newer"
-msgstr "අලුත් නම් පමණක් එක් කරන්න"
+#. Translators: add a file to the archive only if the disk version is
+#. * newer than the archive version.
+#: ../src/dlg-add-files.c:165 ../src/dlg-add-folder.c:238
+msgid "Add only if _newer"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:263
+#: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
 msgstr "ගොනුවක් එක් කරන්න"
 
-#: ../src/dlg-add-folder.c:278
+#: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
 msgstr "උපබහලුම් ඇතුලත් කරන්න (_I)"
 
-#: ../src/dlg-add-folder.c:279
+#: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr ""
 
-#: ../src/dlg-add-folder.c:282 ../src/dlg-add-folder.c:287
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:255
 msgid "example: *.o; *.bak"
 msgstr "උදාහරණය: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:283
-msgid "_Include files:"
-msgstr "ගොනු ඇතුලත් කරන්න (_I)"
+#: ../src/dlg-add-folder.c:244
+msgid "Include _files:"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:288
+#: ../src/dlg-add-folder.c:250
 msgid "E_xclude files:"
 msgstr "ගොනු ඇතුලත් නොකරන්න (_I)"
 
-#: ../src/dlg-add-folder.c:291
+#: ../src/dlg-add-folder.c:256
+msgid "_Exclude folders:"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
 msgstr "පුරණ විකල්ප (_L)"
 
-#: ../src/dlg-add-folder.c:292
+#: ../src/dlg-add-folder.c:261
 msgid "Sa_ve Options"
 msgstr "සුරකිමේ විකල්ප (_v)"
 
-#: ../src/dlg-add-folder.c:729
+#: ../src/dlg-add-folder.c:262
+msgid "_Reset Options"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:890
 msgid "Save Options"
 msgstr "සුරකිමේ විකල්ප"
 
-#: ../src/dlg-add-folder.c:730
+#: ../src/dlg-add-folder.c:891
 msgid "Options Name:"
 msgstr "විකල්පයේ නම:"
 
-#: ../src/dlg-ask-password.c:111
+#: ../src/dlg-ask-password.c:124
 #, c-format
 msgid "Enter the password for the archive '%s'."
 msgstr "'%s' සංරක්‍ෂණය සඳහා රහස්පදය ඇතුළත් කරන්න."
 
-#: ../src/dlg-batch-add.c:145 ../src/fr-window.c:5725
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/dlg-batch-add.c:188 ../src/fr-window.c:7404
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -308,779 +399,976 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:148 ../src/fr-window.c:5717 ../src/fr-window.c:5721
-#: ../src/fr-window.c:5725 ../src/fr-window.c:5782 ../src/fr-window.c:5784
+#: ../src/dlg-batch-add.c:191 ../src/fr-window.c:7394 ../src/fr-window.c:7399
+#: ../src/fr-window.c:7404 ../src/fr-window.c:7440 ../src/fr-window.c:7442
 msgid "Please use a different name."
 msgstr "කරුණාකර වෙනත් නමක් භාවිතා කරන්න."
 
-#: ../src/dlg-batch-add.c:169
+#: ../src/dlg-batch-add.c:218
 msgid ""
-"You don't have the right permissions to create an archive in the destination "
-"folder."
+"You don't have the right permissions to create an archive in the destination"
+" folder."
 msgstr ""
 
-#: ../src/dlg-batch-add.c:185 ../src/dlg-extract.c:110 ../src/fr-window.c:4909
+#: ../src/dlg-batch-add.c:234 ../src/dlg-extract.c:103 ../src/fr-window.c:6656
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr ""
-"අනිත් අන්තයේ \"%s\" බහලුම නැත.\n"
-"\n"
-"ඔබට එය නිර්මාණය කිරීමට අවශ්‍යද?"
+msgstr "අනිත් අන්තයේ \"%s\" බහලුම නැත.\n\nඔබට එය නිර්මාණය කිරීමට අවශ්‍යද?"
 
-#: ../src/dlg-batch-add.c:194 ../src/dlg-extract.c:119 ../src/fr-window.c:4918
+#: ../src/dlg-batch-add.c:243 ../src/dlg-extract.c:112 ../src/fr-window.c:6665
 msgid "Create _Folder"
 msgstr "බහලුමක් නිර්මාණය කරන්න"
 
-#: ../src/dlg-batch-add.c:213 ../src/dlg-extract.c:136 ../src/fr-window.c:4938
+#: ../src/dlg-batch-add.c:262 ../src/dlg-extract.c:132 ../src/fr-window.c:6685
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "අනිත් අන්තයේ නිර්මාණය කළ නොහැකිවිය: %s."
 
-#: ../src/dlg-batch-add.c:229
+#: ../src/dlg-batch-add.c:279
 msgid "Archive not created"
 msgstr "සංරක්‍ෂණය නිර්මාණයය නොවුනි"
 
-#: ../src/dlg-batch-add.c:278
+#: ../src/dlg-batch-add.c:327
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "සංරක්‍ෂණය දැනටමත් ඇත.  ඔබට එය මත නැවත ලිවීමට අවශ්‍යද?"
 
-#: ../src/dlg-batch-add.c:281
+#: ../src/dlg-batch-add.c:330
 msgid "_Overwrite"
 msgstr "මත ලියන්න (_O)"
 
-#: ../src/dlg-extract.c:141 ../src/dlg-extract.c:158 ../src/dlg-extract.c:184
-#: ../src/fr-window.c:2959 ../src/fr-window.c:4937 ../src/fr-window.c:4955
+#: ../src/dlg-extract.c:131 ../src/dlg-extract.c:149 ../src/dlg-extract.c:176
+#: ../src/fr-window.c:4169 ../src/fr-window.c:6684 ../src/fr-window.c:6701
 msgid "Extraction not performed"
 msgstr "විහිදුවීම සිදු නොවුනි"
 
-#: ../src/dlg-extract.c:185 ../src/fr-window.c:3068
+#: ../src/dlg-extract.c:177 ../src/fr-window.c:4338 ../src/fr-window.c:4418
 #, c-format
-msgid "You don't have the right permissions to extract archives in the folder \"%s\""
+msgid ""
+"You don't have the right permissions to extract archives in the folder "
+"\"%s\""
 msgstr ""
 
-#: ../src/dlg-extract.c:352
-msgid "Files"
-msgstr "ගොනු"
-
-#: ../src/dlg-extract.c:401
-msgid "Actions"
-msgstr "ක්‍රියා"
-
-#: ../src/dlg-extract.c:417
-msgid "Re-crea_te folders"
-msgstr "බහලුම් නැවත නිර්මාණය කරන්න (_t)"
-
-#: ../src/dlg-extract.c:421
-msgid "Over_write existing files"
-msgstr ""
-
-#: ../src/dlg-extract.c:425
-msgid "Do not e_xtract older files"
-msgstr ""
-
-#: ../src/dlg-extract.c:440
-msgid "_Open destination folder after extraction"
-msgstr "විහිදුවිමෙන් පසුව අදාල බහලුම විවෘත කරන්න (_O)"
-
-#: ../src/dlg-extract.c:469 ../src/ui.h:90
+#: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
 msgid "Extract"
 msgstr "විහිදුවන්න"
 
-#: ../src/dlg-prop.c:111
-msgid "Path:"
-msgstr "මාර්‍ගය:"
+#: ../src/dlg-extract.c:381
+msgid "Actions"
+msgstr "ක්‍රියා"
 
-#: ../src/dlg-prop.c:124
+#: ../src/dlg-extract.c:397
+msgid "Re-crea_te folders"
+msgstr "බහලුම් නැවත නිර්මාණය කරන්න (_t)"
+
+#: ../src/dlg-extract.c:401
+msgid "Over_write existing files"
+msgstr ""
+
+#: ../src/dlg-extract.c:405
+msgid "Do not e_xtract older files"
+msgstr ""
+
+#: ../src/dlg-new.c:438
+msgctxt "File"
+msgid "New"
+msgstr ""
+
+#: ../src/dlg-new.c:451
+msgctxt "File"
+msgid "Save"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:218
+msgid "There was an internal error trying to search for applications:"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:286
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:291
+msgid "Could not open this file type"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:294
+msgid "_Search Command"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../src/dlg-prop.c:107
+msgid "Location:"
+msgstr "පිහිටිම:"
+
+#: ../src/dlg-prop.c:119
+msgctxt "File"
 msgid "Name:"
-msgstr "නම:"
+msgstr ""
 
-#: ../src/dlg-prop.c:130
+#: ../src/dlg-prop.c:125
 #, c-format
 msgid "%s Properties"
 msgstr "%s වත්කම්"
 
-#: ../src/dlg-prop.c:139
+#: ../src/dlg-prop.c:134
 msgid "Modified on:"
 msgstr "වෙනස් කළේ:"
 
-#: ../src/dlg-prop.c:149
+#: ../src/dlg-prop.c:144
 msgid "Archive size:"
 msgstr "සංරක්‍ෂණයේ ප්‍රමාණය:"
 
-#: ../src/dlg-prop.c:160
+#: ../src/dlg-prop.c:159
 msgid "Content size:"
 msgstr "අන්තර්ගතයේ ප්‍රමාණය:"
 
-#: ../src/dlg-prop.c:179
+#: ../src/dlg-prop.c:183
 msgid "Compression ratio:"
 msgstr "සම්පීඩන අනුපාතය:"
 
-#: ../src/dlg-prop.c:194
+#: ../src/dlg-prop.c:198
 msgid "Number of files:"
 msgstr "ගොනු සංඛ්‍යාව:"
 
-#: ../src/file-data.c:29
-msgid "Unknown type"
-msgstr "නොදන්නා වර්‍ගයක්"
+#: ../src/dlg-update.c:164
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/file-data.c:30
-msgid "Symbolic link"
-msgstr "සංඛෙතාත්මක පුරුක"
+#: ../src/dlg-update.c:193
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/fr-archive.c:2512
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:397
+msgid "All Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:422
+msgid "File Format"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:675
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:682
+msgid "File format not recognized"
+msgstr ""
+
+#: ../src/fr-archive.c:1126
+msgid "File not found."
+msgstr ""
+
+#: ../src/fr-archive.c:1229
+#, c-format
+msgid "The file doesn't exist"
+msgstr ""
+
+#: ../src/fr-archive.c:2394
 msgid "You don't have the right permissions."
 msgstr "ඔබට නිසි අවසර නොමැත."
 
-#: ../src/fr-archive.c:2522
+#: ../src/fr-archive.c:2394
+msgid "This archive type cannot be modified"
+msgstr ""
+
+#: ../src/fr-archive.c:2406
 msgid "You can't add an archive to itself."
 msgstr ""
 
-#: ../src/fr-command-tar.c:288
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:518
+#: ../src/fr-command-tar.c:308
 msgid "Adding file: "
 msgstr "ගොනුවක් එක් කරමින්:"
 
-#: ../src/fr-command-tar.c:337
-msgid "Removing file: "
-msgstr "ගොනුවක් ඉවත් කරමින්:"
-
-#: ../src/fr-command-tar.c:346 ../src/fr-window.c:1690
-msgid "Deleting files from archive"
-msgstr "සංරක්‍ෂණයෙන් ගොනු මකන්න"
-
-#: ../src/fr-command-tar.c:380
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:417 ../src/fr-command-rar.c:645
+#: ../src/fr-command-tar.c:427
 msgid "Extracting file: "
 msgstr "ගොනු විහිදුවමින්: "
 
-#: ../src/fr-command-tar.c:427
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-rar.c:596 ../src/fr-command-tar.c:373
+msgid "Removing file: "
+msgstr "ගොනුවක් ඉවත් කරමින්:"
+
+#: ../src/fr-command-rar.c:779
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr ""
+
+#: ../src/fr-command-tar.c:382 ../src/fr-window.c:2327
+msgid "Deleting files from archive"
+msgstr "සංරක්‍ෂණයෙන් ගොනු මකන්න"
+
+#: ../src/fr-command-tar.c:486
 msgid "Recompressing archive"
 msgstr "සංරක්‍ෂණය ප්‍රථිසම්පීඩනය"
 
-#: ../src/fr-command-tar.c:561
+#: ../src/fr-command-tar.c:737
 msgid "Decompressing archive"
 msgstr "සංරක්‍ෂණය අසම්පීඩනය"
 
-#: ../src/fr-stock.c:44 ../src/fr-stock.c:45
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
 msgid "_Add"
 msgstr "එක් කරන්න (_A)"
 
-#: ../src/fr-stock.c:46
+#: ../src/fr-stock.c:45
 msgid "_Extract"
 msgstr "විහිදුවන්න (_E)"
 
-#: ../src/fr-stock.c:47
-msgid "_View File"
-msgstr "ගොනුව දර්ශනය කරන්න (_V)"
-
-#: ../src/fr-window.c:1157
+#: ../src/fr-window.c:1519
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "වස්තුන් %d ක් (%s)"
 msgstr[1] "වස්තුන් %d ක් (%s)"
 
-#: ../src/fr-window.c:1162
+#: ../src/fr-window.c:1524
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "වස්තුන් %d ක් තෝරාගන්නා ලදි (%s)"
 msgstr[1] "වස්තුන් %d ක් තෝරාගන්නා ලදි (%s)"
 
-#: ../src/fr-window.c:1264
+#: ../src/fr-window.c:1598
 msgid "Folder"
 msgstr "බහලුම"
 
-#: ../src/fr-window.c:1424
+#: ../src/fr-window.c:1999
 msgid "[read only]"
 msgstr "[කියවීම පමණයි]"
 
-#: ../src/fr-window.c:1681 ../src/fr-window.c:1711
-msgid "Creating archive"
-msgstr "සංරක්‍ෂණ නිර්මාණය වෙමින්"
-
-#: ../src/fr-window.c:1684
-msgid "Loading archive"
-msgstr "සංරක්‍ෂණය පූරණය වෙමින්"
-
-#: ../src/fr-window.c:1687
-msgid "Reading archive"
-msgstr "සංරක්‍ෂණය කියවමින්"
-
-#: ../src/fr-window.c:1693
-msgid "Testing archive"
-msgstr "සංරක්‍ෂණය පරීක්‍ෂාකරමින්"
-
-#: ../src/fr-window.c:1696
-msgid "Getting the file list"
-msgstr "ගොනු ලැයිස්තුව ලබා ගනිමින්"
-
-#: ../src/fr-window.c:1699 ../src/fr-window.c:1708
-msgid "Copying the file list"
-msgstr "ගොනු ලැයිස්තුව පිටපත් වෙමින්"
-
-#: ../src/fr-window.c:1702
-msgid "Adding files to archive"
-msgstr "සංරක්‍ෂණයට ගොනු එක් කරමින්"
-
-#: ../src/fr-window.c:1705
-msgid "Extracting files from archive"
-msgstr "සංරක්‍ෂණයෙන් ගොනු විහිදුවමින්"
-
-#: ../src/fr-window.c:1714
-msgid "Saving archive"
-msgstr "සංරක්‍ෂණය සුරකිමින්"
-
-#: ../src/fr-window.c:1900
-msgid "Archive:"
-msgstr "සංරක්‍ෂණය:"
-
-#: ../src/fr-window.c:1992
-msgid "wait please..."
-msgstr "කරුණාකර රැදී සිටින්න..."
-
-#: ../src/fr-window.c:2060
+#: ../src/fr-window.c:2250
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "\"%s\" බහලුම පෙන්විය නොහැක"
 
-#: ../src/fr-window.c:2140
+#: ../src/fr-window.c:2318 ../src/fr-window.c:2348
+msgid "Creating archive"
+msgstr "සංරක්‍ෂණ නිර්මාණය වෙමින්"
+
+#: ../src/fr-window.c:2321
+msgid "Loading archive"
+msgstr "සංරක්‍ෂණය පූරණය වෙමින්"
+
+#: ../src/fr-window.c:2324
+msgid "Reading archive"
+msgstr "සංරක්‍ෂණය කියවමින්"
+
+#: ../src/fr-window.c:2330
+msgid "Testing archive"
+msgstr "සංරක්‍ෂණය පරීක්‍ෂාකරමින්"
+
+#: ../src/fr-window.c:2333
+msgid "Getting the file list"
+msgstr "ගොනු ලැයිස්තුව ලබා ගනිමින්"
+
+#: ../src/fr-window.c:2336 ../src/fr-window.c:2345
+msgid "Copying the file list"
+msgstr "ගොනු ලැයිස්තුව පිටපත් වෙමින්"
+
+#: ../src/fr-window.c:2339
+msgid "Adding files to archive"
+msgstr "සංරක්‍ෂණයට ගොනු එක් කරමින්"
+
+#: ../src/fr-window.c:2342
+msgid "Extracting files from archive"
+msgstr "සංරක්‍ෂණයෙන් ගොනු විහිදුවමින්"
+
+#: ../src/fr-window.c:2351
+msgid "Saving archive"
+msgstr "සංරක්‍ෂණය සුරකිමින්"
+
+#: ../src/fr-window.c:2508
+msgid "_Open the Archive"
+msgstr ""
+
+#: ../src/fr-window.c:2509
+msgid "_Show the Files"
+msgstr ""
+
+#: ../src/fr-window.c:2557
+msgid "Archive:"
+msgstr "සංරක්‍ෂණය:"
+
+#: ../src/fr-window.c:2719
+msgid "Extraction completed successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2742
+msgid "Archive created successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2790
+msgid "please wait..."
+msgstr ""
+
+#: ../src/fr-window.c:2949
 msgid "An error occurred while extracting files."
 msgstr "ගොනු විහිදීමෙදි දෝෂයක් හටගැනුනි"
 
-#: ../src/fr-window.c:2146
+#: ../src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "\"%s\" විවෘත කළ නොහැක"
 
-#: ../src/fr-window.c:2151
+#: ../src/fr-window.c:2960
 msgid "An error occurred while loading the archive."
 msgstr "සංරක්‍ෂණය පූරණයේදි දෝෂයක් හට ගැනින."
 
-#: ../src/fr-window.c:2155
+#: ../src/fr-window.c:2964
 msgid "An error occurred while deleting files from the archive."
 msgstr "සංරක්‍ෂණයෙන් ගොනු මැකීමේදි දෝෂයක් හට ගැනින."
 
-#: ../src/fr-window.c:2159
+#: ../src/fr-window.c:2970
 msgid "An error occurred while adding files to the archive."
 msgstr "සංරක්‍ෂණයට ගොනු එක් කිරීමේදිදී දෝෂයක් හට ගැනින."
 
-#: ../src/fr-window.c:2163
+#: ../src/fr-window.c:2974
 msgid "An error occurred while testing archive."
 msgstr "සංරක්‍ෂණයට ගොනු එක් පරික්‍ෂාරීරිමේේදි දෝෂයක් හට ගැනින."
 
-#: ../src/fr-window.c:2172
+#: ../src/fr-window.c:2978
+msgid "An error occurred while saving the archive."
+msgstr ""
+
+#: ../src/fr-window.c:2982
+msgid "An error occurred."
+msgstr ""
+
+#: ../src/fr-window.c:2988
 msgid "Command not found."
 msgstr "විධානය හමුවුයේ නැත."
 
-#: ../src/fr-window.c:2175
+#: ../src/fr-window.c:2991
 msgid "Command exited abnormally."
 msgstr "විධානය අසාමාන්‍ය ලෙස අවසන් විය."
 
-#: ../src/fr-window.c:2379
+#: ../src/fr-window.c:3190
 msgid "Test Result"
 msgstr "පරීක්‍ෂණ ප්‍රථිපල"
 
-#: ../src/fr-window.c:2820 ../src/fr-window.c:6131
+#: ../src/fr-window.c:4012 ../src/fr-window.c:7991 ../src/fr-window.c:8020
+#: ../src/fr-window.c:8275
 msgid "Could not perform the operation"
 msgstr "මෙහෙයුම ක්‍රියාත්මක කළ නොහැකි විය"
 
-#: ../src/fr-window.c:2847
+#: ../src/fr-window.c:4038
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
 
-#: ../src/fr-window.c:2877
+#: ../src/fr-window.c:4068
 msgid "Do you want to create a new archive with these files?"
 msgstr ""
 
-#: ../src/fr-window.c:2880
+#: ../src/fr-window.c:4071
 msgid "Create _Archive"
 msgstr "සංරක්‍ෂණය නිර්මාණය කරන්න (_A)"
 
-#: ../src/fr-window.c:3071
-#, c-format
-msgid "Cannot extract archives in a remote folder \"%s\""
+#: ../src/fr-window.c:4667 ../src/fr-window.c:5747
+msgid "Folders"
 msgstr ""
 
-#: ../src/fr-window.c:3263
+#: ../src/fr-window.c:4705
+msgctxt "File"
 msgid "Size"
-msgstr "ප්‍රමාණය"
+msgstr ""
 
-#: ../src/fr-window.c:3264
+#: ../src/fr-window.c:4706
+msgctxt "File"
 msgid "Type"
-msgstr "වර්‍ගය"
+msgstr ""
 
-#: ../src/fr-window.c:3265
+#: ../src/fr-window.c:4707
+msgctxt "File"
 msgid "Date Modified"
-msgstr "වෙනස් කළ දිනය"
+msgstr ""
 
-#: ../src/fr-window.c:3275
+#: ../src/fr-window.c:4708
+msgctxt "File"
+msgid "Location"
+msgstr ""
+
+#: ../src/fr-window.c:4717
+msgctxt "File"
 msgid "Name"
-msgstr "නම"
+msgstr ""
 
-#: ../src/fr-window.c:4140
-msgid "Go to the previous visited location"
-msgstr "මීට පෙර ඇති පෙර ගමන් කළ පිහිටීමට යන්න "
+#: ../src/fr-window.c:5668
+msgid "Find:"
+msgstr ""
 
-#: ../src/fr-window.c:4148
-msgid "Go to the next visited location"
-msgstr "මීලඟට ඇති පෙර ගමන් කළ පිහිටීමට යන්න "
+#: ../src/fr-window.c:5755
+msgid "Close the folders pane"
+msgstr ""
 
-#: ../src/fr-window.c:4156
-msgid "Go up one level"
-msgstr "එක මට්තමක් ඉහලට යන්න"
-
-#: ../src/fr-window.c:4164
-msgid "Go to the home location"
-msgstr "නිවාස පිහිටිමට යන්න"
-
-#: ../src/fr-window.c:4279 ../src/fr-window.c:4282 ../src/ui.h:103
-#: ../src/ui.h:107
+#: ../src/fr-window.c:5899 ../src/fr-window.c:5902 ../src/ui.h:142
+#: ../src/ui.h:146
 msgid "Open archive"
 msgstr "සංරක්‍ෂණය විවෘත කරන්න"
 
-#: ../src/fr-window.c:4280
+#: ../src/fr-window.c:5900
 msgid "Open a recently used archive"
 msgstr "මීට පෙර භැවිත් කළ සංරක්‍ෂණය විවෘත කරන්න"
 
-#: ../src/fr-window.c:4552
+#: ../src/fr-window.c:6227
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "\"%s\" සංරක්‍ෂණය සුරකිමට නොහැකි විය"
 
-#: ../src/fr-window.c:5717
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7394
 msgid "The new name is void."
 msgstr "අලුත් නම සාවද්‍ය වේ."
 
-#: ../src/fr-window.c:5721
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7399
 msgid "The new name is equal to the old one."
 msgstr "අලුත් නම පැරණි නමට සමාන වේ."
 
-#: ../src/fr-window.c:5782
+#: ../src/fr-window.c:7440
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-"\"%s\" බහලුම දැනටමත් ඇත.\n"
-"\n"
-"%s"
+msgstr "\"%s\" බහලුම දැනටමත් ඇත.\n\n%s"
 
-#: ../src/fr-window.c:5784
+#: ../src/fr-window.c:7442
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ""
-" \"%s\" ගොනුව දැනටමත් ඇත.\n"
-"\n"
-"%s"
+msgstr " \"%s\" ගොනුව දැනටමත් ඇත.\n\n%s"
 
-#: ../src/fr-window.c:5822
+#: ../src/fr-window.c:7512
 msgid "Rename"
 msgstr "නම වෙනස් කරන්න"
 
-#: ../src/fr-window.c:5823
+#: ../src/fr-window.c:7513
 msgid "New folder name"
 msgstr "නව බහලුම් නාමය"
 
-#: ../src/fr-window.c:5823
+#: ../src/fr-window.c:7513
 msgid "New file name"
 msgstr "නව ගොනු නාමය"
 
-#: ../src/fr-window.c:5827
+#: ../src/fr-window.c:7517
 msgid "_Rename"
 msgstr "නම වෙනස් කරන්න (_R)"
 
-#: ../src/fr-window.c:5843 ../src/fr-window.c:5869
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the folder"
 msgstr "බහලුමේ නම වෙනස් කළ නොහැකි විය"
 
-#: ../src/fr-window.c:5843 ../src/fr-window.c:5869
+#: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the file"
 msgstr "ගොනුවේ නම වෙනස් කළ නොහැකි විය"
 
-#: ../src/fr-window.c:6045
+#: ../src/fr-window.c:7952
 msgid "Paste Selection"
 msgstr "තෝරාගත් කොටස අලවන්න"
 
-#: ../src/fr-window.c:6046
+#: ../src/fr-window.c:7953
 msgid "Destination folder"
 msgstr "අනිත් අන්තයේ බහලුම"
 
-#: ../src/fr-window.c:6456
+#: ../src/fr-window.c:8545
 msgid "Add files to an archive"
 msgstr "සංරක්‍ෂණය සඳහා ගොනු ඇතුලත් කරන්න"
 
-#: ../src/fr-window.c:6499
+#: ../src/fr-window.c:8589
 msgid "Extract archive"
 msgstr "සංරක්‍ෂණය විසුරුවන්න"
 
-#: ../src/glib-utils.c:515
-msgid "%d %B %Y"
-msgstr "%d %B %Y"
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:560
+msgid "%d %B %Y, %H:%M"
+msgstr ""
 
-#. Button
-#: ../src/gtk-utils.c:439
+#. Expander
+#: ../src/gtk-utils.c:447
 msgid "Command _Line Output"
 msgstr "රේඛිය විධාන ප්‍රථිධානය (_L)"
 
-#: ../src/main.c:66
-msgid "Ace (.ace)"
-msgstr "Ace (.ace)"
-
-#: ../src/main.c:67
-msgid "Ar (.ar)"
-msgstr "Ar (.ar)"
-
-#: ../src/main.c:68
-msgid "Arj (.arj)"
-msgstr "Arj (.arj)"
-
-#: ../src/main.c:75
-msgid "Ear (.ear)"
-msgstr "Ear (.ear)"
-
-#: ../src/main.c:76
-msgid "Self-extracting zip (.exe)"
-msgstr "තනිව දිගහැරේන zip (.exe)"
-
-#: ../src/main.c:78
-msgid "Jar (.jar)"
-msgstr "Jar (.jar)"
-
-#: ../src/main.c:79
-msgid "Lha (.lzh)"
-msgstr "Lha (.lzh)"
-
-#: ../src/main.c:81
-msgid "Rar (.rar)"
-msgstr "Rar (.rar)"
-
-#: ../src/main.c:83
-msgid "Tar uncompressed (.tar)"
-msgstr "සම්පීඩිත නොවු Tar (.tar)"
-
-#: ../src/main.c:84
-msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "bzip සමඟ සම්පීඩිත Tar (.tar.bz)"
+#: ../src/gtk-utils.c:784
+msgid "Could not display help"
+msgstr "සහාය දර්ශනය කළ නොහැක"
 
 #: ../src/main.c:85
-msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "bzip2 සමඟ සම්පීඩිත Tar (.tar.bz2)"
-
-#: ../src/main.c:86
-msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "gzip සමඟ සම්පීඩිත Tar (.tar.gz)"
-
-#: ../src/main.c:87
-msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "lzop සමඟ සම්පීඩිත Tar (.tar.lzo)"
-
-#: ../src/main.c:88
-msgid "Tar compressed with compress (.tar.Z)"
-msgstr "compress සමඟ සම්පීඩිත Tar (.tar.Z)"
-
-#: ../src/main.c:90
-msgid "War (.war)"
-msgstr "War (.war)"
-
-#: ../src/main.c:91
-msgid "Zip (.zip)"
-msgstr "Zip (.zip)"
-
-#: ../src/main.c:92
-msgid "Zoo (.zoo)"
-msgstr "Zoo (.zoo)"
-
-#: ../src/main.c:93
 msgid "7-Zip (.7z)"
 msgstr "7-Zip (.7z)"
 
-#: ../src/main.c:142
+#: ../src/main.c:86
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr ""
+
+#: ../src/main.c:87
+msgid "Ace (.ace)"
+msgstr "Ace (.ace)"
+
+#: ../src/main.c:89
+msgid "Ar (.ar)"
+msgstr "Ar (.ar)"
+
+#: ../src/main.c:90
+msgid "Arj (.arj)"
+msgstr "Arj (.arj)"
+
+#: ../src/main.c:92
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr "bzip2 සමඟ සම්පීඩිත Tar (.tar.bz2)"
+
+#: ../src/main.c:94
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr "bzip සමඟ සම්පීඩිත Tar (.tar.bz)"
+
+#: ../src/main.c:95
+msgid "Cabinet (.cab)"
+msgstr ""
+
+#: ../src/main.c:96
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr ""
+
+#: ../src/main.c:97
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr ""
+
+#: ../src/main.c:100
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr "gzip සමඟ සම්පීඩිත Tar (.tar.gz)"
+
+#: ../src/main.c:103
+msgid "Ear (.ear)"
+msgstr "Ear (.ear)"
+
+#: ../src/main.c:104
+msgid "Self-extracting zip (.exe)"
+msgstr "තනිව දිගහැරේන zip (.exe)"
+
+#: ../src/main.c:106
+msgid "Jar (.jar)"
+msgstr "Jar (.jar)"
+
+#: ../src/main.c:107
+msgid "Lha (.lzh)"
+msgstr "Lha (.lzh)"
+
+#: ../src/main.c:108
+msgid "Lrzip (.lrz)"
+msgstr ""
+
+#: ../src/main.c:109
+msgid "Tar compressed with lrzip (.tar.lrz)"
+msgstr ""
+
+#: ../src/main.c:111
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr ""
+
+#: ../src/main.c:113
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr ""
+
+#: ../src/main.c:115
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr "lzop සමඟ සම්පීඩිත Tar (.tar.lzo)"
+
+#: ../src/main.c:116
+msgid "Windows Imaging Format (.wim)"
+msgstr ""
+
+#: ../src/main.c:117
+msgid "Rar (.rar)"
+msgstr "Rar (.rar)"
+
+#: ../src/main.c:120
+msgid "Tar uncompressed (.tar)"
+msgstr "සම්පීඩිත නොවු Tar (.tar)"
+
+#: ../src/main.c:121
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr "compress සමඟ සම්පීඩිත Tar (.tar.Z)"
+
+#: ../src/main.c:123
+msgid "War (.war)"
+msgstr "War (.war)"
+
+#: ../src/main.c:124
+msgid "Xz (.xz)"
+msgstr ""
+
+#: ../src/main.c:125
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr ""
+
+#: ../src/main.c:126
+msgid "Zoo (.zoo)"
+msgstr "Zoo (.zoo)"
+
+#: ../src/main.c:127
+msgid "Zip (.zip)"
+msgstr "Zip (.zip)"
+
+#: ../src/main.c:197
 msgid "Add files to the specified archive and quit the program"
 msgstr "විශේෂිතව දැක්වු සංරක්‍ෂණයට ගොනු එක්කර වැඩසටහනින් ඉවත්වන්න"
 
-#: ../src/main.c:143
+#: ../src/main.c:198
 msgid "ARCHIVE"
 msgstr "ARCHIVE"
 
-#: ../src/main.c:146
+#: ../src/main.c:201
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 
-#: ../src/main.c:150
+#: ../src/main.c:205
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 
-#: ../src/main.c:151 ../src/main.c:163
+#: ../src/main.c:206 ../src/main.c:218
 msgid "FOLDER"
 msgstr "FOLDER"
 
-#: ../src/main.c:154
+#: ../src/main.c:209
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 
-#: ../src/main.c:158
+#: ../src/main.c:213
 msgid ""
-"Extract archives using the archive name as destination folder and quit the "
+"Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr ""
 
-#: ../src/main.c:162
+#: ../src/main.c:217
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 
-#: ../src/main.c:166
+#: ../src/main.c:221
 msgid "Create destination folder without asking confirmation"
 msgstr ""
 
-#: ../src/main.c:223
+#: ../src/main.c:303
+msgid "- Create and modify an archive"
+msgstr ""
+
+#: ../src/main.c:319
 msgid "Engrampa"
 msgstr "ගොනු සංරක්‍ෂණය"
 
-#: ../src/ui.h:34
+#: ../src/ui.h:32
 msgid "_Archive"
 msgstr "සංරක්‍ෂණය (_A)"
 
-#: ../src/ui.h:35
+#: ../src/ui.h:33
 msgid "_Edit"
 msgstr "සකසන්න (_E)"
 
-#: ../src/ui.h:36
+#: ../src/ui.h:34
 msgid "_View"
 msgstr "දසුන (_V)"
 
-#: ../src/ui.h:37
+#: ../src/ui.h:35
 msgid "_Help"
 msgstr "උදව් (_H)"
 
-#: ../src/ui.h:38
+#: ../src/ui.h:36
 msgid "_Arrange Files"
 msgstr "ගොනු පිළිවෙලට සකසන්න (_A)"
 
-#: ../src/ui.h:39
-msgid "Open R_ecent"
-msgstr "මීට පෙර භාවිතයන් විවෘත කරන්න (_e)"
+#. Translators: this is the label for the "open recent file" sub-menu.
+#: ../src/ui.h:38
+msgid "Open _Recent"
+msgstr ""
 
-#: ../src/ui.h:43
+#: ../src/ui.h:42
 msgid "Information about the program"
 msgstr "ක්‍රමලේඛය පිළිබද තොරතුරු"
 
-#: ../src/ui.h:46
+#: ../src/ui.h:45
 msgid "_Add Files..."
 msgstr "ගොනු එක් කරන්න... (_A)"
 
-#: ../src/ui.h:47 ../src/ui.h:51
+#: ../src/ui.h:46 ../src/ui.h:50
 msgid "Add files to the archive"
 msgstr "සංරක්‍ෂණයට ගොනු එක්කරන්න"
 
-#: ../src/ui.h:54
+#: ../src/ui.h:53
 msgid "Add a _Folder..."
 msgstr "බහලුමක් එක් කරන්න... (_F)"
 
-#: ../src/ui.h:55 ../src/ui.h:59
+#: ../src/ui.h:54 ../src/ui.h:58
 msgid "Add a folder to the archive"
 msgstr ""
 
-#: ../src/ui.h:58
+#: ../src/ui.h:57
 msgid "Add Folder"
 msgstr "බහලුමක් එක් කරන්න"
 
-#: ../src/ui.h:63
+#: ../src/ui.h:62
 msgid "Close the current archive"
 msgstr ""
 
-#: ../src/ui.h:66
+#: ../src/ui.h:65
 msgid "Contents"
 msgstr "අදහස"
 
-#: ../src/ui.h:67
+#: ../src/ui.h:66
 msgid "Display the Engrampa Manual"
 msgstr ""
 
-#: ../src/ui.h:71
+#: ../src/ui.h:71 ../src/ui.h:92
 msgid "Copy the selection"
 msgstr "තෝරාගත් කොටස අලවන්න"
 
-#: ../src/ui.h:75
+#: ../src/ui.h:75 ../src/ui.h:96
 msgid "Cut the selection"
 msgstr "තෝරාගත් කොටස කපන්න"
 
-#: ../src/ui.h:79
-msgid "Delete the selection from the archive"
-msgstr ""
-
-#: ../src/ui.h:82
-msgid "Dese_lect All"
-msgstr "තෝරාගත් සියල්ල අත්හරින්න (_l)"
-
-#: ../src/ui.h:83
-msgid "Deselect all files"
-msgstr "තෝරාගත් ගොනු සියල්ල අත්හරින්න"
-
-#: ../src/ui.h:86
-msgid "_Extract..."
-msgstr "විසුරුවන්න... (_E)"
-
-#: ../src/ui.h:87 ../src/ui.h:91
-msgid "Extract files from the archive"
-msgstr ""
-
-#: ../src/ui.h:94
-msgid "_Last Output"
-msgstr "අවසාන ප්‍රථිධානය (_L)"
-
-#: ../src/ui.h:95
-msgid "View the output produced by the last executed command"
-msgstr ""
-
-#: ../src/ui.h:99
-msgid "Create a new archive"
-msgstr "නව සංරක්‍ෂණයක් නිර්මාණය කරන්න"
-
-#: ../src/ui.h:110
-msgid "Op_en With..."
-msgstr "සමඟ විවෘත කරන්න... (_e)"
-
-#: ../src/ui.h:111
-msgid "Open selected files with an application"
-msgstr "තෝරාගත් ගොනු යෙදුමක් සමඟ විවෘත කරන්න"
-
-#: ../src/ui.h:114
-msgid "Pass_word..."
-msgstr "රහස්පදය... (_w)"
-
-#: ../src/ui.h:115
-msgid "Specify a password for this archive"
-msgstr ""
-
-#: ../src/ui.h:119
+#: ../src/ui.h:79 ../src/ui.h:100
 msgid "Paste the clipboard"
 msgstr ""
 
-#: ../src/ui.h:123
-msgid "Show archive properties"
-msgstr "සංරක්‍ෂණ වත්කම් පෙන්වන්න"
-
-#: ../src/ui.h:127
-msgid "Reload current archive"
-msgstr "දැනට භාවිතයේ ඇති සංරක්‍ෂණය ප්‍රථිපූරණය කරන්න"
-
-#: ../src/ui.h:130
+#: ../src/ui.h:82 ../src/ui.h:103
 msgid "_Rename..."
 msgstr "නම වෙනස් කරන්න... (_R)"
 
-#: ../src/ui.h:131
+#: ../src/ui.h:83 ../src/ui.h:104
 msgid "Rename the selection"
 msgstr "තේරීමෙ නම වෙනස්කරන්න"
 
-#: ../src/ui.h:135
-msgid "Save the current archive with a different name"
+#: ../src/ui.h:87 ../src/ui.h:108
+msgid "Delete the selection from the archive"
+msgstr ""
+
+#: ../src/ui.h:112
+msgid "Dese_lect All"
+msgstr "තෝරාගත් සියල්ල අත්හරින්න (_l)"
+
+#: ../src/ui.h:113
+msgid "Deselect all files"
+msgstr "තෝරාගත් ගොනු සියල්ල අත්හරින්න"
+
+#: ../src/ui.h:116 ../src/ui.h:120
+msgid "_Extract..."
+msgstr "විසුරුවන්න... (_E)"
+
+#: ../src/ui.h:117 ../src/ui.h:121 ../src/ui.h:125
+msgid "Extract files from the archive"
+msgstr ""
+
+#: ../src/ui.h:128
+msgid "Find..."
+msgstr ""
+
+#: ../src/ui.h:133
+msgid "_Last Output"
+msgstr "අවසාන ප්‍රථිධානය (_L)"
+
+#: ../src/ui.h:134
+msgid "View the output produced by the last executed command"
+msgstr ""
+
+#: ../src/ui.h:137
+msgid "New..."
 msgstr ""
 
 #: ../src/ui.h:138
-msgid "Select _All"
-msgstr "සියල්ල තෝරන්න (_A)"
+msgid "Create a new archive"
+msgstr "නව සංරක්‍ෂණයක් නිර්මාණය කරන්න"
 
-#: ../src/ui.h:139
+#: ../src/ui.h:141
+msgid "Open..."
+msgstr ""
+
+#: ../src/ui.h:149
+msgid "_Open With..."
+msgstr ""
+
+#: ../src/ui.h:150
+msgid "Open selected files with an application"
+msgstr "තෝරාගත් ගොනු යෙදුමක් සමඟ විවෘත කරන්න"
+
+#: ../src/ui.h:153
+msgid "Pass_word..."
+msgstr "රහස්පදය... (_w)"
+
+#: ../src/ui.h:154
+msgid "Specify a password for this archive"
+msgstr ""
+
+#: ../src/ui.h:158
+msgid "Show archive properties"
+msgstr "සංරක්‍ෂණ වත්කම් පෙන්වන්න"
+
+#: ../src/ui.h:162
+msgid "Reload current archive"
+msgstr "දැනට භාවිතයේ ඇති සංරක්‍ෂණය ප්‍රථිපූරණය කරන්න"
+
+#: ../src/ui.h:165
+msgid "Save As..."
+msgstr ""
+
+#: ../src/ui.h:166
+msgid "Save the current archive with a different name"
+msgstr ""
+
+#: ../src/ui.h:170
 msgid "Select all files"
 msgstr "ගොනු සියල්ල තෝරන්න"
 
-#: ../src/ui.h:143
+#: ../src/ui.h:174
 msgid "Stop current operation"
 msgstr "දැනට ක්‍රියාත්මක වන මෙහෙයුම නවතන්න"
 
-#: ../src/ui.h:146
+#: ../src/ui.h:177
 msgid "_Test Integrity"
 msgstr ""
 
-#: ../src/ui.h:147
+#: ../src/ui.h:178
 msgid "Test whether the archive contains errors"
 msgstr ""
 
-#: ../src/ui.h:151 ../src/ui.h:155
-msgid "View the selected file"
-msgstr "තෝරාගත් ගොනු දර්ශනය කරන්න"
+#: ../src/ui.h:182 ../src/ui.h:186
+msgid "Open the selected file"
+msgstr ""
 
-#: ../src/ui.h:159
+#: ../src/ui.h:190 ../src/ui.h:194
 msgid "Open the selected folder"
 msgstr "තෝරාගත් බහලුම විවෘත කරන්න"
 
-#: ../src/ui.h:167
+#: ../src/ui.h:199
+msgid "Go to the previous visited location"
+msgstr "මීට පෙර ඇති පෙර ගමන් කළ පිහිටීමට යන්න "
+
+#: ../src/ui.h:203
+msgid "Go to the next visited location"
+msgstr "මීලඟට ඇති පෙර ගමන් කළ පිහිටීමට යන්න "
+
+#: ../src/ui.h:207
+msgid "Go up one level"
+msgstr "එක මට්තමක් ඉහලට යන්න"
+
+#. Translators: the home location is the home folder.
+#: ../src/ui.h:212
+msgid "Go to the home location"
+msgstr "නිවාස පිහිටිමට යන්න"
+
+#: ../src/ui.h:220
 msgid "_Toolbar"
 msgstr "මෙවලම්තීරුව (_T)"
 
-#: ../src/ui.h:168
+#: ../src/ui.h:221
 msgid "View the main toolbar"
 msgstr ""
 
-#: ../src/ui.h:172
+#: ../src/ui.h:225
 msgid "Stat_usbar"
 msgstr ""
 
-#: ../src/ui.h:173
+#: ../src/ui.h:226
 msgid "View the statusbar"
 msgstr ""
 
-#: ../src/ui.h:177
+#: ../src/ui.h:230
 msgid "_Reversed Order"
 msgstr ""
 
-#: ../src/ui.h:178
+#: ../src/ui.h:231
 msgid "Reverse the list order"
 msgstr ""
 
-#: ../src/ui.h:187
+#: ../src/ui.h:235
+msgid "_Folders"
+msgstr ""
+
+#: ../src/ui.h:236
+msgid "View the folders pane"
+msgstr ""
+
+#: ../src/ui.h:245
 msgid "View All _Files"
 msgstr "සියළුම ගොනු දර්ශනය කරන්න (_F)"
 
-#: ../src/ui.h:190
+#: ../src/ui.h:248
 msgid "View as a F_older"
 msgstr "බහලුමක් ලෙස දර්ශනය කරන්න (_o)"
 
-#: ../src/ui.h:198
+#: ../src/ui.h:256
 msgid "by _Name"
 msgstr "නමින් (_N)"
 
-#: ../src/ui.h:199
+#: ../src/ui.h:257
 msgid "Sort file list by name"
 msgstr ""
 
-#: ../src/ui.h:201
+#: ../src/ui.h:259
 msgid "by _Size"
 msgstr "විශාලත්වයෙන් (_S)"
 
-#: ../src/ui.h:202
+#: ../src/ui.h:260
 msgid "Sort file list by file size"
 msgstr ""
 
-#: ../src/ui.h:204
+#: ../src/ui.h:262
 msgid "by T_ype"
 msgstr "වර්‍ගයෙන් (_y)"
 
-#: ../src/ui.h:205
+#: ../src/ui.h:263
 msgid "Sort file list by type"
 msgstr ""
 
-#: ../src/ui.h:207
-msgid "by _Date modified"
-msgstr "වෙනස් කළ දිනයෙන් (_D)"
+#: ../src/ui.h:265
+msgid "by _Date Modified"
+msgstr ""
 
-#: ../src/ui.h:208
+#: ../src/ui.h:266
 msgid "Sort file list by modification time"
 msgstr ""
 
-#: ../src/ui.h:210
+#. Translators: this is the "sort by file location" menu item
+#: ../src/ui.h:269
 msgid "by _Location"
 msgstr "පිහිටීමෙන් (_L)"
 
-#: ../src/ui.h:211
+#. Translators: location is the file location
+#: ../src/ui.h:271
 msgid "Sort file list by location"
 msgstr ""
-
