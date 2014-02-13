@@ -25,6 +25,7 @@ EXTRA_DIST = 			\
 	HACKING			\
 	MAINTAINERS		\
 	NEWS			\
+	NEWS.gnome		\
 	README			\
 	autogen.sh		\
 	engrampa.spec	\
