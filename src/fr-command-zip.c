@@ -323,8 +323,8 @@ fr_command_zip_extract (FrCommand  *comm,
 		fr_process_add_arg (comm->process, "-j");
 	add_password_arg (comm, comm->password);
 
-	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_add_arg (comm->process, "--");
+	fr_process_add_arg (comm->process, comm->filename);
 
 	for (scan = file_list; scan; scan = scan->next) {
 		char *escaped;
