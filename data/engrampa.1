@@ -1,5 +1,6 @@
 .\" Copyright (C) 2007 Sven Arvidsson <sa@whiz.se>
-.\"
+.\" Copyright (C) 2014 The MATE Desktop Environment
+.\" 
 .\" This is free software; you may redistribute it and/or modify
 .\" it under the terms of the GNU General Public License as
 .\" published by the Free Software Foundation; either version 2,
@@ -13,55 +14,87 @@
 .\"You should have received a copy of the GNU General Public License along
 .\"with this program; if not, write to the Free Software Foundation, Inc.,
 .\"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-.TH engrampa 1 "2014\-01\-17" "MATE"
-.SH NAME
-engrampa \- archive manager for MATE
-.SH SYNOPSIS
-.B engrampa
-.RI [ OPTIONS... ]
-.RI [ FILE... ]
-.SH DESCRIPTION
-Engrampa is a graphical interface to archiving utilities such as
-tar and zip. It is a fork of File Roller. 
-.P 
-It supports most common operations such as creating, modifing and
-extracting files from an archive. You can also view the contents of an
-archive and open files contained in the archive.
-.SH OPTIONS
+.\"
+.\" Man page for Engrampa
+.TH ENGRAMPA 1 "1 February 2014" "MATE Desktop Environment"
+.\" Please adjust this date when revising the manpage.
+.\"
+.SH "NAME"
+Engrampa \- Archive Manager for MATE
+.SH "SYNOPSIS"
+.B engrampa [OPTIONS...] [FILES...]
+.SH "DESCRIPTION"
+Engrampa is the official archive manager for the MATE Desktop Environment, it is a graphical front-end to archiving utilities such as tar and zip. It is a fork of File Roller.
+.TP 
+Engrampa supports most common operations such as creating, modifing and extracting files from an archive. You can also view the contents of an archive and open files contained within the archive.
 .TP
-.B \-a, \-\-add\-to=ARCHIVE 
+This manual page briefly documents the \fBengrampa\fR command.
+
+.SH "OPTIONS"
+.TP
+\fBfilename(s)...\fR
+Specifies the archive file to open when \fBengrampa\fR starts. If this is not specified, \fBengrampa\fR will start with a blank window and you may open an archive from the menu or by using the shortcut CTRL+O.
+.TP
+\fB\-a, \-\-add\-to=ARCHIVE\fR
 Add files to the specified archive and quit the program
 .TP
-.B \-d, \-\-add FILE
+\fB\-d, \-\-add FILE\fR
 Add files asking the name of the archive and quit the program
 .TP
-.B \-e, \-\-extract\-to=FOLDER
+\fB\-e, \-\-extract\-to=FOLDER\fR
 Extract archives to the specified folder and quit the program
 .TP
-.B \-f, \-\-extract 
+\fB\-f, \-\-extract\fR
 Extract archives asking the destination folder and quit the program
 .TP
-.B \-h, \-\-extract\-here 
+\fB\-h, \-\-extract\-here\fR
 Extract archives using the archive name as destination folder and quit the program
 .TP
-.B \-\-default\-dir=FOLDER
+\fB\-\-default\-dir=FOLDER\fR
 Default folder to use for the '\-\-add' and '\-\-extract' commands
 .TP
-.B \-\-force
+\fB\-\-force\fR
 Create destination folder without asking confirmation
+.TP
+\fB\-\-display=DISPLAY\fR
+X display to use.
+.TP
+\fB\-?, \-\-help\fR
+Print standard command line options.
+.TP
+\fB\-\-help\-all\fR
+Print all command line options.
 .P
 This program also accepts the standard GTK options.
-.SH AUTHORS
-.B engrampa
-is written by Paolo Bacchilega <paolo.bacch@tin.it> and Perberos
-<perberos@gmail.com>.
-.P
-This manual page was written by Sven Arvidsson <sa@whiz.se>,
-for the Debian project (but may be used by others) for File Roller and
-adapted for Engrampa by Stefano Karapetsas <stefano@karapetsas.com>.
-.SH SEE ALSO
-.BR "gtk-options" (7),
-.P
-The online documentation available through the program's
-.I Help
-menu.
+
+.SH "EXAMPLES"
+\fBengrampa \-h matelivecd.iso\fR
+.RS 4
+Extract matelivecd.iso to ./matelivecd in the current working directory.
+.RE
+.PP
+\fBengrampa ./matelivecd/* -a matelivecd.tar.gz\fR
+.RS 4
+Create a new gzip compressed tarball archive named matelivecd.tar.gz, containing all the files located in the ./matelivecd directory.
+.RE
+.PP
+\fBengrampa matelivecd.tar.gz\fR
+.RS 4
+Open matelivecd.tar.gz to view and manipulate its contents.
+
+.SH "BUGS"
+.SS Should you encounter any bugs, they may be reported at: 
+http://github.com/mate-desktop/engrampa/issues
+.SH "AUTHORS"
+.SS \fBEngrampa\fR is written by Paolo Bacchilega <paolo.bacch@tin.it> and Perberos <perberos@gmail.com>.
+.SS This Man Page has been updated/re-written for the MATE Desktop Environment by:
+.nf
+Stefano Karapetsas <stefano@karapetsas.com> (2014)
+Adam Erdman <hekel@archlinux.info> (2014)
+.fi
+.SH "HISTORY"
+This manual page was originally written for the Debian Project by Sven Arvidsson <sa@whiz.se>, for File Roller. (2007)
+.SH "SEE ALSO"
+.SS
+Engrampa documentation can be found from the "Help" menu, or by pressing the F1 key. 
+Further information may also be available at: http://wiki.mate-desktop.org/docs
