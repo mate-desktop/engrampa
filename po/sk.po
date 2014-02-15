@@ -4,18 +4,20 @@
 # 
 # Translators:
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2013
-# Marcel Telka <marcel@telka.sk>, 2005, 2006, 2010
+# Marcel Telka <marcel@telka.sk>, 2005-2006,2010
+# Peter  Mráz <etkinator@gmail.com>, 2010
 # Peter  Mráz <etkinator@gmail.com>, 2010
 # Peter Tuhársky <tuharsky@misbb.sk>, 2007
 # Stanislav Visnovsky <visnovsky@kde.org>, 2003
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2004
+# tibbi <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-09 18:21+0100\n"
-"PO-Revision-Date: 2014-02-09 18:19+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-02-12 21:20+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,12 +28,12 @@ msgstr ""
 #: ../copy-n-paste/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "Súbor nie je platný .desktop súbor"
+msgstr "Súbor nie je platným .desktop súborom"
 
 #: ../copy-n-paste/eggdesktopfile.c:190
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Nerozpoznaná verzia '%s' súboru pracovnej plochy"
+msgstr "Nerozpoznaná verzia „%s“ súboru pracovnej plochy"
 
 #: ../copy-n-paste/eggdesktopfile.c:960
 #, c-format
@@ -41,17 +43,17 @@ msgstr "Spúšťa sa %s"
 #: ../copy-n-paste/eggdesktopfile.c:1102
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Aplikácia neprijíma dokumenty v príkazovom riadku"
+msgstr "Aplikácia neprijíma dokumenty z príkazového riadka"
 
 #: ../copy-n-paste/eggdesktopfile.c:1170
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Nerozpoznaná spúšťacia voľba: %d"
+msgstr "Nerozpoznaná spúšťacia možnosť: %d"
 
 #: ../copy-n-paste/eggdesktopfile.c:1375
 #, c-format
 msgid "Can't pass documents to this desktop element"
-msgstr "Dokumenty nemôžte odovzdať tomuto prvku pracovnej plochy"
+msgstr "Dokumenty nemôžete odovzdať tomuto prvku pracovnej plochy"
 
 #: ../copy-n-paste/eggdesktopfile.c:1394
 #, c-format
@@ -60,7 +62,7 @@ msgstr "Nespustiteľná položka"
 
 #: ../copy-n-paste/eggsmclient.c:225
 msgid "Disable connection to session manager"
-msgstr "Zakázať spojenie so správcom relácie"
+msgstr "Zrušiť spojenie so správcom relácie"
 
 #: ../copy-n-paste/eggsmclient.c:228
 msgid "Specify file containing saved configuration"
@@ -72,23 +74,23 @@ msgstr "SÚBOR"
 
 #: ../copy-n-paste/eggsmclient.c:231
 msgid "Specify session management ID"
-msgstr "Zadať identifikátor správy relácie"
+msgstr "Zadať identifikátor správy relácií"
 
 #: ../copy-n-paste/eggsmclient.c:231
 msgid "ID"
-msgstr "IDENTIFIKÁTOR"
+msgstr "ID"
 
 #: ../copy-n-paste/eggsmclient.c:252
 msgid "Session management options:"
-msgstr "Voľby správy relácie:"
+msgstr "Možnosti správy relácie:"
 
 #: ../copy-n-paste/eggsmclient.c:253
 msgid "Show session management options"
-msgstr "Zobraziť voľby správy relácie"
+msgstr "Zobraziť možnosti správy relácie"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
-msgstr ""
+msgstr "Správca archívov Engrampa"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1991
 #: ../src/fr-window.c:5419
@@ -183,7 +185,7 @@ msgstr "_Dostupná aplikácia:"
 
 #: ../data/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
-msgstr "N_edávne aplikácie:"
+msgstr "N_edávno použité aplikácie:"
 
 #: ../data/ui/open-with.ui.h:4
 msgid "_Application:"
@@ -228,7 +230,7 @@ msgstr "Rozbaliť sem"
 #. Translators: the current position is the current folder
 #: ../caja/caja-engrampa.c:316
 msgid "Extract the selected archive to the current position"
-msgstr "Rozbaliť vybratý archív v aktuálnom umiestnení"
+msgstr "Rozbaliť vybraný archív v aktuálnom umiestnení"
 
 #: ../caja/caja-engrampa.c:333
 msgid "Extract To..."
@@ -255,7 +257,7 @@ msgstr "Nepodarilo sa vytvoriť archív"
 
 #: ../src/actions.c:159 ../src/dlg-batch-add.c:173 ../src/dlg-batch-add.c:309
 msgid "You have to specify an archive name."
-msgstr "Máte zadať názov archívu."
+msgstr "Musíte zadať názov archívu."
 
 #: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
@@ -293,7 +295,7 @@ msgid ""
 "the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
-msgstr "Engrampa je slobodný softvér; môžete ho redistribuovať a/alebo modifikovať za podmienok GNU General Public License publikovaných Free Software Foundation; a to buď verzie licencie 2, alebo (podľa vášho uváženia) ľubovoľnej novšej verzie."
+msgstr "Engrampa je slobodný softvér; môžete ho šíriť a/alebo modifikovať za podmienok GNU General Public License publikovaných Free Software Foundation; a to buď verzie licencie 2, alebo (podľa vášho zváženia) ľubovoľnej novšej verzie."
 
 #: ../src/actions.c:864
 msgid ""
@@ -301,14 +303,14 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
-msgstr "Engrampa je distribuovaný v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY a to ani bez predpokladanej záruky PREDAJNOSTI,  alebo VHODNOSTI PRE KONKRÉTNY ÚČEL. Ďalšie podrobnosti nájdete v GNU General Public License."
+msgstr "Engrampa je distribuovaný v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY a to ani bez záruky PREDAJNOSTI, alebo VHODNOSTI PRE KONKRÉTNY ÚČEL. Ďalšie podrobnosti nájdete v GNU General Public License."
 
 #: ../src/actions.c:868
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Kópiu GNU General Public License ste mali dostať spolu s aplikáciou File Roller; ak sa tak nestalo, napíšte na Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA"
+msgstr "Kópiu GNU General Public License ste mali dostať spolu s aplikáciou File Roller; ak sa tak nestalo, napíšte na Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #: ../src/actions.c:878
 msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
@@ -320,7 +322,7 @@ msgstr "Správca archívov pre MATE."
 
 #: ../src/actions.c:882
 msgid "translator-credits"
-msgstr "Stanislav Višňovský\nMarcel Telka <marcel@telka.sk>\nPeter Tuhársky <tuharsky@misbb.sk>\nPeter Mráz <etkinator@gmail.com>\nJán Ďanovský <dagsoftware@yahoo.com>"
+msgstr "Stanislav Višňovský\nMarcel Telka <marcel@telka.sk>\nPeter Tuhársky <tuharsky@misbb.sk>\nPeter Mráz <etkinator@gmail.com>\nJán Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>"
 
 #: ../src/dlg-add-files.c:100 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -329,7 +331,7 @@ msgstr "Nepodarilo sa pridať súbory do archívu"
 #: ../src/dlg-add-files.c:101 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
-msgstr "Nemáte dostatočné oprávnenia na čítanie súborov z priečinka \"%s\""
+msgstr "Nemáte dostatočné oprávnenia na čítanie súborov z priečinka „%s“"
 
 #: ../src/dlg-add-files.c:149 ../src/ui.h:49
 msgid "Add Files"
@@ -380,11 +382,11 @@ msgstr "_Uložiť nastavenia"
 
 #: ../src/dlg-add-folder.c:262
 msgid "_Reset Options"
-msgstr "_Obnoviť voľby"
+msgstr "_Resetovať možnosti"
 
 #: ../src/dlg-add-folder.c:890
 msgid "Save Options"
-msgstr "Uložiť nastavenia"
+msgstr "Uložiť možnosti"
 
 #: ../src/dlg-add-folder.c:891
 msgid "Options Name:"
@@ -393,7 +395,7 @@ msgstr "Názov pre nastavenia:"
 #: ../src/dlg-ask-password.c:124
 #, c-format
 msgid "Enter the password for the archive '%s'."
-msgstr "Zadať heslo pre archív '%s'."
+msgstr "Zadajte heslo pre archív „%s“."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -403,7 +405,7 @@ msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
 "\n"
 "%s"
-msgstr "Názov \"%s\" nie je platný, pretože nemôže obsahovať znaky: %s\n\n%s"
+msgstr "Názov „%s“ nie je platný, pretože nemôže obsahovať znaky: %s\n\n%s"
 
 #: ../src/dlg-batch-add.c:191 ../src/fr-window.c:7394 ../src/fr-window.c:7399
 #: ../src/fr-window.c:7404 ../src/fr-window.c:7440 ../src/fr-window.c:7442
@@ -422,7 +424,7 @@ msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr "Cieľový priečinok \"%s\" neexistuje.\n\nChcete ho vytvoriť?"
+msgstr "Cieľový priečinok „%s“ neexistuje.\n\nChcete ho vytvoriť?"
 
 #: ../src/dlg-batch-add.c:243 ../src/dlg-extract.c:112 ../src/fr-window.c:6665
 msgid "Create _Folder"
@@ -455,7 +457,7 @@ msgstr "Rozbalenie sa neuskutočnilo"
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
-msgstr "Nemáte dostatočné oprávnenia na rozbalenie archívu v priečinku \"%s\"."
+msgstr "Nemáte dostatočné oprávnenia na rozbalenie archívu v priečinku „%s“."
 
 #: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
 msgid "Extract"
@@ -463,7 +465,7 @@ msgstr "Rozbaliť"
 
 #: ../src/dlg-extract.c:381
 msgid "Actions"
-msgstr "Akcie"
+msgstr "Operácie"
 
 #: ../src/dlg-extract.c:397
 msgid "Re-crea_te folders"
@@ -544,12 +546,12 @@ msgstr "Počet súborov:"
 #: ../src/dlg-update.c:164
 #, c-format
 msgid "Update the file \"%s\" in the archive \"%s\"?"
-msgstr "Aktualizovať súbor \"%s\" v archíve \"%s\"?"
+msgstr "Aktualizovať súbor „%s“ v archíve „%s“?"
 
 #: ../src/dlg-update.c:193
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
-msgstr "Aktualizovať súbory v archíve \"%s\"?"
+msgstr "Aktualizovať súbory v archíve „%s“?"
 
 #: ../src/eggfileformatchooser.c:236
 #, c-format
@@ -582,7 +584,7 @@ msgid ""
 "The program was not able to find out the file format you want to use for "
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
-msgstr "Program nebol schopný rozpoznať formát súboru, ktorý chcete použiť pre `%s'. Prosím, uistite sa, že pre tento súbor používate známu príponu, alebo ručne vyberte formát súboru z nasledujúceho zoznamu."
+msgstr "Program nebol schopný rozpoznať formát súboru, ktorý chcete použiť pre „%s“. Prosím, uistite sa, že pre tento súbor používate známu príponu, alebo ručne vyberte formát súboru z nasledujúceho zoznamu."
 
 #: ../src/eggfileformatchooser.c:682
 msgid "File format not recognized"
@@ -655,17 +657,17 @@ msgstr "_Rozbaliť"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] "%d objektov (%s)"
-msgstr[1] "%d objekt (%s)"
-msgstr[2] "%d objekty (%s)"
+msgstr[0] "%d objekt (%s)"
+msgstr[1] "%d objekty (%s)"
+msgstr[2] "%d objektov (%s)"
 
 #: ../src/fr-window.c:1524
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "vybraných %d objektov (%s)"
-msgstr[1] "vybraný %d objekt (%s)"
-msgstr[2] "vybrané %d objekty (%s)"
+msgstr[0] "vybraný %d objekt (%s)"
+msgstr[1] "vybrané %d objekty (%s)"
+msgstr[2] "vybraných %d objektov (%s)"
 
 #: ../src/fr-window.c:1598
 msgid "Folder"
@@ -678,7 +680,7 @@ msgstr "[len na čítanie]"
 #: ../src/fr-window.c:2250
 #, c-format
 msgid "Could not display the folder \"%s\""
-msgstr "Nepodarilo sa zobraziť priečinok \"%s\""
+msgstr "Nepodarilo sa zobraziť priečinok „%s“"
 
 #: ../src/fr-window.c:2318 ../src/fr-window.c:2348
 msgid "Creating archive"
@@ -747,7 +749,7 @@ msgstr "Pri rozbaľovaní súborov nastala chyba."
 #: ../src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
-msgstr "Nepodarilo sa otvoriť \"%s\""
+msgstr "Nepodarilo sa otvoriť „%s“"
 
 #: ../src/fr-window.c:2960
 msgid "An error occurred while loading the archive."
@@ -775,7 +777,7 @@ msgstr "Nastala chyba."
 
 #: ../src/fr-window.c:2988
 msgid "Command not found."
-msgstr "Príkaz nenájdený."
+msgstr "Príkaz nebol nájdený."
 
 #: ../src/fr-window.c:2991
 msgid "Command exited abnormally."
@@ -853,7 +855,7 @@ msgstr "Otvoriť nedávno použitý archív"
 #: ../src/fr-window.c:6227
 #, c-format
 msgid "Could not save the archive \"%s\""
-msgstr "Nepodarilo sa uložiť archív \"%s\""
+msgstr "Nepodarilo sa uložiť archív „%s“"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -873,7 +875,7 @@ msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr "Priečinok s názvom \"%s\" už existuje.\n\n%s"
+msgstr "Priečinok s názvom „%s“ už existuje.\n\n%s"
 
 #: ../src/fr-window.c:7442
 #, c-format
@@ -881,7 +883,7 @@ msgid ""
 "A file named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr "Súbor s názvom \"%s\" už existuje.\n\n%s"
+msgstr "Súbor s názvom „%s“ už existuje.\n\n%s"
 
 #: ../src/fr-window.c:7512
 msgid "Rename"
@@ -1021,7 +1023,7 @@ msgstr "Tar komprimovaný pomocou lzop (.tar.lzo)"
 
 #: ../src/main.c:116
 msgid "Windows Imaging Format (.wim)"
-msgstr ""
+msgstr "Windows Imaging Format (.wim)"
 
 #: ../src/main.c:117
 msgid "Rar (.rar)"
@@ -1065,7 +1067,7 @@ msgstr "ARCHÍV"
 
 #: ../src/main.c:201
 msgid "Add files asking the name of the archive and quit the program"
-msgstr "Pridať súbory, opýtať sa na názov archívu a skončiť program"
+msgstr "Pridať súbory, opýtať sa na názov archívu a ukončiť program"
 
 #: ../src/main.c:205
 msgid "Extract archives to the specified folder and quit the program"
@@ -1216,7 +1218,7 @@ msgstr "Zobraziť výstup vyprodukovaný posledným spusteným príkazom"
 
 #: ../src/ui.h:137
 msgid "New..."
-msgstr ""
+msgstr "Nový..."
 
 #: ../src/ui.h:138
 msgid "Create a new archive"
@@ -1224,7 +1226,7 @@ msgstr "Vytvoriť nový archív"
 
 #: ../src/ui.h:141
 msgid "Open..."
-msgstr ""
+msgstr "Otvoriť..."
 
 #: ../src/ui.h:149
 msgid "_Open With..."
@@ -1252,7 +1254,7 @@ msgstr "Znovu načítať aktuálny archív"
 
 #: ../src/ui.h:165
 msgid "Save As..."
-msgstr ""
+msgstr "Uložiť ako..."
 
 #: ../src/ui.h:166
 msgid "Save the current archive with a different name"
