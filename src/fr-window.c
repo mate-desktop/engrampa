@@ -4607,6 +4607,9 @@ is_single_click_policy (FrWindow *window)
 	char     *value;
 	gboolean  result;
 
+	if (window->priv->settings_caja == NULL)
+		return FALSE;
+
 	value = g_settings_get_string (window->priv->settings_caja, CAJA_CLICK_POLICY);
 	result = (value != NULL) && (strncmp (value, "single", 6) == 0);
 	g_free (value);
@@ -5391,6 +5394,8 @@ fr_window_construct (FrWindow *window)
 	GtkToolItem      *open_recent_tool_item;
 	GtkWidget        *menu_item;
 	GError           *error = NULL;
+	GSettingsSchemaSource *source;
+	GSettingsSchema *schema;
 
 	/* data common to all windows. */
 
@@ -5408,7 +5413,9 @@ fr_window_construct (FrWindow *window)
 	window->priv->settings_ui = g_settings_new (ENGRAMPA_SCHEMA_UI);
 	window->priv->settings_general = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
 	window->priv->settings_dialogs = g_settings_new (ENGRAMPA_SCHEMA_DIALOGS);
-	window->priv->settings_caja = g_settings_new (CAJA_SCHEMA);
+
+	source = g_settings_schema_source_get_default ();
+	schema = g_settings_schema_source_lookup (source, CAJA_SCHEMA, TRUE);
 
 	/* Create the application. */
 
@@ -6010,7 +6017,8 @@ fr_window_construct (FrWindow *window)
 			"changed::" PREF_LISTING_USE_MIME_ICONS,
 			G_CALLBACK (pref_use_mime_icons_changed),
 			window);
-	g_signal_connect (window->priv->settings_caja,
+	if (window->priv->settings_caja)
+			g_signal_connect (window->priv->settings_caja,
 			"changed::" CAJA_CLICK_POLICY,
 			G_CALLBACK (pref_click_policy_changed),
 			window);
