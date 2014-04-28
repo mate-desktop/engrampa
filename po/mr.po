@@ -6,13 +6,14 @@
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006
 # Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009
 # sandeeps <sshedmak@redhat.com>, 2009, 2010
+# vaibhav.dlv <vaibhav.dlv@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-09 18:21+0100\n"
-"PO-Revision-Date: 2014-02-09 18:19+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-04-08 11:22+0000\n"
+"Last-Translator: vaibhav.dlv <vaibhav.dlv@gmail.com>\n"
 "Language-Team: Marathi (http://www.transifex.com/projects/p/MATE/language/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +49,7 @@ msgstr "अनोळखी प्रक्षेपण पर्याय: %d"
 #: ../copy-n-paste/eggdesktopfile.c:1375
 #, c-format
 msgid "Can't pass documents to this desktop element"
-msgstr ""
+msgstr "या डेस्कटॉप घटकाला दस्तऐवज पाठवू शकत नाही "
 
 #: ../copy-n-paste/eggdesktopfile.c:1394
 #, c-format
@@ -85,7 +86,7 @@ msgstr "सत्र व्यवस्थापन पर्याय दाख
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
-msgstr ""
+msgstr "एनग्राम्पा आर्काइव्ह व्यवस्थापक"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1991
 #: ../src/fr-window.c:5419
@@ -131,7 +132,7 @@ msgstr "फाइल यादी देखिल एन्क्रीप्ट
 #. where MB stands for megabyte.
 #: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
 msgid "Split into _volumes of"
-msgstr ""
+msgstr "विभागात विभाजीत करा (_v)"
 
 #. MB means megabytes
 #: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
@@ -206,8 +207,8 @@ msgid ""
 msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "बाहेरील प्रणालीने ह्या फाईलमध्ये बदल केले आहेत. फाईल संग्रहणात अद्ययावत न केल्यास, बदल नष्ट होतिल."
+msgstr[1] "बाहेरील प्रणालीने %d फाईल्समध्ये बदल केले आहेत. फाईल्स संग्रहणात अद्ययावत न केल्यास, बदल नष्ट होतिल. "
 
 #: ../data/ui/update.ui.h:2
 msgid "_Update"
@@ -224,7 +225,7 @@ msgstr "येथे काढा"
 #. Translators: the current position is the current folder
 #: ../caja/caja-engrampa.c:316
 msgid "Extract the selected archive to the current position"
-msgstr ""
+msgstr "निवडलेला आर्काइव्ह सद्य स्थळावर काढा"
 
 #: ../caja/caja-engrampa.c:333
 msgid "Extract To..."
@@ -308,7 +309,7 @@ msgstr "तुमच्याकडे Engrampa सह GNU General Public Licens
 
 #: ../src/actions.c:878
 msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
-msgstr ""
+msgstr "सर्वहक्कधिकार © 2001-2007 Free Software Foundation, Inc."
 
 #: ../src/actions.c:879
 msgid "An archive manager for MATE."
@@ -476,31 +477,31 @@ msgstr "जुणी फाइल बाहेर काढू नका (_x)"
 #: ../src/dlg-new.c:438
 msgctxt "File"
 msgid "New"
-msgstr ""
+msgstr "नविन"
 
 #: ../src/dlg-new.c:451
 msgctxt "File"
 msgid "Save"
-msgstr ""
+msgstr "संचयन"
 
 #: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:218
 msgid "There was an internal error trying to search for applications:"
-msgstr ""
+msgstr "अनुप्रयोग प्रक्षेपित करतेवेळी त्रुटी आढळली:"
 
 #: ../src/dlg-package-installer.c:286
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
 "Do you want to search for a command to open this file?"
-msgstr ""
+msgstr "%s फाइल करीता कुठलीही आज्ञा प्रतिष्ठापीत नाही.\nही फाइल उघडण्याकरीता तुम्हाला आज्ञाशोध करायचे?"
 
 #: ../src/dlg-package-installer.c:291
 msgid "Could not open this file type"
-msgstr ""
+msgstr "हा फाईल प्रकार उघडू  नाही"
 
 #: ../src/dlg-package-installer.c:294
 msgid "_Search Command"
-msgstr ""
+msgstr "शोध आदेश (_S)"
 
 #. Translators: after the colon there is a folder name.
 #: ../src/dlg-prop.c:107
@@ -510,7 +511,7 @@ msgstr "स्थान:"
 #: ../src/dlg-prop.c:119
 msgctxt "File"
 msgid "Name:"
-msgstr ""
+msgstr "नाव:"
 
 #: ../src/dlg-prop.c:125
 #, c-format
@@ -550,27 +551,27 @@ msgstr "संयचन \"%s\" मधिल फाइल अद्ययाव�
 #: ../src/eggfileformatchooser.c:236
 #, c-format
 msgid "File _Format: %s"
-msgstr ""
+msgstr "फाईल स्वरूप (_F): %s"
 
 #: ../src/eggfileformatchooser.c:397
 msgid "All Files"
-msgstr ""
+msgstr "सर्व फाईल्स"
 
 #: ../src/eggfileformatchooser.c:398
 msgid "All Supported Files"
-msgstr ""
+msgstr "सर्व समर्थीत फाईल्स "
 
 #: ../src/eggfileformatchooser.c:407
 msgid "By Extension"
-msgstr ""
+msgstr "विस्तार द्वारे"
 
 #: ../src/eggfileformatchooser.c:422
 msgid "File Format"
-msgstr ""
+msgstr "फाईल स्वरूप"
 
 #: ../src/eggfileformatchooser.c:440
 msgid "Extension(s)"
-msgstr ""
+msgstr "विस्तार"
 
 #: ../src/eggfileformatchooser.c:675
 #, c-format
@@ -578,15 +579,15 @@ msgid ""
 "The program was not able to find out the file format you want to use for "
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
-msgstr ""
+msgstr "`%s' साठी वापरायचे फाईल स्वरूप अनुप्रयोगाला सापडले नाही. कृपया फाईलसाठी माहिती असलेले विस्तार वापरा अथवा खालील यादीमधून स्वहस्ते फाईल स्वरूप निवडा.  "
 
 #: ../src/eggfileformatchooser.c:682
 msgid "File format not recognized"
-msgstr ""
+msgstr "फाइल स्वरूप अपरिचीत आहे"
 
 #: ../src/fr-archive.c:1126
 msgid "File not found."
-msgstr ""
+msgstr "फाइल नाही मिळाली"
 
 #: ../src/fr-archive.c:1229
 #, c-format
@@ -732,7 +733,7 @@ msgstr "आर्काइव्ह यशस्वीरित्या बन�
 
 #: ../src/fr-window.c:2790
 msgid "please wait..."
-msgstr ""
+msgstr "कृपया थांबा..."
 
 #: ../src/fr-window.c:2949
 msgid "An error occurred while extracting files."
@@ -805,27 +806,27 @@ msgstr "संचयीका"
 #: ../src/fr-window.c:4705
 msgctxt "File"
 msgid "Size"
-msgstr ""
+msgstr "आकार"
 
 #: ../src/fr-window.c:4706
 msgctxt "File"
 msgid "Type"
-msgstr ""
+msgstr "प्रकार"
 
 #: ../src/fr-window.c:4707
 msgctxt "File"
 msgid "Date Modified"
-msgstr ""
+msgstr "संपादन केल्याचे दिनांक"
 
 #: ../src/fr-window.c:4708
 msgctxt "File"
 msgid "Location"
-msgstr ""
+msgstr "स्थान"
 
 #: ../src/fr-window.c:4717
 msgctxt "File"
 msgid "Name"
-msgstr ""
+msgstr "नाव"
 
 #: ../src/fr-window.c:5668
 msgid "Find:"
@@ -995,11 +996,11 @@ msgstr "Lha (.lzh)"
 
 #: ../src/main.c:108
 msgid "Lrzip (.lrz)"
-msgstr ""
+msgstr "Lrzip (.lrz)"
 
 #: ../src/main.c:109
 msgid "Tar compressed with lrzip (.tar.lrz)"
-msgstr ""
+msgstr "lrzip सह संकुचीत Tar (.tar.lrz)"
 
 #: ../src/main.c:111
 msgid "Tar compressed with lzip (.tar.lz)"
@@ -1015,7 +1016,7 @@ msgstr "lzop सह संकुचित Tar (.tar.lzo)"
 
 #: ../src/main.c:116
 msgid "Windows Imaging Format (.wim)"
-msgstr ""
+msgstr "Windows Imaging Format (.wim)"
 
 #: ../src/main.c:117
 msgid "Rar (.rar)"
@@ -1097,7 +1098,7 @@ msgstr "फाइल रोलर"
 
 #: ../src/ui.h:32
 msgid "_Archive"
-msgstr ""
+msgstr "आर्काइव्ह (_A)"
 
 #: ../src/ui.h:33
 msgid "_Edit"
@@ -1198,7 +1199,7 @@ msgstr "आर्काइव्हातून फाइली काढा"
 
 #: ../src/ui.h:128
 msgid "Find..."
-msgstr ""
+msgstr "शोधा..."
 
 #: ../src/ui.h:133
 msgid "_Last Output"
@@ -1210,7 +1211,7 @@ msgstr "शेवटच्या कार्यान्वीत आदेश 
 
 #: ../src/ui.h:137
 msgid "New..."
-msgstr ""
+msgstr "नविन... "
 
 #: ../src/ui.h:138
 msgid "Create a new archive"
@@ -1218,7 +1219,7 @@ msgstr "नविन आर्काइव्ह बनवा"
 
 #: ../src/ui.h:141
 msgid "Open..."
-msgstr ""
+msgstr "उघडा..."
 
 #: ../src/ui.h:149
 msgid "_Open With..."
@@ -1246,7 +1247,7 @@ msgstr "चालू आर्काइव्ह पुनःभारित क
 
 #: ../src/ui.h:165
 msgid "Save As..."
-msgstr ""
+msgstr "यानुरूप संचयीत करा..."
 
 #: ../src/ui.h:166
 msgid "Save the current archive with a different name"
@@ -1359,7 +1360,7 @@ msgstr "फाइल यादी प्रकारानुसार क्र
 
 #: ../src/ui.h:265
 msgid "by _Date Modified"
-msgstr ""
+msgstr "संपादन दिनांक नुरूप (_D)"
 
 #: ../src/ui.h:266
 msgid "Sort file list by modification time"
