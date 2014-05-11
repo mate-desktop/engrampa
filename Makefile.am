@@ -1,5 +1,5 @@
 ## Process this file with automake to produce Makefile.in.
-ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAG}
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 if ENABLE_CAJA_ACTIONS
 CAJA = caja
