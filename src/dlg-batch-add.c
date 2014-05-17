@@ -555,11 +555,7 @@ dlg_batch_add_files (FrWindow *window,
 
 	/* archive type combobox */
 
-#if GTK_CHECK_VERSION(2,24,0)
 	data->a_archive_type_combo_box = gtk_combo_box_text_new ();
-#else
-	data->a_archive_type_combo_box = gtk_combo_box_new_text ();
-#endif
 	if (data->single_file)
 		data->supported_types = single_file_save_type;
 	else
@@ -567,11 +563,7 @@ dlg_batch_add_files (FrWindow *window,
 	sort_mime_types_by_extension (data->supported_types);
 
 	for (i = 0; data->supported_types[i] != -1; i++)
-#if GTK_CHECK_VERSION(2,24,0)
 		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (data->a_archive_type_combo_box), mime_type_desc[data->supported_types[i]].default_ext);
-#else
-		gtk_combo_box_append_text (GTK_COMBO_BOX (data->a_archive_type_combo_box), mime_type_desc[data->supported_types[i]].default_ext);
-#endif
 
 	gtk_box_pack_start (GTK_BOX (a_archive_type_box), data->a_archive_type_combo_box, TRUE, TRUE, 0);
 	gtk_widget_show_all (a_archive_type_box);
