@@ -199,8 +199,7 @@ fr_command_unarchiver_extract (FrCommand  *comm,
 	else
 		fr_process_add_arg (comm->process, "-s");
 
-	if (junk_paths)
-		fr_process_add_arg (comm->process, "-D");
+	fr_process_add_arg (comm->process, "-D");
 
 	if ((comm->password != NULL) && (comm->password[0] != '\0'))
 		fr_process_add_arg_concat (comm->process, "-password=", comm->password, NULL);
@@ -306,7 +305,7 @@ fr_command_unarchiver_init (FrCommand *comm)
 
 	comm->propExtractCanAvoidOverwrite = TRUE;
 	comm->propExtractCanSkipOlder      = FALSE;
-	comm->propExtractCanJunkPaths      = TRUE;
+	comm->propExtractCanJunkPaths      = FALSE;
 	comm->propPassword                 = TRUE;
 	comm->propTest                     = FALSE;
 	comm->propListFromFile             = FALSE;
