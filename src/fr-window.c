@@ -8003,16 +8003,6 @@ fr_window_open_files_with_application (FrWindow *window,
 				       error->message);
 		g_clear_error (&error);
 	}
-	else {
-		char       *uri;
-		const char *mime_type;
-
-		uri = g_filename_to_uri (file_list->data, NULL, NULL);
-		mime_type = get_file_mime_type (uri, FALSE);
-		if (mime_type != NULL)
-			g_app_info_set_as_default_for_type (app, mime_type, NULL);
-		g_free (uri);
-	}
 
 	path_list_free (uris);
 }
