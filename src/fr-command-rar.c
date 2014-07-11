@@ -123,6 +123,15 @@ Pathname/Comment
 
  */
 
+static gboolean
+attribute_field_with_space (char *line)
+{
+	/* sometimes when the archive is encrypted the attributes field is
+	* like this: "* ..A...."
+	* */
+	return ((line[0] != ' ') && (line[1] == ' '));
+}
+
 static void
 parse_name_field (char         *line,
 		  FrCommandRar *rar_comm)
@@ -138,7 +147,7 @@ parse_name_field (char         *line,
 
 	if (rar_comm->rar5)
 		/* rar-5 output adds trailing spaces to short file names :( */
-		name_field = g_strchomp (g_strdup (get_last_field (line, 8)));
+		name_field = g_strchomp (g_strdup (get_last_field (line, attribute_field_with_space (line) ? 9 : 8)));
 	else
 		name_field = g_strdup (line + 1);
 
@@ -216,13 +225,15 @@ process_line (char     *line,
 
 		/* read file info. */
 
-		fields = split_line (line, 6);
+		fields = split_line (line, attribute_field_with_space (line) ? 7 : 6);
 		if (rar_comm->rar5) {
-			size_field = fields[1];
-			ratio_field = fields[3];
-			date_field = fields[4];
-			time_field = fields[5];
-			attr_field = fields[0];
+			int offset = attribute_field_with_space (line) ? 1 : 0;
+
+			size_field = fields[1+offset];
+			ratio_field = fields[3+offset];
+			date_field = fields[4+offset];
+			time_field = fields[5+offset];
+			attr_field = fields[0+offset];
 		}
 		else {
 			size_field = fields[0];
@@ -755,6 +766,11 @@ fr_command_rar_handle_error (FrCommand   *comm,
 		char *line = scan->data;
 
 		if (strstr (line, "password incorrect") != NULL) {
+			error->type = FR_PROC_ERROR_ASK_PASSWORD;
+			break;
+		}
+
+		if (strstr (line, "password is incorrect") != NULL) {
 			error->type = FR_PROC_ERROR_ASK_PASSWORD;
 			break;
 		}
