@@ -638,7 +638,9 @@ fr_window_free_private_data (FrWindow *window)
 	_g_object_unref (window->priv->settings_ui);
 	_g_object_unref (window->priv->settings_general);
 	_g_object_unref (window->priv->settings_dialogs);
-	_g_object_unref (window->priv->settings_caja);
+
+	if (window->priv->settings_caja)
+		_g_object_unref (window->priv->settings_caja);
 }
 
 
@@ -4598,11 +4600,13 @@ static gboolean
 is_single_click_policy (FrWindow *window)
 {
 	char     *value;
-	gboolean  result;
+	gboolean  result = FALSE;
 
-	value = g_settings_get_string (window->priv->settings_caja, CAJA_CLICK_POLICY);
-	result = (value != NULL) && (strncmp (value, "single", 6) == 0);
-	g_free (value);
+	if (window->priv->settings_caja) {
+		value = g_settings_get_string (window->priv->settings_caja, CAJA_CLICK_POLICY);
+		result = (value != NULL) && (strncmp (value, "single", 6) == 0);
+		g_free (value);
+	}
 
 	return result;
 }
@@ -5384,6 +5388,8 @@ fr_window_construct (FrWindow *window)
 	GtkToolItem      *open_recent_tool_item;
 	GtkWidget        *menu_item;
 	GError           *error = NULL;
+	GSettingsSchemaSource *schema_source;
+	GSettingsSchema  *caja_schema;
 
 	/* data common to all windows. */
 
@@ -5401,7 +5407,13 @@ fr_window_construct (FrWindow *window)
 	window->priv->settings_ui = g_settings_new (ENGRAMPA_SCHEMA_UI);
 	window->priv->settings_general = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
 	window->priv->settings_dialogs = g_settings_new (ENGRAMPA_SCHEMA_DIALOGS);
-	window->priv->settings_caja = g_settings_new (CAJA_SCHEMA);
+
+	schema_source = g_settings_schema_source_get_default ();
+	caja_schema = g_settings_schema_source_lookup (schema_source, CAJA_SCHEMA, FALSE);
+	if (caja_schema) {
+		window->priv->settings_caja = g_settings_new (CAJA_SCHEMA);
+		g_settings_schema_unref (caja_schema);
+	}
 
 	/* Create the application. */
 
@@ -5994,10 +6006,12 @@ fr_window_construct (FrWindow *window)
 			"changed::" PREF_LISTING_USE_MIME_ICONS,
 			G_CALLBACK (pref_use_mime_icons_changed),
 			window);
-	g_signal_connect (window->priv->settings_caja,
-			"changed::" CAJA_CLICK_POLICY,
-			G_CALLBACK (pref_click_policy_changed),
-			window);
+
+	if (window->priv->settings_caja)
+		g_signal_connect (window->priv->settings_caja,
+				"changed::" CAJA_CLICK_POLICY,
+				G_CALLBACK (pref_click_policy_changed),
+				window);
 
 	/* Give focus to the list. */
 
