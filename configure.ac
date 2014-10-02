@@ -27,7 +27,7 @@ dnl it too, or it will never make it into the spec file!
 dnl
 dnl ==========================================================================
 
-GLIB_REQUIRED=2.25.5
+GLIB_REQUIRED=2.32.0
 GIO_REQUIRED=2.25.5
 CAJA_REQUIRED=1.1.0
 JSON_GLIB_REQUIRED=0.14.0
