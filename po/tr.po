@@ -3,7 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Atilla Öntaş <tarakbumba@gmail.com>, 2014
+# Baris Cicek <baris@teamforce.name.tr>, 2004,2008-2010
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2008, 2009., 2010
+# mauron, 2012-2014
 # mauron, 2014
 # mauron, 2012
 msgid ""
@@ -11,8 +14,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-09 18:21+0100\n"
-"PO-Revision-Date: 2014-02-10 10:58+0000\n"
-"Last-Translator: mauron\n"
+"PO-Revision-Date: 2014-05-26 20:51+0000\n"
+"Last-Translator: Atilla Öntaş <tarakbumba@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/MATE/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -255,7 +258,7 @@ msgstr "Bir arşiv ismi belirtmelisiniz."
 
 #: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
-msgstr "Bu klasör içinde bir arşiv oluşturmak için yeterli izniniz yok"
+msgstr "Bu dizin içinde bir arşiv oluşturmak için yeterli izniniz yok"
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:267
 #: ../src/dlg-package-installer.c:276 ../src/dlg-package-installer.c:304
@@ -325,7 +328,7 @@ msgstr "Arşive dosyalar eklenemedi"
 #: ../src/dlg-add-files.c:101 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
-msgstr "\"%s\" klasöründe bulunan dosyaları okumak için yeterli izne sahip değilsiniz."
+msgstr "\"%s\" dizininde bulunan dosyaları okumak için yeterli izne sahip değilsiniz."
 
 #: ../src/dlg-add-files.c:149 ../src/ui.h:49
 msgid "Add Files"
@@ -339,15 +342,15 @@ msgstr "_Sadece yeniyse ekle"
 
 #: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
-msgstr "Klasör Ekle"
+msgstr "Dizin Ekle"
 
 #: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
-msgstr "_Alt klasörlerde dahil"
+msgstr "_Alt dizinlerde dahil"
 
 #: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
-msgstr "Sembolik _bağları olan klasörleri hariç tut"
+msgstr "Sembolik _bağları olan dizinleri hariç tut"
 
 #: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
 #: ../src/dlg-add-folder.c:255
@@ -364,7 +367,7 @@ msgstr "_Hariç dosyalar:"
 
 #: ../src/dlg-add-folder.c:256
 msgid "_Exclude folders:"
-msgstr "_Hariç klasörler:"
+msgstr "_Hariç dizinler:"
 
 #: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
@@ -410,7 +413,7 @@ msgstr "Lütfen başka bir ad kullanın."
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
-msgstr "Hedef klasör içinde bir arşiv oluşturmak için yeterli izniniz yok."
+msgstr "Hedef dizin içinde bir arşiv oluşturmak için yeterli izniniz yok."
 
 #: ../src/dlg-batch-add.c:234 ../src/dlg-extract.c:103 ../src/fr-window.c:6656
 #, c-format
@@ -418,16 +421,16 @@ msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr "Hedef klasör \"%s\" mevcut değil. \n\nOnu oluşturmak istiyor musunuz?"
+msgstr "Hedef dizin \"%s\" mevcut değil. \n\nOnu oluşturmak istiyor musunuz?"
 
 #: ../src/dlg-batch-add.c:243 ../src/dlg-extract.c:112 ../src/fr-window.c:6665
 msgid "Create _Folder"
-msgstr "Klasör _Yarat"
+msgstr "Dizin _Yarat"
 
 #: ../src/dlg-batch-add.c:262 ../src/dlg-extract.c:132 ../src/fr-window.c:6685
 #, c-format
 msgid "Could not create the destination folder: %s."
-msgstr "Belirtilen hedef klasör oluşturulamadı: %s."
+msgstr "Belirtilen hedef dizin oluşturulamadı: %s."
 
 #: ../src/dlg-batch-add.c:279
 msgid "Archive not created"
@@ -451,7 +454,7 @@ msgstr "Açma işlemi gerçekleştirilemedi"
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
-msgstr "Dosyaları \"%s\" klasörüne açmak için yeterli izniniz yok."
+msgstr "Dosyaları \"%s\" dizinine açmak için yeterli izniniz yok."
 
 #: ../src/dlg-extract.c:332 ../src/dlg-extract.c:430 ../src/ui.h:124
 msgid "Extract"
@@ -463,7 +466,7 @@ msgstr "Eylemler"
 
 #: ../src/dlg-extract.c:397
 msgid "Re-crea_te folders"
-msgstr "_Klasörleri yeniden oluştur"
+msgstr "_Dizinleri yeniden oluştur"
 
 #: ../src/dlg-extract.c:401
 msgid "Over_write existing files"
@@ -663,7 +666,7 @@ msgstr[1] "%d nesne seçildi (%s)"
 
 #: ../src/fr-window.c:1598
 msgid "Folder"
-msgstr "Klasör"
+msgstr "Dizin"
 
 #: ../src/fr-window.c:1999
 msgid "[read only]"
@@ -672,7 +675,7 @@ msgstr "[salt okunur]"
 #: ../src/fr-window.c:2250
 #, c-format
 msgid "Could not display the folder \"%s\""
-msgstr "\"%s\" klasörü görüntülenemedi"
+msgstr "\"%s\" dizini görüntülenemedi"
 
 #: ../src/fr-window.c:2318 ../src/fr-window.c:2348
 msgid "Creating archive"
@@ -800,7 +803,7 @@ msgstr "Arşiv _Oluştur"
 
 #: ../src/fr-window.c:4667 ../src/fr-window.c:5747
 msgid "Folders"
-msgstr "Klasörler"
+msgstr "Dizinler"
 
 #: ../src/fr-window.c:4705
 msgctxt "File"
@@ -833,7 +836,7 @@ msgstr "Bul:"
 
 #: ../src/fr-window.c:5755
 msgid "Close the folders pane"
-msgstr "Klasörler panelini kapat"
+msgstr "Dizinler panelini kapat"
 
 #: ../src/fr-window.c:5899 ../src/fr-window.c:5902 ../src/ui.h:142
 #: ../src/ui.h:146
@@ -867,7 +870,7 @@ msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr "\"%s\" isminde bir klasör zaten mevcut.\n\n%s"
+msgstr "\"%s\" isminde bir dizin zaten mevcut.\n\n%s"
 
 #: ../src/fr-window.c:7442
 #, c-format
@@ -883,7 +886,7 @@ msgstr "Yeniden adlandır"
 
 #: ../src/fr-window.c:7513
 msgid "New folder name"
-msgstr "Yeni klasör adı"
+msgstr "Yeni dizin adı"
 
 #: ../src/fr-window.c:7513
 msgid "New file name"
@@ -895,7 +898,7 @@ msgstr "_Yeniden Adlandır"
 
 #: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the folder"
-msgstr "Klasör yeniden adlandırılamadı"
+msgstr "Dizin yeniden adlandırılamadı"
 
 #: ../src/fr-window.c:7534 ../src/fr-window.c:7554
 msgid "Could not rename the file"
@@ -907,7 +910,7 @@ msgstr "Seçimi Yapıştır"
 
 #: ../src/fr-window.c:7953
 msgid "Destination folder"
-msgstr "Hedef klasörü"
+msgstr "Hedef dizini"
 
 #: ../src/fr-window.c:8545
 msgid "Add files to an archive"
@@ -1063,7 +1066,7 @@ msgstr "Dosyaları, adını sorduğun arşive ekle ve programdan çık"
 
 #: ../src/main.c:205
 msgid "Extract archives to the specified folder and quit the program"
-msgstr "Dosyaları belirtilen klasöre aç ve programdan çık"
+msgstr "Dosyaları belirtilen dizine aç ve programdan çık"
 
 #: ../src/main.c:206 ../src/main.c:218
 msgid "FOLDER"
@@ -1071,21 +1074,21 @@ msgstr "KLASÖR"
 
 #: ../src/main.c:209
 msgid "Extract archives asking the destination folder and quit the program"
-msgstr "Dosyaları, adını sorduğun hedef klasörüne aç ve programdan çık"
+msgstr "Dosyaları, adını sorduğun hedef dizinine aç ve programdan çık"
 
 #: ../src/main.c:213
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
-msgstr "Arşivlerin içeriklerini arşiv klasöründe aç ve programdan çık"
+msgstr "Arşivlerin içeriklerini arşiv dizininde aç ve programdan çık"
 
 #: ../src/main.c:217
 msgid "Default folder to use for the '--add' and '--extract' commands"
-msgstr "'--add' ve '--extract' komutları için kullanılacak öntanımlı klasör"
+msgstr "'--add' ve '--extract' komutları için kullanılacak öntanımlı dizin"
 
 #: ../src/main.c:221
 msgid "Create destination folder without asking confirmation"
-msgstr "Onay sormadan hedef klasörü oluştur"
+msgstr "Onay sormadan hedef dizini oluştur"
 
 #: ../src/main.c:303
 msgid "- Create and modify an archive"
@@ -1134,15 +1137,15 @@ msgstr "Dosyaları arşive ekle"
 
 #: ../src/ui.h:53
 msgid "Add a _Folder..."
-msgstr "Klasör E_kle..."
+msgstr "Dizin E_kle..."
 
 #: ../src/ui.h:54 ../src/ui.h:58
 msgid "Add a folder to the archive"
-msgstr "Arşive klasör ekle"
+msgstr "Arşive dizin ekle"
 
 #: ../src/ui.h:57
 msgid "Add Folder"
-msgstr "Klasör Ekle"
+msgstr "Dizin Ekle"
 
 #: ../src/ui.h:62
 msgid "Close the current archive"
@@ -1274,7 +1277,7 @@ msgstr "Seçili dosyayı aç"
 
 #: ../src/ui.h:190 ../src/ui.h:194
 msgid "Open the selected folder"
-msgstr "Seçili klasörü aç"
+msgstr "Seçili dizini aç"
 
 #: ../src/ui.h:199
 msgid "Go to the previous visited location"
@@ -1319,11 +1322,11 @@ msgstr "Liste sırasını tersine çevir"
 
 #: ../src/ui.h:235
 msgid "_Folders"
-msgstr "_Klasörler"
+msgstr "_Dizinler"
 
 #: ../src/ui.h:236
 msgid "View the folders pane"
-msgstr "Klasörler panelini göster"
+msgstr "Dizinler panelini göster"
 
 #: ../src/ui.h:245
 msgid "View All _Files"
