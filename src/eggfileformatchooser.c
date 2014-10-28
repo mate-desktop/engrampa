@@ -74,7 +74,7 @@ struct _EggFileFormatSearch
   const gchar *extension;
 };
 
-static guint signals[SIGNAL_LAST];
+static guint signals[SIGNAL_LAST] = { 0 };
 
 G_DEFINE_TYPE (EggFileFormatChooser, 
 	       egg_file_format_chooser,
