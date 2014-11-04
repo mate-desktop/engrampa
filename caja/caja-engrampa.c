@@ -41,6 +41,7 @@ extract_to_callback (CajaMenuItem *item,
 	GList            *files;
 	CajaFileInfo *file;
 	char             *uri, *default_dir;
+	char             *quoted_uri, *quoted_default_dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
@@ -49,11 +50,14 @@ extract_to_callback (CajaMenuItem *item,
 	uri = caja_file_info_get_uri (file);
 	default_dir = caja_file_info_get_parent_uri (file);
 
+	quoted_uri = g_shell_quote (uri);
+	quoted_default_dir = g_shell_quote (default_dir);
+
 	cmd = g_string_new ("engrampa");
 	g_string_append_printf (cmd,
 				" --default-dir=%s --extract %s",
-				g_shell_quote (default_dir),
-				g_shell_quote (uri));
+				quoted_default_dir,
+				quoted_uri);
 
 #ifdef DEBUG
 	g_print ("EXEC: %s\n", cmd->str);
@@ -64,6 +68,8 @@ extract_to_callback (CajaMenuItem *item,
 	g_string_free (cmd, TRUE);
 	g_free (default_dir);
 	g_free (uri);
+	g_free (quoted_default_dir);
+	g_free (quoted_uri);
 }
 
 
@@ -72,27 +78,21 @@ extract_here_callback (CajaMenuItem *item,
 		       gpointer          user_data)
 {
 	GList            *files, *scan;
-	CajaFileInfo *file;
-	char             *dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
-	file = files->data;
 
-	dir = caja_file_info_get_parent_uri (file);
-
-	cmd = g_string_new ("engrampa");
-	g_string_append_printf (cmd," --extract-here");
-
-	g_free (dir);
+	cmd = g_string_new ("engrampa --extract-here");
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
-		char             *uri;
+		char             *uri, *quoted_uri;
 
 		uri = caja_file_info_get_uri (file);
-		g_string_append_printf (cmd, " %s", g_shell_quote (uri));
+		quoted_uri = g_shell_quote (uri);
+		g_string_append_printf (cmd, " %s", quoted_uri);
 		g_free (uri);
+		g_free (quoted_uri);
 	}
 
 	g_spawn_command_line_async (cmd->str, NULL);
@@ -112,6 +112,7 @@ add_callback (CajaMenuItem *item,
 	GList            *files, *scan;
 	CajaFileInfo *file;
 	char             *uri, *dir;
+	char             *quoted_uri, *quoted_dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
@@ -119,19 +120,23 @@ add_callback (CajaMenuItem *item,
 
 	uri = caja_file_info_get_uri (file);
 	dir = g_path_get_dirname (uri);
+	quoted_dir = g_shell_quote (dir);
 
 	cmd = g_string_new ("engrampa");
-	g_string_append_printf (cmd," --default-dir=%s --add", g_shell_quote (dir));
+	g_string_append_printf (cmd," --default-dir=%s --add", quoted_dir);
 
-	g_free (dir);
 	g_free (uri);
+	g_free (dir);
+	g_free (quoted_dir);
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
 
 		uri = caja_file_info_get_uri (file);
-		g_string_append_printf (cmd, " %s", g_shell_quote (uri));
+		quoted_uri = g_shell_quote (uri);
+		g_string_append_printf (cmd, " %s", quoted_uri);
 		g_free (uri);
+		g_free (quoted_uri);
 	}
 
 	g_spawn_command_line_async (cmd->str, NULL);
