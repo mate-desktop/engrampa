@@ -970,7 +970,6 @@ is_temp_work_dir (const char *dir)
 		g_free (folder);
 	}
 
-	g_free (folder);
 	return FALSE;
 }
 
