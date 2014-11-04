@@ -241,8 +241,10 @@ begin_tar_command (FrCommand *comm)
 
 	command = g_find_program_in_path ("gtar");
 #if defined (__SVR4) && defined (__sun)
-	if (g_file_test ("/usr/sfw/bin/gtar", G_FILE_TEST_IS_EXECUTABLE))
+	if (g_file_test ("/usr/sfw/bin/gtar", G_FILE_TEST_IS_EXECUTABLE)) {
+		g_free (command);
 		command = g_strdup ("/usr/sfw/bin/gtar");
+	}
 #endif
 	if (command != NULL)
 		fr_process_begin_command (comm->process, command);

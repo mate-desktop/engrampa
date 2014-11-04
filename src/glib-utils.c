@@ -94,6 +94,8 @@ str_substitute (const char *str,
 			gstr = g_string_append (gstr, to_str);
 	}
 
+	g_strfreev (tokens);
+
 	return g_string_free (gstr, FALSE);
 }
 
