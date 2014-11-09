@@ -10,11 +10,14 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
 
+@INTLTOOL_XML_RULE@
+appdatadir = $(datadir)/appdata
+appdata_in_files = engrampa.appdata.xml.in
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+
 gsettingsschema_in_files = org.mate.engrampa.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 .PRECIOUS: $(gsettings_SCHEMAS)
-
-@INTLTOOL_XML_NOMERGE_RULE@
 
 @GSETTINGS_RULES@
 
@@ -44,6 +47,7 @@ EXTRA_DIST = \
        $(desktop_in_files) \
        $(desktop_DATA) \
        $(gsettingsschema_in_files) \
+       $(appdata_in_files) \
        $(man_MANS) \
        $(NULL)
 
@@ -54,6 +58,7 @@ DISTCLEANFILES = \
 
 CLEANFILES = \
        $(gsettings_SCHEMAS) \
+       engrampa.appdata.xml \
        $(NULL)
 
 dist-hook: 
