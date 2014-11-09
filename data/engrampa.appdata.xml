@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 MATE team <mate-dev@ml.mate-desktop.org> -->
+<component type="desktop">
+ <id>engrampa.desktop</id>
+ <metadata_license>CC0-1.0</metadata_license>
+ <project_license>GPL-2.0+</project_license>
+ <name>Engrampa Archive Manager</name>
+ <summary>An Archive Manager for the MATE desktop environment</summary>
+ <description>
+  <p>
+   Engrampa is an archive manager for the MATE environment. It allows you
+   to create and modify archives, view the contents of an archive, view a
+   file contained in an archive, and extract files from archive.
+  </p>
+  <p>
+   Engrampa is only a front-end (a graphical interface) to archiving programs
+   like tar and zip. The supported file types are:
+  </p>
+  <ul>
+   <li>7-Zip Compressed File (.7z)</li>
+   <li>WinAce Compressed File (.ace)</li>
+   <li>ALZip Compressed File (.alz)</li>
+   <li>AIX Small Indexed Archive  (.ar)</li>
+   <li>ARJ Compressed Archive (.arj)</li>
+   <li>Cabinet File (.cab)</li>
+   <li>UNIX CPIO Archive (.cpio)</li>
+   <li>Debian Linux Package (.deb) [Read-only mode]</li>
+   <li>ISO-9660 CD Disc Image (.iso) [Read-only mode]</li>
+   <li>Java Archive (.jar)</li>
+   <li>Java Enterprise archive (.ear)</li>
+   <li>Java Web Archive (.war)</li>
+   <li>LHA Archive (.lzh, .lha)</li>
+   <li>WinRAR Compressed Archive (.rar)</li>
+   <li>RAR Archived Comic Book (.cbr)</li>
+   <li>RPM Linux Package (.rpm) [Read-only mode]</li>
+   <li>Tape Archive File uncompressed (.tar) or compressed with: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2),
+      compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz)
+   </li>
+   <li>Stuffit Archives (.bin, .sit)</li>
+   <li>ZIP Archive (.zip)</li>
+   <li>ZIP Archived Comic Book (.cbz)</li>
+   <li>ZOO Compressed Archive File (.zoo)</li>
+   <li>Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip, lzop, rzip, xz</li>
+  </ul>
+  <p>
+   Engrampa is a fork of File Roller and part of the MATE Desktop Environment.
+   If you would like to know more about MATE and Engrampa, please visit the
+   project's home page.
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default">
+   <image width="960" height="540">
+    https://alexpl.fedorapeople.org/AppData/engrampa/screens/engrampa_01.png
+   </image>
+  </screenshot>
+  <screenshot>
+   <image width="960" height="540">
+    https://alexpl.fedorapeople.org/AppData/engrampa/screens/engrampa_02.png
+   </image>
+  </screenshot>
+  <screenshot>
+   <image width="960" height="540">
+    https://alexpl.fedorapeople.org/AppData/engrampa/screens/engrampa_03.png
+   </image>
+  </screenshot>
+ </screenshots>
+ <url type="homepage">http://www.mate-desktop.org</url>
+ <updatecontact>mate-dev@ml.mate-desktop.org</updatecontact>
+ <project_group>MATE</project_group>
+</component>
