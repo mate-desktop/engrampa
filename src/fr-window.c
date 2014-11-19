@@ -1216,7 +1216,7 @@ fr_window_dir_exists_in_archive (FrWindow   *window,
 			return TRUE;
 		}
 		else if (fdata->dir
-			 && (fdata->full_path[strlen (fdata->full_path)] != '/')
+			 && (fdata->full_path[strlen (fdata->full_path) -1] != '/')
 			 && (strncmp (dir_name, fdata->full_path, dir_name_len - 1) == 0))
 		{
 			return TRUE;

@@ -159,7 +159,7 @@ list__process_line (char     *line,
 		fdata->original_path = g_strdup (fields[1]);
 		fdata->full_path = g_strconcat ((fdata->original_path[0] != '/') ? "/" : "",
 						fdata->original_path,
-						(fdata->dir && (fdata->original_path[strlen (fdata->original_path - 1)] != '/')) ? "/" : "",
+						(fdata->dir && (fdata->original_path[strlen (fdata->original_path) - 1] != '/')) ? "/" : "",
 						NULL);
 	}
 	else if (strcmp (fields[0], "Folder") == 0) {
