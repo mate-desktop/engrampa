@@ -235,6 +235,8 @@ list__begin (gpointer data)
 static void
 fr_command_7z_list (FrCommand  *comm)
 {
+	rar_check_multi_vomule (comm);
+
 	fr_process_set_out_line_func (comm->process, list__process_line, comm);
 
 	fr_command_7z_begin_command (comm);

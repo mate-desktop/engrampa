@@ -312,115 +312,6 @@ add_password_arg (FrCommand  *comm,
 }
 
 
-typedef enum {
-	FIRST_VOLUME_IS_000,
-	FIRST_VOLUME_IS_001,
-	FIRST_VOLUME_IS_RAR
-} FirstVolumeExtension;
-
-
-static char *
-get_first_volume_name (const char           *name,
-		       const char           *pattern,
-		       FirstVolumeExtension  extension_type)
-{
-	char   *volume_name = NULL;
-	GRegex *re;
-
-	re = g_regex_new (pattern, G_REGEX_CASELESS, 0, NULL);
-	if (g_regex_match (re, name, 0, NULL)) {
-		char **parts;
-		int    l, i;
-
-		parts = g_regex_split (re, name, 0);
-		l = strlen (parts[2]);
-		switch (extension_type) {
-		case FIRST_VOLUME_IS_000:
-			for (i = 0; i < l; i++)
-				parts[2][i] = '0';
-			break;
-
-		case FIRST_VOLUME_IS_001:
-			for (i = 0; i < l; i++)
-				parts[2][i] = (i < l - 1) ? '0' : '1';
-			break;
-
-		case FIRST_VOLUME_IS_RAR:
-			if (g_str_has_suffix (parts[1], "r")) {
-				parts[2][0] = 'a';
-				parts[2][1] = 'r';
-			}
-			else {
-				parts[2][0] = 'A';
-				parts[2][1] = 'R';
-			}
-			break;
-		}
-
-		volume_name = g_strjoinv ("", parts);
-
-		g_strfreev (parts);
-	}
-	g_regex_unref (re);
-
-	if (volume_name != NULL) {
-		char *tmp;
-
-		tmp = volume_name;
-		volume_name = g_filename_from_utf8 (tmp, -1, NULL, NULL, NULL);
-		g_free (tmp);
-	}
-
-	return volume_name;
-}
-
-
-static void
-check_multi_vomule (FrCommand *comm)
-{
-	GFile *file;
-	char   buffer[11];
-
-	file = g_file_new_for_path (comm->filename);
-	if (! g_load_file_in_buffer (file, buffer, 11, NULL)) {
-		g_object_unref (file);
-		return;
-	}
-
-	if ((buffer[10] & 0x01) == 0x01) {
-		char   *volume_name = NULL;
-		char   *name;
-
-		name = g_filename_to_utf8 (file_name_from_path (comm->filename), -1, NULL, NULL, NULL);
-
-		volume_name = get_first_volume_name (name, "^(.*\\.part)([0-9]+)(\\.rar)$", FIRST_VOLUME_IS_001);
-		if (volume_name == NULL)
-			volume_name = get_first_volume_name (name, "^(.*\\.r)([0-9]+)$", FIRST_VOLUME_IS_RAR);
-		if (volume_name == NULL)
-			volume_name = get_first_volume_name (name, "^(.*\\.)([0-9]+)$", FIRST_VOLUME_IS_001);
-
-		if (volume_name != NULL) {
-			GFile *parent;
-			GFile *child;
-			char  *volume_filename;
-
-			parent = g_file_get_parent (file);
-			child = g_file_get_child (parent, volume_name);
-			volume_filename = g_file_get_path (child);
-			fr_command_set_multi_volume (comm, volume_filename);
-
-			g_free (volume_filename);
-			g_object_unref (child);
-			g_object_unref (parent);
-		}
-
-		g_free (name);
-	}
-
-	g_object_unref (file);
-}
-
-
 static void
 list__begin (gpointer data)
 {
@@ -433,7 +324,7 @@ list__begin (gpointer data)
 static void
 fr_command_rar_list (FrCommand  *comm)
 {
-	check_multi_vomule (comm);
+	rar_check_multi_vomule (comm);
 
 	fr_process_set_out_line_func (comm->process, process_line, comm);
 
