@@ -151,7 +151,7 @@ void        fr_window_archive_extract           (FrWindow      *window,
 						 const char    *extract_to_dir,
 						 const char    *base_dir,
 						 gboolean       skip_older,
-						 gboolean       overwrite,
+						 FrOverwrite    overwrite,
 						 gboolean       junk_paths,
 						 gboolean       ask_to_open_destination);
 void        fr_window_archive_extract_here      (FrWindow      *window,

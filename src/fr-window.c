@@ -140,14 +140,15 @@ typedef enum {
 
 
 typedef struct {
-	GList    *file_list;
-	char     *extract_to_dir;
-	char     *base_dir;
-	gboolean  skip_older;
-	gboolean  overwrite;
-	gboolean  junk_paths;
-	char     *password;
-	gboolean  extract_here;
+	GList       *file_list;
+	char        *extract_to_dir;
+	char        *base_dir;
+	gboolean     skip_older;
+	FrOverwrite  overwrite;
+	gboolean     junk_paths;
+	char        *password;
+	gboolean     extract_here;
+	gboolean     ask_to_open_destination;
 } ExtractData;
 
 
@@ -4144,7 +4145,7 @@ file_list_drag_end (GtkWidget      *widget,
 					   window->priv->drag_destination_folder,
 					   window->priv->drag_base_dir,
 					   FALSE,
-					   TRUE,
+					   FR_OVERWRITE_ASK,
 					   FALSE,
 					   FALSE);
 		path_list_free (window->priv->drag_file_list);
@@ -6454,13 +6455,14 @@ fr_window_archive_remove (FrWindow      *window,
 
 
 static ExtractData*
-extract_data_new (GList      *file_list,
-		  const char *extract_to_dir,
-		  const char *base_dir,
-		  gboolean    skip_older,
-		  gboolean    overwrite,
-		  gboolean    junk_paths,
-		  gboolean    extract_here)
+extract_data_new (GList       *file_list,
+		  const char  *extract_to_dir,
+		  const char  *base_dir,
+		  gboolean     skip_older,
+		  FrOverwrite  overwrite,
+		  gboolean     junk_paths,
+		  gboolean     extract_here,
+		  gboolean     ask_to_open_destination)
 {
 	ExtractData *edata;
 
@@ -6474,6 +6476,7 @@ extract_data_new (GList      *file_list,
 	if (base_dir != NULL)
 		edata->base_dir = g_strdup (base_dir);
 	edata->extract_here = extract_here;
+	edata->ask_to_open_destination = ask_to_open_destination;
 
 	return edata;
 }
@@ -6487,6 +6490,7 @@ extract_to_data_new (const char *extract_to_dir)
 				 NULL,
 				 FALSE,
 				 TRUE,
+				 FALSE,
 				 FALSE,
 				 FALSE);
 }
@@ -6565,7 +6569,8 @@ fr_window_archive_extract_here (FrWindow   *window,
 				  skip_older,
 				  overwrite,
 				  junk_paths,
-				  TRUE);
+				  TRUE,
+				  FALSE);
 	fr_window_set_current_batch_action (window,
 					    FR_BATCH_ACTION_EXTRACT,
 					    edata,
@@ -6576,7 +6581,7 @@ fr_window_archive_extract_here (FrWindow   *window,
 		return;
 	}
 
-	window->priv->ask_to_open_destination_after_extraction = FALSE;
+	window->priv->ask_to_open_destination_after_extraction = edata->ask_to_open_destination;
 
 	fr_process_clear (window->archive->process);
 	if (fr_archive_extract_here (window->archive,
@@ -6590,15 +6595,183 @@ fr_window_archive_extract_here (FrWindow   *window,
 }
 
 
+/* -- fr_window_archive_extract -- */
+
+
+typedef struct {
+	FrWindow    *window;
+	ExtractData *edata;
+	GList       *current_file;
+} OverwriteData;
+
+
+#define _FR_RESPONSE_OVERWRITE_YES_ALL 100
+#define _FR_RESPONSE_OVERWRITE_YES     101
+#define _FR_RESPONSE_OVERWRITE_NO      102
+
+
+static void
+_fr_window_archive_extract_from_edata (FrWindow    *window,
+				       ExtractData *edata)
+{
+	window->priv->ask_to_open_destination_after_extraction = edata->ask_to_open_destination;
+
+	fr_process_clear (window->archive->process);
+	fr_archive_extract (window->archive,
+			    edata->file_list,
+			    edata->extract_to_dir,
+			    edata->base_dir,
+			    edata->skip_older,
+			    edata->overwrite == FR_OVERWRITE_YES,
+			    edata->junk_paths,
+			    window->priv->password);
+	fr_process_start (window->archive->process);
+}
+
+
+static gboolean _fr_window_ask_overwrite_dialog (OverwriteData *odata);
+
+
+static void
+overwrite_dialog_response_cb (GtkDialog *dialog,
+			      int        response_id,
+			      gpointer   user_data)
+{
+	OverwriteData *odata = user_data;
+	gboolean       do_not_extract = FALSE;
+
+	switch (response_id) {
+	case _FR_RESPONSE_OVERWRITE_YES_ALL:
+		odata->edata->overwrite = FR_OVERWRITE_YES;
+		break;
+
+	case _FR_RESPONSE_OVERWRITE_YES:
+		odata->current_file = odata->current_file->next;
+		break;
+
+	case _FR_RESPONSE_OVERWRITE_NO:
+		{
+			/* remove the file from the list to extract */
+			GList *next = odata->current_file->next;
+			odata->edata->file_list = g_list_remove_link (odata->edata->file_list, odata->current_file);
+			path_list_free (odata->current_file);
+			odata->current_file = next;
+		}
+		break;
+
+	case GTK_RESPONSE_DELETE_EVENT:
+	case GTK_RESPONSE_CANCEL:
+		do_not_extract = TRUE;
+		break;
+
+	default:
+		break;
+	}
+
+	gtk_widget_destroy (GTK_WIDGET (dialog));
+
+	if (do_not_extract) {
+		fr_window_stop_batch (odata->window);
+		g_free (odata);
+		return;
+	}
+
+	_fr_window_ask_overwrite_dialog (odata);
+}
+
+
+static gboolean
+_fr_window_ask_overwrite_dialog (OverwriteData *odata)
+{
+	gboolean do_not_extract = FALSE;
+
+	while ((odata->edata->overwrite == FR_OVERWRITE_ASK) && (odata->current_file != NULL)) {
+		char      *path;
+		char      *dest_uri;
+		GFile     *file;
+		GFileInfo *info;
+		GFileType  file_type;
+
+		path = g_uri_escape_string ((char *) odata->current_file->data, G_URI_RESERVED_CHARS_ALLOWED_IN_PATH, TRUE);
+		dest_uri = g_strdup_printf ("%s/%s", odata->edata->extract_to_dir, path);
+		file = g_file_new_for_uri (dest_uri);
+		info = g_file_query_info (file,
+					  G_FILE_ATTRIBUTE_STANDARD_TYPE "," G_FILE_ATTRIBUTE_STANDARD_NAME "," G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
+					  G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+					  NULL,
+					  NULL);
+
+		g_free (dest_uri);
+		g_free (path);
+
+		if (info == NULL) {
+			g_object_unref (file);
+			odata->current_file = odata->current_file->next;
+			continue;
+		}
+
+		file_type = g_file_info_get_file_type (info);
+		if ((file_type != G_FILE_TYPE_UNKNOWN) && (file_type != G_FILE_TYPE_DIRECTORY)) {
+			char      *msg;
+			GFile     *parent;
+			char      *parent_name;
+			char      *details;
+			GtkWidget *d;
+
+			msg = g_strdup_printf (_("Replace file \"%s\"?"), g_file_info_get_display_name (info));
+			parent = g_file_get_parent (file);
+			parent_name = g_file_get_parse_name (parent);
+			details = g_strdup_printf (_("Another file with the same name already exists in \"%s\"."), parent_name);
+			d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
+						     GTK_DIALOG_MODAL,
+						     GTK_STOCK_DIALOG_QUESTION,
+						     msg,
+						     details,
+						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						     _("Replace _All"), _FR_RESPONSE_OVERWRITE_YES_ALL,
+						     _("_Skip"), _FR_RESPONSE_OVERWRITE_NO,
+						     _("_Replace"), _FR_RESPONSE_OVERWRITE_YES,
+						     NULL);
+			gtk_dialog_set_default_response (GTK_DIALOG (d), _FR_RESPONSE_OVERWRITE_YES);
+			g_signal_connect (d,
+					  "response",
+					  G_CALLBACK (overwrite_dialog_response_cb),
+					  odata);
+			gtk_widget_show (d);
+
+			g_free (parent_name);
+			g_object_unref (parent);
+			g_object_unref (info);
+			g_object_unref (file);
+
+			return;
+		}
+
+		g_object_unref (info);
+		g_object_unref (file);
+	}
+
+	if (do_not_extract) {
+		fr_window_stop_batch (odata->window);
+		g_free (odata);
+		return;
+	}
+
+	odata->edata->overwrite = FR_OVERWRITE_YES;
+	_fr_window_archive_extract_from_edata (odata->window, odata->edata);
+	g_free (odata);
+}
+
+
 void
-fr_window_archive_extract (FrWindow   *window,
-			   GList      *file_list,
-			   const char *extract_to_dir,
-			   const char *base_dir,
-			   gboolean    skip_older,
-			   gboolean    overwrite,
-			   gboolean    junk_paths,
-			   gboolean    ask_to_open_destination)
+fr_window_archive_extract (FrWindow    *window,
+			   GList       *file_list,
+			   const char  *extract_to_dir,
+			   const char  *base_dir,
+			   gboolean     skip_older,
+			   FrOverwrite  overwrite,
+			   gboolean     junk_paths,
+			   gboolean     ask_to_open_destination)
 {
 	ExtractData *edata;
 	gboolean     do_not_extract = FALSE;
@@ -6610,7 +6783,8 @@ fr_window_archive_extract (FrWindow   *window,
 				  skip_older,
 				  overwrite,
 				  junk_paths,
-				  FALSE);
+				  FALSE,
+				  ask_to_open_destination);
 
 	fr_window_set_current_batch_action (window,
 					    FR_BATCH_ACTION_EXTRACT,
@@ -6623,6 +6797,11 @@ fr_window_archive_extract (FrWindow   *window,
 	}
 
 	if (! uri_is_dir (edata->extract_to_dir)) {
+
+		/* There is nothing to ask if the destination doesn't exist. */
+		if (edata->overwrite == FR_OVERWRITE_ASK)
+			edata->overwrite = FR_OVERWRITE_YES;
+
 		if (! ForceDirectoryCreation) {
 			GtkWidget *d;
 			int        r;
@@ -6686,18 +6865,17 @@ fr_window_archive_extract (FrWindow   *window,
 		return;
 	}
 
-	window->priv->ask_to_open_destination_after_extraction = ask_to_open_destination;
+	if (edata->overwrite == FR_OVERWRITE_ASK) {
+		OverwriteData *odata;
 
-	fr_process_clear (window->archive->process);
-	fr_archive_extract (window->archive,
-			    edata->file_list,
-			    edata->extract_to_dir,
-			    edata->base_dir,
-			    edata->skip_older,
-			    edata->overwrite,
-			    edata->junk_paths,
-			    window->priv->password);
-	fr_process_start (window->archive->process);
+		odata = g_new0 (OverwriteData, 1);
+		odata->window = window;
+		odata->edata = edata;
+		odata->current_file = odata->edata->file_list;
+		_fr_window_ask_overwrite_dialog (odata);
+	}
+	else
+		_fr_window_archive_extract_from_edata (window, edata);
 }
 
 
@@ -8566,7 +8744,7 @@ fr_window_exec_batch_action (FrWindow      *window,
 						   window->priv->extract_default_dir,
 						   NULL,
 						   FALSE,
-						   TRUE,
+						   FR_OVERWRITE_ASK,
 						   FALSE,
 						   TRUE);
 		}

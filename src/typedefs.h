@@ -50,6 +50,12 @@ typedef enum {
 	FR_COMPRESSION_MAXIMUM
 } FrCompression;
 
+typedef enum {
+	FR_OVERWRITE_YES,
+	FR_OVERWRITE_NO,
+	FR_OVERWRITE_ASK
+} FrOverwrite;
+
 typedef enum { /*< skip >*/
 	FR_PROC_ERROR_NONE,
 	FR_PROC_ERROR_GENERIC,
