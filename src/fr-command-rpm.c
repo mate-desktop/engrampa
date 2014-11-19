@@ -62,23 +62,32 @@ mktime_from_string (char *month,
 				tm.tm_mon = i;
 				break;
 			}
-	}
-	tm.tm_mday = atoi (mday);
-	if (strchr (year, ':') != NULL) {
-		char **fields = g_strsplit (year, ":", 2);
-        	if (n_fields (fields) == 2) {
-	        	time_t      now;
-        		struct tm  *now_tm;
-
-	  		tm.tm_hour = atoi (fields[0]);
-	  		tm.tm_min = atoi (fields[1]);
-
-	  		now = time(NULL);
-	  		now_tm = localtime (&now);
-	  		tm.tm_year = now_tm->tm_year;
-        	}
 	} else
-		tm.tm_year = atoi (year) - 1900;
+		tm.tm_mon = 0;
+
+	if (mday != NULL)
+		tm.tm_mday = atoi (mday);
+	else
+		tm.tm_mday = 1;
+
+	if (year != NULL) {
+		if (strchr (year, ':') != NULL) {
+			char **fields = g_strsplit (year, ":", 2);
+			if (n_fields (fields) == 2) {
+				time_t      now;
+				struct tm  *now_tm;
+
+				tm.tm_hour = atoi (fields[0]);
+				tm.tm_min = atoi (fields[1]);
+
+				now = time(NULL);
+				now_tm = localtime (&now);
+				tm.tm_year = now_tm->tm_year;
+			}
+		} else
+			tm.tm_year = atoi (year) - 1900;
+	} else
+		tm.tm_year = 70;
 
 	return mktime (&tm);
 }
