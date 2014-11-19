@@ -140,63 +140,66 @@ add_callback (CajaMenuItem *item,
 }
 
 
-static char *mime_types[] = {
-	"application/x-7z-compressed",
- 	"application/x-7z-compressed-tar",
- 	"application/x-ace",
- 	"application/x-alz",
-	"application/x-ar",
-	"application/x-arj",
-	"application/x-bzip",
-	"application/x-bzip-compressed-tar",
-	"application/x-bzip1",
-	"application/x-bzip1-compressed-tar",
-	"application/vnd.ms-cab-compressed",
-	"application/x-cbr",
-	"application/x-cbz",
-	"application/x-cd-image",
-	"application/x-compress",
-	"application/x-compressed-tar",
-	"application/x-cpio",
-	"application/x-deb",
-	"application/x-ear",
-	"application/x-ms-dos-executable",
-	"application/x-gtar",
-	"application/x-gzip",
-	"application/x-gzpostscript",
-	"application/x-java-archive",
-	"application/x-lha",
-	"application/x-lhz",
-	"application/x-lzip",
-	"application/x-lzip-compressed-tar",
-	"application/x-lzma",
-	"application/x-lzma-compressed-tar",
-	"application/x-lzop",
-	"application/x-lzop-compressed-tar",
-	"application/x-ms-wim",
-	"application/x-rar",
-	"application/x-rar-compressed",
-	"application/x-rpm",
-	"application/x-rzip",
-	"application/x-tar",
-	"application/x-tarz",
-	"application/x-stuffit",
-	"application/x-war",
-	"application/x-xz",
-	"application/x-xz-compressed-tar",
-	"application/x-zip",
-	"application/x-zip-compressed",
-	"application/x-zoo",
-	"application/zip",
-	"multipart/x-zip",
-	NULL
+static struct {
+	char     *mime_type;
+	gboolean  is_compressed;
+} archive_mime_types[] = {
+		{ "application/x-7z-compressed", TRUE },
+		{ "application/x-7z-compressed-tar", TRUE },
+		{ "application/x-ace", TRUE },
+		{ "application/x-alz", TRUE },
+		{ "application/x-ar", TRUE },
+		{ "application/x-arj", TRUE },
+		{ "application/x-bzip", TRUE },
+		{ "application/x-bzip-compressed-tar", TRUE },
+		{ "application/x-bzip1", TRUE },
+		{ "application/x-bzip1-compressed-tar", TRUE },
+		{ "application/vnd.ms-cab-compressed", TRUE },
+		{ "application/x-cbr", TRUE },
+		{ "application/x-cbz", TRUE },
+		{ "application/x-cd-image", FALSE },
+		{ "application/x-compress", TRUE },
+		{ "application/x-compressed-tar", TRUE },
+		{ "application/x-cpio", TRUE },
+		{ "application/x-deb", TRUE },
+		{ "application/x-ear", TRUE },
+		{ "application/x-ms-dos-executable", FALSE },
+		{ "application/x-gtar", FALSE },
+		{ "application/x-gzip", TRUE },
+		{ "application/x-gzpostscript", TRUE },
+		{ "application/x-java-archive", TRUE },
+		{ "application/x-lha", TRUE },
+		{ "application/x-lhz", TRUE },
+		{ "application/x-lzip", TRUE },
+		{ "application/x-lzip-compressed-tar", TRUE },
+		{ "application/x-lzma", TRUE },
+		{ "application/x-lzma-compressed-tar", TRUE },
+		{ "application/x-lzop", TRUE },
+		{ "application/x-lzop-compressed-tar", TRUE },
+		{ "application/x-ms-wim", TRUE },
+		{ "application/x-rar", TRUE },
+		{ "application/x-rar-compressed", TRUE },
+		{ "application/x-rpm", TRUE },
+		{ "application/x-rzip", TRUE },
+		{ "application/x-tar", FALSE },
+		{ "application/x-tarz", TRUE },
+		{ "application/x-stuffit", TRUE },
+		{ "application/x-war", TRUE },
+		{ "application/x-xz", TRUE },
+		{ "application/x-xz-compressed-tar", TRUE },
+		{ "application/x-zip", TRUE },
+		{ "application/x-zip-compressed", TRUE },
+		{ "application/x-zoo", TRUE },
+		{ "application/zip", TRUE },
+		{ "multipart/x-zip", TRUE },
+		{ NULL, FALSE }
 };
 
 
-typedef struct
-{
+typedef struct {
       gboolean is_archive;
       gboolean is_derived_archive;
+      gboolean is_compressed_archive;
 } FileMimeInfo;
 
 
@@ -208,9 +211,10 @@ get_file_mime_info (CajaFileInfo *file)
 
 	file_mime_info.is_archive = FALSE;
 	file_mime_info.is_derived_archive = FALSE;
+	file_mime_info.is_compressed_archive = FALSE;
 
-	for (i = 0; mime_types[i] != NULL; i++)
-		if (caja_file_info_is_mime_type (file, mime_types[i])) {
+	for (i = 0; archive_mime_types[i].mime_type != NULL; i++)
+		if (caja_file_info_is_mime_type (file, archive_mime_types[i].mime_type)) {
 			char *mime_type;
 			char *content_type_mime_file;
 			char *content_type_mime_compare;
@@ -218,9 +222,10 @@ get_file_mime_info (CajaFileInfo *file)
 			mime_type = caja_file_info_get_mime_type (file);
 
 			content_type_mime_file = g_content_type_from_mime_type (mime_type);
-			content_type_mime_compare = g_content_type_from_mime_type (mime_types[i]);
+			content_type_mime_compare = g_content_type_from_mime_type (archive_mime_types[i].mime_type);
 
 			file_mime_info.is_archive = TRUE;
+			file_mime_info.is_compressed_archive = archive_mime_types[i].is_compressed;
 			if ((content_type_mime_file != NULL) && (content_type_mime_compare != NULL))
 				file_mime_info.is_derived_archive = ! g_content_type_equals (content_type_mime_file, content_type_mime_compare);
 
@@ -272,8 +277,10 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 	gboolean  one_item;
 	gboolean  one_archive = FALSE;
 	gboolean  one_derived_archive = FALSE;
+	gboolean  one_compressed_archive = FALSE;
 	gboolean  all_archives = TRUE;
 	gboolean  all_archives_derived = TRUE;
+	gboolean  all_archives_compressed = TRUE;
 
 	if (files == NULL)
 		return NULL;
@@ -289,6 +296,9 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 
 		if (all_archives && ! file_mime_info.is_archive)
 			all_archives = FALSE;
+
+		if (all_archives_compressed && file_mime_info.is_archive && ! file_mime_info.is_compressed_archive)
+			all_archives_compressed = FALSE;
 
 		if (all_archives_derived && file_mime_info.is_archive && ! file_mime_info.is_derived_archive)
 			all_archives_derived = FALSE;
@@ -306,6 +316,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 	one_item = (files != NULL) && (files->next == NULL);
 	one_archive = one_item && all_archives;
 	one_derived_archive = one_archive && all_archives_derived;
+	one_compressed_archive = one_archive && all_archives_compressed;
 
 	if (all_archives && can_write) {
 		CajaMenuItem *item;
@@ -346,7 +357,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 
 	}
 
-	if (! one_archive || one_derived_archive) {
+	if (! one_compressed_archive || one_derived_archive) {
 		CajaMenuItem *item;
 
 		item = caja_menu_item_new ("CajaFr::add",
