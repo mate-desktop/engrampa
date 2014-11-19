@@ -169,7 +169,11 @@ install_packages (InstallerData *idata)
 
 			cursor = gdk_cursor_new (GDK_WATCH);
 			gdk_window_set_cursor (window, cursor);
+#if GTK_CHECK_VERSION (3, 0, 0)
+			g_object_unref (cursor);
+#else
 			gdk_cursor_unref (cursor);
+#endif
 		}
 
 		proxy = g_dbus_proxy_new_sync (connection,
