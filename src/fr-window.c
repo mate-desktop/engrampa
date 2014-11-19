@@ -7080,7 +7080,7 @@ fr_window_view_last_output (FrWindow   *window,
 
 	dialog = gtk_dialog_new_with_buttons (title,
 					      GTK_WINDOW (window),
-					      GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+					      GTK_DIALOG_DESTROY_WITH_PARENT,
 					      GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
 					      NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
