@@ -7999,18 +7999,25 @@ fr_window_open_files_with_application (FrWindow *window,
 				       GList    *file_list,
 				       GAppInfo *app)
 {
-	GList  *uris = NULL, *scan;
-	GError *error = NULL;
+	GList               *uris;
+	GList               *scan;
+	GdkAppLaunchContext *context;
+	GError              *error = NULL;
 
 	if (window->priv->activity_ref > 0)
 		return;
 
 	g_assert (file_list != NULL);
 
+	uris = NULL;
 	for (scan = file_list; scan; scan = scan->next)
 		uris = g_list_prepend (uris, g_filename_to_uri (scan->data, NULL, NULL));
 
-	if (! g_app_info_launch_uris (app, uris, NULL, &error)) {
+	context = gdk_app_launch_context_new ();
+	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (window)));
+	gdk_app_launch_context_set_timestamp (context, 0);
+
+	if (! g_app_info_launch_uris (app, uris, G_APP_LAUNCH_CONTEXT (context), &error)) {
 		_gtk_error_dialog_run (GTK_WINDOW (window),
 				       _("Could not perform the operation"),
 				       "%s",
@@ -8018,6 +8025,7 @@ fr_window_open_files_with_application (FrWindow *window,
 		g_clear_error (&error);
 	}
 
+	g_object_unref (context);
 	path_list_free (uris);
 }
 
@@ -8197,13 +8205,14 @@ monitor_extracted_files (OpenFilesData *odata)
 static gboolean
 fr_window_open_extracted_files (OpenFilesData *odata)
 {
-	GList      *file_list = odata->cdata->file_list;
-	gboolean    result = FALSE;
-	const char *first_file;
-	const char *first_mime_type;
-	GAppInfo   *app;
-	GList      *files_to_open = NULL;
-	GError     *error = NULL;
+	GList               *file_list = odata->cdata->file_list;
+	const char          *first_file;
+	const char          *first_mime_type;
+	GAppInfo            *app;
+	GList               *files_to_open = NULL;
+	GdkAppLaunchContext *context;
+	gboolean             result;
+	GError              *error = NULL;
 
 	g_return_val_if_fail (file_list != NULL, FALSE);
 
@@ -8254,7 +8263,10 @@ fr_window_open_extracted_files (OpenFilesData *odata)
 		}
 	}
 
-	result = g_app_info_launch_uris (app, files_to_open, NULL, &error);
+	context = gdk_app_launch_context_new ();
+	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (odata->window)));
+	gdk_app_launch_context_set_timestamp (context, 0);
+	result = g_app_info_launch_uris (app, files_to_open, G_APP_LAUNCH_CONTEXT (context), &error);
 	if (! result) {
 		_gtk_error_dialog_run (GTK_WINDOW (odata->window),
 				       _("Could not perform the operation"),
@@ -8263,6 +8275,7 @@ fr_window_open_extracted_files (OpenFilesData *odata)
 		g_clear_error (&error);
 	}
 
+	g_object_unref (context);
 	g_object_unref (app);
 	path_list_free (files_to_open);
 
