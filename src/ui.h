@@ -34,8 +34,6 @@ static GtkActionEntry action_entries[] = {
 	{ "ViewMenu", NULL, N_("_View") },
 	{ "HelpMenu", NULL, N_("_Help") },
 	{ "ArrangeFilesMenu", NULL, N_("_Arrange Files") },
-	/* Translators: this is the label for the "open recent file" sub-menu. */
-	{ "OpenRecentMenu", NULL, N_("Open _Recent") },
 
 	{ "About", GTK_STOCK_ABOUT,
 	  NULL, NULL,
@@ -279,9 +277,7 @@ static const gchar *ui_info =
 "    <menu name='Archive' action='FileMenu'>"
 "      <menuitem action='New'/>"
 "      <menuitem action='Open'/>"
-"      <menu name='OpenRecentMenu' action='OpenRecentMenu'>"
-"        <menuitem action='Open'/>"
-"      </menu>"
+"      <menuitem action='OpenRecent'/>"
 "      <menuitem action='SaveAs'/>"
 "      <separator/>"
 "      <menuitem action='Extract'/>"
@@ -338,6 +334,7 @@ static const gchar *ui_info =
 "  </menubar>"
 "  <toolbar name='ToolBar'>"
 "    <toolitem action='New'/>"
+"    <toolitem action='OpenRecent_Toolbar'/>"
 "    <separator/>"
 "    <toolitem action='Extract_Toolbar'/>"
 "    <separator/>"

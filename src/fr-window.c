@@ -339,16 +339,10 @@ struct _FrWindowPrivateData {
 
 	GtkActionGroup  *actions;
 
-	GtkRecentManager *recent_manager;
-	GtkWidget        *recent_chooser_menu;
-	GtkWidget        *recent_chooser_toolbar;
-
 	GtkWidget        *file_popup_menu;
 	GtkWidget        *folder_popup_menu;
 	GtkWidget        *sidebar_folder_popup_menu;
 	GtkWidget        *mitem_recents_menu;
-	GtkWidget        *recent_toolbar_menu;
-	GtkAction        *open_action;
 
 	/* dragged files data */
 
@@ -545,16 +539,6 @@ fr_window_free_private_data (FrWindow *window)
 	if (window->priv->update_timeout_handle != 0) {
 		g_source_remove (window->priv->update_timeout_handle);
 		window->priv->update_timeout_handle = 0;
-	}
-
-	if (window->priv->open_action != NULL) {
-		g_object_unref (window->priv->open_action);
-		window->priv->open_action = NULL;
-	}
-
-	if (window->priv->recent_toolbar_menu != NULL) {
-		gtk_widget_destroy (window->priv->recent_toolbar_menu);
-		 window->priv->recent_toolbar_menu = NULL;
 	}
 
 	while (window->priv->activity_ref > 0)
@@ -2129,7 +2113,8 @@ fr_window_update_sensitivity (FrWindow *window)
 
 	set_sensitive (window, "SelectAll", (window->priv->current_view_length > 0) && (window->priv->current_view_length != n_selected));
 	set_sensitive (window, "DeselectAll", n_selected > 0);
-	set_sensitive (window, "OpenRecentMenu", ! running);
+	set_sensitive (window, "OpenRecent", ! running);
+	set_sensitive (window, "OpenRecent_Toolbar", ! running);
 
 	set_sensitive (window, "ViewFolders", (window->priv->list_mode == FR_WINDOW_LIST_MODE_AS_DIR));
 
@@ -2807,12 +2792,12 @@ fr_window_add_to_recent_list (FrWindow *window,
 		recent_data->mime_type = g_content_type_get_mime_type (window->archive->content_type);
 		recent_data->app_name = "Engrampa";
 		recent_data->app_exec = "engrampa";
-		gtk_recent_manager_add_full (window->priv->recent_manager, uri, recent_data);
+		gtk_recent_manager_add_full (gtk_recent_manager_get_default (), uri, recent_data);
 
 		g_free (recent_data);
 	}
 	else
-		gtk_recent_manager_add_item (window->priv->recent_manager, uri);
+		gtk_recent_manager_add_item (gtk_recent_manager_get_default (), uri);
 }
 
 
@@ -2821,7 +2806,7 @@ fr_window_remove_from_recent_list (FrWindow *window,
 				   char     *filename)
 {
 	if (filename != NULL)
-		gtk_recent_manager_remove_item (window->priv->recent_manager, filename, NULL);
+		gtk_recent_manager_remove_item (gtk_recent_manager_get_default (), filename, NULL);
 }
 
 
@@ -4906,12 +4891,17 @@ pref_history_len_changed (GSettings *settings,
 				const char *key,
 				gpointer user_data)
 {
-	FrWindow *window = user_data;
+	FrWindow  *window = user_data;
+	int        limit;
+	GtkAction *action;
 
-	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_menu),
-                                      g_settings_get_int (settings, PREF_UI_HISTORY_LEN));
-	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (window->priv->recent_chooser_toolbar),
-                                      g_settings_get_int (settings, PREF_UI_HISTORY_LEN));
+	limit = g_settings_get_int (settings, PREF_UI_HISTORY_LEN);
+
+	action = gtk_action_group_get_action (window->priv->actions, "OpenRecent");
+	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (action), limit);
+
+	action = gtk_action_group_get_action (window->priv->actions, "OpenRecent_Toolbar");
+	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (action), limit);
 }
 
 
@@ -5371,6 +5361,7 @@ fr_window_construct (FrWindow *window)
 	int              UNUSED_VARIABLE i;
 	int               icon_width, icon_height;
 	GtkActionGroup   *actions;
+	GtkAction        *action;
 	GtkUIManager     *ui;
 	GtkToolItem      *open_recent_tool_item;
 	GtkWidget        *menu_item;
@@ -5769,6 +5760,39 @@ fr_window_construct (FrWindow *window)
 	ui = gtk_ui_manager_new ();
 
 	window->priv->actions = actions = gtk_action_group_new ("Actions");
+
+	/* open recent toolbar item action  */
+
+	action = g_object_new (GTK_TYPE_RECENT_ACTION,
+			       "name", "OpenRecent",
+			       /* Translators: this is the label for the "open recent file" sub-menu. */
+			       "label", _("Open _Recent"),
+			       "tooltip", _("Open a recently used archive"),
+			       "stock-id", GTK_STOCK_OPEN,
+			       NULL);
+	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (action));
+	gtk_action_group_add_action (actions, action);
+	g_object_unref (action);
+
+	/* open recent toolbar item action  */
+
+	action = g_object_new (GTK_TYPE_RECENT_ACTION,
+			       "name", "OpenRecent_Toolbar",
+			       "label", _("Open"),
+			       "tooltip", _("Open a recently used archive"),
+			       "stock-id", GTK_STOCK_OPEN,
+			       "is-important", TRUE,
+			       NULL);
+	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (action));
+	g_signal_connect (action,
+			  "activate",
+			  G_CALLBACK (activate_action_open),
+			  window);
+	gtk_action_group_add_action (actions, action);
+	g_object_unref (action);
+
+	/* other actions */
+
 	gtk_action_group_set_translation_domain (actions, NULL);
 	gtk_action_group_add_actions (actions,
 				      action_entries,
@@ -5869,38 +5893,6 @@ fr_window_construct (FrWindow *window)
 		gtk_widget_hide (window->priv->location_bar);
 	else
 		gtk_widget_show (window->priv->location_bar);
-
-	/* Recent manager */
-
-	window->priv->recent_manager = gtk_recent_manager_get_default ();
-
-	window->priv->recent_chooser_menu = gtk_recent_chooser_menu_new_for_manager (window->priv->recent_manager);
-	gtk_recent_chooser_set_sort_type (GTK_RECENT_CHOOSER (window->priv->recent_chooser_menu), GTK_RECENT_SORT_MRU);
-	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (window->priv->recent_chooser_menu));
-	menu_item = gtk_ui_manager_get_widget (ui, "/MenuBar/Archive/OpenRecentMenu");
-	gtk_menu_item_set_submenu (GTK_MENU_ITEM (menu_item), window->priv->recent_chooser_menu);
-
-	window->priv->recent_chooser_toolbar = gtk_recent_chooser_menu_new_for_manager (window->priv->recent_manager);
-	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (window->priv->recent_chooser_toolbar));
-
-	/* Add the recent menu tool item */
-
-	open_recent_tool_item = gtk_menu_tool_button_new_from_stock (GTK_STOCK_OPEN);
-	gtk_menu_tool_button_set_menu (GTK_MENU_TOOL_BUTTON (open_recent_tool_item), window->priv->recent_chooser_toolbar);
-	gtk_tool_item_set_homogeneous (open_recent_tool_item, FALSE);
-	gtk_widget_set_tooltip_text (GTK_WIDGET (open_recent_tool_item), _("Open archive"));
-	gtk_menu_tool_button_set_arrow_tooltip_text (GTK_MENU_TOOL_BUTTON (open_recent_tool_item), _("Open a recently used archive"));
-
-	window->priv->open_action = gtk_action_new ("Toolbar_Open", _("Open"), _("Open archive"), GTK_STOCK_OPEN);
-	g_object_set (window->priv->open_action, "is_important", TRUE, NULL);
-	g_signal_connect (window->priv->open_action,
-			  "activate",
-			  G_CALLBACK (activate_action_open),
-			  window);
-	gtk_activatable_set_related_action (GTK_ACTIVATABLE (open_recent_tool_item), window->priv->open_action);
-
-	gtk_widget_show (GTK_WIDGET (open_recent_tool_item));
-	gtk_toolbar_insert (GTK_TOOLBAR (toolbar), open_recent_tool_item, 1);
 
 	/**/
 
