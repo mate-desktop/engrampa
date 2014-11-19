@@ -66,12 +66,8 @@ AC_SUBST([GTK_LIBS])
 dnl ===========================================================================
 
 AC_ARG_ENABLE(run_in_place,
-              AS_HELP_STRING([--enable-run-in-place],[load ui data and extensions from the source tree]),
-              [case "${enableval}" in
-              yes) enable_run_in_place=yes ;;
-              no) enable_run_in_place=no ;;
-              *) AC_MSG_ERROR([bad value ${enableval} for --enable-run-in-place]) ;;
-              esac],
+              AS_HELP_STRING([--enable-run-in-place],
+                             [load ui data and extensions from the source tree]),,
               [enable_run_in_place=no])
 AM_CONDITIONAL(RUN_IN_PLACE, test "x$enable_run_in_place" != xno)
 
@@ -85,23 +81,36 @@ PKG_CHECK_MODULES(FR,					\
 AC_SUBST(FR_CFLAGS)
 AC_SUBST(FR_LIBS)
 
+dnl ******************************
 
-CAJA_CFLAGS=""
-CAJA_LIBS=""
-build_caja_actions=no
-AC_ARG_ENABLE(caja_actions,AS_HELP_STRING([--disable-caja-actions],[don't build the caja context menu actions]),)
+AC_ARG_ENABLE([caja_actions],
+	[AS_HELP_STRING([--disable-caja-actions],
+			[do not build the caja context menu actions]))],,
+	[enable_caja_actions=yes])
 
-if test x"$enable_caja_actions" != xno; then
-	if pkg-config --atleast-version=$CAJA_REQUIRED libcaja-extension; then
-		CAJA_CFLAGS=`pkg-config --cflags libcaja-extension glib-2.0 gio-2.0`
-		CAJA_LIBS=`pkg-config --libs libcaja-extension glib-2.0 gio-2.0`
-		build_caja_actions=yes
-	fi
+if test x"$enable_caja_actions" != x"no" ; then
+	PKG_CHECK_MODULES(CAJA, \
+			  libcaja-extension >= $CAJA_REQUIRED \
+			  glib-2.0 \
+			  gio-2.0)
+	AC_SUBST(CAJA_CFLAGS)
+	AC_SUBST(CAJA_LIBS)
+
 fi
-AM_CONDITIONAL(ENABLE_CAJA_ACTIONS, test "x$build_caja_actions" = xyes)
-AC_SUBST(CAJA_CFLAGS)
-AC_SUBST(CAJA_LIBS)
+AM_CONDITIONAL(ENABLE_CAJA_ACTIONS, test "x$enable_caja_actions" = xyes)
 
+AC_ARG_WITH(cajadir,
+        AS_HELP_STRING([--with-cajadir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
+        [ac_with_cajadir=$withval],
+        [ac_with_cajadir=""])
+if test "${ac_with_cajadir}" = ""; then
+        ac_with_cajadir=`pkg-config --variable=extensiondir libcaja-extension`
+fi
+
+AC_MSG_NOTICE([installing caja plugin in ${ac_with_cajadir}])
+AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_cajadir}])
+
+dnl ******************************
 
 PKG_CHECK_MODULES(JSON_GLIB,
 		  [json-glib-1.0 >= $JSON_GLIB_REQUIRED
@@ -167,21 +176,6 @@ AC_SUBST(DISABLE_DEPRECATED)
 
 dnl ******************************
 
-
-AC_ARG_WITH(cajadir,
-        AS_HELP_STRING([--with-cajadir=DIR],[Installation path for Caja extension @<:@auto@:>@]),
-        [ac_with_cajadir=$withval],
-        [ac_with_cajadir=""])
-if test "${ac_with_cajadir}" = ""; then
-        ac_with_cajadir=`pkg-config --variable=extensiondir libcaja-extension`
-fi
-
-AC_MSG_NOTICE([installing caja plugin in ${ac_with_cajadir}])
-AC_SUBST([CAJA_EXTENSION_DIR],[${ac_with_cajadir}])
-
-
-dnl ******************************
-
 AC_CONFIG_FILES([Makefile
 		 data/Makefile
 		 data/engrampa.desktop.in
@@ -214,7 +208,7 @@ Configuration:
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
 	Internal mkdtemp:       ${mkdtemp_missing}
-	Caja support:           ${build_caja_actions}
+	Caja support:           ${enable_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}
 	JSON support:           ${enable_json_glib}
