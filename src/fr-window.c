@@ -8013,7 +8013,11 @@ fr_window_open_files_with_application (FrWindow *window,
 	for (scan = file_list; scan; scan = scan->next)
 		uris = g_list_prepend (uris, g_filename_to_uri (scan->data, NULL, NULL));
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	context = gdk_display_get_app_launch_context (gtk_widget_get_display (GTK_WIDGET (window)));
+#else
 	context = gdk_app_launch_context_new ();
+#endif
 	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (window)));
 	gdk_app_launch_context_set_timestamp (context, 0);
 
@@ -8263,7 +8267,11 @@ fr_window_open_extracted_files (OpenFilesData *odata)
 		}
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	context = gdk_display_get_app_launch_context (gtk_widget_get_display (GTK_WIDGET (odata->window)));
+#else
 	context = gdk_app_launch_context_new ();
+#endif
 	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (odata->window)));
 	gdk_app_launch_context_set_timestamp (context, 0);
 	result = g_app_info_launch_uris (app, files_to_open, G_APP_LAUNCH_CONTEXT (context), &error);
