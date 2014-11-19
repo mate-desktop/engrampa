@@ -406,7 +406,7 @@ fr_command_zip_get_capabilities (FrCommand  *comm,
 		if (strcmp (mime_type, "application/x-ms-dos-executable") == 0)
 			capabilities |= FR_COMMAND_CAN_READ;
 		else
-			capabilities |= FR_COMMAND_CAN_READ_WRITE;
+			capabilities |= FR_COMMAND_CAN_WRITE;
 	}
 	else if (is_program_available ("unzip", check_command))
 		capabilities |= FR_COMMAND_CAN_READ;
