@@ -408,7 +408,7 @@ fr_command_zip_get_capabilities (FrCommand  *comm,
 		else
 			capabilities |= FR_COMMAND_CAN_WRITE;
 	}
-	else if (is_program_available ("unzip", check_command))
+	if (is_program_available ("unzip", check_command))
 		capabilities |= FR_COMMAND_CAN_READ;
 
 	return capabilities;
