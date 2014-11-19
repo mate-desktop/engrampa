@@ -60,7 +60,7 @@ package_installer_terminated (InstallerData   *idata,
 
 	if (error_type != FR_PROC_ERROR_NONE) {
 		fr_archive_action_completed (idata->archive,
-					     FR_ACTION_CREATING_NEW_ARCHIVE,
+					     idata->action,
 					     error_type,
 					     error_message);
 	}
