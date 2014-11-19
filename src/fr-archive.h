@@ -20,8 +20,8 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
-#ifndef ARCHIVE_H
-#define ARCHIVE_H
+#ifndef FR_ARCHIVE_H
+#define FR_ARCHIVE_H
 
 #include <glib.h>
 #include "fr-process.h"
@@ -216,4 +216,4 @@ void        fr_archive_test                      (FrArchive       *archive,
 
 gboolean    uri_is_archive                       (const char      *uri);
 
-#endif /* ARCHIVE_H */
+#endif /* FR_ARCHIVE_H */
