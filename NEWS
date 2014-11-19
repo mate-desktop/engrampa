@@ -1,7 +1,33 @@
+1.9.1
+-----
+
+  * Fix open rar file inside a rar file
+  * Drop support for Gtk+ < 2.24
+  * Unifiy code as to be used in Gtk+2 and Gtk+3
+  * Drop support for Glib < 2.32
+  * Do not set the selected app as the system default
+  * Fix possible errors with some password protected files
+  * Use Caja GSettings schema optionally
+  * Add ini file for caja extension
+  * Add engrampa.appdata.xml
+  * Fix memory leaks
+  * Fixed crash when clicking Cancel in Add Files
+  * use g_get_user_config_dir instead of using .config/mate
+  * do not set the "last output" dialog as modal to allow the user to resize it
+  * Fixed loading of multi-volume rar archives with 7zip
+  * use GtkRecentAction objects to create the recent file choosers
+  * Several string improvements
+  * set a mnemonic for the label in the request dialog
+  * Change strings to use ellipsis
+  * allow to compress iso images and tar archives from the caja menu
+  * Ask overwrite confirmation when extracting files with drag&drop
+  * Small fixes for Gtk3 engrampa
+
 1.9.0
 -----
 
-  * ...
+  * Fix hyphen-as-minus-sign issues for engrampa.1 man page
+  * Add keywords key to .desktop file
 
 1.8.0
 -----
