@@ -7365,17 +7365,17 @@ valid_name (const char  *new_name,
 
 	if (*new_name == '\0') {
 		/* Translators: the name references to a filename.  This message can appear when renaming a file. */
-		*reason = g_strdup_printf ("%s\n\n%s", _("The new name is void."), _("Please use a different name."));
+		*reason = g_strdup (_("New name is void, please type a name."));
 		retval = FALSE;
 	}
 	else if (strcmp (new_name, old_name) == 0) {
 		/* Translators: the name references to a filename.  This message can appear when renaming a file. */
-		*reason = g_strdup_printf ("%s\n\n%s", _("The new name is equal to the old one."), _("Please use a different name."));
+		*reason = g_strdup (_("New name is the same as old one, please type other name."));
 		retval = FALSE;
 	}
 	else if (strchrs (new_name, BAD_CHARS)) {
-		/* Translators: the name references to a filename.  This message can appear when renaming a file. */
-		*reason = g_strdup_printf (_("The name \"%s\" is not valid because it cannot contain the characters: %s\n\n%s"), utf8_new_name, BAD_CHARS, _("Please use a different name."));
+		/* Translators: the %s references to a filename.  This message can appear when renaming a file. */
+		*reason = g_strdup_printf (_("Name \"%s\" is not valid because it contains at least one of the following characters: %s, please type other name."), utf8_new_name, BAD_CHARS);
 		retval = FALSE;
 	}
 

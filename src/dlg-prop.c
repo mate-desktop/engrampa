@@ -131,7 +131,7 @@ dlg_prop (FrWindow *window)
 	/**/
 
 	label_label = _gtk_builder_get_widget (data->builder, "p_date_label_label");
-	set_label (label_label, _("Modified on:"));
+	set_label (label_label, _("Last modified:"));
 
 	label = _gtk_builder_get_widget (data->builder, "p_date_label");
 	s = get_time_string (get_file_mtime (fr_window_get_archive_uri (window)));

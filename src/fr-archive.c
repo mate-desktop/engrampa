@@ -1226,7 +1226,7 @@ copy_remote_file (FrArchive  *archive,
 
 	if (! g_file_query_exists (archive->file, NULL)) {
 		GError *error;
-		error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND, _("The file doesn't exist"));
+		error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND, _("Archive not found"));
 		fr_archive_copy_done (archive, FR_ACTION_LOADING_ARCHIVE, error);
 		g_error_free (error);
 		return;
