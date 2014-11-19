@@ -835,9 +835,9 @@ fr_restore_session (EggSMClient *client)
 static void
 prepare_app (void)
 {
-	char *uri;
-	char *extract_to_path = NULL;
-	char *add_to_path = NULL;
+	char        *uri;
+	char        *extract_to_uri = NULL;
+	char        *add_to_uri = NULL;
 	EggSMClient *client = NULL;
 
 	/* create the config dir if necessary. */
@@ -872,10 +872,10 @@ prepare_app (void)
 	}
 
 	if (extract_to != NULL)
-		extract_to_path = get_uri_from_command_line (extract_to);
+		extract_to_uri = get_uri_from_command_line (extract_to);
 
 	if (add_to != NULL)
-		add_to_path = get_uri_from_command_line (add_to);
+		add_to_uri = get_uri_from_command_line (add_to);
 
 	if ((add_to != NULL) || (add == 1)) { /* Add files to an archive */
 		GtkWidget   *window;
@@ -892,16 +892,17 @@ prepare_app (void)
 		file_list = g_list_reverse (file_list);
 
 		fr_window_new_batch (FR_WINDOW (window));
-		fr_window_set_batch__add (FR_WINDOW (window), add_to_path, file_list);
+		fr_window_set_batch__add (FR_WINDOW (window), add_to_uri, file_list);
 		fr_window_append_batch_action (FR_WINDOW (window),
 					       FR_BATCH_ACTION_QUIT,
 					       NULL,
 					       NULL);
 		fr_window_start_batch (FR_WINDOW (window));
 	}
-	else if ((extract_to != NULL)
-		  || (extract == 1)
-		  || (extract_here == 1)) { /* Extract all archives. */
+	else if ((extract_to != NULL) || (extract == 1) || (extract_here == 1)) {
+
+		/* Extract all archives. */
+
 		GtkWidget  *window;
 		const char *archive;
 		int         i = 0;
@@ -921,7 +922,7 @@ prepare_app (void)
 			else
 				fr_window_set_batch__extract (FR_WINDOW (window),
 							      archive_uri,
-							      extract_to_path);
+							      extract_to_uri);
 			g_free (archive_uri);
 		}
 		fr_window_append_batch_action (FR_WINDOW (window),
@@ -951,6 +952,6 @@ prepare_app (void)
 		}
 	}
 
-	g_free (add_to_path);
-	g_free (extract_to_path);
+	g_free (add_to_uri);
+	g_free (extract_to_uri);
 }
