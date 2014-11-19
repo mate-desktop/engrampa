@@ -833,28 +833,38 @@ fr_restore_session (EggSMClient *client)
 }
 
 static void
+migrate_options_directory (void)
+{
+	char *old_directory_path;
+	GFile *old_directory;
+	GFile *new_directory;
+
+	old_directory_path = get_home_relative_path (".config/mate/engrampa/options");
+	old_directory = g_file_new_for_path (old_directory_path);
+	new_directory = get_user_config_subdirectory (ADD_FOLDER_OPTIONS_DIR, FALSE);
+	if (g_file_query_exists (old_directory, NULL) && ! g_file_query_exists (new_directory, NULL)) {
+		GFile *parent;
+
+		parent = g_file_get_parent (new_directory);
+		if (make_directory_tree (parent, 0700, NULL))
+			g_file_move (old_directory, new_directory, 0, NULL, NULL, NULL, NULL);
+
+		g_object_unref (parent);
+	}
+
+	g_object_unref (new_directory);
+	g_object_unref (old_directory);
+	g_free (old_directory_path);
+}
+
+static void
 prepare_app (void)
 {
-	char        *uri;
 	char        *extract_to_uri = NULL;
 	char        *add_to_uri = NULL;
 	EggSMClient *client = NULL;
 
-	/* create the config dir if necessary. */
-
-	uri = get_home_relative_uri (RC_DIR);
-
-	if (uri_is_file (uri)) { /* before the MateConf port this was a file, now it's folder. */
-		GFile *file;
-
-		file = g_file_new_for_uri (uri);
-		g_file_delete (file, NULL, NULL);
-		g_object_unref (file);
-	}
-
-	ensure_dir_exists (uri, 0700, NULL);
-	g_free (uri);
-
+	migrate_options_directory ();
 	register_commands ();
 	compute_supported_archive_types ();
 

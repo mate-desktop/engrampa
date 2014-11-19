@@ -28,14 +28,7 @@
 
 #define MEGABYTE (1024 * 1024)
 
-#define RC_DIR              ".config/mate/engrampa"
-#define RC_BOOKMARKS_FILE   ".config/mate/engrampa/bookmarks"
-#define RC_RECENT_FILE      ".config/mate/engrampa/recents"
-#define RC_OPTIONS_DIR      ".config/mate/engrampa/options"
-
-#define OLD_RC_BOOKMARKS_FILE   ".engrampa/bookmarks"
-#define OLD_RC_RECENT_FILE      ".engrampa/recents"
-#define OLD_RC_OPTIONS_DIR      ".engrampa/options"
+#define ADD_FOLDER_OPTIONS_DIR  "engrampa/options"
 
 typedef enum { /*< skip >*/
 	FR_WINDOW_SORT_BY_NAME = 0,

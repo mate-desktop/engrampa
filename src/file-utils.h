@@ -109,6 +109,8 @@ gboolean 	    is_program_available	 (const char *filename,
 const char *        get_home_uri                 (void);
 char *              get_home_relative_uri        (const char *partial_uri);
 GFile *             get_home_relative_file       (const char *partial_uri);
+GFile *             get_user_config_subdirectory (const char *child_name,
+						  gboolean    create_);
 const char *        remove_host_from_uri         (const char *uri);
 char *              get_uri_host                 (const char *uri);
 char *              get_uri_root                 (const char *uri);
