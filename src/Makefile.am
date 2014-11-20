@@ -189,7 +189,11 @@ fr-enum-types.c: typedefs.h fr-enum-types.h
 engrampa_LDADD =							\
 		    $(top_builddir)/copy-n-paste/libeggsmclient.la	\
 		    $(FR_LIBS)	\
-			${JSON_GLIB_LIBS}
+		    ${JSON_GLIB_LIBS}
+
+if ENABLE_MAGIC
+engrampa_LDADD += $(MAGIC_LIBS)
+endif
 
 EXTRA_DIST = fr-marshal.list
 
