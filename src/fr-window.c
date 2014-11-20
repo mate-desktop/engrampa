@@ -2451,6 +2451,7 @@ static void
 create_the_progress_dialog (FrWindow *window)
 {
 	GtkWindow     *parent;
+	GtkDialogFlags flags;
 	GtkDialog     *d;
 	GtkWidget     *vbox;
 	GtkWidget     *align;
@@ -2463,16 +2464,20 @@ create_the_progress_dialog (FrWindow *window)
 	if (window->priv->progress_dialog != NULL)
 		return;
 
-	if (window->priv->batch_mode)
+	flags = GTK_DIALOG_DESTROY_WITH_PARENT;
+	if (window->priv->batch_mode) {
 		parent = NULL;
-	else
+	}
+	else {
 		parent = GTK_WINDOW (window);
+		flags |= GTK_DIALOG_MODAL;
+	}
 
 	window->priv->pd_last_action = window->priv->action;
 	title = get_message_from_action (window->priv->pd_last_action);
 	window->priv->progress_dialog = gtk_dialog_new_with_buttons (title,
 								     parent,
-								     GTK_DIALOG_DESTROY_WITH_PARENT,
+								     flags,
 								     NULL);
 
 	window->priv->pd_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_QUIT, DIALOG_RESPONSE_QUIT);
