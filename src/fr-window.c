@@ -7246,12 +7246,7 @@ fr_window_view_last_output (FrWindow   *window,
 					      GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
 					      NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
-
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
-	gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 6);
-	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), 8);
-
 	gtk_widget_set_size_request (dialog, 500, 300);
 
 	/* Add text */

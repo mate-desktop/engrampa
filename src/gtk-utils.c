@@ -75,12 +75,7 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 		stock_id = GTK_STOCK_DIALOG_INFO;
 
 	dialog = gtk_dialog_new_with_buttons ("", parent, flags, NULL);
-
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
-
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
-	gtk_container_set_border_width (GTK_CONTAINER (content_area), 6);
-	gtk_box_set_spacing (GTK_BOX (content_area), 8);
 
 	/* Add label and image */
 
@@ -210,12 +205,7 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	stock_id = GTK_STOCK_DIALOG_QUESTION;
 
 	dialog = gtk_dialog_new_with_buttons (title, parent, flags, NULL);
-
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
-
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
-	gtk_container_set_border_width (GTK_CONTAINER (content_area), 6);
-	gtk_box_set_spacing (GTK_BOX (content_area), 8);
 
 	/* Add label and image */
 
@@ -304,10 +294,6 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (d));
 
-	gtk_container_set_border_width (GTK_CONTAINER (d), 6);
-	gtk_container_set_border_width (GTK_CONTAINER (content_area), 6);
-	gtk_box_set_spacing (GTK_BOX (content_area), 8);
-
 	/* Add label and image */
 
 	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
@@ -390,10 +376,6 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
-
-	gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
-	gtk_container_set_border_width (GTK_CONTAINER (content_area), 6);
-	gtk_box_set_spacing (GTK_BOX (content_area), 8);
 
 	gtk_widget_set_size_request (dialog, 500, -1);
 
