@@ -23,6 +23,7 @@
 #include <config.h>
 #include <string.h>
 #include <unistd.h>
+#include <gtk/gtk.h>
 #include "file-utils.h"
 #include "fr-stock.h"
 #include "main.h"
@@ -30,6 +31,10 @@
 #include "fr-window.h"
 #include "typedefs.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
+#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
+#endif
 
 typedef struct {
 	FrWindow     *window;

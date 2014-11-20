@@ -100,6 +100,12 @@ static int             dir_tree_icon_size = 0;
 #define FR_CLIPBOARD (gdk_atom_intern_static_string ("_RNGRAMPA_SPECIAL_CLIPBOARD"))
 #define FR_SPECIAL_URI_LIST (gdk_atom_intern_static_string ("application/engrampa-uri-list"))
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_hpaned_new() gtk_paned_new(GTK_ORIENTATION_HORIZONTAL)
+#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
+#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
+#endif
+
 static GtkTargetEntry clipboard_targets[] = {
 	{ "application/engrampa-uri-list", 0, 1 }
 };

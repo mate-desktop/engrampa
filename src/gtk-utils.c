@@ -22,10 +22,15 @@
 
 #include <config.h>
 #include <string.h>
+#include <gtk/gtk.h>
 #include "gtk-utils.h"
 
 #define LOAD_BUFFER_SIZE 65536
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
+#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
+#endif
 
 static void
 count_selected (GtkTreeModel *model,
