@@ -5370,7 +5370,6 @@ fr_window_construct (FrWindow *window)
 	GtkWidget        *sidepane_title_label;
 	GtkWidget        *close_sidepane_button;
 	GtkTreeSelection *selection;
-	int              UNUSED_VARIABLE i;
 	int               icon_width, icon_height;
 	GtkActionGroup   *actions;
 	GtkAction        *action;
