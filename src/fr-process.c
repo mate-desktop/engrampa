@@ -643,6 +643,11 @@ child_setup (gpointer user_data)
 	/* detach from the tty */
 
 	setsid ();
+
+	/* create a process group to kill all the child processes when
+	 * canceling the operation. */
+
+	setpgid (0, 0);
 }
 
 
@@ -999,7 +1004,7 @@ fr_process_stop_priv (FrProcess *process,
 		allow_sticky_processes_only (process, emit_signal);
 
 	else if (process->term_on_stop && (process->priv->command_pid > 0))
-		kill (process->priv->command_pid, SIGTERM);
+		killpg (process->priv->command_pid, SIGTERM);
 
 	else {
 		if (process->priv->check_timeout != 0) {
