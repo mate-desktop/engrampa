@@ -27,7 +27,7 @@
 #include "file-utils.h"
 #include "glib-utils.h"
 #include "gtk-utils.h"
-#include "main.h"
+#include "fr-init.h"
 #include "fr-window.h"
 
 

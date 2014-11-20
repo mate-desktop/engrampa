@@ -27,7 +27,7 @@
 #include <gtk/gtk.h>
 #include "dlg-package-installer.h"
 #include "gtk-utils.h"
-#include "main.h"
+#include "fr-init.h"
 
 
 typedef struct {

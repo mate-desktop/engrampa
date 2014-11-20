@@ -38,7 +38,7 @@
 #include <gio/gio.h>
 #include "file-utils.h"
 #include "glib-utils.h"
-#include "main.h"
+#include "fr-init.h"
 
 
 #ifndef HAVE_MKDTEMP

@@ -33,7 +33,7 @@
 #include "gtk-utils.h"
 #include "glib-utils.h"
 #include "preferences.h"
-#include "main.h"
+#include "fr-init.h"
 
 
 #define ARCHIVE_ICON_SIZE (48)

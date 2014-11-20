@@ -10,6 +10,12 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
 
+servicedir = $(datadir)/dbus-1/services
+service_in_files = org.mate.Engrampa.service.in
+service_DATA = $(service_in_files:.service.in=.service)
+$(service_DATA): $(service_in_files) Makefile
+	$(AM_V_GEN) $(SED) -e "s|\@libexecdir\@|$(libexecdir)|" $< > $@
+
 @INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/appdata
 appdata_in_files = engrampa.appdata.xml.in
@@ -49,11 +55,13 @@ EXTRA_DIST = \
        $(gsettingsschema_in_files) \
        $(appdata_in_files) \
        $(man_MANS) \
+       $(service_in_files) \
        $(NULL)
 
 DISTCLEANFILES = \
        $(desktop_in_files) \
        $(desktop_DATA) \
+       $(service_DATA) \
        $(NULL)
 
 CLEANFILES = \

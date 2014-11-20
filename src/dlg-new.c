@@ -29,7 +29,7 @@
 #include "file-utils.h"
 #include "fr-stock.h"
 #include "gtk-utils.h"
-#include "main.h"
+#include "fr-init.h"
 #include "preferences.h"
 
 

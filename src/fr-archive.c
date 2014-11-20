@@ -40,7 +40,7 @@
 #include "fr-marshal.h"
 #include "fr-proc-error.h"
 #include "fr-process.h"
-#include "main.h"
+#include "fr-init.h"
 
 #if ENABLE_MAGIC
 #include <magic.h>

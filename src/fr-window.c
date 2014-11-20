@@ -47,7 +47,7 @@
 #include "file-data.h"
 #include "file-utils.h"
 #include "glib-utils.h"
-#include "main.h"
+#include "fr-init.h"
 #include "gtk-utils.h"
 #include "open-file.h"
 #include "typedefs.h"
@@ -245,6 +245,8 @@ fr_clipboard_data_set_password (FrClipboardData *clipboard_data,
 
 enum {
 	ARCHIVE_LOADED,
+	PROGRESS,
+	READY,
 	LAST_SIGNAL
 };
 
@@ -378,6 +380,9 @@ struct _FrWindowPrivateData {
 	FrAction          pd_last_action;
 	char             *pd_last_archive;
 	char             *working_archive;
+	double            pd_last_fraction;
+	char             *pd_last_message;
+	gboolean          use_progress_dialog;
 
 	/* update dialog data */
 
@@ -623,6 +628,7 @@ fr_window_free_private_data (FrWindow *window)
 	fr_window_reset_current_batch_action (window);
 
 	g_free (window->priv->pd_last_archive);
+	g_free (window->priv->pd_last_message);
 	g_free (window->priv->extract_here_dir);
 	g_free (window->priv->last_status_message);
 
@@ -668,12 +674,14 @@ fr_window_finalize (GObject *object)
 					      gh_unref_pixbuf,
 					      NULL);
 			g_hash_table_destroy (pixbuf_hash);
+			pixbuf_hash = NULL;
 		}
 		if (tree_pixbuf_hash != NULL) {
 			g_hash_table_foreach (tree_pixbuf_hash,
 					      gh_unref_pixbuf,
 					      NULL);
 			g_hash_table_destroy (tree_pixbuf_hash);
+			tree_pixbuf_hash = NULL;
 		}
 
 		gtk_main_quit ();
@@ -735,6 +743,25 @@ fr_window_class_init (FrWindowClass *class)
 			      fr_marshal_VOID__BOOLEAN,
 			      G_TYPE_NONE, 1,
 			      G_TYPE_BOOLEAN);
+	fr_window_signals[PROGRESS] =
+		g_signal_new ("progress",
+			      G_TYPE_FROM_CLASS (class),
+			      G_SIGNAL_RUN_LAST,
+			      G_STRUCT_OFFSET (FrWindowClass, progress),
+			      NULL, NULL,
+			      fr_marshal_VOID__DOUBLE_STRING,
+			      G_TYPE_NONE, 2,
+			      G_TYPE_DOUBLE,
+			      G_TYPE_STRING);
+	fr_window_signals[READY] =
+		g_signal_new ("ready",
+			      G_TYPE_FROM_CLASS (class),
+			      G_SIGNAL_RUN_LAST,
+			      G_STRUCT_OFFSET (FrWindowClass, ready),
+			      NULL, NULL,
+			      fr_marshal_VOID__POINTER,
+			      G_TYPE_NONE, 1,
+			      G_TYPE_POINTER);
 
 	gobject_class = (GObjectClass*) class;
 	gobject_class->finalize = fr_window_finalize;
@@ -787,6 +814,7 @@ fr_window_init (FrWindow *window)
 	window->priv->update_dropped_files = FALSE;
 	window->priv->filter_mode = FALSE;
 	window->priv->batch_title = NULL;
+	window->priv->use_progress_dialog = TRUE;
 
 	g_signal_connect (window,
 			  "realize",
@@ -2441,9 +2469,20 @@ fr_window_message_cb (FrCommand  *command,
 
 		if (g_utf8_validate (utf8_msg, -1, NULL))
 			gtk_label_set_text (GTK_LABEL (window->priv->pd_message), utf8_msg);
+
+		g_free (window->priv->pd_last_message);
+		window->priv->pd_last_message = g_strdup (utf8_msg);
+
+		g_signal_emit (G_OBJECT (window),
+			       fr_window_signals[PROGRESS],
+			       0,
+			       window->priv->pd_last_fraction,
+			       window->priv->pd_last_message);
+
 #ifdef LOG_PROGRESS
 		g_print ("message > %s\n", utf8_msg);
 #endif
+
 		g_free (utf8_msg);
 	}
 
@@ -2618,7 +2657,7 @@ display_progress_dialog (gpointer data)
 	if (window->priv->progress_timeout != 0)
 		g_source_remove (window->priv->progress_timeout);
 
-	if (window->priv->progress_dialog != NULL) {
+	if (window->priv->use_progress_dialog && (window->priv->progress_dialog != NULL)) {
 		gtk_dialog_set_response_sensitive (GTK_DIALOG (window->priv->progress_dialog),
 						   GTK_RESPONSE_OK,
 						   window->priv->stoppable);
@@ -2706,6 +2745,14 @@ fr_window_progress_cb (FrArchive *archive,
 			if (message != NULL)
 				fr_command_message (archive->command, message);
 		}
+
+		window->priv->pd_last_fraction = fraction;
+
+		g_signal_emit (G_OBJECT (window),
+			       fr_window_signals[PROGRESS],
+			       0,
+			       window->priv->pd_last_fraction,
+			       window->priv->pd_last_message);
 
 #ifdef LOG_PROGRESS
 		g_print ("progress > %2.2f\n", fraction);
@@ -2878,23 +2925,42 @@ error_dialog_response_cb (GtkDialog *dialog,
 	if ((dialog_parent != NULL) && (gtk_widget_get_toplevel (GTK_WIDGET (dialog_parent)) != (GtkWidget*) dialog_parent))
 		gtk_window_set_modal (dialog_parent, TRUE);
 	gtk_widget_destroy (GTK_WIDGET (dialog));
+
 	if (window->priv->destroy_with_error_dialog)
 		gtk_widget_destroy (GTK_WIDGET (window));
 }
 
 
 static void
-fr_window_show_error_dialog (FrWindow  *window,
-			     GtkWidget *dialog,
-			     GtkWindow *dialog_parent)
+fr_window_show_error_dialog (FrWindow   *window,
+			     GtkWidget  *dialog,
+			     GtkWindow  *dialog_parent,
+			     const char *details)
 {
+	if (window->priv->batch_mode && ! window->priv->use_progress_dialog) {
+		GError *error;
+
+		error = g_error_new_literal (FR_ERROR, FR_PROC_ERROR_GENERIC, details ? details : _("Command exited abnormally."));
+		g_signal_emit (window,
+			       fr_window_signals[READY],
+			       0,
+			       error);
+
+		gtk_widget_destroy (GTK_WIDGET (window));
+
+		return;
+	}
+
 	close_progress_dialog (window, TRUE);
+
+	if (window->priv->batch_mode)
+		fr_window_destroy_with_error_dialog (window);
 
 	if (dialog_parent != NULL)
 		gtk_window_set_modal (dialog_parent, FALSE);
 	g_signal_connect (dialog,
 			  "response",
-			  (window->priv->batch_mode) ? G_CALLBACK (gtk_main_quit) : G_CALLBACK (error_dialog_response_cb),
+			  G_CALLBACK (error_dialog_response_cb),
 			  window);
 	gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
 	gtk_widget_show (dialog);
@@ -3031,7 +3097,7 @@ handle_errors (FrWindow    *window,
 						msg,
 						((details != NULL) ? "%s" : NULL),
 						details);
-		fr_window_show_error_dialog (window, dialog, dialog_parent);
+		fr_window_show_error_dialog (window, dialog, dialog_parent, details);
 
 		return FALSE;
 	}
@@ -5570,6 +5636,8 @@ fr_window_construct (FrWindow *window)
 	window->priv->current_batch_action.free_func = NULL;
 
 	window->priv->pd_last_archive = NULL;
+	window->priv->pd_last_message = NULL;
+	window->priv->pd_last_fraction = 0.0;
 
 	/* Create the widgets. */
 
@@ -6835,17 +6903,21 @@ fr_window_archive_extract (FrWindow    *window,
 		}
 
 		if (! do_not_extract && ! ensure_dir_exists (edata->extract_to_dir, 0755, &error)) {
-			GtkWidget  *d;
+			GtkWidget *d;
+			char      *details;
 
+			details = g_strdup_printf (_("Could not create the destination folder: %s."), error->message);
 			d = _gtk_error_dialog_new (GTK_WINDOW (window),
 						   0,
 						   NULL,
 						   _("Extraction not performed"),
-						   _("Could not create the destination folder: %s."),
-						   error->message);
+						   "%s",
+						   details);
 			g_clear_error (&error);
-			fr_window_show_error_dialog (window, d, GTK_WINDOW (window));
+			fr_window_show_error_dialog (window, d, GTK_WINDOW (window), details);
 			fr_window_stop_batch (window);
+
+			g_free (details);
 
 			return;
 		}
@@ -6862,7 +6934,7 @@ fr_window_archive_extract (FrWindow    *window,
 					     GTK_STOCK_OK, GTK_RESPONSE_OK,
 					     NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
-		fr_window_show_error_dialog (window, d, GTK_WINDOW (window));
+		fr_window_show_error_dialog (window, d, GTK_WINDOW (window), _("Extraction not performed"));
 		fr_window_stop_batch (window);
 
 		return;
@@ -8670,6 +8742,14 @@ fr_window_set_folders_visibility (FrWindow   *window,
 }
 
 
+void
+fr_window_use_progress_dialog (FrWindow *window,
+			       gboolean  value)
+{
+	window->priv->use_progress_dialog = value;
+}
+
+
 /* -- batch mode procedures -- */
 
 
@@ -8807,6 +8887,13 @@ fr_window_exec_batch_action (FrWindow      *window,
 	case FR_BATCH_ACTION_QUIT:
 		debug (DEBUG_INFO, "[BATCH] QUIT\n");
 
+		g_signal_emit (window,
+			       fr_window_signals[READY],
+			       0,
+			       NULL);
+
+		if ((window->priv->progress_dialog != NULL) && (gtk_widget_get_parent (window->priv->progress_dialog) != GTK_WIDGET (window)))
+			gtk_widget_destroy (window->priv->progress_dialog);
 		gtk_widget_destroy (GTK_WIDGET (window));
 		break;
 

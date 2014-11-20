@@ -1,6 +1,8 @@
 SUBDIRS = commands sh
 
 bin_PROGRAMS = engrampa
+libexec_PROGRAMS = engrampa-server
+noinst_PROGRAMS = test-server
 
 if MKDTEMP_MISSING
 MKDTEMP_FILES=mkdtemp.c mkdtemp.h
@@ -45,7 +47,7 @@ BUILT_SOURCES =			\
 	fr-enum-types.h		\
 	fr-enum-types.c
 
-engrampa_SOURCES = 			\
+COMMON_SOURCES = 			\
 	actions.h			\
 	actions.c			\
 	dlg-add-files.c			\
@@ -123,6 +125,8 @@ engrampa_SOURCES = 			\
 	fr-command-7z.h			\
 	fr-error.c			\
 	fr-error.h			\
+	fr-init.c			\
+	fr-init.h			\
 	fr-list-model.c			\
 	fr-list-model.h			\
 	fr-stock.c			\
@@ -141,8 +145,6 @@ engrampa_SOURCES = 			\
 	gtk-utils.h			\
 	java-utils.c			\
 	java-utils.h			\
-	main.c				\
-	main.h				\
 	open-file.c			\
 	open-file.h			\
 	preferences.c			\
@@ -155,7 +157,7 @@ engrampa_SOURCES = 			\
 	$(BUILT_SOURCES)
 
 if ENABLE_JSON_GLIB
-engrampa_SOURCES +=			\
+COMMON_SOURCES +=			\
 	fr-command-unarchiver.h		\
 	fr-command-unarchiver.c
 endif
@@ -188,10 +190,25 @@ fr-enum-types.c: typedefs.h fr-enum-types.h
 	&& (cmp -s xgen-$(@F) fr-enum-types.c || cp xgen-$(@F) fr-enum-types.c ) \
 	&& rm -f xgen-$(@F) )
 
-engrampa_LDADD =							\
-		    $(top_builddir)/copy-n-paste/libeggsmclient.la	\
-		    $(FR_LIBS)	\
-		    ${JSON_GLIB_LIBS}
+engrampa_SOURCES = 			\
+	$(COMMON_SOURCES)		\
+	main.c
+
+engrampa_LDADD =					\
+	$(top_builddir)/copy-n-paste/libeggsmclient.la	\
+	$(FR_LIBS)					\
+	${JSON_GLIB_LIBS}
+
+engrampa_server_SOURCES =		\
+	$(COMMON_SOURCES)		\
+	server.c
+
+engrampa_server_LDADD =		\
+	$(engrampa_LDADD)
+
+test_server_SOURCES = test-server.c
+test_server_FLAGS = $(FR_CFLAGS)
+test_server_LDADD = $(FR_LIBS)
 
 if ENABLE_MAGIC
 engrampa_LDADD += $(MAGIC_LIBS)

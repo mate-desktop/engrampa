@@ -30,7 +30,7 @@ fr_error_quark (void)
 	static GQuark quark;
         
         if (!quark)
-                quark = g_quark_from_static_string ("engrampa_error");
+                quark = g_quark_from_static_string ("engrampa-error");
 	
         return quark;
 }

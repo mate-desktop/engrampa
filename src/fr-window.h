@@ -93,8 +93,13 @@ struct _FrWindowClass
 
 	/*<signals>*/
 
-	void (*archive_loaded) (FrWindow *window,
-				gboolean  success);
+	void (*archive_loaded) (FrWindow   *window,
+				gboolean    success);
+	void (*progress)       (FrWindow   *window,
+			        double      fraction,
+			        const char *msg);
+	void (*ready)          (FrWindow   *window,
+				GError     *error);
 };
 
 GType       fr_window_get_type                  (void);
@@ -271,6 +276,8 @@ void        fr_window_set_toolbar_visibility      (FrWindow   *window,
 void        fr_window_set_statusbar_visibility    (FrWindow   *window,
 						   gboolean    value);
 void        fr_window_set_folders_visibility      (FrWindow   *window,
+						   gboolean    value);
+void        fr_window_use_progress_dialog         (FrWindow   *window,
 						   gboolean    value);
 
 /* batch mode procedures. */
