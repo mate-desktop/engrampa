@@ -7886,6 +7886,8 @@ add_pasted_files (FrWindow        *window,
 			fr_process_begin_command (window->archive->process, "mv");
 			fr_process_set_working_dir (window->archive->process, data->tmp_dir);
 			fr_process_add_arg (window->archive->process, "-f");
+			if (old_name[0] == '/')
+				old_name = old_name + 1;
 			fr_process_add_arg (window->archive->process, old_name);
 			fr_process_add_arg (window->archive->process, new_name);
 			fr_process_end_command (window->archive->process);
