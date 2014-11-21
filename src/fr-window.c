@@ -722,8 +722,7 @@ fr_window_close (FrWindow *window)
 static void
 fr_window_class_init (FrWindowClass *class)
 {
-	GObjectClass   *gobject_class;
-	GtkWidgetClass UNUSED_VARIABLE *widget_class;
+	GObjectClass *gobject_class;
 
 	parent_class = g_type_class_peek_parent (class);
 
@@ -739,8 +738,6 @@ fr_window_class_init (FrWindowClass *class)
 
 	gobject_class = (GObjectClass*) class;
 	gobject_class->finalize = fr_window_finalize;
-
-	widget_class = (GtkWidgetClass*) class;
 }
 
 
@@ -2336,6 +2333,8 @@ get_message_from_action (FrAction action)
 	default:
 		message = "";
 		break;
+	case FR_ACTION_NONE:
+		break;
 	}
 
 	return message;
@@ -2347,7 +2346,7 @@ progress_dialog__set_last_action (FrWindow *window,
 				  FrAction  action)
 {
 	const char *title;
-	char       *markup;
+	char        *markup;
 
 	window->priv->pd_last_action = action;
 	title = get_message_from_action (window->priv->pd_last_action);
@@ -2489,6 +2488,7 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->progress_dialog = gtk_dialog_new_with_buttons ((window->priv->batch_mode ? window->priv->batch_title : NULL),
 								     parent,
 								     flags,
+								     NULL,
 								     NULL);
 
 	window->priv->pd_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_QUIT, DIALOG_RESPONSE_QUIT);
@@ -5394,8 +5394,6 @@ fr_window_construct (FrWindow *window)
 	GtkActionGroup   *actions;
 	GtkAction        *action;
 	GtkUIManager     *ui;
-	GtkToolItem      *open_recent_tool_item;
-	GtkWidget        *menu_item;
 	GError           *error = NULL;
 	GSettingsSchemaSource *schema_source;
 	GSettingsSchema  *caja_schema;
@@ -6630,7 +6628,7 @@ _fr_window_archive_extract_from_edata (FrWindow    *window,
 }
 
 
-static gboolean _fr_window_ask_overwrite_dialog (OverwriteData *odata);
+static void _fr_window_ask_overwrite_dialog (OverwriteData *odata);
 
 
 static void
@@ -6681,7 +6679,7 @@ overwrite_dialog_response_cb (GtkDialog *dialog,
 }
 
 
-static gboolean
+static void
 _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 {
 	gboolean do_not_extract = FALSE;
@@ -7694,7 +7692,6 @@ fr_window_rename_selection (FrWindow *window,
 
 		if (name_is_present (window, parent_dir, new_name, &reason)) {
 			GtkWidget *dlg;
-			int        UNUSED_VARIABLE r;
 
 			dlg = _gtk_message_dialog_new (GTK_WINDOW (window),
 						       GTK_DIALOG_MODAL,
@@ -7703,7 +7700,7 @@ fr_window_rename_selection (FrWindow *window,
 						       reason,
 						       GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
 						       NULL);
-			r = gtk_dialog_run (GTK_DIALOG (dlg));
+			gtk_dialog_run (GTK_DIALOG (dlg));
 			gtk_widget_destroy (dlg);
 			g_free (reason);
 			g_free (new_name);
@@ -7940,7 +7937,7 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 		return;
 	}
 
-	continue_batch = handle_errors (window, archive, action, error);
+	(void) handle_errors (window, archive, action, error);
 
 	if (error->type != FR_PROC_ERROR_NONE) {
 		fr_clipboard_data_unref (window->priv->clipboard_data);

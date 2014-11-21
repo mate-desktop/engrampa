@@ -25,6 +25,6 @@
 
 #include "fr-command.h"
 
-void rar_check_multi_vomule (FrCommand *comm);
+void rar_check_multi_volume (FrCommand *comm);
 
 #endif /* RAR_UTILS_H */

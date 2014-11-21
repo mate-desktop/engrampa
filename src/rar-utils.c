@@ -91,7 +91,7 @@ get_first_volume_name (const char           *name,
 
 
 void
-rar_check_multi_vomule (FrCommand *comm)
+rar_check_multi_volume (FrCommand *comm)
 {
 	GFile *file;
 	char   buffer[11];

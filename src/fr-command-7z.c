@@ -34,6 +34,7 @@
 #include "glib-utils.h"
 #include "fr-command.h"
 #include "fr-command-7z.h"
+#include "rar-utils.h"
 
 static void fr_command_7z_class_init  (FrCommand7zClass *class);
 static void fr_command_7z_init        (FrCommand        *afile);
@@ -235,7 +236,7 @@ list__begin (gpointer data)
 static void
 fr_command_7z_list (FrCommand  *comm)
 {
-	rar_check_multi_vomule (comm);
+	rar_check_multi_volume (comm);
 
 	fr_process_set_out_line_func (comm->process, list__process_line, comm);
 

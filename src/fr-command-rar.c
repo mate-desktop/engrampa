@@ -35,6 +35,7 @@
 #include "fr-command.h"
 #include "fr-command-rar.h"
 #include "fr-error.h"
+#include "rar-utils.h"
 
 static void fr_command_rar_class_init  (FrCommandRarClass *class);
 static void fr_command_rar_init        (FrCommand         *afile);
@@ -324,7 +325,7 @@ list__begin (gpointer data)
 static void
 fr_command_rar_list (FrCommand  *comm)
 {
-	rar_check_multi_vomule (comm);
+	rar_check_multi_volume (comm);
 
 	fr_process_set_out_line_func (comm->process, process_line, comm);
 

@@ -79,7 +79,7 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 	if (stock_id == NULL)
 		stock_id = GTK_STOCK_DIALOG_INFO;
 
-	dialog = gtk_dialog_new_with_buttons ("", parent, flags, NULL);
+	dialog = gtk_dialog_new_with_buttons ("", parent, flags, NULL, NULL);
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
 
 	/* Add label and image */
@@ -204,15 +204,13 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	GtkWidget    *entry;
 	GtkWidget    *button;
 	GtkWidget    *content_area;
-	GtkWidget    *action_area;
 	char         *stock_id;
 	char         *result;
 
 	stock_id = GTK_STOCK_DIALOG_QUESTION;
 
-	dialog = gtk_dialog_new_with_buttons (title, parent, flags, NULL);
+	dialog = gtk_dialog_new_with_buttons (title, parent, flags, NULL, NULL);
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
-	action_area = gtk_dialog_get_action_area (GTK_DIALOG (dialog));
 
 	/* Add label and image */
 
@@ -303,7 +301,7 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 	GtkWidget    *content_area;
 	char         *stock_id = GTK_STOCK_DIALOG_WARNING;
 
-	d = gtk_dialog_new_with_buttons ("", parent, flags, NULL);
+	d = gtk_dialog_new_with_buttons ("", parent, flags, NULL, NULL);
 	gtk_window_set_resizable (GTK_WINDOW (d), FALSE);
 
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (d));
