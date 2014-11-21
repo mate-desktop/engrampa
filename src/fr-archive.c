@@ -1583,7 +1583,7 @@ fr_archive_add (FrArchive     *archive,
 
 	fr_archive_stoppable (archive, fr_archive_add_is_stoppable (archive));
 
-	tmp_base_dir = g_strdup (base_dir);
+	/* dest_dir is the destination folder inside the archive */
 
 	if ((dest_dir != NULL) && (*dest_dir != '\0') && (strcmp (dest_dir, "/") != 0)) {
 		const char *rel_dest_dir = dest_dir;
@@ -1600,8 +1600,10 @@ fr_archive_add (FrArchive     *archive,
 			new_file_list = g_list_prepend (new_file_list, g_build_filename (rel_dest_dir, filename, NULL));
 		}
 	}
-	else
+	else {
+		tmp_base_dir = g_strdup (base_dir);
 		new_file_list = path_list_dup(file_list);
+	}
 
 	/* if the command cannot update,  get the list of files that are
 	 * newer than the ones in the archive. */
