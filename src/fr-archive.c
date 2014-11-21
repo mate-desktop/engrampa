@@ -1754,7 +1754,6 @@ fr_archive_add_local_files (FrArchive     *archive,
 			    FrCompression  compression,
 			    guint          volume_size)
 {
-	fr_archive_stoppable (archive, TRUE);
 	fr_process_clear (archive->process);
 	fr_archive_add (archive,
 			file_list,
