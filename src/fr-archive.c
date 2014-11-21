@@ -1628,7 +1628,7 @@ fr_archive_add (FrArchive     *archive,
 		return;
 	}
 
-	archive->command->creating_archive = ! g_file_test (archive->command->filename, G_FILE_TEST_EXISTS);
+	archive->command->creating_archive = ! g_file_query_exists (archive->local_copy, NULL);
 
 	fr_command_uncompress (archive->command);
 
