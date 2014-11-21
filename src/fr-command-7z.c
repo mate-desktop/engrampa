@@ -254,10 +254,6 @@ fr_command_7z_list (FrCommand  *comm)
 }
 
 
-static char Progress_Message[4196];
-static char Progress_Filename[4096];
-
-
 static void
 parse_progress_line (FrCommand  *comm,
 		     const char *prefix,
@@ -267,16 +263,8 @@ parse_progress_line (FrCommand  *comm,
 	int prefix_len;
 
 	prefix_len = strlen (prefix);
-	if (strncmp (line, prefix, prefix_len) == 0) {
-		double fraction;
-
-		strcpy (Progress_Filename, line + prefix_len);
-		sprintf (Progress_Message, "%s%s", message_prefix, file_name_from_path (Progress_Filename));
-		fr_command_message (comm, Progress_Message);
-
-		fraction = (double) ++comm->n_file / (comm->n_files + 1);
-		fr_command_progress (comm, fraction);
-	}
+	if (strncmp (line, prefix, prefix_len) == 0)
+		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }
 
 

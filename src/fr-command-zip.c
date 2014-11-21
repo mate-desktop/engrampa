@@ -206,12 +206,12 @@ process_line__common (char     *line,
 	if (line == NULL)
 		return;
 
-	fr_command_message (comm, line);
-
 	if (comm->n_files != 0) {
 		double fraction = (double) ++comm->n_file / (comm->n_files + 1);
 		fr_command_progress (comm, fraction);
 	}
+	else
+		fr_command_message (comm, line);
 }
 
 

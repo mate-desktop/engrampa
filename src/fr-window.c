@@ -2671,9 +2671,9 @@ open_progress_dialog (FrWindow *window,
 
 
 static gboolean
-fr_window_progress_cb (FrCommand  *command,
-		       double      fraction,
-		       FrWindow   *window)
+fr_window_progress_cb (FrArchive *archive,
+		       double     fraction,
+		       FrWindow  *window)
 {
 	window->priv->progress_pulse = (fraction < 0.0);
 	if (! window->priv->progress_pulse) {
@@ -2681,6 +2681,29 @@ fr_window_progress_cb (FrCommand  *command,
 		if (window->priv->progress_dialog != NULL)
 			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->priv->pd_progress_bar), fraction);
 		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->priv->progress_bar), fraction);
+
+		if ((archive != NULL) && (archive->command->n_files > 0)) {
+			char *message = NULL;
+			int   remaining_files;
+
+			remaining_files = archive->command->n_files - archive->command->n_file + 1;
+
+			switch (window->priv->action) {
+			case FR_ACTION_ADDING_FILES:
+			case FR_ACTION_EXTRACTING_FILES:
+			case FR_ACTION_DELETING_FILES:
+				message = g_strdup_printf (ngettext (_("%d file remaining"),
+								     _("%'d files remaining"),
+								     remaining_files), remaining_files);
+				break;
+			default:
+				break;
+			}
+
+			if (message != NULL)
+				fr_command_message (archive->command, message);
+		}
+
 #ifdef LOG_PROGRESS
 		g_print ("progress > %2.2f\n", fraction);
 #endif

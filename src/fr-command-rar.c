@@ -349,43 +349,14 @@ fr_command_rar_list (FrCommand  *comm)
 }
 
 
-static char Progress_Message[4196];
-static char Progress_Filename[4096];
-
-
 static void
 parse_progress_line (FrCommand  *comm,
 		     const char *prefix,
 		     const char *message_prefix,
 		     const char *line)
 {
-	int prefix_len;
-
-	prefix_len = strlen (prefix);
-	if (strncmp (line, prefix, prefix_len) == 0) {
-		double  fraction;
-		int     len;
-		char   *b_idx;
-
-		strcpy (Progress_Filename, line + prefix_len);
-
-		/* when a new volume is created a sequence of backspaces is
-		 * issued, remove the backspaces from the filename */
-		b_idx = strchr (Progress_Filename, '\x08');
-		if (b_idx != NULL)
-			*b_idx = 0;
-
-		/* remove the OK at the end of the filename */
-		len = strlen (Progress_Filename);
-		if ((len > 5) && (strncmp (Progress_Filename + len - 5, "  OK ", 5) == 0))
-			Progress_Filename[len - 5] = 0;
-
-		sprintf (Progress_Message, "%s%s", message_prefix, file_name_from_path (Progress_Filename));
-		fr_command_message (comm, Progress_Message);
-
-		fraction = (double) ++comm->n_file / (comm->n_files + 1);
-		fr_command_progress (comm, fraction);
-	}
+	if (strncmp (line, prefix, strlen (prefix)) == 0)
+		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }
 
 
