@@ -94,9 +94,6 @@ void        fr_archive_set_fake_load_func        (FrArchive       *archive,
 						  FakeLoadFunc     func,
 						  gpointer         data);
 gboolean    fr_archive_fake_load                 (FrArchive       *archive);
-void        fr_archive_set_add_is_stoppable_func (FrArchive       *archive,
-						  FakeLoadFunc     func,
-						  gpointer         data);
 void        fr_archive_stoppable                 (FrArchive       *archive,
 						  gboolean         stoppable);
 void        fr_archive_stop	                 (FrArchive       *archive);

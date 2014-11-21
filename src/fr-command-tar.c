@@ -866,11 +866,7 @@ fr_command_tar_uncompress (FrCommand *comm)
 		c_tar->uncomp_filename = NULL;
 	}
 
-	{
-		char *uri = g_filename_to_uri (comm->filename, NULL, NULL);
-		archive_exists = uri_exists (uri);
-		g_free (uri);
-	}
+	archive_exists = ! comm->creating_archive;
 
 	c_tar->name_modified = ! is_mime_type (comm->mime_type, "application/x-tar");
 	if (c_tar->name_modified) {

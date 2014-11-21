@@ -5118,15 +5118,6 @@ fr_window_fake_load (FrArchive *archive,
 }
 
 
-static gboolean
-fr_window_add_is_stoppable (FrArchive *archive,
-			    gpointer   data)
-{
-	FrWindow *window = data;
-	return window->priv->archive_new;
-}
-
-
 static void
 menu_item_select_cb (GtkMenuItem *proxy,
 		     FrWindow    *window)
@@ -5491,9 +5482,6 @@ fr_window_construct (FrWindow *window)
 	fr_archive_set_fake_load_func (window->archive,
 				       fr_window_fake_load,
 				       window);
-	fr_archive_set_add_is_stoppable_func (window->archive,
-					      fr_window_add_is_stoppable,
-					      window);
 
 	window->priv->sort_method = g_settings_get_enum (window->priv->settings_listing, PREF_LISTING_SORT_METHOD);
 	window->priv->sort_type = g_settings_get_enum (window->priv->settings_listing, PREF_LISTING_SORT_TYPE);

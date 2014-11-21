@@ -115,9 +115,6 @@ struct _FrArchivePrivData {
 							     * fr_archive_load is invoked, used
 							     * in batch mode. */
 	gpointer             fake_load_data;
-	FakeLoadFunc         add_is_stoppable_func;         /* Returns whether the add operation is
-							     * stoppable. */
-	gpointer             add_is_stoppable_data;
 	GCancellable        *cancellable;
 	char                *temp_dir;
 	gboolean             continue_adding_dropped_items;
@@ -339,20 +336,10 @@ fr_archive_action_completed (FrArchive       *archive,
 
 
 static gboolean
-fr_archive_add_is_stoppable (FrArchive *archive)
-{
-	if (archive->priv->add_is_stoppable_func != NULL)
-		return (*archive->priv->add_is_stoppable_func) (archive, archive->priv->add_is_stoppable_data);
-	else
-		return FALSE;
-}
-
-
-static gboolean
 archive_sticky_only_cb (FrProcess *process,
 			FrArchive *archive)
 {
-	fr_archive_stoppable (archive, fr_archive_add_is_stoppable (archive));
+	fr_archive_stoppable (archive, FALSE);
 	return TRUE;
 }
 
@@ -370,8 +357,6 @@ fr_archive_init (FrArchive *archive)
 	archive->priv = g_new0 (FrArchivePrivData, 1);
 	archive->priv->fake_load_func = NULL;
 	archive->priv->fake_load_data = NULL;
-	archive->priv->add_is_stoppable_func = NULL;
-	archive->priv->add_is_stoppable_data = NULL;
 
 	archive->priv->extraction_destination = NULL;
 	archive->priv->temp_extraction_dir = NULL;
@@ -1448,16 +1433,6 @@ newer_files_only (FrArchive  *archive,
 	return newer_files;
 }
 
-
-void
-fr_archive_set_add_is_stoppable_func (FrArchive     *archive,
-				      FakeLoadFunc   func,
-				      gpointer       data)
-{
-	archive->priv->add_is_stoppable_func = func;
-	archive->priv->add_is_stoppable_data = data;
-}
-
 static gboolean
 save_list_to_temp_file (GList   *file_list,
 		        char   **list_dir,
@@ -1565,6 +1540,9 @@ fr_archive_add (FrArchive     *archive,
 	gboolean  base_dir_created = FALSE;
 	GList    *scan;
 	char     *tmp_base_dir = NULL;
+	char     *tmp_archive_dir = NULL;
+	char     *archive_filename = NULL;
+	char     *tmp_archive_filename = NULL;
 	gboolean  error_occurred = FALSE;
 
 	if (file_list == NULL)
@@ -1574,14 +1552,13 @@ fr_archive_add (FrArchive     *archive,
 		return;
 
 	g_object_set (archive->command,
-		      "file", archive->local_copy,
 		      "password", password,
 		      "encrypt_header", encrypt_header,
 		      "compression", compression,
 		      "volume_size", volume_size,
 		      NULL);
 
-	fr_archive_stoppable (archive, fr_archive_add_is_stoppable (archive));
+	fr_archive_stoppable (archive, TRUE);
 
 	/* dest_dir is the destination folder inside the archive */
 
@@ -1630,7 +1607,42 @@ fr_archive_add (FrArchive     *archive,
 		return;
 	}
 
-	archive->command->creating_archive = ! g_file_query_exists (archive->local_copy, NULL);
+	archive->command->creating_archive = ! g_file_query_exists (archive->local_copy, archive->priv->cancellable);
+
+	/* create the new archive in a temporary sub-directory, this allows
+	 * to cancel the operation without losing the original archive and
+	 * removing possible temporary files created by the command. */
+
+	{
+		GFile *local_copy_parent;
+		char  *archive_dir;
+		GFile *tmp_file;
+
+		/* create the new archive in a sub-folder of the original
+		 * archive this way the 'mv' command is fast. */
+
+		local_copy_parent = g_file_get_parent (archive->local_copy);
+		archive_dir = g_file_get_path (local_copy_parent);
+		tmp_archive_dir = get_temp_work_dir (archive_dir);
+		archive_filename = g_file_get_path (archive->local_copy);
+		tmp_archive_filename = g_build_filename (tmp_archive_dir, file_name_from_path (archive_filename), NULL);
+		tmp_file = g_file_new_for_path (tmp_archive_filename);
+		g_object_set (archive->command, "file", tmp_file, NULL);
+
+		if (! archive->command->creating_archive) {
+			/* copy the original archive to the new position */
+
+			fr_process_begin_command (archive->process, "cp");
+			fr_process_add_arg (archive->process, "-f");
+			fr_process_add_arg (archive->process, archive_filename);
+			fr_process_add_arg (archive->process, tmp_archive_filename);
+			fr_process_end_command (archive->process);
+		}
+
+		g_object_unref (tmp_file);
+		g_free (archive_dir);
+		g_object_unref (local_copy_parent);
+	}
 
 	fr_command_uncompress (archive->command);
 
@@ -1731,7 +1743,26 @@ fr_archive_add (FrArchive     *archive,
 	if (! error_occurred) {
 		fr_command_recompress (archive->command);
 
-		if (base_dir_created) { /* remove the temp dir */
+		/* move the new archive to the original position */
+
+		fr_process_begin_command (archive->process, "mv");
+		fr_process_add_arg (archive->process, "-f");
+		fr_process_add_arg (archive->process, tmp_archive_filename);
+		fr_process_add_arg (archive->process, archive_filename);
+		fr_process_end_command (archive->process);
+
+		/* remove the temp sub-directory */
+
+		fr_process_begin_command (archive->process, "rm");
+		fr_process_set_working_dir (archive->process, g_get_tmp_dir());
+		fr_process_set_sticky (archive->process, TRUE);
+		fr_process_add_arg (archive->process, "-rf");
+		fr_process_add_arg (archive->process, tmp_archive_dir);
+		fr_process_end_command (archive->process);
+
+		/* remove the base dir */
+
+		if (base_dir_created) {
 			fr_process_begin_command (archive->process, "rm");
 			fr_process_set_working_dir (archive->process, g_get_tmp_dir());
 			fr_process_set_sticky (archive->process, TRUE);
@@ -1741,6 +1772,9 @@ fr_archive_add (FrArchive     *archive,
 		}
 	}
 
+	g_free (tmp_archive_filename);
+	g_free (archive_filename);
+	g_free (tmp_archive_dir);
 	g_free (tmp_base_dir);
 }
 
@@ -2354,6 +2388,7 @@ add_dropped_items (DroppedItemsData *data)
 	 * files without path info. FIXME: doesn't work with remote files. */
 
 	fr_archive_stoppable (archive, FALSE);
+	archive->command->creating_archive = ! g_file_query_exists (archive->local_copy, archive->priv->cancellable);
 	g_object_set (archive->command,
 		      "file", archive->local_copy,
 		      "password", data->password,
@@ -2581,19 +2616,80 @@ fr_archive_remove (FrArchive     *archive,
 		   GList         *file_list,
 		   FrCompression  compression)
 {
+	char *tmp_archive_dir = NULL;
+	char *archive_filename = NULL;
+	char *tmp_archive_filename = NULL;
+
 	g_return_if_fail (archive != NULL);
 
 	if (archive->read_only)
 		return;
 
-	fr_archive_stoppable (archive, FALSE);
-	g_object_set (archive->command,
-		      "file", archive->local_copy,
-		      "compression", compression,
-		      NULL);
+	fr_archive_stoppable (archive, TRUE);
+	archive->command->creating_archive = FALSE;
+	g_object_set (archive->command, "compression", compression, NULL);
+
+	/* create the new archive in a temporary sub-directory, this allows
+	 * to cancel the operation without losing the original archive and
+	 * removing possible temporary files created by the command. */
+
+	{
+		GFile *local_copy_parent;
+		char  *archive_dir;
+		GFile *tmp_file;
+
+		/* create the new archive in a sub-folder of the original
+		 * archive this way the 'mv' command is fast. */
+
+		local_copy_parent = g_file_get_parent (archive->local_copy);
+		archive_dir = g_file_get_path (local_copy_parent);
+		tmp_archive_dir = get_temp_work_dir (archive_dir);
+		archive_filename = g_file_get_path (archive->local_copy);
+		tmp_archive_filename = g_build_filename (tmp_archive_dir, file_name_from_path (archive_filename), NULL);
+		tmp_file = g_file_new_for_path (tmp_archive_filename);
+		g_object_set (archive->command, "file", tmp_file, NULL);
+
+		if (! archive->command->creating_archive) {
+			/* copy the original archive to the new position */
+
+			fr_process_begin_command (archive->process, "cp");
+			fr_process_add_arg (archive->process, "-f");
+			fr_process_add_arg (archive->process, archive_filename);
+			fr_process_add_arg (archive->process, tmp_archive_filename);
+			fr_process_end_command (archive->process);
+		}
+
+		g_object_unref (tmp_file);
+		g_free (archive_dir);
+		g_object_unref (local_copy_parent);
+	}
+
+	/* uncompress, delete and recompress */
+
 	fr_command_uncompress (archive->command);
 	delete_from_archive (archive, file_list);
 	fr_command_recompress (archive->command);
+
+	/* move the new archive to the original position */
+
+	fr_process_begin_command (archive->process, "mv");
+	fr_process_add_arg (archive->process, "-f");
+	fr_process_add_arg (archive->process, tmp_archive_filename);
+	fr_process_add_arg (archive->process, archive_filename);
+	fr_process_end_command (archive->process);
+
+	/* remove the temp sub-directory */
+
+	fr_process_begin_command (archive->process, "rm");
+	fr_process_set_working_dir (archive->process, g_get_tmp_dir());
+	fr_process_set_sticky (archive->process, TRUE);
+	fr_process_add_arg (archive->process, "-rf");
+	fr_process_add_arg (archive->process, tmp_archive_dir);
+	fr_process_end_command (archive->process);
+
+	g_free (tmp_archive_filename);
+	g_free (archive_filename);
+	g_free (tmp_archive_dir);
 }
 
 
