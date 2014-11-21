@@ -204,8 +204,6 @@ fr_command_dpkg_extract (FrCommand  *comm,
         fr_process_add_arg (comm->process, "-e");
         fr_process_add_arg (comm->process, comm->filename);
         fr_process_end_command (comm->process);
-
-        fr_process_start (comm->process);
 }
 
 

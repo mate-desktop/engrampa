@@ -196,8 +196,6 @@ fr_command_iso_extract (FrCommand  *comm,
 
 		g_free (temp_dest_dir);
 	}
-
-	fr_process_start (comm->process);
 }
 
 

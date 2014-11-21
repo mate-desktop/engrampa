@@ -220,7 +220,6 @@ fr_command_rpm_extract (FrCommand  *comm,
 	g_string_free (cmd, TRUE);
 
 	fr_process_end_command (comm->process);
-	fr_process_start (comm->process);
 }
 
 
