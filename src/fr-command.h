@@ -169,10 +169,10 @@ struct _FrCommandClass
 };
 
 GType          fr_command_get_type            (void);
-void           fr_command_set_filename        (FrCommand     *comm,
-					       const char    *filename);
+void           fr_command_set_file            (FrCommand     *comm,
+					       GFile         *file);
 void           fr_command_set_multi_volume    (FrCommand     *comm,
-					       const char    *filename);
+					       GFile         *file);
 void           fr_command_list                (FrCommand     *comm);
 void           fr_command_add                 (FrCommand     *comm,
 					       const char    *from_file,

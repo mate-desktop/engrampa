@@ -287,10 +287,14 @@ process_line__add (char     *line,
 	FrCommand *comm = FR_COMMAND (data);
 
 	if ((comm->volume_size > 0) && (strncmp (line, "Creating archive ", 17) == 0)) {
-		char *volume_filename;
+		char  *volume_filename;
+		GFile *volume_file;
 
 		volume_filename = g_strconcat (comm->filename, ".001", NULL);
-		fr_command_set_multi_volume (comm, volume_filename);
+		volume_file = g_file_new_for_path (volume_filename);
+		fr_command_set_multi_volume (comm, volume_file);
+
+		g_object_unref (volume_file);
 		g_free (volume_filename);
 	}
 

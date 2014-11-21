@@ -119,16 +119,13 @@ rar_check_multi_vomule (FrCommand *comm)
 
 		if (volume_name != NULL) {
 			GFile *parent;
-			GFile *child;
-			char  *volume_filename;
+			GFile *volume_file;
 
 			parent = g_file_get_parent (file);
-			child = g_file_get_child (parent, volume_name);
-			volume_filename = g_file_get_path (child);
-			fr_command_set_multi_volume (comm, volume_filename);
+			volume_file = g_file_get_child (parent, volume_name);
+			fr_command_set_multi_volume (comm, volume_file);
 
-			g_free (volume_filename);
-			g_object_unref (child);
+			g_object_unref (volume_file);
 			g_object_unref (parent);
 		}
 

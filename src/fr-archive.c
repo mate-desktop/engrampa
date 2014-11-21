@@ -623,18 +623,13 @@ create_command_from_type (FrArchive     *archive,
 		          GType          command_type,
 		          FrCommandCaps  requested_capabilities)
 {
-	char *filename;
-
 	if (command_type == 0)
 		return FALSE;
 
-	filename = g_file_get_path (archive->local_copy);
 	archive->command = FR_COMMAND (g_object_new (command_type,
 					             "process", archive->process,
-					             "filename", filename,
 					             "mime-type", mime_type,
 					             NULL));
-	g_free (filename);
 
 	if (! fr_command_is_capable_of (archive->command, requested_capabilities)) {
 		g_object_unref (archive->command);
@@ -1202,9 +1197,11 @@ load_local_archive (FrArchive  *archive,
 	/**/
 
 	fr_process_clear (archive->process);
-	g_object_set (archive->command, "password", password, NULL);
+	g_object_set (archive->command,
+		      "file", archive->local_copy,
+		      "password", password,
+		      NULL);
 	fr_command_list (archive->command);
-	fr_process_start (archive->process);
 }
 
 
@@ -1575,6 +1572,7 @@ fr_archive_add (FrArchive     *archive,
 		return;
 
 	g_object_set (archive->command,
+		      "file", archive->local_copy,
 		      "password", password,
 		      "encrypt_header", encrypt_header,
 		      "compression", compression,
@@ -2354,6 +2352,7 @@ add_dropped_items (DroppedItemsData *data)
 
 	fr_archive_stoppable (archive, FALSE);
 	g_object_set (archive->command,
+		      "file", archive->local_copy,
 		      "password", data->password,
 		      "encrypt_header", data->encrypt_header,
 		      "compression", data->compression,
@@ -2585,7 +2584,10 @@ fr_archive_remove (FrArchive     *archive,
 		return;
 
 	fr_archive_stoppable (archive, FALSE);
-	g_object_set (archive->command, "compression", compression, NULL);
+	g_object_set (archive->command,
+		      "file", archive->local_copy,
+		      "compression", compression,
+		      NULL);
 	fr_command_uncompress (archive->command);
 	delete_from_archive (archive, file_list);
 	fr_command_recompress (archive->command);
@@ -2954,6 +2956,7 @@ fr_archive_extract_to_local (FrArchive  *archive,
 	g_return_if_fail (archive != NULL);
 
 	fr_archive_stoppable (archive, TRUE);
+	g_object_set (archive->command, "file", archive->local_copy, NULL);
 
 	/* if a command supports all the requested options use
 	 * fr_command_extract directly. */
@@ -3307,7 +3310,10 @@ fr_archive_test (FrArchive  *archive,
 {
 	fr_archive_stoppable (archive, TRUE);
 
-	g_object_set (archive->command, "password", password, NULL);
+	g_object_set (archive->command,
+		      "file", archive->local_copy,
+		      "password", password,
+		      NULL);
 	fr_process_clear (archive->process);
 	fr_command_set_n_files (archive->command, 0);
 	fr_command_test (archive->command);

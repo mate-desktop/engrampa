@@ -48,7 +48,7 @@ enum {
 /* Properties */
 enum {
         PROP_0,
-        PROP_FILENAME,
+        PROP_FILE,
         PROP_MIME_TYPE,
         PROP_PROCESS,
         PROP_PASSWORD,
@@ -289,8 +289,8 @@ fr_command_set_property (GObject      *object,
 	case PROP_PROCESS:
 		fr_command_set_process (comm, g_value_get_object (value));
 		break;
-	case PROP_FILENAME:
-		fr_command_set_filename (comm, g_value_get_string (value));
+	case PROP_FILE:
+		fr_command_set_file (comm, g_value_get_object (value));
 		break;
 	case PROP_MIME_TYPE:
 		fr_command_set_mime_type (comm, g_value_get_string (value));
@@ -328,8 +328,8 @@ fr_command_get_property (GObject    *object,
 	case PROP_PROCESS:
 		g_value_set_object (value, comm->process);
 		break;
-	case PROP_FILENAME:
-		g_value_set_string (value, comm->filename);
+	case PROP_FILE:
+		g_value_take_object (value, g_file_new_for_path (comm->filename));
 		break;
 	case PROP_MIME_TYPE:
 		g_value_set_static_string (value, comm->mime_type);
@@ -444,11 +444,11 @@ fr_command_class_init (FrCommandClass *class)
 							      FR_TYPE_PROCESS,
 							      G_PARAM_READWRITE));
 	g_object_class_install_property (gobject_class,
-					 PROP_FILENAME,
-					 g_param_spec_string ("filename",
-							      "Filename",
-							      "The archive filename",
-							      NULL,
+					 PROP_FILE,
+					 g_param_spec_object ("file",
+							      "File",
+							      "The archive local file",
+							      G_TYPE_FILE,
 							      G_PARAM_READWRITE));
 	g_object_class_install_property (gobject_class,
 					 PROP_MIME_TYPE,
@@ -542,7 +542,7 @@ fr_command_finalize (GObject *object)
 }
 
 
-void
+static void
 fr_command_set_filename (FrCommand  *comm,
 			 const char *filename)
 {
@@ -583,11 +583,24 @@ fr_command_set_filename (FrCommand  *comm,
 
 
 void
-fr_command_set_multi_volume (FrCommand  *comm,
-			     const char *filename)
+fr_command_set_file (FrCommand *comm,
+		     GFile     *file)
+{
+	char *filename;
+
+	filename = g_file_get_path (file);
+	fr_command_set_filename (comm, filename);
+
+	g_free (filename);
+}
+
+
+void
+fr_command_set_multi_volume (FrCommand *comm,
+			     GFile     *file)
 {
 	comm->multi_volume = TRUE;
-	fr_command_set_filename (comm, filename);
+	fr_command_set_file (comm, file);
 }
 
 

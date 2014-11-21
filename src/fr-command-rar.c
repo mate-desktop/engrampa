@@ -403,11 +403,15 @@ process_line__add (char     *line,
 		if ((comm->volume_size > 0)
 		    && g_regex_match_simple ("^.*\\.part(0)*2\\.rar$", uri, G_REGEX_CASELESS, 0))
 		{
-			char *volume_filename;
+			char  *volume_filename;
+			GFile *volume_file;
 
 			volume_filename = g_strdup (archive_filename);
 			volume_filename[strlen (volume_filename) - 5] = '1';
-			fr_command_set_multi_volume (comm, volume_filename);
+			volume_file = g_file_new_for_path (volume_filename);
+			fr_command_set_multi_volume (comm, volume_file);
+
+			g_object_unref (volume_file);
 			g_free (volume_filename);
 		}
 		fr_command_working_archive (comm, uri);
