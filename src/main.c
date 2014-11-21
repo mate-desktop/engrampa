@@ -902,7 +902,7 @@ prepare_app (void)
 			file_list = g_list_prepend (file_list, get_uri_from_command_line (filename));
 		file_list = g_list_reverse (file_list);
 
-		fr_window_new_batch (FR_WINDOW (window));
+		fr_window_new_batch (FR_WINDOW (window), _("Compress"));
 		fr_window_set_batch__add (FR_WINDOW (window), add_to_uri, file_list);
 		fr_window_append_batch_action (FR_WINDOW (window),
 					       FR_BATCH_ACTION_QUIT,
@@ -922,7 +922,7 @@ prepare_app (void)
 		if (default_url != NULL)
 			fr_window_set_default_dir (FR_WINDOW (window), default_url, TRUE);
 
-		fr_window_new_batch (FR_WINDOW (window));
+		fr_window_new_batch (FR_WINDOW (window), _("Extract archive"));
 		while ((archive = remaining_args[i++]) != NULL) {
 			char *archive_uri;
 

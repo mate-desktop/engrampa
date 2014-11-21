@@ -390,6 +390,7 @@ struct _FrWindowPrivateData {
 					 	* mode. */
 	GList            *batch_action_list;   /* FRBatchAction * elements */
 	GList            *batch_action;        /* current action. */
+	char             *batch_title;
 
 	/* misc */
 
@@ -431,6 +432,9 @@ fr_window_free_batch_data (FrWindow *window)
 	g_list_free (window->priv->batch_action_list);
 	window->priv->batch_action_list = NULL;
 	window->priv->batch_action = NULL;
+
+	g_free (window->priv->batch_title);
+	window->priv->batch_title = NULL;
 }
 
 
@@ -785,6 +789,7 @@ fr_window_init (FrWindow *window)
 	window->priv = g_new0 (FrWindowPrivateData, 1);
 	window->priv->update_dropped_files = FALSE;
 	window->priv->filter_mode = FALSE;
+	window->priv->batch_title = NULL;
 
 	g_signal_connect (window,
 			  "realize",
@@ -2346,7 +2351,6 @@ progress_dialog__set_last_action (FrWindow *window,
 
 	window->priv->pd_last_action = action;
 	title = get_message_from_action (window->priv->pd_last_action);
-	gtk_window_set_title (GTK_WINDOW (window->priv->progress_dialog), title);
 	markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>", title);
 	gtk_label_set_markup (GTK_LABEL (window->priv->pd_action), markup);
 	g_free (markup);
@@ -2465,7 +2469,6 @@ create_the_progress_dialog (FrWindow *window)
 	GtkWidget     *align;
 	GtkWidget     *progress_vbox;
 	GtkWidget     *lbl;
-	const char    *title;
 	char          *markup;
 	PangoAttrList *attr_list;
 	GdkPixbuf     *icon;
@@ -2483,8 +2486,7 @@ create_the_progress_dialog (FrWindow *window)
 	}
 
 	window->priv->pd_last_action = window->priv->action;
-	title = get_message_from_action (window->priv->pd_last_action);
-	window->priv->progress_dialog = gtk_dialog_new_with_buttons (title,
+	window->priv->progress_dialog = gtk_dialog_new_with_buttons ((window->priv->batch_mode ? window->priv->batch_title : NULL),
 								     parent,
 								     flags,
 								     NULL);
@@ -2520,7 +2522,8 @@ create_the_progress_dialog (FrWindow *window)
 
 	lbl = window->priv->pd_action = gtk_label_new ("");
 
-	markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>", title);
+	markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>",
+					  get_message_from_action (window->priv->pd_last_action));
 	gtk_label_set_markup (GTK_LABEL (lbl), markup);
 	g_free (markup);
 
@@ -8911,6 +8914,10 @@ fr_window_start_batch (FrWindow *window)
 	if (window->priv->batch_action_list == NULL)
 		return;
 
+	if (window->priv->progress_dialog != NULL)
+		gtk_window_set_title (GTK_WINDOW (window->priv->progress_dialog),
+				      window->priv->batch_title);
+
 	window->priv->batch_mode = TRUE;
 	window->priv->batch_action = window->priv->batch_action_list;
 	window->archive->can_create_compressed_file = window->priv->batch_adding_one_file;
@@ -8958,10 +8965,13 @@ fr_window_is_batch_mode (FrWindow *window)
 
 
 void
-fr_window_new_batch (FrWindow *window)
+fr_window_new_batch (FrWindow   *window,
+		     const char *title)
 {
 	fr_window_free_batch_data (window);
 	window->priv->non_interactive = TRUE;
+	g_free (window->priv->batch_title);
+	window->priv->batch_title = g_strdup (title);
 }
 
 
