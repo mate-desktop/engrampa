@@ -1144,7 +1144,7 @@ static void
 load_local_archive (FrArchive  *archive,
 		    const char *password)
 {
-	FrCommand  *tmp_command;
+	FrCommand  *old_command;
 	const char *mime_type;
 
 	if (! g_file_query_exists (archive->file, archive->priv->cancellable)) {
@@ -1158,7 +1158,7 @@ load_local_archive (FrArchive  *archive,
 	archive->have_permissions = check_file_permissions (archive->file, W_OK);
 	archive->read_only = ! archive->have_permissions;
 
-	tmp_command = archive->command;
+	old_command = archive->command;
 
 	mime_type = get_mime_type_from_filename (archive->local_copy);
 	if (! create_command_to_load_archive (archive, mime_type)) {
@@ -1166,7 +1166,7 @@ load_local_archive (FrArchive  *archive,
 		if (! create_command_to_load_archive (archive, mime_type)) {
 			mime_type = get_mime_type_from_magic_numbers (archive->local_copy);
 			if (! create_command_to_load_archive (archive, mime_type)) {
-				archive->command = tmp_command;
+				archive->command = old_command;
 				archive->content_type = mime_type;
 				fr_archive_action_completed (archive,
 							     FR_ACTION_LOADING_ARCHIVE,
@@ -1177,9 +1177,9 @@ load_local_archive (FrArchive  *archive,
 		}
 	}
 
-	if (tmp_command != NULL) {
-		g_signal_handlers_disconnect_by_data (tmp_command, archive);
-		g_object_unref (tmp_command);
+	if (old_command != NULL) {
+		g_signal_handlers_disconnect_by_data (old_command, archive);
+		g_object_unref (old_command);
 	}
 
 	fr_archive_connect_to_command (archive);
