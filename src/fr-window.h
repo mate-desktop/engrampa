@@ -118,8 +118,6 @@ void        fr_window_archive_save_as           (FrWindow      *window,
 						 gboolean       encrypt_header,
 						 guint          volume_size);
 void        fr_window_archive_reload            (FrWindow      *window);
-void        fr_window_archive_rename            (FrWindow      *window,
-						 const char    *filename);
 void        fr_window_archive_add_files         (FrWindow      *window,
 						 GList         *file_list, /* GFile list */
 						 gboolean       update);

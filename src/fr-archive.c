@@ -1344,27 +1344,6 @@ fr_archive_reload (FrArchive  *archive,
 }
 
 
-void
-fr_archive_rename (FrArchive  *archive,
-		   const char *filename)
-{
-	g_return_if_fail (archive != NULL);
-
-	if (archive->is_compressed_file) {
-		/* If the archive is a compressed file we have to reload it,
-		 * because in this case the 'content' of the archive changes
-		 * too. */
-		fr_archive_load (archive, filename, NULL);
-	}
-	else {
-		if (archive->file != NULL)
-			g_object_unref (archive->file);
-		archive->file = g_file_new_for_path (filename);
-		fr_command_set_filename (archive->command, filename);
-	}
-}
-
-
 /* -- add -- */
 
 

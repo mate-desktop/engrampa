@@ -117,8 +117,6 @@ gboolean    fr_archive_load_local                (FrArchive       *archive,
 		       				  const char      *password);
 void        fr_archive_reload                    (FrArchive       *archive,
 						  const char      *password);
-void        fr_archive_rename                    (FrArchive       *archive,
-						  const char      *new_uri);
 
 /**/
 

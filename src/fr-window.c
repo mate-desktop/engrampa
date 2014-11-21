@@ -6297,25 +6297,6 @@ fr_window_archive_reload (FrWindow *window)
 }
 
 
-void
-fr_window_archive_rename (FrWindow   *window,
-			  const char *uri)
-{
-	g_return_if_fail (window != NULL);
-
-	if (window->priv->archive_new) {
-		fr_window_archive_new (window, uri);
-		return;
-	}
-
-	fr_archive_rename (window->archive, uri);
-	fr_window_set_archive_uri (window, uri);
-
-	fr_window_update_title (window);
-	fr_window_add_to_recent_list (window, window->priv->archive_uri);
-}
-
-
 /**/
 
 
