@@ -517,7 +517,6 @@ fr_command_tar_recompress (FrCommand *comm)
 
 	if (is_mime_type (comm->mime_type, "application/x-compressed-tar")) {
 		fr_process_begin_command (comm->process, "gzip");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		fr_process_set_continue_func (comm->process, gzip_continue_func, comm);
 		switch (comm->compression) {
@@ -538,7 +537,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar")) {
 		fr_process_begin_command (comm->process, "bzip2");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -558,7 +556,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-tarz")) {
 		fr_process_begin_command (comm->process, "compress");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		fr_process_add_arg (comm->process, "-f");
 		fr_process_add_arg (comm->process, c_tar->uncomp_filename);
@@ -568,7 +565,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lrzip-compressed-tar")) {
 		fr_process_begin_command (comm->process, "lrzip");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -588,7 +584,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzip-compressed-tar")) {
 		fr_process_begin_command (comm->process, "lzip");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -608,7 +603,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzma-compressed-tar")) {
 		fr_process_begin_command (comm->process, "lzma");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -628,7 +622,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-xz-compressed-tar")) {
 		fr_process_begin_command (comm->process, "xz");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -648,7 +641,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar")) {
 		fr_process_begin_command (comm->process, "lzop");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -671,7 +663,6 @@ fr_command_tar_recompress (FrCommand *comm)
 		FrCommandTar *comm_tar = (FrCommandTar*) comm;
 
 		fr_process_begin_command (comm->process, comm_tar->compress_command);
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
 		switch (comm->compression) {
 		case FR_COMPRESSION_VERY_FAST:
@@ -708,7 +699,6 @@ fr_command_tar_recompress (FrCommand *comm)
 		/* Restore original name. */
 
 		fr_process_begin_command (comm->process, "mv");
-		fr_process_set_sticky (comm->process, TRUE);
 		fr_process_add_arg (comm->process, "-f");
 		fr_process_add_arg (comm->process, new_name);
 		fr_process_add_arg (comm->process, comm->filename);
