@@ -5587,7 +5587,7 @@ fr_window_construct (FrWindow *window)
 	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (window->priv->list_view), TRUE);
 	add_file_list_columns (window, GTK_TREE_VIEW (window->priv->list_view));
 	gtk_tree_view_set_enable_search (GTK_TREE_VIEW (window->priv->list_view),
-					 FALSE);
+					 TRUE);
 	gtk_tree_view_set_search_column (GTK_TREE_VIEW (window->priv->list_view),
 					 COLUMN_NAME);
 
