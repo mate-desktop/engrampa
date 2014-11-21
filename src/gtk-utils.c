@@ -742,7 +742,6 @@ get_mime_type_pixbuf (const char   *mime_type,
 	return pixbuf;
 }
 
-
 int
 get_folder_pixbuf_size_for_list (GtkWidget *widget)
 {
@@ -753,7 +752,6 @@ get_folder_pixbuf_size_for_list (GtkWidget *widget)
 					   &icon_width, &icon_height);
 	return MAX (icon_width, icon_height);
 }
-
 
 gboolean
 show_uri (GdkScreen   *screen,
@@ -827,4 +825,15 @@ _gtk_builder_get_widget (GtkBuilder *builder,
 			 const char *name)
 {
 	return (GtkWidget *) gtk_builder_get_object (builder, name);
+}
+
+int
+_gtk_widget_lookup_for_size (GtkWidget *widget,
+                             GtkIconSize icon_size)
+{
+	int w, h;
+	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (widget),
+					   icon_size,
+					   &w, &h);
+	return MAX (w, h);
 }

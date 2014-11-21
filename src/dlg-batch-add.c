@@ -326,7 +326,6 @@ add_clicked_cb (GtkWidget  *widget,
 			GFile  *file;
 			GError *err = NULL;
 
-			/* FIXME: convert this code in a function in file-utils.c */
 			file = g_file_new_for_uri (archive_file);
 			g_file_delete (file, NULL, &err);
 			if (err != NULL) {
@@ -397,10 +396,16 @@ archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 {
 	const char *mime_type;
 	int         idx = gtk_combo_box_get_active (combo_box);
+	GdkPixbuf  *icon;
 
 	mime_type = mime_type_desc[data->supported_types[idx]].mime_type;
 
-	gtk_image_set_from_pixbuf (GTK_IMAGE (GET_WIDGET ("a_add_image")), get_mime_type_pixbuf (mime_type, ARCHIVE_ICON_SIZE, NULL));
+	icon = get_mime_type_pixbuf (mime_type, ARCHIVE_ICON_SIZE, NULL);
+	if (icon != NULL) {
+		gtk_image_set_from_pixbuf (GTK_IMAGE (GET_WIDGET ("archive_icon_image")), icon);
+		g_object_unref (icon);
+	}
+
 	update_sensitivity_for_mime_type (data, mime_type);
 }
 
@@ -455,10 +460,6 @@ dlg_batch_add_files (FrWindow *window,
 		     GList    *file_list)
 {
 	DialogData   *data;
-	GtkWidget    *cancel_button;
-	GtkWidget    *help_button;
-	GtkWidget    *add_button;
-	GtkWidget    *a_archive_type_box;
 	GtkSizeGroup *size_group;
 	char         *automatic_name = NULL;
 	char         *default_ext;
@@ -484,13 +485,6 @@ dlg_batch_add_files (FrWindow *window,
 	data->single_file = ((file_list->next == NULL) && uri_is_file ((char*) file_list->data));
 	data->add_clicked = FALSE;
 
-	/* Get the widgets. */
-
-	add_button = GET_WIDGET ("a_add_button");
-	cancel_button = GET_WIDGET ("a_cancel_button");
-	help_button = GET_WIDGET ("a_help_button");
-	a_archive_type_box = GET_WIDGET ("a_archive_type_box");
-
 	/* Set widgets data. */
 
 	size_group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
@@ -498,8 +492,8 @@ dlg_batch_add_files (FrWindow *window,
 	gtk_size_group_add_widget (size_group, GET_WIDGET ("a_location_label"));
 	gtk_size_group_add_widget (size_group, GET_WIDGET ("a_password_label"));
 
-	gtk_button_set_use_stock (GTK_BUTTON (add_button), TRUE);
-	gtk_button_set_label (GTK_BUTTON (add_button), FR_STOCK_CREATE_ARCHIVE);
+	gtk_button_set_use_stock (GTK_BUTTON (GET_WIDGET ("a_add_button")), TRUE);
+	gtk_button_set_label (GTK_BUTTON (GET_WIDGET ("a_add_button")), FR_STOCK_CREATE_ARCHIVE);
 	gtk_expander_set_expanded (GTK_EXPANDER (GET_WIDGET ("a_other_options_expander")), FALSE /*g_settings_get_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS)*/);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_encrypt_header_checkbutton")), g_settings_get_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER));
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON (GET_WIDGET ("a_volume_spinbutton")), (double) g_settings_get_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
@@ -540,8 +534,8 @@ dlg_batch_add_files (FrWindow *window,
 		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (data->archive_type_combo_box),
 						mime_type_desc[data->supported_types[i]].default_ext);
 
-	gtk_box_pack_start (GTK_BOX (a_archive_type_box), data->archive_type_combo_box, TRUE, TRUE, 0);
-	gtk_widget_show_all (a_archive_type_box);
+	gtk_box_pack_start (GTK_BOX (GET_WIDGET ("a_archive_type_box")), data->archive_type_combo_box, TRUE, TRUE, 0);
+	gtk_widget_show_all (GET_WIDGET ("a_archive_type_box"));
 
 	/* Set the signals handlers. */
 
@@ -549,15 +543,15 @@ dlg_batch_add_files (FrWindow *window,
 			  "destroy",
 			  G_CALLBACK (destroy_cb),
 			  data);
-	g_signal_connect_swapped (G_OBJECT (cancel_button),
+	g_signal_connect_swapped (GET_WIDGET ("a_cancel_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (GET_WIDGET ("dialog")));
-	g_signal_connect (G_OBJECT (add_button),
+	g_signal_connect (G_OBJECT (GET_WIDGET ("a_add_button")),
 			  "clicked",
 			  G_CALLBACK (add_clicked_cb),
 			  data);
-	g_signal_connect (G_OBJECT (help_button),
+	g_signal_connect (G_OBJECT (GET_WIDGET ("a_help_button")),
 			  "clicked",
 			  G_CALLBACK (help_clicked_cb),
 			  data);

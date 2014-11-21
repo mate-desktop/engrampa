@@ -76,7 +76,7 @@ GdkPixbuf * get_icon_pixbuf                 (GIcon        *icon,
 GdkPixbuf * get_mime_type_pixbuf            (const char   *mime_type,
 		                             int           icon_size,
 		                             GtkIconTheme *icon_theme);
-int         get_folder_pixbuf_size_for_list (GtkWidget    *widget);
+int         get_folder_pixbuf_size_for_list (GtkWidget *widget);
 gboolean    show_uri                        (GdkScreen   *screen,
 					     const char  *uri,
 				             guint32      timestamp,
@@ -88,5 +88,7 @@ GtkBuilder *
 GtkWidget *
 	    _gtk_builder_get_widget         (GtkBuilder   *builder,
 			 		     const char   *name);
-			 		  
+
+int	    _gtk_widget_lookup_for_size	    (GtkWidget *widget,
+					     GtkIconSize icon_size);
 #endif

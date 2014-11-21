@@ -371,6 +371,7 @@ struct _FrWindowPrivateData {
 	GtkWidget        *pd_open_archive_button;
 	GtkWidget        *pd_open_destination_button;
 	GtkWidget        *pd_quit_button;
+	GtkWidget        *pd_icon;
 	gboolean          progress_pulse;
 	guint             progress_timeout;  /* Timeout to display the progress dialog. */
 	guint             hide_progress_timeout;  /* Timeout to hide the progress dialog. */
@@ -2459,6 +2460,7 @@ create_the_progress_dialog (FrWindow *window)
 	GtkWindow     *parent;
 	GtkDialogFlags flags;
 	GtkDialog     *d;
+	GtkWidget     *hbox;
 	GtkWidget     *vbox;
 	GtkWidget     *align;
 	GtkWidget     *progress_vbox;
@@ -2466,6 +2468,7 @@ create_the_progress_dialog (FrWindow *window)
 	const char    *title;
 	char          *markup;
 	PangoAttrList *attr_list;
+	GdkPixbuf     *icon;
 
 	if (window->priv->progress_dialog != NULL)
 		return;
@@ -2499,9 +2502,19 @@ create_the_progress_dialog (FrWindow *window)
 
 	/* Main */
 
+	hbox = gtk_hbox_new (FALSE, 24);
+	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (d)), hbox, FALSE, FALSE, 10);
+
+	icon = get_mime_type_pixbuf ("package-x-generic", _gtk_widget_lookup_for_size (GTK_WIDGET (window), GTK_ICON_SIZE_DIALOG), NULL);
+	window->priv->pd_icon = gtk_image_new_from_pixbuf (icon);
+	g_object_unref (icon);
+
+	gtk_misc_set_alignment (GTK_MISC (window->priv->pd_icon), 0.5, 0.0);
+	gtk_box_pack_start (GTK_BOX (hbox), window->priv->pd_icon, FALSE, FALSE, 0);
+
 	vbox = gtk_vbox_new (FALSE, 5);
-	gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (d)), vbox, FALSE, FALSE, 10);
+	gtk_box_pack_start (GTK_BOX (hbox), vbox, TRUE, TRUE, 0);
 
 	/* action label */
 
@@ -2576,7 +2589,7 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
 	gtk_box_pack_start (GTK_BOX (progress_vbox), lbl, TRUE, TRUE, 0);
 
-	gtk_widget_show_all (vbox);
+	gtk_widget_show_all (hbox);
 
 	/* signals */
 
@@ -5014,17 +5027,8 @@ pref_use_mime_icons_changed (GSettings *settings,
 static void
 theme_changed_cb (GtkIconTheme *theme, FrWindow *window)
 {
-	int icon_width, icon_height;
-
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (GTK_WIDGET (window)),
-					   FILE_LIST_ICON_SIZE,
-					   &icon_width, &icon_height);
-	file_list_icon_size = MAX (icon_width, icon_height);
-
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (GTK_WIDGET (window)),
-					   DIR_TREE_ICON_SIZE,
-					   &icon_width, &icon_height);
-	dir_tree_icon_size = MAX (icon_width, icon_height);
+	file_list_icon_size = _gtk_widget_lookup_for_size (GTK_WIDGET (window), FILE_LIST_ICON_SIZE);
+	dir_tree_icon_size = _gtk_widget_lookup_for_size (GTK_WIDGET (window), DIR_TREE_ICON_SIZE);
 
 	if (pixbuf_hash != NULL) {
 		g_hash_table_foreach (pixbuf_hash,
@@ -5370,7 +5374,6 @@ fr_window_construct (FrWindow *window)
 	GtkWidget        *sidepane_title_label;
 	GtkWidget        *close_sidepane_button;
 	GtkTreeSelection *selection;
-	int               icon_width, icon_height;
 	GtkActionGroup   *actions;
 	GtkAction        *action;
 	GtkUIManager     *ui;
@@ -5428,15 +5431,8 @@ fr_window_construct (FrWindow *window)
 				  G_CALLBACK (theme_changed_cb),
 				  window);
 
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (GTK_WIDGET (window)),
-					   FILE_LIST_ICON_SIZE,
-					   &icon_width, &icon_height);
-	file_list_icon_size = MAX (icon_width, icon_height);
-
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (GTK_WIDGET (window)),
-					   DIR_TREE_ICON_SIZE,
-					   &icon_width, &icon_height);
-	dir_tree_icon_size = MAX (icon_width, icon_height);
+	file_list_icon_size = _gtk_widget_lookup_for_size (GTK_WIDGET (window), FILE_LIST_ICON_SIZE);
+	dir_tree_icon_size = _gtk_widget_lookup_for_size (GTK_WIDGET (window), DIR_TREE_ICON_SIZE);
 
 	gtk_window_set_default_size (GTK_WINDOW (window),
 				g_settings_get_int (window->priv->settings_ui, PREF_UI_WINDOW_WIDTH),
