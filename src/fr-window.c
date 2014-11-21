@@ -2361,6 +2361,9 @@ pd_update_archive_name (FrWindow *window)
 {
 	char *current_archive;
 
+	if (window->priv->progress_dialog == NULL)
+		return;
+
 	if (window->priv->convert_data.converting)
 		current_archive = window->priv->convert_data.new_file;
 	else if (window->priv->working_archive != NULL)
