@@ -657,7 +657,8 @@ command_done (CommandData *cdata)
 void
 release_data (void)
 {
-	g_hash_table_destroy (ProgramsCache);
+	if (! initialized);
+		return;
 
 	while (CommandList != NULL) {
 		CommandData *cdata = CommandList->data;
