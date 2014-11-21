@@ -38,6 +38,7 @@
 #include "fr-command.h"
 #include "fr-error.h"
 #include "fr-marshal.h"
+#include "fr-proc-error.h"
 #include "fr-process.h"
 #include "main.h"
 
@@ -247,10 +248,10 @@ fr_archive_class_init (FrArchiveClass *class)
 			      G_SIGNAL_RUN_LAST,
 			      G_STRUCT_OFFSET (FrArchiveClass, done),
 			      NULL, NULL,
-			      fr_marshal_VOID__INT_POINTER,
+			      fr_marshal_VOID__INT_BOXED,
 			      G_TYPE_NONE, 2,
 			      G_TYPE_INT,
-			      G_TYPE_POINTER);
+			      FR_TYPE_PROC_ERROR);
 	fr_archive_signals[PROGRESS] =
 		g_signal_new ("progress",
 			      G_TYPE_FROM_CLASS (class),
@@ -1603,7 +1604,7 @@ fr_archive_add (FrArchive     *archive,
 		archive->process->error.type = FR_PROC_ERROR_NONE;
 		g_signal_emit_by_name (G_OBJECT (archive->process),
 				       "done",
-				       FR_ACTION_ADDING_FILES);
+				       &archive->process->error);
 		return;
 	}
 
@@ -1690,7 +1691,7 @@ fr_archive_add (FrArchive     *archive,
 			archive->process->error.gerror = g_error_copy (error);
 			g_signal_emit_by_name (G_OBJECT (archive->process),
 					       "done",
-					       FR_ACTION_ADDING_FILES);
+					       &archive->process->error);
 			g_clear_error (&error);
 			error_occurred = TRUE;
 		}

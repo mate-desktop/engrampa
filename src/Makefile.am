@@ -127,6 +127,8 @@ engrampa_SOURCES = 			\
 	fr-list-model.h			\
 	fr-stock.c			\
 	fr-stock.h			\
+	fr-proc-error.c			\
+	fr-proc-error.h			\
 	fr-process.c			\
 	fr-process.h			\
 	fr-window.c			\

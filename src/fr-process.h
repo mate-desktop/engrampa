@@ -81,7 +81,8 @@ struct _FrProcessClass {
 	/* -- Signals -- */
 
 	void (* start)         (FrProcess   *fr_proc);
-	void (* done)          (FrProcess   *fr_proc);
+	void (* done)          (FrProcess   *fr_proc,
+				FrProcError *error);
 	void (* sticky_only)   (FrProcess   *fr_proc);
 };
 
