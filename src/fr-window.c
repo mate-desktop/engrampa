@@ -815,6 +815,7 @@ fr_window_init (FrWindow *window)
 	window->priv->filter_mode = FALSE;
 	window->priv->batch_title = NULL;
 	window->priv->use_progress_dialog = TRUE;
+	window->priv->batch_title = NULL;
 
 	g_signal_connect (window,
 			  "realize",
