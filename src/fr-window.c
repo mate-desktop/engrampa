@@ -3180,7 +3180,8 @@ action_performed (FrArchive   *archive,
 
 	case FR_ACTION_DELETING_FILES:
 		close_progress_dialog (window, FALSE);
-		fr_window_archive_reload (window);
+		if (error->type != FR_PROC_ERROR_STOPPED)
+			fr_window_archive_reload (window);
 		return;
 
 	case FR_ACTION_ADDING_FILES:
@@ -3196,7 +3197,7 @@ action_performed (FrArchive   *archive,
 				window->priv->archive_new = FALSE;
 			fr_window_add_to_recent_list (window, window->priv->archive_uri);
 		}
-		if (! window->priv->batch_mode) {
+		if (! window->priv->batch_mode && (error->type != FR_PROC_ERROR_STOPPED)) {
 			fr_window_archive_reload (window);
 			return;
 		}
