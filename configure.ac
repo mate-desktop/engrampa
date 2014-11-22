@@ -85,7 +85,7 @@ dnl ******************************
 
 AC_ARG_ENABLE([caja_actions],
 	[AS_HELP_STRING([--disable-caja-actions],
-			[do not build the caja context menu actions]))],,
+			[do not build the caja context menu actions])],,
 	[enable_caja_actions=yes])
 
 if test x"$enable_caja_actions" != x"no" ; then
