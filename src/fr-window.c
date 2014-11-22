@@ -280,7 +280,6 @@ struct _FrWindowPrivateData {
 	guint            help_message_cid;
 	guint            list_info_cid;
 	guint            progress_cid;
-	char *           last_status_message;
 
 	GtkWidget *      up_arrows[5];
 	GtkWidget *      down_arrows[5];
@@ -365,7 +364,6 @@ struct _FrWindowPrivateData {
 
 	GtkWidget        *progress_dialog;
 	GtkWidget        *pd_action;
-	GtkWidget        *pd_archive;
 	GtkWidget        *pd_message;
 	GtkWidget        *pd_progress_bar;
 	GtkWidget        *pd_cancel_button;
@@ -377,7 +375,6 @@ struct _FrWindowPrivateData {
 	gboolean          progress_pulse;
 	guint             progress_timeout;  /* Timeout to display the progress dialog. */
 	guint             hide_progress_timeout;  /* Timeout to hide the progress dialog. */
-	FrAction          pd_last_action;
 	char             *pd_last_archive;
 	char             *working_archive;
 	double            pd_last_fraction;
@@ -630,7 +627,6 @@ fr_window_free_private_data (FrWindow *window)
 	g_free (window->priv->pd_last_archive);
 	g_free (window->priv->pd_last_message);
 	g_free (window->priv->extract_here_dir);
-	g_free (window->priv->last_status_message);
 
 	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_SORT_METHOD, window->priv->sort_method);
 	g_settings_set_enum (window->priv->settings_listing, PREF_LISTING_SORT_TYPE, window->priv->sort_type);
@@ -2317,78 +2313,78 @@ progress_dialog_response (GtkDialog *dialog,
 }
 
 
-static const char*
-get_message_from_action (FrAction action)
+static char*
+get_action_description (FrAction    action,
+			const char *uri)
 {
-	char *message = "";
+	char *basename;
+	char *message;
 
+	basename = (uri != NULL) ? g_uri_display_basename (uri) : NULL;
+
+	message = NULL;
 	switch (action) {
 	case FR_ACTION_CREATING_NEW_ARCHIVE:
-		message = _("Creating archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Creating \"%s\""), basename);
 		break;
 	case FR_ACTION_LOADING_ARCHIVE:
-		message = _("Loading archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Loading \"%s\""), basename);
 		break;
 	case FR_ACTION_LISTING_CONTENT:
-		message = _("Reading archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Reading \"%s\""), basename);
 		break;
 	case FR_ACTION_DELETING_FILES:
-		message = _("Deleting files from archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Deleting files from \"%s\""), basename);
 		break;
 	case FR_ACTION_TESTING_ARCHIVE:
-		message = _("Testing archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Testing \"%s\""), basename);
 		break;
 	case FR_ACTION_GETTING_FILE_LIST:
-		message = _("Getting the file list");
+		message = g_strdup (_("Getting the file list"));
 		break;
 	case FR_ACTION_COPYING_FILES_FROM_REMOTE:
-		message = _("Copying the file list");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Copying the files to add to \"%s\""), basename);
 		break;
 	case FR_ACTION_ADDING_FILES:
-		message = _("Adding files to archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Adding files to \"%s\""), basename);
 		break;
 	case FR_ACTION_EXTRACTING_FILES:
-		message = _("Extracting files from archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Extracting files from \"%s\""), basename);
 		break;
 	case FR_ACTION_COPYING_FILES_TO_REMOTE:
-		message = _("Copying the file list");
+		message = g_strdup (_("Copying the extracted files to the destination"));
 		break;
 	case FR_ACTION_CREATING_ARCHIVE:
-		message = _("Creating archive");
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Creating \"%s\""), basename);
 		break;
 	case FR_ACTION_SAVING_REMOTE_ARCHIVE:
-		message = _("Saving archive");
-		break;
-	default:
-		message = "";
+		/* Translators: %s is a filename */
+		message = g_strdup_printf (_("Saving \"%s\""), basename);
 		break;
 	case FR_ACTION_NONE:
 		break;
 	}
+	g_free (basename);
 
 	return message;
 }
 
 
 static void
-progress_dialog__set_last_action (FrWindow *window,
-				  FrAction  action)
+progress_dialog_update_action_description (FrWindow *window)
 {
-	const char *title;
-	char        *markup;
-
-	window->priv->pd_last_action = action;
-	title = get_message_from_action (window->priv->pd_last_action);
-	markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>", title);
-	gtk_label_set_markup (GTK_LABEL (window->priv->pd_action), markup);
-	g_free (markup);
-}
-
-
-static void
-pd_update_archive_name (FrWindow *window)
-{
-	char *current_archive;
+	const char *current_archive;
+	char        *description;
+	char       *description_markup;
 
 	if (window->priv->progress_dialog == NULL)
 		return;
@@ -2400,28 +2396,17 @@ pd_update_archive_name (FrWindow *window)
 	else
 		current_archive = window->priv->archive_uri;
 
-	if (strcmp_null_tolerant (window->priv->pd_last_archive, current_archive) != 0) {
-		g_free (window->priv->pd_last_archive);
-		if (current_archive == NULL) {
-			window->priv->pd_last_archive = NULL;
-			gtk_label_set_text (GTK_LABEL (window->priv->pd_archive), "");
-#ifdef LOG_PROGRESS
-			g_print ("archive name > (none)\n");
-#endif
-		}
-		else {
-			char *name;
+	g_free (window->priv->pd_last_archive);
+	window->priv->pd_last_archive = NULL;
+	if (current_archive != NULL)
+		window->priv->pd_last_archive = g_strdup (current_archive);
 
-			window->priv->pd_last_archive = g_strdup (current_archive);
+	description = get_action_description (window->priv->action, window->priv->pd_last_archive);
+	description_markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>", description);
+	gtk_label_set_markup (GTK_LABEL (window->priv->pd_action), description_markup);
 
-			name = g_uri_display_basename (window->priv->pd_last_archive);
-			gtk_label_set_text (GTK_LABEL (window->priv->pd_archive), name);
-#ifdef LOG_PROGRESS
-			g_print ("archive name > %s\n", name);
-#endif
-			g_free (name);
-		}
-	}
+	g_free (description_markup);
+	g_free (description);
 }
 
 
@@ -2434,7 +2419,7 @@ fr_window_working_archive_cb (FrCommand  *command,
 	window->priv->working_archive = NULL;
 	if (archive_filename != NULL)
 		window->priv->working_archive = g_strdup (archive_filename);
-	pd_update_archive_name (window);
+	progress_dialog_update_action_description (window);
 
 	return TRUE;
 }
@@ -2445,6 +2430,11 @@ fr_window_message_cb (FrCommand  *command,
 		      const char *msg,
 		      FrWindow   *window)
 {
+	if (window->priv->pd_last_message != msg) {
+		g_free (window->priv->pd_last_message);
+		window->priv->pd_last_message = g_strdup (msg);
+	}
+
 	if (window->priv->progress_dialog == NULL)
 		return TRUE;
 
@@ -2455,10 +2445,7 @@ fr_window_message_cb (FrCommand  *command,
 			msg = NULL;
 	}
 
-	if (msg == NULL) {
-		gtk_label_set_text (GTK_LABEL (window->priv->pd_message), "");
-	}
-	else {
+	if (msg != NULL) {
 		char *utf8_msg;
 
 		if (! g_utf8_validate (msg, -1, NULL))
@@ -2486,15 +2473,10 @@ fr_window_message_cb (FrCommand  *command,
 
 		g_free (utf8_msg);
 	}
+	else
+		gtk_label_set_text (GTK_LABEL (window->priv->pd_message), "");
 
-	if (window->priv->convert_data.converting) {
-		if (window->priv->pd_last_action != FR_ACTION_CREATING_ARCHIVE)
-			progress_dialog__set_last_action (window, FR_ACTION_CREATING_ARCHIVE);
-	}
-	else if (window->priv->pd_last_action != window->priv->action)
-		progress_dialog__set_last_action (window, window->priv->action);
-
-	pd_update_archive_name (window);
+	progress_dialog_update_action_description (window);
 
 	return TRUE;
 }
@@ -2511,7 +2493,6 @@ create_the_progress_dialog (FrWindow *window)
 	GtkWidget     *align;
 	GtkWidget     *progress_vbox;
 	GtkWidget     *lbl;
-	char          *markup;
 	PangoAttrList *attr_list;
 	GdkPixbuf     *icon;
 
@@ -2527,7 +2508,6 @@ create_the_progress_dialog (FrWindow *window)
 		flags |= GTK_DIALOG_MODAL;
 	}
 
-	window->priv->pd_last_action = window->priv->action;
 	window->priv->progress_dialog = gtk_dialog_new_with_buttons ((window->priv->batch_mode ? window->priv->batch_title : NULL),
 								     parent,
 								     flags,
@@ -2561,14 +2541,9 @@ create_the_progress_dialog (FrWindow *window)
 	vbox = gtk_vbox_new (FALSE, 5);
 	gtk_box_pack_start (GTK_BOX (hbox), vbox, TRUE, TRUE, 0);
 
-	/* action label */
+	/* action description */
 
 	lbl = window->priv->pd_action = gtk_label_new ("");
-
-	markup = g_markup_printf_escaped ("<span weight=\"bold\" size=\"larger\">%s</span>",
-					  get_message_from_action (window->priv->pd_last_action));
-	gtk_label_set_markup (GTK_LABEL (lbl), markup);
-	g_free (markup);
 
 	align = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
 	gtk_alignment_set_padding (GTK_ALIGNMENT (align), 0, 12, 0, 0);
@@ -2584,28 +2559,9 @@ create_the_progress_dialog (FrWindow *window)
 
 	g_free (window->priv->pd_last_archive);
 	window->priv->pd_last_archive = NULL;
-	if (window->priv->archive_uri != NULL) {
-		GtkWidget *hbox;
-		char      *name;
 
-		hbox = gtk_hbox_new (FALSE, 6);
-		gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
-
-		lbl = gtk_label_new ("");
-		markup = g_markup_printf_escaped ("<b>%s</b>", _("Archive:"));
-		gtk_label_set_markup (GTK_LABEL (lbl), markup);
-		g_free (markup);
-		gtk_box_pack_start (GTK_BOX (hbox), lbl, FALSE, FALSE, 0);
-
+	if (window->priv->archive_uri != NULL)
 		window->priv->pd_last_archive = g_strdup (window->priv->archive_uri);
-		name = g_uri_display_basename (window->priv->pd_last_archive);
-		lbl = window->priv->pd_archive = gtk_label_new (name);
-		g_free (name);
-
-		gtk_misc_set_alignment (GTK_MISC (lbl), 0.0, 0.5);
-		gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
-		gtk_box_pack_start (GTK_BOX (hbox), lbl, TRUE, TRUE, 0);
-	}
 
 	/* progress and details */
 
@@ -2627,7 +2583,7 @@ create_the_progress_dialog (FrWindow *window)
 	lbl = window->priv->pd_message = gtk_label_new ("");
 
 	attr_list = pango_attr_list_new ();
-	pango_attr_list_insert (attr_list, pango_attr_style_new (PANGO_STYLE_ITALIC));
+	pango_attr_list_insert (attr_list, pango_attr_size_new (9000));
 	gtk_label_set_attributes (GTK_LABEL (lbl), attr_list);
 	pango_attr_list_unref (attr_list);
 
@@ -2636,6 +2592,8 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_box_pack_start (GTK_BOX (progress_vbox), lbl, TRUE, TRUE, 0);
 
 	gtk_widget_show_all (hbox);
+
+	progress_dialog_update_action_description (window);
 
 	/* signals */
 
@@ -2666,7 +2624,7 @@ display_progress_dialog (gpointer data)
 			gtk_widget_show (GTK_WIDGET (window));
 		gtk_widget_hide (window->priv->progress_bar);
 		gtk_widget_show (window->priv->progress_dialog);
-		fr_window_message_cb (NULL, window->priv->last_status_message, window);
+		fr_window_message_cb (NULL, window->priv->pd_last_message, window);
 	}
 
 	window->priv->progress_timeout = 0;
@@ -2819,12 +2777,9 @@ fr_window_push_message (FrWindow   *window,
 	if (! gtk_widget_get_mapped (GTK_WIDGET (window)))
 		return;
 
-	g_free (window->priv->last_status_message);
-	window->priv->last_status_message = g_strdup (msg);
-
-	gtk_statusbar_push (GTK_STATUSBAR (window->priv->statusbar), window->priv->progress_cid, window->priv->last_status_message);
-	if (window->priv->progress_dialog != NULL)
-		gtk_label_set_text (GTK_LABEL (window->priv->pd_message), window->priv->last_status_message);
+	gtk_statusbar_push (GTK_STATUSBAR (window->priv->statusbar),
+			    window->priv->progress_cid,
+			    msg);
 }
 
 
@@ -2844,9 +2799,8 @@ action_started (FrArchive *archive,
 		FrAction   action,
 		gpointer   data)
 {
-	FrWindow   *window = data;
-	const char *message;
-	char       *full_msg;
+	FrWindow *window = data;
+	char     *message;
 
 	window->priv->action = action;
 	fr_window_start_activity_mode (window);
@@ -2855,9 +2809,9 @@ action_started (FrArchive *archive,
 	debug (DEBUG_INFO, "%s [START] (FR::Window)\n", action_names[action]);
 #endif
 
-	message = get_message_from_action (action);
-	full_msg = g_strdup_printf ("%s, %s", message, _("please wait…"));
-	fr_window_push_message (window, full_msg);
+	message = get_action_description (action, window->priv->pd_last_archive);
+	fr_window_push_message (window, message);
+	g_free (message);
 
 	switch (action) {
 	case FR_ACTION_EXTRACTING_FILES:
@@ -2870,10 +2824,8 @@ action_started (FrArchive *archive,
 
 	if (archive->command != NULL) {
 		fr_command_progress (archive->command, -1.0);
-		fr_command_message (archive->command, message);
+		fr_command_message (archive->command, _("Please wait…"));
 	}
-
-	g_free (full_msg);
 }
 
 
