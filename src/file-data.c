@@ -131,21 +131,38 @@ int
 find_path_in_file_data_array (GPtrArray  *array,
 			      const char *path)
 {
-	int       l, r, p, cmp = -1;
+	int       path_l;
+	int       left, right, p, cmp = -1;
 	FileData *fd;
-			
-	l = 0;
-	r = array->len;
-	while (l < r) {
-		p = l + ((r - l) / 2);
+
+	if (path == NULL)
+		return -1;
+
+	path_l = strlen (path);
+	left = 0;
+	right = array->len;
+	while (left < right) {
+		p = left + ((right - left) / 2);
 		fd = (FileData *) g_ptr_array_index (array, p);
+
 		cmp = strcmp (path, fd->original_path);
+		if (cmp != 0) {
+			/* consider '/path/to/dir' and '/path/to/dir/' the same path */
+
+			int original_path_l = strlen (fd->original_path);
+			if ((path_l == original_path_l - 1) && (fd->original_path[original_path_l - 1] == '/')) {
+				int cmp2 = strncmp (path, fd->original_path, original_path_l - 1);
+				if (cmp2 == 0)
+					cmp = cmp2;
+			}
+		}
+
 		if (cmp == 0)
 			return p; 
 		else if (cmp < 0)
-			r = p;
+			right = p;
 		else 
-			l = p + 1;
+			left = p + 1;
 	}
 	
 	return -1;
