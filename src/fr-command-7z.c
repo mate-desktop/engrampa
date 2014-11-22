@@ -532,14 +532,14 @@ const char *sevenz_mime_types[] = { "application/x-7z-compressed",
 				    NULL };
 
 
-const char **
+static const char **
 fr_command_7z_get_mime_types (FrCommand *comm)
 {
 	return sevenz_mime_types;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_7z_get_capabilities (FrCommand  *comm,
 				const char *mime_type,
 				gboolean    check_command)

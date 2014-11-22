@@ -202,14 +202,14 @@ fr_command_iso_extract (FrCommand  *comm,
 const char *iso_mime_type[] = { "application/x-cd-image", NULL };
 
 
-const char **
+static const char **
 fr_command_iso_get_mime_types (FrCommand *comm)
 {
 	return iso_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_iso_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

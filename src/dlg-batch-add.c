@@ -26,14 +26,15 @@
 #include <unistd.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
+#include "dlg-batch-add.h"
 #include "file-utils.h"
+#include "fr-init.h"
 #include "fr-stock.h"
 #include "fr-window.h"
-#include "typedefs.h"
 #include "gtk-utils.h"
 #include "glib-utils.h"
 #include "preferences.h"
-#include "fr-init.h"
+#include "typedefs.h"
 
 
 #define ARCHIVE_ICON_SIZE (48)

@@ -172,14 +172,14 @@ base_fr_command_handle_error (FrCommand   *comm,
 const char **void_mime_types = { NULL };
 
 
-const char **
+static const char **
 base_fr_command_get_mime_types (FrCommand *comm)
 {
 	return void_mime_types;
 }
 
 
-FrCommandCap
+static FrCommandCap
 base_fr_command_get_capabilities (FrCommand  *comm,
 			          const char *mime_type,
 			          gboolean    check_command)

@@ -282,14 +282,14 @@ const char *ar_mime_type[] = { "application/x-ar",
 			       NULL };
 
 
-const char **
+static const char **
 fr_command_ar_get_mime_types (FrCommand *comm)
 {
 	return ar_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_ar_get_capabilities (FrCommand  *comm,
 			        const char *mime_type,
 				gboolean    check_command)

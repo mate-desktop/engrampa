@@ -168,14 +168,14 @@ fr_command_lrzip_test (FrCommand   *comm)
 const char *lrzip_mime_type[] = { "application/x-lrzip", NULL };
 
 
-const char **
+static const char **
 fr_command_lrzip_get_mime_types (FrCommand *comm)
 {
 	return lrzip_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_lrzip_get_capabilities (FrCommand  *comm,
 				   const char *mime_type,
 				   gboolean    check_command)

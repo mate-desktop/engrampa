@@ -466,14 +466,14 @@ const char *cfile_mime_type[] = { "application/x-gzip",
 				  NULL };
 
 
-const char **
+static const char **
 fr_command_cfile_get_mime_types (FrCommand *comm)
 {
 	return cfile_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_cfile_get_capabilities (FrCommand  *comm,
 			           const char *mime_type,
 				   gboolean    check_command)

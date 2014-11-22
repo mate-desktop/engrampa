@@ -279,14 +279,14 @@ fr_command_unstuff_handle_error (FrCommand   *comm,
 const char *unstuff_mime_type[] = { "application/x-stuffit", NULL };
 
 
-const char **
+static const char **
 fr_command_unstuff_get_mime_types (FrCommand *comm)
 {
 	return unstuff_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_unstuff_get_capabilities (FrCommand  *comm,
 			             const char *mime_type,
 				     gboolean    check_command)

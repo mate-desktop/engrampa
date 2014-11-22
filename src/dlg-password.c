@@ -26,6 +26,7 @@
 #include "fr-window.h"
 #include "gtk-utils.h"
 #include "preferences.h"
+#include "dlg-password.h"
 
 
 typedef struct {

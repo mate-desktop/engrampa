@@ -166,7 +166,7 @@ static void
 list__begin (gpointer data)
 {
 	FrCommandAce *comm = data;
-	
+
 	comm->list_started = FALSE;
 	comm->command_type = FR_ACE_COMMAND_UNKNOWN;
 }
@@ -239,14 +239,14 @@ fr_command_ace_handle_error (FrCommand   *comm,
 const char *ace_mime_type[] = { "application/x-ace", NULL };
 
 
-const char **
+static const char **
 fr_command_ace_get_mime_types (FrCommand *comm)
 {
 	return ace_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_ace_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

@@ -672,14 +672,14 @@ const char *rar_mime_type[] = { "application/x-cbr",
 				NULL };
 
 
-const char **
+static const char **
 fr_command_rar_get_mime_types (FrCommand *comm)
 {
 	return rar_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_rar_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

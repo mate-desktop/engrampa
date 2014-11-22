@@ -991,14 +991,14 @@ const char *tar_mime_types[] = { "application/x-compressed-tar",
 			         NULL };
 
 
-const char **
+static const char **
 fr_command_tar_get_mime_types (FrCommand *comm)
 {
 	return tar_mime_types;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_tar_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

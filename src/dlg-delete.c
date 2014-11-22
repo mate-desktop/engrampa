@@ -25,6 +25,7 @@
 #include "fr-window.h"
 #include "gtk-utils.h"
 #include "file-utils.h"
+#include "dlg-delete.h"
 
 
 typedef struct {

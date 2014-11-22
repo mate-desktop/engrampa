@@ -1762,7 +1762,7 @@ fr_window_update_current_location (FrWindow *window)
 }
 
 
-void
+static void
 fr_window_update_dir_tree (FrWindow *window)
 {
 	GPtrArray  *dirs;

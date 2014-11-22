@@ -225,14 +225,14 @@ fr_command_cpio_extract (FrCommand *comm,
 const char *cpio_mime_type[] = { "application/x-cpio", NULL };
 
 
-const char **
+static const char **
 fr_command_cpio_get_mime_types (FrCommand *comm)
 {
 	return cpio_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_cpio_get_capabilities (FrCommand  *comm,
 			          const char *mime_type,
 				  gboolean    check_command)

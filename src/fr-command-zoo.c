@@ -323,14 +323,14 @@ fr_command_zoo_test (FrCommand   *comm)
 const char *zoo_mime_type[] = { "application/x-zoo", NULL };
 
 
-const char **
+static const char **
 fr_command_zoo_get_mime_types (FrCommand *comm)
 {
 	return zoo_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_zoo_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

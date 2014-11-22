@@ -319,14 +319,14 @@ fr_command_arj_handle_error (FrCommand   *comm,
 const char *arj_mime_type[] = { "application/x-arj", NULL };
 
 
-const char **
+static const char **
 fr_command_arj_get_mime_types (FrCommand *comm)
 {
 	return arj_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_arj_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

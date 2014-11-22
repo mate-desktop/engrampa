@@ -203,7 +203,7 @@ static void
 list__begin (gpointer data)
 {
 	FrCommandAlz *comm = data;
-	
+
 	comm->list_started = FALSE;
 	comm->invalid_password = FALSE;
 }
@@ -301,14 +301,14 @@ fr_command_alz_handle_error (FrCommand   *comm,
 const char *alz_mime_type[] = { "application/x-alz", NULL };
 
 
-const char **
+static const char **
 fr_command_alz_get_mime_types (FrCommand *comm)
 {
 	return alz_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_alz_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

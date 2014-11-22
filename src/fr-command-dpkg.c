@@ -210,14 +210,14 @@ fr_command_dpkg_extract (FrCommand  *comm,
 const char *dpkg_mime_type[] = { "application/x-deb", NULL };
 
 
-const char **
+static const char **
 fr_command_dpkg_get_mime_types (FrCommand *comm)
 {
         return dpkg_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_dpkg_get_capabilities (FrCommand  *comm,
                                   const char *mime_type,
                                   gboolean    check_command)

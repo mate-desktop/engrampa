@@ -226,14 +226,14 @@ fr_command_rpm_extract (FrCommand  *comm,
 const char *rpm_mime_type[] = { "application/x-rpm", NULL };
 
 
-const char **
+static const char **
 fr_command_rpm_get_mime_types (FrCommand *comm)
 {
 	return rpm_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_rpm_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

@@ -304,14 +304,14 @@ fr_command_lha_extract (FrCommand  *comm,
 const char *lha_mime_type[] = { "application/x-lha", NULL };
 
 
-const char **
+static const char **
 fr_command_lha_get_mime_types (FrCommand *comm)
 {
 	return lha_mime_type;
 }
 
 
-FrCommandCap
+static FrCommandCap
 fr_command_lha_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)

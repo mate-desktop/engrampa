@@ -29,6 +29,7 @@
 #include "gtk-utils.h"
 #include "fr-init.h"
 #include "fr-window.h"
+#include "dlg-open-with.h"
 
 
 #define TEMP_DOCS  "temp_docs"
