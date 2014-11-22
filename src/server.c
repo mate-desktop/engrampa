@@ -345,7 +345,7 @@ handle_method_call (GDBusConnection       *connection,
 
 		window = fr_window_new ();
 		fr_window_use_progress_dialog (FR_WINDOW (window), use_progress_dialog);
-		if ((destination != NULL) & (strcmp (destination, "") != 0))
+		if ((destination != NULL) && (strcmp (destination, "") != 0))
 			fr_window_set_default_dir (FR_WINDOW (window), destination, TRUE);
 
 		g_signal_connect (window, "progress", G_CALLBACK (window_progress_cb), connection);
