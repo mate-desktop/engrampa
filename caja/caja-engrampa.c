@@ -291,7 +291,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 		return NULL;
 
 	if (unsupported_scheme ((CajaFileInfo *) files->data))
-			return NULL;
+		return NULL;
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
@@ -313,6 +313,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 
 			parent = caja_file_info_get_parent_info (file);
  			can_write = caja_file_info_can_write (parent);
+			g_object_unref (parent);
 		}
 	}
 
