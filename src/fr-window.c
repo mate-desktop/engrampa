@@ -8783,7 +8783,6 @@ fr_window_exec_batch_action (FrWindow      *window,
 	case FR_BATCH_ACTION_EXTRACT_HERE:
 		debug (DEBUG_INFO, "[BATCH] EXTRACT HERE\n");
 
-		edata = action->data;
 		fr_window_archive_extract_here (window,
 						FALSE,
 						TRUE,
