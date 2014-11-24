@@ -600,14 +600,9 @@ error_message_with_parent (GtkWindow  *parent,
 			   const char *msg,
 			   const char *detail)
 {
-  gboolean first_call = TRUE;
   GtkWidget *dialog;
 
-  if (first_call)
-    {
-      g_warning ("%s: Merge with the code in Gtk{File,Recent}ChooserDefault.", G_STRLOC);
-      first_call = FALSE;
-    }
+  g_warning ("%s: Merge with the code in Gtk{File,Recent}ChooserDefault.", G_STRLOC);
 
   dialog = gtk_message_dialog_new (parent,
 				   GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
