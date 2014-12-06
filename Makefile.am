@@ -17,7 +17,7 @@ SUBDIRS =		\
 
 distcleancheck_listfiles = find . -type f -print | grep -v 'omf\.out'
 
-distuninstallcheck_listfiles = find . -type f -print | grep -v '^\./var/scrollkeeper' | grep -v 'omf' | grep -v 'figures'
+distuninstallcheck_listfiles = find . -type f -print | grep -v 'omf' | grep -v 'figures'
 
 
 EXTRA_DIST = 			\
