@@ -264,6 +264,6 @@ Configuration:
 	Caja support:           ${enable_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}
-	Use libmagic:		${enable_magic}
+	Use libmagic:           ${enable_magic}
 	JSON support:           ${enable_json_glib}
 "
