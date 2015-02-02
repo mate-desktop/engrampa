@@ -251,6 +251,7 @@ AC_CONFIG_FILES([Makefile
 		 src/commands/Makefile
 		 src/sh/Makefile
 		 caja/Makefile
+		 caja/libcaja-engrampa.caja-extension.in
 		 help/Makefile
 		 po/Makefile.in])
 AC_OUTPUT
