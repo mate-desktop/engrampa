@@ -128,7 +128,7 @@ main (int argc, char **argv)
 		archive_command = "bzip2 -dc";
 	fclose (stream);
 
-	command = g_strdup_printf ("sh -c \"dd if=%s ibs=%u skip=1 2>/dev/null | %s | cpio %s\"", g_shell_quote (filename), offset, archive_command, cpio_args->str);
+	command = g_strdup_printf ("sh -c \"dd if=%s ibs=%u skip=1 2>/dev/null | %s | " CPIO_PATH " %s\"", g_shell_quote (filename), offset, archive_command, cpio_args->str);
 
 	return system (command);
 }
