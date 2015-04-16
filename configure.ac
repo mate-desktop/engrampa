@@ -165,6 +165,10 @@ fi
 
 AM_CONDITIONAL(ENABLE_MAGIC, test x"$enable_magic" != x"no")
 
+AC_ARG_VAR([CPIO], [Path to the `cpio` command])
+AC_PATH_PROGS(CPIO, gcpio cpio)
+AC_DEFINE_UNQUOTED(CPIO_PATH, "${CPIO}", [Path to cpio])
+
 dnl ******************************
 
 YELP_HELP_INIT
