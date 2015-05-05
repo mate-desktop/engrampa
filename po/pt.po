@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Carlos Moreira <crolidge@gmail.com>, 2014
+# Carlos Moreira <crolidge@gmail.com>, 2014-2015
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2014
 # Sérgio Marques <smarquespt@gmail.com>, 2012
@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-19 21:20+0100\n"
-"PO-Revision-Date: 2014-11-19 20:21+0000\n"
-"Last-Translator: infirit <infirit@gmail.com>\n"
+"PO-Revision-Date: 2015-03-19 23:04+0000\n"
+"Last-Translator: Carlos Moreira <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/MATE/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -86,7 +86,7 @@ msgstr "Mostrar opções de gestão de sessão"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr ""
+msgstr "Um Gestor de Arquivos para o ambiente de trabalho MATE"
 
 #: ../data/engrampa.appdata.xml.in.h:2
 msgid ""
@@ -113,7 +113,7 @@ msgid ""
 "lzop, rzip, xz</li> </ul> <p> Engrampa is a fork of File Roller and part of "
 "the MATE Desktop Environment. If you would like to know more about MATE and "
 "Engrampa, please visit the project's home page. </p>"
-msgstr ""
+msgstr "<p> Engrampa é um gestor de arquivos para o ambiente MATE. Permite-lhe criar e modificar arquivos, ver o conteúdo de um arquivo, ver um ficheiro contido num arquivo, e extrair ficheiros de um arquivo. </p> <p> Engrampa é apenas uma frente (um interface gráfica) para arquivar programas, tal como tar e zip. Os tipos de ficheiros suportados são: </p> <ul> <li>Ficheiros Comprimidos 7-Zip (.7z)</li> <li>Ficheiros Comprimidos WinAce (.ace)</li> <li>Ficheiros Comprimidos ALZip (.alz)</li> <li>Arquivos Indexados Pequenos AIX (.ar)</li> <li>Arquivos Comprimidos ARJ (.arj)</li> <li>Ficheiros Cabinet (.cab)</li> <li>Arquivos UNIX CPIO (.cpio)</li> <li>Pacotes Linux Debian Linux (.deb) [Apenas modo de leitura]</li> <li>Imagens de disco CD ISO-9660 (.iso) [Apenas modo de leitura]</li> <li>Arquivos Java (.jar)</li> <li>Arquivos Java Enterprise (.ear)</li> <li>Arquivos Java Web (.war)</li> <li>Arquivos LHA (.lzh, .lha)</li> <li>Arquivos Comprimidos WinRAR (.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>Pacotes Linux RPM (.rpm) [Apenas modo de leitura]</li> <li>Ficheiros Tape Archive não comprimidos (.tar) ou comprimidos com: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> <li>Arquivos Stuffit (.bin, .sit)</li> <li>Arquivos ZIP (.zip)</li> <li>ZIP Archived Comic Book (.cbz)</li> <li>Ficheiros de Arquivo Comprimido ZOO (.zoo)</li> <li>Ficheiros individuais comprimidos com gzip, bzip, bzip2, compress, lrzip, lzip, lzop, rzip, xz</li> </ul> <p> Engrampa é um derivado de File Roller, e é parte do Ambiente de Trabalho MATE. Se gostaria de saber mais sobre MATE e Engrampa, visite por favor a página do projeto na Internet. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -223,14 +223,14 @@ msgstr "Senha"
 
 #: ../data/ui/password.ui.h:2
 msgid "_Encrypt the file list"
-msgstr ""
+msgstr "_Encriptar a lista de ficheiros"
 
 #: ../data/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
-msgstr "<i><b>Nota:</b> a senha será utilizada para encriptar os ficheiros que adicionar ao arquivo atual, e para desencriptar ficheiros que extraia do arquivo atual. Ao fechar o arquivo a senha será apagada.</i>"
+msgstr "<i><b>Nota:</b> a senha será utilizada para encriptar os ficheiros que adicionar ao arquivo atual, e para desencriptar ficheiros que extraia do arquivo atual. Ao fechar o arquivo, a senha será apagada.</i>"
 
 #. secondary text
 #: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
@@ -294,7 +294,7 @@ msgstr "Incapaz de criar o arquivo"
 
 #: ../src/actions.c:159 ../src/dlg-batch-add.c:173 ../src/dlg-batch-add.c:309
 msgid "You have to specify an archive name."
-msgstr "Tem de especificar o nome do arquivo."
+msgstr "Deve especificar o nome do arquivo."
 
 #: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
@@ -332,7 +332,7 @@ msgid ""
 "the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
-msgstr "O Engrampa é um programa livre; pode redistribuí-lo e/ou alterá-lo nos termos da GNU General Public License conforme publicada pela Free Software Foundation; tanto na versão 2 da Licença ou (à sua escolha) qualquer versão posterior."
+msgstr "O Engrampa é um programa livre; pode redistribuí-lo e/ou alterá-lo nos termos da Licença Pública Geral GNU, conforme publicada pela Free Software Foundation; tanto na versão 2 da Licença, ou (à sua escolha) qualquer versão posterior."
 
 #: ../src/actions.c:864
 msgid ""
@@ -340,14 +340,14 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
-msgstr "O Engrampa é distribuído na expetativa de ser útil, mas SEM QUALQUER GARANTIA; nem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Consulte a GNU General Public License para mais detalhes."
+msgstr "O Engrampa é distribuído na expetativa de ser útil, mas SEM QUALQUER GARANTIA; nem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO. Consulte a Licença Pública Geral GNU para mais informações."
 
 #: ../src/actions.c:868
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "Deverá ter recebido uma cópia da GNU General Public License juntamente com o Engrampa; caso contrário, escreva para a Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA (em inglês)"
+msgstr "Deverá ter recebido uma cópia da Licença Pública Geral GNU juntamente com o Engrampa; caso contrário, escreva para a Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
 #: ../src/actions.c:878
 msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
@@ -355,11 +355,11 @@ msgstr "direitos de autor © 2001–2010 Free Software Foundation, Inc."
 
 #: ../src/actions.c:879
 msgid "An archive manager for MATE."
-msgstr "Um gestor de arquivos para o MATE"
+msgstr "Um gestor de arquivos para o MATE."
 
 #: ../src/actions.c:882
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>\\n\nSérgio Marques <smarquespt@gmail.com> (MATE)"
+msgstr "Duarte Loreto <happyguy_pt@hotmail.com>\\n\nCarlos Moreira <crolidge@hotmail.com>\\n\nSérgio Marques <smarquespt@gmail.com> (MATE)"
 
 #: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -427,12 +427,12 @@ msgstr "Gravar opções"
 
 #: ../src/dlg-add-folder.c:891
 msgid "_Options Name:"
-msgstr ""
+msgstr "Nome das _opções:"
 
 #: ../src/dlg-ask-password.c:124
 #, c-format
 msgid "Enter the password for the archive '%s'."
-msgstr "Introduza a senha para o arquivo \"%s'\""
+msgstr "Introduza a senha para o arquivo \"%s\"."
 
 #: ../src/dlg-batch-add.c:188
 #, c-format
@@ -444,7 +444,7 @@ msgstr "O nome \"%s\" é inválido pois não pode conter os caracteres: %s\n\n%s
 
 #: ../src/dlg-batch-add.c:191 ../src/fr-window.c:7592 ../src/fr-window.c:7594
 msgid "Please use a different name."
-msgstr "Utilize um nome diferente"
+msgstr "Por favor use um nome diferente."
 
 #: ../src/dlg-batch-add.c:218
 msgid ""
@@ -475,7 +475,7 @@ msgstr "O arquivo não foi criado"
 
 #: ../src/dlg-batch-add.c:327
 msgid "The archive is already present.  Do you want to overwrite it?"
-msgstr "O arquivo já existe. Substituir?"
+msgstr "O arquivo já existe. Pretende substituí-lo?"
 
 #: ../src/dlg-batch-add.c:330
 msgid "_Overwrite"
@@ -545,7 +545,7 @@ msgstr "Comando de _procura"
 #. Translators: after the colon there is a folder name.
 #: ../src/dlg-prop.c:107
 msgid "Location:"
-msgstr "Localização:"
+msgstr "Local:"
 
 #: ../src/dlg-prop.c:119
 msgctxt "File"
@@ -559,7 +559,7 @@ msgstr "Propriedades de %s"
 
 #: ../src/dlg-prop.c:134
 msgid "Last modified:"
-msgstr ""
+msgstr "Última modificação:"
 
 #: ../src/dlg-prop.c:144
 msgid "Archive size:"
@@ -618,7 +618,7 @@ msgid ""
 "The program was not able to find out the file format you want to use for "
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
-msgstr "A aplicação não conseguiu descobrir o formato do ficheiro a utilizar para \"%s\". Certifique-se de que está a utilizar uma extensão de ficheiro reconhecida ou selecione manualmente um formato na lista abaixo."
+msgstr "A aplicação não conseguiu descobrir o formato do ficheiro a utilizar para \"%s\". Certifique-se de que está a utilizar uma extensão de ficheiro reconhecida, ou selecione manualmente um formato na lista abaixo."
 
 #: ../src/eggfileformatchooser.c:682
 msgid "File format not recognized"
@@ -626,16 +626,16 @@ msgstr "Formato de ficheiro desconhecido"
 
 #: ../src/fr-archive.c:1126
 msgid "File not found."
-msgstr "Ficheiro não encontrado"
+msgstr "Ficheiro não encontrado."
 
 #: ../src/fr-archive.c:1229
 #, c-format
 msgid "Archive not found"
-msgstr ""
+msgstr "Arquivo não encontrado"
 
 #: ../src/fr-archive.c:2394
 msgid "You don't have the right permissions."
-msgstr "Não possui as permissões necessárias"
+msgstr "Não possui as permissões necessárias."
 
 #: ../src/fr-archive.c:2394
 msgid "This archive type cannot be modified"
@@ -643,7 +643,7 @@ msgstr "Este tipo de arquivo não pode ser modificado"
 
 #: ../src/fr-archive.c:2406
 msgid "You can't add an archive to itself."
-msgstr "Não pode adicionar um arquivo a ele próprio"
+msgstr "Não pode adicionar um arquivo a ele próprio."
 
 #. Translators: after the colon there is a filename.
 #: ../src/fr-command-7z.c:298 ../src/fr-command-rar.c:420
@@ -698,8 +698,8 @@ msgstr[1] "%d objetos (%s)"
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "%d objecto selecionado (%s)"
-msgstr[1] "%d objectos selecionados (%s)"
+msgstr[0] "%d objeto selecionado (%s)"
+msgstr[1] "%d objetos selecionados (%s)"
 
 #: ../src/fr-window.c:1572
 msgid "Folder"
@@ -772,7 +772,7 @@ msgstr "Arquivo criado com sucesso"
 
 #: ../src/fr-window.c:2758
 msgid "please wait…"
-msgstr ""
+msgstr "por favor aguarde..."
 
 #: ../src/fr-window.c:2917
 msgid "An error occurred while extracting files."
@@ -805,15 +805,15 @@ msgstr "Ocorreu um erro ao gravar o arquivo"
 
 #: ../src/fr-window.c:2950
 msgid "An error occurred."
-msgstr "Ocorreu um erro"
+msgstr "Ocorreu um erro."
 
 #: ../src/fr-window.c:2956
 msgid "Command not found."
-msgstr "Comando não encontrado"
+msgstr "Comando não encontrado."
 
 #: ../src/fr-window.c:2959
 msgid "Command exited abnormally."
-msgstr "Comando terminou abruptamente"
+msgstr "Comando terminou abruptamente."
 
 #: ../src/fr-window.c:3158
 msgid "Test Result"
@@ -892,36 +892,36 @@ msgstr "Incapaz de gravar o arquivo \"%s\""
 #: ../src/fr-window.c:6721
 #, c-format
 msgid "Replace file \"%s\"?"
-msgstr ""
+msgstr "Substituir ficheiro \"%s\"?"
 
 #: ../src/fr-window.c:6724
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
-msgstr ""
+msgstr "Já existe outro ficheiro com o mesmo nome em \"%s\"."
 
 #: ../src/fr-window.c:6731
 msgid "Replace _All"
-msgstr ""
+msgstr "Substituir _Tudo"
 
 #: ../src/fr-window.c:6732
 msgid "_Skip"
-msgstr ""
+msgstr "_Ignorar"
 
 #: ../src/fr-window.c:6733
 msgid "_Replace"
-msgstr ""
+msgstr "_Substituir"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7546
 msgid "New name is void, please type a name."
-msgstr ""
+msgstr "O novo nome está vazio, por favor digite um nome."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7551
 msgid "New name is the same as old one, please type other name."
-msgstr ""
+msgstr "O novo nome é igual ao anterior, por favor digite outro nome."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
@@ -930,7 +930,7 @@ msgstr ""
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
-msgstr ""
+msgstr "O nome \"%s\" não é válido porque contém pelo menos um dos seguintes caracteres: %s. por favor digite outro nome."
 
 #: ../src/fr-window.c:7592
 #, c-format
@@ -954,11 +954,11 @@ msgstr "Mudar nome"
 
 #: ../src/fr-window.c:7665
 msgid "_New folder name:"
-msgstr ""
+msgstr "_Novo nome da pasta:"
 
 #: ../src/fr-window.c:7665
 msgid "_New file name:"
-msgstr ""
+msgstr "_Novo nome de ficheiro:"
 
 #: ../src/fr-window.c:7669
 msgid "_Rename"
@@ -978,7 +978,7 @@ msgstr "Colar seleção"
 
 #: ../src/fr-window.c:8105
 msgid "_Destination folder:"
-msgstr ""
+msgstr "Pasta de _destino:"
 
 #: ../src/fr-window.c:8708
 msgid "Add files to an archive"
@@ -1138,7 +1138,7 @@ msgstr "Extrair arquivos para a pasta especificada e sair da aplicação"
 
 #: ../src/main.c:206 ../src/main.c:218
 msgid "FOLDER"
-msgstr "pasta"
+msgstr "Pasta"
 
 #: ../src/main.c:209
 msgid "Extract archives asking the destination folder and quit the program"
@@ -1188,7 +1188,7 @@ msgstr "Informações do programa"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
-msgstr ""
+msgstr "_Adicionar Ficheiros..."
 
 #: ../src/ui.h:44 ../src/ui.h:48
 msgid "Add files to the archive"
@@ -1196,7 +1196,7 @@ msgstr "Adicionar ficheiros ao arquivo"
 
 #: ../src/ui.h:51
 msgid "Add a _Folder…"
-msgstr ""
+msgstr "Adicionar uma _Pasta..."
 
 #: ../src/ui.h:52 ../src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1232,7 +1232,7 @@ msgstr "Colar da área de transferência"
 
 #: ../src/ui.h:80 ../src/ui.h:101
 msgid "_Rename…"
-msgstr ""
+msgstr "_Mudar nome..."
 
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
@@ -1252,7 +1252,7 @@ msgstr "Desmarcar todos os ficheiros"
 
 #: ../src/ui.h:114 ../src/ui.h:118
 msgid "_Extract…"
-msgstr ""
+msgstr "_Extrair"
 
 #: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
 msgid "Extract files from the archive"
@@ -1260,7 +1260,7 @@ msgstr "Extrair ficheiros do arquivo"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr ""
+msgstr "Procurar..."
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1272,7 +1272,7 @@ msgstr "Ver o resultado produzido pelo último comando executado"
 
 #: ../src/ui.h:135
 msgid "New…"
-msgstr ""
+msgstr "Novo..."
 
 #: ../src/ui.h:136
 msgid "Create a new archive"
@@ -1280,7 +1280,7 @@ msgstr "Criar um novo arquivo"
 
 #: ../src/ui.h:139
 msgid "Open…"
-msgstr ""
+msgstr "Abrir..."
 
 #: ../src/ui.h:140 ../src/ui.h:144
 msgid "Open archive"
@@ -1288,7 +1288,7 @@ msgstr "Abrir arquivo"
 
 #: ../src/ui.h:147
 msgid "_Open With…"
-msgstr ""
+msgstr "_Abrir Com..."
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
@@ -1296,7 +1296,7 @@ msgstr "Abrir ficheiros selecionados com uma aplicação"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"
-msgstr ""
+msgstr "_Senha..."
 
 #: ../src/ui.h:152
 msgid "Specify a password for this archive"
@@ -1312,7 +1312,7 @@ msgstr "Recarregar arquivo atual"
 
 #: ../src/ui.h:163
 msgid "Save As…"
-msgstr ""
+msgstr "Guardar Como..."
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"
