@@ -5983,6 +5983,13 @@ fr_window_construct (FrWindow *window)
 	window->priv->progress_cid = gtk_statusbar_get_context_id (GTK_STATUSBAR (window->priv->statusbar), "progress");
 
 	statusbar = GTK_STATUSBAR (window->priv->statusbar);
+
+	/*reduce size of statusbar */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_margin_top (GTK_WIDGET (statusbar), 0);
+	gtk_widget_set_margin_bottom (GTK_WIDGET (statusbar), 0);
+#endif
+
 	statusbar_box = gtk_statusbar_get_message_area (statusbar);
 	gtk_box_set_homogeneous (GTK_BOX (statusbar_box), FALSE);
 	gtk_box_set_spacing (GTK_BOX (statusbar_box), 4);
