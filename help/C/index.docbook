@@ -2,9 +2,9 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.26.0">
-  <!ENTITY manrevision "2.26.0">
-  <!ENTITY date "April 2006">
+  <!ENTITY appversion "1.10">
+  <!ENTITY manrevision "1.10.0">
+  <!ENTITY date "July 2015">
   <!ENTITY appname "Archive Manager">
   <!ENTITY app "<application>Archive Manager</application>">
   <!-- Information about the entities
@@ -17,7 +17,7 @@
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://developer.MATE.org/projects/gdp
+  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Jan 30, 2002
 -->
@@ -30,6 +30,10 @@
      <abstract role="description">
        <para>Archive Manager, also known as Engrampa, allows you to create, view, modify, or unpack an archive.</para>
      </abstract>
+    <copyright lang="en"> 
+      <year>2015</year> 
+      <holder>MATE-Dokumentationsprojekt</holder> 
+    </copyright>
     <copyright>
       <year>2009</year>
       <holder>Paul Cutler</holder>
@@ -65,18 +69,27 @@
 <!-- An address can be added to the publisher information.  If a role is 
      not specified, the publisher/author is the same for all versions of the 
      document.  -->
-    <publisher role="maintainer"> 
-      <publishername> MATE Documentation Project </publishername> 
+    <publisher> 
+      <publishername>MATE-Dokumentationsprojekt</publishername> 
     </publisher> 
+    <publisher> 
+      <publishername>GNOME-Dokumentationsprojekt</publishername> 
+    </publisher>
 
    &legal; <!-- This file contains link to license for the
    documentation (GNU FDL), and other legal stuff such as "NO
    WARRANTY" statement. Please do not change any of this. -->
 
-    <authorgroup> 
-       <author> 
+    <authorgroup>
+      <author role="maintainer" lang="en"> 
+	<surname>MATE-Dokumentationteam</surname> 
+	<affiliation> 
+	  <orgname>Mate desktop</orgname> 
+	</affiliation> 
+      </author>
+       <author>
          <firstname>Sun </firstname>
-         <surname>MATE Documentation Team</surname>
+         <surname>GNOME Documentation Team</surname>
          <affiliation> 
             <orgname>Sun Microsystems</orgname>
         </affiliation>
@@ -85,14 +98,14 @@
 	<firstname>Paolo</firstname> 
 	<surname>Bacchilega</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname> 
+	  <orgname>GNOME Documentation Project</orgname> 
 	</affiliation> 
       </author> 
       <author> 
 	<firstname>Alexander</firstname> 
 	<surname>Kirillov</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname> 
+	  <orgname>GNOME Documentation Project</orgname> 
 	  <address> <email>kirillov@math.sunysb.edu</email> </address> 
 	</affiliation> 
       </author> 
@@ -100,23 +113,30 @@
         <firstname>Paul</firstname>
         <surname>Cutler</surname>
         <affiliation>
-          <orgname>MATE Documentation Project</orgname>
+          <orgname>GNOME Documentation Project</orgname>
           <address><email>pcutler@foresightlinux.org</email></address>
         </affiliation>
       </author>	  
     </authorgroup>
 	
-	<releaseinfo revision="2.26" role="review">
-		<ulink type="techreview" url="http://bugzilla.mate.org/show_bug.cgi?id=575419"/>
+	<releaseinfo revision="1.10" role="review">
 	</releaseinfo>
 
          <revhistory>
+                <revision lang="en">
+                  <revnumber>Archive Manager Manual V1.10.0</revnumber>
+                  <date>July 2015</date>
+                  <revdescription>
+                         <para role="author" lang="en">Wolfgang Ulbrich</para>
+                         <para role="publisher" lang="en">MATE Documentation Project</para>
+                  </revdescription>
+                </revision>
                 <revision>
                   <revnumber>Archive Manager Manual V2.26.0</revnumber>
                   <date>March 2009</date>
                   <revdescription>
                          <para role="author">Paul Cutler</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
 				
@@ -125,7 +145,7 @@
                   <date>July 2008</date>
                   <revdescription>
                          <para role="author">Paolo Bacchilega</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
 				
@@ -134,7 +154,7 @@
                   <date>April 2006</date>
                   <revdescription>
                          <para role="author">Paolo Bacchilega</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
 
@@ -143,7 +163,7 @@
                   <date>March 2004</date>
                   <revdescription>
                          <para role="author">Sun GNOME Documentation Team</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
                 <revision>
@@ -151,7 +171,7 @@
                   <date>February 2004</date>
                   <revdescription>
                          <para role="author">Sun GNOME Documentation Team</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
                 <revision>
@@ -159,7 +179,7 @@
                   <date>August 2003</date>
                   <revdescription>
                          <para role="author">Sun GNOME Documentation Team</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
                 <revision>
@@ -167,7 +187,7 @@
                   <date>June 2003</date>
                   <revdescription>
                          <para role="author">Sun GNOME Documentation Team</para>
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
                 <revision>
@@ -175,7 +195,7 @@
                   <date>January 2003</date>
                   <revdescription>
                          <para role="author">Paolo Bacchilega</para>                         
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
                 <revision>
@@ -183,13 +203,20 @@
                   <date>June 2002</date>
                   <revdescription>
                          <para role="author">Alexander Kirillov</para>                         
-                         <para role="publisher">MATE Documentation Project</para>
+                         <para role="publisher">GNOME Documentation Project</para>
                   </revdescription>
                 </revision>
          </revhistory>
 
     <releaseinfo> This manual describes version &appversion; of &appname;.
     </releaseinfo> 
+    <legalnotice> 
+        <title>Feedback</title>
+        <para>To report a bug or make a suggestion regarding the &app; application or this manual, follow the directions in the
+        <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>.
+      </para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice>
   </articleinfo> 
   <indexterm zone="index"> 
     <primary>Engrampa</primary> 
