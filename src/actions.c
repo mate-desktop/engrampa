@@ -435,7 +435,7 @@ save_file_response_cb (GtkWidget  *w,
     }
 
     if (response == GTK_RESPONSE_HELP) {
-        show_help_dialog (GTK_WINDOW (data->dialog), "engrampa-convert-archive");
+        show_help_dialog (GTK_WINDOW (data->dialog), "engrampa-create#engrampa-convert-archive");
         return;
     }
 
