@@ -171,7 +171,7 @@ fr-marshal.c: fr-marshal.list $(GLIB_GENMARSHAL)
 
 fr-enum-types.h: typedefs.h $(GLIB_MKENUMS)
 	$(AM_V_GEN)( $(GLIB_MKENUMS) \
-		--fhead "#ifndef FR_ENUM__TYPES_H\n#define FR_ENUM_TYPES_H\n\n#include <glib-object.h>\n\nG_BEGIN_DECLS\n" \
+		--fhead "#ifndef FR_ENUM_TYPES_H\n#define FR_ENUM_TYPES_H\n\n#include <glib-object.h>\n\nG_BEGIN_DECLS\n" \
 		--fprod "/* enumerations from \"@filename@\" */\n" \
 		--vhead "GType @enum_name@_get_type (void);\n#define FR_TYPE_@ENUMSHORT@ (@enum_name@_get_type())\n" \
 		--ftail "G_END_DECLS\n\n#endif /* FR_ENUM_TYPES_H */" \
