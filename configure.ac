@@ -232,6 +232,7 @@ dnl ******************************
 AC_CONFIG_FILES([Makefile
 		 data/Makefile
 		 data/engrampa.desktop.in
+		 data/org.mate.engrampa.gschema.xml
 		 data/ui/Makefile
 		 data/icons/Makefile
 		 data/icons/16x16/Makefile
