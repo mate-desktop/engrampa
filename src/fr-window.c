@@ -2693,8 +2693,8 @@ fr_window_progress_cb (FrArchive *archive,
 			case FR_ACTION_ADDING_FILES:
 			case FR_ACTION_EXTRACTING_FILES:
 			case FR_ACTION_DELETING_FILES:
-				message = g_strdup_printf (ngettext (_("%d file remaining"),
-								     _("%'d files remaining"),
+				message = g_strdup_printf (ngettext ("%d file remaining",
+								     "%'d files remaining",
 								     remaining_files), remaining_files);
 				break;
 			default:
