@@ -209,8 +209,13 @@ fr_command_unarchiver_extract (FrCommand  *comm,
 
 	fr_process_add_arg (comm->process, comm->filename);
 
-	for (scan = file_list; scan; scan = scan->next)
-		fr_process_add_arg (comm->process, scan->data);
+	for (scan = file_list; scan; scan = scan->next) {
+		char *escaped;
+
+ 		escaped = escape_str (scan->data, "[");
+ 		fr_process_add_arg (comm->process, escaped);
+ 		g_free (escaped);
+	}
 
 	fr_process_end_command (comm->process);
 }
