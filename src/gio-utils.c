@@ -959,9 +959,9 @@ g_copy_files_ready_cb (GObject      *source_object,
 
 
 static void
-g_copy_files_progess_cb (goffset  current_num_bytes,
-                         goffset  total_num_bytes,
-                         gpointer user_data)
+g_copy_files_progress_cb (goffset  current_num_bytes,
+                          goffset  total_num_bytes,
+                          gpointer user_data)
 {
 	CopyFilesData *cfd = user_data;
 
@@ -991,7 +991,7 @@ g_copy_current_file (CopyFilesData *cfd)
 			   cfd->flags,
 			   cfd->io_priority,
 			   cfd->cancellable,
-			   g_copy_files_progess_cb,
+			   g_copy_files_progress_cb,
 			   cfd,
 			   g_copy_files_ready_cb,
 			   cfd);
@@ -1272,9 +1272,9 @@ g_directory_copy_child_done_cb (GObject      *source_object,
 
 
 static void
-g_directory_copy_child_progess_cb (goffset  current_num_bytes,
-                           	   goffset  total_num_bytes,
-                           	   gpointer user_data)
+g_directory_copy_child_progress_cb (goffset  current_num_bytes,
+                                    goffset  total_num_bytes,
+                                    gpointer user_data)
 {
 	DirectoryCopyData *dcd = user_data;
 
@@ -1362,7 +1362,7 @@ g_directory_copy_current_child (DirectoryCopyData *dcd)
 				   dcd->flags,
 				   dcd->io_priority,
 				   dcd->cancellable,
-				   g_directory_copy_child_progess_cb,
+				   g_directory_copy_child_progress_cb,
 				   dcd,
 				   g_directory_copy_child_done_cb,
 				   dcd);
