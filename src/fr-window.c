@@ -2683,7 +2683,7 @@ fr_window_progress_cb (FrArchive *archive,
 			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->priv->pd_progress_bar), fraction);
 		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (window->priv->progress_bar), fraction);
 
-		if ((archive != NULL) && (archive->command->n_files > 0)) {
+		if ((archive != NULL) && (archive->command != NULL) && (archive->command->n_files > 0)) {
 			char *message = NULL;
 			int   remaining_files;
 
