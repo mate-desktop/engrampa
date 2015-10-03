@@ -38,26 +38,32 @@ static void
 extract_to_callback (CajaMenuItem *item,
 		     gpointer          user_data)
 {
-	GList            *files;
+	GList            *files, *scan;
 	CajaFileInfo *file;
-	char             *uri, *default_dir;
-	char             *quoted_uri, *quoted_default_dir;
+	char             *default_dir;
+	char             *quoted_default_dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
 	file = files->data;
 
-	uri = caja_file_info_get_uri (file);
 	default_dir = caja_file_info_get_parent_uri (file);
 
-	quoted_uri = g_shell_quote (uri);
 	quoted_default_dir = g_shell_quote (default_dir);
 
 	cmd = g_string_new ("engrampa");
-	g_string_append_printf (cmd,
-				" --default-dir=%s --extract %s",
-				quoted_default_dir,
-				quoted_uri);
+	g_string_append_printf(cmd," --default-dir=%s --extract", quoted_default_dir);
+
+	for (scan = files; scan; scan = scan->next) {
+		CajaFileInfo *file = scan->data;
+		char             *uri, *quoted_uri;
+
+		uri = caja_file_info_get_uri (file);
+		quoted_uri = g_shell_quote (uri);
+		g_string_append_printf (cmd, " %s", quoted_uri);
+		g_free (uri);
+		g_free (quoted_uri);
+	}
 
 #ifdef DEBUG
 	g_print ("EXEC: %s\n", cmd->str);
@@ -67,9 +73,7 @@ extract_to_callback (CajaMenuItem *item,
 
 	g_string_free (cmd, TRUE);
 	g_free (default_dir);
-	g_free (uri);
 	g_free (quoted_default_dir);
-	g_free (quoted_uri);
 }
 
 
