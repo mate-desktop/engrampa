@@ -6742,14 +6742,16 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 	gboolean do_not_extract = FALSE;
 
 	while ((odata->edata->overwrite == FR_OVERWRITE_ASK) && (odata->current_file != NULL)) {
-		char      *path;
-		char      *dest_uri;
-		GFile     *file;
-		GFileInfo *info;
-		GFileType  file_type;
+		const char *base_name;
+		char       *e_base_name;
+		char       *dest_uri;
+		GFile      *file;
+		GFileInfo  *info;
+		GFileType   file_type;
 
-		path = g_uri_escape_string ((char *) odata->current_file->data, G_URI_RESERVED_CHARS_ALLOWED_IN_PATH, TRUE);
-		dest_uri = g_strdup_printf ("%s/%s", odata->edata->extract_to_dir, path);
+		base_name = _g_path_get_base_name ((char *) odata->current_file->data, odata->edata->base_dir, odata->edata->junk_paths);
+		e_base_name = g_uri_escape_string (base_name, G_URI_RESERVED_CHARS_ALLOWED_IN_PATH, TRUE);
+		dest_uri = g_strdup_printf ("%s/%s", odata->edata->extract_to_dir, e_base_name);
 		file = g_file_new_for_uri (dest_uri);
 		info = g_file_query_info (file,
 					  G_FILE_ATTRIBUTE_STANDARD_TYPE "," G_FILE_ATTRIBUTE_STANDARD_NAME "," G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
@@ -6758,7 +6760,7 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 					  NULL);
 
 		g_free (dest_uri);
-		g_free (path);
+		g_free (e_base_name);
 
 		if (info == NULL) {
 			g_object_unref (file);
@@ -6802,6 +6804,8 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 
 			return;
 		}
+		else
+			odata->current_file = odata->current_file->next;
 
 		g_object_unref (info);
 		g_object_unref (file);
