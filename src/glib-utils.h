@@ -80,6 +80,10 @@ char **            _g_strv_prepend               (char **str_array,
                                                   const char *str);
 gboolean           _g_strv_remove                (char **str_array,
                                                   const char *str);
+const char *        _g_path_get_file_name          (const char          *path);
+const char *        _g_path_get_base_name          (const char          *path,
+						    const char          *base_dir,
+						    gboolean             junk_paths);
 
 /**/
 
