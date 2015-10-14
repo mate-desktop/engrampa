@@ -713,3 +713,51 @@ _g_strv_remove (char **str_array,
         return TRUE;
 }
 
+
+const gchar *
+_g_path_get_file_name (const gchar *file_name)
+{
+	register char   *base;
+	register gssize  last_char;
+
+	if (file_name == NULL)
+		return NULL;
+
+	if (file_name[0] == '\0')
+		return "";
+
+	last_char = strlen (file_name) - 1;
+
+	if (file_name [last_char] == G_DIR_SEPARATOR)
+		return "";
+
+	base = g_utf8_strrchr (file_name, -1, G_DIR_SEPARATOR);
+	if (! base)
+		return file_name;
+
+	return base + 1;
+}
+
+
+const char *
+_g_path_get_base_name (const char *path,
+		       const char *base_dir,
+		       gboolean    junk_paths)
+{
+	int         base_dir_len;
+	const char *base_path;
+
+	if (junk_paths)
+		return _g_path_get_file_name (path);
+
+	base_dir_len = strlen (base_dir);
+	if (strlen (path) <= base_dir_len)
+		return NULL;
+
+	base_path = path + base_dir_len;
+	if (path[0] != '/')
+		base_path -= 1;
+
+	return base_path;
+}
+
