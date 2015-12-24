@@ -106,7 +106,7 @@ list__process_line (char     *line,
 			strncpy (version, ver_start, ver_len);
 			version[ver_len] = 0;
 
-			if (strcmp (version, "4.55") < 0)
+			if ((strcmp (version, "4.55") < 0) && (ver_len > 1) && (version[1] == '.'))
 				p7z_comm->old_style = TRUE;
 			else
 				p7z_comm->old_style = FALSE;
