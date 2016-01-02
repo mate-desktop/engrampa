@@ -29,9 +29,6 @@ gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 
 man_MANS = engrampa.1
 
-convertdir = $(datadir)/MateConf/gsettings
-convert_DATA = engrampa.convert
-
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
 install-data-hook: update-cache
@@ -46,7 +43,6 @@ update-cache:
 	fi
 
 EXTRA_DIST = \
-       engrampa.convert \
        packages.match.in \
        packages.match \
        $(desktop_in_in_files) \
