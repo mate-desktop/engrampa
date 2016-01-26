@@ -795,9 +795,13 @@ get_uncompressed_name (FrCommandTar *c_tar,
 			new_name[l - 5] = 0;
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-xz-compressed-tar")) {
-		/* X.tar.xz --> X.tar
-		 * (There doesn't seem to be a shorthand suffix) */
-		if (file_extension_is (e_filename, ".tar.xz"))
+		/* X.txz     -->  X.tar
+		 * X.tar.xz  -->  X.tar */
+		if (file_extension_is (e_filename, ".txz")) {
+			new_name[l - 2] = 'a';
+			new_name[l - 1] = 'r';
+		}
+		else if (file_extension_is (e_filename, ".tar.xz"))
 			new_name[l - 3] = 0;
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar")) {
