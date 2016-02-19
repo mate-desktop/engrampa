@@ -414,7 +414,7 @@ dlg_open_with (FrWindow *window,
 		if (app_names != NULL) {
 			GList *p;
 			for (p = app_names; p && !found; p = p->next)
-				if (strcmp ((char*)p->data, g_app_info_get_executable (app)) == 0)
+				if (g_strcmp0 ((char*)p->data, g_app_info_get_executable (app)) == 0)
 					found = TRUE;
 		}
 
