@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Edward Sawyer <saoded@gmail.com>, 2016
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2003, 2004
 # Gil Osher <dolfin@rpg.org.il>, 2004
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-11 21:26+0200\n"
-"PO-Revision-Date: 2015-09-11 19:26+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"POT-Creation-Date: 2015-12-12 22:13+0300\n"
+"PO-Revision-Date: 2016-02-08 15:26+0000\n"
+"Last-Translator: Edward Sawyer <saoded@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/mate/MATE/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 #: ../copy-n-paste/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr "File is not a valid .desktop file"
+msgstr "הקובץ אינו קובץ .desktop תקין"
 
 #: ../copy-n-paste/eggdesktopfile.c:190
 #, c-format
@@ -408,28 +409,28 @@ msgstr ""
 msgid "The default size for volumes."
 msgstr ""
 
-#: ../caja/caja-engrampa.c:331
+#: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
 msgstr "חילוץ לכאן"
 
 #. Translators: the current position is the current folder
-#: ../caja/caja-engrampa.c:333
+#: ../caja/caja-engrampa.c:337
 msgid "Extract the selected archive to the current position"
 msgstr "חילוץ הארכיון הנבחר במיקום הנוכחי"
 
-#: ../caja/caja-engrampa.c:350
+#: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
 msgstr "_חילוץ אל..."
 
-#: ../caja/caja-engrampa.c:351
+#: ../caja/caja-engrampa.c:355
 msgid "Extract the selected archive"
 msgstr "חילוץ הארכיון הנבחר"
 
-#: ../caja/caja-engrampa.c:370
+#: ../caja/caja-engrampa.c:374
 msgid "Compress..."
 msgstr "דחיסה..."
 
-#: ../caja/caja-engrampa.c:371
+#: ../caja/caja-engrampa.c:375
 msgid "Create a compressed archive with the selected objects"
 msgstr "יצירת ארכיון דחוס עם הפריטים הנבחרים"
 
@@ -479,7 +480,7 @@ msgstr "כל הארכיונים"
 msgid "All files"
 msgstr "כל הקבצים"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7296
+#: ../src/actions.c:794 ../src/fr-window.c:7300
 msgid "Last Output"
 msgstr "פלט אחרון"
 
@@ -599,7 +600,7 @@ msgid ""
 "%s"
 msgstr "השם \"%s\" לא תקני כי הוא כולל את התווים: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7647 ../src/fr-window.c:7649
+#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
 msgid "Please use a different name."
 msgstr "נא להשתמש בשם אחר."
 
@@ -609,7 +610,7 @@ msgid ""
 " folder."
 msgstr "אין לך הרשאות ליצור ארכיון בתיקיית היעד."
 
-#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6868
+#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -617,11 +618,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "תיקיית היעד \"%s\" אינה קיימת.\n\nהאם ברצונך ליצור אותה?"
 
-#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6877
+#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
 msgid "Create _Folder"
 msgstr "יצירת _תיקייה"
 
-#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6894
+#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "לא ניתן ליצור את תיקיית היעד: %s."
@@ -639,8 +640,8 @@ msgid "_Overwrite"
 msgstr "ה_חלפה"
 
 #: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
-#: ../src/fr-window.c:4235 ../src/fr-window.c:6898 ../src/fr-window.c:6917
-#: ../src/fr-window.c:6922
+#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
+#: ../src/fr-window.c:6926
 msgid "Extraction not performed"
 msgstr "החילוץ לא התבצע"
 
@@ -1065,12 +1066,9 @@ msgstr "ה_צגת הקבצים"
 #: ../src/fr-window.c:2696
 #, c-format
 msgid "%d file remaining"
-msgstr ""
-
-#: ../src/fr-window.c:2697
-#, c-format
-msgid "%'d files remaining"
-msgstr ""
+msgid_plural "%'d files remaining"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/fr-window.c:2746
 msgid "Extraction completed successfully"
@@ -1129,8 +1127,8 @@ msgstr "פקודה לא נמצאה."
 msgid "Test Result"
 msgstr "תוצאות בדיקה"
 
-#: ../src/fr-window.c:4078 ../src/fr-window.c:8199 ../src/fr-window.c:8239
-#: ../src/fr-window.c:8493
+#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
+#: ../src/fr-window.c:8497
 msgid "Could not perform the operation"
 msgstr "לא ניתן לבצע את הפעולה"
 
@@ -1199,50 +1197,50 @@ msgstr "פתיחת ארכיון שהיה בשימוש לאחרונה"
 msgid "Could not save the archive \"%s\""
 msgstr "לא ניתן לשמור את הארכיון \"%s\""
 
-#: ../src/fr-window.c:6777
+#: ../src/fr-window.c:6779
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: ../src/fr-window.c:6780
+#: ../src/fr-window.c:6782
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6787
+#: ../src/fr-window.c:6789
 msgid "Replace _All"
 msgstr ""
 
-#: ../src/fr-window.c:6788
+#: ../src/fr-window.c:6790
 msgid "_Skip"
 msgstr ""
 
-#: ../src/fr-window.c:6789
+#: ../src/fr-window.c:6791
 msgid "_Replace"
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7601
+#: ../src/fr-window.c:7605
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7606
+#: ../src/fr-window.c:7610
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7611
+#: ../src/fr-window.c:7615
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7647
+#: ../src/fr-window.c:7651
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1250,7 +1248,7 @@ msgid ""
 "%s"
 msgstr "תיקייה בשם \"%s\" כבר קיימת.\n\n%s"
 
-#: ../src/fr-window.c:7649
+#: ../src/fr-window.c:7653
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1258,43 +1256,43 @@ msgid ""
 "%s"
 msgstr "קובץ בשם \"%s\" כבר קיים.\n\n%s"
 
-#: ../src/fr-window.c:7719
+#: ../src/fr-window.c:7723
 msgid "Rename"
 msgstr "שינוי שם"
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7728
 msgid "_Rename"
 msgstr "_שינוי שם"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the folder"
 msgstr "לא ניתן לשנות את שם התיקייה"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the file"
 msgstr "לא ניתן לשנות את שם הקובץ"
 
-#: ../src/fr-window.c:8160
+#: ../src/fr-window.c:8164
 msgid "Paste Selection"
 msgstr "הדבקת הבחירה"
 
-#: ../src/fr-window.c:8161
+#: ../src/fr-window.c:8165
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8772
+#: ../src/fr-window.c:8776
 msgid "Add files to an archive"
 msgstr "הוספת קבצים לארכיון"
 
-#: ../src/fr-window.c:8815 ../src/main.c:188 ../src/server.c:329
+#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "חילוץ ארכיון"

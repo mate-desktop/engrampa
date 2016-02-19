@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-11 21:26+0200\n"
-"PO-Revision-Date: 2015-10-25 17:52+0000\n"
-"Last-Translator: Stanislav Kučera <kacernator@quick.cz>\n"
+"POT-Creation-Date: 2015-12-12 22:13+0300\n"
+"PO-Revision-Date: 2016-02-15 10:10+0000\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -417,28 +417,28 @@ msgstr "Výchozí velikost svazku"
 msgid "The default size for volumes."
 msgstr "Výchozí velikost svazků"
 
-#: ../caja/caja-engrampa.c:331
+#: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
 msgstr "Rozbalit sem"
 
 #. Translators: the current position is the current folder
-#: ../caja/caja-engrampa.c:333
+#: ../caja/caja-engrampa.c:337
 msgid "Extract the selected archive to the current position"
 msgstr "Rozbalit vybraný archiv v aktuálním umístění"
 
-#: ../caja/caja-engrampa.c:350
+#: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
 msgstr "Rozbalit do…"
 
-#: ../caja/caja-engrampa.c:351
+#: ../caja/caja-engrampa.c:355
 msgid "Extract the selected archive"
 msgstr "Rozbalit vybraný archiv"
 
-#: ../caja/caja-engrampa.c:370
+#: ../caja/caja-engrampa.c:374
 msgid "Compress..."
 msgstr "Komprimovat…"
 
-#: ../caja/caja-engrampa.c:371
+#: ../caja/caja-engrampa.c:375
 msgid "Create a compressed archive with the selected objects"
 msgstr "Vytvořit komprimovaný archiv s vybranými objekty"
 
@@ -488,7 +488,7 @@ msgstr "Všechny archivy"
 msgid "All files"
 msgstr "Všechny soubory"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7296
+#: ../src/actions.c:794 ../src/fr-window.c:7300
 msgid "Last Output"
 msgstr "Poslední výstup"
 
@@ -608,7 +608,7 @@ msgid ""
 "%s"
 msgstr "Název „%s“ není platný, protože nesmí obsahovat znaky: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7647 ../src/fr-window.c:7649
+#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
 msgid "Please use a different name."
 msgstr "Použijte prosím jiný název."
 
@@ -618,7 +618,7 @@ msgid ""
 " folder."
 msgstr "Nemáte oprávnění potřebná pro vytvoření archivu v cílové složce."
 
-#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6868
+#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -626,11 +626,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "Cílová složka „%s“ neexistuje.\n\nChcete ji vytvořit?"
 
-#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6877
+#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
 msgid "Create _Folder"
 msgstr "Vytvořit _složku"
 
-#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6894
+#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nelze vytvořit cílovou složku: %s."
@@ -648,8 +648,8 @@ msgid "_Overwrite"
 msgstr "_Přepsat"
 
 #: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
-#: ../src/fr-window.c:4235 ../src/fr-window.c:6898 ../src/fr-window.c:6917
-#: ../src/fr-window.c:6922
+#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
+#: ../src/fr-window.c:6926
 msgid "Extraction not performed"
 msgstr "Rozbalení nebylo provedeno"
 
@@ -1076,12 +1076,10 @@ msgstr "Zobrazit _soubory"
 #: ../src/fr-window.c:2696
 #, c-format
 msgid "%d file remaining"
-msgstr "Zbývá %d souborů"
-
-#: ../src/fr-window.c:2697
-#, c-format
-msgid "%'d files remaining"
-msgstr "Zbývá %'d souborů"
+msgid_plural "%'d files remaining"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: ../src/fr-window.c:2746
 msgid "Extraction completed successfully"
@@ -1140,8 +1138,8 @@ msgstr "Příkaz nenalezen."
 msgid "Test Result"
 msgstr "Výsledek testu"
 
-#: ../src/fr-window.c:4078 ../src/fr-window.c:8199 ../src/fr-window.c:8239
-#: ../src/fr-window.c:8493
+#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
+#: ../src/fr-window.c:8497
 msgid "Could not perform the operation"
 msgstr "Nelze provést operaci"
 
@@ -1210,50 +1208,50 @@ msgstr "Otevřít nedávno použitý archiv"
 msgid "Could not save the archive \"%s\""
 msgstr "Nelze uložit archiv „%s“"
 
-#: ../src/fr-window.c:6777
+#: ../src/fr-window.c:6779
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "Nahradit soubor \"%s\"?"
 
-#: ../src/fr-window.c:6780
+#: ../src/fr-window.c:6782
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "Jiný soubor se stejným názvem již existuje v \"%s\"."
 
-#: ../src/fr-window.c:6787
+#: ../src/fr-window.c:6789
 msgid "Replace _All"
 msgstr "Nahradit _vše"
 
-#: ../src/fr-window.c:6788
+#: ../src/fr-window.c:6790
 msgid "_Skip"
 msgstr "_Přeskočit"
 
-#: ../src/fr-window.c:6789
+#: ../src/fr-window.c:6791
 msgid "_Replace"
 msgstr "_Nahradit"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7601
+#: ../src/fr-window.c:7605
 msgid "New name is void, please type a name."
 msgstr "Nový název je neplatný, zadejte prosím název."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7606
+#: ../src/fr-window.c:7610
 msgid "New name is the same as old one, please type other name."
 msgstr "Název je stejný jako starší název, zadejte prosím jiný název."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7611
+#: ../src/fr-window.c:7615
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "Název \"%s\" není platný, protože obsahuje alespoň jeden z následujících znaků: %s, zadejte prosím jiný název."
 
-#: ../src/fr-window.c:7647
+#: ../src/fr-window.c:7651
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1261,7 +1259,7 @@ msgid ""
 "%s"
 msgstr "Složka nazvaná „%s“ již existuje.\n\n%s"
 
-#: ../src/fr-window.c:7649
+#: ../src/fr-window.c:7653
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1269,43 +1267,43 @@ msgid ""
 "%s"
 msgstr "Soubor nazvaný „%s“ již existuje.\n\n%s"
 
-#: ../src/fr-window.c:7719
+#: ../src/fr-window.c:7723
 msgid "Rename"
 msgstr "Přejmenovat"
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New folder name:"
 msgstr "_Nový název složky:"
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New file name:"
 msgstr "_Nový název souboru:"
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7728
 msgid "_Rename"
 msgstr "Pře_jmenovat"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the folder"
 msgstr "Nelze přejmenovat složku"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the file"
 msgstr "Nelze přejmenovat soubor"
 
-#: ../src/fr-window.c:8160
+#: ../src/fr-window.c:8164
 msgid "Paste Selection"
 msgstr "Vložit výběr"
 
-#: ../src/fr-window.c:8161
+#: ../src/fr-window.c:8165
 msgid "_Destination folder:"
 msgstr "_Umístění složky:"
 
-#: ../src/fr-window.c:8772
+#: ../src/fr-window.c:8776
 msgid "Add files to an archive"
 msgstr "Přidat soubory do archivu"
 
-#: ../src/fr-window.c:8815 ../src/main.c:188 ../src/server.c:329
+#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "Rozbalit archiv"
