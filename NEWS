@@ -1,16 +1,16 @@
-1.13.1
+1.14.0
 ------
 
-  * "open with" dialog: fix random crash
-  * rar: avoid "No files to extract"
-  * tar: allow changing contents of .txz files (like with .tar.xz)
-  * The char '?' needs to be escaped
-
-1.13.0
-------
-
-  * some fixes for latest p7zip
-  * drop MateConf migration script
+  * Drop MateConf migration script
+  * Fix random crash in "open with" dialog
+  * 7z: avoid problems with '?' char in filenames
+  * 7z: correct checking for p7zip 15.09+
+  * rar: avoid "No files to extract" message when disabling overwriting
+    existing files
+  * tar: allow changing contents of .txz files (like it's allowed for
+    .tar.xz files)
+  * unar: avoid problems with '?' char in filenames
+  * Translations update
 
 1.12.0
 ------
