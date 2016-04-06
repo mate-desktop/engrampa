@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Allan Nordhøy <epost@anotheragency.no>, 2016
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2016
 # Lars Alvik <lalvik@hotmail.com>, 2002
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-12 22:13+0300\n"
-"PO-Revision-Date: 2016-02-10 20:00+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
+"PO-Revision-Date: 2016-03-25 17:16+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,7 +85,7 @@ msgstr "Vis alternativer for sesjonshåndtering"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr ""
+msgstr "Et arkivprogram for skrivebordsmiljøet MATE"
 
 #: ../data/engrampa.appdata.xml.in.h:2
 msgid ""
@@ -110,11 +112,11 @@ msgid ""
 "lzop, rzip, xz</li> </ul> <p> Engrampa is a fork of File Roller and part of "
 "the MATE Desktop Environment. If you would like to know more about MATE and "
 "Engrampa, please visit the project's home page. </p>"
-msgstr ""
+msgstr "<p> Engrampa er et arkivprogram for skrivebordsmiljøet MATE. Det muliggjør opprettelse og endring av arkiver, se innholdet i et arkiv, se en fil direkte fra et arkiv og pakke ut filer fra arkivet. </p> <p> Engrampa er kun en brukerflate (et grafisk grensesnitt) til arkiveringsprogrammer som tar eller zip. De støttede filtypene er: </p> <ul> <li>7-Zip Compressed File (.7z)</li> <li>WinAce Compressed File (.ace)</li> <li>ALZip Compressed File (.alz)</li> <li>AIX Small Indexed Archive (.ar)</li> <li>ARJ Compressed Archive (.arj)</li> <li>Cabinet File (.cab)</li> <li>UNIX CPIO Archive (.cpio)</li> <li>Debian Linux Package (.deb) [skrivebeskyttet tilstand]</li> <li>ISO-9660 CD Disc Image (.iso) [skrivebeskyttet tilstand]</li> <li>Java Archive (.jar)</li> <li>Java Enterprise archive (.ear)</li> <li>Java Web Archive (.war)</li> <li>LHA Archive (.lzh, .lha)</li> <li>WinRAR Compressed Archive (.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>RPM Linux Package (.rpm) [skrivebeskyttet tilstand]</li> <li>Tape Archive File ukomprimeret (.tar) eller komprimeret med: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> <li>Stuffit Archives (.bin, .sit)</li> <li>ZIP Archive (.zip)</li> <li>ZIP Archived Comic Book (.cbz)</li> <li>ZOO Compressed Archive File (.zoo)</li> <li>Enslige filer komprimert med gzip, bzip, bzip2, compress, lrzip, lzip, lzop, rzip, xz</li> </ul> <p> Engrampa er en forgrening av File Roller og en del av skrivebordsmiljøet MATE. Hvis du ønsker at vite mer om MATE og Engrampa, besøk prosjektets hjemmeside. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
-msgstr ""
+msgstr "Engrampa arkiv håndterer"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1995
 #: ../src/fr-window.c:5479
@@ -216,7 +218,7 @@ msgstr "Passord"
 
 #: ../data/ui/password.ui.h:2
 msgid "_Encrypt the file list"
-msgstr ""
+msgstr "_Krypter fillisten"
 
 #: ../data/ui/password.ui.h:4
 msgid ""
@@ -247,107 +249,107 @@ msgstr "V_elg filene du ønsker å oppdatere:"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
-msgstr ""
+msgstr "Hvordan sortere filer"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:2
 msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
-msgstr ""
+msgstr "Hvilket kritere skal filer arrangeres etter. Mulig verdier er: name, size, type, time og path."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:3
 msgid "Sort type"
-msgstr ""
+msgstr "Sorteringstype"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:4
 msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
-msgstr ""
+msgstr "Hvorvidt det skal sorteres i stigende eller fallende retning. Mulige verdier: 'ascending', 'descending'."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:5
 msgid "List Mode"
-msgstr ""
+msgstr "Listemodus"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:6
 msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
-msgstr ""
+msgstr "Hvorvidt alle filer skal vises i arkivet (all_files), eller arkivet vises som ei mappe (as_folder)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:7
 msgid "Display type"
-msgstr ""
+msgstr "Vis type"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:8
 msgid "Display the Type column in the main window."
-msgstr ""
+msgstr "Vis typekolonne i hovedvinduet"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:9
 msgid "Display size"
-msgstr ""
+msgstr "Vis størrelse"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:10
 msgid "Display the Size column in the main window."
-msgstr ""
+msgstr "Vis størrelsesminiatyrbilder i hovedvinduet."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:11
 msgid "Display time"
-msgstr ""
+msgstr "Vis tid"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:12
 msgid "Display the Time column in the main window."
-msgstr ""
+msgstr "Vis tidskolonne i hovedvinduet."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:13
 msgid "Display path"
-msgstr ""
+msgstr "Vis sti"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:14
 msgid "Display the Path column in the main window."
-msgstr ""
+msgstr "Vis stikolonnen i hovedvinduet."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:15
 msgid "Use mime icons"
-msgstr ""
+msgstr "Bruk MIME-miniatyrbilder"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:16
 msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
-msgstr ""
+msgstr "Hvis SANT vises miniatyrbilder avhengig av filtypen (tregere), ellers brukes samme miniatyrbilde for alle filer (hurtigere)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:17
 msgid "Name column width"
-msgstr ""
+msgstr "Bredde på navnekolonne"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:18
 msgid "The default width of the name column in the file list."
-msgstr ""
+msgstr "Standardbredde for navnekolonne i fillisten."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:19
 msgid "Max history length"
-msgstr ""
+msgstr "Maks. historikklengde"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:20
 msgid "Max number of items in the Open Recents menu."
-msgstr ""
+msgstr "Maksimalt antall poster i menyen 'sist åpnet'."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:21
 msgid "View toolbar"
-msgstr ""
+msgstr "Vis verktøylinjen"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:22
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "Hvorvidt verktøyslinjen skal vises."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:23
 msgid "View statusbar"
-msgstr ""
+msgstr "Vis statuslinje"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:24
 msgid "Whether to display the statusbar."
-msgstr ""
+msgstr "Hvorvidt statuslinjen skal vises."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:25 ../src/ui.h:234
 msgid "View the folders pane"
@@ -355,57 +357,57 @@ msgstr "Vis mappelinjen"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:26
 msgid "Whether to display the folders pane."
-msgstr ""
+msgstr "Hvorvidt mappepanelet skal vises."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:27
 msgid "Editors"
-msgstr ""
+msgstr "Redigeringsprogrammer"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:28
 msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
-msgstr ""
+msgstr "Liste over programmer skrevet inn i Åpne fil-dialogen og ikke er assosiert med filtypen."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:29
 msgid "Compression level"
-msgstr ""
+msgstr "Komprimeringsnivå"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:30
 msgid ""
 "Compression level used when adding files to an archive. Possible values : "
 "very_fast, fast, normal, maximum."
-msgstr ""
+msgstr "Komprimeringsnivå brukt når filer tilføyes et arkiv. Mulige verdier er: 'very_fast', 'fast', 'normal' og 'maximum'."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:31
 msgid "Encrypt the archive header"
-msgstr ""
+msgstr "Krypter arkivhodet"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:32
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
-msgstr ""
+msgstr "Hvorvbidt arkivhodet skal krypteres. Hvis hodet er kryptert vil passord også kreves for å liste opp arkivinnholdet."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Overwrite existing files"
-msgstr ""
+msgstr "Overskriv eksisterende filer"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "Do not overwrite newer files"
-msgstr ""
+msgstr "Ikke overskriv nyere filer"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Recreate the folders stored in the archive"
-msgstr ""
+msgstr "Gjenopprett mappene lagret i arkivet"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:36
 msgid "Default volume size"
-msgstr ""
+msgstr "Standardstørrelse for diskenhet"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
 msgid "The default size for volumes."
-msgstr ""
+msgstr "Standardstørrelse for diskenheter."
 
 #: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
@@ -418,7 +420,7 @@ msgstr "Pakk ut valgt arkiv i denne lokasjonen"
 
 #: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
-msgstr "Pakk ut til..."
+msgstr "Pakk ut til …"
 
 #: ../caja/caja-engrampa.c:355
 msgid "Extract the selected archive"
@@ -426,7 +428,7 @@ msgstr "Pakk ut valgt arkiv"
 
 #: ../caja/caja-engrampa.c:374
 msgid "Compress..."
-msgstr "Komprimer..."
+msgstr "Komprimer …"
 
 #: ../caja/caja-engrampa.c:375
 msgid "Create a compressed archive with the selected objects"
@@ -439,7 +441,7 @@ msgstr "Arkivhåndtering"
 
 #: ../caja/libcaja-engrampa.caja-extension.in.in.h:2
 msgid "Allows to create and extract archives"
-msgstr ""
+msgstr "Tillater opprettelse og utpakking av arkiv"
 
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:160 ../src/dlg-batch-add.c:176
@@ -515,7 +517,7 @@ msgstr "En arkiverer for MATE."
 
 #: ../src/actions.c:882
 msgid "translator-credits"
-msgstr "Lars Alvik <lalvik@hotmail.com>\nKjartan Maraas <kmaraas@gnome.org>"
+msgstr "Lars Alvik <lalvik@hotmail.com>\nKjartan Maraas <kmaraas@gnome.org>\nEspen Stefansen <libbe AT stefansen DOT net>\nAllan Nordhøy <epost@anotheragency.no>"
 
 #: ../src/dlg-add-files.c:107 ../src/dlg-add-folder.c:141
 msgid "Could not add the files to the archive"
@@ -583,7 +585,7 @@ msgstr "Alternativer for lagring"
 
 #: ../src/dlg-add-folder.c:896
 msgid "_Options Name:"
-msgstr ""
+msgstr "_Innstillingsnavn:"
 
 #: ../src/dlg-ask-password.c:124
 #, c-format
@@ -716,7 +718,7 @@ msgstr "Egenskaper for %s"
 
 #: ../src/dlg-prop.c:135
 msgid "Last modified:"
-msgstr ""
+msgstr "Sist endret:"
 
 #: ../src/dlg-prop.c:145
 msgid "Archive size:"
@@ -788,7 +790,7 @@ msgstr "Filen ble ikke funnet."
 #: ../src/fr-archive.c:1246
 #, c-format
 msgid "Archive not found"
-msgstr ""
+msgstr "Arkiv ikke funnet"
 
 #: ../src/fr-archive.c:2444
 msgid "You don't have the right permissions."
@@ -918,7 +920,7 @@ msgstr "Tar pakket med lzop (.tar.lzo)"
 
 #: ../src/fr-init.c:92
 msgid "Windows Imaging Format (.wim)"
-msgstr ""
+msgstr "Windows Imaging Format (.wim)"
 
 #: ../src/fr-init.c:93
 msgid "Rar (.rar)"
@@ -995,31 +997,31 @@ msgstr "Kunne ikke vise mappe «%s»"
 #: ../src/fr-window.c:2329 ../src/fr-window.c:2367
 #, c-format
 msgid "Creating \"%s\""
-msgstr ""
+msgstr "Oppretter \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2333
 #, c-format
 msgid "Loading \"%s\""
-msgstr ""
+msgstr "Laster \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2337
 #, c-format
 msgid "Reading \"%s\""
-msgstr ""
+msgstr "Leser \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2341
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr ""
+msgstr "Sletter filer fra \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2345
 #, c-format
 msgid "Testing \"%s\""
-msgstr ""
+msgstr "Tester \"%s\""
 
 #: ../src/fr-window.c:2348
 msgid "Getting the file list"
@@ -1029,29 +1031,29 @@ msgstr "Henter fillisten"
 #: ../src/fr-window.c:2352
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr ""
+msgstr "Kopierer filene som skal legges til \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2356
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr ""
+msgstr "Legger til filer til \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2360
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr ""
+msgstr "Pakker ut filer fra \"%s\""
 
 #: ../src/fr-window.c:2363
 msgid "Copying the extracted files to the destination"
-msgstr ""
+msgstr "Kopier de utpakkede filene til målet"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2371
 #, c-format
 msgid "Saving \"%s\""
-msgstr ""
+msgstr "Lagrer \"%s\""
 
 #: ../src/fr-window.c:2518
 msgid "_Open the Archive"
@@ -1065,8 +1067,8 @@ msgstr "Vi_s filene"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d fil gjenstår"
+msgstr[1] "%'d filer gjenstår"
 
 #: ../src/fr-window.c:2746
 msgid "Extraction completed successfully"
@@ -1078,7 +1080,7 @@ msgstr "Oppretting av arkiv fullført"
 
 #: ../src/fr-window.c:2827
 msgid "Please wait…"
-msgstr ""
+msgstr "Vennligst vent..."
 
 #: ../src/fr-window.c:2896 ../src/fr-window.c:3031
 msgid "Command exited abnormally."
@@ -1198,36 +1200,36 @@ msgstr "Kunne ikke lagre arkivet «%s»"
 #: ../src/fr-window.c:6779
 #, c-format
 msgid "Replace file \"%s\"?"
-msgstr ""
+msgstr "Erstatt filen '%s'?"
 
 #: ../src/fr-window.c:6782
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
-msgstr ""
+msgstr "En annen fil med samme navn finnes allerede i '%s'."
 
 #: ../src/fr-window.c:6789
 msgid "Replace _All"
-msgstr ""
+msgstr "Erstatt _alle"
 
 #: ../src/fr-window.c:6790
 msgid "_Skip"
-msgstr ""
+msgstr "_Hopp over"
 
 #: ../src/fr-window.c:6791
 msgid "_Replace"
-msgstr ""
+msgstr "_Erstatt"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7605
 msgid "New name is void, please type a name."
-msgstr ""
+msgstr "Nytt navn ugyldig, velg et annet."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7610
 msgid "New name is the same as old one, please type other name."
-msgstr ""
+msgstr "Nytt navn er identisk med gammelt, velg et nytt."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
@@ -1236,7 +1238,7 @@ msgstr ""
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
-msgstr ""
+msgstr "Navnet '%s' er ikke gyldig fordi det inneholder minst ett av følgende tegn: %s, velg et annet navn."
 
 #: ../src/fr-window.c:7651
 #, c-format
@@ -1260,11 +1262,11 @@ msgstr "Endre navn"
 
 #: ../src/fr-window.c:7724
 msgid "_New folder name:"
-msgstr ""
+msgstr "_Nytt mappenavn:"
 
 #: ../src/fr-window.c:7724
 msgid "_New file name:"
-msgstr ""
+msgstr "_Nytt filnavn:"
 
 #: ../src/fr-window.c:7728
 msgid "_Rename"
@@ -1284,7 +1286,7 @@ msgstr "Lim inn utvalget"
 
 #: ../src/fr-window.c:8165
 msgid "_Destination folder:"
-msgstr ""
+msgstr "_Målmappe:"
 
 #: ../src/fr-window.c:8776
 msgid "Add files to an archive"
@@ -1379,7 +1381,7 @@ msgstr "Informasjon om programet"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
-msgstr ""
+msgstr "_Legg til filter…"
 
 #: ../src/ui.h:44 ../src/ui.h:48
 msgid "Add files to the archive"
@@ -1387,7 +1389,7 @@ msgstr "Legg til filer til arkivet"
 
 #: ../src/ui.h:51
 msgid "Add a _Folder…"
-msgstr ""
+msgstr "Legg til en _mappe…"
 
 #: ../src/ui.h:52 ../src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1423,7 +1425,7 @@ msgstr "Lim inn fra utklippstavlen"
 
 #: ../src/ui.h:80 ../src/ui.h:101
 msgid "_Rename…"
-msgstr ""
+msgstr "_Gi nytt navn…"
 
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
@@ -1443,7 +1445,7 @@ msgstr "Velg bort alle filer"
 
 #: ../src/ui.h:114 ../src/ui.h:118
 msgid "_Extract…"
-msgstr ""
+msgstr "_Pakk ut…"
 
 #: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
 msgid "Extract files from the archive"
@@ -1451,7 +1453,7 @@ msgstr "Pakk ut filer fra arkivet"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr ""
+msgstr "Finn..."
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1463,7 +1465,7 @@ msgstr "Vis utdata fra sist kjørte kommando"
 
 #: ../src/ui.h:135
 msgid "New…"
-msgstr ""
+msgstr "Ny..."
 
 #: ../src/ui.h:136
 msgid "Create a new archive"
@@ -1471,7 +1473,7 @@ msgstr "Lag et nytt arkiv"
 
 #: ../src/ui.h:139
 msgid "Open…"
-msgstr ""
+msgstr "Åpne..."
 
 #: ../src/ui.h:140 ../src/ui.h:144
 msgid "Open archive"
@@ -1479,7 +1481,7 @@ msgstr "Åpne arkiv"
 
 #: ../src/ui.h:147
 msgid "_Open With…"
-msgstr ""
+msgstr "_Åpne med…"
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
@@ -1487,7 +1489,7 @@ msgstr "Åpne valgte filer i et program"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"
-msgstr ""
+msgstr "Adgangs_kode…"
 
 #: ../src/ui.h:152
 msgid "Specify a password for this archive"
@@ -1503,7 +1505,7 @@ msgstr "Gjenles dette arkivet"
 
 #: ../src/ui.h:163
 msgid "Save As…"
-msgstr ""
+msgstr "Lagre som..."
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"

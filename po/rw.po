@@ -1,1239 +1,1250 @@
-# translation of engrampa to Kinyarwanda.
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the engrampa package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005
+# Carole Karema <karemacarole@hotmail.com>, 2005
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005
 # Steve Murphy <murf@e-tools.com>, 2005
-# Steve performed initial rough translation from compendium built from translations provided by the following translators:
-# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
-# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
-# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
-# Carole Karema <karemacarole@hotmail.com>, 2005.
-# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
-# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
-# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
-#
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 2.12\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-08-27 22:29+0200\n"
-"PO-Revision-Date: 2005-03-28 19:34-0700\n"
-"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
-"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2015-12-12 22:13+0300\n"
+"PO-Revision-Date: 2015-12-12 19:23+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
+"Language-Team: Kinyarwanda (http://www.transifex.com/mate/MATE/language/rw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: rw\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../component/Engrampa_Component.server.in.in.h:1
-#: ../caja/caja-engrampa.c:297
-msgid "Create Archive..."
+#: ../copy-n-paste/eggdesktopfile.c:165
+#, c-format
+msgid "File is not a valid .desktop file"
 msgstr ""
 
-#: ../component/Engrampa_Component.server.in.in.h:2
-#: ../caja/caja-engrampa.c:259
-msgid "Extract Here"
+#: ../copy-n-paste/eggdesktopfile.c:190
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
 msgstr ""
 
-#: ../component/Engrampa_Component.server.in.in.h:3
-#, fuzzy
-msgid "Engrampa Component add operations"
-msgstr "Idosiye Kongeramo Ibikorwa:"
+#: ../copy-n-paste/eggdesktopfile.c:959
+#, c-format
+msgid "Starting %s"
+msgstr ""
 
-#: ../component/Engrampa_Component.server.in.in.h:4
-#, fuzzy
-msgid "Engrampa Component extract operations"
-msgstr "Idosiye Ibikorwa:"
+#: ../copy-n-paste/eggdesktopfile.c:1100
+#, c-format
+msgid "Application does not accept documents on command line"
+msgstr ""
 
-#: ../component/Engrampa_Component.server.in.in.h:5
-#, fuzzy
-msgid "Engrampa component"
-msgstr "Idosiye"
+#: ../copy-n-paste/eggdesktopfile.c:1168
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
 
-#: ../data/glade/engrampa.glade.h:1
-#, fuzzy
+#: ../copy-n-paste/eggdesktopfile.c:1367
+#, c-format
+msgid "Can't pass documents to this desktop element"
+msgstr ""
+
+#: ../copy-n-paste/eggdesktopfile.c:1386
+#, c-format
+msgid "Not a launchable item"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:225
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:228
+msgid "FILE"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "Specify session management ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:231
+msgid "ID"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:252
+msgid "Session management options:"
+msgstr ""
+
+#: ../copy-n-paste/eggsmclient.c:253
+msgid "Show session management options"
+msgstr ""
+
+#: ../data/engrampa.appdata.xml.in.h:1
+msgid "An Archive Manager for the MATE desktop environment"
+msgstr ""
+
+#: ../data/engrampa.appdata.xml.in.h:2
+msgid ""
+"<p> Engrampa is an archive manager for the MATE environment. It allows you "
+"to create and modify archives, view the contents of an archive, view a file "
+"contained in an archive, and extract files from archive. </p> <p> Engrampa "
+"is only a front-end (a graphical interface) to archiving programs like tar "
+"and zip. The supported file types are: </p> <ul> <li>7-Zip Compressed File "
+"(.7z)</li> <li>WinAce Compressed File (.ace)</li> <li>ALZip Compressed File "
+"(.alz)</li> <li>AIX Small Indexed Archive (.ar)</li> <li>ARJ Compressed "
+"Archive (.arj)</li> <li>Cabinet File (.cab)</li> <li>UNIX CPIO Archive "
+"(.cpio)</li> <li>Debian Linux Package (.deb) [Read-only mode]</li> "
+"<li>ISO-9660 CD Disc Image (.iso) [Read-only mode]</li> <li>Java Archive "
+"(.jar)</li> <li>Java Enterprise archive (.ear)</li> <li>Java Web Archive "
+"(.war)</li> <li>LHA Archive (.lzh, .lha)</li> <li>WinRAR Compressed Archive "
+"(.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>RPM Linux Package "
+"(.rpm) [Read-only mode]</li> <li>Tape Archive File uncompressed (.tar) or "
+"compressed with: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 "
+"(.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip "
+"(.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> "
+"<li>Stuffit Archives (.bin, .sit)</li> <li>ZIP Archive (.zip)</li> <li>ZIP "
+"Archived Comic Book (.cbz)</li> <li>ZOO Compressed Archive File (.zoo)</li> "
+"<li>Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip, "
+"lzop, rzip, xz</li> </ul> <p> Engrampa is a fork of File Roller and part of "
+"the MATE Desktop Environment. If you would like to know more about MATE and "
+"Engrampa, please visit the project's home page. </p>"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:1
+msgid "Engrampa Archive Manager"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1995
+#: ../src/fr-window.c:5479
+msgid "Archive Manager"
+msgstr ""
+
+#: ../data/engrampa.desktop.in.in.h:3
+msgid "Create and modify an archive"
+msgstr ""
+
+#: ../data/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+msgid "Compress"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:2
+msgid "_Filename:"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+msgid "_Location:"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "Ahantu"
+
+#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
+#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+msgid "_Password:"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr ""
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr ""
+
+#. MB means megabytes
+#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+msgid "MB"
+msgstr ""
+
+#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+msgid "_Other Options"
+msgstr ""
+
+#: ../data/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr ""
+
+#: ../data/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "Gusiba"
+
+#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+msgid "_Files:"
+msgstr ""
+
+#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+msgid "example: *.txt; *.doc"
+msgstr ""
+
+#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+msgid "_All files"
+msgstr ""
+
+#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+msgid "_Selected files"
+msgstr ""
+
+#: ../data/ui/open-with.ui.h:1
+msgid "Open Files"
+msgstr ""
+
+#: ../data/ui/open-with.ui.h:2
+msgid "A_vailable application:"
+msgstr ""
+
+#: ../data/ui/open-with.ui.h:3
+msgid "R_ecent applications:"
+msgstr ""
+
+#: ../data/ui/open-with.ui.h:4
+msgid "_Application:"
+msgstr ""
+
+#: ../data/ui/password.ui.h:1
+msgid "Password"
+msgstr "Ijambobanga"
+
+#: ../data/ui/password.ui.h:2
+msgid "_Encrypt the file list"
+msgstr ""
+
+#: ../data/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
-"<i B B Ijambobanga... Kuri Shyiraho Umutekano Idosiye Kongeramo Kuri "
-"KIGEZWEHO Na Kuri Idosiye Bivuye KIGEZWEHO ni Ijambobanga... Cyasibwe i"
 
-#: ../data/glade/engrampa.glade.h:2
-#, fuzzy
-msgid "A_vailable application:"
-msgstr "Porogaramu"
+#. secondary text
+#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../data/glade/engrampa.glade.h:3
-#, fuzzy
-msgid "C_reate"
-msgstr "Kurema"
-
-#: ../data/glade/engrampa.glade.h:4
-msgid "Create Archive"
+#: ../data/ui/update.ui.h:2
+msgid "_Update"
 msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.SID_BASICIDE_DELETECURRENT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_DEL.text
-#: ../data/glade/engrampa.glade.h:5
-msgid "Delete"
-msgstr "Gusiba"
-
-#: ../data/glade/engrampa.glade.h:6
-msgid "Load Options"
+#: ../data/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
 msgstr ""
 
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Agenda.Elements.Location.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Fax.Save.AutoPath.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Memo.Save.AutoDocName.text
-#: ../data/glade/engrampa.glade.h:7 ../src/window.c:2727
-msgid "Location"
-msgstr "Ahantu"
-
-# padmin/source\padialog.src:RID_PADIALOG.RID_PA_TXT_LOCATION.text
-#. current location
-#: ../data/glade/engrampa.glade.h:8 ../src/window.c:3619
-msgid "Location:"
-msgstr "Intaho:"
-
-#: ../data/glade/engrampa.glade.h:9
-msgid "Open Files"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:1
+msgid "How to sort files"
 msgstr ""
 
-# desktop/source\app\ssodlg.src:DLG_SSOLOGIN.FT_PASSWORD.text
-#: ../data/glade/engrampa.glade.h:10
-msgid "Password"
-msgstr "Ijambobanga"
-
-#: ../data/glade/engrampa.glade.h:11
-#, fuzzy
-msgid "R_ecent applications:"
-msgstr "Porogaramu"
-
-# 146
-#: ../data/glade/engrampa.glade.h:12 ../src/dlg-extract.c:427
-#, fuzzy
-msgid "_All files"
-msgstr "amadosiye yose"
-
-# so3/src\svuidlg.src:MD_DDE_LINKEDIT.FT_DDE_APP.text
-#: ../data/glade/engrampa.glade.h:13
-#, fuzzy
-msgid "_Application:"
-msgstr "Porogaramu"
-
-#: ../data/glade/engrampa.glade.h:14
-msgid "_Archive:"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:2
+msgid ""
+"What criteria must be used to arrange files. Possible values: name, size, "
+"type, time, path."
 msgstr ""
 
-# scp/source\office\dir.lng:STR_DIR_DATEIEN.text
-#: ../data/glade/engrampa.glade.h:15 ../src/dlg-extract.c:413
-#, fuzzy
-msgid "_Files:"
-msgstr "Idosiye"
-
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_PASSWORD.text
-#: ../data/glade/engrampa.glade.h:16 ../src/dlg-extract.c:475
-#, fuzzy
-msgid "_Password:"
-msgstr "Ijambobanga..."
-
-#: ../data/glade/engrampa.glade.h:17 ../src/dlg-extract.c:434
-#, fuzzy
-msgid "_Selected files"
-msgstr "Idosiye"
-
-#: ../data/glade/engrampa.glade.h:18 ../src/dlg-extract.c:424
-#, fuzzy
-msgid "example: *.txt; *.doc"
-msgstr "Urugero. txt."
-
-#: ../data/glade/engrampa-extract.glade.h:1 ../src/window.c:5409
-#, fuzzy
-msgid "Destination folder"
-msgstr "Ububiko"
-
-#: ../data/glade/engrampa-extract.glade.h:2 ../src/ui.h:86
-msgid "Extract"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:3
+msgid "Sort type"
 msgstr ""
 
-#: ../data/glade/engrampa-extract.glade.h:3
-#, fuzzy
-msgid "Extract in _folder:"
-msgstr "IDOSIYE"
-
-#. Create the application.
-#: ../data/engrampa.desktop.in.h:1 ../src/gtk-utils.c:390 ../src/main.c:134
-#: ../src/window.c:846 ../src/window.c:1276 ../src/window.c:3319
-msgid "Archive Manager"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:4
+msgid ""
+"Whether to sort in ascending or descending direction. Possible values: "
+"ascending, descending."
 msgstr ""
 
-#: ../data/engrampa.desktop.in.h:2
-#, fuzzy
-msgid "Create and modify an archive"
-msgstr "Na Guhindura"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:5
+msgid "List Mode"
+msgstr ""
 
-#: ../caja/caja-engrampa.c:260
-#, fuzzy
-msgid "Extract the selected archive in the current position"
-msgstr "Byahiswemo in KIGEZWEHO Ibirindiro"
+#: ../data/org.mate.engrampa.gschema.xml.in.h:6
+msgid ""
+"Whether to view all files in the archive (all_files), or view the archive as"
+" a folder (as_folder)."
+msgstr ""
 
-#: ../caja/caja-engrampa.c:277
+#: ../data/org.mate.engrampa.gschema.xml.in.h:7
+msgid "Display type"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:8
+msgid "Display the Type column in the main window."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:9
+msgid "Display size"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:10
+msgid "Display the Size column in the main window."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:11
+msgid "Display time"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:12
+msgid "Display the Time column in the main window."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:13
+msgid "Display path"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:14
+msgid "Display the Path column in the main window."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:15
+msgid "Use mime icons"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:16
+msgid ""
+"if TRUE will display icons depending on the file type (slower), otherwise "
+"will use always the same icon for all files (faster)."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:17
+msgid "Name column width"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:18
+msgid "The default width of the name column in the file list."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:19
+msgid "Max history length"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:20
+msgid "Max number of items in the Open Recents menu."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:21
+msgid "View toolbar"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:22
+msgid "Whether to display the toolbar."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:23
+msgid "View statusbar"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:24
+msgid "Whether to display the statusbar."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:25 ../src/ui.h:234
+msgid "View the folders pane"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:26
+msgid "Whether to display the folders pane."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:27
+msgid "Editors"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:28
+msgid ""
+"List of applications entered in the Open file dialog and not associated with"
+" the file type."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:29
+msgid "Compression level"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:30
+msgid ""
+"Compression level used when adding files to an archive. Possible values : "
+"very_fast, fast, normal, maximum."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:31
+msgid "Encrypt the archive header"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:32
+msgid ""
+"Whether to encrypt the archive header. If the header is encrypted the "
+"password will be required to list the archive content as well."
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:33
+msgid "Overwrite existing files"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:34
+msgid "Do not overwrite newer files"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:35
+msgid "Recreate the folders stored in the archive"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:36
+msgid "Default volume size"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:37
+msgid "The default size for volumes."
+msgstr ""
+
+#: ../caja/caja-engrampa.c:335
+msgid "Extract Here"
+msgstr ""
+
+#. Translators: the current position is the current folder
+#: ../caja/caja-engrampa.c:337
+msgid "Extract the selected archive to the current position"
+msgstr ""
+
+#: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
 msgstr ""
 
-#: ../caja/caja-engrampa.c:278
-#, fuzzy
+#: ../caja/caja-engrampa.c:355
 msgid "Extract the selected archive"
-msgstr "Byahiswemo"
-
-#: ../caja/caja-engrampa.c:298
-#, fuzzy
-msgid "Create an archive with the selected objects"
-msgstr "Na: Byahiswemo Ibintu"
-
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Insert.Caption.Automatic.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Agenda.Save.AutoDocName.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Letter.Save.AutoDocName.text
-# #-#-#-#-#  officecfg.pot (Mate 2.12)  #-#-#-#-#
-# officecfg/registry\schema\org\openoffice\Office\Writer.xcs:....Wizard.Fax.Save.AutoDocName.text
-#: ../src/actions.c:112
-msgid "Automatic"
-msgstr "Kikoresha"
-
-#: ../src/actions.c:117
-msgid "Ar (.ar)"
 msgstr ""
 
-#: ../src/actions.c:129
-msgid "Arj (.arj)"
+#: ../caja/caja-engrampa.c:374
+msgid "Compress..."
 msgstr ""
 
-#: ../src/actions.c:158
-msgid "Ear (.ear)"
+#: ../caja/caja-engrampa.c:375
+msgid "Create a compressed archive with the selected objects"
 msgstr ""
 
-#: ../src/actions.c:171
-msgid "Jar (.jar)"
+#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:312
+#: ../src/server.c:457
+msgid "Engrampa"
 msgstr ""
 
-#: ../src/actions.c:185
-msgid "Lha (.lzh)"
+#: ../caja/libcaja-engrampa.caja-extension.in.in.h:2
+msgid "Allows to create and extract archives"
 msgstr ""
 
-#: ../src/actions.c:202
-msgid "Rar (.rar)"
-msgstr ""
-
-#: ../src/actions.c:217
-msgid "Tar uncompressed (.tar)"
-msgstr ""
-
-#: ../src/actions.c:226
-#, fuzzy
-msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Byegeranijwe Na:"
-
-#: ../src/actions.c:232
-#, fuzzy
-msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Byegeranijwe Na:"
-
-#: ../src/actions.c:242
-#, fuzzy
-msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Byegeranijwe Na:"
-
-#: ../src/actions.c:252
-#, fuzzy
-msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Byegeranijwe Na:"
-
-#: ../src/actions.c:260
-#, fuzzy
-msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Byegeranijwe Na: Kwegeranya"
-
-#: ../src/actions.c:291
-msgid "War (.war)"
-msgstr ""
-
-#: ../src/actions.c:294
-#, fuzzy
-msgid "Zip (.zip)"
-msgstr "Zipu"
-
-#: ../src/actions.c:302
-msgid "Zoo (.zoo)"
-msgstr ""
-
-#: ../src/actions.c:312
-#, fuzzy
-msgid "7-Zip (.7z)"
-msgstr "7"
-
-#: ../src/actions.c:415 ../src/actions.c:435 ../src/actions.c:467
-#: ../src/actions.c:783 ../src/dlg-batch-add.c:107 ../src/dlg-batch-add.c:126
-#: ../src/dlg-batch-add.c:153 ../src/dlg-batch-add.c:175
-#: ../src/dlg-batch-add.c:226 ../src/dlg-batch-add.c:271 ../src/window.c:4112
-#, fuzzy
+#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/dlg-batch-add.c:160 ../src/dlg-batch-add.c:176
+#: ../src/dlg-batch-add.c:205 ../src/dlg-batch-add.c:250
+#: ../src/dlg-batch-add.c:296 ../src/fr-window.c:2984
 msgid "Could not create the archive"
-msgstr "OYA Kurema"
+msgstr ""
 
-#: ../src/actions.c:416 ../src/actions.c:741 ../src/dlg-batch-add.c:108
-#: ../src/dlg-batch-add.c:272
-#, fuzzy
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:162 ../src/dlg-batch-add.c:298
 msgid "You have to specify an archive name."
-msgstr "Kuri Izina:"
+msgstr ""
 
-#: ../src/actions.c:436 ../src/actions.c:761
-#, fuzzy
+#: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
-msgstr "Kuri Kurema in iyi Ububiko"
+msgstr ""
 
-#: ../src/actions.c:468 ../src/actions.c:784 ../src/dlg-batch-add.c:154
-#: ../src/fr-archive.c:719 ../src/window.c:4113 ../src/window.c:4269
-#, fuzzy
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:271
+#: ../src/dlg-package-installer.c:280 ../src/dlg-package-installer.c:308
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6112 ../src/fr-window.c:6288
 msgid "Archive type not supported."
-msgstr "Ubwoko OYA"
+msgstr ""
 
-#: ../src/actions.c:481 ../src/actions.c:797
-#, fuzzy
-msgid "The archive already exists.  Do you want to overwrite it?"
-msgstr "Wifuzakurisimbura."
-
-# sw/source\ui\wrtsh\wrtsh.src:STR_OVR_UNDO.text
-#: ../src/actions.c:484 ../src/actions.c:800
-msgid "Overwrite"
-msgstr "Gusimbuza"
-
-#: ../src/actions.c:501 ../src/actions.c:817
-#, fuzzy
+#: ../src/actions.c:248
 msgid "Could not delete the old archive."
-msgstr "OYA Gusiba ki/ bishaje"
+msgstr ""
 
-# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
-#: ../src/actions.c:530
-msgid "New"
-msgstr "Gishya"
-
-#: ../src/actions.c:567 ../src/actions.c:674 ../src/actions.c:859
-#, fuzzy
-msgid "All archives"
-msgstr "Ubushyinguro"
-
-# 146
-#: ../src/actions.c:574 ../src/actions.c:681 ../src/actions.c:866
-msgid "All files"
-msgstr "amadosiye yose"
-
-#: ../src/actions.c:584 ../src/actions.c:874
-#, fuzzy
-msgid "Archive type:"
-msgstr "Ubwoko"
-
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\accel\accel.src:STR_OPEN.text
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\dialog\cfg.src:STR_OPEN.text
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\dialog\versdlg.src:DLG_VERSIONS.PB_OPEN.text
-#: ../src/actions.c:662 ../src/window.c:3707
+#: ../src/actions.c:382 ../src/fr-window.c:5850
 msgid "Open"
 msgstr "Gufungura"
 
-#: ../src/actions.c:740 ../src/actions.c:760
-#, fuzzy
-msgid "Could not save the archive"
-msgstr "OYA Kubika"
+#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5297
+msgid "All archives"
+msgstr ""
 
-# basctl/source\basicide\basidesh.src:RID_STR_SAVE.text
-#: ../src/actions.c:847
-msgid "Save"
-msgstr "Kubika"
+#: ../src/actions.c:400 ../src/dlg-new.c:320
+msgid "All files"
+msgstr "amadosiye yose"
 
-#: ../src/actions.c:1108 ../src/window.c:4961
+#: ../src/actions.c:794 ../src/fr-window.c:7300
 msgid "Last Output"
 msgstr ""
 
-#: ../src/actions.c:1128 ../src/dlg-extract.c:100
-#, fuzzy
-msgid "Could not display help"
-msgstr "OYA Kugaragaza Ifashayobora"
+#: ../src/actions.c:860
+msgid ""
+"Engrampa is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
 
-#: ../src/actions.c:1160
+#: ../src/actions.c:864
+msgid ""
+"Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#: ../src/actions.c:868
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+
+#: ../src/actions.c:878
+msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
+msgstr ""
+
+#: ../src/actions.c:879
+msgid "An archive manager for MATE."
+msgstr ""
+
+#: ../src/actions.c:882
 msgid "translator-credits"
 msgstr ""
 
-#: ../src/actions.c:1170
-#, fuzzy
-msgid "Engrampa"
-msgstr "Idosiye"
-
-#: ../src/actions.c:1173
-#, fuzzy
-msgid "An archive manager for MATE."
-msgstr "Muyobozi kugirango"
-
-#: ../src/dlg-add-files.c:85 ../src/dlg-add-files.c:147
-#: ../src/dlg-add-folder.c:118 ../src/dlg-add-folder.c:247
-#, fuzzy, c-format
-msgid "You don't have the right permissions to read files from folder \"%s\""
-msgstr "Iburyo: Uruhushya Kuri Gusoma Idosiye Bivuye Ububiko"
-
-#: ../src/dlg-add-files.c:91 ../src/dlg-add-files.c:153
-#: ../src/dlg-add-folder.c:124 ../src/dlg-add-folder.c:253
-#: ../src/window.c:2071 ../src/window.c:2109
-#, fuzzy
+#: ../src/dlg-add-files.c:107 ../src/dlg-add-folder.c:141
 msgid "Could not add the files to the archive"
-msgstr "OYA Kongeramo Idosiye Kuri"
+msgstr ""
 
-#: ../src/dlg-add-files.c:179
+#: ../src/dlg-add-files.c:108 ../src/dlg-add-folder.c:142
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr ""
+
+#: ../src/dlg-add-files.c:156 ../src/ui.h:47
 msgid "Add Files"
 msgstr ""
 
-#: ../src/dlg-add-files.c:191 ../src/dlg-add-folder.c:324
-#, fuzzy
-msgid "_Add only if newer"
-msgstr "NIBA"
+#. Translators: add a file to the archive only if the disk version is
+#. * newer than the archive version.
+#: ../src/dlg-add-files.c:172 ../src/dlg-add-folder.c:243
+msgid "Add only if _newer"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:312
-#, fuzzy
+#: ../src/dlg-add-folder.c:229
 msgid "Add a Folder"
-msgstr "a"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:325
+#: ../src/dlg-add-folder.c:244
 msgid "_Include subfolders"
 msgstr ""
 
-#: ../src/dlg-add-folder.c:326
-#, fuzzy
+#: ../src/dlg-add-folder.c:245
 msgid "Exclude folders that are symbolic lin_ks"
-msgstr "amahuza"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:329 ../src/dlg-add-folder.c:334
-#, fuzzy
+#: ../src/dlg-add-folder.c:248 ../src/dlg-add-folder.c:254
+#: ../src/dlg-add-folder.c:260
 msgid "example: *.o; *.bak"
-msgstr "Urugero. o."
+msgstr ""
 
-#: ../src/dlg-add-folder.c:330
-#, fuzzy
-msgid "_Include files:"
-msgstr "Idosiye"
+#: ../src/dlg-add-folder.c:249
+msgid "Include _files:"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:335
-#, fuzzy
+#: ../src/dlg-add-folder.c:255
 msgid "E_xclude files:"
-msgstr "Idosiye"
+msgstr ""
 
-#: ../src/dlg-add-folder.c:338
+#: ../src/dlg-add-folder.c:261
+msgid "_Exclude folders:"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:265
 msgid "_Load Options"
 msgstr ""
 
-#: ../src/dlg-add-folder.c:339
-#, fuzzy
+#: ../src/dlg-add-folder.c:266
 msgid "Sa_ve Options"
-msgstr "Kubika"
-
-#: ../src/dlg-add-folder.c:791
-#, fuzzy
-msgid "Save Options"
-msgstr "Kubika"
-
-#: ../src/dlg-add-folder.c:792
-msgid "Options Name:"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:121 ../src/window.c:5187
-#, fuzzy, c-format
+#: ../src/dlg-add-folder.c:267
+msgid "_Reset Options"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:895
+msgid "Save Options"
+msgstr ""
+
+#: ../src/dlg-add-folder.c:896
+msgid "_Options Name:"
+msgstr ""
+
+#: ../src/dlg-ask-password.c:124
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr ""
+
+#: ../src/dlg-batch-add.c:177
+#, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
 "\n"
 "%s"
-msgstr "Izina: ni OYA Byemewe Inyuguti"
+msgstr ""
 
-#: ../src/dlg-batch-add.c:121 ../src/window.c:5179 ../src/window.c:5183
-#: ../src/window.c:5187 ../src/window.c:5244 ../src/window.c:5246
-#, fuzzy
+#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
 msgid "Please use a different name."
-msgstr "Gukoresha a Izina:"
+msgstr ""
 
-#: ../src/dlg-batch-add.c:176
-#, fuzzy
+#: ../src/dlg-batch-add.c:207
 msgid ""
-"You don't have the right permissions to create an archive in the destination "
-"folder."
-msgstr "Iburyo: Uruhushya Kuri Kurema in Ishyika Ububiko"
+"You don't have the right permissions to create an archive in the destination"
+" folder."
+msgstr ""
 
-#: ../src/dlg-batch-add.c:195 ../src/dlg-extract.c:160 ../src/window.c:4510
-#, fuzzy, c-format
+#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
+#, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr "Ububiko OYA Kuri Kurema"
-
-#: ../src/dlg-batch-add.c:204 ../src/dlg-extract.c:169 ../src/window.c:4519
-#, fuzzy
-msgid "Create _Folder"
-msgstr "Guhimba idosiye:%s"
-
-#: ../src/dlg-batch-add.c:222 ../src/dlg-extract.c:188 ../src/window.c:4538
-#, fuzzy, c-format
-msgid "Could not create the destination folder: %s."
-msgstr "OYA Kurema Ishyika Ububiko"
-
-#: ../src/dlg-batch-add.c:246
-#, fuzzy
-msgid "Archive not created"
-msgstr "OYA Byaremwe"
-
-#: ../src/dlg-batch-add.c:297
-#, fuzzy
-msgid "The archive is already present.  Do you want to overwrite it?"
-msgstr "Wifuzakurisimbura."
-
-# sfx2/source\doc\new.src:DLG_NEW_FILE.CB_MERGE_STYLE.text
-#: ../src/dlg-batch-add.c:300
-#, fuzzy
-msgid "_Overwrite"
-msgstr "Guhindura"
-
-#: ../src/dlg-extract.c:192 ../src/dlg-extract.c:212 ../src/dlg-extract.c:240
-#: ../src/window.c:4542 ../src/window.c:4562
-#, fuzzy
-msgid "Extraction not performed"
-msgstr "OYA"
-
-#: ../src/dlg-extract.c:235
-#, fuzzy, c-format
-msgid ""
-"You don't have the right permissions to extract archives in the folder \"%s\""
-msgstr "Iburyo: Uruhushya Kuri Ubushyinguro in Ububiko"
-
-# scp/source\office\dir.lng:STR_DIR_DATEIEN.text
-#: ../src/dlg-extract.c:396
-msgid "Files"
-msgstr "Idosiye"
-
-#: ../src/dlg-extract.c:404 ../src/dlg-extract.c:454
-msgid "    "
 msgstr ""
 
-#: ../src/dlg-extract.c:445
+#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
+msgid "Create _Folder"
+msgstr ""
+
+#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr ""
+
+#: ../src/dlg-batch-add.c:268
+msgid "Archive not created"
+msgstr ""
+
+#: ../src/dlg-batch-add.c:316
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr ""
+
+#: ../src/dlg-batch-add.c:319
+msgid "_Overwrite"
+msgstr ""
+
+#: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
+#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
+#: ../src/fr-window.c:6926
+msgid "Extraction not performed"
+msgstr ""
+
+#: ../src/dlg-extract.c:183 ../src/fr-window.c:4404 ../src/fr-window.c:4484
+#, c-format
+msgid ""
+"You don't have the right permissions to extract archives in the folder "
+"\"%s\""
+msgstr ""
+
+#: ../src/dlg-extract.c:338 ../src/dlg-extract.c:436 ../src/ui.h:122
+msgid "Extract"
+msgstr ""
+
+#: ../src/dlg-extract.c:387
 msgid "Actions"
 msgstr ""
 
-#: ../src/dlg-extract.c:461
-#, fuzzy
-msgid "R_e-create folders"
-msgstr "Kurema"
-
-#: ../src/dlg-extract.c:465
-#, fuzzy
-msgid "Over_write existing files"
-msgstr "Gusimbuza Idosiye"
-
-#: ../src/dlg-extract.c:469
-#, fuzzy
-msgid "Do not e_xtract older files"
-msgstr "OYA Idosiye"
-
-#: ../src/dlg-extract.c:484
-#, fuzzy
-msgid "_Open destination folder after extraction"
-msgstr "Ishyika Ububiko Nyuma"
-
-#: ../src/dlg-prop.c:102
-msgid "Path:"
-msgstr "Inzira:"
-
-# sc/source\ui\dbgui\pvfundlg.src:RID_SCDLG_PIVOTSUBT.FT_NAMELABEL.text
-#: ../src/dlg-prop.c:115
-msgid "Name:"
-msgstr "Izina:"
-
-# LOCALIZATION NOTE (ObjectProperties):Don't translate "%obj%" it will be replaced with one of above object nouns
-#: ../src/dlg-prop.c:121
-#, fuzzy, c-format
-msgid "%s Properties"
-msgstr "%sindangabintu ya %s%obj %s%"
-
-# svtools/source\contnr\templwin.src:STRARY_SVT_DOCINFO.7.text
-#: ../src/dlg-prop.c:130
-#, fuzzy
-msgid "Modified on:"
-msgstr "Byahinduwe ku wa"
-
-#: ../src/dlg-prop.c:136 ../src/window.c:426
-msgid "%d %B %Y, %H:%M"
+#: ../src/dlg-extract.c:403
+msgid "Re-crea_te folders"
 msgstr ""
 
-#: ../src/dlg-prop.c:144
-#, fuzzy
+#: ../src/dlg-extract.c:407
+msgid "Over_write existing files"
+msgstr ""
+
+#: ../src/dlg-extract.c:411
+msgid "Do not e_xtract older files"
+msgstr ""
+
+#: ../src/dlg-new.c:442
+msgctxt "File"
+msgid "New"
+msgstr ""
+
+#: ../src/dlg-new.c:455
+msgctxt "File"
+msgid "Save"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
+msgid "There was an internal error trying to search for applications:"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:290
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:295
+msgid "Could not open this file type"
+msgstr ""
+
+#: ../src/dlg-package-installer.c:298
+msgid "_Search Command"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: ../src/dlg-prop.c:108
+msgid "Location:"
+msgstr "Intaho:"
+
+#: ../src/dlg-prop.c:120
+msgctxt "File"
+msgid "Name:"
+msgstr ""
+
+#: ../src/dlg-prop.c:126
+#, c-format
+msgid "%s Properties"
+msgstr ""
+
+#: ../src/dlg-prop.c:135
+msgid "Last modified:"
+msgstr ""
+
+#: ../src/dlg-prop.c:145
 msgid "Archive size:"
-msgstr "Ingano"
+msgstr ""
 
-#: ../src/dlg-prop.c:155
-#, fuzzy
+#: ../src/dlg-prop.c:156
 msgid "Content size:"
-msgstr "Ingano"
+msgstr ""
 
-#: ../src/dlg-prop.c:174
+#: ../src/dlg-prop.c:176
 msgid "Compression ratio:"
 msgstr ""
 
-#: ../src/dlg-prop.c:189
-#, fuzzy
+#: ../src/dlg-prop.c:191
 msgid "Number of files:"
-msgstr "Bya Idosiye"
+msgstr ""
 
-#: ../src/file-data.c:28
-#, fuzzy
-msgid "Unknown type"
-msgstr "Ubwoko"
+#: ../src/dlg-update.c:164
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/file-data.c:29
-#, fuzzy
-msgid "Symbolic link"
-msgstr "Ihuza"
+#: ../src/dlg-update.c:193
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr ""
 
-#: ../src/fr-archive.c:694
-#, fuzzy
-msgid "The file does not exist."
-msgstr "Idosiye\"\"ntibaho."
+#: ../src/eggfileformatchooser.c:236
+#, c-format
+msgid "File _Format: %s"
+msgstr ""
 
-#: ../src/fr-command-tar.c:281
-#, fuzzy
+#: ../src/eggfileformatchooser.c:397
+msgid "All Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:398
+msgid "All Supported Files"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:407
+msgid "By Extension"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:422
+msgid "File Format"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:440
+msgid "Extension(s)"
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:670
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+
+#: ../src/eggfileformatchooser.c:677
+msgid "File format not recognized"
+msgstr ""
+
+#: ../src/fr-archive.c:1140
+msgid "File not found."
+msgstr ""
+
+#: ../src/fr-archive.c:1246
+#, c-format
+msgid "Archive not found"
+msgstr ""
+
+#: ../src/fr-archive.c:2444
+msgid "You don't have the right permissions."
+msgstr ""
+
+#: ../src/fr-archive.c:2444
+msgid "This archive type cannot be modified"
+msgstr ""
+
+#: ../src/fr-archive.c:2456
+msgid "You can't add an archive to itself."
+msgstr ""
+
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:291 ../src/fr-command-rar.c:399
+#: ../src/fr-command-tar.c:310
 msgid "Adding file: "
-msgstr "IDOSIYE"
+msgstr ""
 
-#: ../src/fr-command-tar.c:327
-#, fuzzy
-msgid "Removing file: "
-msgstr "IDOSIYE"
-
-#: ../src/fr-command-tar.c:336 ../src/window.c:1377
-#, fuzzy
-msgid "Deleting files from archive"
-msgstr "Idosiye Bivuye"
-
-#: ../src/fr-command-tar.c:369
-#, fuzzy
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-7z.c:412 ../src/fr-command-rar.c:526
+#: ../src/fr-command-tar.c:429
 msgid "Extracting file: "
-msgstr "IDOSIYE"
+msgstr ""
 
-#: ../src/fr-command-tar.c:414
+#. Translators: after the colon there is a filename.
+#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:375
+msgid "Removing file: "
+msgstr ""
+
+#: ../src/fr-command-rar.c:665
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr ""
+
+#: ../src/fr-command-tar.c:384
+msgid "Deleting files from archive"
+msgstr ""
+
+#: ../src/fr-command-tar.c:488
 msgid "Recompressing archive"
 msgstr ""
 
-#: ../src/fr-command-tar.c:548
+#: ../src/fr-command-tar.c:729
 msgid "Decompressing archive"
 msgstr ""
 
-#: ../src/fr-stock.c:44
-#, fuzzy
+#: ../src/fr-init.c:61
+msgid "7-Zip (.7z)"
+msgstr ""
+
+#: ../src/fr-init.c:62
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr ""
+
+#: ../src/fr-init.c:63
+msgid "Ace (.ace)"
+msgstr ""
+
+#: ../src/fr-init.c:65
+msgid "Ar (.ar)"
+msgstr ""
+
+#: ../src/fr-init.c:66
+msgid "Arj (.arj)"
+msgstr ""
+
+#: ../src/fr-init.c:68
+msgid "Tar compressed with bzip2 (.tar.bz2)"
+msgstr ""
+
+#: ../src/fr-init.c:70
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr ""
+
+#: ../src/fr-init.c:71
+msgid "Cabinet (.cab)"
+msgstr ""
+
+#: ../src/fr-init.c:72
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr ""
+
+#: ../src/fr-init.c:73
+msgid "Zip Archived Comic Book (.cbz)"
+msgstr ""
+
+#: ../src/fr-init.c:76
+msgid "Tar compressed with gzip (.tar.gz)"
+msgstr ""
+
+#: ../src/fr-init.c:79
+msgid "Ear (.ear)"
+msgstr ""
+
+#: ../src/fr-init.c:80
+msgid "Self-extracting zip (.exe)"
+msgstr ""
+
+#: ../src/fr-init.c:82
+msgid "Jar (.jar)"
+msgstr ""
+
+#: ../src/fr-init.c:83
+msgid "Lha (.lzh)"
+msgstr ""
+
+#: ../src/fr-init.c:84
+msgid "Lrzip (.lrz)"
+msgstr ""
+
+#: ../src/fr-init.c:85
+msgid "Tar compressed with lrzip (.tar.lrz)"
+msgstr ""
+
+#: ../src/fr-init.c:87
+msgid "Tar compressed with lzip (.tar.lz)"
+msgstr ""
+
+#: ../src/fr-init.c:89
+msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr ""
+
+#: ../src/fr-init.c:91
+msgid "Tar compressed with lzop (.tar.lzo)"
+msgstr ""
+
+#: ../src/fr-init.c:92
+msgid "Windows Imaging Format (.wim)"
+msgstr ""
+
+#: ../src/fr-init.c:93
+msgid "Rar (.rar)"
+msgstr ""
+
+#: ../src/fr-init.c:96
+msgid "Tar uncompressed (.tar)"
+msgstr ""
+
+#: ../src/fr-init.c:97
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr ""
+
+#: ../src/fr-init.c:99
+msgid "War (.war)"
+msgstr ""
+
+#: ../src/fr-init.c:100
+msgid "Xz (.xz)"
+msgstr ""
+
+#: ../src/fr-init.c:101
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr ""
+
+#: ../src/fr-init.c:102
+msgid "Zoo (.zoo)"
+msgstr ""
+
+#: ../src/fr-init.c:103
+msgid "Zip (.zip)"
+msgstr ""
+
+#: ../src/fr-stock.c:42
+msgid "C_reate"
+msgstr ""
+
+#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
 msgid "_Add"
-msgstr "Kongeramo"
+msgstr ""
 
 #: ../src/fr-stock.c:45
 msgid "_Extract"
 msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICMENU.MN_VIEW.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICPLUGINMENU.MN_PLVIEW.text
-#: ../src/fr-stock.c:46 ../src/ui.h:36 ../src/ui.h:154
-#, fuzzy
-msgid "_View"
-msgstr "Kureba"
-
-#. Button
-#: ../src/gtk-utils.c:421
-msgid "Command _Line Output"
-msgstr ""
-
-#: ../src/main.c:69
-#, fuzzy
-msgid "Add files to the specified archive and quit the program"
-msgstr "Idosiye Kuri Na Kuvamo Porogaramu"
-
-#: ../src/main.c:70
-msgid "ARCHIVE"
-msgstr ""
-
-#: ../src/main.c:73
-#, fuzzy
-msgid "Add files asking the name of the archive and quit the program"
-msgstr "Idosiye Izina: Bya Na Kuvamo Porogaramu"
-
-#: ../src/main.c:77
-#, fuzzy
-msgid "Extract archives to the specified folder and quit the program"
-msgstr "Ubushyinguro Kuri Ububiko Na Kuvamo Porogaramu"
-
-# sfx2/source\explorer\explorer.src:STR_SFX_FOLDER.text
-#: ../src/main.c:78 ../src/main.c:90
-#, fuzzy
-msgid "FOLDER"
-msgstr "Ububiko"
-
-#: ../src/main.c:81
-#, fuzzy
-msgid "Extract archives asking the destination folder and quit the program"
-msgstr "Ubushyinguro Ishyika Ububiko Na Kuvamo Porogaramu"
-
-#: ../src/main.c:85
-#, fuzzy
-msgid ""
-"Extract archives using the archive name as destination folder and quit the "
-"program"
-msgstr "Ubushyinguro Ishyika Ububiko Na Kuvamo Porogaramu"
-
-#: ../src/main.c:89
-#, fuzzy
-msgid "Default folder to use for the '--add' and '--extract' commands"
-msgstr "Ububiko Kuri Gukoresha kugirango Na Amabwiriza"
-
-#: ../src/main.c:93
-#, fuzzy
-msgid "Create destination folder without asking confirmation"
-msgstr "Ishyika Ububiko Iyemeza"
-
-#: ../src/ui.h:34
-msgid "_Archive"
-msgstr ""
-
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICMENU.MN_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICPLUGINMENU.MN_PLEDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_EDIT.text
-#: ../src/ui.h:35
-#, fuzzy
-msgid "_Edit"
-msgstr "Guhindura"
-
-#: ../src/ui.h:37
-#, fuzzy
-msgid "_Help"
-msgstr "Ifashayobora"
-
-#: ../src/ui.h:38
-msgid "_Arrange Files"
-msgstr ""
-
-#: ../src/ui.h:39
-msgid "Open R_ecent"
-msgstr ""
-
-#: ../src/ui.h:43
-#, fuzzy
-msgid "Information about the program"
-msgstr "Ibyerekeye Porogaramu"
-
-#: ../src/ui.h:46
-msgid "_Add Files..."
-msgstr ""
-
-#: ../src/ui.h:47 ../src/ui.h:51
-#, fuzzy
-msgid "Add files to the archive"
-msgstr "Idosiye Kuri"
-
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\src\miscdlgs.src:RID_SCDLG_COL_OPT.FT_LABEL.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\src\miscdlgs.src:RID_SCDLG_ROW_OPT.FT_LABEL.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\src\scstring.src:STR_OPT_ROWHEIGHT.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\src\scstring.src:STR_OPT_COLWIDTH.text
-#: ../src/ui.h:50
-msgid "Add"
-msgstr "Kongera"
-
-#: ../src/ui.h:54
-#, fuzzy
-msgid "Add a _Folder..."
-msgstr "a"
-
-#: ../src/ui.h:55
-#, fuzzy
-msgid "Add a folder to the archive"
-msgstr "a Ububiko Kuri"
-
-#: ../src/ui.h:59
-#, fuzzy
-msgid "Close the current archive"
-msgstr "Funga KIGEZWEHO"
-
-#: ../src/ui.h:63
-#, fuzzy
-msgid "Display the Engrampa Manual"
-msgstr "Idosiye"
-
-#: ../src/ui.h:67
-#, fuzzy
-msgid "Copy the selection"
-msgstr "Ihitamo"
-
-#: ../src/ui.h:71
-#, fuzzy
-msgid "Cut the selection"
-msgstr "Ihitamo"
-
-#: ../src/ui.h:75
-#, fuzzy
-msgid "Delete the selection from the archive"
-msgstr "Ihitamo Bivuye"
-
-#: ../src/ui.h:78
-msgid "Dese_lect All"
-msgstr ""
-
-#: ../src/ui.h:79
-#, fuzzy
-msgid "Deselect all files"
-msgstr "Byose Idosiye"
-
-#: ../src/ui.h:82
-msgid "_Extract..."
-msgstr ""
-
-#: ../src/ui.h:83 ../src/ui.h:87
-#, fuzzy
-msgid "Extract files from the archive"
-msgstr "Idosiye Bivuye"
-
-#: ../src/ui.h:90
-msgid "_Last Output"
-msgstr ""
-
-#: ../src/ui.h:91
-#, fuzzy
-msgid "View the output produced by the last executed command"
-msgstr "Ibisohoka ku Iheruka Komandi:"
-
-#: ../src/ui.h:95
-#, fuzzy
-msgid "Create a new archive"
-msgstr "a Gishya"
-
-#: ../src/ui.h:99 ../src/ui.h:103 ../src/window.c:3704 ../src/window.c:3707
-msgid "Open archive"
-msgstr ""
-
-#: ../src/ui.h:106
-msgid "Open Fi_les..."
-msgstr ""
-
-#: ../src/ui.h:107
-#, fuzzy
-msgid "Open selected files with an application"
-msgstr "Byahiswemo Idosiye Na: Porogaramu"
-
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_PASSWORD.text
-#: ../src/ui.h:110
-#, fuzzy
-msgid "Pass_word..."
-msgstr "Ijambobanga..."
-
-#: ../src/ui.h:111
-#, fuzzy
-msgid "Specify a password for this archive"
-msgstr "a Ijambobanga... kugirango iyi"
-
-#: ../src/ui.h:115
-#, fuzzy
-msgid "Paste the clipboard"
-msgstr "Ububikokoporora"
-
-#: ../src/ui.h:119
-#, fuzzy
-msgid "Show archive properties"
-msgstr "Indangakintu..."
-
-#: ../src/ui.h:123
-#, fuzzy
-msgid "Quit the application"
-msgstr "Porogaramu"
-
-#: ../src/ui.h:127
-#, fuzzy
-msgid "Reload current archive"
-msgstr "Kongerakuyitangiza KIGEZWEHO"
-
-# padmin/source\padialog.src:RID_PADIALOG.RID_PA_BTN_RENAME.text
-#: ../src/ui.h:130
-#, fuzzy
-msgid "_Rename..."
-msgstr "Guhindura izina..."
-
-#: ../src/ui.h:131
-#, fuzzy
-msgid "Rename the selection"
-msgstr "Ihitamo"
-
-#: ../src/ui.h:135
-#, fuzzy
-msgid "Save the current archive with a different name"
-msgstr "Kubika KIGEZWEHO Na: a Izina:"
-
-# #-#-#-#-#  padmin.pot (Mate 2.12)  #-#-#-#-#
-# padmin/source\padialog.src:RID_FONTIMPORT_DIALOG.RID_FIMP_BTN_SELECTALL.text
-# #-#-#-#-#  padmin.pot (Mate 2.12)  #-#-#-#-#
-# padmin/source\padialog.src:RID_ADDP_PAGE_OLDPRINTERS.RID_ADDP_OLD_BTN_SELECTALL.text
-#: ../src/ui.h:138
-#, fuzzy
-msgid "Select _All"
-msgstr "Hitamo byose"
-
-#: ../src/ui.h:139
-#, fuzzy
-msgid "Select all files"
-msgstr "Byose Idosiye"
-
-#: ../src/ui.h:143
-#, fuzzy
-msgid "Stop current operation"
-msgstr "KIGEZWEHO"
-
-#: ../src/ui.h:146
-msgid "_Test Integrity"
-msgstr ""
-
-#: ../src/ui.h:147
-#, fuzzy
-msgid "Test whether the archive contains errors"
-msgstr "Kirimo Amakosa"
-
-#: ../src/ui.h:150
-#, fuzzy
-msgid "_View File"
-msgstr "Idosiye"
-
-#: ../src/ui.h:151 ../src/ui.h:155
-#, fuzzy
-msgid "View the selected file"
-msgstr "Byahiswemo IDOSIYE"
-
-#: ../src/ui.h:163
-#, fuzzy
-msgid "_Toolbar"
-msgstr "Umwanyabikoresho"
-
-#: ../src/ui.h:164
-#, fuzzy
-msgid "View the main toolbar"
-msgstr "Umwanyabikoresho"
-
-#: ../src/ui.h:168
-msgid "Stat_usbar"
-msgstr ""
-
-#: ../src/ui.h:169
-#, fuzzy
-msgid "View the statusbar"
-msgstr "i"
-
-#: ../src/ui.h:173
-msgid "_Reversed Order"
-msgstr ""
-
-#: ../src/ui.h:174
-#, fuzzy
-msgid "Reverse the list order"
-msgstr "Urutonde Itondekanya"
-
-#: ../src/ui.h:183
-msgid "View All _Files"
-msgstr ""
-
-#: ../src/ui.h:186
-#, fuzzy
-msgid "View as a F_older"
-msgstr "Nka a"
-
-#: ../src/ui.h:194
-#, fuzzy
-msgid "by _Name"
-msgstr "ku"
-
-#: ../src/ui.h:195
-#, fuzzy
-msgid "Sort file list by name"
-msgstr "IDOSIYE Urutonde ku Izina:"
-
-#: ../src/ui.h:197
-#, fuzzy
-msgid "by _Size"
-msgstr "ku"
-
-#: ../src/ui.h:198
-#, fuzzy
-msgid "Sort file list by file size"
-msgstr "IDOSIYE Urutonde ku IDOSIYE Ingano"
-
-#: ../src/ui.h:200
-#, fuzzy
-msgid "by T_ype"
-msgstr "ku"
-
-#: ../src/ui.h:201
-#, fuzzy
-msgid "Sort file list by type"
-msgstr "IDOSIYE Urutonde ku Ubwoko"
-
-#: ../src/ui.h:203
-#, fuzzy
-msgid "by _Date modified"
-msgstr "ku Byahinduwe"
-
-#: ../src/ui.h:204
-#, fuzzy
-msgid "Sort file list by modification time"
-msgstr "IDOSIYE Urutonde ku Igihe"
-
-#: ../src/ui.h:206
-#, fuzzy
-msgid "by _Location"
-msgstr "ku"
-
-#: ../src/ui.h:207
-#, fuzzy
-msgid "Sort file list by location"
-msgstr "IDOSIYE Urutonde ku Ahantu"
-
-# sfx2/source\explorer\explorer.src:STR_SFX_FOLDER.text
-#: ../src/window.c:691
+#: ../src/fr-window.c:1531
+#, c-format
+msgid "%d object (%s)"
+msgid_plural "%d objects (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/fr-window.c:1536
+#, c-format
+msgid "%d object selected (%s)"
+msgid_plural "%d objects selected (%s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/fr-window.c:1606
 msgid "Folder"
 msgstr "Ububiko"
 
-# sfx2/source\view\view.src:STR_READONLY.text
-#: ../src/window.c:854
-#, fuzzy
+#: ../src/fr-window.c:2003
 msgid "[read only]"
-msgstr "[gusoma gusa)"
-
-#: ../src/window.c:948
-#, fuzzy, c-format
-msgid "%d file (%s)"
-msgid_plural "%d files (%s)"
-msgstr[0] "%dIdosiye"
-msgstr[1] "%dIdosiye"
-
-#: ../src/window.c:953
-#, fuzzy, c-format
-msgid "%d file selected (%s)"
-msgid_plural "%d files selected (%s)"
-msgstr[0] "%dIDOSIYE Byahiswemo"
-
-#: ../src/window.c:1374
-msgid "Reading archive"
 msgstr ""
 
-#: ../src/window.c:1380
-#, fuzzy
-msgid "Adding files to archive"
-msgstr "Idosiye Kuri"
-
-#: ../src/window.c:1383
-#, fuzzy
-msgid "Extracting files from archive"
-msgstr "Idosiye Bivuye"
-
-#: ../src/window.c:1386
-msgid "Testing archive"
-msgstr ""
-
-#: ../src/window.c:1389
-#, fuzzy
-msgid "Getting the file list"
-msgstr "IDOSIYE Urutonde"
-
-#: ../src/window.c:1396
-#, fuzzy
-msgid "wait please..."
-msgstr "Tegereza"
-
-#: ../src/window.c:1473
-#, fuzzy, c-format
+#: ../src/fr-window.c:2255
+#, c-format
 msgid "Could not display the folder \"%s\""
-msgstr "OYA Kugaragaza Ububiko"
+msgstr ""
 
-#: ../src/window.c:1532
-#, fuzzy
-msgid ""
-"This archive is password protected.\n"
-"Please specify a password with the command: Edit->Password"
-msgstr "ni Ijambobanga... Birinzwe a Ijambobanga... Na: Komandi:"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2329 ../src/fr-window.c:2367
+#, c-format
+msgid "Creating \"%s\""
+msgstr ""
 
-#: ../src/window.c:1534
-#, fuzzy
-msgid ""
-"The specified password is not valid, please specify a new password with the "
-"command: Edit->Password"
-msgstr "Ijambobanga... ni OYA Byemewe a Gishya Ijambobanga... Na: Komandi:"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2333
+#, c-format
+msgid "Loading \"%s\""
+msgstr ""
 
-#: ../src/window.c:1539 ../src/window.c:2295 ../src/window.c:5582
-#, fuzzy
-msgid "Could not perform the operation"
-msgstr "OYA"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2337
+#, c-format
+msgid "Reading \"%s\""
+msgstr ""
 
-#: ../src/window.c:1564
-#, fuzzy
-msgid "An error occurred while extracting files."
-msgstr "Ikosa Idosiye"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2341
+#, c-format
+msgid "Deleting files from \"%s\""
+msgstr ""
 
-#: ../src/window.c:1568
-#, fuzzy
-msgid "An error occurred while loading the archive."
-msgstr "Ikosa Itangira..."
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2345
+#, c-format
+msgid "Testing \"%s\""
+msgstr ""
 
-#: ../src/window.c:1572
-#, fuzzy
-msgid "An error occurred while deleting files from the archive."
-msgstr "Ikosa Idosiye Bivuye"
+#: ../src/fr-window.c:2348
+msgid "Getting the file list"
+msgstr ""
 
-#: ../src/window.c:1576
-#, fuzzy
-msgid "An error occurred while adding files to the archive."
-msgstr "Ikosa Wongera Idosiye Kuri"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2352
+#, c-format
+msgid "Copying the files to add to \"%s\""
+msgstr ""
 
-#: ../src/window.c:1580
-#, fuzzy
-msgid "An error occurred while testing archive."
-msgstr "Ikosa"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2356
+#, c-format
+msgid "Adding files to \"%s\""
+msgstr ""
 
-#: ../src/window.c:1589
-#, fuzzy
-msgid "Command not found."
-msgstr "OYA Byabonetse"
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2360
+#, c-format
+msgid "Extracting files from \"%s\""
+msgstr ""
 
-#: ../src/window.c:1592
+#: ../src/fr-window.c:2363
+msgid "Copying the extracted files to the destination"
+msgstr ""
+
+#. Translators: %s is a filename
+#: ../src/fr-window.c:2371
+#, c-format
+msgid "Saving \"%s\""
+msgstr ""
+
+#: ../src/fr-window.c:2518
+msgid "_Open the Archive"
+msgstr ""
+
+#: ../src/fr-window.c:2519
+msgid "_Show the Files"
+msgstr ""
+
+#: ../src/fr-window.c:2696
+#, c-format
+msgid "%d file remaining"
+msgid_plural "%'d files remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/fr-window.c:2746
+msgid "Extraction completed successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2769
+msgid "Archive created successfully"
+msgstr ""
+
+#: ../src/fr-window.c:2827
+msgid "Please wait…"
+msgstr ""
+
+#: ../src/fr-window.c:2896 ../src/fr-window.c:3031
 msgid "Command exited abnormally."
 msgstr ""
 
-#: ../src/window.c:1722
+#: ../src/fr-window.c:2989
+msgid "An error occurred while extracting files."
+msgstr ""
+
+#: ../src/fr-window.c:2995
+#, c-format
+msgid "Could not open \"%s\""
+msgstr ""
+
+#: ../src/fr-window.c:3000
+msgid "An error occurred while loading the archive."
+msgstr ""
+
+#: ../src/fr-window.c:3004
+msgid "An error occurred while deleting files from the archive."
+msgstr ""
+
+#: ../src/fr-window.c:3010
+msgid "An error occurred while adding files to the archive."
+msgstr ""
+
+#: ../src/fr-window.c:3014
+msgid "An error occurred while testing archive."
+msgstr ""
+
+#: ../src/fr-window.c:3018
+msgid "An error occurred while saving the archive."
+msgstr ""
+
+#: ../src/fr-window.c:3022
+msgid "An error occurred."
+msgstr ""
+
+#: ../src/fr-window.c:3028
+msgid "Command not found."
+msgstr ""
+
+#: ../src/fr-window.c:3231
 msgid "Test Result"
 msgstr ""
 
-#: ../src/window.c:2072
-#, fuzzy
-msgid "You don't have the right permissions."
-msgstr "Iburyo: Uruhushya"
+#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
+#: ../src/fr-window.c:8497
+msgid "Could not perform the operation"
+msgstr ""
 
-#: ../src/window.c:2110
-#, fuzzy
-msgid "You can't add an archive to itself."
-msgstr "Kongeramo Kuri"
-
-#: ../src/window.c:2329
-#, fuzzy
+#: ../src/fr-window.c:4104
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
-"Kuri Kongeramo iyi IDOSIYE Kuri KIGEZWEHO Cyangwa Gufungura Nka a Gishya"
 
-#: ../src/window.c:2366
-#, fuzzy
+#: ../src/fr-window.c:4134
 msgid "Do you want to create a new archive with these files?"
-msgstr "Kuri Kurema a Gishya Na: Idosiye"
+msgstr ""
 
-#: ../src/window.c:2369
+#: ../src/fr-window.c:4137
 msgid "Create _Archive"
 msgstr ""
 
-# #-#-#-#-#  goodies.pot (Mate 2.12)  #-#-#-#-#
-# goodies/source\filter.vcl\eos2met\dlgeos2.src:DLG_EXPORT_EMET.GRP_SIZE.text
-# #-#-#-#-#  goodies.pot (Mate 2.12)  #-#-#-#-#
-# goodies/source\filter.vcl\epict\dlgepct.src:DLG_EXPORT_EPCT.GRP_SIZE.text
-#: ../src/window.c:2724
+#: ../src/fr-window.c:4735 ../src/fr-window.c:5799
+msgid "Folders"
+msgstr ""
+
+#: ../src/fr-window.c:4773
+msgctxt "File"
 msgid "Size"
-msgstr "Ingano"
+msgstr ""
 
-# filter/source\xsltdialog\xmlfilterdialogstrings.src:STR_COLUMN_HEADER_TYPE.text
-#: ../src/window.c:2725
+#: ../src/fr-window.c:4774
+msgctxt "File"
 msgid "Type"
-msgstr "Ubwoko"
+msgstr ""
 
-# svtools/source\contnr\fileview.src:STR_SVT_FILEVIEW_COLUMN_DATE.text
-#: ../src/window.c:2726
-#, fuzzy
+#: ../src/fr-window.c:4775
+msgctxt "File"
 msgid "Date Modified"
-msgstr "Itariki yahinduwe"
+msgstr ""
 
-#: ../src/window.c:2735
+#: ../src/fr-window.c:4776
+msgctxt "File"
+msgid "Location"
+msgstr ""
+
+#: ../src/fr-window.c:4785
+msgctxt "File"
 msgid "Name"
-msgstr "Izina"
+msgstr ""
 
-#: ../src/window.c:3235
-#, fuzzy, c-format
-msgid "Open '%s'"
-msgstr "Gufungura''"
+#: ../src/fr-window.c:5720
+msgid "Find:"
+msgstr ""
 
-#: ../src/window.c:3576
-#, fuzzy
-msgid "Go to the previous visited location"
-msgstr "Kuri Ibanjirije Ahantu"
+#: ../src/fr-window.c:5807
+msgid "Close the folders pane"
+msgstr ""
 
-#: ../src/window.c:3584
-#, fuzzy
-msgid "Go to the next visited location"
-msgstr "Kuri Komeza>> Ahantu"
+#. Translators: this is the label for the "open recent file" sub-menu.
+#: ../src/fr-window.c:5838
+msgid "Open _Recent"
+msgstr ""
 
-#: ../src/window.c:3592
-#, fuzzy
-msgid "Go up one level"
-msgstr "Hejuru urwego"
-
-#: ../src/window.c:3600
-#, fuzzy
-msgid "Go to the home location"
-msgstr "Kuri Ku Ntangiriro Ahantu"
-
-#: ../src/window.c:3705
-#, fuzzy
+#: ../src/fr-window.c:5839 ../src/fr-window.c:5851
 msgid "Open a recently used archive"
-msgstr "a"
+msgstr ""
 
-#: ../src/window.c:4204
-#, fuzzy, c-format
-msgid "Could not open \"%s\""
-msgstr "OYA Gufungura"
-
-#: ../src/window.c:4262
-#, fuzzy, c-format
+#: ../src/fr-window.c:6280
+#, c-format
 msgid "Could not save the archive \"%s\""
-msgstr "OYA Kubika"
+msgstr ""
 
-#: ../src/window.c:5179
-#, fuzzy
-msgid "The new name is void."
-msgstr "Gishya Izina: ni"
+#: ../src/fr-window.c:6779
+#, c-format
+msgid "Replace file \"%s\"?"
+msgstr ""
 
-#: ../src/window.c:5183
-#, fuzzy
-msgid "The new name is equal to the old one."
-msgstr "Gishya Izina: ni bingana Kuri ki/ bishaje"
+#: ../src/fr-window.c:6782
+#, c-format
+msgid "Another file with the same name already exists in \"%s\"."
+msgstr ""
 
-#: ../src/window.c:5244
+#: ../src/fr-window.c:6789
+msgid "Replace _All"
+msgstr ""
+
+#: ../src/fr-window.c:6790
+msgid "_Skip"
+msgstr ""
+
+#: ../src/fr-window.c:6791
+msgid "_Replace"
+msgstr ""
+
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7605
+msgid "New name is void, please type a name."
+msgstr ""
+
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: ../src/fr-window.c:7610
+msgid "New name is the same as old one, please type other name."
+msgstr ""
+
+#. Translators: the %s references to a filename.  This message can appear when
+#. renaming a file.
+#: ../src/fr-window.c:7615
+#, c-format
+msgid ""
+"Name \"%s\" is not valid because it contains at least one of the following "
+"characters: %s, please type other name."
+msgstr ""
+
+#: ../src/fr-window.c:7651
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1241,7 +1252,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/window.c:5246
+#: ../src/fr-window.c:7653
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1249,54 +1260,376 @@ msgid ""
 "%s"
 msgstr ""
 
-# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.SID_BASICIDE_RENAMECURRENT.text
-#: ../src/window.c:5284
+#: ../src/fr-window.c:7723
 msgid "Rename"
 msgstr "Guhindura izina"
 
-#: ../src/window.c:5285
-#, fuzzy
-msgid "New folder name"
-msgstr "Ububiko Izina:"
+#: ../src/fr-window.c:7724
+msgid "_New folder name:"
+msgstr ""
 
-#: ../src/window.c:5285
-#, fuzzy
-msgid "New file name"
-msgstr "IDOSIYE Izina:"
+#: ../src/fr-window.c:7724
+msgid "_New file name:"
+msgstr ""
 
-# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.SID_BASICIDE_RENAMECURRENT.text
-#: ../src/window.c:5289
-#, fuzzy
+#: ../src/fr-window.c:7728
 msgid "_Rename"
-msgstr "Guhindura izina"
+msgstr ""
 
-#: ../src/window.c:5305 ../src/window.c:5334
-#, fuzzy
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the folder"
-msgstr "OYA Guhindura izina Ububiko"
+msgstr ""
 
-#: ../src/window.c:5305 ../src/window.c:5334
-#, fuzzy
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the file"
-msgstr "OYA Guhindura izina IDOSIYE"
+msgstr ""
 
-# officecfg/registry\schema\org\openoffice\Office\Common.xcs:....View.Dialog.MiddleMouseButton..2.text
-#: ../src/window.c:5408
-#, fuzzy
+#: ../src/fr-window.c:8164
 msgid "Paste Selection"
-msgstr "Komeka ihitamo"
+msgstr ""
 
-# dbaccess/source/ui/inc/toolbox.hrc:MID_SBA_QRY_PASTE.text
-#: ../src/window.c:5413
-#, fuzzy
-msgid "_Paste"
-msgstr "Komeka"
+#: ../src/fr-window.c:8165
+msgid "_Destination folder:"
+msgstr ""
 
-#: ../src/window.c:5942
-#, fuzzy
+#: ../src/fr-window.c:8776
 msgid "Add files to an archive"
-msgstr "Idosiye Kuri"
+msgstr ""
 
-#: ../src/window.c:5975
+#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
+#: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
+msgstr ""
+
+#. This is the time format used in the "Date Modified" column and
+#. * in the Properties dialog.  See the man page of strftime for an
+#. * explanation of the values.
+#: ../src/glib-utils.c:562
+msgid "%d %B %Y, %H:%M"
+msgstr ""
+
+#. Expander
+#: ../src/gtk-utils.c:443
+msgid "Command _Line Output"
+msgstr ""
+
+#: ../src/gtk-utils.c:782
+msgid "Could not display help"
+msgstr ""
+
+#: ../src/main.c:54
+msgid "Add files to the specified archive and quit the program"
+msgstr ""
+
+#: ../src/main.c:55
+msgid "ARCHIVE"
+msgstr ""
+
+#: ../src/main.c:58
+msgid "Add files asking the name of the archive and quit the program"
+msgstr ""
+
+#: ../src/main.c:62
+msgid "Extract archives to the specified folder and quit the program"
+msgstr ""
+
+#: ../src/main.c:63 ../src/main.c:75
+msgid "FOLDER"
+msgstr ""
+
+#: ../src/main.c:66
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr ""
+
+#: ../src/main.c:70
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr ""
+
+#: ../src/main.c:78
+msgid "Create destination folder without asking confirmation"
+msgstr ""
+
+#: ../src/main.c:296 ../src/server.c:444
+msgid "- Create and modify an archive"
+msgstr ""
+
+#: ../src/ui.h:32
+msgid "_Archive"
+msgstr ""
+
+#: ../src/ui.h:33
+msgid "_Edit"
+msgstr ""
+
+#: ../src/ui.h:34
+msgid "_View"
+msgstr ""
+
+#: ../src/ui.h:35
+msgid "_Help"
+msgstr ""
+
+#: ../src/ui.h:36
+msgid "_Arrange Files"
+msgstr ""
+
+#: ../src/ui.h:40
+msgid "Information about the program"
+msgstr ""
+
+#: ../src/ui.h:43
+msgid "_Add Files…"
+msgstr ""
+
+#: ../src/ui.h:44 ../src/ui.h:48
+msgid "Add files to the archive"
+msgstr ""
+
+#: ../src/ui.h:51
+msgid "Add a _Folder…"
+msgstr ""
+
+#: ../src/ui.h:52 ../src/ui.h:56
+msgid "Add a folder to the archive"
+msgstr ""
+
+#: ../src/ui.h:55
+msgid "Add Folder"
+msgstr ""
+
+#: ../src/ui.h:60
+msgid "Close the current archive"
+msgstr ""
+
+#: ../src/ui.h:63
+msgid "Contents"
+msgstr ""
+
+#: ../src/ui.h:64
+msgid "Display the Engrampa Manual"
+msgstr ""
+
+#: ../src/ui.h:69 ../src/ui.h:90
+msgid "Copy the selection"
+msgstr ""
+
+#: ../src/ui.h:73 ../src/ui.h:94
+msgid "Cut the selection"
+msgstr ""
+
+#: ../src/ui.h:77 ../src/ui.h:98
+msgid "Paste the clipboard"
+msgstr ""
+
+#: ../src/ui.h:80 ../src/ui.h:101
+msgid "_Rename…"
+msgstr ""
+
+#: ../src/ui.h:81 ../src/ui.h:102
+msgid "Rename the selection"
+msgstr ""
+
+#: ../src/ui.h:85 ../src/ui.h:106
+msgid "Delete the selection from the archive"
+msgstr ""
+
+#: ../src/ui.h:110
+msgid "Dese_lect All"
+msgstr ""
+
+#: ../src/ui.h:111
+msgid "Deselect all files"
+msgstr ""
+
+#: ../src/ui.h:114 ../src/ui.h:118
+msgid "_Extract…"
+msgstr ""
+
+#: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
+msgid "Extract files from the archive"
+msgstr ""
+
+#: ../src/ui.h:126
+msgid "Find…"
+msgstr ""
+
+#: ../src/ui.h:131
+msgid "_Last Output"
+msgstr ""
+
+#: ../src/ui.h:132
+msgid "View the output produced by the last executed command"
+msgstr ""
+
+#: ../src/ui.h:135
+msgid "New…"
+msgstr ""
+
+#: ../src/ui.h:136
+msgid "Create a new archive"
+msgstr ""
+
+#: ../src/ui.h:139
+msgid "Open…"
+msgstr ""
+
+#: ../src/ui.h:140 ../src/ui.h:144
+msgid "Open archive"
+msgstr ""
+
+#: ../src/ui.h:147
+msgid "_Open With…"
+msgstr ""
+
+#: ../src/ui.h:148
+msgid "Open selected files with an application"
+msgstr ""
+
+#: ../src/ui.h:151
+msgid "Pass_word…"
+msgstr ""
+
+#: ../src/ui.h:152
+msgid "Specify a password for this archive"
+msgstr ""
+
+#: ../src/ui.h:156
+msgid "Show archive properties"
+msgstr ""
+
+#: ../src/ui.h:160
+msgid "Reload current archive"
+msgstr ""
+
+#: ../src/ui.h:163
+msgid "Save As…"
+msgstr ""
+
+#: ../src/ui.h:164
+msgid "Save the current archive with a different name"
+msgstr ""
+
+#: ../src/ui.h:168
+msgid "Select all files"
+msgstr ""
+
+#: ../src/ui.h:172
+msgid "Stop current operation"
+msgstr ""
+
+#: ../src/ui.h:175
+msgid "_Test Integrity"
+msgstr ""
+
+#: ../src/ui.h:176
+msgid "Test whether the archive contains errors"
+msgstr ""
+
+#: ../src/ui.h:180 ../src/ui.h:184
+msgid "Open the selected file"
+msgstr ""
+
+#: ../src/ui.h:188 ../src/ui.h:192
+msgid "Open the selected folder"
+msgstr ""
+
+#: ../src/ui.h:197
+msgid "Go to the previous visited location"
+msgstr ""
+
+#: ../src/ui.h:201
+msgid "Go to the next visited location"
+msgstr ""
+
+#: ../src/ui.h:205
+msgid "Go up one level"
+msgstr ""
+
+#. Translators: the home location is the home folder.
+#: ../src/ui.h:210
+msgid "Go to the home location"
+msgstr ""
+
+#: ../src/ui.h:218
+msgid "_Toolbar"
+msgstr ""
+
+#: ../src/ui.h:219
+msgid "View the main toolbar"
+msgstr ""
+
+#: ../src/ui.h:223
+msgid "Stat_usbar"
+msgstr ""
+
+#: ../src/ui.h:224
+msgid "View the statusbar"
+msgstr ""
+
+#: ../src/ui.h:228
+msgid "_Reversed Order"
+msgstr ""
+
+#: ../src/ui.h:229
+msgid "Reverse the list order"
+msgstr ""
+
+#: ../src/ui.h:233
+msgid "_Folders"
+msgstr ""
+
+#: ../src/ui.h:243
+msgid "View All _Files"
+msgstr ""
+
+#: ../src/ui.h:246
+msgid "View as a F_older"
+msgstr ""
+
+#: ../src/ui.h:254
+msgid "by _Name"
+msgstr ""
+
+#: ../src/ui.h:255
+msgid "Sort file list by name"
+msgstr ""
+
+#: ../src/ui.h:257
+msgid "by _Size"
+msgstr ""
+
+#: ../src/ui.h:258
+msgid "Sort file list by file size"
+msgstr ""
+
+#: ../src/ui.h:260
+msgid "by T_ype"
+msgstr ""
+
+#: ../src/ui.h:261
+msgid "Sort file list by type"
+msgstr ""
+
+#: ../src/ui.h:263
+msgid "by _Date Modified"
+msgstr ""
+
+#: ../src/ui.h:264
+msgid "Sort file list by modification time"
+msgstr ""
+
+#. Translators: this is the "sort by file location" menu item
+#: ../src/ui.h:267
+msgid "by _Location"
+msgstr ""
+
+#. Translators: location is the file location
+#: ../src/ui.h:269
+msgid "Sort file list by location"
 msgstr ""

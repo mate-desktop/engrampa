@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-11 21:26+0200\n"
-"PO-Revision-Date: 2015-09-11 19:26+0000\n"
-"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"POT-Creation-Date: 2015-12-12 22:13+0300\n"
+"PO-Revision-Date: 2015-12-12 19:23+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Marathi (http://www.transifex.com/mate/MATE/language/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -410,28 +410,28 @@ msgstr ""
 msgid "The default size for volumes."
 msgstr ""
 
-#: ../caja/caja-engrampa.c:331
+#: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
 msgstr "येथे काढा"
 
 #. Translators: the current position is the current folder
-#: ../caja/caja-engrampa.c:333
+#: ../caja/caja-engrampa.c:337
 msgid "Extract the selected archive to the current position"
 msgstr "निवडलेला आर्काइव्ह सद्य स्थळावर काढा"
 
-#: ../caja/caja-engrampa.c:350
+#: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
 msgstr "येथे काढा..."
 
-#: ../caja/caja-engrampa.c:351
+#: ../caja/caja-engrampa.c:355
 msgid "Extract the selected archive"
 msgstr "निवडलेले आर्काइव्ह काढा"
 
-#: ../caja/caja-engrampa.c:370
+#: ../caja/caja-engrampa.c:374
 msgid "Compress..."
 msgstr "संकुचन करा..."
 
-#: ../caja/caja-engrampa.c:371
+#: ../caja/caja-engrampa.c:375
 msgid "Create a compressed archive with the selected objects"
 msgstr "निवडलेले घटकांसह संकुचीत आर्काइव्ह बनवा"
 
@@ -481,7 +481,7 @@ msgstr "सर्व आर्काइव्ह"
 msgid "All files"
 msgstr "सर्व फाइल"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7296
+#: ../src/actions.c:794 ../src/fr-window.c:7300
 msgid "Last Output"
 msgstr "शेवटचे प्रदान"
 
@@ -601,7 +601,7 @@ msgid ""
 "%s"
 msgstr "नाव \"%s\" वैध नाही कारण त्या मध्ये अक्षर समाविष्टीत राहू शकत नाही: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7647 ../src/fr-window.c:7649
+#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
 msgid "Please use a different name."
 msgstr "कृपया वेगळे नाव वापरा."
 
@@ -611,7 +611,7 @@ msgid ""
 " folder."
 msgstr "लक्ष्य संचयीका मध्ये संचयन बनविण्याकरीता तुमच्याकडे लेखन परवानगी नाही."
 
-#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6868
+#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -619,11 +619,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "लक्ष्य संचयीका \"%s\" अस्तित्वात नाही.\n\nतुम्हाला बनवायचे आहे का?"
 
-#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6877
+#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
 msgid "Create _Folder"
 msgstr "संचयीका बनवा (_F)"
 
-#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6894
+#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "हे गंतव्य संचयीका निर्माण करता आले नाही: %s."
@@ -641,8 +641,8 @@ msgid "_Overwrite"
 msgstr "खोडून पुन्हलेखन (_O)"
 
 #: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
-#: ../src/fr-window.c:4235 ../src/fr-window.c:6898 ../src/fr-window.c:6917
-#: ../src/fr-window.c:6922
+#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
+#: ../src/fr-window.c:6926
 msgid "Extraction not performed"
 msgstr "बाहेर काढणे लागू केले नाही"
 
@@ -1067,12 +1067,9 @@ msgstr "फाइल्स् दाखवा (_S)"
 #: ../src/fr-window.c:2696
 #, c-format
 msgid "%d file remaining"
-msgstr ""
-
-#: ../src/fr-window.c:2697
-#, c-format
-msgid "%'d files remaining"
-msgstr ""
+msgid_plural "%'d files remaining"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/fr-window.c:2746
 msgid "Extraction completed successfully"
@@ -1131,8 +1128,8 @@ msgstr "आदेश आढळला नाही."
 msgid "Test Result"
 msgstr "कसोटी परिणाम"
 
-#: ../src/fr-window.c:4078 ../src/fr-window.c:8199 ../src/fr-window.c:8239
-#: ../src/fr-window.c:8493
+#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
+#: ../src/fr-window.c:8497
 msgid "Could not perform the operation"
 msgstr "क्रिया करू शकलो नाही"
 
@@ -1201,50 +1198,50 @@ msgstr "नुकताच वापरलेला आर्काइव्ह 
 msgid "Could not save the archive \"%s\""
 msgstr "\"%s\" आर्काइव्ह सुरक्षित करता आला नाही"
 
-#: ../src/fr-window.c:6777
+#: ../src/fr-window.c:6779
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: ../src/fr-window.c:6780
+#: ../src/fr-window.c:6782
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6787
+#: ../src/fr-window.c:6789
 msgid "Replace _All"
 msgstr ""
 
-#: ../src/fr-window.c:6788
+#: ../src/fr-window.c:6790
 msgid "_Skip"
 msgstr ""
 
-#: ../src/fr-window.c:6789
+#: ../src/fr-window.c:6791
 msgid "_Replace"
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7601
+#: ../src/fr-window.c:7605
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7606
+#: ../src/fr-window.c:7610
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7611
+#: ../src/fr-window.c:7615
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7647
+#: ../src/fr-window.c:7651
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1252,7 +1249,7 @@ msgid ""
 "%s"
 msgstr "\"%s\" नावाचे संचयीका आधीच अस्तित्वात आहे.\n\n%s"
 
-#: ../src/fr-window.c:7649
+#: ../src/fr-window.c:7653
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1260,43 +1257,43 @@ msgid ""
 "%s"
 msgstr "\"%s\" नावाची फाइल आधीच अस्तित्वात आहे.\n\n%s"
 
-#: ../src/fr-window.c:7719
+#: ../src/fr-window.c:7723
 msgid "Rename"
 msgstr "पुन्हनामांकन"
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7724
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7728
 msgid "_Rename"
 msgstr "नाव बदला(_R)"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the folder"
 msgstr "संचयीकाचे नाव बदलता आले नाही"
 
-#: ../src/fr-window.c:7741 ../src/fr-window.c:7760
+#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
 msgid "Could not rename the file"
 msgstr "फाइलचे नाव बदलता आले नाही"
 
-#: ../src/fr-window.c:8160
+#: ../src/fr-window.c:8164
 msgid "Paste Selection"
 msgstr "निवड चिटकवा"
 
-#: ../src/fr-window.c:8161
+#: ../src/fr-window.c:8165
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8772
+#: ../src/fr-window.c:8776
 msgid "Add files to an archive"
 msgstr "फाइली आर्काइव्हात मिळवा"
 
-#: ../src/fr-window.c:8815 ../src/main.c:188 ../src/server.c:329
+#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "आर्काइव्ह काढा"
