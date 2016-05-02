@@ -2911,7 +2911,7 @@ compute_base_path (const char *base_dir,
 		return new_path;
 	}
 
-	if (path_len <= base_dir_len)
+	if (path_len < base_dir_len)
 		return NULL;
 
 	base_path = path + base_dir_len;

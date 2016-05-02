@@ -751,7 +751,7 @@ _g_path_get_base_name (const char *path,
 		return _g_path_get_file_name (path);
 
 	base_dir_len = strlen (base_dir);
-	if (strlen (path) <= base_dir_len)
+	if (strlen (path) < base_dir_len)
 		return NULL;
 
 	base_path = path + base_dir_len;
