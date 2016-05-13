@@ -269,7 +269,6 @@ dlg_new_archive (FrWindow  *window,
 {
 	DlgNewData    *data;
 	GtkWidget     *n_new_button;
-	GtkFileFilter *filter;
         GSettings *settings;
 	/*char          *default_ext;*/
 	int            i;
@@ -308,18 +307,6 @@ dlg_new_archive (FrWindow  *window,
 
 	if (default_name != NULL)
 		gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER (data->dialog), default_name);
-
-	filter = gtk_file_filter_new ();
-	gtk_file_filter_set_name (filter, _("All archives"));
-	for (i = 0; data->supported_types[i] != -1; i++)
-		gtk_file_filter_add_mime_type (filter, mime_type_desc[data->supported_types[i]].mime_type);
-	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (data->dialog), filter);
-	gtk_file_chooser_set_filter (GTK_FILE_CHOOSER (data->dialog), filter);
-
-	filter = gtk_file_filter_new ();
-	gtk_file_filter_set_name (filter, _("All files"));
-	gtk_file_filter_add_pattern (filter, "*");
-	gtk_file_chooser_add_filter (GTK_FILE_CHOOSER (data->dialog), filter);
 
 	/**/
 
