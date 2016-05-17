@@ -262,6 +262,7 @@ fr_command_tar_list (FrCommand *comm)
 	begin_tar_command (comm);
 	fr_process_add_arg (comm->process, "--force-local");
 	fr_process_add_arg (comm->process, "--no-wildcards");
+	fr_process_add_arg (comm->process, "--no-unquote");
 	fr_process_add_arg (comm->process, "-tvf");
 	fr_process_add_arg (comm->process, comm->filename);
 	add_compress_arg (comm);
@@ -331,6 +332,7 @@ fr_command_tar_add (FrCommand     *comm,
 	if (! recursive)
 		fr_process_add_arg (comm->process, "--no-recursion");
 	fr_process_add_arg (comm->process, "--no-wildcards");
+	fr_process_add_arg (comm->process, "--no-unquote");
 	fr_process_add_arg (comm->process, "-v");
 	fr_process_add_arg (comm->process, "-p");
 
@@ -401,6 +403,7 @@ fr_command_tar_delete (FrCommand  *comm,
 	fr_process_set_begin_func (comm->process, begin_func__delete, comm);
 	fr_process_add_arg (comm->process, "--force-local");
 	fr_process_add_arg (comm->process, "--no-wildcards");
+	fr_process_add_arg (comm->process, "--no-unquote");
 	fr_process_add_arg (comm->process, "-v");
 	fr_process_add_arg (comm->process, "--delete");
 	fr_process_add_arg (comm->process, "-f");
