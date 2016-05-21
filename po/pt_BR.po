@@ -13,7 +13,7 @@
 # Goedson Teixeira Paixão <goedson@debian.org>, 2004
 # Gustavo Noronha Silva <kov@debian.org>, 2004
 # Krix Apolinário <krixapolinario@gmail.com>, 2009
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2014
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2014,2016
 # Marcio Andre Padula <padula1000@gmail.com>, 2014
 # Marcus Brito <pazu@animegaiden.com.br>, 2002
 # Marcus Vinícius Marques, 2014
@@ -24,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-12 22:13+0300\n"
-"PO-Revision-Date: 2016-03-28 16:04+0000\n"
-"Last-Translator: Matheus Macabu <mkbu95@gmail.com>\n"
+"POT-Creation-Date: 2016-05-16 15:09+0300\n"
+"PO-Revision-Date: 2016-04-18 17:41+0000\n"
+"Last-Translator: Marcelo Ghelman <marcelo.ghelman@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/mate/MATE/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -486,11 +486,11 @@ msgstr "Não foi possível excluir o pacote antigo."
 msgid "Open"
 msgstr "Abrir"
 
-#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5297
+#: ../src/actions.c:393 ../src/fr-window.c:5297
 msgid "All archives"
 msgstr "Todos os pacotes"
 
-#: ../src/actions.c:400 ../src/dlg-new.c:320
+#: ../src/actions.c:400
 msgid "All files"
 msgstr "Todos os arquivos"
 
@@ -686,12 +686,12 @@ msgstr "S_obrescrever arquivos existentes"
 msgid "Do not e_xtract older files"
 msgstr "_Não extrair arquivos mais antigos"
 
-#: ../src/dlg-new.c:442
+#: ../src/dlg-new.c:429
 msgctxt "File"
 msgid "New"
 msgstr "Novo"
 
-#: ../src/dlg-new.c:455
+#: ../src/dlg-new.c:442
 msgctxt "File"
 msgid "Save"
 msgstr "Salvar"
@@ -819,13 +819,13 @@ msgid "You can't add an archive to itself."
 msgstr "Você não pode adicionar um pacote a ele mesmo."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:291 ../src/fr-command-rar.c:399
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:399
 #: ../src/fr-command-tar.c:310
 msgid "Adding file: "
 msgstr "Adicionando arquivo: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:412 ../src/fr-command-rar.c:526
+#: ../src/fr-command-7z.c:419 ../src/fr-command-rar.c:526
 #: ../src/fr-command-tar.c:429
 msgid "Extracting file: "
 msgstr "Extraindo arquivo: "
@@ -1237,13 +1237,13 @@ msgstr "_Substituir"
 #. when renaming a file.
 #: ../src/fr-window.c:7605
 msgid "New name is void, please type a name."
-msgstr "O nome digitado é inválido. Por favor, use um nome diferente."
+msgstr "O novo nome está vazio, digite um nome."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7610
 msgid "New name is the same as old one, please type other name."
-msgstr "O nome digitado é o mesmo que está tentando renomear. Por favor, digite outro nome."
+msgstr "O novo nome é o mesmo que o antigo, digite outro nome."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
@@ -1252,7 +1252,7 @@ msgstr "O nome digitado é o mesmo que está tentando renomear. Por favor, digit
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
-msgstr "O nome \"%s\" não é válido porque contém pelo menos um dos seguintes caracteres: %s. Por favor, escreva outro nome."
+msgstr "O nome \"%s\" não é válido porque contém pelo menos um dos seguintes caracteres: %s. Digite outro nome."
 
 #: ../src/fr-window.c:7651
 #, c-format

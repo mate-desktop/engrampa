@@ -8,14 +8,14 @@
 # Erik, 2014,2016
 # Henrik Mattsson-Mårn <h@reglage.net>, 2016
 # Jimmy Carlson <sanaya@telia.com>, 2002
-# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015
+# Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-12 22:13+0300\n"
-"PO-Revision-Date: 2016-02-10 17:40+0000\n"
-"Last-Translator: Erik\n"
+"POT-Creation-Date: 2016-05-16 15:09+0300\n"
+"PO-Revision-Date: 2016-05-20 00:54+0000\n"
+"Last-Translator: Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/mate/MATE/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -475,11 +475,11 @@ msgstr "Kunde inte ta bort det gamla arkivet."
 msgid "Open"
 msgstr "Öppna"
 
-#: ../src/actions.c:393 ../src/dlg-new.c:313 ../src/fr-window.c:5297
+#: ../src/actions.c:393 ../src/fr-window.c:5297
 msgid "All archives"
 msgstr "Alla arkiv"
 
-#: ../src/actions.c:400 ../src/dlg-new.c:320
+#: ../src/actions.c:400
 msgid "All files"
 msgstr "Alla filer"
 
@@ -675,12 +675,12 @@ msgstr "Skriv _över befintliga filer"
 msgid "Do not e_xtract older files"
 msgstr "Extrahera _inte äldre filer"
 
-#: ../src/dlg-new.c:442
+#: ../src/dlg-new.c:429
 msgctxt "File"
 msgid "New"
 msgstr "Nytt"
 
-#: ../src/dlg-new.c:455
+#: ../src/dlg-new.c:442
 msgctxt "File"
 msgid "Save"
 msgstr "Spara"
@@ -808,13 +808,13 @@ msgid "You can't add an archive to itself."
 msgstr "Du kan inte lägga till ett arkiv till sig självt."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:291 ../src/fr-command-rar.c:399
+#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:399
 #: ../src/fr-command-tar.c:310
 msgid "Adding file: "
 msgstr "Lägger till fil: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:412 ../src/fr-command-rar.c:526
+#: ../src/fr-command-7z.c:419 ../src/fr-command-rar.c:526
 #: ../src/fr-command-tar.c:429
 msgid "Extracting file: "
 msgstr "Extraherar fil: "
@@ -1216,7 +1216,7 @@ msgstr "Ersätt _alla"
 
 #: ../src/fr-window.c:6790
 msgid "_Skip"
-msgstr ""
+msgstr "_Hoppa över"
 
 #: ../src/fr-window.c:6791
 msgid "_Replace"
@@ -1289,7 +1289,7 @@ msgstr "Klistra in markering"
 
 #: ../src/fr-window.c:8165
 msgid "_Destination folder:"
-msgstr ""
+msgstr "_Destinationsmapp:"
 
 #: ../src/fr-window.c:8776
 msgid "Add files to an archive"
@@ -1384,7 +1384,7 @@ msgstr "Information om programmet"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
-msgstr ""
+msgstr "_Lägg till filer..."
 
 #: ../src/ui.h:44 ../src/ui.h:48
 msgid "Add files to the archive"
@@ -1392,7 +1392,7 @@ msgstr "Lägg till filer till arkivet"
 
 #: ../src/ui.h:51
 msgid "Add a _Folder…"
-msgstr ""
+msgstr "Lägg till en _Mapp..."
 
 #: ../src/ui.h:52 ../src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1428,7 +1428,7 @@ msgstr "Klistra in urklipp"
 
 #: ../src/ui.h:80 ../src/ui.h:101
 msgid "_Rename…"
-msgstr ""
+msgstr "_Döp om..."
 
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
@@ -1448,7 +1448,7 @@ msgstr "Avmarkera alla filer"
 
 #: ../src/ui.h:114 ../src/ui.h:118
 msgid "_Extract…"
-msgstr ""
+msgstr "_Extrahera..."
 
 #: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
 msgid "Extract files from the archive"
@@ -1456,7 +1456,7 @@ msgstr "Extrahera filer från arkivet"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr ""
+msgstr "Hitta..."
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1484,7 +1484,7 @@ msgstr "Öppna arkiv"
 
 #: ../src/ui.h:147
 msgid "_Open With…"
-msgstr ""
+msgstr "_Öppna med..."
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
@@ -1492,7 +1492,7 @@ msgstr "Öppna valda filer med ett program"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"
-msgstr ""
+msgstr "Lösen_ord..."
 
 #: ../src/ui.h:152
 msgid "Specify a password for this archive"
