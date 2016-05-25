@@ -3874,6 +3874,7 @@ file_motion_notify_callback (GtkWidget *widget,
 	FrWindow    *window = user_data;
 	GdkCursor   *cursor;
 	GtkTreePath *last_hover_path;
+	GdkDisplay  *display;
 	GtkTreeIter  iter;
 
 	if (! window->priv->single_click)
@@ -3889,8 +3890,10 @@ file_motion_notify_callback (GtkWidget *widget,
 				       &window->priv->list_hover_path,
 				       NULL, NULL, NULL);
 
+	display = gtk_widget_get_display (GTK_WIDGET (widget));
+
 	if (window->priv->list_hover_path != NULL)
-		cursor = gdk_cursor_new (GDK_HAND2);
+		cursor = gdk_cursor_new_for_display (display, GDK_HAND2);
 	else
 		cursor = NULL;
 
