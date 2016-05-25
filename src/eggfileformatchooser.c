@@ -413,7 +413,9 @@ egg_file_format_chooser_init (EggFileFormatChooser *self)
 
   view = gtk_tree_view_new_with_model (GTK_TREE_MODEL (self->priv->model));
   self->priv->selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
+#if !GTK_CHECK_VERSION (3, 0, 0)
   gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (view), TRUE);
+#endif
 
 /* file format column */
 
