@@ -5636,7 +5636,9 @@ fr_window_construct (FrWindow *window)
 	g_object_set_data (G_OBJECT (window->priv->list_store), "FrWindow", window);
 	window->priv->list_view = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->priv->list_store));
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (window->priv->list_view), TRUE);
+#endif
 	add_file_list_columns (window, GTK_TREE_VIEW (window->priv->list_view));
 	gtk_tree_view_set_enable_search (GTK_TREE_VIEW (window->priv->list_view),
 					 TRUE);
