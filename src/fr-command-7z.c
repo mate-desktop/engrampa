@@ -599,7 +599,8 @@ fr_command_7z_get_capabilities (FrCommand  *comm,
 		if (is_mime_type (mime_type, "application/x-rar")
 		    || is_mime_type (mime_type, "application/x-cbr"))
 		{
-			if (! check_command || g_file_test ("/usr/lib/p7zip/Codecs/Rar29.so", G_FILE_TEST_EXISTS))
+			if (! check_command || g_file_test ("/usr/lib/p7zip/Codecs/Rar29.so", G_FILE_TEST_EXISTS) || g_file_test ("/usr/lib/p7zip/Codecs/Rar.so", G_FILE_TEST_EXISTS)
+			    || g_file_test ("/usr/libexec/p7zip/Codecs/Rar29.so", G_FILE_TEST_EXISTS) || g_file_test ("/usr/libexec/p7zip/Codecs/Rar.so", G_FILE_TEST_EXISTS))
 				capabilities |= FR_COMMAND_CAN_READ;
 		}
 		else
