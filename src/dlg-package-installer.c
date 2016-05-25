@@ -166,8 +166,10 @@ install_packages (InstallerData *idata)
 		window = gtk_widget_get_window (GTK_WIDGET (idata->window));
 		if (window != NULL) {
 			GdkCursor *cursor;
+			GdkDisplay *display;
 
-			cursor = gdk_cursor_new (GDK_WATCH);
+			display = gtk_widget_get_display (GTK_WIDGET (idata));
+			cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
 			gdk_window_set_cursor (window, cursor);
 #if GTK_CHECK_VERSION (3, 0, 0)
 			g_object_unref (cursor);
