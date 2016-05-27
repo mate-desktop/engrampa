@@ -32,10 +32,6 @@
 #include "preferences.h"
 #include "dlg-add-files.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 typedef struct {
 	FrWindow  *window;
 	GSettings *settings;
@@ -171,7 +167,7 @@ add_files_cb (GtkWidget *widget,
 	 * newer than the archive version. */
 	data->add_if_newer_checkbutton = gtk_check_button_new_with_mnemonic (_("Add only if _newer"));
 
-	main_box = gtk_hbox_new (FALSE, 20);
+	main_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 20);
 	gtk_container_set_border_width (GTK_CONTAINER (main_box), 0);
 	gtk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (file_sel), main_box);
 

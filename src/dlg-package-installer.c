@@ -171,11 +171,7 @@ install_packages (InstallerData *idata)
 			display = gtk_widget_get_display (GTK_WIDGET (idata));
 			cursor = gdk_cursor_new_for_display (display, GDK_WATCH);
 			gdk_window_set_cursor (window, cursor);
-#if GTK_CHECK_VERSION (3, 0, 0)
 			g_object_unref (cursor);
-#else
-			gdk_cursor_unref (cursor);
-#endif
 		}
 
 		proxy = g_dbus_proxy_new_sync (connection,

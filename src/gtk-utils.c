@@ -27,11 +27,6 @@
 
 #define LOAD_BUFFER_SIZE 65536
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 static void
 count_selected (GtkTreeModel *model,
 		GtkTreePath  *path,
@@ -113,7 +108,7 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
 
-	hbox = gtk_hbox_new (FALSE, 24);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 24);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
 
 	gtk_box_pack_start (GTK_BOX (hbox), image,
@@ -215,19 +210,15 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	/* Add label and image */
 
 	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
-#else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 
 	label = gtk_label_new_with_mnemonic (message);
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), FALSE);
-#if GTK_CHECK_VERSION (3, 0, 0)
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
-	gtk_widget_set_valign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+	gtk_label_set_yalign (GTK_LABEL (label), 0.0);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
 #endif
@@ -239,8 +230,8 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	gtk_entry_set_text (GTK_ENTRY (entry), default_value);
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), entry);
 
-	hbox = gtk_hbox_new (FALSE, 12);
-	vbox = gtk_vbox_new (FALSE, 12);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
 
 	gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
@@ -315,7 +306,7 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
 
-	hbox = gtk_hbox_new (FALSE, 24);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 24);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
 
 	gtk_box_pack_start (GTK_BOX (hbox), image,
@@ -395,19 +386,15 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	/* Add label and image */
 
 	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
-#else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 
 	label = gtk_label_new ("");
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-#if GTK_CHECK_VERSION (3, 0, 0)
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
-	gtk_widget_set_valign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+	gtk_label_set_yalign (GTK_LABEL (label), 0.0);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
 #endif
@@ -478,9 +465,9 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 		gtk_text_view_set_cursor_visible (GTK_TEXT_VIEW (text_view), FALSE);
 	}
 
-	vbox = gtk_vbox_new (FALSE, 6);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 
-	hbox = gtk_hbox_new (FALSE, 12);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX (vbox), hbox, TRUE, TRUE, 0);
@@ -682,11 +669,7 @@ get_themed_icon_pixbuf (GThemedIcon  *icon,
 		g_clear_error (&error);
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	g_object_unref (icon_info);
-#else
-	gtk_icon_info_free (icon_info);
-#endif
 	g_strfreev (icon_names);
 
 	return pixbuf;
