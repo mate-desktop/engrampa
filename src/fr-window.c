@@ -100,12 +100,6 @@ static int             dir_tree_icon_size = 0;
 #define FR_CLIPBOARD (gdk_atom_intern_static_string ("_RNGRAMPA_SPECIAL_CLIPBOARD"))
 #define FR_SPECIAL_URI_LIST (gdk_atom_intern_static_string ("application/engrampa-uri-list"))
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_hpaned_new() gtk_paned_new(GTK_ORIENTATION_HORIZONTAL)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 static GtkTargetEntry clipboard_targets[] = {
 	{ "application/engrampa-uri-list", 0, 1 }
 };
@@ -2527,7 +2521,7 @@ create_the_progress_dialog (FrWindow *window)
 
 	/* Main */
 
-	hbox = gtk_hbox_new (FALSE, 24);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 24);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (d)), hbox, FALSE, FALSE, 10);
 
@@ -2538,7 +2532,7 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_misc_set_alignment (GTK_MISC (window->priv->pd_icon), 0.5, 0.0);
 	gtk_box_pack_start (GTK_BOX (hbox), window->priv->pd_icon, FALSE, FALSE, 0);
 
-	vbox = gtk_vbox_new (FALSE, 5);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
 	gtk_box_pack_start (GTK_BOX (hbox), vbox, TRUE, TRUE, 0);
 
 	/* action description */
@@ -2568,7 +2562,7 @@ create_the_progress_dialog (FrWindow *window)
 	align = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
 	gtk_alignment_set_padding (GTK_ALIGNMENT (align), 0, 6, 0, 0);
 
-	progress_vbox = gtk_vbox_new (FALSE, 6);
+	progress_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_container_add (GTK_CONTAINER (align), progress_vbox);
 	gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
 
@@ -5636,9 +5630,6 @@ fr_window_construct (FrWindow *window)
 	g_object_set_data (G_OBJECT (window->priv->list_store), "FrWindow", window);
 	window->priv->list_view = gtk_tree_view_new_with_model (GTK_TREE_MODEL (window->priv->list_store));
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (window->priv->list_view), TRUE);
-#endif
 	add_file_list_columns (window, GTK_TREE_VIEW (window->priv->list_view));
 	gtk_tree_view_set_enable_search (GTK_TREE_VIEW (window->priv->list_view),
 					 TRUE);
@@ -5717,7 +5708,7 @@ fr_window_construct (FrWindow *window)
 
 	/* filter bar */
 
-	window->priv->filter_bar = filter_box = gtk_hbox_new (FALSE, 6);
+	window->priv->filter_bar = filter_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 	gtk_container_set_border_width (GTK_CONTAINER (filter_box), 3);
 	fr_window_attach (FR_WINDOW (window), window->priv->filter_bar, FR_WINDOW_AREA_FILTERBAR);
 
@@ -5793,12 +5784,12 @@ fr_window_construct (FrWindow *window)
 
 	/* side pane */
 
-	window->priv->sidepane = gtk_vbox_new (FALSE, 0);
+	window->priv->sidepane = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
 	sidepane_title = gtk_frame_new (NULL);
 	gtk_frame_set_shadow_type (GTK_FRAME (sidepane_title), GTK_SHADOW_ETCHED_IN);
 
-	sidepane_title_box = gtk_hbox_new (FALSE, 0);
+	sidepane_title_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_container_set_border_width (GTK_CONTAINER (sidepane_title_box), 2);
 	gtk_container_add (GTK_CONTAINER (sidepane_title), sidepane_title_box);
 	sidepane_title_label = gtk_label_new (_("Folders"));
@@ -5821,7 +5812,7 @@ fr_window_construct (FrWindow *window)
 
 	/* main content */
 
-	window->priv->paned = gtk_hpaned_new ();
+	window->priv->paned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
 	gtk_paned_pack1 (GTK_PANED (window->priv->paned), window->priv->sidepane, FALSE, TRUE);
 	gtk_paned_pack2 (GTK_PANED (window->priv->paned), list_scrolled_window, TRUE, TRUE);
 	gtk_paned_set_position (GTK_PANED (window->priv->paned), g_settings_get_int (window->priv->settings_ui, PREF_UI_SIDEBAR_WIDTH));
@@ -5915,9 +5906,7 @@ fr_window_construct (FrWindow *window)
 
 	window->priv->toolbar = toolbar = gtk_ui_manager_get_widget (ui, "/ToolBar");
 	gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), TRUE);
-#if GTK_CHECK_VERSION(3,0,0)
 	gtk_style_context_add_class (gtk_widget_get_style_context (toolbar), GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
-#endif
 	set_action_important (ui, "/ToolBar/Extract_Toolbar");
 
 	/* location bar */
@@ -5929,7 +5918,7 @@ fr_window_construct (FrWindow *window)
 
 	/* current location */
 
-	location_box = gtk_hbox_new (FALSE, 6);
+	location_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 	/* Translators: after the colon there is a folder name. */
 	window->priv->location_label = gtk_label_new_with_mnemonic (_("_Location:"));
 	gtk_box_pack_start (GTK_BOX (location_box),
@@ -5990,10 +5979,8 @@ fr_window_construct (FrWindow *window)
 	statusbar = GTK_STATUSBAR (window->priv->statusbar);
 
 	/*reduce size of statusbar */
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_margin_top (GTK_WIDGET (statusbar), 0);
 	gtk_widget_set_margin_bottom (GTK_WIDGET (statusbar), 0);
-#endif
 
 	statusbar_box = gtk_statusbar_get_message_area (statusbar);
 	gtk_box_set_homogeneous (GTK_BOX (statusbar_box), FALSE);
@@ -6006,7 +5993,7 @@ fr_window_construct (FrWindow *window)
 	{
 		GtkWidget *vbox;
 
-		vbox = gtk_vbox_new (FALSE, 0);
+		vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 		gtk_box_pack_start (GTK_BOX (statusbar_box), vbox, FALSE, FALSE, 0);
 		gtk_box_pack_start (GTK_BOX (vbox), window->priv->progress_bar, TRUE, TRUE, 1);
 		gtk_widget_show (vbox);
@@ -7333,7 +7320,7 @@ fr_window_view_last_output (FrWindow   *window,
 
 	/**/
 
-	vbox = gtk_vbox_new (FALSE, 6);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
 
 	gtk_container_add (GTK_CONTAINER (scrolled), text_view);
@@ -8235,11 +8222,7 @@ fr_window_open_files_with_application (FrWindow *window,
 	for (scan = file_list; scan; scan = scan->next)
 		uris = g_list_prepend (uris, g_filename_to_uri (scan->data, NULL, NULL));
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	context = gdk_display_get_app_launch_context (gtk_widget_get_display (GTK_WIDGET (window)));
-#else
-	context = gdk_app_launch_context_new ();
-#endif
 	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (window)));
 	gdk_app_launch_context_set_timestamp (context, 0);
 
@@ -8489,11 +8472,7 @@ fr_window_open_extracted_files (OpenFilesData *odata)
 		}
 	}
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	context = gdk_display_get_app_launch_context (gtk_widget_get_display (GTK_WIDGET (odata->window)));
-#else
-	context = gdk_app_launch_context_new ();
-#endif
 	gdk_app_launch_context_set_screen (context, gtk_widget_get_screen (GTK_WIDGET (odata->window)));
 	gdk_app_launch_context_set_timestamp (context, 0);
 	result = g_app_info_launch_uris (app, files_to_open, G_APP_LAUNCH_CONTEXT (context), &error);

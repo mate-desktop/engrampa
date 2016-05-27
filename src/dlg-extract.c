@@ -32,11 +32,6 @@
 #include "typedefs.h"
 #include "dlg-extract.h"
 
-#if GTK_CHECK_VERSION (3, 0, 0)
-#define gtk_vbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_VERTICAL, Y)
-#define gtk_hbox_new(X, Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL, Y)
-#endif
-
 typedef struct {
 	FrWindow     *window;
 	GSettings    *settings;
@@ -325,13 +320,13 @@ create_extra_widget (DialogData *data)
 	GtkWidget *label48;
 	GtkWidget *vbox15;
 
-	vbox1 = gtk_vbox_new (FALSE, 6);
+	vbox1 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_container_set_border_width (GTK_CONTAINER (vbox1), 0);
 
-	hbox28 = gtk_hbox_new (FALSE, 12);
+	hbox28 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
 	gtk_box_pack_start (GTK_BOX (vbox1), hbox28, TRUE, TRUE, 0);
 
-	vbox19 = gtk_vbox_new (FALSE, 6);
+	vbox19 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start (GTK_BOX (hbox28), vbox19, TRUE, TRUE, 0);
 
 	e_files_label = gtk_label_new ("");
@@ -340,7 +335,7 @@ create_extra_widget (DialogData *data)
 	gtk_label_set_justify (GTK_LABEL (e_files_label), GTK_JUSTIFY_LEFT);
 	gtk_misc_set_alignment (GTK_MISC (e_files_label), 0, 0.5);
 
-	hbox29 = gtk_hbox_new (FALSE, 0);
+	hbox29 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (vbox19), hbox29, TRUE, TRUE, 0);
 
 	label47 = gtk_label_new ("    ");
@@ -380,7 +375,7 @@ create_extra_widget (DialogData *data)
 	gtk_radio_button_set_group (GTK_RADIO_BUTTON (data->e_selected_radiobutton), e_files_radiobutton_group);
 	e_files_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (data->e_selected_radiobutton));
 
-	vbox20 = gtk_vbox_new (FALSE, 6);
+	vbox20 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start (GTK_BOX (hbox28), vbox20, TRUE, TRUE, 0);
 
 	e_actions_label = gtk_label_new ("");
@@ -390,14 +385,14 @@ create_extra_widget (DialogData *data)
 	gtk_label_set_justify (GTK_LABEL (e_actions_label), GTK_JUSTIFY_LEFT);
 	gtk_misc_set_alignment (GTK_MISC (e_actions_label), 0, 0.5);
 
-	hbox30 = gtk_hbox_new (FALSE, 0);
+	hbox30 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (vbox20), hbox30, TRUE, TRUE, 0);
 
 	label48 = gtk_label_new ("    ");
 	gtk_box_pack_start (GTK_BOX (hbox30), label48, FALSE, FALSE, 0);
 	gtk_label_set_justify (GTK_LABEL (label48), GTK_JUSTIFY_LEFT);
 
-	vbox15 = gtk_vbox_new (FALSE, 6);
+	vbox15 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_box_pack_start (GTK_BOX (hbox30), vbox15, TRUE, TRUE, 0);
 
 	data->e_recreate_dir_checkbutton = gtk_check_button_new_with_mnemonic (_("Re-crea_te folders"));
