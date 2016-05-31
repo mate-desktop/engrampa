@@ -105,8 +105,6 @@ COMMON_SOURCES = 			\
 	fr-command-iso.h		\
 	fr-command-jar.h		\
 	fr-command-jar.c		\
-	fr-command-json.h		\
-	fr-command-json.c		\
 	fr-command-lha.c		\
 	fr-command-lha.h		\
 	fr-command-rar.c		\
@@ -160,6 +158,8 @@ COMMON_SOURCES = 			\
 
 if ENABLE_JSON_GLIB
 COMMON_SOURCES +=			\
+	fr-command-json.h		\
+	fr-command-json.c		\
 	fr-command-unarchiver.h		\
 	fr-command-unarchiver.c
 endif
