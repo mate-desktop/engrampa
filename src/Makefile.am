@@ -105,6 +105,8 @@ COMMON_SOURCES = 			\
 	fr-command-iso.h		\
 	fr-command-jar.h		\
 	fr-command-jar.c		\
+	fr-command-json.h		\
+	fr-command-json.c		\
 	fr-command-lha.c		\
 	fr-command-lha.h		\
 	fr-command-rar.c		\

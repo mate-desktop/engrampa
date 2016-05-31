@@ -40,6 +40,7 @@
 #include "fr-command-rpm.h"
 #include "fr-command-tar.h"
 #if HAVE_JSON_GLIB
+  #include "fr-command-json.h"
   #include "fr-command-unarchiver.h"
 #endif
 #include "fr-command-unstuff.h"
@@ -80,6 +81,7 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-ms-dos-executable",    ".exe",      N_("Self-extracting zip (.exe)"), 0 },
 	{ "application/x-gzip",                 ".gz",       NULL, 0 },
 	{ "application/x-java-archive",         ".jar",      N_("Jar (.jar)"), 0 },
+	{ "application/json",                   ".json",     N_("JSON string (.json)"), 0 },
 	{ "application/x-lha",                  ".lzh",      N_("Lha (.lzh)"), 0 },
 	{ "application/x-lrzip",                ".lrz",      N_("Lrzip (.lrz)"), 0},
 	{ "application/x-lrzip-compressed-tar", ".tar.lrz",  N_("Tar compressed with lrzip (.tar.lrz)"), 0 },
@@ -123,6 +125,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".gz", "application/x-gzip" },
 	{ ".iso", "application/x-cd-image" },
 	{ ".jar", "application/x-java-archive" },
+	{ ".json", "application/json" },
 	{ ".lha", "application/x-lha" },
 	{ ".lrz", "application/x-lrzip" },
 	{ ".lzh", "application/x-lha" },
@@ -360,6 +363,7 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_LRZIP);
 	register_command (FR_TYPE_COMMAND_ZOO);
 #if HAVE_JSON_GLIB
+	register_command (FR_TYPE_COMMAND_JSON);
 	register_command (FR_TYPE_COMMAND_UNARCHIVER);
 #endif
 }
