@@ -23,7 +23,6 @@ distuninstallcheck_listfiles = find . -type f -print | grep -v 'omf' | grep -v '
 EXTRA_DIST = 			\
 	AUTHORS			\
 	HACKING			\
-	MAINTAINERS		\
 	NEWS			\
 	README			\
 	autogen.sh		\
