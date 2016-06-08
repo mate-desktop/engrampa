@@ -1,3 +1,22 @@
+1.15.0
+------
+
+  * sync with Transiflex
+  * don't use gdk_drawable_get_size
+  * remove old gnome files
+  * drop old GTK+2 code
+  * require GTK+ 3.14, drop --with-gtk build option
+  * Gtk3 dlg-package-installer: do not use deprecated gdk_cursor_new
+  * GTK3 gtk-utils: do not use deprecated gtk_icon_info_free
+  * GTK3 fr-window: don't use deprecated gtk_tree_view_set_rules_hint
+  * Gtk3 fr-window: do not use deprecated gdk_cursor_new
+  * GTK3 eggfileformatchooser: don't use deprecated gtk_tree_view_set_rules_hint
+  * GTK3: don't use deprecated gdk_threads_{enter/leave} ()
+  * caja extension: don't use *_CFLAGS that depend on GTK+
+  * p7zip-rar 15.14 supported
+  * Give unrar priority over p7zip
+  * 7z: Fixed problems with files prefixed '@'
+
 1.14.1
 ------
 
