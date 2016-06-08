@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-16 15:09+0300\n"
-"PO-Revision-Date: 2016-03-24 11:18+0000\n"
+"PO-Revision-Date: 2016-05-29 00:07+0000\n"
 "Last-Translator: Polihron Alexandru (APoliTech) <ppolihron@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,7 @@ msgid ""
 "lzop, rzip, xz</li> </ul> <p> Engrampa is a fork of File Roller and part of "
 "the MATE Desktop Environment. If you would like to know more about MATE and "
 "Engrampa, please visit the project's home page. </p>"
-msgstr ""
+msgstr "<p>Engrampa este un manager de arhive pentru mediul MATE . Acesta vă permite să creați și să modificați arhive , vizualizarea conținutului unei arhive , vizualizați un fișier conținut într- o arhivă și se extrage fișierele din arhivă . </p> <p>Engrampa este doar un front-end (o interfață grafică) pentru programe de arhivare, cum ar fi tar și zip. Tipurile de fișiere acceptate sunt: </ P> <ul> <li> 7-Zip comprima Fișier (.7z) </ li> <li> WinAce comprima Fișier (fisierele .ace) </ li> <li> ALZip comprima Fișier (.alz) </ li> <li> AIX Arhiva mică indexată Arhiva (.ar) </ li> <li> ARJ comprima Arhiva (.arj) </ li><Li> Cabinet fișiere (cab) </ li> <li> UNIX CPIO Arhiva (.cpio) </ li> <li> Debian Linux Package (.deb) [Mod Read-only] </ li> <li> ISO-9660 CD-disc Image [mod Read-only] (Iso) </ li> <li> Java Archive (.jar) </ li> <li> arhiva Java Enterprise (.ear) </ li> <li> Java Web Archive (.war) </ li> <li> LHA Arhiva (.lzh, .lha) </ li> <li> WinRAR comprima Arhiva (.rar) </ li> <li> RAR arhiva de benzi desenate de carte (. CBR) </ li> <li> RPM pachet Linux (rpm) [mod Read-only] </ li> <li> Tape Arhiva de fișiere necomprimate (.tar) sau comprimate cu: gzip (tar.gz, .tgz ), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), comprima (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar .lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), XZ (.tar.xz) </ li> <li> Arhivele StuffIt (.bin, .sit) < / li> <li> ZIP Arhiva (.zip) </ li> <li> ZIP arhivate de carte de benzi desenate (.cbz) </ li> <li> ZOO comprima Arhiva de fișiere (.zoo) </ li> <li>  fișiere comprimate cu gzip, bzip, bzip2, comprima, lrzip, lzip, lzop, rzip, XZ </ li> </ ul> <p> Engrampa este o combinatie de File Roller și o parte din MATE Desktop Environment. Daca doriti sa aflati mai multe despre MATE și Engrampa, vă rugăm să vizitați pagina de start a proiectului.</p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -238,9 +238,9 @@ msgid ""
 msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Fișierul a fost modificat cu o aplicație externă . Dacă nu vă actualizați fișierul din arhivă , toate modificările vor fi pierdute ."
+msgstr[1] "%d fișierele au fost modificate cu o aplicație externă . Dacă nu vă actualizați fișierele din arhivă , toate modificările vor fi pierdute ."
+msgstr[2] "%d fișierele au fost modificate cu o aplicație externă . Dacă nu vă actualizați fișierele din arhivă , toate modificările vor fi pierdute ."
 
 #: ../data/ui/update.ui.h:2
 msgid "_Update"
@@ -923,7 +923,7 @@ msgstr "Tar comprimat cu lzop (.tar.lzo)"
 
 #: ../src/fr-init.c:92
 msgid "Windows Imaging Format (.wim)"
-msgstr ""
+msgstr "Windows Imaging Format (.wim)"
 
 #: ../src/fr-init.c:93
 msgid "Rar (.rar)"
