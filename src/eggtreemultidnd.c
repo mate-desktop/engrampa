@@ -317,16 +317,39 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
       model = gtk_tree_view_get_model (GTK_TREE_VIEW (widget));
       if (egg_tree_multi_drag_source_row_draggable (EGG_TREE_MULTI_DRAG_SOURCE (model), path_list))
 	{
-	  GtkTargetList *target_list = gtk_target_list_new (target_table,
-							    G_N_ELEMENTS (target_table));
-
+	  GtkTargetList *target_list;
+	  GtkTreePath   *tree_path;
+	  int            cell_x;
+	  int            cell_y;
+	  double         cursor_pos;
+ 
+	  target_list = gtk_target_list_new (target_table, G_N_ELEMENTS (target_table));
 	  context = gtk_drag_begin (widget,
 				    target_list,
 				    GDK_ACTION_COPY,
 				    priv_data->pressed_button,
 				    (GdkEvent*)event);
 	  set_context_data (context, path_list);
-	  gtk_drag_set_icon_default (context);
+
+	  if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
+					     priv_data->x,
+					     priv_data->y,
+					     &tree_path,
+					     NULL,
+					     &cell_x,
+					     &cell_y))
+	  {
+		  cairo_surface_t *drag_icon;
+
+		  drag_icon = gtk_tree_view_create_row_drag_icon (GTK_TREE_VIEW (widget), tree_path);
+		  cairo_surface_set_device_offset (drag_icon, -cell_x, -cell_y);
+		  gtk_drag_set_icon_surface (context, drag_icon);
+
+		  cairo_surface_destroy (drag_icon);
+		  gtk_tree_path_free (tree_path);
+	  }
+	  else
+		  gtk_drag_set_icon_default (context);
 
 	  gtk_target_list_unref (target_list);
 	}
