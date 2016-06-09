@@ -5913,6 +5913,7 @@ fr_window_construct (FrWindow *window)
 	window->priv->location_bar = gtk_ui_manager_get_widget (ui, "/LocationBar");
 	gtk_toolbar_set_show_arrow (GTK_TOOLBAR (window->priv->location_bar), FALSE);
 	gtk_toolbar_set_style (GTK_TOOLBAR (window->priv->location_bar), GTK_TOOLBAR_BOTH_HORIZ);
+	gtk_style_context_add_class (gtk_widget_get_style_context (window->priv->location_bar), GTK_STYLE_CLASS_TOOLBAR);
 	set_action_important (ui, "/LocationBar/GoBack");
 
 	/* current location */
