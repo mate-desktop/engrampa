@@ -4833,7 +4833,7 @@ add_file_list_columns (FrWindow    *window,
 		GValue  value = { 0, };
 
 		renderer = gtk_cell_renderer_text_new ();
-		column = gtk_tree_view_column_new_with_attributes (_(titles[j]),
+		column = gtk_tree_view_column_new_with_attributes (g_dpgettext2 (NULL, "File", titles[j]),
 								   renderer,
 								   "text", i,
 								   NULL);
