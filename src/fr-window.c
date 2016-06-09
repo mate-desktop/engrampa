@@ -5062,11 +5062,6 @@ pref_click_policy_changed (GSettings *settings,
 }
 
 
-static void gh_unref_pixbuf (gpointer  key,
-			     gpointer  value,
-			     gpointer  user_data);
-
-
 static void
 pref_use_mime_icons_changed (GSettings *settings,
                              const char *key,
