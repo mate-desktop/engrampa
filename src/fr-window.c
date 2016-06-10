@@ -944,7 +944,7 @@ sort_by_name (gconstpointer  ptr1,
 			return 1;
 	}
 
-	return strcasecmp (fdata1->list_name, fdata2->list_name);
+	return strcmp (fdata1->sort_key, fdata2->sort_key);
 }
 
 
@@ -1118,7 +1118,7 @@ compute_file_list_name (FrWindow   *window,
 		return FALSE;
 
 	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT) {
-		fdata->list_name = g_strdup (fdata->name);
+		file_data_set_list_name (fdata, fdata->name);
 		if (fdata->dir)
 			fdata->dir_size = 0;
 		return FALSE;
@@ -1135,7 +1135,7 @@ compute_file_list_name (FrWindow   *window,
 	scan = fdata->full_path + current_dir_len;
 	end = strchr (scan, '/');
 	if ((end == NULL) && ! fdata->dir) { /* file */
-		fdata->list_name = g_strdup (scan);
+		file_data_set_list_name (fdata, scan);
 	}
 	else { /* folder */
 		char *dir_name;
@@ -1154,8 +1154,10 @@ compute_file_list_name (FrWindow   *window,
 
 		if ((end != NULL) && (*(end + 1) != '\0'))
 			fdata->list_dir = TRUE;
-		fdata->list_name = dir_name;
+		file_data_set_list_name (fdata, dir_name);
 		fdata->dir_size = get_dir_size (window, current_dir, dir_name);
+
+		g_free (dir_name);
 	}
 
 	return TRUE;
@@ -1181,8 +1183,7 @@ fr_window_compute_list_names (FrWindow  *window,
 	for (i = 0; i < files->len; i++) {
 		FileData *fdata = g_ptr_array_index (files, i);
 
-		g_free (fdata->list_name);
-		fdata->list_name = NULL;
+		file_data_set_list_name (fdata, NULL);
 		fdata->list_dir = FALSE;
 
 		/* the files array is sorted by path, when the visible list

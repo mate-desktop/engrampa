@@ -40,13 +40,14 @@ typedef struct {
 	gboolean    dir;              /* Whether this is a directory listed in the archive */
 	goffset     dir_size;
 	const char *content_type;
-	
+
 	/* Additional data. */
 
 	gboolean    list_dir;         /* Whether this entry is used to show
 				       * a directory. */
 	char       *list_name;        /* The string visualized in the list
 				       * view. */
+	char       *sort_key;
 
 	/* Private data */
 
@@ -57,14 +58,15 @@ typedef struct {
 
 GType           file_data_get_type            (void);
 FileData *      file_data_new                 (void);
-FileData *      file_data_copy                (FileData *src);
-void            file_data_free                (FileData *fdata);
-void            file_data_update_content_type (FileData *fdata);
-gboolean        file_data_is_dir              (FileData *fdata);
-
-int  file_data_compare_by_path                (gconstpointer a, 
-				               gconstpointer b);
-int  find_path_in_file_data_array             (GPtrArray   *array,
-				               const char *path);
+FileData *      file_data_copy                (FileData      *src);
+void            file_data_free                (FileData      *fdata);
+void            file_data_update_content_type (FileData      *fdata);
+gboolean        file_data_is_dir              (FileData      *fdata);
+void            file_data_set_list_name       (FileData      *fdata,
+					       const char    *value);
+int  file_data_compare_by_path                (gconstpointer  a,
+				               gconstpointer  b);
+int  find_path_in_file_data_array             (GPtrArray     *array,
+				               const char    *path);
 
 #endif /* FILE_DATA_H */
