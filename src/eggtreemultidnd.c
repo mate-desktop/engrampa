@@ -321,8 +321,7 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
 	  GtkTreePath   *tree_path;
 	  int            cell_x;
 	  int            cell_y;
-	  double         cursor_pos;
- 
+
 	  target_list = gtk_target_list_new (target_table, G_N_ELEMENTS (target_table));
 	  context = gtk_drag_begin (widget,
 				    target_list,
