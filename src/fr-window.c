@@ -1156,8 +1156,6 @@ compute_file_list_name (FrWindow   *window,
 			fdata->list_dir = TRUE;
 		file_data_set_list_name (fdata, dir_name);
 		fdata->dir_size = get_dir_size (window, current_dir, dir_name);
-
-		g_free (dir_name);
 	}
 
 	return TRUE;
@@ -1178,7 +1176,7 @@ fr_window_compute_list_names (FrWindow  *window,
 
 	current_dir = fr_window_get_current_location (window);
 	current_dir_len = strlen (current_dir);
-	names_hash = g_hash_table_new (g_str_hash, g_str_equal);
+	names_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
 	for (i = 0; i < files->len; i++) {
 		FileData *fdata = g_ptr_array_index (files, i);
