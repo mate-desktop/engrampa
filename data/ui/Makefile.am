@@ -1,13 +1,12 @@
 uidir = $(datadir)/engrampa/ui
 ui_DATA = 			\
-	add-options.ui	\
+	add-options.ui		\
 	batch-add-files.ui	\
 	batch-password.ui	\
 	delete.ui		\
-	new.ui		\
-	open-with.ui		\
+	new.ui			\
 	password.ui		\
-	properties.ui	\
+	properties.ui		\
 	update.ui
 
 EXTRA_DIST = $(ui_DATA)
