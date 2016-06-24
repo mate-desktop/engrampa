@@ -20,6 +20,7 @@ GLIB_GSETTINGS
 
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 AC_PATH_PROG(GLIB_MKENUMS, glib-mkenums)
+AC_PATH_PROG(GLIB_COMPILE_RESOURCES, glib-compile-resources)
 
 dnl ==========================================================================
 dnl
@@ -215,7 +216,6 @@ AC_CONFIG_FILES([Makefile
 		 data/Makefile
 		 data/engrampa.desktop.in
 		 data/org.mate.engrampa.gschema.xml
-		 data/ui/Makefile
 		 data/icons/Makefile
 		 data/icons/16x16/Makefile
 		 data/icons/16x16/actions/Makefile
@@ -233,6 +233,7 @@ AC_CONFIG_FILES([Makefile
 		 src/Makefile
 		 src/commands/Makefile
 		 src/sh/Makefile
+		 src/ui/Makefile
 		 caja/Makefile
 		 caja/libcaja-engrampa.caja-extension.in
 		 help/Makefile

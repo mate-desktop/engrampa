@@ -1,4 +1,4 @@
-SUBDIRS = commands sh
+SUBDIRS = commands sh ui
 
 bin_PROGRAMS = engrampa
 libexec_PROGRAMS = engrampa-server
@@ -45,7 +45,10 @@ BUILT_SOURCES =			\
 	fr-marshal.c		\
 	fr-marshal.h		\
 	fr-enum-types.h		\
-	fr-enum-types.c
+	fr-enum-types.c		\
+	fr-resources.c		\
+	fr-resources.h		\
+	$(NULL)
 
 COMMON_SOURCES = 			\
 	actions.h			\
@@ -190,6 +193,12 @@ fr-enum-types.c: typedefs.h fr-enum-types.h
 	&& (cmp -s xgen-$(@F) fr-enum-types.c || cp xgen-$(@F) fr-enum-types.c ) \
 	&& rm -f xgen-$(@F) )
 
+fr-resources.c: engrampa.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies engrampa.gresource.xml)
+	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate --c-name fr $(srcdir)/engrampa.gresource.xml
+
+fr-resources.h: engrampa.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies engrampa.gresource.xml)
+	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate --c-name fr $(srcdir)/engrampa.gresource.xml
+
 engrampa_SOURCES = 			\
 	$(COMMON_SOURCES)		\
 	main.c
@@ -214,7 +223,9 @@ if ENABLE_MAGIC
 engrampa_LDADD += $(MAGIC_LIBS)
 endif
 
-EXTRA_DIST = fr-marshal.list
+EXTRA_DIST = 				\
+	engrampa.gresource.xml		\
+	fr-marshal.list
 
 CLEANFILES = $(BUILT_SOURCES)
 

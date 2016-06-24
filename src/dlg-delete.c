@@ -115,7 +115,7 @@ dlg_delete__common (FrWindow *window,
 	data->window = window;
 	data->selected_files = selected_files;
 
-	data->builder = _gtk_builder_new_from_file ("delete.ui");
+	data->builder = _gtk_builder_new_from_resource ("delete.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return;

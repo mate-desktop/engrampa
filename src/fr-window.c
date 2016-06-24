@@ -5888,7 +5888,7 @@ fr_window_construct (FrWindow *window)
 				 g_cclosure_new_swap (G_CALLBACK (fr_window_close), window, NULL));
 
 
-	if (!gtk_ui_manager_add_ui_from_string (ui, ui_info, -1, &error)) {
+	if (! gtk_ui_manager_add_ui_from_resource (ui, "/org/mate/Engrampa/ui/menus-toolbars.ui", &error)) {
 		g_message ("building menus failed: %s", error->message);
 		g_error_free (error);
 	}

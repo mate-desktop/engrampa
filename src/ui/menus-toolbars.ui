@@ -1,0 +1,106 @@
+<ui>
+  <menubar name="MenuBar">
+    <menu name="Archive" action="FileMenu">
+      <menuitem action="New"/>
+      <menuitem action="Open"/>
+      <menuitem action="OpenRecent"/>
+      <menuitem action="SaveAs"/>
+      <separator/>
+      <menuitem action="Extract"/>
+      <menuitem action="TestArchive"/>
+      <separator/>
+      <menuitem action="Properties"/>
+      <separator/>
+      <menuitem action="Close"/>
+    </menu>
+    <menu action="EditMenu">
+      <menuitem action="Cut"/>
+      <menuitem action="Copy"/>
+      <menuitem action="Paste"/>
+      <menuitem action="Rename"/>
+      <menuitem action="Delete"/>
+      <separator/>
+      <menuitem action="SelectAll"/>
+      <menuitem action="DeselectAll"/>
+      <separator/>
+      <menuitem action="Find"/>
+      <separator/>
+      <menuitem action="AddFiles"/>
+      <menuitem action="AddFolder"/>
+      <separator/>
+      <menuitem action="Password"/>
+    </menu>
+    <menu action="ViewMenu">
+      <menuitem action="ViewToolbar"/>
+      <menuitem action="ViewStatusbar"/>
+      <menuitem action="ViewFolders"/>
+      <separator/>
+      <menuitem action="ViewAllFiles"/>
+      <menuitem action="ViewAsFolder"/>
+      <separator/>
+      <menuitem action="LastOutput"/>
+      <separator/>
+      <menuitem action="Stop"/>
+      <menuitem action="Reload"/>
+    </menu>
+    <menu action="HelpMenu">
+      <menuitem action="Contents"/>
+      <menuitem action="About"/>
+    </menu>
+  </menubar>
+  <toolbar name="ToolBar">
+    <toolitem action="New"/>
+    <toolitem action="OpenRecent_Toolbar"/>
+    <separator/>
+    <toolitem action="Extract_Toolbar"/>
+    <separator/>
+    <toolitem action="AddFiles_Toolbar"/>
+    <toolitem action="AddFolder_Toolbar"/>
+    <separator/>
+    <toolitem action="Stop"/>
+  </toolbar>
+  <toolbar name="LocationBar">
+    <toolitem action="GoBack"/>
+    <toolitem action="GoForward"/>
+    <toolitem action="GoUp"/>
+    <toolitem action="GoHome"/>
+  </toolbar>
+  <popup name="FilePopupMenu">
+    <menuitem action="ViewSelection"/>
+    <menuitem action="OpenSelection"/>
+    <separator/>
+    <menuitem action="Extract"/>
+    <separator/>
+    <menuitem action="Cut"/>
+    <menuitem action="Copy"/>
+    <menuitem action="Paste"/>
+    <menuitem action="Rename"/>
+    <menuitem action="Delete"/>
+  </popup>
+  <popup name="FolderPopupMenu">
+    <menuitem action="OpenFolder"/>
+    <separator/>
+    <menuitem action="Extract"/>
+    <separator/>
+    <menuitem action="Cut"/>
+    <menuitem action="Copy"/>
+    <menuitem action="Paste"/>
+    <menuitem action="Rename"/>
+    <menuitem action="Delete"/>
+  </popup>
+  <popup name="AddMenu">
+    <menuitem action="AddFiles"/>
+    <menuitem action="AddFolder"/>
+  </popup>
+  <popup name="SidebarFolderPopupMenu">
+    <menuitem action="OpenFolderFromSidebar"/>
+    <separator/>
+    <menuitem action="ExtractFolderFromSidebar"/>
+    <separator/>
+    <menuitem action="CutFolderFromSidebar"/>
+    <menuitem action="CopyFolderFromSidebar"/>
+    <menuitem action="PasteFolderFromSidebar"/>
+    <menuitem action="RenameFolderFromSidebar"/>
+    <menuitem action="DeleteFolderFromSidebar"/>
+  </popup>
+</ui>

@@ -89,7 +89,7 @@ dlg_prop (FrWindow *window)
 
 	data = g_new (DialogData, 1);
 
-	data->builder = _gtk_builder_new_from_file ("properties.ui");
+	data->builder = _gtk_builder_new_from_resource ("properties.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return;

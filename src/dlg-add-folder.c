@@ -801,7 +801,7 @@ load_options_cb (GtkWidget  *w,
 	aod_data = g_new0 (LoadOptionsDialogData, 1);
 
 	aod_data->data = data;
-	aod_data->builder = _gtk_builder_new_from_file ("add-options.ui");
+	aod_data->builder = _gtk_builder_new_from_resource ("add-options.ui");
 	if (aod_data->builder == NULL) {
 		g_free (aod_data);
 		return;

@@ -1,4 +1,4 @@
-SUBDIRS = ui icons
+SUBDIRS = icons
 
 desktopdir = $(datadir)/applications
 desktop_in_in_files = engrampa.desktop.in.in

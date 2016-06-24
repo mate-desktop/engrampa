@@ -285,7 +285,7 @@ dlg_update (FrWindow *window)
 
 	data = g_new0 (DialogData, 1);
 
-	data->builder = _gtk_builder_new_from_file ("update.ui");
+	data->builder = _gtk_builder_new_from_resource ("update.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return NULL;

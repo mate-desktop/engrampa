@@ -89,7 +89,7 @@ dlg_password (GtkWidget *widget,
 
 	data = g_new0 (DialogData, 1);
 
-	data->builder = _gtk_builder_new_from_file ("password.ui");
+	data->builder = _gtk_builder_new_from_resource ("password.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return;

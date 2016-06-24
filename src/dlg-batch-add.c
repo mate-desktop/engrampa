@@ -475,7 +475,7 @@ dlg_batch_add_files (FrWindow *window,
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_BATCH_ADD);
 	data->settings_general = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
 
-	data->builder = _gtk_builder_new_from_file ("batch-add-files.ui");
+	data->builder = _gtk_builder_new_from_resource ("batch-add-files.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return;

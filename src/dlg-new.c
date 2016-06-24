@@ -275,7 +275,7 @@ dlg_new_archive (FrWindow  *window,
 
 	data = g_new0 (DlgNewData, 1);
 
-	data->builder = _gtk_builder_new_from_file ("new.ui");
+	data->builder = _gtk_builder_new_from_resource ("new.ui");
 	if (data->builder == NULL) {
 		g_free (data);
 		return NULL;
