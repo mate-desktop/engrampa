@@ -244,7 +244,8 @@ activate_cb (GApplication *application)
 	     link != NULL;
 	     link = link->next)
 	{
-		gtk_widget_show (GTK_WIDGET (link->data));
+		if (! fr_window_is_batch_mode (FR_WINDOW (link->data)))
+			gtk_widget_show (GTK_WIDGET (link->data));
 	}
 }
 
