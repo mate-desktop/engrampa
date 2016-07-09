@@ -44,8 +44,6 @@ static int    extract;
 static int    extract_here;
 static char  *default_url = NULL;
 
-static guint  startup_id = 0;
-
 /* argv[0] from main(); used as the command to restart the program */
 static const char *program_argv0 = NULL;
 
@@ -141,7 +139,7 @@ prepare_app (void)
 	/**/
 
 	if (remaining_args == NULL) { /* No archive specified. */
-		gtk_widget_show (fr_window_new ());
+		fr_window_new ();
 		return;
 	}
 
@@ -216,7 +214,6 @@ prepare_app (void)
 			char      *uri;
 
 			window = fr_window_new ();
-			gtk_widget_show (window);
 
 			file = g_file_new_for_commandline_arg (filename);
 			uri = g_file_get_uri (file);
@@ -231,16 +228,23 @@ prepare_app (void)
 }
 
 
-static gboolean
-startup_cb (gpointer data)
+static void
+startup_cb (GApplication *application)
 {
-	g_source_remove (startup_id);
-	startup_id = 0;
-
 	initialize_data ();
 	prepare_app ();
+}
 
-	return FALSE;
+
+static void
+activate_cb (GApplication *application)
+{
+	GList *link;
+
+	for (link = WindowList; link; link = link->next) {
+		FrWindow *window = link->data;
+		gtk_widget_show (GTK_WIDGET (window));
+	}
 }
 
 
@@ -280,12 +284,15 @@ fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
 	g_key_file_set_integer (state, "Session", "archives", i);
 }
 
+
 int
 main (int argc, char **argv)
 {
 	GOptionContext *context = NULL;
 	GError         *error = NULL;
+	GtkApplication *app = NULL;
 	EggSMClient    *client = NULL;
+	int             status;
 
 	program_argv0 = argv[0];
 
@@ -318,9 +325,13 @@ main (int argc, char **argv)
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
 					   PKG_DATA_DIR G_DIR_SEPARATOR_S "icons");
 
-	startup_id = g_idle_add (startup_cb, NULL);
-	gtk_main ();
+	app = gtk_application_new ("org.mate.engrampa", G_APPLICATION_FLAGS_NONE);
+	g_signal_connect (app, "startup", G_CALLBACK (startup_cb), NULL);
+	g_signal_connect (app, "activate", G_CALLBACK (activate_cb), NULL);
+
+	status = g_application_run (G_APPLICATION (app), argc, argv);
+
 	release_data ();
 
-	return 0;
+	return status;
 }

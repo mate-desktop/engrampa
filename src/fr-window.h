@@ -82,14 +82,14 @@ typedef struct _FrWindowPrivateData FrWindowPrivateData;
 
 struct _FrWindow
 {
-	GtkWindow __parent;
+	GtkApplicationWindow __parent;
 	FrArchive *archive;
 	FrWindowPrivateData *priv;
 };
 
 struct _FrWindowClass
 {
-	GtkWindowClass __parent_class;
+	GtkApplicationWindowClass __parent_class;
 
 	/*<signals>*/
 
