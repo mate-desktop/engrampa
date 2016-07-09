@@ -33,7 +33,6 @@
 
 #include "fr-init.h"
 
-GList        *WindowList = NULL;
 gint          ForceDirectoryCreation;
 
 static char **remaining_args;
@@ -241,9 +240,11 @@ activate_cb (GApplication *application)
 {
 	GList *link;
 
-	for (link = WindowList; link; link = link->next) {
-		FrWindow *window = link->data;
-		gtk_widget_show (GTK_WIDGET (window));
+	for (link = gtk_application_get_windows (GTK_APPLICATION (application));
+	     link != NULL;
+	     link = link->next)
+	{
+		gtk_widget_show (GTK_WIDGET (link->data));
 	}
 }
 
@@ -253,9 +254,9 @@ fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
 {
 	/* discard command is automatically set by EggSMClient */
 
-	GList *window;
-	const char *argv[2] = { NULL };
-	guint i;
+	const char   *argv[2] = { NULL };
+	GApplication *application;
+	guint         i = 0;
 
 	/* restart command */
 	argv[0] = program_argv0;
@@ -264,21 +265,30 @@ fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
 	egg_sm_client_set_restart_command (client, 1, argv);
 
 	/* state */
-	for (window = WindowList, i = 0; window; window = window->next, i++) {
-		FrWindow *session = window->data;
-		gchar *key;
+	application = g_application_get_default ();
+	if (application != NULL) {
+		GList *window;
 
-		key = g_strdup_printf ("archive%d", i);
-		if ((session->archive == NULL) || (session->archive->file == NULL)) {
-			g_key_file_set_string (state, "Session", key, "");
-		} else {
-			gchar *uri;
+		for (window = gtk_application_get_windows (GTK_APPLICATION (application)), i = 0;
+		     window != NULL;
+		     window = window->next, i++)
+		{
+			FrWindow *session = window->data;
+			gchar *key;
 
-			uri = g_file_get_uri (session->archive->file);
-			g_key_file_set_string (state, "Session", key, uri);
-			g_free (uri);
+			key = g_strdup_printf ("archive%d", i);
+			if ((session->archive == NULL) || (session->archive->file == NULL)) {
+				g_key_file_set_string (state, "Session", key, "");
+			}
+			else {
+				gchar *uri;
+
+				uri = g_file_get_uri (session->archive->file);
+				g_key_file_set_string (state, "Session", key, uri);
+				g_free (uri);
+			}
+			g_free (key);
 		}
-		g_free (key);
 	}
 
 	g_key_file_set_integer (state, "Session", "archives", i);

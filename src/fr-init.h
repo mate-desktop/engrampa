@@ -43,7 +43,6 @@ typedef struct {
 	char      *temp_dir;
 } CommandData;
 
-extern GList                 *WindowList;
 extern GList                 *CommandList;
 extern gint                   ForceDirectoryCreation;
 extern GHashTable            *ProgramsCache;
