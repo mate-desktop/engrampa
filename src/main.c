@@ -336,7 +336,7 @@ main (int argc, char **argv)
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
 					   PKG_DATA_DIR G_DIR_SEPARATOR_S "icons");
 
-	app = gtk_application_new ("org.mate.engrampa", G_APPLICATION_FLAGS_NONE);
+	app = gtk_application_new (NULL, G_APPLICATION_FLAGS_NONE);
 	g_signal_connect (app, "startup", G_CALLBACK (startup_cb), NULL);
 	g_signal_connect (app, "activate", G_CALLBACK (activate_cb), NULL);
 
