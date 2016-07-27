@@ -637,7 +637,7 @@ fr_window_free_private_data (FrWindow *window)
 
 
 static void
-fr_window_finalize (GObject *object)
+fr_window_finalize (GObject *object, GApplication *application)
 {
 	FrWindow *window = FR_WINDOW (object);
 
@@ -669,6 +669,7 @@ fr_window_finalize (GObject *object)
 			g_hash_table_destroy (tree_pixbuf_hash);
 			tree_pixbuf_hash = NULL;
 		}
+		g_application_quit (application);
 	}
 
 	G_OBJECT_CLASS (parent_class)->finalize (object);
