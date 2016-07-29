@@ -1,3 +1,23 @@
+1.15.1
+------
+
+    Fix segmentation fault on closing
+    Translations update
+    fix for engrampa closes faster
+    allow engrampa to work on multiple instances
+    show a window only if it's not in batch mode
+    replace WindowList with gtk_application_get_windows
+    Use GtkApplication
+    ui files: set the gtk+ required version to 3.0
+    use GResource to store ui files
+    Use the Gtk+ app chooser dialog for the "Open With" command
+    fixed: engrampa shows duplicate folders
+    use natural order when sorting by filename
+    drag and drop: use the clicked row as drag icon
+    removed unused forward declaration
+    Use g_dpgettext2() instead of plain gettext for column headers.
+    set the "toolbar" class to the location bar
+
 1.15.0
 ------
 
