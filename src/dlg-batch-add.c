@@ -41,6 +41,9 @@
 #define BAD_CHARS "/\\*"
 #define GET_WIDGET(x) (_gtk_builder_get_widget (data->builder, (x)))
 
+static gboolean has_password = FALSE;
+static gboolean can_encrypt_header = FALSE;
+
 
 typedef struct {
 	FrWindow   *window;
@@ -379,8 +382,9 @@ update_sensitivity_for_mime_type (DialogData *data,
 			gtk_widget_set_sensitive (GET_WIDGET ("a_password_label"), sensitive);
 
 			sensitive = mime_type_desc[i].capabilities & FR_COMMAND_CAN_ENCRYPT_HEADER;
-			gtk_widget_set_sensitive (GET_WIDGET ("a_encrypt_header_checkbutton"), sensitive);
-			gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_encrypt_header_checkbutton")), ! sensitive);
+			can_encrypt_header = sensitive;
+			gtk_widget_set_sensitive (GET_WIDGET ("a_encrypt_header_checkbutton"), sensitive ? has_password : FALSE);
+			gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_encrypt_header_checkbutton")), sensitive ? (!has_password) : TRUE);
 
 			sensitive = mime_type_desc[i].capabilities & FR_COMMAND_CAN_CREATE_VOLUMES;
 			gtk_widget_set_sensitive (GET_WIDGET ("a_volume_box"), sensitive);
@@ -436,13 +440,22 @@ update_archive_type_combo_box_from_ext (DialogData  *data,
 static void
 update_sensitivity (DialogData *data)
 {
-	gtk_widget_set_sensitive (GET_WIDGET ("a_volume_spinbutton"), gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_volume_checkbutton"))));
+	const char *password;
+
+	gtk_widget_set_sensitive (GET_WIDGET ("a_volume_spinbutton"),
+				  gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_volume_checkbutton"))));
+
+	password = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("a_password_entry")));
+	has_password = (password != NULL) && (*password != '\0');
+	gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("a_encrypt_header_checkbutton")), can_encrypt_header ? (!has_password) : TRUE);
+	gtk_widget_set_sensitive (GET_WIDGET ("a_encrypt_header_checkbutton"), can_encrypt_header ? has_password : FALSE);
 }
 
 
 static void
-password_entry_changed_cb (GtkEditable *editable,
-			   gpointer     user_data)
+password_entry_notify_text_cb (GObject    *object,
+			       GParamSpec *spec,
+			       gpointer    user_data)
 {
 	update_sensitivity ((DialogData *) user_data);
 }
@@ -561,8 +574,8 @@ dlg_batch_add_files (FrWindow *window,
 			  G_CALLBACK (archive_type_combo_box_changed_cb),
 			  data);
 	g_signal_connect (GET_WIDGET ("a_password_entry"),
-			  "changed",
-			  G_CALLBACK (password_entry_changed_cb),
+			  "notify::text",
+			  G_CALLBACK (password_entry_notify_text_cb),
 			  data);
 	g_signal_connect (GET_WIDGET ("a_volume_checkbutton"),
 			  "toggled",
