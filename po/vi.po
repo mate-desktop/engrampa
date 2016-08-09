@@ -126,100 +126,100 @@ msgstr "Bộ quản lý kho"
 msgid "Create and modify an archive"
 msgstr "Tạo và sửa đổi kho"
 
-#: ../data/ui/add-options.ui.h:1
+#: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "Nạp tùy chọn"
 
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+#: ../src/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
 msgid "Compress"
 msgstr "Nén"
 
-#: ../data/ui/batch-add-files.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr "_Tên tập tin:"
 
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+#: ../src/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
 msgid "_Location:"
 msgstr "_Vị trí:"
 
-#: ../data/ui/batch-add-files.ui.h:4
+#: ../src/ui/batch-add-files.ui.h:4
 msgid "Location"
 msgstr "Vị trí"
 
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
 msgid "_Password:"
 msgstr "_Mật khẩu:"
 
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
 msgstr "_Mã hoá cả danh sách tập tin"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
 msgid "Split into _volumes of"
 msgstr "Chia thành nhiều _phần"
 
 #. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
 msgid "MB"
 msgstr "MB"
 
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "Tùy chọn _khác"
 
-#: ../data/ui/batch-password.ui.h:1
+#: ../src/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">Cần nhập mật khẩu</span>"
 
-#: ../data/ui/delete.ui.h:1
+#: ../src/ui/delete.ui.h:1
 msgid "Delete"
 msgstr "Xóa"
 
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+#: ../src/ui/delete.ui.h:2 ../src/dlg-extract.c:355
 msgid "_Files:"
 msgstr "_Tập tin:"
 
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+#: ../src/ui/delete.ui.h:3 ../src/dlg-extract.c:366
 msgid "example: *.txt; *.doc"
 msgstr "ví dụ : *.txt; *.doc"
 
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+#: ../src/ui/delete.ui.h:4 ../src/dlg-extract.c:369
 msgid "_All files"
 msgstr "_Mọi tập tin"
 
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+#: ../src/ui/delete.ui.h:5 ../src/dlg-extract.c:376
 msgid "_Selected files"
 msgstr "Tập tin đã _chọn"
 
-#: ../data/ui/open-with.ui.h:1
+#: ../src/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "Mở tập tin"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../src/ui/open-with.ui.h:2
 msgid "A_vailable application:"
 msgstr "Ứng dụng _tự chọn:"
 
-#: ../data/ui/open-with.ui.h:3
+#: ../src/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
 msgstr "Ứng dụng _vừa dùng:"
 
-#: ../data/ui/open-with.ui.h:4
+#: ../src/ui/open-with.ui.h:4
 msgid "_Application:"
 msgstr "Ứn_g dụng:"
 
-#: ../data/ui/password.ui.h:1
+#: ../src/ui/password.ui.h:1
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: ../data/ui/password.ui.h:2
+#: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
 msgstr ""
 
-#: ../data/ui/password.ui.h:4
+#: ../src/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -227,7 +227,7 @@ msgid ""
 msgstr "<i><b>Ghi chú:</b> mật khẩu sẽ được dùng để mật mã hoá tập tin được thêm vào kho hiện thời, cũng như để giải mã các tập tin trong quá trình giải nén chúng.Khi đóng kho, mật khẩu sẽ được xoá.</i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#: ../src/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -237,11 +237,11 @@ msgid_plural ""
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
 
-#: ../data/ui/update.ui.h:2
+#: ../src/ui/update.ui.h:2
 msgid "_Update"
 msgstr "Cậ_p nhật"
 
-#: ../data/ui/update.ui.h:3
+#: ../src/ui/update.ui.h:3
 msgid "S_elect the files you want to update:"
 msgstr "C_họn những tập tin cần cập nhật:"
 

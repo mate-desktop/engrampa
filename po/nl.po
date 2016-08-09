@@ -131,100 +131,100 @@ msgstr "Archiefbeheer"
 msgid "Create and modify an archive"
 msgstr "Archieven maken en wijzigen"
 
-#: ../data/ui/add-options.ui.h:1
+#: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "Voorkeuren openen"
 
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+#: ../src/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
 msgid "Compress"
 msgstr "Comprimeren"
 
-#: ../data/ui/batch-add-files.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr "_Bestandsnaam:"
 
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+#: ../src/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
 msgid "_Location:"
 msgstr "_Locatie:"
 
-#: ../data/ui/batch-add-files.ui.h:4
+#: ../src/ui/batch-add-files.ui.h:4
 msgid "Location"
 msgstr "Locatie"
 
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
 msgid "_Password:"
 msgstr "_Wachtwoord:"
 
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
 msgstr "Bestandenlijst ook ver_sleutelen"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
 msgid "Split into _volumes of"
 msgstr "Splitsen in _volumina van"
 
 #. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
 msgid "MB"
 msgstr "MB"
 
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "_Overige instellingen"
 
-#: ../data/ui/batch-password.ui.h:1
+#: ../src/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">Wachtwoord vereist</span>"
 
-#: ../data/ui/delete.ui.h:1
+#: ../src/ui/delete.ui.h:1
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+#: ../src/ui/delete.ui.h:2 ../src/dlg-extract.c:355
 msgid "_Files:"
 msgstr "_Bestanden:"
 
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+#: ../src/ui/delete.ui.h:3 ../src/dlg-extract.c:366
 msgid "example: *.txt; *.doc"
 msgstr "voorbeeld: *.txt; *.doc"
 
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+#: ../src/ui/delete.ui.h:4 ../src/dlg-extract.c:369
 msgid "_All files"
 msgstr "_Alle bestanden"
 
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+#: ../src/ui/delete.ui.h:5 ../src/dlg-extract.c:376
 msgid "_Selected files"
 msgstr "_Geselecteerde bestanden"
 
-#: ../data/ui/open-with.ui.h:1
+#: ../src/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "Bestanden _openen"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../src/ui/open-with.ui.h:2
 msgid "A_vailable application:"
 msgstr "_Beschikbare toepassing:"
 
-#: ../data/ui/open-with.ui.h:3
+#: ../src/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
 msgstr "_Recente toepassingen:"
 
-#: ../data/ui/open-with.ui.h:4
+#: ../src/ui/open-with.ui.h:4
 msgid "_Application:"
 msgstr "_Toepassing:"
 
-#: ../data/ui/password.ui.h:1
+#: ../src/ui/password.ui.h:1
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: ../data/ui/password.ui.h:2
+#: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
 msgstr "Bestandenlijst ook ver_sleutelen"
 
-#: ../data/ui/password.ui.h:4
+#: ../src/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -232,7 +232,7 @@ msgid ""
 msgstr "<i><b>Opmerking:</b> het wachtwoord wordt gebruikt om bestanden te versleutelen die u aan het huidige archief toevoegd en om bestanden te ontsleutelen die u uitpakt. Wanneer u het archief sluit worden de wachtwoorden verwijderd.</i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#: ../src/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -243,11 +243,11 @@ msgid_plural ""
 msgstr[0] "Het bestand is door een externe toepassing aangepast. Als de versie in het archief niet bijgewerkt wordt, zullen alle wijzigingen verloren gaan."
 msgstr[1] "%d bestanden zijn door een externe toepassing aangepast. Als de versies in het archief niet bijgewerkt worden, zullen alle wijzigingen verloren gaan."
 
-#: ../data/ui/update.ui.h:2
+#: ../src/ui/update.ui.h:2
 msgid "_Update"
 msgstr "_Bijwerken"
 
-#: ../data/ui/update.ui.h:3
+#: ../src/ui/update.ui.h:3
 msgid "S_elect the files you want to update:"
 msgstr "S_electeer de bestanden die u wilt bijwerken:"
 

@@ -130,100 +130,100 @@ msgstr "압축 관리자"
 msgid "Create and modify an archive"
 msgstr "압축 파일을 만들고 수정합니다"
 
-#: ../data/ui/add-options.ui.h:1
+#: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "옵션 읽기"
 
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+#: ../src/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
 msgid "Compress"
 msgstr "압축"
 
-#: ../data/ui/batch-add-files.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr "파일 이름(_F):"
 
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+#: ../src/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
 msgid "_Location:"
 msgstr "위치(_L):"
 
-#: ../data/ui/batch-add-files.ui.h:4
+#: ../src/ui/batch-add-files.ui.h:4
 msgid "Location"
 msgstr "위치"
 
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
 msgid "_Password:"
 msgstr "암호(_P):"
 
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
 msgstr "파일 목록 암호화(_E)"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
 msgid "Split into _volumes of"
 msgstr "다음 크기로 쪼개기(_V):"
 
 #. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
 msgid "MB"
 msgstr "MB"
 
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "기타 옵션(_O)"
 
-#: ../data/ui/batch-password.ui.h:1
+#: ../src/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">암호가 필요합니다</span>"
 
-#: ../data/ui/delete.ui.h:1
+#: ../src/ui/delete.ui.h:1
 msgid "Delete"
 msgstr "삭제"
 
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+#: ../src/ui/delete.ui.h:2 ../src/dlg-extract.c:355
 msgid "_Files:"
 msgstr "파일(_F):"
 
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+#: ../src/ui/delete.ui.h:3 ../src/dlg-extract.c:366
 msgid "example: *.txt; *.doc"
 msgstr "예: *.txt; *.doc"
 
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+#: ../src/ui/delete.ui.h:4 ../src/dlg-extract.c:369
 msgid "_All files"
 msgstr "모든 파일(_A)"
 
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+#: ../src/ui/delete.ui.h:5 ../src/dlg-extract.c:376
 msgid "_Selected files"
 msgstr "선택한 파일(_S)"
 
-#: ../data/ui/open-with.ui.h:1
+#: ../src/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "파일 열기"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../src/ui/open-with.ui.h:2
 msgid "A_vailable application:"
 msgstr "쓸 수 있는 프로그램(_V):"
 
-#: ../data/ui/open-with.ui.h:3
+#: ../src/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
 msgstr "최근에 쓰인 프로그램(_E):"
 
-#: ../data/ui/open-with.ui.h:4
+#: ../src/ui/open-with.ui.h:4
 msgid "_Application:"
 msgstr "프로그램(_A):"
 
-#: ../data/ui/password.ui.h:1
+#: ../src/ui/password.ui.h:1
 msgid "Password"
 msgstr "암호"
 
-#: ../data/ui/password.ui.h:2
+#: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
 msgstr "파일 목록 암호화(_E)"
 
-#: ../data/ui/password.ui.h:4
+#: ../src/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -231,7 +231,7 @@ msgid ""
 msgstr "<i><b>주의:</b> 암호는 압축 파일에 추가할 파일을 암호화하는 용도로도 사용하고, 압축 파일에서 파일을 풀면서 암호화를 해제하는 용도로도 사용합니다. 압축 파일을 닫으면 암호는 삭제됩니다.</i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#: ../src/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -241,11 +241,11 @@ msgid_plural ""
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] "외부 프로그램이 수정한 파일이 %d개 있습니다. 압축 파일을 업데이트하지 않으면 바뀐 사항을 모두 잃어버리게 됩니다."
 
-#: ../data/ui/update.ui.h:2
+#: ../src/ui/update.ui.h:2
 msgid "_Update"
 msgstr "업데이트(_U)"
 
-#: ../data/ui/update.ui.h:3
+#: ../src/ui/update.ui.h:3
 msgid "S_elect the files you want to update:"
 msgstr "바꾸려는 파일을 선택하십시오(_E):"
 

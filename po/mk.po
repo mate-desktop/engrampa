@@ -132,100 +132,100 @@ msgstr "Менаџер на архиви"
 msgid "Create and modify an archive"
 msgstr "Креирај и измени архива"
 
-#: ../data/ui/add-options.ui.h:1
+#: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "Вчитај опции"
 
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+#: ../src/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
 msgid "Compress"
 msgstr ""
 
-#: ../data/ui/batch-add-files.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr ""
 
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+#: ../src/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
 msgid "_Location:"
 msgstr "_Локација:"
 
-#: ../data/ui/batch-add-files.ui.h:4
+#: ../src/ui/batch-add-files.ui.h:4
 msgid "Location"
 msgstr "Локација"
 
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
 msgid "_Password:"
 msgstr "_Лозинка:"
 
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
 msgstr "_Енкриптирај ја и листата со датотеки"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
 msgid "Split into _volumes of"
 msgstr ""
 
 #. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
 msgid "MB"
 msgstr "MB"
 
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "_Други опции"
 
-#: ../data/ui/batch-password.ui.h:1
+#: ../src/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">Потребна е лозинка</span>"
 
-#: ../data/ui/delete.ui.h:1
+#: ../src/ui/delete.ui.h:1
 msgid "Delete"
 msgstr "Избриши"
 
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+#: ../src/ui/delete.ui.h:2 ../src/dlg-extract.c:355
 msgid "_Files:"
 msgstr "_Датотеки:"
 
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+#: ../src/ui/delete.ui.h:3 ../src/dlg-extract.c:366
 msgid "example: *.txt; *.doc"
 msgstr "пример: *.txt; *.doc"
 
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+#: ../src/ui/delete.ui.h:4 ../src/dlg-extract.c:369
 msgid "_All files"
 msgstr "_Сите датотеки"
 
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+#: ../src/ui/delete.ui.h:5 ../src/dlg-extract.c:376
 msgid "_Selected files"
 msgstr "_Избрани датотеки"
 
-#: ../data/ui/open-with.ui.h:1
+#: ../src/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "Отвори датотеки"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../src/ui/open-with.ui.h:2
 msgid "A_vailable application:"
 msgstr "_Достапна апликација:"
 
-#: ../data/ui/open-with.ui.h:3
+#: ../src/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
 msgstr "Н_еодамнешни апликации:"
 
-#: ../data/ui/open-with.ui.h:4
+#: ../src/ui/open-with.ui.h:4
 msgid "_Application:"
 msgstr "_Апликации:"
 
-#: ../data/ui/password.ui.h:1
+#: ../src/ui/password.ui.h:1
 msgid "Password"
 msgstr "Лозинка"
 
-#: ../data/ui/password.ui.h:2
+#: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
 msgstr ""
 
-#: ../data/ui/password.ui.h:4
+#: ../src/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -233,7 +233,7 @@ msgid ""
 msgstr "<i><b>Забелешка:</b> лозинката ќе биде користена за енкриптирање на датотеки кои се додадени кон архивата, и за декриптирање на датотеки кои се отпакувани од архивите. Кога архивата ќе се затвори лозинката ќе биде избришана. </i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#: ../src/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -244,11 +244,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../data/ui/update.ui.h:2
+#: ../src/ui/update.ui.h:2
 msgid "_Update"
 msgstr "_Ажурирај"
 
-#: ../data/ui/update.ui.h:3
+#: ../src/ui/update.ui.h:3
 msgid "S_elect the files you want to update:"
 msgstr "И_зберете ги датотеките кои што сакате да ги ажурирате:"
 

@@ -129,100 +129,100 @@ msgstr "Menedżer archiwów"
 msgid "Create and modify an archive"
 msgstr "Tworzenie i modyfikowanie archiwów"
 
-#: ../data/ui/add-options.ui.h:1
+#: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
 msgstr "Wczytanie opcji"
 
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
+#: ../src/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
 msgid "Compress"
 msgstr "Kompresja"
 
-#: ../data/ui/batch-add-files.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
 msgstr "_Nazwa pliku:"
 
 #. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
+#: ../src/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
 msgid "_Location:"
 msgstr "_Położenie:"
 
-#: ../data/ui/batch-add-files.ui.h:4
+#: ../src/ui/batch-add-files.ui.h:4
 msgid "Location"
 msgstr "Położenie"
 
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
 msgid "_Password:"
 msgstr "_Hasło:"
 
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
 msgstr "Szyfrowanie także _listy plików"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
 msgid "Split into _volumes of"
 msgstr "Podział na _woluminy o rozmiarze"
 
 #. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
 msgid "MB"
 msgstr "MB"
 
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
 msgid "_Other Options"
 msgstr "_Inne opcje"
 
-#: ../data/ui/batch-password.ui.h:1
+#: ../src/ui/batch-password.ui.h:1
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">Wymagane hasło</span>"
 
-#: ../data/ui/delete.ui.h:1
+#: ../src/ui/delete.ui.h:1
 msgid "Delete"
 msgstr "Usuń"
 
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
+#: ../src/ui/delete.ui.h:2 ../src/dlg-extract.c:355
 msgid "_Files:"
 msgstr "O_kreślone pliki:"
 
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
+#: ../src/ui/delete.ui.h:3 ../src/dlg-extract.c:366
 msgid "example: *.txt; *.doc"
 msgstr "Na przykład: *.txt; *.doc"
 
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
+#: ../src/ui/delete.ui.h:4 ../src/dlg-extract.c:369
 msgid "_All files"
 msgstr "W_szystkie pliki"
 
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
+#: ../src/ui/delete.ui.h:5 ../src/dlg-extract.c:376
 msgid "_Selected files"
 msgstr "_Wybrane pliki"
 
-#: ../data/ui/open-with.ui.h:1
+#: ../src/ui/open-with.ui.h:1
 msgid "Open Files"
 msgstr "Otwarcie plików"
 
-#: ../data/ui/open-with.ui.h:2
+#: ../src/ui/open-with.ui.h:2
 msgid "A_vailable application:"
 msgstr "_Dostępny program:"
 
-#: ../data/ui/open-with.ui.h:3
+#: ../src/ui/open-with.ui.h:3
 msgid "R_ecent applications:"
 msgstr "O_statnio używane programy:"
 
-#: ../data/ui/open-with.ui.h:4
+#: ../src/ui/open-with.ui.h:4
 msgid "_Application:"
 msgstr "Progr_am:"
 
-#: ../data/ui/password.ui.h:1
+#: ../src/ui/password.ui.h:1
 msgid "Password"
 msgstr "Hasło"
 
-#: ../data/ui/password.ui.h:2
+#: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
 msgstr "Szyfrowanie _listy plików"
 
-#: ../data/ui/password.ui.h:4
+#: ../src/ui/password.ui.h:4
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -230,7 +230,7 @@ msgid ""
 msgstr "<i><b>Uwaga:</b> wprowadzone hasło będzie używane do szyfrowania plików dodawanych do bieżącego archiwum, jak również do odszyfrowywania plików rozpakowywanych z niego. Z chwilą zamknięcia archiwum hasło zostanie usunięte z pamięci.</i>"
 
 #. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
+#: ../src/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -242,11 +242,11 @@ msgstr[0] "Plik został zmodyfikowany za pomocą zewnętrznego programu. Jeśli 
 msgstr[1] "%d pliki zostały zmodyfikowane za pomocą zewnętrznego programu. Jeśli pliki w archiwum nie zostaną zaktualizowane, to wszystkie zmiany zostaną utracone."
 msgstr[2] "%d plików zostało zmodyfikowanych za pomocą zewnętrznego programu. Jeśli pliki w archiwum nie zostaną zaktualizowane, to wszystkie zmiany zostaną utracone."
 
-#: ../data/ui/update.ui.h:2
+#: ../src/ui/update.ui.h:2
 msgid "_Update"
 msgstr "_Zaktualizuj"
 
-#: ../data/ui/update.ui.h:3
+#: ../src/ui/update.ui.h:3
 msgid "S_elect the files you want to update:"
 msgstr "Pr_oszę wybrać pliki do aktualizacji:"
 
