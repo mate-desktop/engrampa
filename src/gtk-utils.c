@@ -81,7 +81,7 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 	/* Add label and image */
 
 	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
 	label = gtk_label_new ("");
 
@@ -301,7 +301,7 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 	/* Add label and image */
 
 	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
 	label = gtk_label_new (message);
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
