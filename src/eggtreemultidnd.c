@@ -323,11 +323,13 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
 	  int            cell_y;
 
 	  target_list = gtk_target_list_new (target_table, G_N_ELEMENTS (target_table));
-	  context = gtk_drag_begin (widget,
-				    target_list,
-				    GDK_ACTION_COPY,
-				    priv_data->pressed_button,
-				    (GdkEvent*)event);
+	  context = gtk_drag_begin_with_coordinates (widget,
+	                                             target_list,
+	                                             GDK_ACTION_COPY,
+	                                             priv_data->pressed_button,
+	                                             (GdkEvent*) event,
+	                                             event->x,
+	                                             event->y);
 	  set_context_data (context, path_list);
 
 	  if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
