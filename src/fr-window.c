@@ -2522,7 +2522,7 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->pd_icon = gtk_image_new_from_pixbuf (icon);
 	g_object_unref (icon);
 
-	gtk_misc_set_alignment (GTK_MISC (window->priv->pd_icon), 0.5, 0.0);
+	gtk_widget_set_valign (window->priv->pd_icon, GTK_ALIGN_START);
 	gtk_box_pack_start (GTK_BOX (hbox), window->priv->pd_icon, FALSE, FALSE, 0);
 
 	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
@@ -2574,7 +2574,11 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_label_set_attributes (GTK_LABEL (lbl), attr_list);
 	pango_attr_list_unref (attr_list);
 
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (lbl), 0.0, 0.5);
+#endif
 	gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
 	gtk_box_pack_start (GTK_BOX (progress_vbox), lbl, TRUE, TRUE, 0);
 
@@ -5781,7 +5785,11 @@ fr_window_construct (FrWindow *window)
 	gtk_container_add (GTK_CONTAINER (sidepane_title), sidepane_title_box);
 	sidepane_title_label = gtk_label_new (_("Folders"));
 
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (sidepane_title_label), 0.0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (sidepane_title_label), 0.0, 0.5);
+#endif
 	gtk_box_pack_start (GTK_BOX (sidepane_title_box), sidepane_title_label, TRUE, TRUE, 0);
 
 	close_sidepane_button = gtk_button_new ();

@@ -333,7 +333,11 @@ create_extra_widget (DialogData *data)
 	set_bold_label (e_files_label, _("Extract"));
 	gtk_box_pack_start (GTK_BOX (vbox19), e_files_label, FALSE, FALSE, 0);
 	gtk_label_set_justify (GTK_LABEL (e_files_label), GTK_JUSTIFY_LEFT);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (e_files_label), 0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (e_files_label), 0, 0.5);
+#endif
 
 	hbox29 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (vbox19), hbox29, TRUE, TRUE, 0);
@@ -375,7 +379,11 @@ create_extra_widget (DialogData *data)
 	gtk_box_pack_start (GTK_BOX (vbox20), e_actions_label, FALSE, FALSE, 0);
 	gtk_label_set_use_markup (GTK_LABEL (e_actions_label), TRUE);
 	gtk_label_set_justify (GTK_LABEL (e_actions_label), GTK_JUSTIFY_LEFT);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (e_actions_label), 0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (e_actions_label), 0, 0.5);
+#endif
 
 	hbox30 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_box_pack_start (GTK_BOX (vbox20), hbox30, TRUE, TRUE, 0);
