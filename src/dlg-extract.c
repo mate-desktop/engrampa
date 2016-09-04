@@ -312,7 +312,7 @@ create_extra_widget (DialogData *data)
 	GtkWidget *e_files_label;
 	GtkWidget *hbox29;
 	GtkWidget *label47;
-	GtkWidget *table1;
+	GtkWidget *grid1;
 	GSList    *e_files_radiobutton_group = NULL;
 	GtkWidget *vbox20;
 	GtkWidget *e_actions_label;
@@ -342,36 +342,28 @@ create_extra_widget (DialogData *data)
 	gtk_box_pack_start (GTK_BOX (hbox29), label47, FALSE, FALSE, 0);
 	gtk_label_set_justify (GTK_LABEL (label47), GTK_JUSTIFY_LEFT);
 
-	table1 = gtk_table_new (3, 2, FALSE);
-	gtk_box_pack_start (GTK_BOX (hbox29), table1, TRUE, TRUE, 0);
-	gtk_table_set_row_spacings (GTK_TABLE (table1), 6);
-	gtk_table_set_col_spacings (GTK_TABLE (table1), 6);
+	grid1 = gtk_grid_new ();
+	gtk_box_pack_start (GTK_BOX (hbox29), grid1, TRUE, TRUE, 0);
+	gtk_grid_set_row_spacing (GTK_GRID (grid1), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (grid1), 6);
 
 	data->e_files_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("_Files:"));
-	gtk_table_attach (GTK_TABLE (table1), data->e_files_radiobutton, 0, 1, 2, 3,
-			  (GtkAttachOptions) (GTK_FILL),
-			  (GtkAttachOptions) (0), 0, 0);
+	gtk_grid_attach (GTK_GRID (grid1), data->e_files_radiobutton, 0, 2, 1, 1);
 	gtk_radio_button_set_group (GTK_RADIO_BUTTON (data->e_files_radiobutton), e_files_radiobutton_group);
 	e_files_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (data->e_files_radiobutton));
 
 	data->e_files_entry = gtk_entry_new ();
-	gtk_table_attach (GTK_TABLE (table1), data->e_files_entry, 1, 2, 2, 3,
-			  (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
-			  (GtkAttachOptions) (0), 0, 0);
+	gtk_grid_attach (GTK_GRID (grid1), data->e_files_entry, 1, 2, 1, 1);
 	gtk_widget_set_tooltip_text (data->e_files_entry, _("example: *.txt; *.doc"));
 	gtk_entry_set_activates_default (GTK_ENTRY (data->e_files_entry), TRUE);
 
 	data->e_all_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("_All files"));
-	gtk_table_attach (GTK_TABLE (table1), data->e_all_radiobutton, 0, 2, 0, 1,
-			  (GtkAttachOptions) (GTK_FILL),
-			  (GtkAttachOptions) (0), 0, 0);
+	gtk_grid_attach (GTK_GRID (grid1), data->e_all_radiobutton, 0, 0, 2, 1);
 	gtk_radio_button_set_group (GTK_RADIO_BUTTON (data->e_all_radiobutton), e_files_radiobutton_group);
 	e_files_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (data->e_all_radiobutton));
 
 	data->e_selected_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("_Selected files"));
-	gtk_table_attach (GTK_TABLE (table1), data->e_selected_radiobutton, 0, 2, 1, 2,
-			  (GtkAttachOptions) (GTK_FILL),
-			  (GtkAttachOptions) (0), 0, 0);
+	gtk_grid_attach (GTK_GRID (grid1), data->e_selected_radiobutton, 0, 1, 2, 1);
 	gtk_radio_button_set_group (GTK_RADIO_BUTTON (data->e_selected_radiobutton), e_files_radiobutton_group);
 	e_files_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (data->e_selected_radiobutton));
 

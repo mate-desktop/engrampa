@@ -5373,6 +5373,7 @@ fr_window_attach (FrWindow      *window,
 		if (window->priv->contents != NULL)
 			gtk_widget_destroy (window->priv->contents);
 		window->priv->contents = child;
+		gtk_widget_set_vexpand (child, TRUE);
 		break;
 	case FR_WINDOW_AREA_FILTERBAR:
 		position = 4;
@@ -5386,13 +5387,11 @@ fr_window_attach (FrWindow      *window,
 		break;
 	}
 
-	gtk_table_attach (GTK_TABLE (window->priv->layout),
-			  child,
-			  0, 1,
-			  position, position + 1,
-			  GTK_EXPAND | GTK_FILL,
-			  ((area == FR_WINDOW_AREA_CONTENTS) ? GTK_EXPAND : 0) | GTK_FILL,
-			  0, 0);
+	gtk_widget_set_hexpand (child, TRUE);
+	gtk_grid_attach (GTK_GRID (window->priv->layout),
+			 child,
+			 0, position,
+			 1, 1);
 }
 
 
@@ -5457,7 +5456,7 @@ fr_window_construct (FrWindow *window)
 
 	/* Create the application. */
 
-	window->priv->layout = gtk_table_new (4, 1, FALSE);
+	window->priv->layout = gtk_grid_new ();
 	gtk_container_add (GTK_CONTAINER (window), window->priv->layout);
 	gtk_widget_show (window->priv->layout);
 

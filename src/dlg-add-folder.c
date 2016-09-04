@@ -213,7 +213,7 @@ add_folder_cb (GtkWidget *widget,
 	DialogData  *data;
 	GtkWidget   *main_box;
 	GtkWidget   *vbox;
-	GtkWidget   *table;
+	GtkWidget   *grid;
 	GtkWidget   *align;
 
 	data = g_new0 (DialogData, 1);
@@ -280,48 +280,36 @@ add_folder_cb (GtkWidget *widget,
 	gtk_box_pack_start (GTK_BOX (vbox), data->add_if_newer_checkbutton,
 			    TRUE, TRUE, 0);
 
-	table = gtk_table_new (2, 4, FALSE);
-	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-	gtk_table_set_col_spacings (GTK_TABLE (table), 6);
-	gtk_box_pack_start (GTK_BOX (vbox), table,
+	grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (grid), 6);
+	gtk_box_pack_start (GTK_BOX (vbox), grid,
 			    TRUE, TRUE, 0);
 
-	gtk_table_attach (GTK_TABLE (table),
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->include_files_label,
-			  0, 1,
-			  0, 1,
-			  GTK_FILL, 0,
-			  0, 0);
-	gtk_table_attach (GTK_TABLE (table),
+			  0, 0,
+			  1, 1);
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->include_files_entry,
-			  1, 4,
-			  0, 1,
-			  GTK_FILL|GTK_EXPAND, 0,
-			  0, 0);
-	gtk_table_attach (GTK_TABLE (table),
+			  1, 0,
+			  3, 1);
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->exclude_files_label,
 			  0, 1,
-			  1, 2,
-			  GTK_FILL, 0,
-			  0, 0);
-	gtk_table_attach (GTK_TABLE (table),
+			  1, 1);
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->exclude_files_entry,
-			  1, 2,
-			  1, 2,
-			  GTK_FILL|GTK_EXPAND, 0,
-			  0, 0);
-	gtk_table_attach (GTK_TABLE (table),
+			  1, 1,
+			  1, 1);
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->exclude_folders_label,
-			  2, 3,
-			  1, 2,
-			  GTK_FILL, 0,
-			  0, 0);
-	gtk_table_attach (GTK_TABLE (table),
+			  2, 1,
+			  1, 1);
+	gtk_grid_attach (GTK_GRID (grid),
 			  data->exclude_folders_entry,
-			  3, 4,
-			  1, 2,
-			  GTK_FILL|GTK_EXPAND, 0,
-			  0, 0);
+			  3, 1,
+			  1, 1);
 
 	/**/
 
