@@ -39,7 +39,8 @@
 static void fr_command_7z_class_init  (FrCommand7zClass *class);
 static void fr_command_7z_init        (FrCommand        *afile);
 static void fr_command_7z_finalize    (GObject          *object);
-static gboolean spd_support;
+static gboolean spd_support = FALSE;
+static gboolean unexpected_end_of_archive = FALSE;
 
 /* Parent Class */
 
@@ -124,6 +125,9 @@ list__process_line (char     *line,
 			fields = g_strsplit (line, " = ", 2);
 			comm->multi_volume = (strcmp (fields[1], "+") == 0);
 			g_strfreev (fields);
+		}
+		else if (strncmp (line, "Unexpected end of archive", 25) == 0)  { 
+			unexpected_end_of_archive = TRUE;
 		}
 		return;
 	}
@@ -486,6 +490,8 @@ fr_command_7z_extract (FrCommand  *comm,
 			if (!g_str_has_prefix (scan->data, "@"))
 				fr_process_add_arg (comm->process, scan->data);
 
+	if (unexpected_end_of_archive) fr_process_set_ignore_error (comm->process, TRUE);
+
 	fr_process_end_command (comm->process);
 }
 
@@ -534,7 +540,7 @@ fr_command_7z_handle_error (FrCommand   *comm,
 		return;
 	}
 
-	if (error->status <= 1) {
+	if ((error->status <= 1) || (unexpected_end_of_archive)) {
 		error->type = FR_PROC_ERROR_NONE;
 	}
 	else {
