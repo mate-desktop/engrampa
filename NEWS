@@ -1,41 +1,20 @@
-1.15.1
+1.16.0
 ------
 
-    Fix segmentation fault on closing
-    Translations update
-    fix for engrampa closes faster
-    allow engrampa to work on multiple instances
-    show a window only if it's not in batch mode
-    replace WindowList with gtk_application_get_windows
-    Use GtkApplication
-    ui files: set the gtk+ required version to 3.0
-    use GResource to store ui files
-    Use the Gtk+ app chooser dialog for the "Open With" command
-    fixed: engrampa shows duplicate folders
-    use natural order when sorting by filename
-    drag and drop: use the clicked row as drag icon
-    removed unused forward declaration
-    Use g_dpgettext2() instead of plain gettext for column headers.
-    set the "toolbar" class to the location bar
-
-1.15.0
-------
-
-  * sync with Transiflex
-  * don't use gdk_drawable_get_size
-  * remove old gnome files
-  * drop old GTK+2 code
-  * require GTK+ 3.14, drop --with-gtk build option
-  * Gtk3 dlg-package-installer: do not use deprecated gdk_cursor_new
-  * GTK3 gtk-utils: do not use deprecated gtk_icon_info_free
-  * GTK3 fr-window: don't use deprecated gtk_tree_view_set_rules_hint
-  * Gtk3 fr-window: do not use deprecated gdk_cursor_new
-  * GTK3 eggfileformatchooser: don't use deprecated gtk_tree_view_set_rules_hint
-  * GTK3: don't use deprecated gdk_threads_{enter/leave} ()
-  * caja extension: don't use *_CFLAGS that depend on GTK+
-  * p7zip-rar 15.14 supported
-  * Give unrar priority over p7zip
-  * 7z: Fixed problems with files prefixed '@'
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Port to GtkApplication
+  * Use natural sort order when sorting by filename
+  * Use app chooser dialog from GTK+ for "Open With" command
+    instead of custom code
+  * Make "encrypt header" option insensitive if no password is
+    specified
+  * Give unrar priority over p7zip when processing RAR archives
+  * 7z: add support for p7zip-rar >= 15.14
+  * 7z: fix issues with files prefixed with '@'
+  * Fix some GTK+ deprecations
+  * Some more fixes and cleanups
+  * Translations update
 
 1.14.1
 ------
