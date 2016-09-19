@@ -5,7 +5,7 @@
 # Translators:
 # Gil Forcada <gilforcada@guifi.net>, 2008, 2009, 2010
 # Jordi Mallach <jordi@sindominio.net>, 2003, 2004, 2005, 2006, 2007
-# Pere Orga <gotrunks@gmail.com>, 2012-2013
+# Pere O. <gotrunks@gmail.com>, 2012-2013
 # Raül Cambeiro <rulet@menta.net>, 2002
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-16 15:09+0300\n"
-"PO-Revision-Date: 2016-07-27 10:23+0000\n"
+"POT-Creation-Date: 2016-08-10 22:17+0200\n"
+"PO-Revision-Date: 2016-09-04 14:56+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -121,134 +121,14 @@ msgstr "<p> Engrampa és un gestor d'arxius per a l'entorn de MATE. Us permet cr
 msgid "Engrampa Archive Manager"
 msgstr "Gestor d'arxius Engrampa"
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1995
-#: ../src/fr-window.c:5479
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1982
+#: ../src/fr-window.c:5464
 msgid "Archive Manager"
 msgstr "Gestor d'arxius"
 
 #: ../data/engrampa.desktop.in.in.h:3
 msgid "Create and modify an archive"
 msgstr "Creeu i modifiqueu un arxiu"
-
-#: ../data/ui/add-options.ui.h:1
-msgid "Load Options"
-msgstr "Carrega les opcions"
-
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
-msgid "Compress"
-msgstr "Comprimeix"
-
-#: ../data/ui/batch-add-files.ui.h:2
-msgid "_Filename:"
-msgstr "Nom del _fitxer:"
-
-#. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
-msgid "_Location:"
-msgstr "_Ubicació:"
-
-#: ../data/ui/batch-add-files.ui.h:4
-msgid "Location"
-msgstr "Ubicació"
-
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
-msgid "_Password:"
-msgstr "_Contrasenya:"
-
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
-msgid "_Encrypt the file list too"
-msgstr "_Xifra també la llista dels fitxers"
-
-#. this is part of a sentence, for example "split into volumes of 10.0 MB",
-#. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
-msgid "Split into _volumes of"
-msgstr "Parteix en _volums de"
-
-#. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
-msgid "MB"
-msgstr "MB"
-
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
-msgid "_Other Options"
-msgstr "_Altres opcions"
-
-#: ../data/ui/batch-password.ui.h:1
-msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Es necessita contrasenya</span>"
-
-#: ../data/ui/delete.ui.h:1
-msgid "Delete"
-msgstr "Suprimeix"
-
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
-msgid "_Files:"
-msgstr "_Fitxers:"
-
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
-msgid "example: *.txt; *.doc"
-msgstr "exemple: *.txt; *.doc"
-
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
-msgid "_All files"
-msgstr "_Tots els fitxers"
-
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
-msgid "_Selected files"
-msgstr "Fitxers _seleccionats"
-
-#: ../data/ui/open-with.ui.h:1
-msgid "Open Files"
-msgstr "Obre fitxers"
-
-#: ../data/ui/open-with.ui.h:2
-msgid "A_vailable application:"
-msgstr "Aplicació _disponible:"
-
-#: ../data/ui/open-with.ui.h:3
-msgid "R_ecent applications:"
-msgstr "Aplicacions r_ecents:"
-
-#: ../data/ui/open-with.ui.h:4
-msgid "_Application:"
-msgstr "_Aplicació:"
-
-#: ../data/ui/password.ui.h:1
-msgid "Password"
-msgstr "Contrasenya"
-
-#: ../data/ui/password.ui.h:2
-msgid "_Encrypt the file list"
-msgstr "_Xifra la llista dels fitxers"
-
-#: ../data/ui/password.ui.h:4
-msgid ""
-"<i><b>Note:</b> the password will be used to encrypt files you add to the "
-"current archive, and to decrypt files you extract from the current archive. "
-"When the archive is closed the password will be deleted.</i>"
-msgstr "<i><b>Nota</b>: la contrasenya s'utilitzarà per xifrar els fitxers que afegiu a l'arxiu actual, i per desxifrar els fitxers que n'extragueu. En tancar l'arxiu se suprimirà la contrasenya.</i>"
-
-#. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
-#, c-format
-msgid ""
-"The file has been modified with an external application. If you don't update"
-" the file in the archive, all of your changes will be lost."
-msgid_plural ""
-"%d files have been modified with an external application. If you don't "
-"update the files in the archive, all of your changes will be lost."
-msgstr[0] "S'ha modificat el fitxer amb una aplicació externa. Si no actualitzeu el fitxer a l'arxiu, es perdran tots els canvis."
-msgstr[1] "S'han modificat %d fitxers amb una aplicació externa. Si no actualitzeu els fitxers a l'arxiu, es perdran tots els canvis."
-
-#: ../data/ui/update.ui.h:2
-msgid "_Update"
-msgstr "_Actualitza"
-
-#: ../data/ui/update.ui.h:3
-msgid "S_elect the files you want to update:"
-msgstr "S_eleccioneu els fitxers que voleu actualitzar:"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
@@ -437,7 +317,7 @@ msgstr "Comprimeix..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "Crea un arxiu comprimit amb els objectes seleccionats"
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:312
+#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:330
 #: ../src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
@@ -447,13 +327,13 @@ msgid "Allows to create and extract archives"
 msgstr "Permet crear i extraure arxius"
 
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
-#: ../src/dlg-batch-add.c:160 ../src/dlg-batch-add.c:176
-#: ../src/dlg-batch-add.c:205 ../src/dlg-batch-add.c:250
-#: ../src/dlg-batch-add.c:296 ../src/fr-window.c:2984
+#: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
+#: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:2971
 msgid "Could not create the archive"
 msgstr "No s'ha pogut crear l'arxiu"
 
-#: ../src/actions.c:159 ../src/dlg-batch-add.c:162 ../src/dlg-batch-add.c:298
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
 msgstr "Heu d'especificar un nom d'arxiu."
 
@@ -461,9 +341,9 @@ msgstr "Heu d'especificar un nom d'arxiu."
 msgid "You don't have permission to create an archive in this folder"
 msgstr "No teniu permís per crear un arxiu en aquesta carpeta"
 
-#: ../src/actions.c:234 ../src/dlg-package-installer.c:271
-#: ../src/dlg-package-installer.c:280 ../src/dlg-package-installer.c:308
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6112 ../src/fr-window.c:6288
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:269
+#: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6093 ../src/fr-window.c:6269
 msgid "Archive type not supported."
 msgstr "Aquest tipus d'arxiu no es pot gestionar."
 
@@ -471,11 +351,11 @@ msgstr "Aquest tipus d'arxiu no es pot gestionar."
 msgid "Could not delete the old archive."
 msgstr "No s'ha pogut suprimir l'arxiu antic."
 
-#: ../src/actions.c:382 ../src/fr-window.c:5850
+#: ../src/actions.c:382 ../src/fr-window.c:5834
 msgid "Open"
 msgstr "Obre"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5297
+#: ../src/actions.c:393 ../src/fr-window.c:5282
 msgid "All archives"
 msgstr "Tots els arxius"
 
@@ -483,7 +363,7 @@ msgstr "Tots els arxius"
 msgid "All files"
 msgstr "Tots els fitxers"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7300
+#: ../src/actions.c:794 ../src/fr-window.c:7281
 msgid "Last Output"
 msgstr "Última sortida"
 
@@ -522,71 +402,71 @@ msgstr "Un gestor d'arxius per a MATE."
 msgid "translator-credits"
 msgstr "Gil Forcada <gilforcada@guifi.net>\nJordi Mallach <jordi@sindominio.net>\nPere Orga <pere@orga.cat>\nRaül Cambeiro <rulet@menta.net>\nRobert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
 
-#: ../src/dlg-add-files.c:107 ../src/dlg-add-folder.c:141
+#: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "No s'han pogut afegir els fitxers a l'arxiu"
 
-#: ../src/dlg-add-files.c:108 ../src/dlg-add-folder.c:142
+#: ../src/dlg-add-files.c:104 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
 msgstr "No teniu el permís necessari per llegir els fitxers de la carpeta «%s»"
 
-#: ../src/dlg-add-files.c:156 ../src/ui.h:47
+#: ../src/dlg-add-files.c:152 ../src/ui.h:47
 msgid "Add Files"
 msgstr "Afegeix fitxers"
 
 #. Translators: add a file to the archive only if the disk version is
 #. * newer than the archive version.
-#: ../src/dlg-add-files.c:172 ../src/dlg-add-folder.c:243
+#: ../src/dlg-add-files.c:168 ../src/dlg-add-folder.c:238
 msgid "Add only if _newer"
 msgstr "_Afegeix només si és més recent"
 
-#: ../src/dlg-add-folder.c:229
+#: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
 msgstr "Afegeix una carpeta"
 
-#: ../src/dlg-add-folder.c:244
+#: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
 msgstr "_Inclou les subcarpetes"
 
-#: ../src/dlg-add-folder.c:245
+#: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "Exclou les carpetes que siguin e_nllaços simbòlics"
 
-#: ../src/dlg-add-folder.c:248 ../src/dlg-add-folder.c:254
-#: ../src/dlg-add-folder.c:260
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:255
 msgid "example: *.o; *.bak"
 msgstr "exemple: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:244
 msgid "Include _files:"
 msgstr "_Inclou els fitxers:"
 
-#: ../src/dlg-add-folder.c:255
+#: ../src/dlg-add-folder.c:250
 msgid "E_xclude files:"
 msgstr "E_xclou els fitxers:"
 
-#: ../src/dlg-add-folder.c:261
+#: ../src/dlg-add-folder.c:256
 msgid "_Exclude folders:"
 msgstr "_Exclou les carpetes:"
 
-#: ../src/dlg-add-folder.c:265
+#: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
 msgstr "Carrega _les opcions"
 
-#: ../src/dlg-add-folder.c:266
+#: ../src/dlg-add-folder.c:261
 msgid "Sa_ve Options"
 msgstr "De_sa les opcions"
 
-#: ../src/dlg-add-folder.c:267
+#: ../src/dlg-add-folder.c:262
 msgid "_Reset Options"
 msgstr "_Restableix les opcions"
 
-#: ../src/dlg-add-folder.c:895
+#: ../src/dlg-add-folder.c:890
 msgid "Save Options"
 msgstr "Desa les opcions"
 
-#: ../src/dlg-add-folder.c:896
+#: ../src/dlg-add-folder.c:891
 msgid "_Options Name:"
 msgstr "Nom de les _opcions:"
 
@@ -595,7 +475,7 @@ msgstr "Nom de les _opcions:"
 msgid "Enter the password for the archive '%s'."
 msgstr "Introduïu la contrasenya per a l'arxiu «%s»."
 
-#: ../src/dlg-batch-add.c:177
+#: ../src/dlg-batch-add.c:180
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -603,17 +483,17 @@ msgid ""
 "%s"
 msgstr "El nom «%s» no és vàlid perquè no pot contenir els caràcters: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7632 ../src/fr-window.c:7634
 msgid "Please use a different name."
 msgstr "Utilitzeu un nom diferent."
 
-#: ../src/dlg-batch-add.c:207
+#: ../src/dlg-batch-add.c:210
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr "No teniu els permisos per crear un arxiu a la carpeta de destinació."
 
-#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6853
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -621,86 +501,102 @@ msgid ""
 "Do you want to create it?"
 msgstr "No existeix la carpeta de destinació «%s».\n\nVoleu crear-la?"
 
-#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6862
 msgid "Create _Folder"
 msgstr "Crea la _carpeta"
 
-#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6879
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "No s'ha pogut crear la carpeta de destinació: %s."
 
-#: ../src/dlg-batch-add.c:268
+#: ../src/dlg-batch-add.c:271
 msgid "Archive not created"
 msgstr "No s'ha creat l'arxiu"
 
-#: ../src/dlg-batch-add.c:316
+#: ../src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Ja existeix l'arxiu. Voleu sobreescriure'l?"
 
-#: ../src/dlg-batch-add.c:319
+#: ../src/dlg-batch-add.c:322
 msgid "_Overwrite"
 msgstr "S_obreescriu"
 
-#: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
-#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
-#: ../src/fr-window.c:6926
+#: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
+#: ../src/fr-window.c:4225 ../src/fr-window.c:6883 ../src/fr-window.c:6902
+#: ../src/fr-window.c:6907
 msgid "Extraction not performed"
 msgstr "No s'ha realitzat l'extracció"
 
-#: ../src/dlg-extract.c:183 ../src/fr-window.c:4404 ../src/fr-window.c:4484
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4394 ../src/fr-window.c:4474
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "No teniu els permisos necessaris per descomprimir arxius a la carpeta «%s»"
 
-#: ../src/dlg-extract.c:338 ../src/dlg-extract.c:436 ../src/ui.h:122
+#: ../src/dlg-extract.c:333 ../src/dlg-extract.c:431 ../src/ui.h:122
 msgid "Extract"
 msgstr "Extreu"
 
-#: ../src/dlg-extract.c:387
+#: ../src/dlg-extract.c:350 ../src/ui/delete.ui.h:2
+msgid "_Files:"
+msgstr "_Fitxers:"
+
+#: ../src/dlg-extract.c:361 ../src/ui/delete.ui.h:3
+msgid "example: *.txt; *.doc"
+msgstr "exemple: *.txt; *.doc"
+
+#: ../src/dlg-extract.c:364 ../src/ui/delete.ui.h:4
+msgid "_All files"
+msgstr "_Tots els fitxers"
+
+#: ../src/dlg-extract.c:371 ../src/ui/delete.ui.h:5
+msgid "_Selected files"
+msgstr "Fitxers _seleccionats"
+
+#: ../src/dlg-extract.c:382
 msgid "Actions"
 msgstr "Accions"
 
-#: ../src/dlg-extract.c:403
+#: ../src/dlg-extract.c:398
 msgid "Re-crea_te folders"
 msgstr "Crea de nou les carpe_tes"
 
-#: ../src/dlg-extract.c:407
+#: ../src/dlg-extract.c:402
 msgid "Over_write existing files"
 msgstr "_Sobreescriu els fitxers existents"
 
-#: ../src/dlg-extract.c:411
+#: ../src/dlg-extract.c:406
 msgid "Do not e_xtract older files"
 msgstr "No e_xtreguis els fitxers si són més antics"
 
-#: ../src/dlg-new.c:429
+#: ../src/dlg-new.c:426
 msgctxt "File"
 msgid "New"
 msgstr "Nou"
 
-#: ../src/dlg-new.c:442
+#: ../src/dlg-new.c:439
 msgctxt "File"
 msgid "Save"
 msgstr "Desa"
 
-#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:220
 msgid "There was an internal error trying to search for applications:"
 msgstr "S'ha produït un error intern mentre se cercaven aplicacions:"
 
-#: ../src/dlg-package-installer.c:290
+#: ../src/dlg-package-installer.c:288
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
 "Do you want to search for a command to open this file?"
 msgstr "No hi ha cap ordre instal·lada per als fitxers %s.\nVoleu cercar una ordre per obrir aquest fitxer?"
 
-#: ../src/dlg-package-installer.c:295
+#: ../src/dlg-package-installer.c:293
 msgid "Could not open this file type"
 msgstr "No s'ha pogut obrir aquest tipus de fitxer"
 
-#: ../src/dlg-package-installer.c:298
+#: ../src/dlg-package-installer.c:296
 msgid "_Search Command"
 msgstr "_Ordre de cerca"
 
@@ -744,6 +640,18 @@ msgstr "Nombre de fitxers:"
 msgid "Update the file \"%s\" in the archive \"%s\"?"
 msgstr "Voleu actualitzar el fitxer «%s» en l'arxiu «%s»?"
 
+#. secondary text
+#: ../src/dlg-update.c:176 ../src/dlg-update.c:204 ../src/ui/update.ui.h:2
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] "S'ha modificat el fitxer amb una aplicació externa. Si no actualitzeu el fitxer a l'arxiu, es perdran tots els canvis."
+msgstr[1] "S'han modificat %d fitxers amb una aplicació externa. Si no actualitzeu els fitxers a l'arxiu, es perdran tots els canvis."
+
 #: ../src/dlg-update.c:193
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
@@ -766,15 +674,15 @@ msgstr "Tots els fitxers compatibles"
 msgid "By Extension"
 msgstr "Per extensió"
 
-#: ../src/eggfileformatchooser.c:422
+#: ../src/eggfileformatchooser.c:421
 msgid "File Format"
 msgstr "Format del fitxer"
 
-#: ../src/eggfileformatchooser.c:440
+#: ../src/eggfileformatchooser.c:439
 msgid "Extension(s)"
 msgstr "Extensions"
 
-#: ../src/eggfileformatchooser.c:670
+#: ../src/eggfileformatchooser.c:669
 #, c-format
 msgid ""
 "The program was not able to find out the file format you want to use for "
@@ -782,7 +690,7 @@ msgid ""
 "choose a file format from the list below."
 msgstr "No s'ha pogut determinar el format del fitxer que voleu fer servir per «%s». Assegureu-vos que feu servir una extensió coneguda o seleccioneu un format de fitxer de la llista d'aquí sota."
 
-#: ../src/eggfileformatchooser.c:677
+#: ../src/eggfileformatchooser.c:676
 msgid "File format not recognized"
 msgstr "No s'ha reconegut el format del fitxer"
 
@@ -814,13 +722,13 @@ msgid "Adding file: "
 msgstr "S'està afegint el fitxer: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:419 ../src/fr-command-rar.c:526
-#: ../src/fr-command-tar.c:429
+#: ../src/fr-command-7z.c:437 ../src/fr-command-rar.c:526
+#: ../src/fr-command-tar.c:431
 msgid "Extracting file: "
 msgstr "S'està extraient el fitxer: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:375
+#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:376
 msgid "Removing file: "
 msgstr "S'està suprimint el fitxer: "
 
@@ -829,15 +737,15 @@ msgstr "S'està suprimint el fitxer: "
 msgid "Could not find the volume: %s"
 msgstr "No s'ha trobat el volum: %s"
 
-#: ../src/fr-command-tar.c:384
+#: ../src/fr-command-tar.c:385
 msgid "Deleting files from archive"
-msgstr "S'estan suprimint els fitxers de l'arxiu"
+msgstr "Supressió dels fitxers de l'arxiu"
 
-#: ../src/fr-command-tar.c:488
+#: ../src/fr-command-tar.c:491
 msgid "Recompressing archive"
 msgstr "S'està tornant a comprimir l'arxiu"
 
-#: ../src/fr-command-tar.c:729
+#: ../src/fr-command-tar.c:732
 msgid "Decompressing archive"
 msgstr "S'està descomprimint l'arxiu"
 
@@ -969,281 +877,286 @@ msgstr "_Afegeix"
 msgid "_Extract"
 msgstr "_Extreu"
 
-#: ../src/fr-window.c:1531
+#: ../src/fr-window.c:1518
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "%d objecte (%s)"
 msgstr[1] "%d objectes (%s)"
 
-#: ../src/fr-window.c:1536
+#: ../src/fr-window.c:1523
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "%d objecte seleccionat (%s)"
 msgstr[1] "%d objectes seleccionats (%s)"
 
-#: ../src/fr-window.c:1606
+#: ../src/fr-window.c:1593
 msgid "Folder"
 msgstr "Carpeta"
 
-#: ../src/fr-window.c:2003
+#: ../src/fr-window.c:1990
 msgid "[read only]"
 msgstr "[només lectura]"
 
-#: ../src/fr-window.c:2255
+#: ../src/fr-window.c:2242
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "No s'ha pogut mostrar la carpeta «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2329 ../src/fr-window.c:2367
+#: ../src/fr-window.c:2316 ../src/fr-window.c:2354
 #, c-format
 msgid "Creating \"%s\""
 msgstr "S'està creant «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2333
+#: ../src/fr-window.c:2320
 #, c-format
 msgid "Loading \"%s\""
 msgstr "S'està carregant «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2337
+#: ../src/fr-window.c:2324
 #, c-format
 msgid "Reading \"%s\""
 msgstr "S'està llegint «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2341
+#: ../src/fr-window.c:2328
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr "S'estan eliminant els fitxers de «%s»"
+msgstr "Supressió dels fitxers de «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2345
+#: ../src/fr-window.c:2332
 #, c-format
 msgid "Testing \"%s\""
 msgstr "S'està provant «%s»"
 
-#: ../src/fr-window.c:2348
+#: ../src/fr-window.c:2335
 msgid "Getting the file list"
 msgstr "S'està obtenint la llista de fitxers"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2352
+#: ../src/fr-window.c:2339
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr "S'estan copiant els fitxers per afegir a «%s»"
+msgstr "Còpia dels fitxers per afegir a «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2356
+#: ../src/fr-window.c:2343
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr "S'estan afegint els fitxers a «%s»"
+msgstr "Afegiment dels fitxers a «%s»"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2360
+#: ../src/fr-window.c:2347
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr "S'estan extraient els fitxers de «%s»"
+msgstr "Extracció dels fitxers de «%s»"
 
-#: ../src/fr-window.c:2363
+#: ../src/fr-window.c:2350
 msgid "Copying the extracted files to the destination"
-msgstr "S'estan copiant els fitxers extrets a la destinació"
+msgstr "Còpia dels fitxers extrets a la destinació"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2371
+#: ../src/fr-window.c:2358
 #, c-format
 msgid "Saving \"%s\""
 msgstr "S'està desant «%s»"
 
-#: ../src/fr-window.c:2518
+#: ../src/fr-window.c:2505
 msgid "_Open the Archive"
 msgstr "_Obre l'arxiu"
 
-#: ../src/fr-window.c:2519
+#: ../src/fr-window.c:2506
 msgid "_Show the Files"
 msgstr "_Mostra els fitxers"
 
-#: ../src/fr-window.c:2696
+#: ../src/fr-window.c:2683
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
 msgstr[0] "%d fitxer restant"
 msgstr[1] "%'d fitxers restants"
 
-#: ../src/fr-window.c:2746
+#: ../src/fr-window.c:2733
 msgid "Extraction completed successfully"
 msgstr "S'ha completat l'extracció correctament"
 
-#: ../src/fr-window.c:2769
+#: ../src/fr-window.c:2756
 msgid "Archive created successfully"
 msgstr "S'ha creat l'arxiu correctament"
 
-#: ../src/fr-window.c:2827
+#: ../src/fr-window.c:2814
 msgid "Please wait…"
 msgstr "Si us plau, espereu..."
 
-#: ../src/fr-window.c:2896 ../src/fr-window.c:3031
+#: ../src/fr-window.c:2883 ../src/fr-window.c:3018
 msgid "Command exited abnormally."
 msgstr "L'ordre no ha acabat com s'esperava."
 
-#: ../src/fr-window.c:2989
+#: ../src/fr-window.c:2976
 msgid "An error occurred while extracting files."
 msgstr "S'ha produït un error en extreure els fitxers."
 
-#: ../src/fr-window.c:2995
+#: ../src/fr-window.c:2982
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "No s'ha pogut obrir «%s»"
 
-#: ../src/fr-window.c:3000
+#: ../src/fr-window.c:2987
 msgid "An error occurred while loading the archive."
 msgstr "S'ha produït un error en carregar l'arxiu."
 
-#: ../src/fr-window.c:3004
+#: ../src/fr-window.c:2991
 msgid "An error occurred while deleting files from the archive."
 msgstr "S'ha produït un error en suprimir els fitxers de l'arxiu."
 
-#: ../src/fr-window.c:3010
+#: ../src/fr-window.c:2997
 msgid "An error occurred while adding files to the archive."
 msgstr "S'ha produït un error en afegir els fitxers a l'arxiu."
 
-#: ../src/fr-window.c:3014
+#: ../src/fr-window.c:3001
 msgid "An error occurred while testing archive."
 msgstr "S'ha produït un error en verificar l'arxiu."
 
-#: ../src/fr-window.c:3018
+#: ../src/fr-window.c:3005
 msgid "An error occurred while saving the archive."
 msgstr "S'ha produït un error en desar l'arxiu."
 
-#: ../src/fr-window.c:3022
+#: ../src/fr-window.c:3009
 msgid "An error occurred."
 msgstr "S'ha produït un error."
 
-#: ../src/fr-window.c:3028
+#: ../src/fr-window.c:3015
 msgid "Command not found."
 msgstr "No s'ha trobat l'ordre."
 
-#: ../src/fr-window.c:3231
+#: ../src/fr-window.c:3218
 msgid "Test Result"
 msgstr "Resultat de la comprovació"
 
-#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
-#: ../src/fr-window.c:8497
+#: ../src/fr-window.c:4068 ../src/fr-window.c:8184 ../src/fr-window.c:8220
+#: ../src/fr-window.c:8470
 msgid "Could not perform the operation"
 msgstr "No s'ha pogut realitzar l'operació"
 
-#: ../src/fr-window.c:4104
+#: ../src/fr-window.c:4094
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "Voleu afegir aquest fitxer a l'arxiu actual o obrir-ho com un arxiu nou?"
 
-#: ../src/fr-window.c:4134
+#: ../src/fr-window.c:4124
 msgid "Do you want to create a new archive with these files?"
 msgstr "Voleu crear un arxiu nou amb aquests fitxers?"
 
-#: ../src/fr-window.c:4137
+#: ../src/fr-window.c:4127
 msgid "Create _Archive"
 msgstr "Crea un _arxiu"
 
-#: ../src/fr-window.c:4735 ../src/fr-window.c:5799
+#: ../src/fr-window.c:4725 ../src/fr-window.c:5783
 msgid "Folders"
 msgstr "Carpetes"
 
-#: ../src/fr-window.c:4773
+#: ../src/fr-window.c:4763
 msgctxt "File"
 msgid "Size"
 msgstr "Mida"
 
-#: ../src/fr-window.c:4774
+#: ../src/fr-window.c:4764
 msgctxt "File"
 msgid "Type"
 msgstr "Tipus"
 
-#: ../src/fr-window.c:4775
+#: ../src/fr-window.c:4765
 msgctxt "File"
 msgid "Date Modified"
 msgstr "Data modificació"
 
-#: ../src/fr-window.c:4776
+#: ../src/fr-window.c:4766
 msgctxt "File"
 msgid "Location"
 msgstr "Ubicació"
 
-#: ../src/fr-window.c:4785
+#: ../src/fr-window.c:4775
 msgctxt "File"
 msgid "Name"
 msgstr "Nom"
 
-#: ../src/fr-window.c:5720
+#: ../src/fr-window.c:5704
 msgid "Find:"
 msgstr "Troba:"
 
-#: ../src/fr-window.c:5807
+#: ../src/fr-window.c:5791
 msgid "Close the folders pane"
 msgstr "Tanca el plafó de les carpetes"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5838
+#: ../src/fr-window.c:5822
 msgid "Open _Recent"
 msgstr "Obre un r_ecent"
 
-#: ../src/fr-window.c:5839 ../src/fr-window.c:5851
+#: ../src/fr-window.c:5823 ../src/fr-window.c:5835
 msgid "Open a recently used archive"
 msgstr "Obre un arxiu utilitzat recentment"
 
-#: ../src/fr-window.c:6280
+#. Translators: after the colon there is a folder name.
+#: ../src/fr-window.c:5912 ../src/ui/batch-add-files.ui.h:3
+msgid "_Location:"
+msgstr "_Ubicació:"
+
+#: ../src/fr-window.c:6261
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "No s'ha pogut desar l'arxiu «%s»"
 
-#: ../src/fr-window.c:6779
+#: ../src/fr-window.c:6760
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "Voleu substituir el fitxer «%s»?"
 
-#: ../src/fr-window.c:6782
+#: ../src/fr-window.c:6763
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "Ja existeix un altre fitxer amb el mateix nom a «%s»."
 
-#: ../src/fr-window.c:6789
+#: ../src/fr-window.c:6770
 msgid "Replace _All"
 msgstr "Substitueix-ho _tot"
 
-#: ../src/fr-window.c:6790
+#: ../src/fr-window.c:6771
 msgid "_Skip"
 msgstr "_Omet"
 
-#: ../src/fr-window.c:6791
+#: ../src/fr-window.c:6772
 msgid "_Replace"
 msgstr "_Substitueix"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7605
+#: ../src/fr-window.c:7586
 msgid "New name is void, please type a name."
 msgstr "El nom és buit, si us plau, escriviu un nom."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7610
+#: ../src/fr-window.c:7591
 msgid "New name is the same as old one, please type other name."
 msgstr "El nom nou és el mateix que l'anterior, si us plau, escriviu un altre nom."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7615
+#: ../src/fr-window.c:7596
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "El nom «%s» no és vàlid perquè conté com a mínim un d'aquests caràcters: %s, si us plau, escriviu un altre nom."
 
-#: ../src/fr-window.c:7651
+#: ../src/fr-window.c:7632
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1251,7 +1164,7 @@ msgid ""
 "%s"
 msgstr "Ja existeix una carpeta anomenada «%s».\n\n%s"
 
-#: ../src/fr-window.c:7653
+#: ../src/fr-window.c:7634
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1259,43 +1172,43 @@ msgid ""
 "%s"
 msgstr "Ja existeix un fitxer anomenat «%s».\n\n%s"
 
-#: ../src/fr-window.c:7723
+#: ../src/fr-window.c:7704
 msgid "Rename"
 msgstr "Reanomena"
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7705
 msgid "_New folder name:"
 msgstr "_Nom de la carpeta nova:"
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7705
 msgid "_New file name:"
 msgstr "_Nom del fitxer nou:"
 
-#: ../src/fr-window.c:7728
+#: ../src/fr-window.c:7709
 msgid "_Rename"
 msgstr "_Reanomena"
 
-#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
+#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
 msgid "Could not rename the folder"
 msgstr "No s'ha pogut reanomenar la carpeta"
 
-#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
+#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
 msgid "Could not rename the file"
 msgstr "No s'ha pogut reanomenar el fitxer"
 
-#: ../src/fr-window.c:8164
+#: ../src/fr-window.c:8145
 msgid "Paste Selection"
 msgstr "Enganxa la selecció"
 
-#: ../src/fr-window.c:8165
+#: ../src/fr-window.c:8146
 msgid "_Destination folder:"
 msgstr "Carpeta de _destinació:"
 
-#: ../src/fr-window.c:8776
+#: ../src/fr-window.c:8749
 msgid "Add files to an archive"
 msgstr "Afegeix els fitxers a un arxiu"
 
-#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
+#: ../src/fr-window.c:8792 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "Extreu l'arxiu"
@@ -1308,55 +1221,115 @@ msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
 #. Expander
-#: ../src/gtk-utils.c:443
+#: ../src/gtk-utils.c:431
 msgid "Command _Line Output"
 msgstr "Sortida de la _línia d'ordres"
 
-#: ../src/gtk-utils.c:782
+#: ../src/gtk-utils.c:770
 msgid "Could not display help"
 msgstr "No s'ha pogut mostrar l'ajuda"
 
-#: ../src/main.c:54
+#: ../src/main.c:51
 msgid "Add files to the specified archive and quit the program"
 msgstr "Afegeix els fitxers a l'arxiu especificat i surt del programa"
 
-#: ../src/main.c:55
+#: ../src/main.c:52
 msgid "ARCHIVE"
 msgstr "ARXIU"
 
-#: ../src/main.c:58
+#: ../src/main.c:55
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "Afegeix els fitxers, demana el nom de l'arxiu i surt del programa"
 
-#: ../src/main.c:62
+#: ../src/main.c:59
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "Extreu els arxius a la carpeta especificada i surt del programa"
 
-#: ../src/main.c:63 ../src/main.c:75
+#: ../src/main.c:60 ../src/main.c:72
 msgid "FOLDER"
 msgstr "CARPETA"
 
-#: ../src/main.c:66
+#: ../src/main.c:63
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr "Extreu els arxius, demana el nom de la carpeta de destinació i surt del programa"
 
-#: ../src/main.c:70
+#: ../src/main.c:67
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr "Extreu el contingut dels arxius a la carpeta de l'arxiu i surt del programa"
 
-#: ../src/main.c:74
+#: ../src/main.c:71
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "Carpeta predeterminada que s'utilitzarà per a les ordres «--add» i «--extract»"
 
-#: ../src/main.c:78
+#: ../src/main.c:75
 msgid "Create destination folder without asking confirmation"
 msgstr "Crea la carpeta de destinació sense demanar confirmació"
 
-#: ../src/main.c:296 ../src/server.c:444
+#: ../src/main.c:165 ../src/server.c:296 ../src/ui/batch-add-files.ui.h:1
+msgid "Compress"
+msgstr "Comprimeix"
+
+#: ../src/main.c:314 ../src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- Crea i modifica un arxiu"
+
+#: ../src/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "Carrega les opcions"
+
+#: ../src/ui/app-menu.ui.h:1 ../src/ui.h:35
+msgid "_Help"
+msgstr "A_juda"
+
+#: ../src/ui/app-menu.ui.h:2
+msgid "_About Archive Manager"
+msgstr "Qu_ant al gestor d'arxius"
+
+#: ../src/ui/app-menu.ui.h:3
+msgid "_Quit"
+msgstr "_Surt"
+
+#: ../src/ui/batch-add-files.ui.h:2
+msgid "_Filename:"
+msgstr "Nom del _fitxer:"
+
+#: ../src/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "Ubicació"
+
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
+msgid "_Password:"
+msgstr "_Contrasenya:"
+
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr "_Xifra també la llista dels fitxers"
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr "Parteix en _volums de"
+
+#. MB means megabytes
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
+msgid "MB"
+msgstr "MB"
+
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
+msgid "_Other Options"
+msgstr "_Altres opcions"
+
+#: ../src/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Es necessita contrasenya</span>"
+
+#: ../src/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "Suprimeix"
 
 #: ../src/ui.h:32
 msgid "_Archive"
@@ -1369,10 +1342,6 @@ msgstr "_Edita"
 #: ../src/ui.h:34
 msgid "_View"
 msgstr "_Visualitza"
-
-#: ../src/ui.h:35
-msgid "_Help"
-msgstr "A_juda"
 
 #: ../src/ui.h:36
 msgid "_Arrange Files"
@@ -1632,3 +1601,26 @@ msgstr "per _ubicació"
 #: ../src/ui.h:269
 msgid "Sort file list by location"
 msgstr "Ordena la llista de fitxers per ubicació"
+
+#: ../src/ui/password.ui.h:1
+msgid "Password"
+msgstr "Contrasenya"
+
+#: ../src/ui/password.ui.h:2
+msgid "_Encrypt the file list"
+msgstr "_Xifra la llista dels fitxers"
+
+#: ../src/ui/password.ui.h:4
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr "<i><b>Nota</b>: la contrasenya s'utilitzarà per xifrar els fitxers que afegiu a l'arxiu actual, i per desxifrar els fitxers que n'extragueu. En tancar l'arxiu se suprimirà la contrasenya.</i>"
+
+#: ../src/ui/update.ui.h:1
+msgid "_Update"
+msgstr "_Actualitza"
+
+#: ../src/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
+msgstr "S_eleccioneu els fitxers que voleu actualitzar:"

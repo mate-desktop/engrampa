@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-16 15:09+0300\n"
-"PO-Revision-Date: 2016-03-28 00:19+0000\n"
+"POT-Creation-Date: 2016-08-10 22:17+0200\n"
+"PO-Revision-Date: 2016-08-13 17:21+0000\n"
 "Last-Translator: samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic (http://www.transifex.com/mate/MATE/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -117,134 +117,14 @@ msgstr ""
 msgid "Engrampa Archive Manager"
 msgstr "ኤንግራምፓ የ ማህደር አስተዳዳሪ"
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1995
-#: ../src/fr-window.c:5479
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1982
+#: ../src/fr-window.c:5464
 msgid "Archive Manager"
 msgstr "የመዝገብ ቤት መቆጣጠሪያ"
 
 #: ../data/engrampa.desktop.in.in.h:3
 msgid "Create and modify an archive"
 msgstr "ማህደር መፍጠሪያ እና ማሻሻያ"
-
-#: ../data/ui/add-options.ui.h:1
-msgid "Load Options"
-msgstr "ምርጫዎችን መጫኛ"
-
-#: ../data/ui/batch-add-files.ui.h:1 ../src/main.c:168 ../src/server.c:296
-msgid "Compress"
-msgstr "ማመቂያ"
-
-#: ../data/ui/batch-add-files.ui.h:2
-msgid "_Filename:"
-msgstr "የ _ፋይል ስም:"
-
-#. Translators: after the colon there is a folder name.
-#: ../data/ui/batch-add-files.ui.h:3 ../src/fr-window.c:5929
-msgid "_Location:"
-msgstr "_አካባቢ:"
-
-#: ../data/ui/batch-add-files.ui.h:4
-msgid "Location"
-msgstr "ቦታ"
-
-#: ../data/ui/batch-add-files.ui.h:5 ../data/ui/batch-password.ui.h:2
-#: ../data/ui/new.ui.h:1 ../data/ui/password.ui.h:3
-msgid "_Password:"
-msgstr "የ _መግቢያ ቃል:"
-
-#: ../data/ui/batch-add-files.ui.h:6 ../data/ui/new.ui.h:2
-msgid "_Encrypt the file list too"
-msgstr "የ ፋይል ዝርዝሩንም _Encrypt ላድርገው"
-
-#. this is part of a sentence, for example "split into volumes of 10.0 MB",
-#. where MB stands for megabyte.
-#: ../data/ui/batch-add-files.ui.h:8 ../data/ui/new.ui.h:3
-msgid "Split into _volumes of"
-msgstr "መክፈያ ወደ _መጠኖች ከ"
-
-#. MB means megabytes
-#: ../data/ui/batch-add-files.ui.h:10 ../data/ui/new.ui.h:5
-msgid "MB"
-msgstr "ሜባ"
-
-#: ../data/ui/batch-add-files.ui.h:11 ../data/ui/new.ui.h:6
-msgid "_Other Options"
-msgstr "_ሌሎች አማራጮች"
-
-#: ../data/ui/batch-password.ui.h:1
-msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">የመግቢያ ቃል ያስፈልጋል required</span>"
-
-#: ../data/ui/delete.ui.h:1
-msgid "Delete"
-msgstr "ማጥፊያ"
-
-#: ../data/ui/delete.ui.h:2 ../src/dlg-extract.c:355
-msgid "_Files:"
-msgstr "ፋይሎች:"
-
-#: ../data/ui/delete.ui.h:3 ../src/dlg-extract.c:366
-msgid "example: *.txt; *.doc"
-msgstr "ለምሳሌ: *.txt; *.doc"
-
-#: ../data/ui/delete.ui.h:4 ../src/dlg-extract.c:369
-msgid "_All files"
-msgstr "_ሁሉንም ፋይሎች"
-
-#: ../data/ui/delete.ui.h:5 ../src/dlg-extract.c:376
-msgid "_Selected files"
-msgstr "የ _ተመረጡት ፋይሎች"
-
-#: ../data/ui/open-with.ui.h:1
-msgid "Open Files"
-msgstr "ፋይሎች መክፈቻ..."
-
-#: ../data/ui/open-with.ui.h:2
-msgid "A_vailable application:"
-msgstr "ዝ_ግጁ ምርጫዎች:"
-
-#: ../data/ui/open-with.ui.h:3
-msgid "R_ecent applications:"
-msgstr "የ_ቅርብ ጊዜ መተግበሪያዎች:"
-
-#: ../data/ui/open-with.ui.h:4
-msgid "_Application:"
-msgstr "_መፈጸሚያ:"
-
-#: ../data/ui/password.ui.h:1
-msgid "Password"
-msgstr "የ መግቢያ ቃል"
-
-#: ../data/ui/password.ui.h:2
-msgid "_Encrypt the file list"
-msgstr "የ ፋይል ዝርዝሩንም _Encrypt ላድርገው"
-
-#: ../data/ui/password.ui.h:4
-msgid ""
-"<i><b>Note:</b> the password will be used to encrypt files you add to the "
-"current archive, and to decrypt files you extract from the current archive. "
-"When the archive is closed the password will be deleted.</i>"
-msgstr ""
-
-#. secondary text
-#: ../data/ui/update.ui.h:1 ../src/dlg-update.c:176 ../src/dlg-update.c:204
-#, c-format
-msgid ""
-"The file has been modified with an external application. If you don't update"
-" the file in the archive, all of your changes will be lost."
-msgid_plural ""
-"%d files have been modified with an external application. If you don't "
-"update the files in the archive, all of your changes will be lost."
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../data/ui/update.ui.h:2
-msgid "_Update"
-msgstr "_ማሻሻያ"
-
-#: ../data/ui/update.ui.h:3
-msgid "S_elect the files you want to update:"
-msgstr "ይ_ምረጡ ማሻሻል የሚፈልጉትን ፋይሎች:"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
@@ -328,7 +208,7 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:19
 msgid "Max history length"
-msgstr ""
+msgstr "ከፍተኛ የ ታሪክ እርዝመት"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:20
 msgid "Max number of items in the Open Recents menu."
@@ -402,11 +282,11 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:36
 msgid "Default volume size"
-msgstr ""
+msgstr "ነባር የ መጠን መጠን"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
 msgid "The default size for volumes."
-msgstr ""
+msgstr "የ ነባር መጠን ለ መጠኖች"
 
 #: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
@@ -433,7 +313,7 @@ msgstr "ማመቂያ..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "ለ ተመረጡት አካሎች የታመቀ ማህደር መፍጠሪያ "
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:312
+#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:330
 #: ../src/server.c:457
 msgid "Engrampa"
 msgstr "ኤንግራምፓ"
@@ -443,13 +323,13 @@ msgid "Allows to create and extract archives"
 msgstr "መፍጠሪያ እና ማህደር ማራገፊያ ማስቻያ"
 
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
-#: ../src/dlg-batch-add.c:160 ../src/dlg-batch-add.c:176
-#: ../src/dlg-batch-add.c:205 ../src/dlg-batch-add.c:250
-#: ../src/dlg-batch-add.c:296 ../src/fr-window.c:2984
+#: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
+#: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:2971
 msgid "Could not create the archive"
 msgstr "ማህደር መፍጠር አልተቻለም"
 
-#: ../src/actions.c:159 ../src/dlg-batch-add.c:162 ../src/dlg-batch-add.c:298
+#: ../src/actions.c:159 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
 msgstr "የ ማህደር ስም መወሰን ያስፈልጋል"
 
@@ -457,9 +337,9 @@ msgstr "የ ማህደር ስም መወሰን ያስፈልጋል"
 msgid "You don't have permission to create an archive in this folder"
 msgstr "በዚህ ፎልደር ውስጥ ማህደር ለመፍጠር ፍቃድ የሎትም"
 
-#: ../src/actions.c:234 ../src/dlg-package-installer.c:271
-#: ../src/dlg-package-installer.c:280 ../src/dlg-package-installer.c:308
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6112 ../src/fr-window.c:6288
+#: ../src/actions.c:234 ../src/dlg-package-installer.c:269
+#: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6093 ../src/fr-window.c:6269
 msgid "Archive type not supported."
 msgstr "የ ማህደሩ አይነት የተደገፈ አይደለም "
 
@@ -467,11 +347,11 @@ msgstr "የ ማህደሩ አይነት የተደገፈ አይደለም "
 msgid "Could not delete the old archive."
 msgstr "አሮጌውን ማህደር ማጥፋት አልተቻለም"
 
-#: ../src/actions.c:382 ../src/fr-window.c:5850
+#: ../src/actions.c:382 ../src/fr-window.c:5834
 msgid "Open"
 msgstr "መክፈቻ"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5297
+#: ../src/actions.c:393 ../src/fr-window.c:5282
 msgid "All archives"
 msgstr "ሁሉንም ማህደሮች"
 
@@ -479,7 +359,7 @@ msgstr "ሁሉንም ማህደሮች"
 msgid "All files"
 msgstr "ሁሉንም ፋይሎች"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7300
+#: ../src/actions.c:794 ../src/fr-window.c:7281
 msgid "Last Output"
 msgstr "የመጨረሻው ውጤት"
 
@@ -518,71 +398,71 @@ msgstr "የ ማህደር አስተዳዳሪ ለ ሜት ዴስክቶፕ"
 msgid "translator-credits"
 msgstr "ምስጋና-ለተርጓሚዎች"
 
-#: ../src/dlg-add-files.c:107 ../src/dlg-add-folder.c:141
+#: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "ፋይሎችን ወደ ማህደር መጨመር አልተቻለም"
 
-#: ../src/dlg-add-files.c:108 ../src/dlg-add-folder.c:142
+#: ../src/dlg-add-files.c:104 ../src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
 msgstr "በቂ ፍቃድ የሎትም ከዚህ ፎልደር ውስጥ ፋይሎች ለማንበብ \"%s\""
 
-#: ../src/dlg-add-files.c:156 ../src/ui.h:47
+#: ../src/dlg-add-files.c:152 ../src/ui.h:47
 msgid "Add Files"
 msgstr "ፋይሎች መጨመሪያ"
 
 #. Translators: add a file to the archive only if the disk version is
 #. * newer than the archive version.
-#: ../src/dlg-add-files.c:172 ../src/dlg-add-folder.c:243
+#: ../src/dlg-add-files.c:168 ../src/dlg-add-folder.c:238
 msgid "Add only if _newer"
 msgstr "_አዲስ ከሆነ ብቻ መጨመሪያ"
 
-#: ../src/dlg-add-folder.c:229
+#: ../src/dlg-add-folder.c:224
 msgid "Add a Folder"
 msgstr "ፎልደር መጨመሪያ"
 
-#: ../src/dlg-add-folder.c:244
+#: ../src/dlg-add-folder.c:239
 msgid "_Include subfolders"
 msgstr "ንዑስ ፎልደሮች _ማካተቻ"
 
-#: ../src/dlg-add-folder.c:245
+#: ../src/dlg-add-folder.c:240
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr ""
 
-#: ../src/dlg-add-folder.c:248 ../src/dlg-add-folder.c:254
-#: ../src/dlg-add-folder.c:260
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:255
 msgid "example: *.o; *.bak"
 msgstr "ምሳሌ: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:249
+#: ../src/dlg-add-folder.c:244
 msgid "Include _files:"
 msgstr "ማካተቻ _ፋይሎች:"
 
-#: ../src/dlg-add-folder.c:255
+#: ../src/dlg-add-folder.c:250
 msgid "E_xclude files:"
 msgstr "ፋይሎች ማ_ካተቻ:"
 
-#: ../src/dlg-add-folder.c:261
+#: ../src/dlg-add-folder.c:256
 msgid "_Exclude folders:"
 msgstr "ፋልደሮች _ማካተቻ:"
 
-#: ../src/dlg-add-folder.c:265
+#: ../src/dlg-add-folder.c:260
 msgid "_Load Options"
 msgstr "_የመጫኛ ምርጫዎች"
 
-#: ../src/dlg-add-folder.c:266
+#: ../src/dlg-add-folder.c:261
 msgid "Sa_ve Options"
 msgstr "የማስ_ቀመጫ ምርጫዎች"
 
-#: ../src/dlg-add-folder.c:267
+#: ../src/dlg-add-folder.c:262
 msgid "_Reset Options"
 msgstr "_እንደ ነበር መመለሻ ምርጫዎች"
 
-#: ../src/dlg-add-folder.c:895
+#: ../src/dlg-add-folder.c:890
 msgid "Save Options"
 msgstr "የማስቀመጫ ምርጫዎች"
 
-#: ../src/dlg-add-folder.c:896
+#: ../src/dlg-add-folder.c:891
 msgid "_Options Name:"
 msgstr "የ _ምርጫዎች ስም:"
 
@@ -591,7 +471,7 @@ msgstr "የ _ምርጫዎች ስም:"
 msgid "Enter the password for the archive '%s'."
 msgstr "የመግቢያ ቃል ያስገቡ ለ ማህደሩ '%s'."
 
-#: ../src/dlg-batch-add.c:177
+#: ../src/dlg-batch-add.c:180
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -599,17 +479,17 @@ msgid ""
 "%s"
 msgstr "ይህ ስም \"%s\" ዋጋ የለው አይደለም ምክንያቱም ባህሪዎች መያዝ የለበትም: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:180 ../src/fr-window.c:7651 ../src/fr-window.c:7653
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7632 ../src/fr-window.c:7634
 msgid "Please use a different name."
 msgstr "እባክዎን ሌላ ስም ይጠቀሙ "
 
-#: ../src/dlg-batch-add.c:207
+#: ../src/dlg-batch-add.c:210
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr "በ መድረሻው ፎልደር ውስጥ ማህደር ለመፍጠር ፍቃድ የለዎትም "
 
-#: ../src/dlg-batch-add.c:223 ../src/dlg-extract.c:109 ../src/fr-window.c:6872
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6853
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -617,86 +497,102 @@ msgid ""
 "Do you want to create it?"
 msgstr "መድረሻው ፎልደር \"%s\" አልተገኘም\nመፍጠር ይፈልጋሉ?"
 
-#: ../src/dlg-batch-add.c:232 ../src/dlg-extract.c:118 ../src/fr-window.c:6881
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6862
 msgid "Create _Folder"
 msgstr "_ፎልደር መፍጠሪያ"
 
-#: ../src/dlg-batch-add.c:251 ../src/dlg-extract.c:138 ../src/fr-window.c:6898
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6879
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "መድረሻ ፎልደሩን መፍጠር አልተቻለም: %s."
 
-#: ../src/dlg-batch-add.c:268
+#: ../src/dlg-batch-add.c:271
 msgid "Archive not created"
 msgstr "ማህደር አልተፈጠረም"
 
-#: ../src/dlg-batch-add.c:316
+#: ../src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "ማህደሩ ቀደም ሲል ነበር: በላዩ ላይ ደርበው መጻፍ ይፈልጋሉ? "
 
-#: ../src/dlg-batch-add.c:319
+#: ../src/dlg-batch-add.c:322
 msgid "_Overwrite"
 msgstr "_በላዩ ላይ ደርቦ መጻፊያ "
 
-#: ../src/dlg-extract.c:137 ../src/dlg-extract.c:155 ../src/dlg-extract.c:182
-#: ../src/fr-window.c:4235 ../src/fr-window.c:6902 ../src/fr-window.c:6921
-#: ../src/fr-window.c:6926
+#: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
+#: ../src/fr-window.c:4225 ../src/fr-window.c:6883 ../src/fr-window.c:6902
+#: ../src/fr-window.c:6907
 msgid "Extraction not performed"
 msgstr "ማራገፉ አልተፈጸመም"
 
-#: ../src/dlg-extract.c:183 ../src/fr-window.c:4404 ../src/fr-window.c:4484
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4394 ../src/fr-window.c:4474
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "ማህደር ወደ እዚህ ፎልደር ለማራገፍ በቂ ፍቃድ የለዎትም \"%s\""
 
-#: ../src/dlg-extract.c:338 ../src/dlg-extract.c:436 ../src/ui.h:122
+#: ../src/dlg-extract.c:333 ../src/dlg-extract.c:431 ../src/ui.h:122
 msgid "Extract"
 msgstr "ማራገፊያ"
 
-#: ../src/dlg-extract.c:387
+#: ../src/dlg-extract.c:350 ../src/ui/delete.ui.h:2
+msgid "_Files:"
+msgstr "ፋይሎች:"
+
+#: ../src/dlg-extract.c:361 ../src/ui/delete.ui.h:3
+msgid "example: *.txt; *.doc"
+msgstr "ለምሳሌ: *.txt; *.doc"
+
+#: ../src/dlg-extract.c:364 ../src/ui/delete.ui.h:4
+msgid "_All files"
+msgstr "_ሁሉንም ፋይሎች"
+
+#: ../src/dlg-extract.c:371 ../src/ui/delete.ui.h:5
+msgid "_Selected files"
+msgstr "የ _ተመረጡት ፋይሎች"
+
+#: ../src/dlg-extract.c:382
 msgid "Actions"
 msgstr "ተግባሮች"
 
-#: ../src/dlg-extract.c:403
+#: ../src/dlg-extract.c:398
 msgid "Re-crea_te folders"
 msgstr "ፎልደሮች እንደገና-መፍጠ_ሪያ"
 
-#: ../src/dlg-extract.c:407
+#: ../src/dlg-extract.c:402
 msgid "Over_write existing files"
 msgstr "በነበረው ፋይል ላይ ደርቦ_መጻፊያ"
 
-#: ../src/dlg-extract.c:411
+#: ../src/dlg-extract.c:406
 msgid "Do not e_xtract older files"
 msgstr "አሮጌ ፋይሎችን አ_ታራግፍ"
 
-#: ../src/dlg-new.c:429
+#: ../src/dlg-new.c:426
 msgctxt "File"
 msgid "New"
 msgstr "አዲስ"
 
-#: ../src/dlg-new.c:442
+#: ../src/dlg-new.c:439
 msgctxt "File"
 msgid "Save"
 msgstr "ማስቀመጫ"
 
-#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
+#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:220
 msgid "There was an internal error trying to search for applications:"
 msgstr "ስህተት ተፈጥሯል መተግበሪያውን በ መፈለግ ላይ እንዳለ:"
 
-#: ../src/dlg-package-installer.c:290
+#: ../src/dlg-package-installer.c:288
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
 "Do you want to search for a command to open this file?"
 msgstr "ትእዛዝ አልተገጠመም ለ %s ፋይሎች.\nፋይሉን ለመክፈት ትእዛዙን መፈለግ ይፈልጋሉ?"
 
-#: ../src/dlg-package-installer.c:295
+#: ../src/dlg-package-installer.c:293
 msgid "Could not open this file type"
 msgstr "የዚህ አይነት ፋይል መክፈት አይቻልም "
 
-#: ../src/dlg-package-installer.c:298
+#: ../src/dlg-package-installer.c:296
 msgid "_Search Command"
 msgstr "_መፈለጊያ ትእዛዝ"
 
@@ -740,6 +636,18 @@ msgstr "የፋይል ቁጥር:"
 msgid "Update the file \"%s\" in the archive \"%s\"?"
 msgstr "በማህደር ውስጥ ያለውን \"%s\" ፋይል ላሻሽል \"%s\"?"
 
+#. secondary text
+#: ../src/dlg-update.c:176 ../src/dlg-update.c:204 ../src/ui/update.ui.h:2
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%d files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+msgstr[1] ""
+
 #: ../src/dlg-update.c:193
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
@@ -762,15 +670,15 @@ msgstr "ሁሉንም የተደገፉ ፋይሎች"
 msgid "By Extension"
 msgstr "በ ተጨማሪ"
 
-#: ../src/eggfileformatchooser.c:422
+#: ../src/eggfileformatchooser.c:421
 msgid "File Format"
 msgstr "የ ፋይል አቀራረብ"
 
-#: ../src/eggfileformatchooser.c:440
+#: ../src/eggfileformatchooser.c:439
 msgid "Extension(s)"
 msgstr "ተጨማሪ(ዎች)"
 
-#: ../src/eggfileformatchooser.c:670
+#: ../src/eggfileformatchooser.c:669
 #, c-format
 msgid ""
 "The program was not able to find out the file format you want to use for "
@@ -778,7 +686,7 @@ msgid ""
 "choose a file format from the list below."
 msgstr ""
 
-#: ../src/eggfileformatchooser.c:677
+#: ../src/eggfileformatchooser.c:676
 msgid "File format not recognized"
 msgstr "የ ፋይሉ አቀራረብ አይታወቅም"
 
@@ -810,13 +718,13 @@ msgid "Adding file: "
 msgstr "ፋይል በመጨመር ላይ: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:419 ../src/fr-command-rar.c:526
-#: ../src/fr-command-tar.c:429
+#: ../src/fr-command-7z.c:437 ../src/fr-command-rar.c:526
+#: ../src/fr-command-tar.c:431
 msgid "Extracting file: "
 msgstr "ፋይሎችን በማራገፍ ላይ: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:375
+#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:376
 msgid "Removing file: "
 msgstr "ፋይል በማስወገድ ላይ: "
 
@@ -825,15 +733,15 @@ msgstr "ፋይል በማስወገድ ላይ: "
 msgid "Could not find the volume: %s"
 msgstr "መጠኑን ማግኘት አልተቻለም: %s"
 
-#: ../src/fr-command-tar.c:384
+#: ../src/fr-command-tar.c:385
 msgid "Deleting files from archive"
 msgstr "ፋይሎችን ከ ማህደር ውስጥ በማጥፋት ላይ"
 
-#: ../src/fr-command-tar.c:488
+#: ../src/fr-command-tar.c:491
 msgid "Recompressing archive"
 msgstr "ማህደሩን እንደገና በማመቅ ላይ"
 
-#: ../src/fr-command-tar.c:729
+#: ../src/fr-command-tar.c:732
 msgid "Decompressing archive"
 msgstr "ማህደሩን በማራገፍ ላይ"
 
@@ -965,281 +873,286 @@ msgstr "_መጨመሪያ"
 msgid "_Extract"
 msgstr "_ማረገፊያ"
 
-#: ../src/fr-window.c:1531
+#: ../src/fr-window.c:1518
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "%d እቃ (%s)"
 msgstr[1] "%d እቃዎች (%s)"
 
-#: ../src/fr-window.c:1536
+#: ../src/fr-window.c:1523
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "%d እቃ ተመርጧል (%s)"
 msgstr[1] "%d እቃዎች ተመርጠዋል (%s)"
 
-#: ../src/fr-window.c:1606
+#: ../src/fr-window.c:1593
 msgid "Folder"
 msgstr "ዶሴ"
 
-#: ../src/fr-window.c:2003
+#: ../src/fr-window.c:1990
 msgid "[read only]"
 msgstr "[ለንባብ ብቻ]"
 
-#: ../src/fr-window.c:2255
+#: ../src/fr-window.c:2242
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "ፎልደሩን ማሳየት አልተቻለም \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2329 ../src/fr-window.c:2367
+#: ../src/fr-window.c:2316 ../src/fr-window.c:2354
 #, c-format
 msgid "Creating \"%s\""
 msgstr "በ መፍጠር ላይ \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2333
+#: ../src/fr-window.c:2320
 #, c-format
 msgid "Loading \"%s\""
 msgstr "በ መጫን ላይ \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2337
+#: ../src/fr-window.c:2324
 #, c-format
 msgid "Reading \"%s\""
 msgstr "በ ማንበብ ላይ \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2341
+#: ../src/fr-window.c:2328
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2345
+#: ../src/fr-window.c:2332
 #, c-format
 msgid "Testing \"%s\""
 msgstr "በ መሞከር ላይ \"%s\""
 
-#: ../src/fr-window.c:2348
+#: ../src/fr-window.c:2335
 msgid "Getting the file list"
 msgstr "የ ፋይል ዝርዝር በማግኘት ላይ"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2352
+#: ../src/fr-window.c:2339
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2356
+#: ../src/fr-window.c:2343
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2360
+#: ../src/fr-window.c:2347
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2363
+#: ../src/fr-window.c:2350
 msgid "Copying the extracted files to the destination"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2371
+#: ../src/fr-window.c:2358
 #, c-format
 msgid "Saving \"%s\""
 msgstr "በ ማስቀመጥ ላይ \"%s\""
 
-#: ../src/fr-window.c:2518
+#: ../src/fr-window.c:2505
 msgid "_Open the Archive"
 msgstr "ማህደር _መክፈቻ "
 
-#: ../src/fr-window.c:2519
+#: ../src/fr-window.c:2506
 msgid "_Show the Files"
 msgstr "ፋይሎች _ማሳያ "
 
-#: ../src/fr-window.c:2696
+#: ../src/fr-window.c:2683
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:2746
+#: ../src/fr-window.c:2733
 msgid "Extraction completed successfully"
 msgstr "ማራገፉ ተሳክቶ ተፈጽሟል"
 
-#: ../src/fr-window.c:2769
+#: ../src/fr-window.c:2756
 msgid "Archive created successfully"
 msgstr "ማህደር ተሳክቶ ተፈጽሟል"
 
-#: ../src/fr-window.c:2827
+#: ../src/fr-window.c:2814
 msgid "Please wait…"
 msgstr "እባክዎን ይቆዩ..."
 
-#: ../src/fr-window.c:2896 ../src/fr-window.c:3031
+#: ../src/fr-window.c:2883 ../src/fr-window.c:3018
 msgid "Command exited abnormally."
 msgstr ""
 
-#: ../src/fr-window.c:2989
+#: ../src/fr-window.c:2976
 msgid "An error occurred while extracting files."
 msgstr "ስህተት ተፈጥሯል ማህደሩን በ ማራገፍ ላይ እንዳለ"
 
-#: ../src/fr-window.c:2995
+#: ../src/fr-window.c:2982
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "መክፈት አልተቻለም \"%s\""
 
-#: ../src/fr-window.c:3000
+#: ../src/fr-window.c:2987
 msgid "An error occurred while loading the archive."
 msgstr "ስህተት ተፈጥሯል ማህደሩን በ መጫን ላይ እንዳለ"
 
-#: ../src/fr-window.c:3004
+#: ../src/fr-window.c:2991
 msgid "An error occurred while deleting files from the archive."
 msgstr "ፋይሎችን ከ ማህደር ውስጥ በማጥፋት ላይ እንዳለ ስህተት ተፈጥሯል"
 
-#: ../src/fr-window.c:3010
+#: ../src/fr-window.c:2997
 msgid "An error occurred while adding files to the archive."
 msgstr "ፋይሎችን ወደ ማህደር ውስጥ በ መጨመር ላይ እንዳለ ስህተት ተፈጥሯል"
 
-#: ../src/fr-window.c:3014
+#: ../src/fr-window.c:3001
 msgid "An error occurred while testing archive."
 msgstr "ስህተት ተፈጥሯል ማህደሩን በ መሞከር ላይ እንዳለ"
 
-#: ../src/fr-window.c:3018
+#: ../src/fr-window.c:3005
 msgid "An error occurred while saving the archive."
 msgstr "ስህተት ተፈጥሯል ማህደሩን በ ማስቀመጥ ላይ እንዳለ"
 
-#: ../src/fr-window.c:3022
+#: ../src/fr-window.c:3009
 msgid "An error occurred."
 msgstr "ስህተት ተፈጥሯል"
 
-#: ../src/fr-window.c:3028
+#: ../src/fr-window.c:3015
 msgid "Command not found."
 msgstr "ትእዛዝ አልተገኘም"
 
-#: ../src/fr-window.c:3231
+#: ../src/fr-window.c:3218
 msgid "Test Result"
 msgstr "የ ሙከራው ውጤት"
 
-#: ../src/fr-window.c:4078 ../src/fr-window.c:8203 ../src/fr-window.c:8243
-#: ../src/fr-window.c:8497
+#: ../src/fr-window.c:4068 ../src/fr-window.c:8184 ../src/fr-window.c:8220
+#: ../src/fr-window.c:8470
 msgid "Could not perform the operation"
 msgstr "ተግባሩን መፈጸም አልተቻለም"
 
-#: ../src/fr-window.c:4104
+#: ../src/fr-window.c:4094
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "ይህን ፋይል ወደ አሁኑ ማህደር መጨመር ይፈልጋሉ ወይንም እንደ አዲስ ማህደር መክፈት?"
 
-#: ../src/fr-window.c:4134
+#: ../src/fr-window.c:4124
 msgid "Do you want to create a new archive with these files?"
 msgstr "በ እነዚህ ፋይሎች አዲስ ማህደር መፍጠር ይፈልጋሉ?"
 
-#: ../src/fr-window.c:4137
+#: ../src/fr-window.c:4127
 msgid "Create _Archive"
 msgstr "_ማህደር መፍጠሪያ"
 
-#: ../src/fr-window.c:4735 ../src/fr-window.c:5799
+#: ../src/fr-window.c:4725 ../src/fr-window.c:5783
 msgid "Folders"
 msgstr "ፎልደሮች"
 
-#: ../src/fr-window.c:4773
+#: ../src/fr-window.c:4763
 msgctxt "File"
 msgid "Size"
 msgstr "መጠን"
 
-#: ../src/fr-window.c:4774
+#: ../src/fr-window.c:4764
 msgctxt "File"
 msgid "Type"
 msgstr "አይነት"
 
-#: ../src/fr-window.c:4775
+#: ../src/fr-window.c:4765
 msgctxt "File"
 msgid "Date Modified"
 msgstr "የ ተሻሻለበት ቀን"
 
-#: ../src/fr-window.c:4776
+#: ../src/fr-window.c:4766
 msgctxt "File"
 msgid "Location"
 msgstr "አካባቢ"
 
-#: ../src/fr-window.c:4785
+#: ../src/fr-window.c:4775
 msgctxt "File"
 msgid "Name"
 msgstr "ስም "
 
-#: ../src/fr-window.c:5720
+#: ../src/fr-window.c:5704
 msgid "Find:"
 msgstr "መፈለጊያ:"
 
-#: ../src/fr-window.c:5807
+#: ../src/fr-window.c:5791
 msgid "Close the folders pane"
 msgstr "የ ፎልደሮች ክፍል መዝጊያ"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5838
+#: ../src/fr-window.c:5822
 msgid "Open _Recent"
 msgstr "የ _ቅርብ ጊዜ መክፈቻ"
 
-#: ../src/fr-window.c:5839 ../src/fr-window.c:5851
+#: ../src/fr-window.c:5823 ../src/fr-window.c:5835
 msgid "Open a recently used archive"
 msgstr "በቅርብ ጊዜ የተጠቀሙትን ማህደር መክፈቻ "
 
-#: ../src/fr-window.c:6280
+#. Translators: after the colon there is a folder name.
+#: ../src/fr-window.c:5912 ../src/ui/batch-add-files.ui.h:3
+msgid "_Location:"
+msgstr "_አካባቢ:"
+
+#: ../src/fr-window.c:6261
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "ማህደሩን ማስቀመጥ አልተቻለም \"%s\""
 
-#: ../src/fr-window.c:6779
+#: ../src/fr-window.c:6760
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "ፋይሉን ልቀይር \"%s\"?"
 
-#: ../src/fr-window.c:6782
+#: ../src/fr-window.c:6763
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "ሌላ ፋይል በዚህ ስም ቀደም ሲል ነበር \"%s\"."
 
-#: ../src/fr-window.c:6789
+#: ../src/fr-window.c:6770
 msgid "Replace _All"
 msgstr "_ሁሉንም መቀየሪያ"
 
-#: ../src/fr-window.c:6790
+#: ../src/fr-window.c:6771
 msgid "_Skip"
 msgstr "_መዝለያ"
 
-#: ../src/fr-window.c:6791
+#: ../src/fr-window.c:6772
 msgid "_Replace"
 msgstr "_መቀየሪያ"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7605
+#: ../src/fr-window.c:7586
 msgid "New name is void, please type a name."
 msgstr "አዲስ ስም አላስገቡም: እባክዎን አዲስ ስም ያስገቡ"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7610
+#: ../src/fr-window.c:7591
 msgid "New name is the same as old one, please type other name."
 msgstr "አዲsu ስም ከ አሮጌው ጋር ተመሳሳይ ነው: እባክዎን አዲስ ስም ያስገቡ"
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7615
+#: ../src/fr-window.c:7596
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7651
+#: ../src/fr-window.c:7632
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1247,7 +1160,7 @@ msgid ""
 "%s"
 msgstr "ፎልደር በዚህ ስም \"%s\" ቀደም ሲል ነበር\n\n%s"
 
-#: ../src/fr-window.c:7653
+#: ../src/fr-window.c:7634
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1255,43 +1168,43 @@ msgid ""
 "%s"
 msgstr "ፋይል በዚህ ስም \"%s\" ቀደም ሲል ነበር\n\n%s"
 
-#: ../src/fr-window.c:7723
+#: ../src/fr-window.c:7704
 msgid "Rename"
 msgstr "እንደገና መሰየሚያ"
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7705
 msgid "_New folder name:"
 msgstr "_አዲስ የ ፎልድር ስም:"
 
-#: ../src/fr-window.c:7724
+#: ../src/fr-window.c:7705
 msgid "_New file name:"
 msgstr "_አዲስ የ ፎልድር ስም:"
 
-#: ../src/fr-window.c:7728
+#: ../src/fr-window.c:7709
 msgid "_Rename"
 msgstr "_እንደገና መሰየሚያ"
 
-#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
+#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
 msgid "Could not rename the folder"
 msgstr "ፎልደሩን እንደገና መሰየም አልተቻለም "
 
-#: ../src/fr-window.c:7745 ../src/fr-window.c:7764
+#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
 msgid "Could not rename the file"
 msgstr "ፋይሉን እንደገና መሰየም አልተቻለም "
 
-#: ../src/fr-window.c:8164
+#: ../src/fr-window.c:8145
 msgid "Paste Selection"
 msgstr "የተመረጠውን መለጠፊያ"
 
-#: ../src/fr-window.c:8165
+#: ../src/fr-window.c:8146
 msgid "_Destination folder:"
 msgstr "መድረሻው ፎልደር:"
 
-#: ../src/fr-window.c:8776
+#: ../src/fr-window.c:8749
 msgid "Add files to an archive"
 msgstr "ፋይሎች ወደ ማህደር በመጨመር ላይ"
 
-#: ../src/fr-window.c:8819 ../src/main.c:188 ../src/server.c:329
+#: ../src/fr-window.c:8792 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "ማህደር ማራገፊያ"
@@ -1304,55 +1217,115 @@ msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
 #. Expander
-#: ../src/gtk-utils.c:443
+#: ../src/gtk-utils.c:431
 msgid "Command _Line Output"
 msgstr "የ ትእዛዝ _መስመር ውጤት"
 
-#: ../src/gtk-utils.c:782
+#: ../src/gtk-utils.c:770
 msgid "Could not display help"
 msgstr "እርዳታ ማሳየት አልተቻለም"
 
-#: ../src/main.c:54
+#: ../src/main.c:51
 msgid "Add files to the specified archive and quit the program"
 msgstr "ፋይሎች ወደ ተወሰነው ማህደር መጨመሪያ እና ከ ፕሮግራሙ መውጫ"
 
-#: ../src/main.c:55
+#: ../src/main.c:52
 msgid "ARCHIVE"
 msgstr "ማህደር"
 
-#: ../src/main.c:58
+#: ../src/main.c:55
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 
-#: ../src/main.c:62
+#: ../src/main.c:59
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "ፋይሎች ወደ ተወሰነው ማህደር ማራገፊያ እና ከ ፕሮግራሙ መውጫ"
 
-#: ../src/main.c:63 ../src/main.c:75
+#: ../src/main.c:60 ../src/main.c:72
 msgid "FOLDER"
 msgstr "ፎልደር"
 
-#: ../src/main.c:66
+#: ../src/main.c:63
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 
-#: ../src/main.c:70
+#: ../src/main.c:67
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr ""
 
-#: ../src/main.c:74
+#: ../src/main.c:71
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "የሚጠቀሙት ነባር ፎልደር ለ '--መጨመር' እና '--ለማራገፍ ትእዛዞች"
 
-#: ../src/main.c:78
+#: ../src/main.c:75
 msgid "Create destination folder without asking confirmation"
 msgstr "መድረሻ ፎልደር መፍጠሪያ ማረጋገጫ ሳይጠየቅ"
 
-#: ../src/main.c:296 ../src/server.c:444
+#: ../src/main.c:165 ../src/server.c:296 ../src/ui/batch-add-files.ui.h:1
+msgid "Compress"
+msgstr "ማመቂያ"
+
+#: ../src/main.c:314 ../src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- ማህደር መፍጠሪያ እና ማሻሻያ"
+
+#: ../src/ui/add-options.ui.h:1
+msgid "Load Options"
+msgstr "ምርጫዎችን መጫኛ"
+
+#: ../src/ui/app-menu.ui.h:1 ../src/ui.h:35
+msgid "_Help"
+msgstr "_እርዳታ "
+
+#: ../src/ui/app-menu.ui.h:2
+msgid "_About Archive Manager"
+msgstr ""
+
+#: ../src/ui/app-menu.ui.h:3
+msgid "_Quit"
+msgstr ""
+
+#: ../src/ui/batch-add-files.ui.h:2
+msgid "_Filename:"
+msgstr "የ _ፋይል ስም:"
+
+#: ../src/ui/batch-add-files.ui.h:4
+msgid "Location"
+msgstr "ቦታ"
+
+#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/batch-password.ui.h:2
+#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
+msgid "_Password:"
+msgstr "የ _መግቢያ ቃል:"
+
+#: ../src/ui/batch-add-files.ui.h:6 ../src/ui/new.ui.h:2
+msgid "_Encrypt the file list too"
+msgstr "የ ፋይል ዝርዝሩንም _Encrypt ላድርገው"
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: ../src/ui/batch-add-files.ui.h:8 ../src/ui/new.ui.h:3
+msgid "Split into _volumes of"
+msgstr "መክፈያ ወደ _መጠኖች ከ"
+
+#. MB means megabytes
+#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/new.ui.h:5
+msgid "MB"
+msgstr "ሜባ"
+
+#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
+msgid "_Other Options"
+msgstr "_ሌሎች አማራጮች"
+
+#: ../src/ui/batch-password.ui.h:1
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">የመግቢያ ቃል ያስፈልጋል required</span>"
+
+#: ../src/ui/delete.ui.h:1
+msgid "Delete"
+msgstr "ማጥፊያ"
 
 #: ../src/ui.h:32
 msgid "_Archive"
@@ -1365,10 +1338,6 @@ msgstr "_ማረሚያ"
 #: ../src/ui.h:34
 msgid "_View"
 msgstr "_መመልከቻ"
-
-#: ../src/ui.h:35
-msgid "_Help"
-msgstr "_እርዳታ "
 
 #: ../src/ui.h:36
 msgid "_Arrange Files"
@@ -1628,3 +1597,26 @@ msgstr "በ_አካባቢ"
 #: ../src/ui.h:269
 msgid "Sort file list by location"
 msgstr "የ ፋይል ዝርዝር በ ቦታ መለያ "
+
+#: ../src/ui/password.ui.h:1
+msgid "Password"
+msgstr "የ መግቢያ ቃል"
+
+#: ../src/ui/password.ui.h:2
+msgid "_Encrypt the file list"
+msgstr "የ ፋይል ዝርዝሩንም _Encrypt ላድርገው"
+
+#: ../src/ui/password.ui.h:4
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+
+#: ../src/ui/update.ui.h:1
+msgid "_Update"
+msgstr "_ማሻሻያ"
+
+#: ../src/ui/update.ui.h:3
+msgid "S_elect the files you want to update:"
+msgstr "ይ_ምረጡ ማሻሻል የሚፈልጉትን ፋይሎች:"
