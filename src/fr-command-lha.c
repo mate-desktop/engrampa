@@ -120,6 +120,11 @@ split_line_lha (char *line)
 		fields[i++] = g_strdup ("");
 		line += strlen ("[unknown]");
 	}
+	else if (strncmp (line, "[Amiga]", 7) == 0) {
+		fields[i++] = g_strdup ("");
+		fields[i++] = g_strdup ("");
+		line += strlen ("[Amiga]");
+	}
 
 	scan = eat_spaces (line);
 	for (; i < n_fields; i++) {
@@ -148,6 +153,9 @@ get_last_field_lha (char *line)
 		n--;
 
 	if (strncmp (line, "[unknown]", 9) == 0)
+		n--;
+
+	if (strncmp (line, "[Amiga]", 7) == 0)
 		n--;
 
 	field = eat_spaces (line);
