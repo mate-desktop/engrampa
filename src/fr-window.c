@@ -669,7 +669,6 @@ fr_window_finalize (GObject *object)
 			g_hash_table_destroy (tree_pixbuf_hash);
 			tree_pixbuf_hash = NULL;
 		}
-		g_application_quit (g_application_get_default());
 	}
 
 	G_OBJECT_CLASS (parent_class)->finalize (object);
