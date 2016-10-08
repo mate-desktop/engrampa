@@ -216,7 +216,11 @@ add_compress_arg (FrCommand *comm)
 		fr_process_add_arg (comm->process, "--use-compress-program=lzma");
 
 	else if (is_mime_type (comm->mime_type, "application/x-xz-compressed-tar"))
+#if ENABLE_PIXZ
+		fr_process_add_arg (comm->process, "--use-compress-program=pixz");
+#else
 		fr_process_add_arg (comm->process, "--use-compress-program=xz");
+#endif
 
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar"))
 		fr_process_add_arg (comm->process, "--use-compress-program=lzop");

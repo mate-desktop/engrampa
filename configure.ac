@@ -200,6 +200,22 @@ AM_CONDITIONAL(ENABLE_MAGIC, test x"$enable_magic" != x"no")
 
 dnl ******************************
 
+dnl ******************************
+
+AC_ARG_ENABLE([pixz],
+              AS_HELP_STRING([--enable-pixz], [use pixz to extract xz archives]),,
+              [enable_pixz=no])
+
+if test x"$enable_pixz" = x"yes" ; then
+	AC_MSG_CHECKING([whether pixz binary found])
+	AC_CHECK_PROG(ENABLE_PIXZ, "pixz", "yes")
+	AC_DEFINE(ENABLE_PIXZ, 1, [define to enable pixz])
+fi
+
+AM_CONDITIONAL(ENABLE_PIXZ, test x"$enable_pixz" != x"no")
+
+dnl ******************************
+
 YELP_HELP_INIT
 
 dnl ******************************
@@ -251,4 +267,5 @@ Configuration:
 	Run in place            ${enable_run_in_place}
 	Use libmagic:           ${enable_magic}
 	JSON support:           ${enable_json_glib}
+	PIXZ support:           ${enable_pixz}
 "
