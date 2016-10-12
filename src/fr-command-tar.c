@@ -198,7 +198,10 @@ add_compress_arg (FrCommand *comm)
 		fr_process_add_arg (comm->process, "-z");
 
 	else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar"))
-		fr_process_add_arg (comm->process, "--use-compress-program=bzip2");
+		if (is_program_in_path ("lbzip2"))
+			fr_process_add_arg (comm->process, "--use-compress-program=lbzip2");
+		else
+			fr_process_add_arg (comm->process, "--use-compress-program=bzip2");
 
 	else if (is_mime_type (comm->mime_type, "application/x-tarz")) {
 		if (is_program_in_path ("gzip"))
