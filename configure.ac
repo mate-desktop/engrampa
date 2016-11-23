@@ -32,7 +32,7 @@ dnl ==========================================================================
 GLIB_REQUIRED=2.32.0
 GIO_REQUIRED=2.25.5
 GTK_REQUIRED=3.14.0
-CAJA_REQUIRED=1.1.0
+CAJA_REQUIRED=1.17.1
 JSON_GLIB_REQUIRED=0.14.0
 
 AC_SUBST(GLIB_REQUIRED)
