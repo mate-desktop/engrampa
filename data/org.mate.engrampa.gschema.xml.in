@@ -126,9 +126,6 @@
       <summary>Encrypt the archive header</summary>
       <description>Whether to encrypt the archive header.  If the header is encrypted the password will be required to list the archive content as well.</description>
     </key>
-    <key name="migrate-directories" type="b">
-      <default>true</default>
-    </key>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.engrampa.dialogs" path="/org/mate/engrampa/dialogs/">
     <child name="extract" schema="org.mate.engrampa.dialogs.extract"/>
