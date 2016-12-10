@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-10 22:17+0200\n"
-"PO-Revision-Date: 2016-08-11 07:08+0000\n"
-"Last-Translator: Wolfgang Ulbrich <chat-to-me@raveit.de>\n"
+"POT-Creation-Date: 2016-12-06 00:01+0300\n"
+"PO-Revision-Date: 2016-12-05 21:04+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,8 +118,8 @@ msgstr "<p> Engrampa a dalv d'un ardoer dielloù evit amva MATE. Gantañ e vez k
 msgid "Engrampa Archive Manager"
 msgstr "Ardoer dielloù Engrampa"
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1982
-#: ../src/fr-window.c:5464
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:1981
+#: ../src/fr-window.c:5466
 msgid "Archive Manager"
 msgstr "Ardoer dielloù"
 
@@ -190,8 +190,8 @@ msgid "Display the Path column in the main window."
 msgstr "Skrammañ ar bann Treug war ar prenestr pennañ."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:15
-msgid "Use mime icons"
-msgstr "Arverañ an arlunioù mod MIME"
+msgid "Use MIME icons"
+msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:16
 msgid ""
@@ -255,9 +255,9 @@ msgstr "Live koazhañ"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:30
 msgid ""
-"Compression level used when adding files to an archive. Possible values : "
+"Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
-msgstr "Live koazhañ arveret pa vez ouzhpennet restroù en un diell. Ar gwerzhioù a c'hall bezañ : buan_kenañ, reizh, uc'hek."
+msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:31
 msgid "Encrypt the archive header"
@@ -326,7 +326,7 @@ msgstr "Aotren a ra krouiñ hag eztennañ an dielloù"
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:2971
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:2974
 msgid "Could not create the archive"
 msgstr "N'eus ket tu da grouiñ an diell"
 
@@ -340,7 +340,7 @@ msgstr "N'oc'h ket aotreet da grouiñ un diell e-barzh an teuliad-mañ"
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6093 ../src/fr-window.c:6269
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6099 ../src/fr-window.c:6275
 msgid "Archive type not supported."
 msgstr "N'eo ket skoret rizh an diell."
 
@@ -348,11 +348,11 @@ msgstr "N'eo ket skoret rizh an diell."
 msgid "Could not delete the old archive."
 msgstr "N'eus ket tu da zilemel an diell gozh."
 
-#: ../src/actions.c:382 ../src/fr-window.c:5834
+#: ../src/actions.c:382 ../src/fr-window.c:5840
 msgid "Open"
 msgstr "Digeriñ"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5282
+#: ../src/actions.c:393 ../src/fr-window.c:5285
 msgid "All archives"
 msgstr "An holl zielloù"
 
@@ -360,7 +360,7 @@ msgstr "An holl zielloù"
 msgid "All files"
 msgstr "An holl restroù"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7281
+#: ../src/actions.c:794 ../src/fr-window.c:7287
 msgid "Last Output"
 msgstr "Ec'hankad diwezhañ"
 
@@ -430,8 +430,8 @@ msgstr "_Ensoc'hañ isteuliadoù"
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "Lakaat er-maez an teuliadoù a zo ereoù arouezek (symlinks)"
 
-#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:249
-#: ../src/dlg-add-folder.c:255
+#: ../src/dlg-add-folder.c:243 ../src/dlg-add-folder.c:253
+#: ../src/dlg-add-folder.c:263
 msgid "example: *.o; *.bak"
 msgstr "skouer : *.o; *.bak"
 
@@ -439,23 +439,23 @@ msgstr "skouer : *.o; *.bak"
 msgid "Include _files:"
 msgstr "Ensoc'hañ ar _restroù :"
 
-#: ../src/dlg-add-folder.c:250
+#: ../src/dlg-add-folder.c:254
 msgid "E_xclude files:"
 msgstr "Lakaat _er-maez ar restroù :"
 
-#: ../src/dlg-add-folder.c:256
+#: ../src/dlg-add-folder.c:264
 msgid "_Exclude folders:"
 msgstr "Lakaat _er-maez an teuliadoù :"
 
-#: ../src/dlg-add-folder.c:260
+#: ../src/dlg-add-folder.c:272
 msgid "_Load Options"
 msgstr "_Kargañ an dibarzhioù"
 
-#: ../src/dlg-add-folder.c:261
+#: ../src/dlg-add-folder.c:273
 msgid "Sa_ve Options"
 msgstr "Enrollañ an dibarzhioù"
 
-#: ../src/dlg-add-folder.c:262
+#: ../src/dlg-add-folder.c:274
 msgid "_Reset Options"
 msgstr "Adde_raouekaat an dibarzhioù"
 
@@ -480,7 +480,7 @@ msgid ""
 "%s"
 msgstr "An anv \"%s\" zo fall peogwir ennañ emañ an arouezennoù : %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7632 ../src/fr-window.c:7634
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7638 ../src/fr-window.c:7640
 msgid "Please use a different name."
 msgstr "Implijit un anv all mar plij."
 
@@ -490,7 +490,7 @@ msgid ""
 " folder."
 msgstr "N'ho peus ket an aotreoù a-zere evit krouiñ un diell en teuliad arvoned."
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6853
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6859
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -498,11 +498,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "An teuliad arvoned \"%s\" n'eus ket anezhañ.\n\nC'hoant hoc'h eus d'e grouiñ ?"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6862
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6868
 msgid "Create _Folder"
 msgstr "Krouiñ an _teuliad"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6879
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6885
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "N'eus ket tu da grouiñ an teuliad arvoned : %s."
@@ -520,12 +520,12 @@ msgid "_Overwrite"
 msgstr "_Flastrañ"
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4225 ../src/fr-window.c:6883 ../src/fr-window.c:6902
-#: ../src/fr-window.c:6907
+#: ../src/fr-window.c:4228 ../src/fr-window.c:6889 ../src/fr-window.c:6908
+#: ../src/fr-window.c:6913
 msgid "Extraction not performed"
 msgstr "N'eo ket bet eztennet"
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4394 ../src/fr-window.c:4474
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4397 ../src/fr-window.c:4477
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -536,7 +536,7 @@ msgstr "N'oc'h ket aotreet da eztennañ dielloù e-barzh an teuliad \"%s\""
 msgid "Extract"
 msgstr "Eztennañ"
 
-#: ../src/dlg-extract.c:350 ../src/ui/delete.ui.h:2
+#: ../src/dlg-extract.c:354 ../src/ui/delete.ui.h:2
 msgid "_Files:"
 msgstr "_Restroù :"
 
@@ -548,11 +548,11 @@ msgstr "skouer : *.txt; *.doc"
 msgid "_All files"
 msgstr "_An holl restroù"
 
-#: ../src/dlg-extract.c:371 ../src/ui/delete.ui.h:5
+#: ../src/dlg-extract.c:369 ../src/ui/delete.ui.h:5
 msgid "_Selected files"
 msgstr "_Restroù diuzet"
 
-#: ../src/dlg-extract.c:382
+#: ../src/dlg-extract.c:378
 msgid "Actions"
 msgstr "Gwezhioù"
 
@@ -713,19 +713,19 @@ msgid "You can't add an archive to itself."
 msgstr "N'hellit ket ouzhpennañ un diell ennañ hec'h-unan."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:296 ../src/fr-command-rar.c:399
-#: ../src/fr-command-tar.c:310
+#: ../src/fr-command-7z.c:300 ../src/fr-command-rar.c:399
+#: ../src/fr-command-tar.c:316
 msgid "Adding file: "
 msgstr "Oc'h ouzhpennañ ar restr : "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:437 ../src/fr-command-rar.c:526
-#: ../src/fr-command-tar.c:431
+#: ../src/fr-command-7z.c:441 ../src/fr-command-rar.c:526
+#: ../src/fr-command-tar.c:437
 msgid "Extracting file: "
 msgstr "Oc'h eztennañ ar restr : "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:376
+#: ../src/fr-command-rar.c:477 ../src/fr-command-tar.c:382
 msgid "Removing file: "
 msgstr "O tilemel ar restr : "
 
@@ -734,15 +734,15 @@ msgstr "O tilemel ar restr : "
 msgid "Could not find the volume: %s"
 msgstr "N'eus ket tu da kavout ar bezhienn : %s"
 
-#: ../src/fr-command-tar.c:385
+#: ../src/fr-command-tar.c:391
 msgid "Deleting files from archive"
 msgstr "O tilemel restroù diouzh an diell"
 
-#: ../src/fr-command-tar.c:491
+#: ../src/fr-command-tar.c:497
 msgid "Recompressing archive"
 msgstr "Oc'h adkoazhañ an diell"
 
-#: ../src/fr-command-tar.c:732
+#: ../src/fr-command-tar.c:738
 msgid "Decompressing archive"
 msgstr "O tigoazhañ an diell"
 
@@ -874,286 +874,286 @@ msgstr "_Ouzhpennañ"
 msgid "_Extract"
 msgstr "_Eztennañ"
 
-#: ../src/fr-window.c:1518
+#: ../src/fr-window.c:1517
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "%d ergorenn (%s)"
 msgstr[1] "%d ergorenn (%s)"
 
-#: ../src/fr-window.c:1523
+#: ../src/fr-window.c:1522
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "%d ergorenn diuzet (%s)"
 msgstr[1] "%d ergorenn diuzet (%s)"
 
-#: ../src/fr-window.c:1593
+#: ../src/fr-window.c:1592
 msgid "Folder"
 msgstr "Teuliad"
 
-#: ../src/fr-window.c:1990
+#: ../src/fr-window.c:1989
 msgid "[read only]"
 msgstr "[lenn hepken]"
 
-#: ../src/fr-window.c:2242
+#: ../src/fr-window.c:2241
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "N'eus ket tu da skrammañ an teuliad \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2316 ../src/fr-window.c:2354
+#: ../src/fr-window.c:2315 ../src/fr-window.c:2353
 #, c-format
 msgid "Creating \"%s\""
 msgstr "O krouiñ \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2320
+#: ../src/fr-window.c:2319
 #, c-format
 msgid "Loading \"%s\""
 msgstr "O kargañ \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2324
+#: ../src/fr-window.c:2323
 #, c-format
 msgid "Reading \"%s\""
 msgstr "O lenn \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2328
+#: ../src/fr-window.c:2327
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr "O tiverkañ restroù diouzh \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2332
+#: ../src/fr-window.c:2331
 #, c-format
 msgid "Testing \"%s\""
 msgstr "O prouadiñ \"%s\""
 
-#: ../src/fr-window.c:2335
+#: ../src/fr-window.c:2334
 msgid "Getting the file list"
 msgstr "O kerc'hat roll ar restroù"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2339
+#: ../src/fr-window.c:2338
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr "Oc'h eilañ ar restroù da ouzhpennañ e \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2343
+#: ../src/fr-window.c:2342
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr "Oc'h ouzhpennañ restroù e \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2347
+#: ../src/fr-window.c:2346
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr "Oc'h eztennañ restroù diouzh \"%s\""
 
-#: ../src/fr-window.c:2350
+#: ../src/fr-window.c:2349
 msgid "Copying the extracted files to the destination"
 msgstr "Eiladur ar restroù eztennet en arvoned"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2358
+#: ../src/fr-window.c:2357
 #, c-format
 msgid "Saving \"%s\""
 msgstr "Oc'h enrollañ \"%s\""
 
-#: ../src/fr-window.c:2505
+#: ../src/fr-window.c:2504
 msgid "_Open the Archive"
 msgstr "_Digeriñ an diell"
 
-#: ../src/fr-window.c:2506
+#: ../src/fr-window.c:2505
 msgid "_Show the Files"
 msgstr "Di_skouez ar restroù"
 
-#: ../src/fr-window.c:2683
+#: ../src/fr-window.c:2686
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:2733
+#: ../src/fr-window.c:2736
 msgid "Extraction completed successfully"
 msgstr "Eztennañ echuet gant berzh"
 
-#: ../src/fr-window.c:2756
+#: ../src/fr-window.c:2759
 msgid "Archive created successfully"
 msgstr "Diell bet krouet gant berzh"
 
-#: ../src/fr-window.c:2814
+#: ../src/fr-window.c:2817
 msgid "Please wait…"
 msgstr "Gortozit, mar plij..."
 
-#: ../src/fr-window.c:2883 ../src/fr-window.c:3018
+#: ../src/fr-window.c:2886 ../src/fr-window.c:3021
 msgid "Command exited abnormally."
 msgstr "Kuitaet eo bet an arc'had gant un doare direizh."
 
-#: ../src/fr-window.c:2976
+#: ../src/fr-window.c:2979
 msgid "An error occurred while extracting files."
 msgstr "Degouezhet ez eus bet ur fazi en ur eztennañ ar restroù."
 
-#: ../src/fr-window.c:2982
+#: ../src/fr-window.c:2985
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "N'eus ket tu da zigeriñ \"%s\""
 
-#: ../src/fr-window.c:2987
+#: ../src/fr-window.c:2990
 msgid "An error occurred while loading the archive."
 msgstr "Fazi en ur gargañ an diell."
 
-#: ../src/fr-window.c:2991
+#: ../src/fr-window.c:2994
 msgid "An error occurred while deleting files from the archive."
 msgstr "Fazi en ur zilemel restroù diouzh an diell."
 
-#: ../src/fr-window.c:2997
+#: ../src/fr-window.c:3000
 msgid "An error occurred while adding files to the archive."
 msgstr "Fazi en ur ouzhpennañ restroù en diell."
 
-#: ../src/fr-window.c:3001
+#: ../src/fr-window.c:3004
 msgid "An error occurred while testing archive."
 msgstr "Fazi en ur arnodiñ an diell."
 
-#: ../src/fr-window.c:3005
+#: ../src/fr-window.c:3008
 msgid "An error occurred while saving the archive."
 msgstr "Degouezhet ez eus bet ur fazi e-pad ma oa oc'h enrollañ an diell."
 
-#: ../src/fr-window.c:3009
+#: ../src/fr-window.c:3012
 msgid "An error occurred."
 msgstr "Degouezhet ez eus bet ur fazi."
 
-#: ../src/fr-window.c:3015
+#: ../src/fr-window.c:3018
 msgid "Command not found."
 msgstr "N'eo ket bet kavet an arc'had-mañ."
 
-#: ../src/fr-window.c:3218
+#: ../src/fr-window.c:3221
 msgid "Test Result"
 msgstr "Disoc'h an taol arnod"
 
-#: ../src/fr-window.c:4068 ../src/fr-window.c:8184 ../src/fr-window.c:8220
-#: ../src/fr-window.c:8470
+#: ../src/fr-window.c:4071 ../src/fr-window.c:8190 ../src/fr-window.c:8226
+#: ../src/fr-window.c:8476
 msgid "Could not perform the operation"
 msgstr "Dibosupl eo kas ar gwezhiadur da benn"
 
-#: ../src/fr-window.c:4094
+#: ../src/fr-window.c:4097
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "C'hoant hoc'h eus da ouzhpennañ ar restr-mañ e-barzh an diell vremanel pe zigeriñ anezhi evel unan nevez ?"
 
-#: ../src/fr-window.c:4124
+#: ../src/fr-window.c:4127
 msgid "Do you want to create a new archive with these files?"
 msgstr "C'hoant hoc'h eus da grouiñ un diell nevez gant ar restroù-se ?"
 
-#: ../src/fr-window.c:4127
+#: ../src/fr-window.c:4130
 msgid "Create _Archive"
 msgstr "Krouiñ un _diell"
 
-#: ../src/fr-window.c:4725 ../src/fr-window.c:5783
+#: ../src/fr-window.c:4728 ../src/fr-window.c:5785
 msgid "Folders"
 msgstr "Teuliadoù"
 
-#: ../src/fr-window.c:4763
+#: ../src/fr-window.c:4766
 msgctxt "File"
 msgid "Size"
 msgstr "Ment"
 
-#: ../src/fr-window.c:4764
+#: ../src/fr-window.c:4767
 msgctxt "File"
 msgid "Type"
 msgstr "Rizh"
 
-#: ../src/fr-window.c:4765
+#: ../src/fr-window.c:4768
 msgctxt "File"
 msgid "Date Modified"
 msgstr "Deiziad daskemmet"
 
-#: ../src/fr-window.c:4766
+#: ../src/fr-window.c:4769
 msgctxt "File"
 msgid "Location"
 msgstr "Lec'hiadur"
 
-#: ../src/fr-window.c:4775
+#: ../src/fr-window.c:4778
 msgctxt "File"
 msgid "Name"
 msgstr "Anv"
 
-#: ../src/fr-window.c:5704
+#: ../src/fr-window.c:5706
 msgid "Find:"
 msgstr "Kavout :"
 
-#: ../src/fr-window.c:5791
+#: ../src/fr-window.c:5797
 msgid "Close the folders pane"
 msgstr "Serriñ penel an teuliadoù"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5822
+#: ../src/fr-window.c:5828
 msgid "Open _Recent"
 msgstr "Digeriñ ar _restroù nevez krouet"
 
-#: ../src/fr-window.c:5823 ../src/fr-window.c:5835
+#: ../src/fr-window.c:5829 ../src/fr-window.c:5841
 msgid "Open a recently used archive"
 msgstr "Digeriñ un diell nevez-implijet"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:5912 ../src/ui/batch-add-files.ui.h:3
+#: ../src/fr-window.c:5918 ../src/ui/batch-add-files.ui.h:3
 msgid "_Location:"
 msgstr "_Lec'hiadur :"
 
-#: ../src/fr-window.c:6261
+#: ../src/fr-window.c:6267
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "N'eus ket tu da warediñ an diell \"%s\""
 
-#: ../src/fr-window.c:6760
+#: ../src/fr-window.c:6766
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "Amsaviñ ar restr \"%s\" ?"
 
-#: ../src/fr-window.c:6763
+#: ../src/fr-window.c:6769
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "Ur restr all gant an hevelep anv ez eus anezhi endeo e \"%s\"."
 
-#: ../src/fr-window.c:6770
+#: ../src/fr-window.c:6776
 msgid "Replace _All"
 msgstr "_Amsaviñ an holl"
 
-#: ../src/fr-window.c:6771
+#: ../src/fr-window.c:6777
 msgid "_Skip"
 msgstr "_Leuskell a-gostez"
 
-#: ../src/fr-window.c:6772
+#: ../src/fr-window.c:6778
 msgid "_Replace"
 msgstr "_Amsaviñ"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7586
+#: ../src/fr-window.c:7592
 msgid "New name is void, please type a name."
 msgstr "Goullo eo an anv nevez, biziatait un anv, mar plij."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7591
+#: ../src/fr-window.c:7597
 msgid "New name is the same as old one, please type other name."
 msgstr "Heñvel eo an anv nevez hag an anv kozh, biziatait un anv all, mar plij."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7596
+#: ../src/fr-window.c:7602
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "N'eo ket talvoudek an anv \"%s\" rak ennañ ez eus unan eus an arouezennoù-mañ da vihanañ : %s, biziatait un anv all, mar plij."
 
-#: ../src/fr-window.c:7632
+#: ../src/fr-window.c:7638
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1161,7 +1161,7 @@ msgid ""
 "%s"
 msgstr "Un teuliad anvet \"%s\" a zo anezhañ endeo.\n\n%s"
 
-#: ../src/fr-window.c:7634
+#: ../src/fr-window.c:7640
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1169,43 +1169,43 @@ msgid ""
 "%s"
 msgstr "Ur restr anvet \"%s\" a zo anezhañ dija.\n\n%s"
 
-#: ../src/fr-window.c:7704
+#: ../src/fr-window.c:7710
 msgid "Rename"
 msgstr "Adenvel"
 
-#: ../src/fr-window.c:7705
+#: ../src/fr-window.c:7711
 msgid "_New folder name:"
 msgstr "Anv an teuliad _nevez :"
 
-#: ../src/fr-window.c:7705
+#: ../src/fr-window.c:7711
 msgid "_New file name:"
 msgstr "Anv ar restr _nevez :"
 
-#: ../src/fr-window.c:7709
+#: ../src/fr-window.c:7715
 msgid "_Rename"
 msgstr "_Adenvel"
 
-#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
+#: ../src/fr-window.c:7732 ../src/fr-window.c:7751
 msgid "Could not rename the folder"
 msgstr "N'eus ket tu da adenvel an teuliad"
 
-#: ../src/fr-window.c:7726 ../src/fr-window.c:7745
+#: ../src/fr-window.c:7732 ../src/fr-window.c:7751
 msgid "Could not rename the file"
 msgstr "N'eus ket tu da adenvel ar restr"
 
-#: ../src/fr-window.c:8145
+#: ../src/fr-window.c:8151
 msgid "Paste Selection"
 msgstr "Pegañ an diuzad"
 
-#: ../src/fr-window.c:8146
+#: ../src/fr-window.c:8152
 msgid "_Destination folder:"
 msgstr "_Teuliad arvoned :"
 
-#: ../src/fr-window.c:8749
+#: ../src/fr-window.c:8755
 msgid "Add files to an archive"
 msgstr "Ouzhpennañ restroù e-barzh un diell"
 
-#: ../src/fr-window.c:8792 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8798 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "Eztennañ an diell"
