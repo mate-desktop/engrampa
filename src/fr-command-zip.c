@@ -382,7 +382,9 @@ fr_command_zip_handle_error (FrCommand   *comm,
 
 
 const char *zip_mime_type[] = { "application/x-cbz",
+				"application/x-ear",
 				"application/x-ms-dos-executable",
+				"application/x-war",
 				"application/zip",
 				NULL };
 
