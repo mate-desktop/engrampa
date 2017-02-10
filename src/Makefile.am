@@ -37,7 +37,6 @@ AM_CPPFLAGS =						\
 	-DGLADEDIR=\""$(gladedir)"\" 			\
 	-DPRIVEXECDIR=\"$(privexecdir)\"		\
 	-DSHDIR=\"$(shdir)\"				\
-	$(DISABLE_DEPRECATED)				\
 	$(FR_CFLAGS)					\
 	$(JSON_GLIB_CFLAGS)
 

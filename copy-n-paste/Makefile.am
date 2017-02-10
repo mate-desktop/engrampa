@@ -1,5 +1,4 @@
 AM_CPPFLAGS = \
-	$(DISABLE_DEPRECATED) \
 	-UGETTEXT_PACKAGE
 
 noinst_LTLIBRARIES = libeggsmclient.la

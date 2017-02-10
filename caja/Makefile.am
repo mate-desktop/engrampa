@@ -3,7 +3,6 @@ AM_CPPFLAGS =						\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
-	$(DISABLE_DEPRECATED)				\
 	$(CAJA_CFLAGS)
 
 caja_extensiondir=$(CAJA_EXTENSION_DIR)
