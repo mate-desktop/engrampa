@@ -675,14 +675,37 @@ start_current_command (FrProcess *process)
 	char          **argv;
 	int             out_fd, err_fd;
 	int             i = 0;
+	char           *commandline = "";
+	gboolean        fixname = FALSE;
 
 	debug (DEBUG_INFO, "%d/%d) ", process->priv->current_command, process->priv->n_comm);
 
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_command);
 
 	argv = g_new (char *, g_list_length (info->args) + 1);
-	for (scan = info->args; scan; scan = scan->next)
+
+	for (scan = info->args; scan; scan = scan->next) {
 		argv[i++] = scan->data;
+
+		if (g_str_has_prefix(commandline, "mv")) {
+
+			if ((i==3) && (!g_file_test(g_shell_quote(argv[2]), G_FILE_TEST_EXISTS)) && (!fixname)) {
+
+				if ((g_str_has_suffix(argv[2], ".7z")) && (!g_str_has_suffix(argv[2], ".tar.7z"))) {
+					commandline = g_strconcat(commandline, " ", g_shell_quote(argv[2]), "*", NULL);
+					fixname = TRUE;
+				}
+			}
+			else if ((i==4) && (fixname))
+				commandline = g_strconcat(commandline, " \"$(dirname ", g_shell_quote(argv[3]), ")\"", NULL);
+			else
+				commandline = g_strconcat(commandline, " ", argv[(i-1)], NULL);
+		}
+		else if (g_str_has_prefix(argv[0], "mv")) {
+			commandline = g_strconcat(commandline, "mv", NULL);
+		}
+	}
+
 	argv[i] = NULL;
 
 #ifdef DEBUG
@@ -701,6 +724,11 @@ start_current_command (FrProcess *process)
 		g_print ("\n");
 	}
 #endif
+
+	if ((fixname) && (system(commandline) != 0)) {
+		g_warning ("The files could not be move: %s\n", commandline);
+		return;
+	}
 
 	if (info->begin_func != NULL)
 		(*info->begin_func) (info->begin_data);
