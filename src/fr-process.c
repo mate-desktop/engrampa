@@ -689,10 +689,20 @@ start_current_command (FrProcess *process)
 
 		if (g_str_has_prefix(commandline, "mv")) {
 
-			if ((i==3) && (!g_file_test(g_shell_quote(argv[2]), G_FILE_TEST_EXISTS)) && (!fixname)) {
+			if ((i==3) && (!g_file_test(argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
+				char	rarfile[strlen(argv[2])+7];
 
-				if ((g_str_has_suffix(argv[2], ".7z")) && (!g_str_has_suffix(argv[2], ".tar.7z"))) {
-					commandline = g_strconcat(commandline, " ", g_shell_quote(argv[2]), "*", NULL);
+				strcpy(rarfile, argv[2]);
+				rarfile[strlen(rarfile)-3]=0;
+				strcat(rarfile, "part1.rar");
+
+				if (g_str_has_suffix(argv[2], ".7z")) {
+					commandline = g_strconcat(commandline, " ", g_shell_quote(argv[2]), ".*", NULL);
+					fixname = TRUE;
+				}
+				else if (g_str_has_suffix(argv[2], ".rar")) {
+					rarfile[strlen(rarfile)-5]=0;
+					commandline = g_strconcat(commandline, " ", g_shell_quote(rarfile), "*.rar", NULL);
 					fixname = TRUE;
 				}
 			}
