@@ -55,6 +55,60 @@ have_rar (void)
 
 /* -- list -- */
 
+/*
+
+// SAMPLE RAR VERSION 5.30 AND NEWER LISTING OUTPUT:
+
+RAR 5.30   Copyright (c) 1993-2015 Alexander Roshal   18 Nov 2015
+Trial version             Type RAR -? for help
+
+Archive: /test.rar
+Details: RAR 4
+
+ Attributes      Size    Packed Ratio    Date    Time   Checksum  Name
+----------- ---------  -------- ----- ---------- -----  --------  ----
+ -rw-rw-r--      3165      1310  41%  2017-03-07 21:34  888D50B3  loremipsum.txt
+ -rw-rw-r--         0         8   0%  2017-03-07 21:36  00000000  file2.empty
+----------- ---------  -------- ----- ---------- -----  --------  ----
+                 3165      1318  41%                              2
+
+
+
+// SAMPLE RAR VERSION 5.00 TO 5.21 LISTING OUTPUT:
+
+RAR 5.21   Copyright (c) 1993-2015 Alexander Roshal   15 Feb 2015
+Trial version             Type RAR -? for help
+
+Archive: /test.rar
+Details: RAR 4
+
+ Attributes      Size    Packed Ratio   Date   Time   Checksum  Name
+----------- ---------  -------- ----- -------- -----  --------  ----
+ -rw-rw-r--      3165      1310  41%  07-03-17 21:34  888D50B3  loremipsum.txt
+ -rw-rw-r--         0         8   0%  07-03-17 21:36  00000000  file2.empty 
+----------- ---------  -------- ----- -------- -----  --------  ----
+                 3165      1318  41%                            2
+
+
+
+// SAMPLE RAR VERSION 4.20 AND OLDER LISTING OUTPUT:
+
+RAR 4.20   Copyright (c) 1993-2012 Alexander Roshal   9 Jun 2012
+Trial version             Type RAR -? for help
+
+Archive /test.rar
+
+Pathname/Comment
+                  Size   Packed Ratio  Date   Time     Attr      CRC   Meth Ver
+-------------------------------------------------------------------------------
+ loremipsum.txt
+                  3165     1310  41% 07-03-17 21:34 -rw-rw-r-- 888D50B3 m3b 2.9
+ file2.empty
+                     0        8   0% 07-03-17 21:36 -rw-rw-r-- 00000000 m3b 2.9
+-------------------------------------------------------------------------------
+    2             3165     1318  41%
+
+*/
 
 static time_t
 mktime_from_string (const char *date_s,
@@ -69,11 +123,11 @@ mktime_from_string (const char *date_s,
 
 	fields = g_strsplit (date_s, "-", 3);
 	if (fields[0] != NULL) {
-		tm.tm_mday = atoi (fields[0]);
+		tm.tm_year = atoi (fields[0]) - 1900;
 		if (fields[1] != NULL) {
 			tm.tm_mon = atoi (fields[1]) - 1;
 			if (fields[2] != NULL)
-				tm.tm_year = 100 + atoi (fields[2]);
+				tm.tm_mday = atoi (fields[2]);
 		}
 	}
 	g_strfreev (fields);
@@ -90,39 +144,6 @@ mktime_from_string (const char *date_s,
 
 	return mktime (&tm);
 }
-
-/* Sample rar-5 listing output:
-
-RAR 5.00 beta 8   Copyright (c) 1993-2013 Alexander Roshal   22 Aug 2013
-Trial version             Type RAR -? for help
-
-Archive: test.rar
-Details: RAR 4
-
- Attributes      Size    Packed Ratio   Date   Time   Checksum  Name
------------ ---------  -------- ----- -------- -----  --------  ----
- -rw-r--r--       453       304  67%  05-09-13 09:55  56DA5EF3  loremipsum.txt
------------ ---------  -------- ----- -------- -----  --------  ----
-                  453       304  67%                            1
-
- *
- * Sample rar-4 listing output:
- *
-
-RAR 4.20   Copyright (c) 1993-2012 Alexander Roshal   9 Jun 2012
-Trial version             Type RAR -? for help
-
-Archive test.rar
-
-Pathname/Comment
-                  Size   Packed Ratio  Date   Time     Attr      CRC   Meth Ver
--------------------------------------------------------------------------------
- loremipsum.txt
-                   453      304  67% 05-09-13 09:55 -rw-r--r-- 56DA5EF3 m3b 2.9
--------------------------------------------------------------------------------
-    1              453      304  67%
-
- */
 
 static gboolean
 attribute_field_with_space (char *line)
