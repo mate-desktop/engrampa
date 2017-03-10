@@ -57,7 +57,7 @@ have_rar (void)
 
 /*
 
-// SAMPLE RAR VERSION 5 LISTING OUTPUT:
+// SAMPLE RAR VERSION 5.3+ LISTING OUTPUT:
 
 RAR 5.40   Copyright (c) 1993-2016 Alexander Roshal   15 Aug 2016
 Trial version             Type RAR -? for help
@@ -71,6 +71,12 @@ Details: RAR 4
  -rw-rw-r--         0         8   0%  2017-03-07 21:36  00000000  file2.empty
 ----------- ---------  -------- ----- ---------- -----  --------  ----
                  3165      1318  41%                              2
+
+
+
+// SAMPLE RAR VERSION 5+ < 5.3 LISTING OUTPUT:
+
+x
 
 
 
