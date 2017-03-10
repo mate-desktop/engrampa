@@ -59,10 +59,10 @@ have_rar (void)
 
 // SAMPLE RAR VERSION 5.3+ LISTING OUTPUT:
 
-RAR 5.40   Copyright (c) 1993-2016 Alexander Roshal   15 Aug 2016
+RAR 5.30   Copyright (c) 1993-2015 Alexander Roshal   18 Nov 2015
 Trial version             Type RAR -? for help
 
-Archive: test.rar
+Archive: /test.rar
 Details: RAR 4
 
  Attributes      Size    Packed Ratio    Date    Time   Checksum  Name
@@ -74,18 +74,29 @@ Details: RAR 4
 
 
 
-// SAMPLE RAR VERSION 5+ < 5.3 LISTING OUTPUT:
+// SAMPLE RAR VERSION 5 TO 5.2 LISTING OUTPUT:
 
-x
+RAR 5.21   Copyright (c) 1993-2015 Alexander Roshal   15 Feb 2015
+Trial version             Type RAR -? for help
+
+Archive: /test.rar
+Details: RAR 4
+
+ Attributes      Size    Packed Ratio   Date   Time   Checksum  Name
+----------- ---------  -------- ----- -------- -----  --------  ----
+ -rw-rw-r--      3165      1310  41%  07-03-17 21:34  888D50B3  loremipsum.txt
+ -rw-rw-r--         0         8   0%  07-03-17 21:36  00000000  file2.empty 
+----------- ---------  -------- ----- -------- -----  --------  ----
+                 3165      1318  41%                            2
 
 
 
-// SAMPLE RAR VERSION 4 LISTING OUTPUT:
+// SAMPLE RAR VERSION 4 AND UNDER LISTING OUTPUT:
 
 RAR 4.20   Copyright (c) 1993-2012 Alexander Roshal   9 Jun 2012
 Trial version             Type RAR -? for help
 
-Archive test.rar
+Archive /test.rar
 
 Pathname/Comment
                   Size   Packed Ratio  Date   Time     Attr      CRC   Meth Ver
