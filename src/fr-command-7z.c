@@ -284,7 +284,7 @@ process_line__add (char     *line,
 {
 	FrCommand *comm = FR_COMMAND (data);
 
-	if ((comm->volume_size > 0) && (strncmp (line, "Creating archive ", 17) == 0)) {
+	if ((comm->volume_size > 0) && (strncmp (line, "Creating archive", 16) == 0)) {
 		char  *volume_filename;
 		GFile *volume_file;
 
