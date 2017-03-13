@@ -46,6 +46,10 @@ static void fr_command_rar_finalize    (GObject           *object);
 static FrCommandClass *parent_class = NULL;
 
 
+/* rar 5.30 and later uses YYYY-MM-DD instead DD-MM-YY in the listing output */
+
+static gboolean date_newstyle = FALSE;
+
 static gboolean
 have_rar (void)
 {
@@ -123,11 +127,18 @@ mktime_from_string (const char *date_s,
 
 	fields = g_strsplit (date_s, "-", 3);
 	if (fields[0] != NULL) {
-		tm.tm_year = atoi (fields[0]) - 1900;
+		if (date_newstyle)
+			tm.tm_year = atoi (fields[0]) - 1900;
+		else
+			tm.tm_mday = atoi (fields[0]);
 		if (fields[1] != NULL) {
 			tm.tm_mon = atoi (fields[1]) - 1;
-			if (fields[2] != NULL)
-				tm.tm_mday = atoi (fields[2]);
+			if (fields[2] != NULL) {
+				if (date_newstyle)
+					tm.tm_mday = atoi (fields[2]);
+				else
+					tm.tm_year = 100 + atoi (fields[2]);
+			}
 		}
 	}
 	g_strfreev (fields);
@@ -218,11 +229,31 @@ process_line (char     *line,
 			int version;
 			sscanf (line, "RAR %d.", &version);
 			rar_comm->rar5 = (version >= 5);
+
+			if (version > 5)
+				date_newstyle = TRUE;
+			else if (version == 5)
+			{
+				sscanf (line, "RAR 5.%d ", &version);
+				if (version >= 30)
+					date_newstyle = TRUE;
+			}
+
 		}
 		else if (strncmp (line, "UNRAR ", 6) == 0) {
 			int version;
 			sscanf (line, "UNRAR %d.", &version);
 			rar_comm->rar5 = (version >= 5);
+
+			if (version > 5)
+				date_newstyle = TRUE;
+			else if (version == 5)
+			{
+				sscanf (line, "UNRAR 5.%d ", &version);
+				if (version >= 30)
+					date_newstyle = TRUE;
+			}
+
 		}
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
