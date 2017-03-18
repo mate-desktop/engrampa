@@ -133,10 +133,6 @@
     <child name="batch-add" schema="org.mate.engrampa.dialogs.batch-add"/>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.engrampa.dialogs.extract" path="/org/mate/engrampa/dialogs/extract/">
-    <key name="overwrite" type="b">
-      <default>true</default>
-      <summary>Overwrite existing files</summary>
-    </key>
     <key name="skip-newer" type="b">
       <default>false</default>
       <summary>Do not overwrite newer files</summary>

@@ -3518,6 +3518,24 @@ fr_window_get_file_list_pattern (FrWindow    *window,
 }
 
 
+static GList *
+fr_window_get_file_list (FrWindow *window)
+{
+	GList *list;
+	int    i;
+
+	g_return_val_if_fail (window != NULL, NULL);
+
+	list = NULL;
+	for (i = 0; i < window->archive->command->files->len; i++) {
+		FileData *fd = g_ptr_array_index (window->archive->command->files, i);
+		list = g_list_prepend (list, g_strdup (fd->original_path));
+	}
+
+	return g_list_reverse (list);
+}
+
+
 int
 fr_window_get_n_selected_files (FrWindow *window)
 {
@@ -6645,6 +6663,7 @@ typedef struct {
 	FrWindow    *window;
 	ExtractData *edata;
 	GList       *current_file;
+	gboolean     extract_all;
 } OverwriteData;
 
 
@@ -6696,9 +6715,11 @@ overwrite_dialog_response_cb (GtkDialog *dialog,
 		{
 			/* remove the file from the list to extract */
 			GList *next = odata->current_file->next;
+
 			odata->edata->file_list = g_list_remove_link (odata->edata->file_list, odata->current_file);
 			path_list_free (odata->current_file);
 			odata->current_file = next;
+			odata->extract_all = FALSE;
 		}
 		break;
 
@@ -6724,88 +6745,118 @@ overwrite_dialog_response_cb (GtkDialog *dialog,
 
 
 static void
+query_info_ready_for_overwrite_dialog_cb (GObject      *source_object,
+					  GAsyncResult *result,
+					  gpointer      user_data)
+{
+	OverwriteData *odata = user_data;
+	GFile         *destination = G_FILE (source_object);
+	GFileInfo     *info;
+	GFileType      file_type;
+
+	info = g_file_query_info_finish (destination, result, NULL);
+	if (info == NULL) {
+		odata->current_file = odata->current_file->next;
+		_fr_window_ask_overwrite_dialog (odata);
+		return;
+	}
+
+	file_type = g_file_info_get_file_type (info);
+	if ((file_type != G_FILE_TYPE_UNKNOWN) && (file_type != G_FILE_TYPE_DIRECTORY)) {
+		char      *msg;
+		GFile     *parent;
+		char      *parent_name;
+		char      *details;
+		GtkWidget *d;
+
+		msg = g_strdup_printf (_("Replace file \"%s\"?"), g_file_info_get_display_name (info));
+		parent = g_file_get_parent (destination);
+		parent_name = g_file_get_parse_name (parent);
+		details = g_strdup_printf (_("Another file with the same name already exists in \"%s\"."), parent_name);
+		d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
+					     GTK_DIALOG_MODAL,
+					     GTK_STOCK_DIALOG_QUESTION,
+					     msg,
+					     details,
+					     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+					     _("Replace _All"), _FR_RESPONSE_OVERWRITE_YES_ALL,
+					     _("_Skip"), _FR_RESPONSE_OVERWRITE_NO,
+					     _("_Replace"), _FR_RESPONSE_OVERWRITE_YES,
+					     NULL);
+		gtk_dialog_set_default_response (GTK_DIALOG (d), _FR_RESPONSE_OVERWRITE_YES);
+		g_signal_connect (d,
+				  "response",
+				  G_CALLBACK (overwrite_dialog_response_cb),
+				  odata);
+		gtk_widget_show (d);
+
+		g_free (parent_name);
+		g_object_unref (parent);
+		g_object_unref (info);
+
+		return;
+	}
+
+	g_object_unref (info);
+
+	odata->current_file = odata->current_file->next;
+	_fr_window_ask_overwrite_dialog (odata);
+}
+
+
+static void
 _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 {
-	gboolean do_not_extract = FALSE;
-
-	while ((odata->edata->overwrite == FR_OVERWRITE_ASK) && (odata->current_file != NULL)) {
+	if ((odata->edata->overwrite == FR_OVERWRITE_ASK) && (odata->current_file != NULL)) {
 		const char *base_name;
 		char       *e_base_name;
 		char       *dest_uri;
 		GFile      *file;
-		GFileInfo  *info;
-		GFileType   file_type;
 
 		base_name = _g_path_get_base_name ((char *) odata->current_file->data, odata->edata->base_dir, odata->edata->junk_paths);
 		e_base_name = g_uri_escape_string (base_name, G_URI_RESERVED_CHARS_ALLOWED_IN_PATH, TRUE);
 		dest_uri = g_strdup_printf ("%s/%s", odata->edata->extract_to_dir, e_base_name);
 		file = g_file_new_for_uri (dest_uri);
-		info = g_file_query_info (file,
-					  G_FILE_ATTRIBUTE_STANDARD_TYPE "," G_FILE_ATTRIBUTE_STANDARD_NAME "," G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
-					  G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
-					  NULL,
-					  NULL);
+		g_file_query_info_async (file,
+					 G_FILE_ATTRIBUTE_STANDARD_TYPE "," G_FILE_ATTRIBUTE_STANDARD_NAME "," G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
+					 G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+					 G_PRIORITY_DEFAULT,
+					 NULL, //odata->window->priv->cancellable,
+					 query_info_ready_for_overwrite_dialog_cb,
+					 odata);
 
-		g_free (dest_uri);
-		g_free (e_base_name);
-
-		if (info == NULL) {
-			g_object_unref (file);
-			odata->current_file = odata->current_file->next;
-			continue;
-		}
-
-		file_type = g_file_info_get_file_type (info);
-		if ((file_type != G_FILE_TYPE_UNKNOWN) && (file_type != G_FILE_TYPE_DIRECTORY)) {
-			char      *msg;
-			GFile     *parent;
-			char      *parent_name;
-			char      *details;
-			GtkWidget *d;
-
-			msg = g_strdup_printf (_("Replace file \"%s\"?"), g_file_info_get_display_name (info));
-			parent = g_file_get_parent (file);
-			parent_name = g_file_get_parse_name (parent);
-			details = g_strdup_printf (_("Another file with the same name already exists in \"%s\"."), parent_name);
-			d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
-						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
-						     msg,
-						     details,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-						     _("Replace _All"), _FR_RESPONSE_OVERWRITE_YES_ALL,
-						     _("_Skip"), _FR_RESPONSE_OVERWRITE_NO,
-						     _("_Replace"), _FR_RESPONSE_OVERWRITE_YES,
-						     NULL);
-			gtk_dialog_set_default_response (GTK_DIALOG (d), _FR_RESPONSE_OVERWRITE_YES);
-			g_signal_connect (d,
-					  "response",
-					  G_CALLBACK (overwrite_dialog_response_cb),
-					  odata);
-			gtk_widget_show (d);
-
-			g_free (parent_name);
-			g_object_unref (parent);
-			g_object_unref (info);
-			g_object_unref (file);
-
-			return;
-		}
-		else
-			odata->current_file = odata->current_file->next;
-
-		g_object_unref (info);
 		g_object_unref (file);
-	}
 
-	if (do_not_extract) {
-		fr_window_stop_batch (odata->window);
-		g_free (odata);
 		return;
 	}
 
-	odata->edata->overwrite = FR_OVERWRITE_YES;
-	_fr_window_archive_extract_from_edata (odata->window, odata->edata);
+	if (odata->edata->file_list != NULL) {
+		/* speed optimization: passing NULL when extracting all the
+		 * files is faster if the command supports the
+		 * propCanExtractAll property. */
+		if (odata->extract_all) {
+			path_list_free (odata->edata->file_list);
+			odata->edata->file_list = NULL;
+		}
+		odata->edata->overwrite = FR_OVERWRITE_YES;
+		_fr_window_archive_extract_from_edata (odata->window, odata->edata);
+	}
+	else {
+		GtkWidget *d;
+
+		d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
+					     0,
+					     GTK_STOCK_DIALOG_WARNING,
+					     _("Extraction not performed"),
+					     NULL,
+					     GTK_STOCK_OK, GTK_RESPONSE_OK,
+					     NULL);
+		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
+		fr_window_show_error_dialog (odata->window, d, GTK_WINDOW (odata->window), _("Extraction not performed"));
+
+		fr_window_stop_batch (odata->window);
+	}
+
 	g_free (odata);
 }
 
@@ -6922,7 +6973,11 @@ fr_window_archive_extract (FrWindow    *window,
 		odata = g_new0 (OverwriteData, 1);
 		odata->window = window;
 		odata->edata = edata;
+		odata->extract_all = (edata->file_list == NULL) || (g_list_length (edata->file_list) == window->archive->command->files->len);
+		if (edata->file_list == NULL)
+			edata->file_list = fr_window_get_file_list (window);
 		odata->current_file = odata->edata->file_list;
+
 		_fr_window_ask_overwrite_dialog (odata);
 	}
 	else
