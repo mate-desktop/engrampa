@@ -795,12 +795,17 @@ fr_window_unrealized (GtkWidget *window,
 static void
 fr_window_init (FrWindow *window)
 {
+	GtkStyleContext *context;
+
 	window->priv = g_new0 (FrWindowPrivateData, 1);
 	window->priv->update_dropped_files = FALSE;
 	window->priv->filter_mode = FALSE;
 	window->priv->batch_title = NULL;
 	window->priv->use_progress_dialog = TRUE;
 	window->priv->batch_title = NULL;
+
+	context = gtk_widget_get_style_context (GTK_WIDGET (window));
+	gtk_style_context_add_class (context, "engrampa-window");
 
 	g_signal_connect (window,
 			  "realize",
