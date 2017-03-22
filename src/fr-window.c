@@ -5420,6 +5420,7 @@ fr_window_construct (FrWindow *window)
 {
 	GtkWidget        *menubar;
 	GtkWidget        *toolbar;
+	GtkStyleContext  *context;
 	GtkWidget        *list_scrolled_window;
 	GtkWidget        *location_box;
 	GtkStatusbar     *statusbar;
@@ -5699,6 +5700,8 @@ fr_window_construct (FrWindow *window)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (list_scrolled_window),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
+	context = gtk_widget_get_style_context (list_scrolled_window);
+	gtk_style_context_add_class (context, "frame");
 	gtk_container_add (GTK_CONTAINER (list_scrolled_window), window->priv->list_view);
 
 	/* filter bar */
@@ -5775,6 +5778,8 @@ fr_window_construct (FrWindow *window)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (tree_scrolled_window),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
+	context = gtk_widget_get_style_context (tree_scrolled_window);
+	gtk_style_context_add_class (context, "frame");
 	gtk_container_add (GTK_CONTAINER (tree_scrolled_window), window->priv->tree_view);
 
 	/* side pane */
