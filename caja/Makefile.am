@@ -22,7 +22,7 @@ extension_in_files = libcaja-engrampa.caja-extension.in
 extension_DATA = $(extension_in_files:.caja-extension.in=.caja-extension)
 %.caja-extension: %.caja-extension.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; $(AM_V_GEN) LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 
-CLEANFILES = libcaja-engrampa.caja-extension
+CLEANFILES = $(extension_DATA)
 
 EXTRA_DIST = $(extension_in_files)
 -include $(top_srcdir)/git.mk
