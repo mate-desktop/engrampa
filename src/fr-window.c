@@ -2481,7 +2481,6 @@ create_the_progress_dialog (FrWindow *window)
 	GtkDialog     *d;
 	GtkWidget     *hbox;
 	GtkWidget     *vbox;
-	GtkWidget     *align;
 	GtkWidget     *progress_vbox;
 	GtkWidget     *lbl;
 	PangoAttrList *attr_list;
@@ -2535,16 +2534,19 @@ create_the_progress_dialog (FrWindow *window)
 	/* action description */
 
 	lbl = window->priv->pd_action = gtk_label_new ("");
+	gtk_widget_set_halign (lbl, GTK_ALIGN_START);
+	gtk_widget_set_valign (lbl, GTK_ALIGN_START);
+	gtk_widget_set_hexpand (lbl, TRUE);
+	gtk_widget_set_vexpand (lbl, TRUE);
+	gtk_widget_set_margin_bottom (lbl, 12);
 
-	align = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
-	gtk_alignment_set_padding (GTK_ALIGNMENT (align), 0, 12, 0, 0);
-
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
+#else
 	gtk_misc_set_alignment (GTK_MISC (lbl), 0.0, 0.5);
-	gtk_misc_set_padding (GTK_MISC (lbl), 0, 0);
+#endif
 	gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
-
-	gtk_container_add (GTK_CONTAINER (align), lbl);
-	gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (vbox), lbl, TRUE, TRUE, 0);
 
 	/* archive name */
 
@@ -2556,12 +2558,12 @@ create_the_progress_dialog (FrWindow *window)
 
 	/* progress and details */
 
-	align = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
-	gtk_alignment_set_padding (GTK_ALIGNMENT (align), 0, 6, 0, 0);
-
 	progress_vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-	gtk_container_add (GTK_CONTAINER (align), progress_vbox);
-	gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
+	gtk_widget_set_valign (progress_vbox, GTK_ALIGN_START);
+	gtk_widget_set_hexpand (progress_vbox, TRUE);
+	gtk_widget_set_vexpand (progress_vbox, TRUE);
+	gtk_widget_set_margin_bottom (progress_vbox, 6);
+	gtk_box_pack_start (GTK_BOX (vbox), progress_vbox, TRUE, TRUE, 0);
 
 	/* progress bar */
 
