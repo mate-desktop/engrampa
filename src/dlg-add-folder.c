@@ -214,7 +214,6 @@ add_folder_cb (GtkWidget *widget,
 	GtkWidget   *main_box;
 	GtkWidget   *vbox;
 	GtkWidget   *grid;
-	GtkWidget   *align;
 
 	data = g_new0 (DialogData, 1);
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_ADD);
@@ -238,6 +237,9 @@ add_folder_cb (GtkWidget *widget,
 	data->add_if_newer_checkbutton = gtk_check_button_new_with_mnemonic (_("Add only if _newer"));
 	data->include_subfold_checkbutton = gtk_check_button_new_with_mnemonic (_("_Include subfolders"));
 	data->exclude_symlinks = gtk_check_button_new_with_mnemonic (_("Exclude folders that are symbolic lin_ks"));
+	gtk_widget_set_halign (data->exclude_symlinks, GTK_ALIGN_START);
+	gtk_widget_set_valign (data->exclude_symlinks, GTK_ALIGN_START);
+	gtk_widget_set_margin_start (data->exclude_symlinks, 12);
 
 	data->include_files_entry = gtk_entry_new ();
 	gtk_widget_set_tooltip_text (data->include_files_entry, _("example: *.o; *.bak"));
@@ -284,10 +286,7 @@ add_folder_cb (GtkWidget *widget,
 	gtk_box_pack_start (GTK_BOX (vbox), data->include_subfold_checkbutton,
 			    TRUE, TRUE, 0);
 
-	align = gtk_alignment_new (0, 0, 0, 0);
-	gtk_alignment_set_padding (GTK_ALIGNMENT (align), 0, 0, 12, 0);
-	gtk_container_add (GTK_CONTAINER (align), data->exclude_symlinks);
-	gtk_box_pack_start (GTK_BOX (vbox), align, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (vbox), data->exclude_symlinks, TRUE, TRUE, 0);
 
 	gtk_box_pack_start (GTK_BOX (vbox), data->add_if_newer_checkbutton,
 			    TRUE, TRUE, 0);
