@@ -5717,9 +5717,9 @@ fr_window_construct (FrWindow *window)
 	/* * filter entry */
 
 	window->priv->filter_entry = GTK_WIDGET (gtk_entry_new ());
-	gtk_entry_set_icon_from_stock (GTK_ENTRY (window->priv->filter_entry),
-				       GTK_ENTRY_ICON_SECONDARY,
-				       GTK_STOCK_CLEAR);
+	gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->priv->filter_entry),
+				           GTK_ENTRY_ICON_SECONDARY,
+				           "edit-clear");
 
 	gtk_widget_set_size_request (window->priv->filter_entry, 300, -1);
 	gtk_box_pack_start (GTK_BOX (filter_box),
@@ -5803,7 +5803,9 @@ fr_window_construct (FrWindow *window)
 	gtk_box_pack_start (GTK_BOX (sidepane_title_box), sidepane_title_label, TRUE, TRUE, 0);
 
 	close_sidepane_button = gtk_button_new ();
-	gtk_container_add (GTK_CONTAINER (close_sidepane_button), gtk_image_new_from_stock (GTK_STOCK_CLOSE, GTK_ICON_SIZE_MENU));
+	gtk_container_add (GTK_CONTAINER (close_sidepane_button),
+	                                  gtk_image_new_from_icon_name ("window-close",
+	                                                                GTK_ICON_SIZE_MENU));
 	gtk_button_set_relief (GTK_BUTTON (close_sidepane_button), GTK_RELIEF_NONE);
 	gtk_widget_set_tooltip_text (close_sidepane_button, _("Close the folders pane"));
 	g_signal_connect (close_sidepane_button,
@@ -5931,9 +5933,9 @@ fr_window_construct (FrWindow *window)
 			    window->priv->location_label, FALSE, FALSE, 5);
 
 	window->priv->location_entry = gtk_entry_new ();
-	gtk_entry_set_icon_from_stock (GTK_ENTRY (window->priv->location_entry),
+	gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->priv->location_entry),
 				       GTK_ENTRY_ICON_PRIMARY,
-				       GTK_STOCK_DIRECTORY);
+				       "folder");
 
 	gtk_box_pack_start (GTK_BOX (location_box),
 			    window->priv->location_entry, TRUE, TRUE, 5);
