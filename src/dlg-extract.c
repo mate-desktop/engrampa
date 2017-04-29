@@ -76,7 +76,6 @@ extract_cb (GtkWidget   *w,
 	FrWindow   *window = data->window;
 	gboolean    do_not_extract = FALSE;
 	char       *extract_to_dir;
-	gboolean    overwrite;
 	gboolean    skip_newer;
 	gboolean    selected_files;
 	gboolean    pattern_files;
@@ -188,11 +187,9 @@ extract_cb (GtkWidget   *w,
 
 	fr_window_set_extract_default_dir (window, extract_to_dir, TRUE);
 
-	overwrite = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton));
 	skip_newer = ! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton)) && gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton));
 	junk_paths = ! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton));
 
-	g_settings_set_boolean (data->settings, PREF_EXTRACT_OVERWRITE, overwrite);
 	if (! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton)))
 	g_settings_set_boolean (data->settings, PREF_EXTRACT_SKIP_NEWER, skip_newer);
 	g_settings_set_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS, ! junk_paths);
@@ -238,7 +235,7 @@ extract_cb (GtkWidget   *w,
 				   extract_to_dir,
 				   base_dir,
 				   skip_newer,
-				   overwrite ? FR_OVERWRITE_YES : FR_OVERWRITE_NO,
+				   FR_OVERWRITE_ASK,
 				   junk_paths,
 				   TRUE);
 
@@ -278,16 +275,6 @@ files_entry_changed_cb (GtkWidget  *widget,
 {
 	if (! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_files_radiobutton)))
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_files_radiobutton), TRUE);
-}
-
-
-static void
-overwrite_toggled_cb (GtkToggleButton *button,
-		      DialogData      *data)
-{
-	gboolean active = gtk_toggle_button_get_active (button);
-	gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), !active);
-	gtk_widget_set_sensitive (data->e_not_newer_checkbutton, active);
 }
 
 
@@ -399,10 +386,6 @@ create_extra_widget (DialogData *data)
 	gtk_box_pack_start (GTK_BOX (vbox15), data->e_recreate_dir_checkbutton, FALSE, FALSE, 0);
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton), TRUE);
 
-	data->e_overwrite_checkbutton = gtk_check_button_new_with_mnemonic (_("Over_write existing files"));
-	gtk_box_pack_start (GTK_BOX (vbox15), data->e_overwrite_checkbutton, FALSE, FALSE, 0);
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton), TRUE);
-
 	data->e_not_newer_checkbutton = gtk_check_button_new_with_mnemonic (_("Do not e_xtract older files"));
 	gtk_box_pack_start (GTK_BOX (vbox15), data->e_not_newer_checkbutton, FALSE, FALSE, 0);
 
@@ -437,12 +420,12 @@ dlg_extract__common (FrWindow *window,
 					     NULL);
 
 	gtk_window_set_default_size (GTK_WINDOW (file_sel), 530, 510);
-
 	gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (file_sel), FALSE);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (file_sel), FALSE);
-	gtk_dialog_set_default_response (GTK_DIALOG (file_sel), GTK_RESPONSE_OK);
 
+	gtk_file_chooser_set_create_folders (GTK_FILE_CHOOSER (file_sel), TRUE);
 	gtk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (file_sel), create_extra_widget (data));
+	gtk_dialog_set_default_response (GTK_DIALOG (file_sel), GTK_RESPONSE_OK);
 
 	/* Set widgets data. */
 
@@ -455,13 +438,7 @@ dlg_extract__common (FrWindow *window,
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_all_radiobutton), TRUE);
 	}
 
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_OVERWRITE));
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_SKIP_NEWER));
-	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->e_overwrite_checkbutton))) {
-		gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (data->e_not_newer_checkbutton), TRUE);
-		gtk_widget_set_sensitive (data->e_not_newer_checkbutton, FALSE);
-	}
-
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->e_recreate_dir_checkbutton), g_settings_get_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS));
 
 
@@ -477,10 +454,6 @@ dlg_extract__common (FrWindow *window,
 			  G_CALLBACK (file_sel_response_cb),
 			  data);
 
-	g_signal_connect (G_OBJECT (data->e_overwrite_checkbutton),
-			  "toggled",
-			  G_CALLBACK (overwrite_toggled_cb),
-			  data);
 	g_signal_connect (G_OBJECT (data->e_files_entry),
 			  "changed",
 			  G_CALLBACK (files_entry_changed_cb),
