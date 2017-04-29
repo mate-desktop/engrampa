@@ -200,17 +200,14 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	GtkWidget    *entry;
 	GtkWidget    *button;
 	GtkWidget    *content_area;
-	char         *stock_id;
 	char         *result;
-
-	stock_id = GTK_STOCK_DIALOG_QUESTION;
 
 	dialog = gtk_dialog_new_with_buttons (title, parent, flags, NULL, NULL);
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
 
 	/* Add label and image */
 
-	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name ("dialog-question", GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
@@ -291,7 +288,6 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 	GtkWidget    *hbox;
 	GtkWidget    *button;
 	GtkWidget    *content_area;
-	char         *stock_id = GTK_STOCK_DIALOG_WARNING;
 
 	d = gtk_dialog_new_with_buttons ("", parent, flags, NULL, NULL);
 	gtk_window_set_resizable (GTK_WINDOW (d), FALSE);
@@ -300,7 +296,7 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 
 	/* Add label and image */
 
-	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name ("dialog-warning", GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
 	label = gtk_label_new (message);
@@ -364,13 +360,10 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	GtkWidget     *action_area;
 	GtkTextBuffer *text_buf;
 	GtkTextIter    iter;
-	char          *stock_id;
 	GList         *scan;
 	char          *escaped_message, *markup_text;
 	va_list        args;
 	gboolean       view_output = (row_output != NULL);
-
-	stock_id = GTK_STOCK_DIALOG_ERROR;
 
 	dialog = gtk_dialog_new_with_buttons ("",
 					      parent,
@@ -386,7 +379,7 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 
 	/* Add label and image */
 
-	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name ("dialog-error", GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
