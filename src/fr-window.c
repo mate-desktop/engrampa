@@ -5699,6 +5699,8 @@ fr_window_construct (FrWindow *window)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (list_scrolled_window),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (list_scrolled_window),
+	                                     GTK_SHADOW_IN);
 	gtk_container_add (GTK_CONTAINER (list_scrolled_window), window->priv->list_view);
 
 	/* filter bar */
@@ -5775,6 +5777,8 @@ fr_window_construct (FrWindow *window)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (tree_scrolled_window),
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (tree_scrolled_window),
+	                                     GTK_SHADOW_IN);
 	gtk_container_add (GTK_CONTAINER (tree_scrolled_window), window->priv->tree_view);
 
 	/* side pane */
