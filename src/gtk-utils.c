@@ -733,9 +733,8 @@ get_folder_pixbuf_size_for_list (GtkWidget *widget)
 {
 	int icon_width, icon_height;
 
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (widget),
-					   GTK_ICON_SIZE_SMALL_TOOLBAR,
-					   &icon_width, &icon_height);
+	gtk_icon_size_lookup (GTK_ICON_SIZE_SMALL_TOOLBAR,
+			      &icon_width, &icon_height);
 	return MAX (icon_width, icon_height);
 }
 
@@ -836,8 +835,7 @@ _gtk_widget_lookup_for_size (GtkWidget *widget,
                              GtkIconSize icon_size)
 {
 	int w, h;
-	gtk_icon_size_lookup_for_settings (gtk_widget_get_settings (widget),
-					   icon_size,
-					   &w, &h);
+	gtk_icon_size_lookup (icon_size,
+			      &w, &h);
 	return MAX (w, h);
 }
