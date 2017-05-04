@@ -1117,9 +1117,8 @@ compute_file_list_name (FrWindow   *window,
 		return FALSE;
 
 	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT) {
-		file_data_set_list_name (fdata, fdata->name);
-		if (fdata->dir)
-			fdata->dir_size = 0;
+		if (!(fdata->dir))
+			file_data_set_list_name (fdata, fdata->name);
 		return FALSE;
 	}
 
