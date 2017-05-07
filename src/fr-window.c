@@ -865,23 +865,38 @@ static void
 fr_window_history_add (FrWindow   *window,
 		       const char *path)
 {
-	if ((window->priv->history != NULL) && (window->priv->history_current != NULL)) {
-		if (strcmp (window->priv->history_current->data, path) == 0)
-			return;
+	if ((window->priv->history_current == NULL) || (g_strcmp0 (path, window->priv->history_current->data) != 0)) {
+		GList *scan;
+		GList *new_current = NULL;
 
-		/* Add locations visited using the back button to the history
-		 * list. */
-		if (window->priv->history != window->priv->history_current) {
-			GList *scan = window->priv->history->next;
-			while (scan != window->priv->history_current->next) {
-				window->priv->history = g_list_prepend (window->priv->history, g_strdup (scan->data));
-				scan = scan->next;
+		/* search the path in the history */
+		for (scan = window->priv->history_current; scan; scan = scan->next) {
+			char *path_in_history = scan->data;
+
+			if (g_strcmp0 (path, path_in_history) == 0) {
+				new_current = scan;
+				break;
 			}
 		}
-	}
 
-	window->priv->history = g_list_prepend (window->priv->history, g_strdup (path));
-	window->priv->history_current = window->priv->history;
+		if (new_current != NULL) {
+			window->priv->history_current = new_current;
+		}
+		else {
+			/* remove all the paths after the current position */
+			for (scan = window->priv->history; scan && (scan != window->priv->history_current); /* void */) {
+				GList *next = scan->next;
+
+				window->priv->history = g_list_remove_link (window->priv->history, scan);
+				path_list_free (scan);
+
+				scan = next;
+			}
+
+			window->priv->history = g_list_prepend (window->priv->history, g_strdup (path));
+			window->priv->history_current = window->priv->history;
+		}
+	}
 }
 
 
