@@ -362,7 +362,11 @@ fr_command_7z_add (FrCommand     *comm,
 		break;
 	case FR_COMPRESSION_MAXIMUM:
 		fr_process_add_arg (comm->process, "-mx=9");
-		fr_process_add_arg (comm->process, "-m0=lzma2");;
+		if (! is_mime_type (comm->mime_type, "application/zip")
+		    && ! is_mime_type (comm->mime_type, "application/x-cbz"))
+		{
+			fr_process_add_arg (comm->process, "-m0=lzma2");;
+		}
 		break;
 	}
 
