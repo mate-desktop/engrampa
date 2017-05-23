@@ -268,6 +268,7 @@ fr_command_tar_list (FrCommand *comm)
 	begin_tar_command (comm);
 	fr_process_add_arg (comm->process, "--force-local");
 	fr_process_add_arg (comm->process, "--no-wildcards");
+	fr_process_add_arg (comm->process, "--no-unquote");
 	fr_process_add_arg (comm->process, "-tvf");
 	fr_process_add_arg (comm->process, comm->filename);
 	add_compress_arg (comm);
