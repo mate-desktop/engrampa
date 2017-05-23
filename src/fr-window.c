@@ -1728,12 +1728,10 @@ fr_window_update_current_location (FrWindow *window)
 	char       *path;
 	GtkTreeIter iter;
 
-	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT) {
+	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT)
 		gtk_widget_hide (window->priv->location_bar);
-		return;
-	}
-
-	gtk_widget_show (window->priv->location_bar);
+	else
+		gtk_widget_show (window->priv->location_bar);
 
 	gtk_entry_set_text (GTK_ENTRY (window->priv->location_entry), window->priv->archive_present? current_dir: "");
 
@@ -1776,8 +1774,7 @@ fr_window_update_dir_tree (FrWindow *window)
 	gtk_tree_store_clear (window->priv->tree_store);
 
 	if (! window->priv->view_folders
-	    || ! window->priv->archive_present
-	    || (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT))
+	    || ! window->priv->archive_present)
 	{
 		gtk_widget_set_sensitive (window->priv->tree_view, FALSE);
 		gtk_widget_hide (window->priv->sidepane);
@@ -2158,7 +2155,7 @@ fr_window_update_sensitivity (FrWindow *window)
 	set_sensitive (window, "OpenRecent", ! running);
 	set_sensitive (window, "OpenRecent_Toolbar", ! running);
 
-	set_sensitive (window, "ViewFolders", (window->priv->list_mode == FR_WINDOW_LIST_MODE_AS_DIR));
+	set_sensitive (window, "ViewFolders", ! window->priv->filter_mode);
 
 	set_sensitive (window, "ViewAllFiles", ! window->priv->filter_mode);
 	set_sensitive (window, "ViewAsFolder", ! window->priv->filter_mode);
