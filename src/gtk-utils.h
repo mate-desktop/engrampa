@@ -77,10 +77,6 @@ GdkPixbuf * get_mime_type_pixbuf            (const char   *mime_type,
 		                             int           icon_size,
 		                             GtkIconTheme *icon_theme);
 int         get_folder_pixbuf_size_for_list (GtkWidget *widget);
-gboolean    show_uri                        (GdkScreen   *screen,
-					     const char  *uri,
-				             guint32      timestamp,
-				             GError     **error);
 void        show_help_dialog                (GtkWindow    *parent,
 					     const char   *section);
 GtkBuilder *  

@@ -2253,7 +2253,7 @@ open_folder (GtkWindow  *parent,
 	if (folder == NULL)
 		return;
 
-	if (! show_uri (gtk_window_get_screen (parent), folder, GDK_CURRENT_TIME, &error)) {
+	if (! gtk_show_uri (gtk_window_get_screen (parent), folder, GDK_CURRENT_TIME, &error)) {
 		GtkWidget *d;
 		char      *utf8_name;
 		char      *message;

@@ -731,20 +731,6 @@ get_folder_pixbuf_size_for_list (GtkWidget *widget)
 	return MAX (icon_width, icon_height);
 }
 
-gboolean
-show_uri (GdkScreen   *screen,
-	  const char  *uri,
-	  guint32      timestamp,
-	  GError     **error)
-{
-	gboolean result;
-
-	result = gtk_show_uri (screen, uri, timestamp, error);
-
-	return result;
-}
-
-
 void
 show_help_dialog (GtkWindow  *parent,
 		  const char *section)
@@ -753,7 +739,7 @@ show_help_dialog (GtkWindow  *parent,
 	GError *error = NULL;
 
 	uri = g_strconcat ("help:engrampa", section ? "/" : NULL, section, NULL);
-	if (! show_uri (gtk_window_get_screen (parent), uri, GDK_CURRENT_TIME, &error)) {
+	if (! gtk_show_uri (gtk_window_get_screen (parent), uri, GDK_CURRENT_TIME, &error)) {
   		GtkWidget *dialog;
 
 		dialog = _gtk_message_dialog_new (parent,
