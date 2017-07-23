@@ -739,8 +739,13 @@ show_help_dialog (GtkWindow  *parent,
 	GError *error = NULL;
 
 	uri = g_strconcat ("help:engrampa", section ? "/" : NULL, section, NULL);
+#if GTK_CHECK_VERSION (3, 22, 0)
+	if (! gtk_show_uri_on_window (parent, uri, GDK_CURRENT_TIME, &error)) {
+		GtkWidget *dialog;
+#else
 	if (! gtk_show_uri (gtk_window_get_screen (parent), uri, GDK_CURRENT_TIME, &error)) {
-  		GtkWidget *dialog;
+		GtkWidget *dialog;
+#endif
 
 		dialog = _gtk_message_dialog_new (parent,
 						  GTK_DIALOG_DESTROY_WITH_PARENT,
