@@ -422,6 +422,8 @@ fr_command_7z_delete (FrCommand  *comm,
 			if (g_str_has_prefix (scan->data, "@"))
 				fr_process_add_arg_concat (comm->process, "-i!", scan->data, NULL);
 
+	add_password_arg (comm, FR_COMMAND (comm)->password, FALSE);
+
 	fr_process_add_arg (comm->process, "--");
 	fr_process_add_arg (comm->process, comm->filename);
 
