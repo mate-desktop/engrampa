@@ -39,8 +39,11 @@
 static void fr_command_7z_class_init  (FrCommand7zClass *class);
 static void fr_command_7z_init        (FrCommand        *afile);
 static void fr_command_7z_finalize    (GObject          *object);
+
 static gboolean spd_support = FALSE;
 static gboolean unexpected_end_of_archive = FALSE;
+static gboolean password_required = FALSE;
+static gboolean password_handled = FALSE;
 
 /* Parent Class */
 
@@ -225,6 +228,7 @@ add_password_arg (FrCommand     *comm,
 		arg = g_strconcat ("-p", password, NULL);
 		fr_process_add_arg (comm->process, arg);
 		g_free (arg);
+		password_handled = TRUE;
 	}
 }
 
@@ -283,6 +287,9 @@ process_line__add (char     *line,
 		   gpointer  data)
 {
 	FrCommand *comm = FR_COMMAND (data);
+
+	if (strstr (line, "Enter password") != NULL)
+		password_required = TRUE;
 
 	if ((comm->volume_size > 0) && (strncmp (line, "Creating archive", 16) == 0)) {
 		char  *volume_filename;
@@ -550,6 +557,12 @@ fr_command_7z_handle_error (FrCommand   *comm,
 		error->type = FR_PROC_ERROR_NONE;
 	}
 	else {
+		if (password_required && (!password_handled))
+		{
+			error->type = FR_PROC_ERROR_ASK_PASSWORD;
+			return;
+		}
+
 		GList *scan;
 
 		for (scan = g_list_last (comm->process->out.raw); scan; scan = scan->prev) {
