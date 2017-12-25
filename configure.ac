@@ -107,7 +107,7 @@ AC_ARG_WITH(cajadir,
         [ac_with_cajadir=$withval],
         [ac_with_cajadir=""])
 if test "${ac_with_cajadir}" = ""; then
-        ac_with_cajadir=`pkg-config --variable=extensiondir libcaja-extension`
+        ac_with_cajadir=`$PKG_CONFIG --variable=extensiondir libcaja-extension`
 fi
 
 AC_MSG_NOTICE([installing caja plugin in ${ac_with_cajadir}])
