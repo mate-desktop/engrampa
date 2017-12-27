@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-25 12:46+0300\n"
-"PO-Revision-Date: 2017-09-19 13:39+0000\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"POT-Creation-Date: 2017-12-25 14:51+0300\n"
+"PO-Revision-Date: 2017-12-25 12:04+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Slovak (http://www.transifex.com/mate/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,12 +51,12 @@ msgstr "Program neprijíma dokumenty z príkazového riadka"
 msgid "Unrecognized launch option: %d"
 msgstr "Nerozpoznaná spúšťacia možnosť: %d"
 
-#: ../copy-n-paste/eggdesktopfile.c:1367
+#: ../copy-n-paste/eggdesktopfile.c:1366
 #, c-format
 msgid "Can't pass documents to this desktop element"
 msgstr "Dokumenty nemôžete odovzdať tomuto prvku pracovnej plochy"
 
-#: ../copy-n-paste/eggdesktopfile.c:1386
+#: ../copy-n-paste/eggdesktopfile.c:1385
 #, c-format
 msgid "Not a launchable item"
 msgstr "Nespustiteľná položka"
@@ -125,7 +125,7 @@ msgid "Engrampa Archive Manager"
 msgstr "Správca archívov Engrampa"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2002
-#: ../src/fr-window.c:5516
+#: ../src/fr-window.c:5521
 msgid "Archive Manager"
 msgstr "Správca archívov"
 
@@ -332,7 +332,7 @@ msgstr "Umožňuje vytvárať a rozbaľovať archívy"
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3006
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3011
 msgid "Could not create the archive"
 msgstr "Nepodarilo sa vytvoriť archív"
 
@@ -346,7 +346,7 @@ msgstr "Nemáte oprávnenia pre vytvorenie archívu v tomto priečinku"
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6155 ../src/fr-window.c:6331
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6160 ../src/fr-window.c:6336
 msgid "Archive type not supported."
 msgstr "Nepodporovaný typ archívu."
 
@@ -354,11 +354,11 @@ msgstr "Nepodporovaný typ archívu."
 msgid "Could not delete the old archive."
 msgstr "Nepodarilo sa odstrániť starý archív."
 
-#: ../src/actions.c:382 ../src/fr-window.c:5896
+#: ../src/actions.c:382 ../src/fr-window.c:5901
 msgid "Open"
 msgstr "Otvoriť"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5335
+#: ../src/actions.c:393 ../src/fr-window.c:5340
 msgid "All archives"
 msgstr "Všetky archívy"
 
@@ -366,7 +366,7 @@ msgstr "Všetky archívy"
 msgid "All files"
 msgstr "Všetky súbory"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7364
+#: ../src/actions.c:794 ../src/fr-window.c:7369
 msgid "Last Output"
 msgstr "Posledný výstup"
 
@@ -394,14 +394,16 @@ msgid ""
 msgstr "Kópiu GNU General Public License ste mali dostať spolu s programom Engrampa; ak sa tak nestalo, napíšte na Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #: ../src/actions.c:878
-msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
-msgstr "Autorské práva © 2001–2010 Free Software Foundation, Inc."
+msgid ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2017 The MATE developers"
+msgstr ""
 
-#: ../src/actions.c:879
+#: ../src/actions.c:880
 msgid "An archive manager for MATE."
 msgstr "Správca archívov prostredia MATE."
 
-#: ../src/actions.c:882
+#: ../src/actions.c:883
 msgid "translator-credits"
 msgstr "Stanislav Višňovský\nMarcel Telka <marcel@telka.sk>\nPeter Tuhársky <tuharsky@misbb.sk>\nPeter Mráz <etkinator@gmail.com>\nJán Ďanovský <dagsoftware@yahoo.com>\nTibor Kaputa <tibbbi2@gmail.com>\nDušan Kazik <prescott66@gmail.com>"
 
@@ -486,7 +488,7 @@ msgid ""
 "%s"
 msgstr "Názov „%s“ nie je platný, pretože nemôže obsahovať znaky: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7715 ../src/fr-window.c:7717
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7720 ../src/fr-window.c:7722
 msgid "Please use a different name."
 msgstr "Prosím, použite iný názov."
 
@@ -496,7 +498,7 @@ msgid ""
 " folder."
 msgstr "Nemáte dostatočné oprávnenia na vytvorenie archívu v cieľovom priečinku."
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6933
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6938
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -504,11 +506,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "Cieľový priečinok „%s“ neexistuje.\n\nChcete ho vytvoriť?"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6942
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6947
 msgid "Create _Folder"
 msgstr "Vytvoriť _priečinok"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6959
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6964
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nepodarilo sa vytvoriť cieľový priečinok: %s."
@@ -526,12 +528,12 @@ msgid "_Overwrite"
 msgstr "_Prepísať"
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4278 ../src/fr-window.c:6874 ../src/fr-window.c:6879
-#: ../src/fr-window.c:6963 ../src/fr-window.c:6982 ../src/fr-window.c:6987
+#: ../src/fr-window.c:4283 ../src/fr-window.c:6879 ../src/fr-window.c:6884
+#: ../src/fr-window.c:6968 ../src/fr-window.c:6987 ../src/fr-window.c:6992
 msgid "Extraction not performed"
 msgstr "Rozbalenie sa neuskutočnilo"
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4447 ../src/fr-window.c:4527
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4452 ../src/fr-window.c:4532
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -720,13 +722,13 @@ msgid "You can't add an archive to itself."
 msgstr "Nemôžete pridať archív do seba samého."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:300 ../src/fr-command-rar.c:451
+#: ../src/fr-command-7z.c:307 ../src/fr-command-rar.c:451
 #: ../src/fr-command-tar.c:316
 msgid "Adding file: "
 msgstr "Pridáva sa súbor: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:445 ../src/fr-command-rar.c:578
+#: ../src/fr-command-7z.c:454 ../src/fr-command-rar.c:578
 #: ../src/fr-command-tar.c:437
 msgid "Extracting file: "
 msgstr "Rozbaľuje sa súbor: "
@@ -905,86 +907,86 @@ msgstr "Priečinok"
 msgid "[read only]"
 msgstr "[len na čítanie]"
 
-#: ../src/fr-window.c:2262
+#: ../src/fr-window.c:2267
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "Nepodarilo sa zobraziť priečinok „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2341 ../src/fr-window.c:2379
+#: ../src/fr-window.c:2346 ../src/fr-window.c:2384
 #, c-format
 msgid "Creating \"%s\""
 msgstr "Vytvára sa archív „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2345
+#: ../src/fr-window.c:2350
 #, c-format
 msgid "Loading \"%s\""
 msgstr "Načítava sa archív „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2349
+#: ../src/fr-window.c:2354
 #, c-format
 msgid "Reading \"%s\""
 msgstr "Číta sa archív „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2353
+#: ../src/fr-window.c:2358
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr "Odstraňujú sa súbory z archívu „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2357
+#: ../src/fr-window.c:2362
 #, c-format
 msgid "Testing \"%s\""
 msgstr "Testuje sa archív „%s“"
 
-#: ../src/fr-window.c:2360
+#: ../src/fr-window.c:2365
 msgid "Getting the file list"
 msgstr "Získava sa zoznam súborov"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2364
+#: ../src/fr-window.c:2369
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr "Kopírujú sa súbory na pridanie do archívu „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2368
+#: ../src/fr-window.c:2373
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr "Pridávajú sa súbory do archívu „%s“"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2372
+#: ../src/fr-window.c:2377
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr "Rozbaľujú sa súbory z archívu „%s“"
 
-#: ../src/fr-window.c:2375
+#: ../src/fr-window.c:2380
 msgid "Copying the extracted files to the destination"
 msgstr "Kopírujú sa rozbalené súbory do cieľového umiestnenia"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2383
+#: ../src/fr-window.c:2388
 #, c-format
 msgid "Saving \"%s\""
 msgstr "Ukladá sa „%s“"
 
-#: ../src/fr-window.c:2529
+#: ../src/fr-window.c:2534
 msgid "_Open the Archive"
 msgstr "_Otvoriť archív"
 
-#: ../src/fr-window.c:2530
+#: ../src/fr-window.c:2535
 msgid "_Show the Files"
 msgstr "_Zobraziť súbory"
 
-#: ../src/fr-window.c:2531
+#: ../src/fr-window.c:2536
 msgid "Show the _Files and Quit"
 msgstr "Zobraziť _súbory a skončiť"
 
-#: ../src/fr-window.c:2716
+#: ../src/fr-window.c:2721
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
@@ -992,182 +994,182 @@ msgstr[0] "Zostáva %d súbor"
 msgstr[1] "Zostávajú %'d súbory"
 msgstr[2] "Zostáva %'d súborov"
 
-#: ../src/fr-window.c:2767
+#: ../src/fr-window.c:2772
 msgid "Extraction completed successfully"
 msgstr "Rozbaľovanie bolo úspešne dokončené"
 
-#: ../src/fr-window.c:2791
+#: ../src/fr-window.c:2796
 msgid "Archive created successfully"
 msgstr "Archív bol úspešne vytvorený"
 
-#: ../src/fr-window.c:2849
+#: ../src/fr-window.c:2854
 msgid "Please wait…"
 msgstr "Prosím, čakajte…"
 
-#: ../src/fr-window.c:2918 ../src/fr-window.c:3053
+#: ../src/fr-window.c:2923 ../src/fr-window.c:3058
 msgid "Command exited abnormally."
 msgstr "Príkaz skončil neobvykle."
 
-#: ../src/fr-window.c:3011
+#: ../src/fr-window.c:3016
 msgid "An error occurred while extracting files."
 msgstr "Pri rozbaľovaní súborov nastala chyba."
 
-#: ../src/fr-window.c:3017
+#: ../src/fr-window.c:3022
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "Nepodarilo sa otvoriť „%s“"
 
-#: ../src/fr-window.c:3022
+#: ../src/fr-window.c:3027
 msgid "An error occurred while loading the archive."
 msgstr "Pri načítavaní archívu nastala chyba."
 
-#: ../src/fr-window.c:3026
+#: ../src/fr-window.c:3031
 msgid "An error occurred while deleting files from the archive."
 msgstr "Pri odstraňovaní súborov z archívu nastala chyba."
 
-#: ../src/fr-window.c:3032
+#: ../src/fr-window.c:3037
 msgid "An error occurred while adding files to the archive."
 msgstr "Pri pridávaní súborov do archívu nastala chyba."
 
-#: ../src/fr-window.c:3036
+#: ../src/fr-window.c:3041
 msgid "An error occurred while testing archive."
 msgstr "Pri testovaní archívu nastala chyba."
 
-#: ../src/fr-window.c:3040
+#: ../src/fr-window.c:3045
 msgid "An error occurred while saving the archive."
 msgstr "Pri ukladaní archívu nastala chyba."
 
-#: ../src/fr-window.c:3044
+#: ../src/fr-window.c:3049
 msgid "An error occurred."
 msgstr "Nastala chyba."
 
-#: ../src/fr-window.c:3050
+#: ../src/fr-window.c:3055
 msgid "Command not found."
 msgstr "Príkaz nebol nájdený."
 
-#: ../src/fr-window.c:3253
+#: ../src/fr-window.c:3258
 msgid "Test Result"
 msgstr "Výsledok testu"
 
-#: ../src/fr-window.c:4121 ../src/fr-window.c:8267 ../src/fr-window.c:8303
-#: ../src/fr-window.c:8553
+#: ../src/fr-window.c:4126 ../src/fr-window.c:8272 ../src/fr-window.c:8308
+#: ../src/fr-window.c:8558
 msgid "Could not perform the operation"
 msgstr "Operáciu sa nepodarilo vykonať"
 
-#: ../src/fr-window.c:4147
+#: ../src/fr-window.c:4152
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "Chcete pridať tento súbor do aktuálneho archívu, alebo ho otvoriť ako nový archív?"
 
-#: ../src/fr-window.c:4177
+#: ../src/fr-window.c:4182
 msgid "Do you want to create a new archive with these files?"
 msgstr "Chcete vytvoriť nový archív obsahujúci tieto súbory?"
 
-#: ../src/fr-window.c:4180
+#: ../src/fr-window.c:4185
 msgid "Create _Archive"
 msgstr "_Vytvoriť archív"
 
-#: ../src/fr-window.c:4778 ../src/fr-window.c:5839
+#: ../src/fr-window.c:4783 ../src/fr-window.c:5844
 msgid "Folders"
 msgstr "Priečinky"
 
-#: ../src/fr-window.c:4816
+#: ../src/fr-window.c:4821
 msgctxt "File"
 msgid "Size"
 msgstr "Veľkosť"
 
-#: ../src/fr-window.c:4817
+#: ../src/fr-window.c:4822
 msgctxt "File"
 msgid "Type"
 msgstr "Typ"
 
-#: ../src/fr-window.c:4818
+#: ../src/fr-window.c:4823
 msgctxt "File"
 msgid "Date Modified"
 msgstr "Dátum zmeny"
 
-#: ../src/fr-window.c:4819
+#: ../src/fr-window.c:4824
 msgctxt "File"
 msgid "Location"
 msgstr "Umiestnenie"
 
-#: ../src/fr-window.c:4828
+#: ../src/fr-window.c:4833
 msgctxt "File"
 msgid "Name"
 msgstr "Názov"
 
-#: ../src/fr-window.c:5758
+#: ../src/fr-window.c:5763
 msgid "Find:"
 msgstr "Hľadať:"
 
-#: ../src/fr-window.c:5853
+#: ../src/fr-window.c:5858
 msgid "Close the folders pane"
 msgstr "Zavrieť panel priečinkov"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5884
+#: ../src/fr-window.c:5889
 msgid "Open _Recent"
 msgstr "Otvoriť n_edávny"
 
-#: ../src/fr-window.c:5885 ../src/fr-window.c:5897
+#: ../src/fr-window.c:5890 ../src/fr-window.c:5902
 msgid "Open a recently used archive"
 msgstr "Otvoriť nedávno použitý archív"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:5974 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:5979 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr "_Umiestnenie:"
 
-#: ../src/fr-window.c:6323
+#: ../src/fr-window.c:6328
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "Nepodarilo sa uložiť archív „%s“"
 
-#: ../src/fr-window.c:6822
+#: ../src/fr-window.c:6827
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "Nahradiť súbor „%s“?"
 
-#: ../src/fr-window.c:6825
+#: ../src/fr-window.c:6830
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "Súbor s týmto názvom v „%s“ už existuje."
 
-#: ../src/fr-window.c:6832
+#: ../src/fr-window.c:6837
 msgid "Replace _All"
 msgstr "N_ahradiť všetky"
 
-#: ../src/fr-window.c:6833
+#: ../src/fr-window.c:6838
 msgid "_Skip"
 msgstr "Pre_skočiť"
 
-#: ../src/fr-window.c:6834
+#: ../src/fr-window.c:6839
 msgid "_Replace"
 msgstr "Nah_radiť"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7669
+#: ../src/fr-window.c:7674
 msgid "New name is void, please type a name."
 msgstr "Nový názov je prázdny, prosím zadajte názov."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7674
+#: ../src/fr-window.c:7679
 msgid "New name is the same as old one, please type other name."
 msgstr "Nový názov je rovnaký ako starý, prosím zadajte iný názov."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7679
+#: ../src/fr-window.c:7684
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "Názov „%s“ nie je platným pretože obsahuje minimálne jedno z nasledujúcich znakov: %s, prosím zadajte iný názov."
 
-#: ../src/fr-window.c:7715
+#: ../src/fr-window.c:7720
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1175,7 +1177,7 @@ msgid ""
 "%s"
 msgstr "Priečinok s názvom „%s“ už existuje.\n\n%s"
 
-#: ../src/fr-window.c:7717
+#: ../src/fr-window.c:7722
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1183,43 +1185,43 @@ msgid ""
 "%s"
 msgstr "Súbor s názvom „%s“ už existuje.\n\n%s"
 
-#: ../src/fr-window.c:7787
+#: ../src/fr-window.c:7792
 msgid "Rename"
 msgstr "Premenovať"
 
-#: ../src/fr-window.c:7788
+#: ../src/fr-window.c:7793
 msgid "_New folder name:"
 msgstr "Názov _nového priečinka:"
 
-#: ../src/fr-window.c:7788
+#: ../src/fr-window.c:7793
 msgid "_New file name:"
 msgstr "Názov _nového súboru:"
 
-#: ../src/fr-window.c:7792
+#: ../src/fr-window.c:7797
 msgid "_Rename"
 msgstr "Pre_menovať"
 
-#: ../src/fr-window.c:7809 ../src/fr-window.c:7828
+#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
 msgid "Could not rename the folder"
 msgstr "Nepodarilo sa premenovať priečinok"
 
-#: ../src/fr-window.c:7809 ../src/fr-window.c:7828
+#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
 msgid "Could not rename the file"
 msgstr "Nepodarilo sa premenovať súbor"
 
-#: ../src/fr-window.c:8228
+#: ../src/fr-window.c:8233
 msgid "Paste Selection"
 msgstr "Vložiť výber"
 
-#: ../src/fr-window.c:8229
+#: ../src/fr-window.c:8234
 msgid "_Destination folder:"
 msgstr "Cieľový _priečinok:"
 
-#: ../src/fr-window.c:8832
+#: ../src/fr-window.c:8837
 msgid "Add files to an archive"
 msgstr "Pridať súbory do archívu"
 
-#: ../src/fr-window.c:8875 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8880 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "Rozbaliť archív"
@@ -1236,7 +1238,7 @@ msgstr "%e. %B %Y o %H:%M"
 msgid "Command _Line Output"
 msgstr "Výstup _príkazového riadka"
 
-#: ../src/gtk-utils.c:762
+#: ../src/gtk-utils.c:753
 msgid "Could not display help"
 msgstr "Nepodarilo sa zobraziť pomocníka"
 

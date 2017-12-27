@@ -9,6 +9,7 @@
 # Gabor Kelemen <kelemeng at mate dot hu>, 2005-2010
 # KAMI KAMI <kami911@gmail.com>, 2015
 # KAMI KAMI <kami911@gmail.com>, 2017
+# KAMI KAMI <kami911@gmail.com>, 2017
 # Károly Papp <pkaroly82@gmail.com>, 2016-2017
 # Laszlo Dvornik <dvornik at mate dot hu>, 2004
 # Mate ORY <orymate at gmail d0t com>, 2006,2008
@@ -17,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-25 12:46+0300\n"
-"PO-Revision-Date: 2017-09-19 13:39+0000\n"
-"Last-Translator: KAMI KAMI <kami911@gmail.com>\n"
+"POT-Creation-Date: 2017-12-25 14:51+0300\n"
+"PO-Revision-Date: 2017-12-25 12:04+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Hungarian (http://www.transifex.com/mate/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,12 +53,12 @@ msgstr "Az alkalmazás nem fogad el dokumentumokat a parancssorban"
 msgid "Unrecognized launch option: %d"
 msgstr "Ismeretlen kapcsoló: %d"
 
-#: ../copy-n-paste/eggdesktopfile.c:1367
+#: ../copy-n-paste/eggdesktopfile.c:1366
 #, c-format
 msgid "Can't pass documents to this desktop element"
 msgstr "Nem adhatók át dokumentumok ennek az asztalelemnek"
 
-#: ../copy-n-paste/eggdesktopfile.c:1386
+#: ../copy-n-paste/eggdesktopfile.c:1385
 #, c-format
 msgid "Not a launchable item"
 msgstr "Nem futtatható elem"
@@ -126,7 +127,7 @@ msgid "Engrampa Archive Manager"
 msgstr "Engrampa archívumkezelő"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2002
-#: ../src/fr-window.c:5516
+#: ../src/fr-window.c:5521
 msgid "Archive Manager"
 msgstr "Archívumkezelő"
 
@@ -333,7 +334,7 @@ msgstr "Archívumok készítése és kibontása"
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3006
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3011
 msgid "Could not create the archive"
 msgstr "Nem sikerült létrehozni az archívumot"
 
@@ -347,7 +348,7 @@ msgstr "Nincs joga archívum létrehozására ebben a mappában"
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6155 ../src/fr-window.c:6331
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6160 ../src/fr-window.c:6336
 msgid "Archive type not supported."
 msgstr "Az archívumtípus nem támogatott."
 
@@ -355,11 +356,11 @@ msgstr "Az archívumtípus nem támogatott."
 msgid "Could not delete the old archive."
 msgstr "Nem sikerült törölni a régi archívumot."
 
-#: ../src/actions.c:382 ../src/fr-window.c:5896
+#: ../src/actions.c:382 ../src/fr-window.c:5901
 msgid "Open"
 msgstr "Megnyitás"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5335
+#: ../src/actions.c:393 ../src/fr-window.c:5340
 msgid "All archives"
 msgstr "Minden archívum"
 
@@ -367,7 +368,7 @@ msgstr "Minden archívum"
 msgid "All files"
 msgstr "Minden fájl"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7364
+#: ../src/actions.c:794 ../src/fr-window.c:7369
 msgid "Last Output"
 msgstr "Utolsó kimenet"
 
@@ -395,14 +396,16 @@ msgid ""
 msgstr "A Engrampa programhoz a GNU General Public License egy példánya is jár, ha nem kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../src/actions.c:878
-msgid "Copyright © 2001–2010 Free Software Foundation, Inc."
-msgstr "Copyright © 2001-2010 Free Software Foundation, Inc."
+msgid ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2017 The MATE developers"
+msgstr ""
 
-#: ../src/actions.c:879
+#: ../src/actions.c:880
 msgid "An archive manager for MATE."
 msgstr "Archívumkezelő a MATE-hoz."
 
-#: ../src/actions.c:882
+#: ../src/actions.c:883
 msgid "translator-credits"
 msgstr "Dvornik László <dvornik@mate.hu>\nKelemen Gábor <kelemeng@mate.hu>\nTímár András <timar@mate.hu>"
 
@@ -487,7 +490,7 @@ msgid ""
 "%s"
 msgstr "A(z) „%s” név érvénytelen, mert nem tartalmazhatja a következő karaktereket: %s\n\n%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7715 ../src/fr-window.c:7717
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7720 ../src/fr-window.c:7722
 msgid "Please use a different name."
 msgstr "Használjon más nevet."
 
@@ -497,7 +500,7 @@ msgid ""
 " folder."
 msgstr "Nincs megfelelő jogosultsága archívum létrehozására a célmappában."
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6933
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6938
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -505,11 +508,11 @@ msgid ""
 "Do you want to create it?"
 msgstr "A(z) „%s” célmappa nem létezik.\n\nLétre akarja hozni?"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6942
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6947
 msgid "Create _Folder"
 msgstr "Mappa _létrehozása"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6959
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6964
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nem sikerült létrehozni a célmappát: %s."
@@ -520,19 +523,19 @@ msgstr "Az archívum nem került létrehozásra"
 
 #: ../src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
-msgstr "Az archívum már létezik. Felülírja?"
+msgstr "Az archívum már létezik. Felül kívánja írni?"
 
 #: ../src/dlg-batch-add.c:322
 msgid "_Overwrite"
 msgstr "_Felülírás"
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4278 ../src/fr-window.c:6874 ../src/fr-window.c:6879
-#: ../src/fr-window.c:6963 ../src/fr-window.c:6982 ../src/fr-window.c:6987
+#: ../src/fr-window.c:4283 ../src/fr-window.c:6879 ../src/fr-window.c:6884
+#: ../src/fr-window.c:6968 ../src/fr-window.c:6987 ../src/fr-window.c:6992
 msgid "Extraction not performed"
 msgstr "A kibontás nem történt meg"
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4447 ../src/fr-window.c:4527
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4452 ../src/fr-window.c:4532
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -720,13 +723,13 @@ msgid "You can't add an archive to itself."
 msgstr "Nem adhatja hozzá az archívumot saját magához."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:300 ../src/fr-command-rar.c:451
+#: ../src/fr-command-7z.c:307 ../src/fr-command-rar.c:451
 #: ../src/fr-command-tar.c:316
 msgid "Adding file: "
 msgstr "Fájl hozzáadása: "
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:445 ../src/fr-command-rar.c:578
+#: ../src/fr-command-7z.c:454 ../src/fr-command-rar.c:578
 #: ../src/fr-command-tar.c:437
 msgid "Extracting file: "
 msgstr "Fájl kibontása: "
@@ -759,7 +762,7 @@ msgstr "7-Zip (.7z)"
 
 #: ../src/fr-init.c:62
 msgid "Tar compressed with 7z (.tar.7z)"
-msgstr "7z-vel tömörített tar (.tar.7z)"
+msgstr "7z tömörített tar (.tar.7z)"
 
 #: ../src/fr-init.c:63
 msgid "Ace (.ace)"
@@ -775,11 +778,11 @@ msgstr "Arj (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Bzip2-vel tömörített tar (.tar.bz2)"
+msgstr "Bzip2 tömörített tar (.tar.bz2)"
 
 #: ../src/fr-init.c:70
 msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Bzippel tömörített tar (.tar.bz)"
+msgstr "Bzip tömörített tar (.tar.bz)"
 
 #: ../src/fr-init.c:71
 msgid "Cabinet (.cab)"
@@ -787,15 +790,15 @@ msgstr "Cabinet (.cab)"
 
 #: ../src/fr-init.c:72
 msgid "Rar Archived Comic Book (.cbr)"
-msgstr "Rarral tömörített képregény (.cbr)"
+msgstr "Rar tömörített képregény (.cbr)"
 
 #: ../src/fr-init.c:73
 msgid "Zip Archived Comic Book (.cbz)"
-msgstr "Zippel tömörített képregény (.cbr)"
+msgstr "Zip tömörített képregény (.cbr)"
 
 #: ../src/fr-init.c:76
 msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Gzip-pel tömörített tar (.tar.gz)"
+msgstr "Gzip tömörített tar (.tar.gz)"
 
 #: ../src/fr-init.c:79
 msgid "Ear (.ear)"
@@ -819,19 +822,19 @@ msgstr "Lrzip (.lrz)"
 
 #: ../src/fr-init.c:85
 msgid "Tar compressed with lrzip (.tar.lrz)"
-msgstr "Lrzip-pel tömörített tar (.tar.lrz)"
+msgstr "Lrzip tömörített tar (.tar.lrz)"
 
 #: ../src/fr-init.c:87
 msgid "Tar compressed with lzip (.tar.lz)"
-msgstr "Lzip-pel tömörített tar (.tar.lz)"
+msgstr "Lzip tömörített tar (.tar.lz)"
 
 #: ../src/fr-init.c:89
 msgid "Tar compressed with lzma (.tar.lzma)"
-msgstr "Tar-ral tömörített lzma (.tar.lzma)"
+msgstr "lzma tömörített tar (.tar.lzma)"
 
 #: ../src/fr-init.c:91
 msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Lzop-pal tömörített tar (.tar.lzo)"
+msgstr "Lzop tömörített tar (.tar.lzo)"
 
 #: ../src/fr-init.c:92
 msgid "Windows Imaging Format (.wim)"
@@ -847,7 +850,7 @@ msgstr "Nem tömörített tar (.tar)"
 
 #: ../src/fr-init.c:97
 msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Compress-szel tömörített tar (.tar.Z)"
+msgstr "Compress tömörített tar (.tar.Z)"
 
 #: ../src/fr-init.c:99
 msgid "War (.war)"
@@ -859,7 +862,7 @@ msgstr "Xz (.xz)"
 
 #: ../src/fr-init.c:101
 msgid "Tar compressed with xz (.tar.xz)"
-msgstr "Xz-vel tömörített tar (.tar.xz)"
+msgstr "Xz tömörített tar (.tar.xz)"
 
 #: ../src/fr-init.c:102
 msgid "Zoo (.zoo)"
@@ -903,268 +906,268 @@ msgstr "Mappa"
 msgid "[read only]"
 msgstr "[csak olvasható]"
 
-#: ../src/fr-window.c:2262
+#: ../src/fr-window.c:2267
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "A mappa megjelenítése nem sikerült: %s"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2341 ../src/fr-window.c:2379
+#: ../src/fr-window.c:2346 ../src/fr-window.c:2384
 #, c-format
 msgid "Creating \"%s\""
 msgstr "\"%s\" készítése"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2345
+#: ../src/fr-window.c:2350
 #, c-format
 msgid "Loading \"%s\""
 msgstr "\"%s\" betöltése"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2349
+#: ../src/fr-window.c:2354
 #, c-format
 msgid "Reading \"%s\""
 msgstr "\"%s\" olvasása"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2353
+#: ../src/fr-window.c:2358
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr "Fájlok törlése ebből: \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2357
+#: ../src/fr-window.c:2362
 #, c-format
 msgid "Testing \"%s\""
 msgstr "\"%s\" tesztelése"
 
-#: ../src/fr-window.c:2360
+#: ../src/fr-window.c:2365
 msgid "Getting the file list"
 msgstr "Fájllista lekérése"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2364
+#: ../src/fr-window.c:2369
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr "Fájlok másolása hozzáadásra ehhez: „%s”"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2368
+#: ../src/fr-window.c:2373
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr "Fájlok hozzáadása ehhez: \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2372
+#: ../src/fr-window.c:2377
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr "Fájlok kibontása ebből: \"%s\""
 
-#: ../src/fr-window.c:2375
+#: ../src/fr-window.c:2380
 msgid "Copying the extracted files to the destination"
 msgstr "A kibontott fájlok másolása a célmappába"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2383
+#: ../src/fr-window.c:2388
 #, c-format
 msgid "Saving \"%s\""
 msgstr "\"%s\" mentése"
 
-#: ../src/fr-window.c:2529
+#: ../src/fr-window.c:2534
 msgid "_Open the Archive"
 msgstr "Archívum _megnyitása"
 
-#: ../src/fr-window.c:2530
+#: ../src/fr-window.c:2535
 msgid "_Show the Files"
 msgstr "_Fájlok megjelenítése"
 
-#: ../src/fr-window.c:2531
+#: ../src/fr-window.c:2536
 msgid "Show the _Files and Quit"
 msgstr "_Fájl megjelenítése és kilépés"
 
-#: ../src/fr-window.c:2716
+#: ../src/fr-window.c:2721
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
 msgstr[0] "%d fájl van még"
 msgstr[1] "%'d fájl van még"
 
-#: ../src/fr-window.c:2767
+#: ../src/fr-window.c:2772
 msgid "Extraction completed successfully"
 msgstr "A kibontás sikeresen befejeződött"
 
-#: ../src/fr-window.c:2791
+#: ../src/fr-window.c:2796
 msgid "Archive created successfully"
 msgstr "Az archívum sikeresen létrejött"
 
-#: ../src/fr-window.c:2849
+#: ../src/fr-window.c:2854
 msgid "Please wait…"
 msgstr "Kérem várjon..."
 
-#: ../src/fr-window.c:2918 ../src/fr-window.c:3053
+#: ../src/fr-window.c:2923 ../src/fr-window.c:3058
 msgid "Command exited abnormally."
 msgstr "A parancs abnormálisan lépett ki."
 
-#: ../src/fr-window.c:3011
+#: ../src/fr-window.c:3016
 msgid "An error occurred while extracting files."
 msgstr "Hiba történt a fájlok kibontása közben."
 
-#: ../src/fr-window.c:3017
+#: ../src/fr-window.c:3022
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "„%s” megnyitása nem sikerült"
 
-#: ../src/fr-window.c:3022
+#: ../src/fr-window.c:3027
 msgid "An error occurred while loading the archive."
 msgstr "Hiba történt az archívum betöltése közben."
 
-#: ../src/fr-window.c:3026
+#: ../src/fr-window.c:3031
 msgid "An error occurred while deleting files from the archive."
 msgstr "Hiba történt a fájlok archívumból való kitörlése közben."
 
-#: ../src/fr-window.c:3032
+#: ../src/fr-window.c:3037
 msgid "An error occurred while adding files to the archive."
 msgstr "Hiba történt a fájlok archívumhoz való hozzáadása közben."
 
-#: ../src/fr-window.c:3036
+#: ../src/fr-window.c:3041
 msgid "An error occurred while testing archive."
 msgstr "Hiba történt az archívum tesztelése közben."
 
-#: ../src/fr-window.c:3040
+#: ../src/fr-window.c:3045
 msgid "An error occurred while saving the archive."
 msgstr "Hiba történt az archívum mentése közben."
 
-#: ../src/fr-window.c:3044
+#: ../src/fr-window.c:3049
 msgid "An error occurred."
 msgstr "Hiba történt."
 
-#: ../src/fr-window.c:3050
+#: ../src/fr-window.c:3055
 msgid "Command not found."
 msgstr "A parancs nem található."
 
-#: ../src/fr-window.c:3253
+#: ../src/fr-window.c:3258
 msgid "Test Result"
 msgstr "Teszteredmény"
 
-#: ../src/fr-window.c:4121 ../src/fr-window.c:8267 ../src/fr-window.c:8303
-#: ../src/fr-window.c:8553
+#: ../src/fr-window.c:4126 ../src/fr-window.c:8272 ../src/fr-window.c:8308
+#: ../src/fr-window.c:8558
 msgid "Could not perform the operation"
 msgstr "A művelet nem hajtható végre"
 
-#: ../src/fr-window.c:4147
+#: ../src/fr-window.c:4152
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "Ezt a fájlt a jelenlegi archívumhoz szeretné hozzáadni, vagy megnyitja új archívumként?"
 
-#: ../src/fr-window.c:4177
+#: ../src/fr-window.c:4182
 msgid "Do you want to create a new archive with these files?"
 msgstr "Akar új archívumot létrehozni ezekből a fájlokból?"
 
-#: ../src/fr-window.c:4180
+#: ../src/fr-window.c:4185
 msgid "Create _Archive"
 msgstr "Archívum _létrehozása"
 
-#: ../src/fr-window.c:4778 ../src/fr-window.c:5839
+#: ../src/fr-window.c:4783 ../src/fr-window.c:5844
 msgid "Folders"
 msgstr "Mappák"
 
-#: ../src/fr-window.c:4816
+#: ../src/fr-window.c:4821
 msgctxt "File"
 msgid "Size"
 msgstr "Méret"
 
-#: ../src/fr-window.c:4817
+#: ../src/fr-window.c:4822
 msgctxt "File"
 msgid "Type"
 msgstr "Típus"
 
-#: ../src/fr-window.c:4818
+#: ../src/fr-window.c:4823
 msgctxt "File"
 msgid "Date Modified"
 msgstr "Módosítás dátuma"
 
-#: ../src/fr-window.c:4819
+#: ../src/fr-window.c:4824
 msgctxt "File"
 msgid "Location"
 msgstr "Hely"
 
-#: ../src/fr-window.c:4828
+#: ../src/fr-window.c:4833
 msgctxt "File"
 msgid "Name"
 msgstr "Név"
 
-#: ../src/fr-window.c:5758
+#: ../src/fr-window.c:5763
 msgid "Find:"
 msgstr "Keresés:"
 
-#: ../src/fr-window.c:5853
+#: ../src/fr-window.c:5858
 msgid "Close the folders pane"
 msgstr "A mappák ablaktábla bezárása"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5884
+#: ../src/fr-window.c:5889
 msgid "Open _Recent"
 msgstr "Leg_utóbbi megnyitása"
 
-#: ../src/fr-window.c:5885 ../src/fr-window.c:5897
+#: ../src/fr-window.c:5890 ../src/fr-window.c:5902
 msgid "Open a recently used archive"
 msgstr "Nemrég használt archívum megnyitása"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:5974 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:5979 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr "_Hely:"
 
-#: ../src/fr-window.c:6323
+#: ../src/fr-window.c:6328
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "A(z) „%s” archívum mentése nem sikerült"
 
-#: ../src/fr-window.c:6822
+#: ../src/fr-window.c:6827
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "Lecseréli „%s” fájlt?"
 
-#: ../src/fr-window.c:6825
+#: ../src/fr-window.c:6830
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "Már létezik ilyen nevű másik fájl „%s” alatt."
 
-#: ../src/fr-window.c:6832
+#: ../src/fr-window.c:6837
 msgid "Replace _All"
 msgstr "Öss_zes cseréje"
 
-#: ../src/fr-window.c:6833
+#: ../src/fr-window.c:6838
 msgid "_Skip"
 msgstr "_Kihagyás"
 
-#: ../src/fr-window.c:6834
+#: ../src/fr-window.c:6839
 msgid "_Replace"
 msgstr "_Csere"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7669
+#: ../src/fr-window.c:7674
 msgid "New name is void, please type a name."
 msgstr "Az új név üres, adjon meg egy nevet."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7674
+#: ../src/fr-window.c:7679
 msgid "New name is the same as old one, please type other name."
-msgstr "Az új név megyezik a régivel, adjon meg másik nevet."
+msgstr "Az új név megegyezik a régivel, adjon meg másik nevet."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7679
+#: ../src/fr-window.c:7684
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "\"%s\" név érvénytelen, mert legalább egyet tartalmaz a következő karakterek közül: %s. Adjon meg másik nevet."
 
-#: ../src/fr-window.c:7715
+#: ../src/fr-window.c:7720
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1172,7 +1175,7 @@ msgid ""
 "%s"
 msgstr "Már létezik „%s” nevű mappa.\n\n%s"
 
-#: ../src/fr-window.c:7717
+#: ../src/fr-window.c:7722
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1180,43 +1183,43 @@ msgid ""
 "%s"
 msgstr "Már létezik „%s” nevű fájl.\n\n%s"
 
-#: ../src/fr-window.c:7787
+#: ../src/fr-window.c:7792
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: ../src/fr-window.c:7788
+#: ../src/fr-window.c:7793
 msgid "_New folder name:"
 msgstr "Új _mappanév:"
 
-#: ../src/fr-window.c:7788
+#: ../src/fr-window.c:7793
 msgid "_New file name:"
 msgstr "Új _fájlnév:"
 
-#: ../src/fr-window.c:7792
+#: ../src/fr-window.c:7797
 msgid "_Rename"
 msgstr "Át_nevezés"
 
-#: ../src/fr-window.c:7809 ../src/fr-window.c:7828
+#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
 msgid "Could not rename the folder"
 msgstr "A mappa átnevezése nem sikerült"
 
-#: ../src/fr-window.c:7809 ../src/fr-window.c:7828
+#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
 msgid "Could not rename the file"
 msgstr "A fájl átnevezése nem sikerült"
 
-#: ../src/fr-window.c:8228
+#: ../src/fr-window.c:8233
 msgid "Paste Selection"
 msgstr "Kijelölés beillesztése"
 
-#: ../src/fr-window.c:8229
+#: ../src/fr-window.c:8234
 msgid "_Destination folder:"
 msgstr "_Célmappa:"
 
-#: ../src/fr-window.c:8832
+#: ../src/fr-window.c:8837
 msgid "Add files to an archive"
 msgstr "Fájlok hozzáadása az archívumhoz"
 
-#: ../src/fr-window.c:8875 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8880 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "Archívum kibontása"
@@ -1233,7 +1236,7 @@ msgstr "%Y. %B %e. %k.%M"
 msgid "Command _Line Output"
 msgstr "Parancssori _kimenet"
 
-#: ../src/gtk-utils.c:762
+#: ../src/gtk-utils.c:753
 msgid "Could not display help"
 msgstr "A súgó megjelenítése nem sikerült"
 
