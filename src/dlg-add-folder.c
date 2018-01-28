@@ -244,31 +244,19 @@ add_folder_cb (GtkWidget *widget,
 	data->include_files_entry = gtk_entry_new ();
 	gtk_widget_set_tooltip_text (data->include_files_entry, _("example: *.o; *.bak"));
 	data->include_files_label = gtk_label_new_with_mnemonic (_("Include _files:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (data->include_files_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (data->include_files_label), 0.0, 0.5);
-#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (data->include_files_label), data->include_files_entry);
 
 	data->exclude_files_entry = gtk_entry_new ();
 	gtk_widget_set_tooltip_text (data->exclude_files_entry, _("example: *.o; *.bak"));
 	data->exclude_files_label = gtk_label_new_with_mnemonic (_("E_xclude files:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (data->exclude_files_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (data->exclude_files_label), 0.0, 0.5);
-#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (data->exclude_files_label), data->exclude_files_entry);
 
 	data->exclude_folders_entry = gtk_entry_new ();
 	gtk_widget_set_tooltip_text (data->exclude_folders_entry, _("example: *.o; *.bak"));
 	data->exclude_folders_label = gtk_label_new_with_mnemonic (_("_Exclude folders:"));
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (data->exclude_folders_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (data->exclude_folders_label), 0.0, 0.5);
-#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (data->exclude_folders_label), data->exclude_folders_entry);
 
 	data->load_button = gtk_button_new_with_mnemonic (_("_Load Options"));

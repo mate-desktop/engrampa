@@ -2253,13 +2253,8 @@ open_folder (GtkWindow  *parent,
 	if (folder == NULL)
 		return;
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 	if (! gtk_show_uri_on_window (parent, folder, GDK_CURRENT_TIME, &error)) {
 		GtkWidget *d;
-#else
-	if (! gtk_show_uri (gtk_window_get_screen (parent), folder, GDK_CURRENT_TIME, &error)) {
-		GtkWidget *d;
-#endif
 		char      *utf8_name;
 		char      *message;
 
@@ -2567,11 +2562,7 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_widget_set_vexpand (lbl, TRUE);
 	gtk_widget_set_margin_bottom (lbl, 12);
 
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (lbl), 0.0, 0.5);
-#endif
 	gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
 	gtk_box_pack_start (GTK_BOX (vbox), lbl, TRUE, TRUE, 0);
 
@@ -2607,11 +2598,7 @@ create_the_progress_dialog (FrWindow *window)
 	gtk_label_set_attributes (GTK_LABEL (lbl), attr_list);
 	pango_attr_list_unref (attr_list);
 
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (lbl), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (lbl), 0.0, 0.5);
-#endif
 	gtk_label_set_ellipsize (GTK_LABEL (lbl), PANGO_ELLIPSIZE_END);
 	gtk_box_pack_start (GTK_BOX (progress_vbox), lbl, TRUE, TRUE, 0);
 
@@ -5843,11 +5830,7 @@ fr_window_construct (FrWindow *window)
 	gtk_container_add (GTK_CONTAINER (sidepane_title), sidepane_title_box);
 	sidepane_title_label = gtk_label_new (_("Folders"));
 
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (sidepane_title_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (sidepane_title_label), 0.0, 0.5);
-#endif
 	gtk_box_pack_start (GTK_BOX (sidepane_title_box), sidepane_title_label, TRUE, TRUE, 0);
 
 	close_sidepane_button = gtk_button_new ();

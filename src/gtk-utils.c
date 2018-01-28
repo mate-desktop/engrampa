@@ -214,12 +214,8 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 	label = gtk_label_new_with_mnemonic (message);
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), FALSE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 	gtk_label_set_yalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
-#endif
 
 	entry = gtk_entry_new ();
 	gtk_entry_set_width_chars (GTK_ENTRY (entry), 50);
@@ -386,12 +382,8 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	label = gtk_label_new ("");
 	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
 	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 	gtk_label_set_yalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.0);
-#endif
 
 	escaped_message = g_markup_escape_text (primary_text, -1);
 	if (secondary_text != NULL) {
@@ -739,13 +731,8 @@ show_help_dialog (GtkWindow  *parent,
 	GError *error = NULL;
 
 	uri = g_strconcat ("help:engrampa", section ? "/" : NULL, section, NULL);
-#if GTK_CHECK_VERSION (3, 22, 0)
 	if (! gtk_show_uri_on_window (parent, uri, GDK_CURRENT_TIME, &error)) {
 		GtkWidget *dialog;
-#else
-	if (! gtk_show_uri (gtk_window_get_screen (parent), uri, GDK_CURRENT_TIME, &error)) {
-		GtkWidget *dialog;
-#endif
 
 		dialog = _gtk_message_dialog_new (parent,
 						  GTK_DIALOG_DESTROY_WITH_PARENT,
