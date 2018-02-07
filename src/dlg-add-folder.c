@@ -223,9 +223,9 @@ add_folder_cb (GtkWidget *widget,
 		gtk_file_chooser_dialog_new (_("Add a Folder"),
 					     GTK_WINDOW (data->window),
 					     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-					     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+					     "gtk-cancel", GTK_RESPONSE_CANCEL,
 					     FR_STOCK_ADD_FOLDER, GTK_RESPONSE_OK,
-					     GTK_STOCK_HELP, GTK_RESPONSE_HELP,
+					     "gtk-help", GTK_RESPONSE_HELP,
 					     NULL);
 
 	gtk_window_set_default_size (GTK_WINDOW (data->dialog), 530, 510);
@@ -878,8 +878,8 @@ save_options_cb (GtkWidget  *w,
 				_("_Options Name:"),
 				(data->last_options != NULL) ? data->last_options : "",
 				1024,
-				GTK_STOCK_CANCEL,
-				GTK_STOCK_SAVE);
+				"gtk-cancel",
+				"gtk-save");
 	if (opt_filename == NULL)
 		return;
 

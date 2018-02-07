@@ -106,10 +106,10 @@ extract_cb (GtkWidget   *w,
 
 			d = _gtk_message_dialog_new (GTK_WINDOW (data->dialog),
 						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
+						     "dialog-question",
 						     msg,
 						     NULL,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						     "gtk-cancel", GTK_RESPONSE_CANCEL,
 						     _("Create _Folder"), GTK_RESPONSE_YES,
 						     NULL);
 
@@ -146,10 +146,10 @@ extract_cb (GtkWidget   *w,
 
 		d = _gtk_message_dialog_new (GTK_WINDOW (window),
 					     GTK_DIALOG_DESTROY_WITH_PARENT,
-					     GTK_STOCK_DIALOG_WARNING,
+					     "dialog-warning",
 					     _("Extraction not performed"),
 					     NULL,
-					     GTK_STOCK_OK, GTK_RESPONSE_OK,
+					     "gtk-ok", GTK_RESPONSE_OK,
 					     NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (d));
@@ -423,9 +423,9 @@ dlg_extract__common (FrWindow *window,
 		gtk_file_chooser_dialog_new (_("Extract"),
 					     GTK_WINDOW (data->window),
 					     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-					     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+					     "gtk-cancel", GTK_RESPONSE_CANCEL,
 					     FR_STOCK_EXTRACT, GTK_RESPONSE_OK,
-					     GTK_STOCK_HELP, GTK_RESPONSE_HELP,
+					     "gtk-help", GTK_RESPONSE_HELP,
 					     NULL);
 
 	gtk_window_set_default_size (GTK_WINDOW (file_sel), 530, 510);
