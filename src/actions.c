@@ -382,8 +382,8 @@ activate_action_open (GtkAction *action,
     file_sel = gtk_file_chooser_dialog_new (_("Open"),
                         GTK_WINDOW (window),
                         GTK_FILE_CHOOSER_ACTION_OPEN,
-                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                        GTK_STOCK_OPEN, GTK_RESPONSE_OK,
+                        "gtk-cancel", GTK_RESPONSE_CANCEL,
+                        "gtk-open", GTK_RESPONSE_OK,
                         NULL);
     gtk_dialog_set_default_response (GTK_DIALOG (file_sel), GTK_RESPONSE_OK);
     gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (file_sel), FALSE);

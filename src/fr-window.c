@@ -2525,12 +2525,12 @@ create_the_progress_dialog (FrWindow *window)
 								     NULL,
 								     NULL);
 
-	window->priv->pd_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_QUIT, DIALOG_RESPONSE_QUIT);
+	window->priv->pd_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), "gtk-quit", DIALOG_RESPONSE_QUIT);
 	window->priv->pd_open_archive_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), _("_Open the Archive"), DIALOG_RESPONSE_OPEN_ARCHIVE);
 	window->priv->pd_open_destination_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), _("_Show the Files"), DIALOG_RESPONSE_OPEN_DESTINATION_FOLDER);
 	window->priv->pd_open_destination_and_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), _("Show the _Files and Quit"), DIALOG_RESPONSE_OPEN_DESTINATION_FOLDER_AND_QUIT);
-	window->priv->pd_close_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
-	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+	window->priv->pd_close_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), "gtk-close", GTK_RESPONSE_CLOSE);
+	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), "gtk-cancel", GTK_RESPONSE_CANCEL);
 
 	d = GTK_DIALOG (window->priv->progress_dialog);
 	gtk_window_set_resizable (GTK_WINDOW (d), TRUE);
@@ -4135,12 +4135,12 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 
 			d = _gtk_message_dialog_new (GTK_WINDOW (window),
 						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
+						     "dialog-question",
 						     _("Do you want to add this file to the current archive or open it as a new archive?"),
 						     NULL,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-						     GTK_STOCK_ADD, 0,
-						     GTK_STOCK_OPEN, 1,
+						     "gtk-cancel", GTK_RESPONSE_CANCEL,
+						     "gtk-add", 0,
+						     "gtk-open", 1,
 						     NULL);
 
 			gtk_dialog_set_default_response (GTK_DIALOG (d), 2);
@@ -4165,10 +4165,10 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 
 			d = _gtk_message_dialog_new (GTK_WINDOW (window),
 						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
+						     "dialog-question",
 						     _("Do you want to create a new archive with these files?"),
 						     NULL,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						     "gtk-cancel", GTK_RESPONSE_CANCEL,
 						     _("Create _Archive"), GTK_RESPONSE_YES,
 						     NULL);
 
@@ -5871,7 +5871,7 @@ fr_window_construct (FrWindow *window)
 			       /* Translators: this is the label for the "open recent file" sub-menu. */
 			       "label", _("Open _Recent"),
 			       "tooltip", _("Open a recently used archive"),
-			       "stock-id", GTK_STOCK_OPEN,
+			       "stock-id", "gtk-open",
 			       NULL);
 	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (action));
 	gtk_action_group_add_action (actions, action);
@@ -5883,7 +5883,7 @@ fr_window_construct (FrWindow *window)
 			       "name", "OpenRecent_Toolbar",
 			       "label", _("Open"),
 			       "tooltip", _("Open a recently used archive"),
-			       "stock-id", GTK_STOCK_OPEN,
+			       "stock-id", "gtk-open",
 			       "is-important", TRUE,
 			       NULL);
 	fr_window_init_recent_chooser (window, GTK_RECENT_CHOOSER (action));
@@ -6813,10 +6813,10 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 			details = g_strdup_printf (_("Another file with the same name already exists in \"%s\"."), parent_name);
 			d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
 						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
+						     "dialog-question",
 						     msg,
 						     details,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						     "gtk-cancel", GTK_RESPONSE_CANCEL,
 						     _("Replace _All"), _FR_RESPONSE_OVERWRITE_YES_ALL,
 						     _("_Skip"), _FR_RESPONSE_OVERWRITE_NO,
 						     _("_Replace"), _FR_RESPONSE_OVERWRITE_YES,
@@ -6858,10 +6858,10 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 
 		d = _gtk_message_dialog_new (GTK_WINDOW (odata->window),
 					     0,
-					     GTK_STOCK_DIALOG_WARNING,
+					     "dialog-warning",
 					     _("Extraction not performed"),
 					     NULL,
-					     GTK_STOCK_OK, GTK_RESPONSE_OK,
+					     "gtk-ok", GTK_RESPONSE_OK,
 					     NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 		fr_window_show_error_dialog (odata->window, d, GTK_WINDOW (odata->window), _("Extraction not performed"));
@@ -6923,10 +6923,10 @@ fr_window_archive_extract (FrWindow    *window,
 
 			d = _gtk_message_dialog_new (GTK_WINDOW (window),
 						     GTK_DIALOG_MODAL,
-						     GTK_STOCK_DIALOG_QUESTION,
+						     "dialog-question",
 						     msg,
 						     NULL,
-						     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						     "gtk-cancel", GTK_RESPONSE_CANCEL,
 						     _("Create _Folder"), GTK_RESPONSE_YES,
 						     NULL);
 
@@ -6966,10 +6966,10 @@ fr_window_archive_extract (FrWindow    *window,
 
 		d = _gtk_message_dialog_new (GTK_WINDOW (window),
 					     0,
-					     GTK_STOCK_DIALOG_WARNING,
+					     "dialog-warning",
 					     _("Extraction not performed"),
 					     NULL,
-					     GTK_STOCK_OK, GTK_RESPONSE_OK,
+					     "gtk-ok", GTK_RESPONSE_OK,
 					     NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 		fr_window_show_error_dialog (window, d, GTK_WINDOW (window), _("Extraction not performed"));
@@ -7354,7 +7354,7 @@ fr_window_view_last_output (FrWindow   *window,
 	dialog = gtk_dialog_new_with_buttons (title,
 					      GTK_WINDOW (window),
 					      GTK_DIALOG_DESTROY_WITH_PARENT,
-					      GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
+					      "gtk-close", GTK_RESPONSE_CLOSE,
 					      NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
 	gtk_window_set_resizable (GTK_WINDOW (dialog), TRUE);
@@ -7776,7 +7776,7 @@ fr_window_rename_selection (FrWindow *window,
 						 (renaming_dir ? _("_New folder name:") : _("_New file name:")),
 						 utf8_old_name,
 						 1024,
-						 GTK_STOCK_CANCEL,
+						 "gtk-cancel",
 						 _("_Rename"));
 	g_free (utf8_old_name);
 
@@ -7812,10 +7812,10 @@ fr_window_rename_selection (FrWindow *window,
 
 			dlg = _gtk_message_dialog_new (GTK_WINDOW (window),
 						       GTK_DIALOG_MODAL,
-						       GTK_STOCK_DIALOG_QUESTION,
+						       "dialog-question",
 						       (renaming_dir ? _("Could not rename the folder") : _("Could not rename the file")),
 						       reason,
-						       GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
+						       "gtk-close", GTK_RESPONSE_OK,
 						       NULL);
 			gtk_dialog_run (GTK_DIALOG (dlg));
 			gtk_widget_destroy (dlg);
@@ -8217,8 +8217,8 @@ fr_window_paste_selection (FrWindow *window,
 					       _("_Destination folder:"),
 					       utf8_old_path,
 					       1024,
-					       GTK_STOCK_CANCEL,
-					       GTK_STOCK_PASTE);
+					       "gtk-cancel",
+					       "gtk-paste");
 	g_free (utf8_old_path);
 	if (utf8_path == NULL)
 		return;

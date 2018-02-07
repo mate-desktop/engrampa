@@ -54,7 +54,7 @@ _gtk_count_selected (GtkTreeSelection *selection)
 GtkWidget*
 _gtk_message_dialog_new (GtkWindow        *parent,
 			 GtkDialogFlags    flags,
-			 const char       *stock_id,
+			 const char       *icon_name,
 			 const char       *message,
 			 const char       *secondary_message,
 			 const gchar      *first_button_text,
@@ -72,15 +72,15 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 
 	g_return_val_if_fail ((message != NULL) || (secondary_message != NULL), NULL);
 
-	if (stock_id == NULL)
-		stock_id = GTK_STOCK_DIALOG_INFO;
+	if (icon_name == NULL)
+		icon_name = "dialog-information";
 
 	dialog = gtk_dialog_new_with_buttons ("", parent, flags, NULL, NULL);
 	content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
 
 	/* Add label and image */
 
-	image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_DIALOG);
+	image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_DIALOG);
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
 
 	label = gtk_label_new ("");
@@ -244,12 +244,12 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 
 	/* Add buttons */
 
-	button = create_button (GTK_STOCK_CANCEL, no_button_text);
+	button = create_button ("gtk-cancel", no_button_text);
 	gtk_dialog_add_action_widget (GTK_DIALOG (dialog),
 				      button,
 				      GTK_RESPONSE_CANCEL);
 
-	button = create_button (GTK_STOCK_OK, yes_button_text);
+	button = create_button ("gtk-ok", yes_button_text);
 	gtk_dialog_add_action_widget (GTK_DIALOG (dialog),
 				      button,
 				      GTK_RESPONSE_YES);
@@ -316,14 +316,14 @@ _gtk_yesno_dialog_new (GtkWindow        *parent,
 
 	/* Add buttons */
 
-	button = create_button (GTK_STOCK_CANCEL, no_button_text);
+	button = create_button ("gtk-cancel", no_button_text);
 	gtk_dialog_add_action_widget (GTK_DIALOG (d),
 				      button,
 				      GTK_RESPONSE_CANCEL);
 
 	/**/
 
-	button = create_button (GTK_STOCK_OK, yes_button_text);
+	button = create_button ("gtk-ok", yes_button_text);
 	gtk_dialog_add_action_widget (GTK_DIALOG (d),
 				      button,
 				      GTK_RESPONSE_YES);
@@ -364,7 +364,7 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	dialog = gtk_dialog_new_with_buttons ("",
 					      parent,
 					      flags,
-					      GTK_STOCK_OK, GTK_RESPONSE_OK,
+					      "gtk-ok", GTK_RESPONSE_OK,
 					      NULL);
 	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
@@ -494,10 +494,10 @@ _gtk_error_dialog_run (GtkWindow        *parent,
 
 	d =  _gtk_message_dialog_new (parent,
 				      GTK_DIALOG_MODAL,
-				      GTK_STOCK_DIALOG_ERROR,
+				      "dialog-error",
 				      main_message,
 				      message,
-				      GTK_STOCK_CLOSE, GTK_RESPONSE_CANCEL,
+				      "gtk-close", GTK_RESPONSE_CANCEL,
 				      NULL);
 	g_free (message);
 
@@ -736,10 +736,10 @@ show_help_dialog (GtkWindow  *parent,
 
 		dialog = _gtk_message_dialog_new (parent,
 						  GTK_DIALOG_DESTROY_WITH_PARENT,
-						  GTK_STOCK_DIALOG_ERROR,
+						  "dialog-error",
 						  _("Could not display help"),
 						  error->message,
-						  GTK_STOCK_OK, GTK_RESPONSE_OK,
+						  "gtk-ok", GTK_RESPONSE_OK,
 						  NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 

@@ -152,9 +152,9 @@ add_files_cb (GtkWidget *widget,
 		gtk_file_chooser_dialog_new (_("Add Files"),
 					     GTK_WINDOW (data->window),
 					     GTK_FILE_CHOOSER_ACTION_OPEN,
-					     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+					     "gtk-cancel", GTK_RESPONSE_CANCEL,
 					     FR_STOCK_ADD_FILES, GTK_RESPONSE_OK,
-					     GTK_STOCK_HELP, GTK_RESPONSE_HELP,
+					     "gtk-help", GTK_RESPONSE_HELP,
 					     NULL);
 
 	gtk_window_set_default_size (GTK_WINDOW (data->dialog), 530, 450);
