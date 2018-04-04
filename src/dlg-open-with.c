@@ -39,14 +39,6 @@ typedef struct {
 
 
 static void
-open_data_free (OpenData *o_data)
-{
-	path_list_free (o_data->file_list);
-	g_free (o_data);
-}
-
-
-static void
 app_chooser_response_cb (GtkDialog *dialog,
 			 int        response_id,
 			 gpointer   user_data)
@@ -61,13 +53,13 @@ app_chooser_response_cb (GtkDialog *dialog,
 			fr_window_open_files_with_application (o_data->window, o_data->file_list, app_info);
 			g_object_unref (app_info);
 		}
-		open_data_free (o_data);
+		g_free (o_data);
 		gtk_widget_destroy (GTK_WIDGET (dialog));
 		break;
 
 	case GTK_RESPONSE_CANCEL:
 	case GTK_RESPONSE_DELETE_EVENT:
-		open_data_free (o_data);
+		g_free (o_data);
 		gtk_widget_destroy (GTK_WIDGET (dialog));
 		break;
 
