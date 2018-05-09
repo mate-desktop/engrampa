@@ -3604,11 +3604,8 @@ dir_tree_button_press_cb (GtkWidget      *widget,
 				gtk_tree_selection_select_iter (selection, &iter);
 			}
 
-			gtk_menu_popup (GTK_MENU (window->priv->sidebar_folder_popup_menu),
-					NULL, NULL, NULL,
-					window,
-					event->button,
-					event->time);
+			gtk_menu_popup_at_pointer (GTK_MENU (window->priv->sidebar_folder_popup_menu),
+			                           (const GdkEvent*) event);
 		}
 		else
 			gtk_tree_selection_unselect_all (selection);
@@ -3796,17 +3793,11 @@ file_button_press_cb (GtkWidget      *widget,
 
 		n_selected = fr_window_get_n_selected_files (window);
 		if ((n_selected == 1) && selection_has_a_dir (window))
-			gtk_menu_popup (GTK_MENU (window->priv->folder_popup_menu),
-					NULL, NULL, NULL,
-					window,
-					event->button,
-					event->time);
+			gtk_menu_popup_at_pointer (GTK_MENU (window->priv->folder_popup_menu),
+			                           (const GdkEvent*) event);
 		else
-			gtk_menu_popup (GTK_MENU (window->priv->file_popup_menu),
-					NULL, NULL, NULL,
-					window,
-					event->button,
-					event->time);
+			gtk_menu_popup_at_pointer (GTK_MENU (window->priv->file_popup_menu),
+			                           (const GdkEvent*) event);
 		return TRUE;
 	}
 	else if ((event->type == GDK_BUTTON_PRESS) && (event->button == 1)) {
@@ -4604,11 +4595,8 @@ key_press_cb (GtkWidget   *widget,
 			if (selection == NULL)
 				return FALSE;
 
-			gtk_menu_popup (GTK_MENU (window->priv->file_popup_menu),
-					NULL, NULL, NULL,
-					window,
-					3,
-					GDK_CURRENT_TIME);
+			gtk_menu_popup_at_pointer (GTK_MENU (window->priv->file_popup_menu),
+			                           (const GdkEvent*) event);
 			retval = TRUE;
 		}
 		break;
