@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-09 18:29+0300\n"
-"PO-Revision-Date: 2018-01-09 15:32+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Pushto (http://www.transifex.com/mate/MATE/language/ps/)\n"
+"POT-Creation-Date: 2018-03-14 08:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Language-Team: Pushto (https://www.transifex.com/mate/teams/13566/ps/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,27 +21,27 @@ msgstr ""
 #: ../copy-n-paste/eggdesktopfile.c:165
 #, c-format
 msgid "File is not a valid .desktop file"
-msgstr ""
+msgstr "دوتنه نه ده .desktop دوتنه سمه"
 
 #: ../copy-n-paste/eggdesktopfile.c:190
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr ""
+msgstr "'%s' ‎د سرپاڼه دوتنې ناپېژندلې نسخه"
 
 #: ../copy-n-paste/eggdesktopfile.c:959
 #, c-format
 msgid "Starting %s"
-msgstr ""
+msgstr "پېلېږي ‎%s"
 
 #: ../copy-n-paste/eggdesktopfile.c:1100
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr ""
+msgstr "کاريال په بولۍ ليکه کې لاسوندونه نه مني"
 
 #: ../copy-n-paste/eggdesktopfile.c:1168
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr ""
+msgstr "%d ‎:ناپېژندلی پېل غوراوی"
 
 #: ../copy-n-paste/eggdesktopfile.c:1366
 #, c-format
@@ -50,27 +51,27 @@ msgstr ""
 #: ../copy-n-paste/eggdesktopfile.c:1385
 #, c-format
 msgid "Not a launchable item"
-msgstr ""
+msgstr "پېلېدونکی توکی نه دی"
 
 #: ../copy-n-paste/eggsmclient.c:225
 msgid "Disable connection to session manager"
-msgstr ""
+msgstr "د ناسته سمبالګر سره نښلېدنه ناتوانول"
 
 #: ../copy-n-paste/eggsmclient.c:228
 msgid "Specify file containing saved configuration"
-msgstr ""
+msgstr "هغه دوتنه چې ساتل شوې سازونه لري ويې ټاکئ"
 
 #: ../copy-n-paste/eggsmclient.c:228
 msgid "FILE"
-msgstr ""
+msgstr "دوتنه"
 
 #: ../copy-n-paste/eggsmclient.c:231
 msgid "Specify session management ID"
-msgstr ""
+msgstr "د ناستې سمبالونې پېژند وټاکئ"
 
 #: ../copy-n-paste/eggsmclient.c:231
 msgid "ID"
-msgstr ""
+msgstr "پېژند"
 
 #: ../copy-n-paste/eggsmclient.c:252
 msgid "Session management options:"
@@ -78,7 +79,7 @@ msgstr ""
 
 #: ../copy-n-paste/eggsmclient.c:253
 msgid "Show session management options"
-msgstr ""
+msgstr "د ناستې سمبالونې غوراوي ښودل"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
@@ -116,7 +117,7 @@ msgid "Engrampa Archive Manager"
 msgstr ""
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2002
-#: ../src/fr-window.c:5521
+#: ../src/fr-window.c:5508
 msgid "Archive Manager"
 msgstr "ارشيو سمبالګر"
 
@@ -323,7 +324,7 @@ msgstr ""
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3011
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:2998
 msgid "Could not create the archive"
 msgstr "ارشيو نه شي جوړولی"
 
@@ -337,7 +338,7 @@ msgstr "تاسو دا پرېښلې نه لرﺉ چې په دې پوښۍ کې ا�
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6160 ../src/fr-window.c:6336
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6143 ../src/fr-window.c:6319
 msgid "Archive type not supported."
 msgstr ".د ارشيو ډول نه منل کيږي"
 
@@ -345,11 +346,11 @@ msgstr ".د ارشيو ډول نه منل کيږي"
 msgid "Could not delete the old archive."
 msgstr ".زوړ ارشيو نه شي ړنګولی"
 
-#: ../src/actions.c:382 ../src/fr-window.c:5901
+#: ../src/actions.c:382 ../src/fr-window.c:5884
 msgid "Open"
 msgstr "پرانيستل"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5340
+#: ../src/actions.c:393 ../src/fr-window.c:5327
 msgid "All archives"
 msgstr "ټول ارشيونه"
 
@@ -357,7 +358,7 @@ msgstr "ټول ارشيونه"
 msgid "All files"
 msgstr "ټولې دوتنې"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7369
+#: ../src/actions.c:794 ../src/fr-window.c:7352
 msgid "Last Output"
 msgstr "وروستۍ وتۍ"
 
@@ -367,7 +368,11 @@ msgid ""
 "the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
-msgstr "دوتنه تاوونکی يو وړيا ساوتری دی؛ تاسو دا ساوتری د جي اېن يو د ټولګړي منښتليک د توکيو له مخې، چې د وړيا ساوتريو د بنسټ له خوا خپور شوی، بيا خپرولی او/يا بدلولی شئ؛ د منښتليک ۲يمه نسخه، او .يا (ستاسو په خوښه) هره نوې .نسخه کارولی شئ"
+msgstr ""
+"دوتنه تاوونکی يو وړيا ساوتری دی؛ تاسو دا ساوتری د جي اېن يو د ټولګړي منښتليک"
+" د توکيو له مخې، چې د وړيا ساوتريو د بنسټ له خوا خپور شوی، بيا خپرولی او/يا "
+"بدلولی شئ؛ د منښتليک ۲يمه نسخه، او .يا (ستاسو په خوښه) هره نوې .نسخه کارولی "
+"شئ"
 
 #: ../src/actions.c:864
 msgid ""
@@ -375,14 +380,18 @@ msgid ""
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
-msgstr "دوتنه تاوونکی په دې هيله خپريږي چې تاسې لپاره ګټور ووسيږي، خو پرته له هر ډول ورنټۍ څخه. د نورو خبرتياوو .لپاره د جي اېن يو ټولګړی منښتليک وګورﺉ"
+msgstr ""
+"دوتنه تاوونکی په دې هيله خپريږي چې تاسې لپاره ګټور ووسيږي، خو پرته له هر ډول"
+" ورنټۍ څخه. د نورو خبرتياوو .لپاره د جي اېن يو ټولګړی منښتليک وګورﺉ"
 
 #: ../src/actions.c:868
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
-msgstr "تاسو به د دوتنه تاوونکي سره د جي اېن يو د ټولګړي منښتليک يوه لمېسه ترلاسه کړې وي. که نه، نو د وړيا ساوتريو :بنسټ ته ليک ولېږئ\nFree Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+"تاسو به د دوتنه تاوونکي سره د جي اېن يو د ټولګړي منښتليک يوه لمېسه ترلاسه کړې وي. که نه، نو د وړيا ساوتريو :بنسټ ته ليک ولېږئ\n"
+"Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA"
 
 #: ../src/actions.c:878
 msgid ""
@@ -396,7 +405,9 @@ msgstr ".د جنومي لپاره يو ارشيو سمبالګر"
 
 #: ../src/actions.c:883
 msgid "translator-credits"
-msgstr "Zabeeh Khan <zabeehkhan@gmail.com>\nThe Pathanisation Project <pathanisation@googlegroups.com>"
+msgstr ""
+"Saif Khan <saifkhan.afghan@gmail.com>Pathanisation project "
+"<pakhtosoft@gmail.com>"
 
 #: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -429,8 +440,8 @@ msgstr "څېرمه پوښۍ لرل_"
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "هغه دوتنې چې پېلامي تړنې دي پرېښودل"
 
-#: ../src/dlg-add-folder.c:245 ../src/dlg-add-folder.c:255
-#: ../src/dlg-add-folder.c:265
+#: ../src/dlg-add-folder.c:245 ../src/dlg-add-folder.c:251
+#: ../src/dlg-add-folder.c:257
 msgid "example: *.o; *.bak"
 msgstr "*.o; *.bak :بېلګې"
 
@@ -438,31 +449,31 @@ msgstr "*.o; *.bak :بېلګې"
 msgid "Include _files:"
 msgstr ":دوتنې _ننويستل"
 
-#: ../src/dlg-add-folder.c:256
+#: ../src/dlg-add-folder.c:252
 msgid "E_xclude files:"
 msgstr ":دوتنې و_يستل"
 
-#: ../src/dlg-add-folder.c:266
+#: ../src/dlg-add-folder.c:258
 msgid "_Exclude folders:"
 msgstr ":پوښۍ ويستل_"
 
-#: ../src/dlg-add-folder.c:274
+#: ../src/dlg-add-folder.c:262
 msgid "_Load Options"
 msgstr "غوراوي لېښل_"
 
-#: ../src/dlg-add-folder.c:275
+#: ../src/dlg-add-folder.c:263
 msgid "Sa_ve Options"
 msgstr "غوراوي سا_تل"
 
-#: ../src/dlg-add-folder.c:276
+#: ../src/dlg-add-folder.c:264
 msgid "_Reset Options"
 msgstr "غوراوي بياټاکل"
 
-#: ../src/dlg-add-folder.c:889
+#: ../src/dlg-add-folder.c:877
 msgid "Save Options"
 msgstr "غوراوي ساتل"
 
-#: ../src/dlg-add-folder.c:890
+#: ../src/dlg-add-folder.c:878
 msgid "_Options Name:"
 msgstr ""
 
@@ -477,9 +488,12 @@ msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
 "\n"
 "%s"
-msgstr "%s ‎:سم نوم نه دی ځکه چې نوم دا لوښې نه شي لرلی \"%s\"\n\n%s"
+msgstr ""
+"%s ‎:سم نوم نه دی ځکه چې نوم دا لوښې نه شي لرلی \"%s\"\n"
+"\n"
+"%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7720 ../src/fr-window.c:7722
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7703 ../src/fr-window.c:7705
 msgid "Please use a different name."
 msgstr ".مهرباني وکړﺉ بل نوم وکاروﺉ"
 
@@ -489,19 +503,22 @@ msgid ""
 " folder."
 msgstr ".تاسو په موخه پوښۍ کې د ارشيو جوړولو سمې پرېښلې نه لرﺉ"
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6938
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6921
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
 "\n"
 "Do you want to create it?"
-msgstr ".موخه پوښۍ شتون نه لري \"%s\"\n\nجوړول يې غواړﺉ؟"
+msgstr ""
+".موخه پوښۍ شتون نه لري \"%s\"\n"
+"\n"
+"جوړول يې غواړﺉ؟"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6947
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6930
 msgid "Create _Folder"
 msgstr "پوښۍ جوړول_"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6964
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6947
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr ".%s :موخه پوښۍ نه شي جوړولی"
@@ -519,51 +536,51 @@ msgid "_Overwrite"
 msgstr "ځاېناستول_"
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4283 ../src/fr-window.c:6879 ../src/fr-window.c:6884
-#: ../src/fr-window.c:6968 ../src/fr-window.c:6987 ../src/fr-window.c:6992
+#: ../src/fr-window.c:4270 ../src/fr-window.c:6862 ../src/fr-window.c:6867
+#: ../src/fr-window.c:6951 ../src/fr-window.c:6970 ../src/fr-window.c:6975
 msgid "Extraction not performed"
 msgstr "ويستنه سرته ونه رسېده"
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4452 ../src/fr-window.c:4532
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4439 ../src/fr-window.c:4519
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "پوښۍ کې د ارشيونو د ويستلو سمې پرېښلې نه لرﺉ \"%s\" تاسو په"
 
-#: ../src/dlg-extract.c:333 ../src/dlg-extract.c:431 ../src/ui.h:122
+#: ../src/dlg-extract.c:333 ../src/dlg-extract.c:423 ../src/ui.h:122
 msgid "Extract"
 msgstr "ويستل"
 
-#: ../src/dlg-extract.c:354 ../src/ui/delete.ui.h:5
+#: ../src/dlg-extract.c:350 ../src/ui/delete.ui.h:5
 msgid "_Files:"
 msgstr ":دوتنې_"
 
-#: ../src/dlg-extract.c:361 ../src/ui/delete.ui.h:4
+#: ../src/dlg-extract.c:357 ../src/ui/delete.ui.h:4
 msgid "example: *.txt; *.doc"
 msgstr "*.txt; *.doc :بېلګې"
 
-#: ../src/dlg-extract.c:364 ../src/ui/delete.ui.h:2
+#: ../src/dlg-extract.c:360 ../src/ui/delete.ui.h:2
 msgid "_All files"
 msgstr "ټولې دوتنې_"
 
-#: ../src/dlg-extract.c:369 ../src/ui/delete.ui.h:3
+#: ../src/dlg-extract.c:365 ../src/ui/delete.ui.h:3
 msgid "_Selected files"
 msgstr "ټاکل شوې دوتنې_"
 
-#: ../src/dlg-extract.c:378
+#: ../src/dlg-extract.c:374
 msgid "Actions"
 msgstr "چارې"
 
-#: ../src/dlg-extract.c:398
+#: ../src/dlg-extract.c:390
 msgid "Re-crea_te folders"
 msgstr "پوښۍ بيا جوړ_ول"
 
-#: ../src/dlg-extract.c:402
+#: ../src/dlg-extract.c:394
 msgid "Over_write existing files"
 msgstr "شته دوتنې ځاې_ناستول"
 
-#: ../src/dlg-extract.c:406
+#: ../src/dlg-extract.c:398
 msgid "Do not e_xtract older files"
 msgstr "زړې دوتنه نه و_يستل"
 
@@ -575,7 +592,7 @@ msgstr ""
 #: ../src/dlg-new.c:439
 msgctxt "File"
 msgid "Save"
-msgstr ""
+msgstr "ساتل_"
 
 #: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:220
 msgid "There was an internal error trying to search for applications:"
@@ -604,7 +621,7 @@ msgstr ":ځای"
 #: ../src/dlg-prop.c:120
 msgctxt "File"
 msgid "Name:"
-msgstr ""
+msgstr "نوم:"
 
 #: ../src/dlg-prop.c:126
 #, c-format
@@ -660,7 +677,7 @@ msgstr ""
 
 #: ../src/eggfileformatchooser.c:397
 msgid "All Files"
-msgstr ""
+msgstr "ټولې دوتنې"
 
 #: ../src/eggfileformatchooser.c:398
 msgid "All Supported Files"
@@ -877,15 +894,15 @@ msgstr "ويستل_"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] "%d object (%s)"
-msgstr[1] "%d objects (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "%d object selected (%s)"
-msgstr[1] "%d objects selected (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/fr-window.c:1613
 msgid "Folder"
@@ -895,320 +912,328 @@ msgstr "پوښۍ"
 msgid "[read only]"
 msgstr "[يواز لوستی]"
 
-#: ../src/fr-window.c:2267
+#: ../src/fr-window.c:2262
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "پوښۍ نه شي ښودلی \"%s\""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2346 ../src/fr-window.c:2384
+#: ../src/fr-window.c:2341 ../src/fr-window.c:2379
 #, c-format
 msgid "Creating \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2350
+#: ../src/fr-window.c:2345
 #, c-format
 msgid "Loading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2354
+#: ../src/fr-window.c:2349
 #, c-format
 msgid "Reading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2358
+#: ../src/fr-window.c:2353
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2362
+#: ../src/fr-window.c:2357
 #, c-format
 msgid "Testing \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2365
+#: ../src/fr-window.c:2360
 msgid "Getting the file list"
 msgstr "دوتنه لړ اخيستل کيږي"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2369
+#: ../src/fr-window.c:2364
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2373
+#: ../src/fr-window.c:2368
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2377
+#: ../src/fr-window.c:2372
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2380
+#: ../src/fr-window.c:2375
 msgid "Copying the extracted files to the destination"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2388
+#: ../src/fr-window.c:2383
 #, c-format
 msgid "Saving \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2534
+#: ../src/fr-window.c:2529
 msgid "_Open the Archive"
 msgstr "ارشيو پرانيستل_"
 
-#: ../src/fr-window.c:2535
+#: ../src/fr-window.c:2530
 msgid "_Show the Files"
 msgstr ""
 
-#: ../src/fr-window.c:2536
+#: ../src/fr-window.c:2531
 msgid "Show the _Files and Quit"
 msgstr ""
 
-#: ../src/fr-window.c:2721
+#: ../src/fr-window.c:2708
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%'d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:2772
+#: ../src/fr-window.c:2759
 msgid "Extraction completed successfully"
 msgstr "ويستنه په برياليتوب سرته ورسېده"
 
-#: ../src/fr-window.c:2796
+#: ../src/fr-window.c:2783
 msgid "Archive created successfully"
 msgstr "ارشيو په برياليتوب جوړ شو"
 
-#: ../src/fr-window.c:2854
+#: ../src/fr-window.c:2841
 msgid "Please wait…"
 msgstr ""
 
-#: ../src/fr-window.c:2923 ../src/fr-window.c:3058
+#: ../src/fr-window.c:2910 ../src/fr-window.c:3045
 msgid "Command exited abnormally."
 msgstr ".بولۍ په ناسمه توګه بنده شوه"
 
-#: ../src/fr-window.c:3016
+#: ../src/fr-window.c:3003
 msgid "An error occurred while extracting files."
 msgstr ".د دوتنو په ويستلو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3022
+#: ../src/fr-window.c:3009
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "نه شي پرانيستلی \"%s\""
 
-#: ../src/fr-window.c:3027
+#: ../src/fr-window.c:3014
 msgid "An error occurred while loading the archive."
 msgstr ".د ارشيو په لېښلو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3031
+#: ../src/fr-window.c:3018
 msgid "An error occurred while deleting files from the archive."
 msgstr ".د ارشيو نه په دوتنو ړنګولو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3037
+#: ../src/fr-window.c:3024
 msgid "An error occurred while adding files to the archive."
 msgstr ".ارشيو کې دوتنو زياتولو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3041
+#: ../src/fr-window.c:3028
 msgid "An error occurred while testing archive."
 msgstr ".د ارشيو په ازموېلو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3045
+#: ../src/fr-window.c:3032
 msgid "An error occurred while saving the archive."
 msgstr ".د ارشيو په ساتلو کې ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3049
+#: ../src/fr-window.c:3036
 msgid "An error occurred."
 msgstr ".کومه ستونزه رامنځته شوه"
 
-#: ../src/fr-window.c:3055
+#: ../src/fr-window.c:3042
 msgid "Command not found."
 msgstr ".بولۍ ونه موندل شوه"
 
-#: ../src/fr-window.c:3258
+#: ../src/fr-window.c:3245
 msgid "Test Result"
 msgstr "د ازموېنې پاېله"
 
-#: ../src/fr-window.c:4126 ../src/fr-window.c:8272 ../src/fr-window.c:8308
-#: ../src/fr-window.c:8558
+#: ../src/fr-window.c:4113 ../src/fr-window.c:8255 ../src/fr-window.c:8291
+#: ../src/fr-window.c:8541
 msgid "Could not perform the operation"
 msgstr "چلښت سرته نه شي رسولی"
 
-#: ../src/fr-window.c:4152
+#: ../src/fr-window.c:4139
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
-msgstr "دا دوتنه اوسني ارشيو ته زياتول غواړﺉ يا د نوي ارشيو په توګه يې پرانيستل غواړﺉ؟"
+msgstr ""
+"دا دوتنه اوسني ارشيو ته زياتول غواړﺉ يا د نوي ارشيو په توګه يې پرانيستل "
+"غواړﺉ؟"
 
-#: ../src/fr-window.c:4182
+#: ../src/fr-window.c:4169
 msgid "Do you want to create a new archive with these files?"
 msgstr "دې دوتنو نه نوی ارشيو جوړول غواړﺉ؟"
 
-#: ../src/fr-window.c:4185
+#: ../src/fr-window.c:4172
 msgid "Create _Archive"
 msgstr "ارشيو _جوړول"
 
-#: ../src/fr-window.c:4783 ../src/fr-window.c:5844
+#: ../src/fr-window.c:4770 ../src/fr-window.c:5831
 msgid "Folders"
 msgstr "پوښۍ"
 
-#: ../src/fr-window.c:4821
+#: ../src/fr-window.c:4808
 msgctxt "File"
 msgid "Size"
-msgstr ""
+msgstr "کچ"
 
-#: ../src/fr-window.c:4822
+#: ../src/fr-window.c:4809
 msgctxt "File"
 msgid "Type"
-msgstr ""
+msgstr "ډول"
 
-#: ../src/fr-window.c:4823
+#: ../src/fr-window.c:4810
 msgctxt "File"
 msgid "Date Modified"
-msgstr ""
+msgstr "د بدلون نېټه"
 
-#: ../src/fr-window.c:4824
+#: ../src/fr-window.c:4811
 msgctxt "File"
 msgid "Location"
-msgstr ""
+msgstr "ځای"
 
-#: ../src/fr-window.c:4833
+#: ../src/fr-window.c:4820
 msgctxt "File"
 msgid "Name"
-msgstr ""
+msgstr "نوم"
 
-#: ../src/fr-window.c:5763
+#: ../src/fr-window.c:5750
 msgid "Find:"
 msgstr ":لټول"
 
-#: ../src/fr-window.c:5858
+#: ../src/fr-window.c:5841
 msgid "Close the folders pane"
 msgstr "پوښۍ چوکاټ بندول"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5889
+#: ../src/fr-window.c:5872
 msgid "Open _Recent"
 msgstr "اوسني _پرانيستل"
 
-#: ../src/fr-window.c:5890 ../src/fr-window.c:5902
+#: ../src/fr-window.c:5873 ../src/fr-window.c:5885
 msgid "Open a recently used archive"
 msgstr "اوس کارول شوی ارشيو پرانيستل"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:5979 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:5962 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr ":ځای_"
 
-#: ../src/fr-window.c:6328
+#: ../src/fr-window.c:6311
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "ارشيو نه شي ساتلی \"%s\""
 
-#: ../src/fr-window.c:6827
+#: ../src/fr-window.c:6810
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: ../src/fr-window.c:6830
+#: ../src/fr-window.c:6813
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6837
+#: ../src/fr-window.c:6820
 msgid "Replace _All"
-msgstr ""
+msgstr "ټول ځاېناستول"
 
-#: ../src/fr-window.c:6838
+#: ../src/fr-window.c:6821
 msgid "_Skip"
-msgstr ""
+msgstr "پرېښودل_"
 
-#: ../src/fr-window.c:6839
+#: ../src/fr-window.c:6822
 msgid "_Replace"
-msgstr ""
+msgstr "ځاېناستول_"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7674
+#: ../src/fr-window.c:7657
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7679
+#: ../src/fr-window.c:7662
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7684
+#: ../src/fr-window.c:7667
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7720
+#: ../src/fr-window.c:7703
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ".په نوم د مخکې نه يوه پوښۍ شتون لري \"%s\" د\n\n%s"
+msgstr ""
+".په نوم د مخکې نه يوه پوښۍ شتون لري \"%s\" د\n"
+"\n"
+"%s"
 
-#: ../src/fr-window.c:7722
+#: ../src/fr-window.c:7705
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
 "\n"
 "%s"
-msgstr ".په نوم د مخکې نه يوه دوتنه شتون لري \"%s\" د\n\n%s"
+msgstr ""
+".په نوم د مخکې نه يوه دوتنه شتون لري \"%s\" د\n"
+"\n"
+"%s"
 
-#: ../src/fr-window.c:7792
+#: ../src/fr-window.c:7775
 msgid "Rename"
 msgstr "بيانومول"
 
-#: ../src/fr-window.c:7793
+#: ../src/fr-window.c:7776
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7793
+#: ../src/fr-window.c:7776
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7797
+#: ../src/fr-window.c:7780
 msgid "_Rename"
 msgstr "بيانومول_"
 
-#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
+#: ../src/fr-window.c:7797 ../src/fr-window.c:7816
 msgid "Could not rename the folder"
 msgstr "پوښۍ نه شي بيانومولی"
 
-#: ../src/fr-window.c:7814 ../src/fr-window.c:7833
+#: ../src/fr-window.c:7797 ../src/fr-window.c:7816
 msgid "Could not rename the file"
 msgstr "دوتنه نه شي بيانومولی"
 
-#: ../src/fr-window.c:8233
+#: ../src/fr-window.c:8216
 msgid "Paste Selection"
 msgstr "ټاکنه سرېښل"
 
-#: ../src/fr-window.c:8234
+#: ../src/fr-window.c:8217
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8837
+#: ../src/fr-window.c:8820
 msgid "Add files to an archive"
 msgstr "دوتنې ارشيو کې زياتول"
 
-#: ../src/fr-window.c:8880 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8863 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "ارشيو ويستل"
@@ -1221,11 +1246,11 @@ msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
 #. Expander
-#: ../src/gtk-utils.c:424
+#: ../src/gtk-utils.c:416
 msgid "Command _Line Output"
 msgstr "د بولۍ _ليکې وتۍ"
 
-#: ../src/gtk-utils.c:753
+#: ../src/gtk-utils.c:740
 msgid "Could not display help"
 msgstr "مرسته نه شي ښودلی"
 
@@ -1289,7 +1314,7 @@ msgstr ""
 
 #: ../src/ui/app-menu.ui.h:3
 msgid "_Quit"
-msgstr ""
+msgstr "بندول_"
 
 #: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
@@ -1347,6 +1372,10 @@ msgstr "ليد_"
 msgid "_Arrange Files"
 msgstr "دوتنې اوډونول_"
 
+#: ../src/ui.h:39
+msgid "_About"
+msgstr "په اړه_"
+
 #: ../src/ui.h:40
 msgid "Information about the program"
 msgstr "د کړنلار په اړه خبرتياوې"
@@ -1371,6 +1400,10 @@ msgstr "ارشيو کې پوښۍ زياتول"
 msgid "Add Folder"
 msgstr "پوښۍ زياتول"
 
+#: ../src/ui.h:59
+msgid "_Close"
+msgstr "بندول_"
+
 #: ../src/ui.h:60
 msgid "Close the current archive"
 msgstr "اوسنی ارشيو بندول"
@@ -1383,13 +1416,25 @@ msgstr "منځپانګې"
 msgid "Display the Engrampa Manual"
 msgstr "د دوتنه تاوونکي لاسي کتاب ښودل"
 
+#: ../src/ui.h:68 ../src/ui.h:89
+msgid "_Copy"
+msgstr "لمېسل_"
+
 #: ../src/ui.h:69 ../src/ui.h:90
 msgid "Copy the selection"
 msgstr "ټاکنه لمېسل"
 
+#: ../src/ui.h:72 ../src/ui.h:93
+msgid "Cu_t"
+msgstr "سکڼ_ل"
+
 #: ../src/ui.h:73 ../src/ui.h:94
 msgid "Cut the selection"
 msgstr "ټاکنه سکڼل"
+
+#: ../src/ui.h:76 ../src/ui.h:97
+msgid "_Paste"
+msgstr "سرېښل_"
 
 #: ../src/ui.h:77 ../src/ui.h:98
 msgid "Paste the clipboard"
@@ -1402,6 +1447,10 @@ msgstr ""
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
 msgstr "ټاکنه بيانومول"
+
+#: ../src/ui.h:84 ../src/ui.h:105
+msgid "_Delete"
+msgstr "ړنګول_"
 
 #: ../src/ui.h:85 ../src/ui.h:106
 msgid "Delete the selection from the archive"
@@ -1451,6 +1500,11 @@ msgstr ""
 msgid "Open archive"
 msgstr "ارشيو پرانيستل"
 
+#: ../src/ui.h:143 ../src/ui.h:179 ../src/ui.h:183 ../src/ui.h:187
+#: ../src/ui.h:191
+msgid "_Open"
+msgstr "پرانيستل_"
+
 #: ../src/ui.h:147
 msgid "_Open With…"
 msgstr ""
@@ -1467,9 +1521,17 @@ msgstr ""
 msgid "Specify a password for this archive"
 msgstr "د دې ارشيو لپاره يوه تېرنويې وټاکئ"
 
+#: ../src/ui.h:155
+msgid "_Properties"
+msgstr "ځانتياوې_"
+
 #: ../src/ui.h:156
 msgid "Show archive properties"
 msgstr "د ارشيو ځانتياوې ښودل"
+
+#: ../src/ui.h:159
+msgid "_Refresh"
+msgstr "تاندول_"
 
 #: ../src/ui.h:160
 msgid "Reload current archive"
@@ -1477,15 +1539,23 @@ msgstr "اوسنی ارشيو بيالېښل"
 
 #: ../src/ui.h:163
 msgid "Save As…"
-msgstr ""
+msgstr "...ساتل په"
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"
 msgstr "اوسنی ارشيو په بل نوم ساتل"
 
+#: ../src/ui.h:167
+msgid "Select _All"
+msgstr "ټول ټاکل_"
+
 #: ../src/ui.h:168
 msgid "Select all files"
 msgstr "ټولې دوتنې ټاکل"
+
+#: ../src/ui.h:171
+msgid "_Stop"
+msgstr "تمول_"
 
 #: ../src/ui.h:172
 msgid "Stop current operation"
@@ -1615,7 +1685,10 @@ msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
-msgstr "<i><b>:ايدښت‎</b>تېرنويې به د هغو دوتنو د کوډه کښلو لپاره وکارول شي چې تاسو يې په اوسني ارشيو کې زياتوﺉ، او د هغو دوتنو د کوډه .ناکښلو لپاره چې تاسو يې د اوسني ارشيو نه وباسئ. د ارشيو د بندېدو سره به تېرنويې وړنګول شي"
+msgstr ""
+"<i><b>:ايدښت‎</b>تېرنويې به د هغو دوتنو د کوډه کښلو لپاره وکارول شي چې تاسو "
+"يې په اوسني ارشيو کې زياتوﺉ، او د هغو دوتنو د کوډه .ناکښلو لپاره چې تاسو يې "
+"د اوسني ارشيو نه وباسئ. د ارشيو د بندېدو سره به تېرنويې وړنګول شي"
 
 #: ../src/ui/update.ui.h:1
 msgid "_Update"
