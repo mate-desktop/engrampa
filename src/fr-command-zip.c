@@ -381,7 +381,14 @@ fr_command_zip_handle_error (FrCommand   *comm,
 }
 
 
-const char *zip_mime_type[] = { "application/x-cbz",
+const char *zip_mime_type[] = {
+				"application/vnd.oasis.opendocument.presentation",
+				"application/vnd.oasis.opendocument.spreadsheet",
+				"application/vnd.oasis.opendocument.text",
+				"application/vnd.oasis.opendocument.presentation-template",
+				"application/vnd.oasis.opendocument.spreadsheet-template",
+				"application/vnd.oasis.opendocument.text-template",
+				"application/x-cbz",
 				"application/x-ear",
 				"application/x-ms-dos-executable",
 				"application/x-war",
