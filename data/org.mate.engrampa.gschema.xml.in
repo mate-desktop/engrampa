@@ -126,6 +126,11 @@
       <summary>Encrypt the archive header</summary>
       <description>Whether to encrypt the archive header.  If the header is encrypted the password will be required to list the archive content as well.</description>
     </key>
+    <key name="unar-open-zip" type="b">
+      <default>false</default>
+      <summary>Adds 'unar' support over .zip archives.</summary>
+      <description>It enables the ability to support 'unar' over .zip archives.</description>
+    </key>
   </schema>
   <schema gettext-domain="@GETTEXT_PACKAGE@" id="org.mate.engrampa.dialogs" path="/org/mate/engrampa/dialogs/">
     <child name="extract" schema="org.mate.engrampa.dialogs.extract"/>
