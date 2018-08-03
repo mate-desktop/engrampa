@@ -392,13 +392,24 @@ const char *zip_mime_type[] = {
 				"application/x-ear",
 				"application/x-ms-dos-executable",
 				"application/x-war",
-				"application/zip",
-				NULL };
+				"application/zip", /* zip always at the end and the number of */
+				NULL };            /* place in fr_command_zip_get_mime_types  */
 
 
 static const char **
 fr_command_zip_get_mime_types (FrCommand *comm)
 {
+	GSettings *settings;
+	settings = g_settings_new ("org.mate.engrampa.general");
+
+	if (g_settings_get_boolean (settings, "unar-open-zip") &&
+	    is_program_in_path ("unar") && is_program_in_path ("lsar"))
+		zip_mime_type [10] = NULL;
+	else
+		g_settings_set_boolean (settings, "unar-open-zip", FALSE);
+
+	g_object_unref (settings);
+
 	return zip_mime_type;
 }
 
