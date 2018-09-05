@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 08:31+0100\n"
+"POT-Creation-Date: 2018-09-05 16:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgid "Engrampa Archive Manager"
 msgstr ""
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2002
-#: ../src/fr-window.c:5508
+#: ../src/fr-window.c:5496
 msgid "Archive Manager"
 msgstr ""
 
@@ -268,22 +268,30 @@ msgid ""
 msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
-msgid "Overwrite existing files"
+msgid "Adds 'unar' support over .zip archives."
 msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
-msgid "Do not overwrite newer files"
+msgid "It enables the ability to support 'unar' over .zip archives."
 msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
-msgid "Recreate the folders stored in the archive"
+msgid "Overwrite existing files"
 msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:36
-msgid "Default volume size"
+msgid "Do not overwrite newer files"
 msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
+msgid "Recreate the folders stored in the archive"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:38
+msgid "Default volume size"
+msgstr ""
+
+#: ../data/org.mate.engrampa.gschema.xml.in.h:39
 msgid "The default size for volumes."
 msgstr ""
 
@@ -338,7 +346,7 @@ msgstr ""
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
-#: ../src/fr-archive.c:1160 ../src/fr-window.c:6143 ../src/fr-window.c:6319
+#: ../src/fr-archive.c:1160 ../src/fr-window.c:6131 ../src/fr-window.c:6307
 msgid "Archive type not supported."
 msgstr ""
 
@@ -346,11 +354,11 @@ msgstr ""
 msgid "Could not delete the old archive."
 msgstr ""
 
-#: ../src/actions.c:382 ../src/fr-window.c:5884
+#: ../src/actions.c:382 ../src/fr-window.c:5872
 msgid "Open"
 msgstr ""
 
-#: ../src/actions.c:393 ../src/fr-window.c:5327
+#: ../src/actions.c:393 ../src/fr-window.c:5315
 msgid "All archives"
 msgstr ""
 
@@ -358,7 +366,7 @@ msgstr ""
 msgid "All files"
 msgstr ""
 
-#: ../src/actions.c:794 ../src/fr-window.c:7352
+#: ../src/actions.c:794 ../src/fr-window.c:7340
 msgid "Last Output"
 msgstr ""
 
@@ -480,7 +488,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7703 ../src/fr-window.c:7705
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7691 ../src/fr-window.c:7693
 msgid "Please use a different name."
 msgstr ""
 
@@ -490,7 +498,7 @@ msgid ""
 "folder."
 msgstr ""
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6921
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6909
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -498,11 +506,11 @@ msgid ""
 "Do you want to create it?"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6930
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6918
 msgid "Create _Folder"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6947
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6935
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr ""
@@ -520,12 +528,12 @@ msgid "_Overwrite"
 msgstr ""
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4270 ../src/fr-window.c:6862 ../src/fr-window.c:6867
-#: ../src/fr-window.c:6951 ../src/fr-window.c:6970 ../src/fr-window.c:6975
+#: ../src/fr-window.c:4261 ../src/fr-window.c:6850 ../src/fr-window.c:6855
+#: ../src/fr-window.c:6939 ../src/fr-window.c:6958 ../src/fr-window.c:6963
 msgid "Extraction not performed"
 msgstr ""
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4439 ../src/fr-window.c:4519
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4430 ../src/fr-window.c:4510
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder \"%s\""
@@ -758,106 +766,134 @@ msgid "Ace (.ace)"
 msgstr ""
 
 #: ../src/fr-init.c:65
-msgid "Ar (.ar)"
+msgid "Ar (.a)"
 msgstr ""
 
 #: ../src/fr-init.c:66
+msgid "Ar (.ar)"
+msgstr ""
+
+#: ../src/fr-init.c:67
 msgid "Arj (.arj)"
 msgstr ""
 
-#: ../src/fr-init.c:68
+#: ../src/fr-init.c:69
 msgid "Tar compressed with bzip2 (.tar.bz2)"
 msgstr ""
 
-#: ../src/fr-init.c:70
+#: ../src/fr-init.c:71
 msgid "Tar compressed with bzip (.tar.bz)"
 msgstr ""
 
-#: ../src/fr-init.c:71
+#: ../src/fr-init.c:72
 msgid "Cabinet (.cab)"
 msgstr ""
 
-#: ../src/fr-init.c:72
-msgid "Rar Archived Comic Book (.cbr)"
+#: ../src/fr-init.c:73
+msgid "OpenDocument Presentation"
 msgstr ""
 
-#: ../src/fr-init.c:73
-msgid "Zip Archived Comic Book (.cbz)"
+#: ../src/fr-init.c:74
+msgid "OpenDocument Spreadsheet"
+msgstr ""
+
+#: ../src/fr-init.c:75
+msgid "OpenDocument Text"
 msgstr ""
 
 #: ../src/fr-init.c:76
-msgid "Tar compressed with gzip (.tar.gz)"
+msgid "OpenDocument Presentation Template"
+msgstr ""
+
+#: ../src/fr-init.c:77
+msgid "OpenDocument Spreadsheet Template"
+msgstr ""
+
+#: ../src/fr-init.c:78
+msgid "OpenDocument Text Template"
 msgstr ""
 
 #: ../src/fr-init.c:79
-msgid "Ear (.ear)"
+msgid "Rar Archived Comic Book (.cbr)"
 msgstr ""
 
 #: ../src/fr-init.c:80
-msgid "Self-extracting zip (.exe)"
-msgstr ""
-
-#: ../src/fr-init.c:82
-msgid "Jar (.jar)"
+msgid "Zip Archived Comic Book (.cbz)"
 msgstr ""
 
 #: ../src/fr-init.c:83
-msgid "Lha (.lzh)"
+msgid "Tar compressed with gzip (.tar.gz)"
 msgstr ""
 
-#: ../src/fr-init.c:84
-msgid "Lrzip (.lrz)"
-msgstr ""
-
-#: ../src/fr-init.c:85
-msgid "Tar compressed with lrzip (.tar.lrz)"
+#: ../src/fr-init.c:86
+msgid "Ear (.ear)"
 msgstr ""
 
 #: ../src/fr-init.c:87
-msgid "Tar compressed with lzip (.tar.lz)"
+msgid "Self-extracting zip (.exe)"
 msgstr ""
 
 #: ../src/fr-init.c:89
-msgid "Tar compressed with lzma (.tar.lzma)"
+msgid "Jar (.jar)"
+msgstr ""
+
+#: ../src/fr-init.c:90
+msgid "Lha (.lzh)"
 msgstr ""
 
 #: ../src/fr-init.c:91
-msgid "Tar compressed with lzop (.tar.lzo)"
+msgid "Lrzip (.lrz)"
 msgstr ""
 
 #: ../src/fr-init.c:92
-msgid "Windows Imaging Format (.wim)"
+msgid "Tar compressed with lrzip (.tar.lrz)"
 msgstr ""
 
-#: ../src/fr-init.c:93
-msgid "Rar (.rar)"
+#: ../src/fr-init.c:94
+msgid "Tar compressed with lzip (.tar.lz)"
 msgstr ""
 
 #: ../src/fr-init.c:96
-msgid "Tar uncompressed (.tar)"
+msgid "Tar compressed with lzma (.tar.lzma)"
 msgstr ""
 
-#: ../src/fr-init.c:97
-msgid "Tar compressed with compress (.tar.Z)"
+#: ../src/fr-init.c:98
+msgid "Tar compressed with lzop (.tar.lzo)"
 msgstr ""
 
 #: ../src/fr-init.c:99
-msgid "War (.war)"
+msgid "Windows Imaging Format (.wim)"
 msgstr ""
 
 #: ../src/fr-init.c:100
-msgid "Xz (.xz)"
-msgstr ""
-
-#: ../src/fr-init.c:101
-msgid "Tar compressed with xz (.tar.xz)"
-msgstr ""
-
-#: ../src/fr-init.c:102
-msgid "Zoo (.zoo)"
+msgid "Rar (.rar)"
 msgstr ""
 
 #: ../src/fr-init.c:103
+msgid "Tar uncompressed (.tar)"
+msgstr ""
+
+#: ../src/fr-init.c:104
+msgid "Tar compressed with compress (.tar.Z)"
+msgstr ""
+
+#: ../src/fr-init.c:106
+msgid "War (.war)"
+msgstr ""
+
+#: ../src/fr-init.c:107
+msgid "Xz (.xz)"
+msgstr ""
+
+#: ../src/fr-init.c:108
+msgid "Tar compressed with xz (.tar.xz)"
+msgstr ""
+
+#: ../src/fr-init.c:109
+msgid "Zoo (.zoo)"
+msgstr ""
+
+#: ../src/fr-init.c:110
 msgid "Zip (.zip)"
 msgstr ""
 
@@ -977,7 +1013,7 @@ msgstr ""
 #: ../src/fr-window.c:2708
 #, c-format
 msgid "%d file remaining"
-msgid_plural "%'d files remaining"
+msgid_plural "%d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1038,122 +1074,122 @@ msgstr ""
 msgid "Test Result"
 msgstr ""
 
-#: ../src/fr-window.c:4113 ../src/fr-window.c:8255 ../src/fr-window.c:8291
-#: ../src/fr-window.c:8541
+#: ../src/fr-window.c:4104 ../src/fr-window.c:8243 ../src/fr-window.c:8279
+#: ../src/fr-window.c:8529
 msgid "Could not perform the operation"
 msgstr ""
 
-#: ../src/fr-window.c:4139
+#: ../src/fr-window.c:4130
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
 
-#: ../src/fr-window.c:4169
+#: ../src/fr-window.c:4160
 msgid "Do you want to create a new archive with these files?"
 msgstr ""
 
-#: ../src/fr-window.c:4172
+#: ../src/fr-window.c:4163
 msgid "Create _Archive"
 msgstr ""
 
-#: ../src/fr-window.c:4770 ../src/fr-window.c:5831
+#: ../src/fr-window.c:4758 ../src/fr-window.c:5819
 msgid "Folders"
 msgstr ""
 
-#: ../src/fr-window.c:4808
+#: ../src/fr-window.c:4796
 msgctxt "File"
 msgid "Size"
 msgstr ""
 
-#: ../src/fr-window.c:4809
+#: ../src/fr-window.c:4797
 msgctxt "File"
 msgid "Type"
 msgstr ""
 
-#: ../src/fr-window.c:4810
+#: ../src/fr-window.c:4798
 msgctxt "File"
 msgid "Date Modified"
 msgstr ""
 
-#: ../src/fr-window.c:4811
+#: ../src/fr-window.c:4799
 msgctxt "File"
 msgid "Location"
 msgstr ""
 
-#: ../src/fr-window.c:4820
+#: ../src/fr-window.c:4808
 msgctxt "File"
 msgid "Name"
 msgstr ""
 
-#: ../src/fr-window.c:5750
+#: ../src/fr-window.c:5738
 msgid "Find:"
 msgstr ""
 
-#: ../src/fr-window.c:5841
+#: ../src/fr-window.c:5829
 msgid "Close the folders pane"
 msgstr ""
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5872
+#: ../src/fr-window.c:5860
 msgid "Open _Recent"
 msgstr ""
 
-#: ../src/fr-window.c:5873 ../src/fr-window.c:5885
+#: ../src/fr-window.c:5861 ../src/fr-window.c:5873
 msgid "Open a recently used archive"
 msgstr ""
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:5962 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:5950 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr ""
 
-#: ../src/fr-window.c:6311
+#: ../src/fr-window.c:6299
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:6810
+#: ../src/fr-window.c:6798
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: ../src/fr-window.c:6813
+#: ../src/fr-window.c:6801
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6820
+#: ../src/fr-window.c:6808
 msgid "Replace _All"
 msgstr ""
 
-#: ../src/fr-window.c:6821
+#: ../src/fr-window.c:6809
 msgid "_Skip"
 msgstr ""
 
-#: ../src/fr-window.c:6822
+#: ../src/fr-window.c:6810
 msgid "_Replace"
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear when renaming a file.
-#: ../src/fr-window.c:7657
+#: ../src/fr-window.c:7645
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear when renaming a file.
-#: ../src/fr-window.c:7662
+#: ../src/fr-window.c:7650
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when renaming a file.
-#: ../src/fr-window.c:7667
+#: ../src/fr-window.c:7655
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7703
+#: ../src/fr-window.c:7691
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1161,7 +1197,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/fr-window.c:7705
+#: ../src/fr-window.c:7693
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1169,43 +1205,43 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/fr-window.c:7775
+#: ../src/fr-window.c:7763
 msgid "Rename"
 msgstr ""
 
-#: ../src/fr-window.c:7776
+#: ../src/fr-window.c:7764
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7776
+#: ../src/fr-window.c:7764
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7780
+#: ../src/fr-window.c:7768
 msgid "_Rename"
 msgstr ""
 
-#: ../src/fr-window.c:7797 ../src/fr-window.c:7816
+#: ../src/fr-window.c:7785 ../src/fr-window.c:7804
 msgid "Could not rename the folder"
 msgstr ""
 
-#: ../src/fr-window.c:7797 ../src/fr-window.c:7816
+#: ../src/fr-window.c:7785 ../src/fr-window.c:7804
 msgid "Could not rename the file"
 msgstr ""
 
-#: ../src/fr-window.c:8216
+#: ../src/fr-window.c:8204
 msgid "Paste Selection"
 msgstr ""
 
-#: ../src/fr-window.c:8217
+#: ../src/fr-window.c:8205
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8820
+#: ../src/fr-window.c:8808
 msgid "Add files to an archive"
 msgstr ""
 
-#: ../src/fr-window.c:8863 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8851 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr ""
