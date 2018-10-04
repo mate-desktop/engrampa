@@ -9,6 +9,10 @@ HELP_MEDIA = 					\
 	figures/engrampa_rightarrow.png	\
 	figures/engrampa_uparrow.png
 
-HELP_LINGUAS = bg ca cs de el en_GB es fi fr it ja oc nl ru sv vi uk zh_CN
+# Add linguas to be ignored, e.g. IGNORE_HELP_LINGUAS = ca de es fr
+IGNORE_HELP_LINGUAS =
+HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+	$(subst /,,$(dir $(wildcard */*.po))) )
 
 -include $(top_srcdir)/git.mk
