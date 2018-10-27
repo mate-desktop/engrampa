@@ -7324,6 +7324,27 @@ last_output_window__unrealize_cb (GtkWidget  *widget,
 }
 
 
+static void
+fr_window_view_last_output_print(GtkTextBuffer *text_buffer,
+                                 GtkTextIter   *iter,
+                                 GList         *scan)
+{
+    for (; scan; scan = scan->next) {
+        char        *line = scan->data;
+        char        *utf8_line;
+        gsize        bytes_written;
+
+        utf8_line = g_locale_to_utf8 (line, -1, NULL, &bytes_written, NULL);
+        gtk_text_buffer_insert_with_tags_by_name (text_buffer,
+                                                  iter,
+                                                  utf8_line,
+                                                  bytes_written,
+                                                  "monospace", NULL);
+        g_free (utf8_line);
+        gtk_text_buffer_insert (text_buffer, iter, "\n", 1);
+    }
+}
+
 void
 fr_window_view_last_output (FrWindow   *window,
 			    const char *title)
@@ -7334,7 +7355,6 @@ fr_window_view_last_output (FrWindow   *window,
 	GtkWidget     *scrolled;
 	GtkTextBuffer *text_buffer;
 	GtkTextIter    iter;
-	GList         *scan;
 
 	if (title == NULL)
 		title = _("Last Output");
@@ -7392,24 +7412,11 @@ fr_window_view_last_output (FrWindow   *window,
 			  G_CALLBACK (last_output_window__unrealize_cb),
 			  NULL);
 
-	/**/
-
 	gtk_text_buffer_get_iter_at_offset (text_buffer, &iter, 0);
-	scan = window->archive->process->out.raw;
-	for (; scan; scan = scan->next) {
-		char        *line = scan->data;
-		char        *utf8_line;
-		gsize        bytes_written;
-
-		utf8_line = g_locale_to_utf8 (line, -1, NULL, &bytes_written, NULL);
-		gtk_text_buffer_insert_with_tags_by_name (text_buffer,
-							  &iter,
-							  utf8_line,
-							  bytes_written,
-							  "monospace", NULL);
-		g_free (utf8_line);
-		gtk_text_buffer_insert (text_buffer, &iter, "\n", 1);
-	}
+	/* Show STDOUT of process */
+	fr_window_view_last_output_print(text_buffer, &iter, window->archive->process->out.raw);
+	/* Show STDERR of process */
+	fr_window_view_last_output_print(text_buffer, &iter, window->archive->process->err.raw);
 
 	/**/
 
