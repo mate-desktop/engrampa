@@ -476,6 +476,9 @@ fr_command_cfile_test (FrCommand   *comm)
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
         compress_cmd = "gzip";
     }
+    else if (is_mime_type (comm->mime_type, "application/x-brotli")) {
+        compress_cmd = "brotli";
+    }
     else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
         compress_cmd = "bzip2";
     }
