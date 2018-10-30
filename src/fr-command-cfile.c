@@ -469,6 +469,39 @@ fr_command_cfile_extract (FrCommand  *comm,
 	g_free (temp_dir);
 }
 
+static void
+fr_command_cfile_test (FrCommand   *comm)
+{
+	const char *compress_cmd;
+	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
+        compress_cmd = "gzip";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
+        compress_cmd = "bzip2";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-compress")) {
+        compress_cmd = is_program_in_path ("gzip") ? "gzip" : "uncompress";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-lzip")) {
+        compress_cmd = "lzip";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-lzma")) {
+        compress_cmd = "lzma";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-xz")) {
+        compress_cmd = "xz";
+    }
+    else if (is_mime_type (comm->mime_type, "application/x-lzop")) {
+        compress_cmd = "lzop";
+    } else { // i.e. if (is_mime_type (comm->mime_type, "application/x-rzip"))
+        g_warning ("Test integrity in unsupported for %s\n", comm->mime_type);
+        return;
+    }
+    fr_process_begin_command (comm->process, compress_cmd);
+	fr_process_add_arg (comm->process, "-vt"); // verbose and test
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_end_command (comm->process);
+}
 
 const char *cfile_mime_type[] = { "application/x-gzip",
 				  "application/x-brotli",
@@ -594,6 +627,7 @@ fr_command_cfile_class_init (FrCommandCFileClass *class)
 	afc->add              = fr_command_cfile_add;
 	afc->delete           = fr_command_cfile_delete;
 	afc->extract          = fr_command_cfile_extract;
+    afc->test             = fr_command_cfile_test;
 	afc->get_mime_types   = fr_command_cfile_get_mime_types;
 	afc->get_capabilities = fr_command_cfile_get_capabilities;
 	afc->get_packages     = fr_command_cfile_get_packages;
@@ -609,7 +643,7 @@ fr_command_cfile_init (FrCommand *comm)
 	comm->propExtractCanSkipOlder      = FALSE;
 	comm->propExtractCanJunkPaths      = FALSE;
 	comm->propPassword                 = FALSE;
-	comm->propTest                     = FALSE;
+	comm->propTest                     = TRUE;
 }
 
 
