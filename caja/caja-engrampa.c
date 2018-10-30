@@ -159,6 +159,7 @@ static struct {
 		{ "application/x-alz", TRUE },
 		{ "application/x-ar", TRUE },
 		{ "application/x-arj", TRUE },
+		{ "application/x-brotli", TRUE },
 		{ "application/x-bzip", TRUE },
 		{ "application/x-bzip-compressed-tar", TRUE },
 		{ "application/x-bzip1", TRUE },
