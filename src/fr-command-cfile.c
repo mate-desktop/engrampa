@@ -93,9 +93,14 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 }
 
 
+/**
+ * Parse `gzip -lq archive.gz` output:
+ * @param line output line in format "compressed  uncompressed ratio uncompressed_name" e.g. "758185 3454395 78.1% file.txt"
+ * @param data FrCommand*
+ */
 static void
-list__process_line (char     *line,
-		    gpointer  data)
+list__process_line_gzip(char *line,
+						gpointer data)
 {
 	FrCommand  *comm = FR_COMMAND (data);
 	FileData   *fdata;
@@ -141,10 +146,17 @@ fr_command_cfile_list (FrCommand  *comm)
 	FrCommandCFile *comm_cfile = FR_COMMAND_CFILE (comm);
 
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
-		/* gzip let us known the uncompressed size */
+		/* gzip let us known the uncompressed size. To get it run:
+		 * $ gzip -l file.txt.gz
+         *   compressed        uncompressed  ratio uncompressed_name
+         *   758185            3454395       78.1% file.txt
+         * We can simplify output with --quiet (-q) option:
+		 * $ gzip -lq file.txt.gz
+		 *   758185 3454395 78.1% file.txt
+		 */
 
 		fr_process_set_out_line_func (FR_COMMAND (comm)->process,
-					      list__process_line,
+					      list__process_line_gzip,
 					      comm);
 
 		fr_process_begin_command (comm->process, "gzip");
