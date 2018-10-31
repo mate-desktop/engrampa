@@ -139,6 +139,29 @@ list__process_line_gzip(char *line,
 		fr_command_add_file (comm, fdata);
 }
 
+/* gzip let us known the uncompressed size. To get it run:
+ * $ gzip -l file.txt.gz
+ *   compressed        uncompressed  ratio uncompressed_name
+ *   758185            3454395       78.1% file.txt
+ * We can simplify output with --quiet (-q) option:
+ * $ gzip -lq file.txt.gz
+ *   758185 3454395 78.1% file.txt
+ */
+static void
+fr_command_cfile_list__gzip(FrCommand  *comm)
+{
+    fr_process_set_out_line_func (FR_COMMAND (comm)->process,
+                                  list__process_line_gzip,
+                                  comm);
+
+    fr_process_begin_command (comm->process, "gzip");
+    fr_process_add_arg (comm->process, "-l");
+    fr_process_add_arg (comm->process, "-q");
+    fr_process_add_arg (comm->process, comm->filename);
+    fr_process_end_command (comm->process);
+    fr_process_start (comm->process);
+}
+
 
 static void
 fr_command_cfile_list (FrCommand  *comm)
@@ -146,25 +169,7 @@ fr_command_cfile_list (FrCommand  *comm)
 	FrCommandCFile *comm_cfile = FR_COMMAND_CFILE (comm);
 
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
-		/* gzip let us known the uncompressed size. To get it run:
-		 * $ gzip -l file.txt.gz
-         *   compressed        uncompressed  ratio uncompressed_name
-         *   758185            3454395       78.1% file.txt
-         * We can simplify output with --quiet (-q) option:
-		 * $ gzip -lq file.txt.gz
-		 *   758185 3454395 78.1% file.txt
-		 */
-
-		fr_process_set_out_line_func (FR_COMMAND (comm)->process,
-					      list__process_line_gzip,
-					      comm);
-
-		fr_process_begin_command (comm->process, "gzip");
-		fr_process_add_arg (comm->process, "-l");
-		fr_process_add_arg (comm->process, "-q");
-		fr_process_add_arg (comm->process, comm->filename);
-		fr_process_end_command (comm->process);
-		fr_process_start (comm->process);
+        fr_command_cfile_list__gzip(comm);
 	}
 	else {
 		/* ... other compressors do not support this feature so
