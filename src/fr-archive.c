@@ -552,6 +552,7 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  6, "7z\274\257\047\034",                   "application/x-7z-compressed" },
 		{ 7,  7, "**ACE**",                              "application/x-ace"           },
 		{ 0,  2, "\x60\xea",                             "application/x-arj"           },
+		{ 0,  4, "\xce\xb2\xcf\x81",                     "application/x-brotli"        },
 		{ 0,  3, "BZh",                                  "application/x-bzip2"         },
 		{ 0,  2, "\037\213",                             "application/x-gzip"          },
 		{ 0,  4, "LZIP",                                 "application/x-lzip"          },
