@@ -456,7 +456,12 @@ eat_void_chars (const char *line)
 	return line;
 }
 
-
+/**
+ * Parse the line and return array of columns separated by space symbol and size of n_fields
+ * @param line
+ * @param n_fields how many colums/fields to parse
+ * @return NULL terminated array of fields with size of n_fields
+ */
 char **
 split_line (const char *line,
 	    int         n_fields)

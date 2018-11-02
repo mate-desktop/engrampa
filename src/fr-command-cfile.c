@@ -60,12 +60,13 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 		char     buffer[10];
 
 		if (g_input_stream_read (stream, buffer, 10, NULL, NULL) >= 0) {
+            unsigned char flag = buffer[3];
 			/* Check whether the FLG.FNAME is set */
-			if (((unsigned char)(buffer[3]) & 0x08) != 0x08)
+			if ((flag & 0x08) != 0x08)
 				filename_present = FALSE;
 
 			/* Check whether the FLG.FEXTRA is set */
-			if (((unsigned char)(buffer[3]) & 0x04) == 0x04)
+			if ((flag & 0x04) == 0x04)
 				filename_present = FALSE;
 		}
 
@@ -110,8 +111,9 @@ list__process_line_gzip(char *line,
 	fdata = file_data_new ();
 
 	fields = split_line (line, 2);
-	if (strcmp (fields[1], "-1") != 0)
-		fdata->size = g_ascii_strtoull (fields[1], NULL, 10);
+    const char *field_uncompressed = fields[1]; // e.g. "3454395"
+	if (strcmp (field_uncompressed, "-1") != 0)
+		fdata->size = g_ascii_strtoull (field_uncompressed, NULL, 10);
 	g_strfreev (fields);
 
 	if (fdata->size == 0)
