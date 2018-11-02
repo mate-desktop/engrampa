@@ -235,7 +235,7 @@ fr_command_cfile_add (FrCommand     *comm,
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-brotli")) {
 		fr_process_begin_command (comm->process, "brotli");
-		r_process_set_working_dir (comm->process, temp_dir);
+		fr_process_set_working_dir (comm->process, temp_dir);
 		fr_process_add_arg (comm->process, "--");
 		fr_process_add_arg (comm->process, filename);
 		fr_process_end_command (comm->process);
