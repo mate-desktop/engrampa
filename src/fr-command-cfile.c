@@ -164,6 +164,102 @@ fr_command_cfile_list__gzip(FrCommand  *comm)
 	fr_process_start (comm->process);
 }
 
+/**
+ * Parse `lzop -lvN file.txt.lzo` output:
+ * Method         Length    Packed  Ratio     Date    Time   Name
+ * ------         ------    ------  -----     ----    ----   ----
+ * LZO1X-1       3454395    758185  78.1%  2018-11-02 12:33  ./original_file.txt
+ */
+static void
+list__process_line_lzop(char *line,
+			gpointer data)
+{
+	// Skip first two lines.
+	// First line have a caption with "Method" in first column
+	// Second line have "------" in first column
+	if (strncmp (line, "Method ", 7) == 0 || strncmp (line, "------ ", 7) == 0)
+		return;
+
+	printf("parsed line: %s\n", line);
+	FrCommand  *comm = FR_COMMAND (data);
+	FileData   *fdata;
+	char      **fields;
+	char       *filename;
+
+	fdata = file_data_new ();
+
+	fields = split_line (line, 6);
+	const char *field_length = fields[1]; // e.g. "3454395"
+	const char *field_date = fields[4]; // e.g. "2018-11-02"
+	const char *field_time = fields[5]; // e.g. "12:33"
+
+	// parse uncompressed size column
+	if (strcmp (field_length, "-1") != 0)
+		fdata->size = g_ascii_strtoull (field_length, NULL, 10);
+	if (fdata->size == 0) {
+		g_warning("Unable to parse uncompressed size: %s\n", field_length);
+		fdata->size = get_file_size(comm->filename);
+	}
+
+	// parse modified date and time columns
+	char *iso8601_datetime = g_strconcat (field_date, "T", field_time, ":00", NULL);
+	GTimeZone *local_tz = g_time_zone_new_local ();
+	GDateTime *modified = g_date_time_new_from_iso8601 (iso8601_datetime, local_tz);
+	g_time_zone_unref (local_tz);
+	if (modified != NULL) {
+		fdata->modified = g_date_time_to_unix(modified);
+		g_date_time_unref(modified);
+	} else {
+		g_warning("Unable to parse modification date: %s %s\n", field_date, field_time);
+		fdata->modified = get_file_mtime_for_path(comm->filename);
+	}
+	g_free (iso8601_datetime);
+
+	g_strfreev (fields);
+
+	// parse original file name
+	filename = g_strdup (get_last_field (line, 6));
+	printf("original_filename: %s\n", filename);
+	if (filename == NULL)
+		filename = remove_extension_from_path (comm->filename);
+
+	fdata->full_path = g_strconcat ("/",
+					file_name_from_path (filename),
+					NULL);
+	g_free (filename);
+
+	fdata->original_path = fdata->full_path + 1;
+	fdata->link = NULL;
+
+	fdata->name = g_strdup (file_name_from_path (fdata->full_path));
+	fdata->path = remove_level_from_path (fdata->full_path);
+
+	if (*fdata->name == 0)
+		file_data_free (fdata);
+	else
+		fr_command_add_file (comm, fdata);
+}
+
+/* lzop let us known the uncompressed size, original date and name. To get it run:
+ * $ lzop -lvN file.txt.lzo
+ * Method         Length    Packed  Ratio     Date    Time   Name
+ * ------         ------    ------  -----     ----    ----   ----
+ * LZO1X-1       3454395    758185  78.1%  2018-11-02 12:33  ./original_file.txt
+ */
+static void
+fr_command_cfile_list__lzop(FrCommand  *comm)
+{
+	fr_process_set_out_line_func (FR_COMMAND (comm)->process,
+				      list__process_line_lzop,
+				      comm);
+
+	fr_process_begin_command (comm->process, "lzop");
+	fr_process_add_arg (comm->process, "-lvN");
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_end_command (comm->process);
+	fr_process_start (comm->process);
+}
+
 
 static void
 fr_command_cfile_list (FrCommand  *comm)
@@ -172,6 +268,9 @@ fr_command_cfile_list (FrCommand  *comm)
 
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
 		fr_command_cfile_list__gzip(comm);
+	}
+	else if (is_mime_type (comm->mime_type, "application/x-lzop")) {
+		fr_command_cfile_list__lzop(comm);
 	}
 	else {
 		/* ... other compressors do not support this feature so
