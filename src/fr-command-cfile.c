@@ -101,7 +101,7 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
  */
 static void
 list__process_line_gzip(char *line,
-						gpointer data)
+			gpointer data)
 {
 	FrCommand  *comm = FR_COMMAND (data);
 	FileData   *fdata;
@@ -111,7 +111,7 @@ list__process_line_gzip(char *line,
 	fdata = file_data_new ();
 
 	fields = split_line (line, 2);
-    const char *field_uncompressed = fields[1]; // e.g. "3454395"
+	const char *field_uncompressed = fields[1]; // e.g. "3454395"
 	if (strcmp (field_uncompressed, "-1") != 0)
 		fdata->size = g_ascii_strtoull (field_uncompressed, NULL, 10);
 	g_strfreev (fields);
@@ -152,16 +152,16 @@ list__process_line_gzip(char *line,
 static void
 fr_command_cfile_list__gzip(FrCommand  *comm)
 {
-    fr_process_set_out_line_func (FR_COMMAND (comm)->process,
-                                  list__process_line_gzip,
-                                  comm);
+	fr_process_set_out_line_func (FR_COMMAND (comm)->process,
+				      list__process_line_gzip,
+				      comm);
 
-    fr_process_begin_command (comm->process, "gzip");
-    fr_process_add_arg (comm->process, "-l");
-    fr_process_add_arg (comm->process, "-q");
-    fr_process_add_arg (comm->process, comm->filename);
-    fr_process_end_command (comm->process);
-    fr_process_start (comm->process);
+	fr_process_begin_command (comm->process, "gzip");
+	fr_process_add_arg (comm->process, "-l");
+	fr_process_add_arg (comm->process, "-q");
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_end_command (comm->process);
+	fr_process_start (comm->process);
 }
 
 
@@ -171,7 +171,7 @@ fr_command_cfile_list (FrCommand  *comm)
 	FrCommandCFile *comm_cfile = FR_COMMAND_CFILE (comm);
 
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
-        fr_command_cfile_list__gzip(comm);
+		fr_command_cfile_list__gzip(comm);
 	}
 	else {
 		/* ... other compressors do not support this feature so
