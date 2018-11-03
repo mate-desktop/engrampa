@@ -203,6 +203,7 @@ static struct {
 		{ "application/x-zoo", TRUE },
 		{ "application/zip", TRUE },
 		{ "multipart/x-zip", TRUE },
+		{ "application/zstd", TRUE },
 		{ NULL, FALSE }
 };
 
