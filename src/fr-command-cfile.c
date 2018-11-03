@@ -440,6 +440,14 @@ fr_command_cfile_add (FrCommand     *comm,
 		fr_process_end_command (comm->process);
 		compressed_filename = g_strconcat (filename, ".gz", NULL);
 	}
+    else if (is_mime_type (comm->mime_type, "application/x-brotli")) {
+        fr_process_begin_command (comm->process, "brotli");
+        fr_process_set_working_dir (comm->process, temp_dir);
+        fr_process_add_arg (comm->process, "--");
+        fr_process_add_arg (comm->process, filename);
+        fr_process_end_command (comm->process);
+        compressed_filename = g_strconcat (filename, ".br", NULL);
+    }
 	else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
 		fr_process_begin_command (comm->process, "bzip2");
 		fr_process_set_working_dir (comm->process, temp_dir);
@@ -571,6 +579,13 @@ fr_command_cfile_extract (FrCommand  *comm,
 		fr_process_add_arg (comm->process, temp_file);
 		fr_process_end_command (comm->process);
 	}
+    else if (is_mime_type (comm->mime_type, "application/x-brotli")) {
+        fr_process_begin_command (comm->process, "brotli");
+        fr_process_add_arg (comm->process, "-f");
+        fr_process_add_arg (comm->process, "-d");
+        fr_process_add_arg (comm->process, temp_file);
+        fr_process_end_command (comm->process);
+    }
 	else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
 		fr_process_begin_command (comm->process, "bzip2");
 		fr_process_add_arg (comm->process, "-f");
@@ -663,6 +678,7 @@ fr_command_cfile_extract (FrCommand  *comm,
 
 
 const char *cfile_mime_type[] = { "application/x-gzip",
+				  "application/x-brotli",
 				  "application/x-bzip",
 				  "application/x-compress",
 				  "application/x-lzip",
@@ -690,6 +706,10 @@ fr_command_cfile_get_capabilities (FrCommand  *comm,
 	capabilities = FR_COMMAND_CAN_DO_NOTHING;
 	if (is_mime_type (mime_type, "application/x-gzip")) {
 		if (is_program_available ("gzip", check_command))
+			capabilities |= FR_COMMAND_CAN_READ_WRITE;
+	}
+	else if (is_mime_type (mime_type, "application/x-brotli")) {
+		if (is_program_available ("brotli", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
 	else if (is_mime_type (mime_type, "application/x-bzip")) {
@@ -745,6 +765,8 @@ fr_command_cfile_get_packages (FrCommand  *comm,
 {
 	if (is_mime_type (mime_type, "application/x-gzip"))
 		return PACKAGES ("gzip");
+    else if (is_mime_type (mime_type, "application/x-brotli"))
+        return PACKAGES ("brotli");
 	else if (is_mime_type (mime_type, "application/x-bzip"))
 		return PACKAGES ("bzip2");
 	else if (is_mime_type (mime_type, "application/x-compress"))
