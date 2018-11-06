@@ -60,7 +60,7 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 		char     buffer[10];
 
 		if (g_input_stream_read (stream, buffer, 10, NULL, NULL) >= 0) {
-            unsigned char flag = buffer[3];
+			unsigned char flag = buffer[3];
 			/* Check whether the FLG.FNAME is set */
 			if ((flag & 0x08) != 0x08)
 				filename_present = FALSE;
@@ -100,8 +100,8 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
  * @param data FrCommand*
  */
 static void
-list__process_line_gzip(char *line,
-			gpointer data)
+list__process_line_gzip (gchar    *line,
+			 gpointer  data)
 {
 	FrCommand  *comm = FR_COMMAND (data);
 	FileData   *fdata;
@@ -150,7 +150,7 @@ list__process_line_gzip(char *line,
  *   758185 3454395 78.1% file.txt
  */
 static void
-fr_command_cfile_list__gzip(FrCommand  *comm)
+fr_command_cfile_list__gzip (FrCommand  *comm)
 {
 	fr_process_set_out_line_func (FR_COMMAND (comm)->process,
 				      list__process_line_gzip,
@@ -171,8 +171,8 @@ fr_command_cfile_list__gzip(FrCommand  *comm)
  * LZO1X-1       3454395    758185  78.1%  2018-11-02 12:33  ./original_file.txt
  */
 static void
-list__process_line_lzop(char *line,
-			gpointer data)
+list__process_line_lzop (char     *line,
+			 gpointer  data)
 {
 	// Skip first two lines.
 	// First line have a caption with "Method" in first column
@@ -245,7 +245,7 @@ list__process_line_lzop(char *line,
  * LZO1X-1       3454395    758185  78.1%  2018-11-02 12:33  ./original_file.txt
  */
 static void
-fr_command_cfile_list__lzop(FrCommand  *comm)
+fr_command_cfile_list__lzop (FrCommand  *comm)
 {
 	fr_process_set_out_line_func (FR_COMMAND (comm)->process,
 				      list__process_line_lzop,
@@ -288,8 +288,8 @@ parse_file_size (const gchar *str_size,
  *     1       1    496.3 KiB  3,373.4 KiB  0.147  CRC64   file.txt.xz
  */
 static void
-list__process_line_xz (gchar *line,
-		      gpointer data)
+list__process_line_xz (gchar    *line,
+		       gpointer  data)
 {
 	// Skip first line.
 	// First line have a caption with "Strms" in first column
@@ -335,7 +335,7 @@ list__process_line_xz (gchar *line,
  *     1       1    496.3 KiB  3,373.4 KiB  0.147  CRC64   file.txt.xz
  */
 static void
-fr_command_cfile_list__xz(FrCommand  *comm)
+fr_command_cfile_list__xz (FrCommand  *comm)
 {
 	fr_process_set_out_line_func (FR_COMMAND (comm)->process,
 				      list__process_line_xz,
