@@ -569,7 +569,7 @@ fr_command_cfile_get_packages (FrCommand  *comm,
 	else if (is_mime_type (mime_type, "application/x-lzma"))
 		return PACKAGES ("lzma");
 	else if (is_mime_type (mime_type, "application/x-xz"))
-		return PACKAGES ("xz");
+		return PACKAGES ("xz,xz-utils");
 	else if (is_mime_type (mime_type, "application/x-lzop"))
 		return PACKAGES ("lzop");
 	else if (is_mime_type (mime_type, "application/x-rzip"))
