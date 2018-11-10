@@ -197,6 +197,9 @@ add_compress_arg (FrCommand *comm)
 	if (is_mime_type (comm->mime_type, "application/x-compressed-tar"))
 		fr_process_add_arg (comm->process, "-z");
 
+	else if (is_mime_type (comm->mime_type, "application/x-brotli-compressed-tar"))
+		fr_process_add_arg (comm->process, "--use-compress-program=brotli");
+
 	else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar"))
 		if (is_program_in_path ("lbzip2"))
 			fr_process_add_arg (comm->process, "--use-compress-program=lbzip2");
@@ -544,6 +547,25 @@ fr_command_tar_recompress (FrCommand *comm)
 
 		new_name = g_strconcat (c_tar->uncomp_filename, ".gz", NULL);
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-brotli-compressed-tar")) {
+		fr_process_begin_command (comm->process, "brotli");
+		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
+		switch (comm->compression) {
+		case FR_COMPRESSION_VERY_FAST:
+			fr_process_add_arg (comm->process, "-1"); break;
+		case FR_COMPRESSION_FAST:
+			fr_process_add_arg (comm->process, "-3"); break;
+		case FR_COMPRESSION_NORMAL:
+			fr_process_add_arg (comm->process, "-6"); break;
+		case FR_COMPRESSION_MAXIMUM:
+			fr_process_add_arg (comm->process, "--best"); break; // i.e. -q 11
+		}
+		fr_process_add_arg (comm->process, "-f");
+		fr_process_add_arg (comm->process, c_tar->uncomp_filename);
+		fr_process_end_command (comm->process);
+
+		new_name = g_strconcat (c_tar->uncomp_filename, ".br", NULL);
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar")) {
 		fr_process_begin_command (comm->process, "bzip2");
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
@@ -757,6 +779,11 @@ get_uncompressed_name (FrCommandTar *c_tar,
 		else if (file_extension_is (e_filename, ".tar.gz"))
 			new_name[l - 3] = 0;
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-brotli-compressed-tar")) {
+		/* X.tar.br -->  X.tar */
+		if (file_extension_is (e_filename, ".tar.br"))
+			new_name[l - 3] = 0;
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar")) {
 		/* X.tbz2    -->  X.tar
 		 * X.tar.bz2 -->  X.tar */
@@ -895,6 +922,14 @@ fr_command_tar_uncompress (FrCommand *comm)
 			fr_process_add_arg (comm->process, tmp_name);
 			fr_process_end_command (comm->process);
 		}
+		else if (is_mime_type (comm->mime_type, "application/x-brotli-compressed-tar")) {
+			fr_process_begin_command (comm->process, "brotli");
+			fr_process_set_begin_func (comm->process, begin_func__uncompress, comm);
+			fr_process_add_arg (comm->process, "-f");
+			fr_process_add_arg (comm->process, "-d");
+			fr_process_add_arg (comm->process, tmp_name);
+			fr_process_end_command (comm->process);
+		}
 		else if (is_mime_type (comm->mime_type, "application/x-bzip-compressed-tar")) {
 			fr_process_begin_command (comm->process, "bzip2");
 			fr_process_set_begin_func (comm->process, begin_func__uncompress, comm);
@@ -992,6 +1027,7 @@ fr_command_tar_handle_error (FrCommand   *comm,
 
 
 const char *tar_mime_types[] = { "application/x-compressed-tar",
+				 "application/x-brotli-compressed-tar",
 				 "application/x-bzip-compressed-tar",
 				 "application/x-tar",
 				 "application/x-7z-compressed-tar",
@@ -1029,6 +1065,10 @@ fr_command_tar_get_capabilities (FrCommand  *comm,
 	}
 	else if (is_mime_type (mime_type, "application/x-compressed-tar")) {
 		if (is_program_available ("gzip", check_command))
+			capabilities |= FR_COMMAND_CAN_READ_WRITE;
+	}
+	else if (is_mime_type (mime_type, "application/x-brotli-compressed-tar")) {
+		if (is_program_available ("brotli", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
 	else if (is_mime_type (mime_type, "application/x-bzip-compressed-tar")) {
@@ -1109,6 +1149,8 @@ fr_command_tar_get_packages (FrCommand  *comm,
 		return PACKAGES ("tar,gzip");
 	else if (is_mime_type (mime_type, "application/x-bzip-compressed-tar"))
 		return PACKAGES ("tar,bzip2");
+	else if (is_mime_type (mime_type, "application/x-brotli-compressed-tar"))
+		return PACKAGES ("tar,brotli");
 	else if (is_mime_type (mime_type, "application/x-tarz"))
 		return PACKAGES ("tar,gzip,ncompress");
 	else if (is_mime_type (mime_type, "application/x-lrzip-compressed-tar"))
