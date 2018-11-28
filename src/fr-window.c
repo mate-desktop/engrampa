@@ -367,6 +367,7 @@ struct _FrWindowPrivateData {
 	GtkWidget        *pd_open_destination_button;
 	GtkWidget        *pd_open_destination_and_quit_button;
 	GtkWidget        *pd_quit_button;
+	GtkWidget        *pd_state_button;    //Switch state, pause state or start state
 	GtkWidget        *pd_icon;
 	gboolean          progress_pulse;
 	guint             progress_timeout;  /* Timeout to display the progress dialog. */
@@ -2198,6 +2199,13 @@ real_close_progress_dialog (gpointer data)
 }
 
 
+static void close_suspend_process(FrWindow *window)
+{
+    if (window->archive->process != NULL)
+    {
+         start_close_suspend_process(window->archive->process);
+    }
+}
 static void
 close_progress_dialog (FrWindow *window,
 		       gboolean  close_now)
@@ -2227,6 +2235,7 @@ close_progress_dialog (FrWindow *window,
 								     real_close_progress_dialog,
 								     window);
 	}
+    close_suspend_process(window);
 }
 
 
@@ -2283,6 +2292,31 @@ fr_window_view_extraction_destination_folder (FrWindow *window)
 	open_folder (GTK_WINDOW (window), fr_archive_get_last_extraction_destination (window->archive));
 }
 
+static void change_button_label(GtkWidget *button)
+{
+	const gchar *state;
+	state = gtk_button_get_label(GTK_BUTTON(button));
+	if(g_strrstr("suspend",state) != NULL)
+	{
+		gtk_button_set_label(GTK_BUTTON(button),_("start"));
+	}
+	else
+	{
+		gtk_button_set_label(GTK_BUTTON(button),_("suspend"));
+	}		
+}		
+static void fr_state_switch(FrWindow  *window)
+{
+	int ret;
+	if (window->archive->process != NULL)
+	{
+		ret = start_switch_state (window->archive->process);
+		if(ret == 0)
+		{
+			change_button_label(window->priv->pd_state_button);
+		}		
+	}
+}		
 
 static void
 progress_dialog_response (GtkDialog *dialog,
@@ -2319,6 +2353,9 @@ progress_dialog_response (GtkDialog *dialog,
 	case DIALOG_RESPONSE_QUIT:
 		fr_window_close (window);
 		break;
+	case GTK_RESPONSE_ACCEPT:
+		fr_state_switch (window);
+		break;	
 	default:
 		break;
 	}
@@ -2531,7 +2568,8 @@ create_the_progress_dialog (FrWindow *window)
 	window->priv->pd_open_destination_and_quit_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), _("Show the _Files and Quit"), DIALOG_RESPONSE_OPEN_DESTINATION_FOLDER_AND_QUIT);
 	window->priv->pd_close_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), "gtk-close", GTK_RESPONSE_CLOSE);
 	window->priv->pd_cancel_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), "gtk-cancel", GTK_RESPONSE_CANCEL);
-
+	/*add start button default suspend*/
+	window->priv->pd_state_button = gtk_dialog_add_button (GTK_DIALOG (window->priv->progress_dialog), _("suspend"), GTK_RESPONSE_ACCEPT);
 	d = GTK_DIALOG (window->priv->progress_dialog);
 	gtk_window_set_resizable (GTK_WINDOW (d), TRUE);
 	gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
