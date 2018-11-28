@@ -218,6 +218,7 @@ struct _FrProcessPrivate {
 
 	gboolean     running;
 	gboolean     stopping;
+	gboolean     suspend;
 	gint         current_command;
 	gint         error_command;       /* command that coused an error. */
 
@@ -333,7 +334,7 @@ fr_process_new (void)
 
 
 static void fr_process_stop_priv (FrProcess *process, gboolean emit_signal);
-
+static int  fr_switch_process_state (FrProcess *process);
 
 static void
 fr_process_finalize (GObject *object)
@@ -1026,8 +1027,52 @@ fr_process_start (FrProcess *process)
 		start_current_command (process);
 	}
 }
+static int
+fr_close_suspend_process(FrProcess *process)
+{
+    int ret = -1;
+    g_return_val_if_fail(process != NULL, ret);
 
+    if (process->priv->suspend)
+    {
+        if (process->priv->command_pid > 0)
+        {    
+            ret = killpg (process->priv->command_pid,SIGTERM);
+            ret = killpg (process->priv->command_pid,SIGCONT);
+        }    
+        if(ret == 0)
+            process->priv->suspend = FALSE;
+    }
 
+    return ret;
+}
+static int
+fr_switch_process_state (FrProcess *process)
+{
+    int ret = -1;
+    g_return_val_if_fail(process != NULL, ret);
+
+    if (process->priv->stopping)
+        return ret;
+
+    if (process->priv->suspend)
+    {
+
+        if (process->priv->command_pid > 0)
+            ret = killpg (process->priv->command_pid,SIGCONT);
+        if(ret == 0)
+            process->priv->suspend = FALSE;
+    }
+    else
+    {
+        if (process->priv->command_pid > 0)
+            ret = killpg (process->priv->command_pid,SIGSTOP);
+        if(ret == 0)
+            process->priv->suspend = TRUE;
+    }
+
+    return ret;
+}
 static void
 fr_process_stop_priv (FrProcess *process,
 		      gboolean   emit_signal)
@@ -1075,3 +1120,12 @@ fr_process_stop (FrProcess *process)
 {
 	fr_process_stop_priv (process, TRUE);
 }
+int start_switch_state (FrProcess *process)
+{
+	return fr_switch_process_state (process);
+}
+void start_close_suspend_process(FrProcess *process)
+{
+    fr_close_suspend_process(process);
+}
+

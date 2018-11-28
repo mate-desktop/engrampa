@@ -132,5 +132,6 @@ void        fr_process_set_err_line_func    (FrProcess    *fr_proc,
 					     gpointer      func_data);
 void        fr_process_start                (FrProcess    *fr_proc);
 void        fr_process_stop                 (FrProcess    *fr_proc);
-
+int         start_switch_state              (FrProcess    *fr_proc);
+void        start_close_suspend_process     (FrProcess    *fr_proc);
 #endif /* FR_PROCESS_H */
