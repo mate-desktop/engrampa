@@ -2292,13 +2292,16 @@ fr_window_view_extraction_destination_folder (FrWindow *window)
 	open_folder (GTK_WINDOW (window), fr_archive_get_last_extraction_destination (window->archive));
 }
 
-static void change_button_label (GtkWidget *button)
+static void change_button_label (FrArchive  *archive,
+                                 GtkWidget  *button)
 {
 	const gchar *state;
 	state = gtk_button_get_label (GTK_BUTTON (button));
 
 	if (g_strrstr ("_Pause", state) != NULL)
 	{
+		fr_command_message (archive->command, _("Process paused"));
+
 		gtk_button_set_label (GTK_BUTTON (button), _("_Resume"));
 		gtk_button_set_image (GTK_BUTTON (button),
 				      gtk_image_new_from_icon_name ("media-playback-start",
@@ -2306,21 +2309,23 @@ static void change_button_label (GtkWidget *button)
 	}
 	else
 	{
+		fr_command_message (archive->command, _("Please wait…"));
+
 		gtk_button_set_label (GTK_BUTTON(button), _("_Pause"));
 		gtk_button_set_image (GTK_BUTTON (button),
 				      gtk_image_new_from_icon_name ("media-playback-pause",
 								    GTK_ICON_SIZE_BUTTON));
 	}		
 }		
-static void fr_state_switch(FrWindow  *window)
+static void fr_state_switch (FrWindow  *window)
 {
 	int ret;
 	if (window->archive->process != NULL)
 	{
 		ret = start_switch_state (window->archive->process);
-		if(ret == 0)
+		if (ret == 0)
 		{
-			change_button_label(window->priv->pd_state_button);
+			change_button_label (window->archive ,window->priv->pd_state_button);
 		}		
 	}
 }		
