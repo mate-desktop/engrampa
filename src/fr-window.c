@@ -2292,15 +2292,16 @@ fr_window_view_extraction_destination_folder (FrWindow *window)
 	open_folder (GTK_WINDOW (window), fr_archive_get_last_extraction_destination (window->archive));
 }
 
-static void change_button_label (FrArchive  *archive,
-                                 GtkWidget  *button)
+static void change_button_label (FrWindow  *window,
+                                 GtkWidget *button)
 {
 	const gchar *state;
 	state = gtk_button_get_label (GTK_BUTTON (button));
 
 	if (g_strrstr ("_Pause", state) != NULL)
 	{
-		fr_command_message (archive->command, _("Process paused"));
+		gtk_widget_set_visible (window->priv->pd_progress_bar, FALSE);
+		fr_command_message (window->archive->command, _("Process paused"));
 
 		gtk_button_set_label (GTK_BUTTON (button), _("_Resume"));
 		gtk_button_set_image (GTK_BUTTON (button),
@@ -2309,7 +2310,8 @@ static void change_button_label (FrArchive  *archive,
 	}
 	else
 	{
-		fr_command_message (archive->command, _("Please wait…"));
+		gtk_widget_set_visible (window->priv->pd_progress_bar, TRUE);
+		fr_command_message (window->archive->command, _("Please wait…"));
 
 		gtk_button_set_label (GTK_BUTTON(button), _("_Pause"));
 		gtk_button_set_image (GTK_BUTTON (button),
@@ -2325,7 +2327,7 @@ static void fr_state_switch (FrWindow  *window)
 		ret = start_switch_state (window->archive->process);
 		if (ret == 0)
 		{
-			change_button_label (window->archive ,window->priv->pd_state_button);
+			change_button_label (window, window->priv->pd_state_button);
 		}		
 	}
 }		
