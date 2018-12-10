@@ -2741,6 +2741,7 @@ open_progress_dialog (FrWindow *window,
 
 	create_the_progress_dialog (window);
 	gtk_widget_show (window->priv->pd_cancel_button);
+	gtk_widget_show (window->priv->pd_state_button);
 	gtk_widget_hide (window->priv->pd_open_archive_button);
 	gtk_widget_hide (window->priv->pd_open_destination_button);
 	gtk_widget_hide (window->priv->pd_open_destination_and_quit_button);
@@ -2822,6 +2823,7 @@ open_progress_dialog_with_open_destination (FrWindow *window)
 
 	create_the_progress_dialog (window);
 	gtk_widget_hide (window->priv->pd_cancel_button);
+	gtk_widget_hide (window->priv->pd_state_button);
 	gtk_widget_hide (window->priv->pd_open_archive_button);
 	gtk_widget_show (window->priv->pd_open_destination_button);
 	gtk_widget_show (window->priv->pd_open_destination_and_quit_button);
@@ -2847,6 +2849,7 @@ open_progress_dialog_with_open_archive (FrWindow *window)
 
 	create_the_progress_dialog (window);
 	gtk_widget_hide (window->priv->pd_cancel_button);
+	gtk_widget_hide (window->priv->pd_state_button);
 	gtk_widget_hide (window->priv->pd_open_destination_button);
 	gtk_widget_hide (window->priv->pd_open_destination_and_quit_button);
 	gtk_widget_show (window->priv->pd_open_archive_button);
