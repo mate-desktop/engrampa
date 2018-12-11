@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Xuacu Saturio <xuacusk8@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Ḷḷumex03 <tornes@opmbx.org>, 2018
+# Iñigo Varela <ivarela@softastur.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 08:35+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Ḷḷumex03 <tornes@opmbx.org>, 2018\n"
+"POT-Creation-Date: 2018-09-05 17:05+0200\n"
+"PO-Revision-Date: 2018-03-11 15:09+0000\n"
+"Last-Translator: Iñigo Varela <ivarela@softastur.org>, 2018\n"
 "Language-Team: Asturian (https://www.transifex.com/mate/teams/13566/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +52,7 @@ msgstr "Opción de llanzamientu non reconocida: %d"
 #: ../copy-n-paste/eggdesktopfile.c:1366
 #, c-format
 msgid "Can't pass documents to this desktop element"
-msgstr ""
+msgstr "Nun pueden pasase documentos a esti elementu del escritoriu"
 
 #: ../copy-n-paste/eggdesktopfile.c:1385
 #, c-format
@@ -83,7 +89,7 @@ msgstr "Ver les opciones de xestión de la sesión"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr ""
+msgstr "Un xestor d'archivadores pal entornu d'escritoriu MATE"
 
 #: ../data/engrampa.appdata.xml.in.h:2
 msgid ""
@@ -111,10 +117,33 @@ msgid ""
 "the MATE Desktop Environment. If you would like to know more about MATE and "
 "Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p> Engrampa is an archive manager for the MATE environment. It allows you "
+"to create and modify archives, view the contents of an archive, view a file "
+"contained in an archive, and extract files from archive. </p> <p> Engrampa "
+"is only a front-end (a graphical interface) to archiving programs like tar "
+"and zip. The supported file types are: </p> <ul> <li>7-Zip Compressed File "
+"(.7z)</li> <li>WinAce Compressed File (.ace)</li> <li>ALZip Compressed File "
+"(.alz)</li> <li>AIX Small Indexed Archive (.ar)</li> <li>ARJ Compressed "
+"Archive (.arj)</li> <li>Cabinet File (.cab)</li> <li>UNIX CPIO Archive "
+"(.cpio)</li> <li>Debian Linux Package (.deb) [Read-only mode]</li> "
+"<li>ISO-9660 CD Disc Image (.iso) [Read-only mode]</li> <li>Java Archive "
+"(.jar)</li> <li>Java Enterprise archive (.ear)</li> <li>Java Web Archive "
+"(.war)</li> <li>LHA Archive (.lzh, .lha)</li> <li>WinRAR Compressed Archive "
+"(.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>RPM Linux Package "
+"(.rpm) [Read-only mode]</li> <li>Tape Archive File uncompressed (.tar) or "
+"compressed with: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 "
+"(.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip "
+"(.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> "
+"<li>Stuffit Archives (.bin, .sit)</li> <li>ZIP Archive (.zip)</li> <li>ZIP "
+"Archived Comic Book (.cbz)</li> <li>ZOO Compressed Archive File (.zoo)</li> "
+"<li>Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip, "
+"lzop, rzip, xz</li> </ul> <p> Engrampa is a fork of File Roller and part of "
+"the MATE Desktop Environment. If you would like to know more about MATE and "
+"Engrampa, please visit the project's home page. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
-msgstr ""
+msgstr "Xestor d'archivadores Engrampa"
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2002
 #: ../src/fr-window.c:5508
@@ -127,107 +156,115 @@ msgstr "Crie y modifique un archivador"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
-msgstr ""
+msgstr "Cómo tresnar los ficheros"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:2
 msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
+"Qué criterios han siguise pa tresnar los ficheros. Los valores dables son: "
+"nome, tamañu, tipu, hora, ruta"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:3
 msgid "Sort type"
-msgstr ""
+msgstr "Ordenar por tipos"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:4
 msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
 msgstr ""
+"Si hai d'ordenar en direición ascendente o descendente. Valores válidos: "
+"ascendente, descendente."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:5
 msgid "List Mode"
-msgstr ""
+msgstr "Enllistar por mou"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:6
 msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
+"Whether to view all files in the archive (all_files), or view the archive as"
+" a folder (as_folder)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:7
 msgid "Display type"
-msgstr ""
+msgstr "Amosar por tipos"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:8
 msgid "Display the Type column in the main window."
-msgstr ""
+msgstr "Amosar la columna Tipos na ventana principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:9
 msgid "Display size"
-msgstr ""
+msgstr "Amosar tamañu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:10
 msgid "Display the Size column in the main window."
-msgstr ""
+msgstr "Amosar la columna Tamañu na ventana principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:11
 msgid "Display time"
-msgstr ""
+msgstr "Amosar el tiempu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:12
 msgid "Display the Time column in the main window."
-msgstr ""
+msgstr "Amosar la columna Tiempu na ventana principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:13
 msgid "Display path"
-msgstr ""
+msgstr "Amosar ruta"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:14
 msgid "Display the Path column in the main window."
-msgstr ""
+msgstr "Amosar la columna Ruta na ventana principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:15
 msgid "Use MIME icons"
-msgstr ""
+msgstr "Usar iconos MIME"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:16
 msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
+"if TRUE will display icons depending on the file type (slower), otherwise "
+"will use always the same icon for all files (faster)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:17
 msgid "Name column width"
-msgstr ""
+msgstr "Nomar l'anchor de la columna"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:18
 msgid "The default width of the name column in the file list."
-msgstr ""
+msgstr "L'anchor predetermináu pal nome de la columna na llista de ficheros"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:19
 msgid "Max history length"
-msgstr ""
+msgstr "Llargor máximu rexistráu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:20
 msgid "Max number of items in the Open Recents menu."
-msgstr ""
+msgstr "Númberu máximu d'items nel menú de ficheros abiertos de recién"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:21
 msgid "View toolbar"
-msgstr ""
+msgstr "Ver barra ferramientes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:22
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "Conseña si hai d'amosar la barra ferramientes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:23
 msgid "View statusbar"
-msgstr ""
+msgstr "Ver la barra d'estáu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:24
 msgid "Whether to display the statusbar."
-msgstr ""
+msgstr "Conseña si hai d'amosar la barra d'estáu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:25 ../src/ui.h:234
 msgid "View the folders pane"
@@ -235,57 +272,63 @@ msgstr "Ver el panel de carpetes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:26
 msgid "Whether to display the folders pane."
-msgstr ""
+msgstr "Conseña si hai d'amosar el panel de carpetes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:27
 msgid "Editors"
-msgstr ""
+msgstr "Editores"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:28
 msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
+"Llista d'aplicaciones introducíes nel cuadru de diálogu «Abrir ficheru» y "
+"non asociaes col tipu de ficheru."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:29
 msgid "Compression level"
-msgstr ""
+msgstr "Nivel de comprensión"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:30
 msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
+"Nivel de comprensión usáu al amestar ficheros a un archivador. Valores "
+"dables: mui_rápidu, rápidu, normal, máximu."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:31
 msgid "Encrypt the archive header"
-msgstr ""
+msgstr "Cifrar los datos del ficheru"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:32
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
+"Conseña si hai de cifrar los datos del archivu.  Si los datos se cifren, la "
+"contraseña solicitaráse pa llistar tamién el conteníu total d'archivos."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Overwrite existing files"
-msgstr ""
+msgstr "Sobrescribir los ficheros esistentes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "Do not overwrite newer files"
-msgstr ""
+msgstr "Nun sobrescribir los ficheros más recientes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Recreate the folders stored in the archive"
-msgstr ""
+msgstr "Recrear les carpetes almacenaes nel archivador"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:36
 msgid "Default volume size"
-msgstr ""
+msgstr "Tamañu de volume predetermináu"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
 msgid "The default size for volumes."
-msgstr ""
+msgstr "El tamañu que van recibir los volumes de mou predetermináu"
 
 #: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
@@ -294,7 +337,7 @@ msgstr "Estrayer Equí"
 #. Translators: the current position is the current folder
 #: ../caja/caja-engrampa.c:337
 msgid "Extract the selected archive to the current position"
-msgstr ""
+msgstr "Estrayer l'archivador esbilláu na posición actual"
 
 #: ../caja/caja-engrampa.c:354
 msgid "Extract To..."
@@ -306,11 +349,11 @@ msgstr "Estrái l'archivador seleicionáu"
 
 #: ../caja/caja-engrampa.c:374
 msgid "Compress..."
-msgstr ""
+msgstr "Comprimir…"
 
 #: ../caja/caja-engrampa.c:375
 msgid "Create a compressed archive with the selected objects"
-msgstr ""
+msgstr "Crear un archivador comprimíu colos oxetos esbillaos"
 
 #: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:330
 #: ../src/server.c:457
@@ -319,7 +362,7 @@ msgstr "Engrampa"
 
 #: ../caja/libcaja-engrampa.caja-extension.in.in.h:2
 msgid "Allows to create and extract archives"
-msgstr ""
+msgstr "Permitir crear y estrayer archivadores"
 
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
@@ -334,7 +377,7 @@ msgstr "Tien d'especificar un nome del archivador."
 
 #: ../src/actions.c:198
 msgid "You don't have permission to create an archive in this folder"
-msgstr "Nun tien permisos pa criar un archivador nesta carpeta"
+msgstr "Nun tien permisos pa crear un archivador nesta carpeta"
 
 #: ../src/actions.c:234 ../src/dlg-package-installer.c:269
 #: ../src/dlg-package-installer.c:278 ../src/dlg-package-installer.c:306
@@ -401,6 +444,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2018 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2018 The MATE developers"
 
 #: ../src/actions.c:880
 msgid "An archive manager for MATE."
@@ -476,7 +521,7 @@ msgstr "Guarda les opciones"
 
 #: ../src/dlg-add-folder.c:878
 msgid "_Options Name:"
-msgstr ""
+msgstr "_Nome d'opciones:"
 
 #: ../src/dlg-ask-password.c:124
 #, c-format
@@ -502,7 +547,7 @@ msgstr "Use un nome distintu"
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
-msgstr "Nun tien permisos pa criar un archivador na carpeta de destín."
+msgstr "Nun tien permisos pa crear un archivador na carpeta de destín."
 
 #: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6921
 #, c-format
@@ -517,7 +562,7 @@ msgstr ""
 
 #: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6930
 msgid "Create _Folder"
-msgstr "Criar Car_peta"
+msgstr "Crear _carpeta"
 
 #: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:6947
 #, c-format
@@ -575,7 +620,7 @@ msgstr "Aiciones"
 
 #: ../src/dlg-extract.c:390
 msgid "Re-crea_te folders"
-msgstr "R_ecriar les carpetes"
+msgstr "R_e-crear les carpetes"
 
 #: ../src/dlg-extract.c:394
 msgid "Over_write existing files"
@@ -588,7 +633,7 @@ msgstr "None_strayer ficheros más antiguos"
 #: ../src/dlg-new.c:426
 msgctxt "File"
 msgid "New"
-msgstr ""
+msgstr "Nuevu"
 
 #: ../src/dlg-new.c:439
 msgctxt "File"
@@ -605,14 +650,16 @@ msgid ""
 "There is no command installed for %s files.\n"
 "Do you want to search for a command to open this file?"
 msgstr ""
+"Nun esiste nenguna orde instalada pa los ficheros %s.\n"
+"¿Quies guetar una orde p'abrir esti ficheru?"
 
 #: ../src/dlg-package-installer.c:293
 msgid "Could not open this file type"
-msgstr ""
+msgstr "Nun pudo abrise esta triba de ficheru"
 
 #: ../src/dlg-package-installer.c:296
 msgid "_Search Command"
-msgstr ""
+msgstr "_Guetar orde"
 
 #. Translators: after the colon there is a folder name.
 #: ../src/dlg-prop.c:108
@@ -631,7 +678,7 @@ msgstr "Propiedaes de %s"
 
 #: ../src/dlg-prop.c:135
 msgid "Last modified:"
-msgstr ""
+msgstr "Cabera modificación:"
 
 #: ../src/dlg-prop.c:145
 msgid "Archive size:"
@@ -674,7 +721,7 @@ msgstr "¿Actualizar los ficheros nel archivador «%s»?"
 #: ../src/eggfileformatchooser.c:236
 #, c-format
 msgid "File _Format: %s"
-msgstr ""
+msgstr "_Formatu de ficheru: %s"
 
 #: ../src/eggfileformatchooser.c:397
 msgid "All Files"
@@ -682,19 +729,19 @@ msgstr "Tolos Ficheros"
 
 #: ../src/eggfileformatchooser.c:398
 msgid "All Supported Files"
-msgstr ""
+msgstr "Tolos ficheros soportaos"
 
 #: ../src/eggfileformatchooser.c:407
 msgid "By Extension"
-msgstr ""
+msgstr "Por estensión"
 
 #: ../src/eggfileformatchooser.c:421
 msgid "File Format"
-msgstr ""
+msgstr "Formatu de ficheru"
 
 #: ../src/eggfileformatchooser.c:439
 msgid "Extension(s)"
-msgstr ""
+msgstr "Estensiones"
 
 #: ../src/eggfileformatchooser.c:669
 #, c-format
@@ -776,112 +823,116 @@ msgid "Ace (.ace)"
 msgstr "Ace (.ace)"
 
 #: ../src/fr-init.c:65
+msgid "Ar (.a)"
+msgstr ""
+
+#: ../src/fr-init.c:66
 msgid "Ar (.ar)"
 msgstr "Ar (.ar)"
 
-#: ../src/fr-init.c:66
+#: ../src/fr-init.c:67
 msgid "Arj (.arj)"
 msgstr "Arj (.arj)"
 
-#: ../src/fr-init.c:68
+#: ../src/fr-init.c:69
 msgid "Tar compressed with bzip2 (.tar.bz2)"
 msgstr "Tar comprimíu con bzip2 (.tar.bz2)"
 
-#: ../src/fr-init.c:70
+#: ../src/fr-init.c:71
 msgid "Tar compressed with bzip (.tar.bz)"
 msgstr "Tar comprimíu con bzip (.tar.bz)"
 
-#: ../src/fr-init.c:71
+#: ../src/fr-init.c:72
 msgid "Cabinet (.cab)"
 msgstr "Cabinet (.cab)"
 
-#: ../src/fr-init.c:72
+#: ../src/fr-init.c:73
 msgid "Rar Archived Comic Book (.cbr)"
 msgstr "Llibru de cómic archiváu en rar (.cbr)"
 
-#: ../src/fr-init.c:73
+#: ../src/fr-init.c:74
 msgid "Zip Archived Comic Book (.cbz)"
 msgstr "Llibru de cómic archiváu en zip (.cbz)"
 
-#: ../src/fr-init.c:76
+#: ../src/fr-init.c:77
 msgid "Tar compressed with gzip (.tar.gz)"
 msgstr "Tar comprimíu con gzip (.tar.gz)"
 
-#: ../src/fr-init.c:79
+#: ../src/fr-init.c:80
 msgid "Ear (.ear)"
 msgstr "Ear (.ear)"
 
-#: ../src/fr-init.c:80
+#: ../src/fr-init.c:81
 msgid "Self-extracting zip (.exe)"
 msgstr "Zip autoestrayíble (.exe)"
 
-#: ../src/fr-init.c:82
+#: ../src/fr-init.c:83
 msgid "Jar (.jar)"
 msgstr "Jar (.jar)"
 
-#: ../src/fr-init.c:83
+#: ../src/fr-init.c:84
 msgid "Lha (.lzh)"
 msgstr "Lha (.lzh)"
 
-#: ../src/fr-init.c:84
+#: ../src/fr-init.c:85
 msgid "Lrzip (.lrz)"
 msgstr ""
 
-#: ../src/fr-init.c:85
+#: ../src/fr-init.c:86
 msgid "Tar compressed with lrzip (.tar.lrz)"
 msgstr ""
 
-#: ../src/fr-init.c:87
+#: ../src/fr-init.c:88
 msgid "Tar compressed with lzip (.tar.lz)"
 msgstr ""
 
-#: ../src/fr-init.c:89
+#: ../src/fr-init.c:90
 msgid "Tar compressed with lzma (.tar.lzma)"
 msgstr "Tar comprimíu con lzma (.tar.lzma)"
 
-#: ../src/fr-init.c:91
+#: ../src/fr-init.c:92
 msgid "Tar compressed with lzop (.tar.lzo)"
 msgstr "Tar comprimíu con lzop (.tar.lzo)"
 
-#: ../src/fr-init.c:92
+#: ../src/fr-init.c:93
 msgid "Windows Imaging Format (.wim)"
 msgstr ""
 
-#: ../src/fr-init.c:93
+#: ../src/fr-init.c:94
 msgid "Rar (.rar)"
 msgstr "Rar (.rar)"
 
-#: ../src/fr-init.c:96
+#: ../src/fr-init.c:97
 msgid "Tar uncompressed (.tar)"
 msgstr "Tar ensin compresión (.tar)"
 
-#: ../src/fr-init.c:97
+#: ../src/fr-init.c:98
 msgid "Tar compressed with compress (.tar.Z)"
 msgstr "Tar comprimíu con compress (.tar.Z)"
 
-#: ../src/fr-init.c:99
+#: ../src/fr-init.c:100
 msgid "War (.war)"
 msgstr "War (.war)"
 
-#: ../src/fr-init.c:100
+#: ../src/fr-init.c:101
 msgid "Xz (.xz)"
 msgstr ""
 
-#: ../src/fr-init.c:101
+#: ../src/fr-init.c:102
 msgid "Tar compressed with xz (.tar.xz)"
 msgstr ""
 
-#: ../src/fr-init.c:102
+#: ../src/fr-init.c:103
 msgid "Zoo (.zoo)"
 msgstr "Zoo (.zoo)"
 
-#: ../src/fr-init.c:103
+#: ../src/fr-init.c:104
 msgid "Zip (.zip)"
 msgstr "Zip (.zip)"
 
 #: ../src/fr-stock.c:42
 msgid "C_reate"
-msgstr "C_riar"
+msgstr "C_rear"
 
 #: ../src/fr-stock.c:43 ../src/fr-stock.c:44
 msgid "_Add"
@@ -995,7 +1046,7 @@ msgstr ""
 #: ../src/fr-window.c:2708
 #, c-format
 msgid "%d file remaining"
-msgid_plural "%'d files remaining"
+msgid_plural "%d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1066,16 +1117,16 @@ msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
-"¿Quier amestar esti ficheru al archivador autual o prefier abrilu como un "
+"¿Quies amestar esti ficheru al archivador actual o prefieres abrilu como un "
 "archivador nuevu ?"
 
 #: ../src/fr-window.c:4169
 msgid "Do you want to create a new archive with these files?"
-msgstr "¿Quier criar un nuevu archivador con estos ficheros?"
+msgstr "¿Quies crear un nuevu archivador con estos ficheros?"
 
 #: ../src/fr-window.c:4172
 msgid "Create _Archive"
-msgstr "Criar _archivador"
+msgstr "Crear _archivador"
 
 #: ../src/fr-window.c:4770 ../src/fr-window.c:5831
 msgid "Folders"
@@ -1145,7 +1196,7 @@ msgstr ""
 
 #: ../src/fr-window.c:6820
 msgid "Replace _All"
-msgstr "Troc_ar Too"
+msgstr "Troc_ar too"
 
 #: ../src/fr-window.c:6821
 msgid "_Skip"
@@ -1253,7 +1304,7 @@ msgstr "Salida de llinia de _comandos"
 
 #: ../src/gtk-utils.c:740
 msgid "Could not display help"
-msgstr "Nun pudo amosase l'aida"
+msgstr "Nun pudo amosase l'ayuda"
 
 #: ../src/main.c:51
 msgid "Add files to the specified archive and quit the program"
@@ -1301,7 +1352,7 @@ msgstr ""
 
 #: ../src/main.c:314 ../src/server.c:444
 msgid "- Create and modify an archive"
-msgstr "- Criar y modificar un archivador"
+msgstr "- Crear y modificar un archivador"
 
 #: ../src/ui/add-options.ui.h:1
 msgid "Load Options"
@@ -1401,7 +1452,7 @@ msgstr "Amestar carpeta"
 
 #: ../src/ui.h:60
 msgid "Close the current archive"
-msgstr "Zarra l'archivador autual"
+msgstr "Zarra l'archivador actual"
 
 #: ../src/ui.h:63
 msgid "Contents"
@@ -1501,7 +1552,7 @@ msgstr "Amosar les propiedaes del archivador"
 
 #: ../src/ui.h:160
 msgid "Reload current archive"
-msgstr "Recarga l'archivador autual"
+msgstr "Recarga l'archivador actual"
 
 #: ../src/ui.h:163
 msgid "Save As…"
@@ -1509,7 +1560,7 @@ msgstr "Guardar Como..."
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"
-msgstr "Guarda l'archivador autual con un nome diferente"
+msgstr "Guarda l'archivador actual con un nome diferente"
 
 #: ../src/ui.h:168
 msgid "Select all files"
@@ -1644,9 +1695,9 @@ msgid ""
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
-"<i><b>Nota:</b> la contraseña usaráse pa cifrar los ficheros qu'ameste al "
-"archivador autual, y pa descifrar los ficheros qu'estraiga del archivador "
-"autual. Cuando se pieslle l'archivador desaniciaráse contraseña.</i>"
+"<i><b>Nota:</b> la contraseña usaráse pa cifrar los ficheros qu'amiestes al "
+"archivador actual, y pa descifrar los ficheros qu'estraigas del archivador "
+"actual. Cuando se pieslle l'archivador desaniciaráse contraseña.</i>"
 
 #: ../src/ui/update.ui.h:1
 msgid "_Update"
