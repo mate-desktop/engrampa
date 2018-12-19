@@ -17,7 +17,7 @@ $(service_DATA): $(service_in_files) Makefile
 	$(AM_V_GEN) $(SED) -e "s|\@libexecdir\@|$(libexecdir)|" $< > $@
 
 @INTLTOOL_XML_RULE@
-appdatadir = $(datadir)/appdata
+appdatadir = $(datadir)/metainfo
 appdata_in_files = engrampa.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 
