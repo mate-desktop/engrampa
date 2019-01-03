@@ -792,7 +792,7 @@ fr_command_rar_init (FrCommand *comm)
 	comm->propAddCanUpdate             = TRUE;
 	comm->propAddCanReplace            = TRUE;
 	comm->propAddCanStoreFolders       = TRUE;
-	comm->propExtractCanAvoidOverwrite = FALSE;
+	comm->propExtractCanAvoidOverwrite = TRUE;
 	comm->propExtractCanSkipOlder      = TRUE;
 	comm->propExtractCanJunkPaths      = TRUE;
 	comm->propPassword                 = TRUE;
