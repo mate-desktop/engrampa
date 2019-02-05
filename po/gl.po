@@ -4,9 +4,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # André Rivero Castillo <hab130@gmail.com>, 2018
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-05 17:05+0200\n"
 "PO-Revision-Date: 2018-03-11 15:09+0000\n"
-"Last-Translator: André Rivero Castillo <hab130@gmail.com>, 2018\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,7 +88,7 @@ msgstr "Amosar as opcións da xestión de sesións"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr ""
+msgstr "Un xestor de arquivos para o contorno de escritorio MATE"
 
 #: ../data/engrampa.appdata.xml.in.h:2
 msgid ""
@@ -116,6 +116,31 @@ msgid ""
 "the MATE Desktop Environment. If you would like to know more about MATE and "
 "Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p>Engrampa é un xestor de arquivos para o contorno MATE. Permítelle crear e"
+" modificar arquivos, ver o contido dun arquivo, ver un ficheiro contido nun "
+"arquivo, e extraer ficheiros dun arquivo.</p> <p>Engrampa é só unha "
+"interface para os programas de arquivado como tar e zip. Os tipos de arquivo"
+" compatíbeis son:</p> <ul> <li>Arquivador 7-Zip (.7z)</li> <li>Arquivador "
+"WinAce (.ace)</li> <li>Arquivador ALZip (.alz)</li> <li>Arquivador indexado "
+"pequeno AIX (.ar)</li> <li>Arquivador ARJ (.arj)</li> <li>Arquivador Cabinet"
+" (.cab)</li> <li>Arquivador UNIX CPIO (.cpio)</li> <li>Paquete Debian de "
+"Linux (.deb) [Modo de só lectura]</li> <li>Imaxe de CD ISO-9660 (.iso) [Modo"
+" de só lectura]</li> <li>Arquivador Java (.jar)</li> <li>Arquivador Java "
+"Enterprise (.ear)</li> <li>Arquivador Java Web (.war)</li> <li>Arquivador "
+"LHA (.lzh, .lha)</li> <li>Arquivador WinRAR (.rar)</li> <li>Libro de cómic "
+"arquivado en RAR (.cbr)</li> <li>Paquete RPM de Linux (.rpm) [Modo de só "
+"lectura]</li> <li>Archivador Tape Archive sen comprimir (.tar) ou "
+"comprimidos con: gzip (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 "
+"(.tar.bz2, .tbz2), compresión (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip "
+"(.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz)</li> "
+"<li>Arquivador Stuffit (.bin, .sit)</li> <li>Arquivador ZIP (.zip)</li> "
+"<li>Libro de cómic arquivado en ZIP (.cbz)</li> <li>Arquivador ZOO "
+"comprimido (.zoo)</li> <li>Arquivos únicos comprimidos con gzip (.gz), "
+"brotli (.br), bzip (.bz), bzip2 (.bz2), compresión (.Z), lrzip (.lrz), lzip "
+"(.lz), lzop (.lzo), rzip(.rz), xz (.xz).</li> </ul> <p>Engrampa é unha "
+"bifurcación de File Roller e forma parte do contorno de escritorio MATE. Se "
+"quere saber máis sobre o MATE e Engrampa, visite a páxina principal do "
+"proxecto.</p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -132,107 +157,116 @@ msgstr "Crear e modificar un arquivo"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
-msgstr ""
+msgstr "Como ordenar os ficheiros"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:2
 msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
+"Qué criterios deben seguirse para organizar os ficheiros. Os valores "
+"posíbeis son: nome, tamaño, tipo, hora, ruta."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:3
 msgid "Sort type"
-msgstr ""
+msgstr "Ordenar por tipos"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:4
 msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
 msgstr ""
+"Indica se se  deben ordenar en sentido ascendente ou descendente. Posíbeis "
+"valores: ascendente, descendente."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:5
 msgid "List Mode"
-msgstr ""
+msgstr "Modo de lista"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:6
 msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
+"Indica se se queren  ver todos os ficheiros no arquivo (all_files) ou ver o "
+"arquivo como un cartafol (as_folder)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:7
 msgid "Display type"
-msgstr ""
+msgstr "Amosar o tipo"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:8
 msgid "Display the Type column in the main window."
-msgstr ""
+msgstr "Amosar a columna Tipo na xanela principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:9
 msgid "Display size"
-msgstr ""
+msgstr "Amosar o tamaño"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:10
 msgid "Display the Size column in the main window."
-msgstr ""
+msgstr "Amosar a columna do tamaño na xanela principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:11
 msgid "Display time"
-msgstr ""
+msgstr "Amosar a hora"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:12
 msgid "Display the Time column in the main window."
-msgstr ""
+msgstr "Amosar a columna da hora na xanela principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:13
 msgid "Display path"
-msgstr ""
+msgstr "Amosar a ruta"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:14
 msgid "Display the Path column in the main window."
-msgstr ""
+msgstr "Amosar a columna da ruta na xanela principal"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:15
 msgid "Use MIME icons"
-msgstr ""
+msgstr "Usar as iconas MIME"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:16
 msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
+"Se é VERDADEIRO amosará as iconas dependendo do tipo de ficheiros (mais "
+"lento), pola contra empregará sempre as mesmas iconos para todos os ficheiro"
+" (máis rápido)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:17
 msgid "Name column width"
-msgstr ""
+msgstr "Largo da columna do nome"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:18
 msgid "The default width of the name column in the file list."
-msgstr ""
+msgstr "A largura predeterminada da columna do nome na lista de ficheiros."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:19
 msgid "Max history length"
-msgstr ""
+msgstr "Lónxitude máxima do historial"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:20
 msgid "Max number of items in the Open Recents menu."
-msgstr ""
+msgstr "Número máximo de elementos no menú «Abertos recentemenete»"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:21
 msgid "View toolbar"
-msgstr ""
+msgstr "Ver a barra de ferramentas"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:22
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "Indica se se amosa a barra de ferramentas."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:23
 msgid "View statusbar"
-msgstr ""
+msgstr "Ver a barra de estado"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:24
 msgid "Whether to display the statusbar."
-msgstr ""
+msgstr "Indica se se amosa a barra de estado."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:25 ../src/ui.h:234
 msgid "View the folders pane"
@@ -240,57 +274,63 @@ msgstr "Ver o panel de cartafoles"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:26
 msgid "Whether to display the folders pane."
-msgstr ""
+msgstr "Indica se se amosan o panel de cartafoles."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:27
 msgid "Editors"
-msgstr ""
+msgstr "Editores"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:28
 msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
+"Lista de aplicativos introducidos no cadro de diálogo «Abrir ficheiro» e non"
+" asociados co tipo de ficheiro."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:29
 msgid "Compression level"
-msgstr ""
+msgstr "Nivel de compresión:"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:30
 msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
+"Nivel de compresión usado ao engadir ficheiros a un arquivo. Posíbeis "
+"valores: moi_rápido, rápido, normal, máximo."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:31
 msgid "Encrypt the archive header"
-msgstr ""
+msgstr "Cifrar a cabeceira do arquivo"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:32
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
+"Indica se se debe cifrar a cabeceira do arquivo. Se se cifra a cabeceira, "
+"solicitarase o contrasinal incluso para listar o contido do arquivo."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Overwrite existing files"
-msgstr ""
+msgstr "Sobrescribir os ficheiros existentes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "Do not overwrite newer files"
-msgstr ""
+msgstr "Non sobrescribir os ficheiros máis recentes"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Recreate the folders stored in the archive"
-msgstr ""
+msgstr "Recrear os cartafoles almacenados no arquivo"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:36
 msgid "Default volume size"
-msgstr ""
+msgstr "Tamaño predeterminado do volume"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
 msgid "The default size for volumes."
-msgstr ""
+msgstr "O tamaño predeterminado para os volumes"
 
 #: ../caja/caja-engrampa.c:335
 msgid "Extract Here"
@@ -324,7 +364,7 @@ msgstr "Engrampa"
 
 #: ../caja/libcaja-engrampa.caja-extension.in.in.h:2
 msgid "Allows to create and extract archives"
-msgstr ""
+msgstr "Permitir crear e extraer arquivos"
 
 #: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
@@ -405,6 +445,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2018 The MATE developers"
 msgstr ""
+"Dereitos de autoría © 2001-2010 Free Software Foundation, Inc.\n"
+"Dereitos de autoría © 2012-20180 Os desenvolvedores do MATE"
 
 #: ../src/actions.c:880
 msgid "An archive manager for MATE."
@@ -482,7 +524,7 @@ msgstr "Gardar opcións"
 
 #: ../src/dlg-add-folder.c:878
 msgid "_Options Name:"
-msgstr ""
+msgstr "Nome das _opcións:"
 
 #: ../src/dlg-ask-password.c:124
 #, c-format
@@ -673,7 +715,11 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"O ficheiro foi modificado por un aplicativo externo. Se non actualiza este "
+"ficheiro no arquivo, perderá todos os cambios realizados."
 msgstr[1] ""
+"%d ficheiros foron modificados por un aplicativo externo. Se non actualiza "
+"estes ficheiros no arquivo, perderá todos os cambios realizados."
 
 #: ../src/dlg-update.c:193
 #, c-format
@@ -727,7 +773,7 @@ msgstr "Non se atopou o ficheiro."
 #: ../src/fr-archive.c:1246
 #, c-format
 msgid "Archive not found"
-msgstr ""
+msgstr "Non se atopou o arquivo"
 
 #: ../src/fr-archive.c:2444
 msgid "You don't have the right permissions."
@@ -789,7 +835,7 @@ msgstr "Ace (.ace)"
 
 #: ../src/fr-init.c:65
 msgid "Ar (.a)"
-msgstr ""
+msgstr "Ar (.a)"
 
 #: ../src/fr-init.c:66
 msgid "Ar (.ar)"
@@ -911,15 +957,15 @@ msgstr "_Extraer"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d obxecto (%s)"
+msgstr[1] "%d obxectos (%s)"
 
 #: ../src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d obxecto seleccionado (%s)"
+msgstr[1] "%d obxectos seleccionados (%s)"
 
 #: ../src/fr-window.c:1613
 msgid "Folder"
@@ -938,31 +984,31 @@ msgstr "Non foi posíbel amosar o cartafol «%s»"
 #: ../src/fr-window.c:2341 ../src/fr-window.c:2379
 #, c-format
 msgid "Creating \"%s\""
-msgstr ""
+msgstr "Creando «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2345
 #, c-format
 msgid "Loading \"%s\""
-msgstr ""
+msgstr "Cargando «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2349
 #, c-format
 msgid "Reading \"%s\""
-msgstr ""
+msgstr "Lendo «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2353
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr ""
+msgstr "Eliminando ficheiros de «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2357
 #, c-format
 msgid "Testing \"%s\""
-msgstr ""
+msgstr "Probando «%s»"
 
 #: ../src/fr-window.c:2360
 msgid "Getting the file list"
@@ -972,29 +1018,29 @@ msgstr "Obtendo a lista de ficheiros"
 #: ../src/fr-window.c:2364
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr ""
+msgstr "Copiando os ficheiros para engadir en «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2368
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr ""
+msgstr "Engadindo ficheiros a «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2372
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr ""
+msgstr "Extraendo ficheiros de «%s»"
 
 #: ../src/fr-window.c:2375
 msgid "Copying the extracted files to the destination"
-msgstr ""
+msgstr "Copiando no destino os ficheiros extraídos"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2383
 #, c-format
 msgid "Saving \"%s\""
-msgstr ""
+msgstr "Gardando «%s»"
 
 #: ../src/fr-window.c:2529
 msgid "_Open the Archive"
@@ -1006,14 +1052,14 @@ msgstr "_Seleccionar os ficheiros"
 
 #: ../src/fr-window.c:2531
 msgid "Show the _Files and Quit"
-msgstr ""
+msgstr "Amosar os _ficheiros e saír"
 
 #: ../src/fr-window.c:2708
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Resta %d ficheiro"
+msgstr[1] "Restan %d ficheiros"
 
 #: ../src/fr-window.c:2759
 msgid "Extraction completed successfully"
@@ -1025,7 +1071,7 @@ msgstr "O arquivo foi creado correctamente"
 
 #: ../src/fr-window.c:2841
 msgid "Please wait…"
-msgstr ""
+msgstr "Agarde…"
 
 #: ../src/fr-window.c:2910 ../src/fr-window.c:3045
 msgid "Command exited abnormally."
@@ -1175,13 +1221,13 @@ msgstr "_Substituír"
 #. when renaming a file.
 #: ../src/fr-window.c:7657
 msgid "New name is void, please type a name."
-msgstr ""
+msgstr "O nome novo está baleiro, escriba un nome."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
 #: ../src/fr-window.c:7662
 msgid "New name is the same as old one, please type other name."
-msgstr ""
+msgstr "O nome novo é o mesmo que o antigo, escriba outro nome."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
@@ -1191,6 +1237,8 @@ msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
+"O nome «%s» é incorrecto xa que contén polo menos un dos seguientes "
+"caracteres: %s, escriba outro nome."
 
 #: ../src/fr-window.c:7703
 #, c-format
@@ -1220,11 +1268,11 @@ msgstr "Renomear"
 
 #: ../src/fr-window.c:7776
 msgid "_New folder name:"
-msgstr ""
+msgstr "Novo nome de _cartafol:"
 
 #: ../src/fr-window.c:7776
 msgid "_New file name:"
-msgstr ""
+msgstr "Novo nome de _ficheiro:"
 
 #: ../src/fr-window.c:7780
 msgid "_Rename"
@@ -1244,7 +1292,7 @@ msgstr "Pegar a selección"
 
 #: ../src/fr-window.c:8217
 msgid "_Destination folder:"
-msgstr ""
+msgstr "Cartafol de _destino:"
 
 #: ../src/fr-window.c:8820
 msgid "Add files to an archive"
@@ -1329,7 +1377,7 @@ msgstr "_Axuda"
 
 #: ../src/ui/app-menu.ui.h:2
 msgid "_About Archive Manager"
-msgstr ""
+msgstr "Sobre o _xestor de arquivos"
 
 #: ../src/ui/app-menu.ui.h:3
 msgid "_Quit"
@@ -1397,7 +1445,7 @@ msgstr "Información sobre o programa"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
-msgstr ""
+msgstr "_Engadir ficheiros..."
 
 #: ../src/ui.h:44 ../src/ui.h:48
 msgid "Add files to the archive"
@@ -1405,7 +1453,7 @@ msgstr "Engadir ficheiros ao arquivo"
 
 #: ../src/ui.h:51
 msgid "Add a _Folder…"
-msgstr ""
+msgstr "Engadir un carta_fol..."
 
 #: ../src/ui.h:52 ../src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1441,7 +1489,7 @@ msgstr "Pegar o contido do portarretallos"
 
 #: ../src/ui.h:80 ../src/ui.h:101
 msgid "_Rename…"
-msgstr ""
+msgstr "_Renomear…"
 
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
@@ -1461,7 +1509,7 @@ msgstr "Deseleccionar todos os ficheiros"
 
 #: ../src/ui.h:114 ../src/ui.h:118
 msgid "_Extract…"
-msgstr ""
+msgstr "_Extraer…"
 
 #: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
 msgid "Extract files from the archive"
@@ -1469,7 +1517,7 @@ msgstr "Extraer os ficheiros do arquivo"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr ""
+msgstr "Buscar…"
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1481,7 +1529,7 @@ msgstr "Ver a saída producida pola última orde executada"
 
 #: ../src/ui.h:135
 msgid "New…"
-msgstr ""
+msgstr "Novo…"
 
 #: ../src/ui.h:136
 msgid "Create a new archive"
@@ -1489,7 +1537,7 @@ msgstr "Crear un novo arquivo"
 
 #: ../src/ui.h:139
 msgid "Open…"
-msgstr ""
+msgstr "Abrir..."
 
 #: ../src/ui.h:140 ../src/ui.h:144
 msgid "Open archive"
@@ -1497,7 +1545,7 @@ msgstr "Abrir o arquivo"
 
 #: ../src/ui.h:147
 msgid "_Open With…"
-msgstr ""
+msgstr "A_brir con..."
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
@@ -1505,7 +1553,7 @@ msgstr "Abrir os ficheiros seleccionados cun aplicativo"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"
-msgstr ""
+msgstr "Con_trasinal..."
 
 #: ../src/ui.h:152
 msgid "Specify a password for this archive"
@@ -1652,7 +1700,7 @@ msgstr "Contrasinal"
 
 #: ../src/ui/password.ui.h:2
 msgid "_Encrypt the file list"
-msgstr ""
+msgstr "_Cifrar a lista de ficheiros"
 
 #: ../src/ui/password.ui.h:4
 msgid ""
