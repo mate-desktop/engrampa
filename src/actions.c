@@ -21,6 +21,7 @@
  */
 
 #include <config.h>
+#include <glib.h>
 #include <string.h>
 #include <math.h>
 #include <sys/types.h>
@@ -841,16 +842,14 @@ activate_action_manual (GtkAction *action,
 }
 
 
+#define ABOUT_GROUP "About"
+#define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
+
 void
 activate_action_about (GtkAction *action,
-               gpointer   data)
+               gpointer   gp)
 {
-    FrWindow *window = data;
-    const char *authors[] = {
-        "Paolo Bacchilega <paolo.bacchilega@libero.it>",
-        "Perberos <perberos@gmail.com>",
-        NULL
-    };
+    FrWindow *window = gp;
     const char *documenters [] = {
         "Alexander Kirillov",
         "Breda McColgan",
@@ -870,6 +869,29 @@ activate_action_about (GtkAction *action,
         "51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA")
     };
     char *license_text;
+    GKeyFile *key_file;
+    GBytes *bytes;
+    const guint8 *data;
+    gsize data_len;
+    GError *error = NULL;
+    char **authors;
+    gsize n_authors = 0, i;
+
+    bytes = g_resources_lookup_data (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "engrampa.about", G_RESOURCE_LOOKUP_FLAGS_NONE, &error);
+    g_assert_no_error (error);
+
+    data = g_bytes_get_data (bytes, &data_len);
+    key_file = g_key_file_new ();
+    g_key_file_load_from_data (key_file, (const char *) data, data_len, 0, &error);
+    g_assert_no_error (error);
+
+    authors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Authors", &n_authors, NULL);
+
+    g_key_file_free (key_file);
+    g_bytes_unref (bytes);
+
+    for (i = 0; i < n_authors; ++i)
+        authors[i] = EMAILIFY (authors[i]);
 
     license_text =  g_strjoin ("\n\n", _(license[0]), _(license[1]), _(license[2]), NULL);
 
@@ -887,5 +909,6 @@ activate_action_about (GtkAction *action,
                    "website", "http://mate-desktop.org",
                    NULL);
 
+    g_strfreev (authors);
     g_free (license_text);
 }

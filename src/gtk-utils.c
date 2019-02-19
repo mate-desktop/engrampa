@@ -22,11 +22,11 @@
 
 #include <config.h>
 #include <string.h>
+#include <glib.h>
 #include <gtk/gtk.h>
 #include "gtk-utils.h"
 
 #define LOAD_BUFFER_SIZE 65536
-#define ENGRAMPA_RESOURCE_UI_PATH "/org/mate/Engrampa/ui/"
 
 static void
 count_selected (GtkTreeModel *model,
@@ -783,7 +783,7 @@ _gtk_builder_new_from_resource (const char *resource_path)
 	GError     *error = NULL;
 
 	builder = gtk_builder_new ();
-	full_path = g_strconcat (ENGRAMPA_RESOURCE_UI_PATH, resource_path, NULL);
+	full_path = g_strconcat (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S, resource_path, NULL);
         if (! gtk_builder_add_from_resource (builder, full_path, &error)) {
                 g_warning ("%s\n", error->message);
                 g_clear_error (&error);
