@@ -26,6 +26,7 @@ AM_CPPFLAGS =						\
 	-I$(top_srcdir)/copy-n-paste/			\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
+	-DENGRAMPA_RESOURCE_UI_PATH="\"/org/mate/Engrampa/ui\"" \
 	-DFR_PREFIX=\"$(prefix)\"           		\
         -DFR_SYSCONFDIR=\"$(sysconfdir)\"   		\
         -DFR_DATADIR=\"$(datadir)\"     	    	\

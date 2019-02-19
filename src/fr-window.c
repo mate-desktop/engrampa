@@ -23,6 +23,7 @@
 #include <math.h>
 #include <string.h>
 
+#include <glib.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gdk/gdk.h>
@@ -5997,7 +5998,7 @@ fr_window_construct (FrWindow *window)
 				 g_cclosure_new_swap (G_CALLBACK (fr_window_close), window, NULL));
 
 
-	if (! gtk_ui_manager_add_ui_from_resource (ui, "/org/mate/Engrampa/ui/menus-toolbars.ui", &error)) {
+	if (! gtk_ui_manager_add_ui_from_resource (ui, ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "menus-toolbars.ui", &error)) {
 		g_message ("building menus failed: %s", error->message);
 		g_error_free (error);
 	}
