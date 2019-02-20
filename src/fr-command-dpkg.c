@@ -51,7 +51,7 @@ process_metadata_line (char      *line,
 
         g_return_if_fail (line != NULL);
 
-        fields = split_line (line, 6);
+        fields = split_line (line, 5);
         if (!fields[1] || !g_str_equal (fields[1], "bytes,")) {
                 g_strfreev (fields);
                 return;
@@ -60,7 +60,9 @@ process_metadata_line (char      *line,
         fdata = file_data_new ();
         fdata->size = g_ascii_strtoull (fields[0], NULL, 10);
 
-        if (fields[5] && g_str_equal (fields[4],"*")) {
+        if (g_str_equal (fields[4],"*")) {
+                g_strfreev (fields);
+                fields = split_line (line, 6);
                 name = g_strdup (fields[5]);
         } else {
                 name = g_strdup (get_last_field (line, 5));
