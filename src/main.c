@@ -43,6 +43,14 @@ static int    extract;
 static int    extract_here;
 static char  *default_url = NULL;
 
+static gboolean
+_print_version_and_exit (const gchar *option_name, const gchar *value, gpointer data, GError *error)
+{
+	g_print("%s %s\n", _("Engrampa Archive Manager"), VERSION);
+	exit (EXIT_SUCCESS);
+	return TRUE;
+}
+
 /* argv[0] from main(); used as the command to restart the program */
 static const char *program_argv0 = NULL;
 
@@ -73,6 +81,11 @@ static const GOptionEntry options[] = {
 
 	{ "force", '\0', 0, G_OPTION_ARG_NONE, &ForceDirectoryCreation,
 	  N_("Create destination folder without asking confirmation"),
+	  NULL },
+
+	{ "version", 0, G_OPTION_FLAG_NO_ARG,
+	  G_OPTION_ARG_CALLBACK, _print_version_and_exit,
+	  N_("Show the application's version"),
 	  NULL },
 
 	{ G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_STRING_ARRAY, &remaining_args,
