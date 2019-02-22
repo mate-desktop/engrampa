@@ -153,6 +153,7 @@ static struct {
 	char     *mime_type;
 	gboolean  is_compressed;
 } archive_mime_types[] = {
+		{ "application/vnd.debian.binary-package", TRUE },
 		{ "application/vnd.ms-cab-compressed", TRUE },
 		{ "application/x-7z-compressed", TRUE },
 		{ "application/x-7z-compressed-tar", TRUE },
@@ -172,7 +173,6 @@ static struct {
 		{ "application/x-compress", TRUE },
 		{ "application/x-compressed-tar", TRUE },
 		{ "application/x-cpio", TRUE },
-		{ "application/x-deb", TRUE },
 		{ "application/x-ear", TRUE },
 		{ "application/x-gtar", FALSE },
 		{ "application/x-gzip", TRUE },

@@ -277,8 +277,8 @@ fr_command_ar_handle_error (FrCommand   *comm,
 }
 
 
-const char *ar_mime_type[] = { "application/x-ar", 
-			       "application/x-deb",
+const char *ar_mime_type[] = { "application/x-ar",
+			       "application/vnd.debian.binary-package",
 			       NULL };
 
 
@@ -298,7 +298,7 @@ fr_command_ar_get_capabilities (FrCommand  *comm,
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
 	if (is_program_available ("ar", check_command)) {
-		if (is_mime_type (mime_type, "application/x-deb"))
+		if (is_mime_type (mime_type, "application/vnd.debian.binary-package"))
 			capabilities |= FR_COMMAND_CAN_READ;
 		else if (is_mime_type (mime_type, "application/x-ar"))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;

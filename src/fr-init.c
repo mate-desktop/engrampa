@@ -58,6 +58,8 @@
 /* The capabilities are computed automatically in
  * compute_supported_archive_types() so it's correct to initialize to 0 here. */
 FrMimeTypeDescription mime_type_desc[] = {
+	{ "application/vnd.debian.binary-package",                    ".deb",      N_("Debian package (.deb)"), 0 },
+	{ "application/vnd.debian.binary-package",                    ".udeb",     N_("Debian package (.udeb)"), 0 },
 	{ "application/vnd.ms-cab-compressed",                        ".cab",      N_("Cabinet (.cab)"), 0 },
 	{ "application/vnd.oasis.opendocument.presentation",          ".odp",      N_("OpenDocument Presentation (.odp)"), 0 },
 	{ "application/vnd.oasis.opendocument.spreadsheet",           ".ods",      N_("OpenDocument Spreadsheet (.ods)"), 0 },
@@ -84,7 +86,6 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-compress",                                   ".Z",        N_("Unix Compressed Archive file (.Z)"), 0 },
 	{ "application/x-compressed-tar",                             ".tar.gz",   N_("Tar compressed with gzip (.tar.gz)"), 0 },
 	{ "application/x-cpio",                                       ".cpio",     N_("Unix CPIO Archive (.cpio)"), 0 },
-	{ "application/x-deb",                                        ".deb",      N_("Debian package (.deb)"), 0 },
 	{ "application/x-ear",                                        ".ear",      N_("Ear (.ear)"), 0 },
 	{ "application/x-gzip",                                       ".gz",       N_("GZip compressed file (.gz)"), 0 },
 	{ "application/x-java-archive",                               ".jar",      N_("Jar (.jar)"), 0 },
@@ -128,7 +129,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".cbr", "application/x-cbr" },
 	{ ".cbz", "application/x-cbz" },
 	{ ".cpio", "application/x-cpio" },
-	{ ".deb", "application/x-deb" },
+	{ ".deb", "application/vnd.debian.binary-package" },
 	{ ".ear", "application/x-ear" },
 	{ ".exe", "application/x-ms-dos-executable" },
 	{ ".gz", "application/x-gzip" },
@@ -171,6 +172,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".txz", "application/x-xz-compressed-tar" },
 	{ ".tzma", "application/x-lzma-compressed-tar" },
 	{ ".tzo", "application/x-lzop-compressed-tar" },
+	{ ".udeb", "application/vnd.debian.binary-package" },
 	{ ".war", "application/x-war" },
 	{ ".wim", "application/x-ms-wim" },
 	{ ".xz", "application/x-xz" },

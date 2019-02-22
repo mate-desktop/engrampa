@@ -209,7 +209,7 @@ fr_command_dpkg_extract (FrCommand  *comm,
 }
 
 
-const char *dpkg_mime_type[] = { "application/x-deb", NULL };
+const char *dpkg_mime_type[] = { "application/vnd.debian.binary-package", NULL };
 
 
 static const char **
