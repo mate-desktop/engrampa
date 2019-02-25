@@ -13,6 +13,7 @@
 # Marco Z. <minaz666@gmail.com>, 2018
 # l3nn4rt, 2018
 # Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2018
+# Enrico B. <enricobe@hotmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-08 10:03+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2018\n"
+"Last-Translator: Enrico B. <enricobe@hotmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -123,6 +124,30 @@ msgid ""
 "Roller and part of the MATE Desktop Environment. If you would like to know "
 "more about MATE and Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p> Engrampa è un gestore di archivi per l'ambiente MATE. Permette di creare"
+" e modificare archivi, vederne i contenuti, vedere un file contenuto in un "
+"archivio ed estrarrne i file. </p> <p> Engrampa è solo un front-end "
+"(un'interfaccia grafica) per programmi di archiviazione come tar e zip. I "
+"tipi di file supportati sono: </p> <ul> <li>File compressi 7-Zip (.7z)</li> "
+"<li>File compressi WinAce (.ace)</li> <li>File compressi ALZip (.alz)</li> "
+"<li>AIX Small Indexed Archive (.ar)</li> <li>Archivi compressi ARJ "
+"(.arj)</li> <li> File Cabinet (.cab)</li> <li>Archivi UNIX CPIO (.cpio)</li>"
+" <li>Debian Linux Package (.deb) [Modalità sola lettura]</li> <li>Immagini "
+"disco ISO-9660 CD (.iso) [Modalità sola lettura]</li> <li>Archivi Java "
+"(.jar)</li> <li>Archivi Java Enterprise (.ear)</li> <li>Archivi Web Java "
+"(.war)</li> <li>Archivi LHA (.lzh, .lha)</li> <li>Archivi Compressi WinRAR "
+"(.rar)</li> <li>Fumetti compressi RAR (.cbr)</li> <li>RPM Linux Package "
+"(.rpm) [Modalità sola lettura]</li> <li>Tape Archive File non compressi "
+"(.tar) o compressi con: gzip (.tar.gz, .tgz), brotli (.tar.br), bzip "
+"(.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), comprime (.tar.Z, .taz), lrzip "
+"(.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip "
+"(.tar.7z), xz (.tar.xz) </li> <li>Stuffit Archives (.bin, .sit)</li> <li>ZIP"
+" Archive (.zip)</li> <li>ZIP Archived Comic Book (.cbz)</li> <li>ZOO "
+"Compressed Archive File (.zoo)</li> <li>File singoli compressi con gzip "
+"(.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip (.lrz), "
+"lzip (.lz), lzop (.lzo), rzip(.rz), xz (.xz)</li> </ul> <p> Engrampa è un "
+"fork di File Roller e parte dell'ambiente desktop MATE. Se vuoi scoprire di "
+"più su MATE e Engrampa, visita la home page del progetto. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -296,11 +321,11 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
-msgstr ""
+msgstr "Aggiunge supporto 'unar' per gli archivi .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr ""
+msgstr "Abilita la possibilità di supportare 'unar' per gli archivi .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Overwrite existing files"
@@ -838,11 +863,11 @@ msgstr "Arj (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "brotli (.br)"
-msgstr ""
+msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:69
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
+msgstr "Tar compresso con brotli (.tar.br)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with bzip2 (.tar.bz2)"
@@ -858,27 +883,27 @@ msgstr "Cabinet (.cab)"
 
 #: ../src/fr-init.c:75
 msgid "OpenDocument Presentation"
-msgstr ""
+msgstr "Presentazione OpenDocument"
 
 #: ../src/fr-init.c:76
 msgid "OpenDocument Spreadsheet"
-msgstr ""
+msgstr "Foglio di calcolo OpenDocument"
 
 #: ../src/fr-init.c:77
 msgid "OpenDocument Text"
-msgstr ""
+msgstr "Testo OpenDocument"
 
 #: ../src/fr-init.c:78
 msgid "OpenDocument Presentation Template"
-msgstr ""
+msgstr "Modello di presentazione OpenDocument"
 
 #: ../src/fr-init.c:79
 msgid "OpenDocument Spreadsheet Template"
-msgstr ""
+msgstr "Modello di foglio di calcolo OpenDocument"
 
 #: ../src/fr-init.c:80
 msgid "OpenDocument Text Template"
-msgstr ""
+msgstr "Modello di testo OpenDocument"
 
 #: ../src/fr-init.c:81
 msgid "Rar Archived Comic Book (.cbr)"
@@ -1005,11 +1030,11 @@ msgstr "Impossibile mostrare la cartella «%s»"
 
 #: ../src/fr-window.c:2303
 msgid "Process paused"
-msgstr ""
+msgstr "Processo in pausa"
 
 #: ../src/fr-window.c:2305
 msgid "_Resume"
-msgstr ""
+msgstr "_Riprendi"
 
 #: ../src/fr-window.c:2312 ../src/fr-window.c:2912
 msgid "Please wait…"
@@ -1018,7 +1043,7 @@ msgstr "Attendere prego..."
 #. add start button default suspend
 #: ../src/fr-window.c:2314 ../src/fr-window.c:2605
 msgid "_Pause"
-msgstr ""
+msgstr "_Pausa"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2390 ../src/fr-window.c:2428
@@ -1098,8 +1123,8 @@ msgstr "Mostra i _file ed esci"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d file rimanente"
+msgstr[1] "%d file rimanenti"
 
 #: ../src/fr-window.c:2830
 msgid "Extraction completed successfully"
