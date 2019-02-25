@@ -1,3 +1,39 @@
+### engrampa 1.22.0
+
+  * Translations update
+  * Avoid array index out of bounds parsing dpkg-deb --info
+  * warning: Use of memory after it is freed
+  * Read authors (updated) from engrampa.about gresource
+  * Enable Travis CI
+  * eggsmclient: avoid deprecated 'g_type_class_add_private'
+  * update copyright year to 2019
+  * rar/unrar: Fix: "overwrite existing files" disabled must work
+  * fix fr-command-cfile.c: fr_process_set_working_dir
+  * fr-command-cfile.c: fix indentation
+  * Added test integrity for brotli
+  * Added test integrity for the cfile compressors: gzip, bzip2, etc.
+  * move appdata to metainfo directory
+  * fr-window: show the pause button only if the dialog is working
+  * disable deprecation warnings for distcheck
+  * fr-window: avoid 'gtk_dialog_add_button' with stock ids
+  * fr-window: hide the progress bar if the process is paused
+  * fr-window: change the info label if process is paused/resumed
+  * fr-window: little improvements in the look of pause/resume button
+  * Adding pause and start functions
+  * Fix implementation and use of the alternative package name lookup
+  * Added support for brotli (*.tar.br) compressed tar archives
+  * Add brotli support
+  * Use make functions for HELP_LINGUAS
+  * Replace -Dokumentationteam
+  * Replace -Dokumentationsprojekt with Documentation Project
+  * Manual: Update file format descriptions using shared-mime-info
+  * Fix url of ulinks to point to mate-user-guide
+  * UNIX and Linux systems -> Linux and UNIX-like systems
+  * tx: add atril help to transifex config
+  * Add the ability to support 'unar' over .zip archives
+  * Add support for OpenDocument formats
+  * UI: on the properties dialog, focus the Close button instead of the Help button by default
+
 ### engrampa 1.21.0
 
   * Translations update
