@@ -736,10 +736,8 @@ start_current_command (FrProcess *process)
 	}
 #endif
 
-	if ((fixname) && (system(commandline) != 0)) {
+	if ((fixname) && (system(commandline) != 0))
 		g_warning ("The files could not be move: %s\n", commandline);
-		return;
-	}
 
 	if (info->begin_func != NULL)
 		(*info->begin_func) (info->begin_data);
