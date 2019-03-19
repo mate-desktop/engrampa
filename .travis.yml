@@ -152,6 +152,6 @@ before_scripts:
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/${OWNER_NAME}/mate-icon-theme/raw/master/mate/16x16/apps/system-file-manager.png
+  -   ./gen-index -i https://github.com/mate-desktop/engrampa/raw/master/data/icons/16x16/apps/engrampa.png
   - fi
   - make distcheck
