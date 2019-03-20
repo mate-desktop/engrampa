@@ -688,32 +688,32 @@ start_current_command (FrProcess *process)
 	for (scan = info->args; scan; scan = scan->next) {
 		argv[i++] = scan->data;
 
-		if (g_str_has_prefix(commandline, "mv")) {
+		if (g_str_has_prefix (commandline, "mv")) {
 
-			if ((i==3) && (!g_file_test(argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
-				char	rarfile[strlen(argv[2])+7];
+			if ((i==3) && (!g_file_test (argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
+				char rarfile[strlen (argv[2]) + 7];
 
-				strcpy(rarfile, argv[2]);
-				rarfile[strlen(rarfile)-3]=0;
-				strcat(rarfile, "part1.rar");
+				g_strlcpy (rarfile, argv[2], sizeof (rarfile));
+				rarfile[strlen (rarfile) - 3] = 0;
+				g_strlcat (rarfile, "part1.rar", sizeof (rarfile));
 
-				if (g_str_has_suffix(argv[2], ".7z")) {
-					commandline = g_strconcat(commandline, " ", g_shell_quote(argv[2]), ".*", NULL);
+				if (g_str_has_suffix (argv[2], ".7z")) {
+					commandline = g_strconcat (commandline, " ", g_shell_quote (argv[2]), ".*", NULL);
 					fixname = TRUE;
 				}
-				else if (g_str_has_suffix(argv[2], ".rar")) {
-					rarfile[strlen(rarfile)-5]=0;
-					commandline = g_strconcat(commandline, " ", g_shell_quote(rarfile), "*.rar", NULL);
+				else if (g_str_has_suffix (argv[2], ".rar")) {
+					rarfile[strlen(rarfile) - 5] = 0;
+					commandline = g_strconcat (commandline, " ", g_shell_quote (rarfile), "*.rar", NULL);
 					fixname = TRUE;
 				}
 			}
 			else if ((i==4) && (fixname))
-				commandline = g_strconcat(commandline, " \"$(dirname ", g_shell_quote(argv[3]), ")\"", NULL);
+				commandline = g_strconcat (commandline, " \"$(dirname ", g_shell_quote (argv[3]), ")\"", NULL);
 			else
-				commandline = g_strconcat(commandline, " ", argv[(i-1)], NULL);
+				commandline = g_strconcat (commandline, " ", argv[(i - 1)], NULL);
 		}
-		else if (g_str_has_prefix(argv[0], "mv")) {
-			commandline = g_strconcat(commandline, "mv", NULL);
+		else if (g_str_has_prefix (argv[0], "mv")) {
+			commandline = g_strconcat (commandline, "mv", NULL);
 		}
 	}
 
@@ -736,7 +736,7 @@ start_current_command (FrProcess *process)
 	}
 #endif
 
-	if ((fixname) && (system(commandline) != 0))
+	if ((fixname) && (system (commandline) != 0))
 		g_warning ("The files could not be move: %s\n", commandline);
 
 	if (info->begin_func != NULL)
