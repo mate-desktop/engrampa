@@ -138,7 +138,7 @@ variables:
     -enable-checker alpha.core.FixedAddr
     -enable-checker security.insecureAPI.strcpy"'
 
-before_scripts:
+build_scripts:
   - if [ ${DISTRO_NAME} == "debian" ];then
   -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
   -     bash ./debian.sh
