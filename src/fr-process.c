@@ -699,21 +699,33 @@ start_current_command (FrProcess *process)
 
 				if (g_str_has_suffix (argv[2], ".7z")) {
 					g_string_append (commandline, " ");
-					g_string_append (commandline, g_shell_quote (argv[2]));
+
+					gchar *tempstr = g_shell_quote (argv[2]);
+					g_string_append (commandline, tempstr);
+					g_free (tempstr);
+
 					g_string_append (commandline, ".*");
 					fixname = TRUE;
 				}
 				else if (g_str_has_suffix (argv[2], ".rar")) {
 					rarfile[strlen(rarfile) - 5] = 0;
 					g_string_append (commandline, " ");
-					g_string_append (commandline, g_shell_quote (rarfile));
+
+					gchar *tempstr = g_shell_quote (rarfile);
+					g_string_append (commandline, tempstr);
+					g_free (tempstr);
+
 					g_string_append (commandline, "*.rar");
 					fixname = TRUE;
 				}
 			}
 			else if ((i == 4) && (fixname)) {
 				g_string_append (commandline, " \"$(dirname ");
-				g_string_append (commandline, g_shell_quote (argv[3]));
+
+				gchar *tempstr = g_shell_quote (argv[3]);
+				g_string_append (commandline, tempstr);
+				g_free (tempstr);
+
 				g_string_append (commandline, ")\"");
 			}
 			else {
