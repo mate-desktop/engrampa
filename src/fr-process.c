@@ -676,7 +676,7 @@ start_current_command (FrProcess *process)
 	char          **argv;
 	int             out_fd, err_fd;
 	int             i = 0;
-	char           *commandline = "";
+	GString        *commandline = g_string_new ("");
 	gboolean        fixname = FALSE;
 
 	debug (DEBUG_INFO, "%d/%d) ", process->priv->current_command, process->priv->n_comm);
@@ -688,9 +688,9 @@ start_current_command (FrProcess *process)
 	for (scan = info->args; scan; scan = scan->next) {
 		argv[i++] = scan->data;
 
-		if (g_str_has_prefix (commandline, "mv")) {
+		if (g_str_has_prefix (commandline->str, "mv")) {
 
-			if ((i==3) && (!g_file_test (argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
+			if ((i == 3) && (!g_file_test (argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
 				char rarfile[strlen (argv[2]) + 7];
 
 				g_strlcpy (rarfile, argv[2], sizeof (rarfile));
@@ -698,22 +698,31 @@ start_current_command (FrProcess *process)
 				g_strlcat (rarfile, "part1.rar", sizeof (rarfile));
 
 				if (g_str_has_suffix (argv[2], ".7z")) {
-					commandline = g_strconcat (commandline, " ", g_shell_quote (argv[2]), ".*", NULL);
+					g_string_append (commandline, " ");
+					g_string_append (commandline, g_shell_quote (argv[2]));
+					g_string_append (commandline, ".*");
 					fixname = TRUE;
 				}
 				else if (g_str_has_suffix (argv[2], ".rar")) {
 					rarfile[strlen(rarfile) - 5] = 0;
-					commandline = g_strconcat (commandline, " ", g_shell_quote (rarfile), "*.rar", NULL);
+					g_string_append (commandline, " ");
+					g_string_append (commandline, g_shell_quote (rarfile));
+					g_string_append (commandline, "*.rar");
 					fixname = TRUE;
 				}
 			}
-			else if ((i==4) && (fixname))
-				commandline = g_strconcat (commandline, " \"$(dirname ", g_shell_quote (argv[3]), ")\"", NULL);
-			else
-				commandline = g_strconcat (commandline, " ", argv[(i - 1)], NULL);
+			else if ((i == 4) && (fixname)) {
+				g_string_append (commandline, " \"$(dirname ");
+				g_string_append (commandline, g_shell_quote (argv[3]));
+				g_string_append (commandline, ")\"");
+			}
+			else {
+				g_string_append (commandline, " ");
+				g_string_append (commandline, argv[(i - 1)]);
+			}
 		}
 		else if (g_str_has_prefix (argv[0], "mv")) {
-			commandline = g_strconcat (commandline, "mv", NULL);
+			g_string_append (commandline, "mv");
 		}
 	}
 
@@ -736,8 +745,8 @@ start_current_command (FrProcess *process)
 	}
 #endif
 
-	if ((fixname) && (system (commandline) != 0))
-		g_warning ("The files could not be move: %s\n", commandline);
+	if ((fixname) && (system (commandline->str) != 0))
+		g_warning ("The files could not be move: %s\n", commandline->str);
 
 	if (info->begin_func != NULL)
 		(*info->begin_func) (info->begin_data);
@@ -761,10 +770,12 @@ start_current_command (FrProcess *process)
 			       fr_process_signals[DONE],
 			       0,
 			       &process->error);
+		g_string_free (commandline, TRUE);
 		g_free (argv);
 		return;
 	}
 
+	g_string_free (commandline, TRUE);
 	g_free (argv);
 
 	fr_channel_data_set_fd (&process->out, out_fd, fr_process_get_charset (process));
