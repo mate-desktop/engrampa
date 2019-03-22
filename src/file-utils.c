@@ -445,7 +445,7 @@ const gchar* file_name_from_path(const gchar *file_name)
 	if (file_name == NULL)
 		return NULL;
 
-	if (file_name[0] == '\0')
+	if ((file_name[0] == '\0') || (strlen (file_name) == 0))
 		return "";
 
 	last_char = strlen (file_name) - 1;
