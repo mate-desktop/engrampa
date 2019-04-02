@@ -172,7 +172,7 @@ list__process_line (char     *line,
 		fdata->original_path = g_strdup (fields[1]);
 		fdata->full_path = g_strconcat ((fdata->original_path[0] != '/') ? "/" : "",
 						fdata->original_path,
-						(fdata->dir && (fdata->original_path[strlen (fdata->original_path) - 1] != '/')) ? "/" : "",
+						(fdata->dir && (fdata->original_path[strnlen (fdata->original_path, BUFSIZ) - 1] != '/')) ? "/" : "",
 						NULL);
 	}
 	else if (strcmp (fields[0], "Folder") == 0) {
@@ -276,7 +276,7 @@ parse_progress_line (FrCommand  *comm,
 {
 	int prefix_len;
 
-	prefix_len = strlen (prefix);
+	prefix_len = strnlen (prefix, BUFSIZ);
 	if (strncmp (line, prefix, prefix_len) == 0)
 		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }

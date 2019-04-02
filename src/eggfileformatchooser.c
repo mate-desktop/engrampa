@@ -313,13 +313,13 @@ accept_filename (gchar       *extensions,
   gchar *token;
   gsize length;
 
-  length = strlen (filename);
+  length = strnlen (filename, BUFSIZ);
 
   for (token = strtok_r (extensions, ",", &saveptr); NULL != token;
        token = strtok_r (NULL, ",", &saveptr))
     {
       token = g_strstrip (token);
-      extptr = filename + length - strlen (token) - 1;
+      extptr = filename + length - strnlen (token, BUFSIZ) - 1;
 
       if (extptr > filename && '.' == *extptr &&
           !strcmp (extptr + 1, token))

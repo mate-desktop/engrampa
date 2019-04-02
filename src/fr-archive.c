@@ -1351,8 +1351,8 @@ create_tmp_base_dir (const char *base_dir,
 	}
 
 	dest_dir = g_strdup (dest_path);
-	if (dest_dir[strlen (dest_dir) - 1] == G_DIR_SEPARATOR)
-		dest_dir[strlen (dest_dir) - 1] = 0;
+	if (dest_dir[strnlen (dest_dir, BUFSIZ) - 1] == G_DIR_SEPARATOR)
+		dest_dir[strnlen (dest_dir, BUFSIZ) - 1] = 0;
 
 	debug (DEBUG_INFO, "base_dir: %s\n", base_dir);
 	debug (DEBUG_INFO, "dest_dir: %s\n", dest_dir);
@@ -1459,7 +1459,7 @@ save_list_to_temp_file (GList   *file_list,
 			char *filename = scan->data;
 
 			filename = str_substitute (filename, "\n", "\\n");
-			if ((g_output_stream_write (G_OUTPUT_STREAM (ostream), filename, strlen (filename), NULL, error) < 0)
+			if ((g_output_stream_write (G_OUTPUT_STREAM (ostream), filename, strnlen (filename, BUFSIZ), NULL, error) < 0)
 			    || (g_output_stream_write (G_OUTPUT_STREAM (ostream), "\n", 1, NULL, error) < 0))
 			{
 				error_occurred = TRUE;
@@ -1508,11 +1508,11 @@ split_in_chunks (GList *file_list)
 		l = 0;
 		while ((scan != NULL) && (l < MAX_CHUNK_LEN)) {
 			if (l == 0)
-				l = strlen (scan->data);
+				l = strnlen (scan->data, BUFSIZ);
 			prev = scan;
 			scan = scan->next;
 			if (scan != NULL)
-				l += strlen (scan->data);
+				l += strnlen (scan->data, BUFSIZ);
 		}
 		if (prev != NULL) {
 			if (prev->next != NULL)
@@ -2537,7 +2537,7 @@ delete_from_archive (FrArchive *archive,
 		for (scan = file_list; scan != NULL; scan = scan->next) {
 			char *path = scan->data;
 
-			if (path[strlen (path) - 1] == '/')
+			if (path[strnlen (path, BUFSIZ) - 1] == '/')
 				folders_to_remove = g_list_prepend (folders_to_remove, path);
 		}
 
@@ -2596,11 +2596,11 @@ delete_from_archive (FrArchive *archive,
 			l = 0;
 			while ((scan != NULL) && (l < MAX_CHUNK_LEN)) {
 				if (l == 0)
-					l = strlen (scan->data);
+					l = strnlen (scan->data, BUFSIZ);
 				prev = scan;
 				scan = scan->next;
 				if (scan != NULL)
-					l += strlen (scan->data);
+					l += strnlen (scan->data, BUFSIZ);
 			}
 
 			prev->next = NULL;
@@ -2780,7 +2780,7 @@ move_files_in_chunks (FrArchive  *archive,
 	GList *scan;
 	int    temp_dir_l;
 
-	temp_dir_l = strlen (temp_dir);
+	temp_dir_l = strnlen (temp_dir, BUFSIZ);
 
 	for (scan = file_list; scan != NULL; ) {
 		GList *prev = scan->prev;
@@ -2791,11 +2791,11 @@ move_files_in_chunks (FrArchive  *archive,
 		l = 0;
 		while ((scan != NULL) && (l < MAX_CHUNK_LEN)) {
 			if (l == 0)
-				l = temp_dir_l + 1 + strlen (scan->data);
+				l = temp_dir_l + 1 + strnlen (scan->data, BUFSIZ);
 			prev = scan;
 			scan = scan->next;
 			if (scan != NULL)
-				l += temp_dir_l + 1 + strlen (scan->data);
+				l += temp_dir_l + 1 + strnlen (scan->data, BUFSIZ);
 		}
 
 		prev->next = NULL;
@@ -2868,11 +2868,11 @@ extract_from_archive (FrArchive  *archive,
 			l = 0;
 			while ((scan != NULL) && (l < MAX_CHUNK_LEN)) {
 				if (l == 0)
-					l = strlen (scan->data);
+					l = strnlen (scan->data, BUFSIZ);
 				prev = scan;
 				scan = scan->next;
 				if (scan != NULL)
-					l += strlen (scan->data);
+					l += strnlen (scan->data, BUFSIZ);
 			}
 
 			prev->next = NULL;
@@ -2895,8 +2895,8 @@ compute_base_path (const char *base_dir,
 		   gboolean    junk_paths,
 		   gboolean    can_junk_paths)
 {
-	int         base_dir_len = strlen (base_dir);
-	int         path_len = strlen (path);
+	int         base_dir_len = strnlen (base_dir, BUFSIZ);
+	int         path_len = strnlen (path, BUFSIZ);
 	const char *base_path;
 	char       *name_end;
 	char       *new_path;
@@ -3011,7 +3011,7 @@ remove_files_contained_in_this_dir (GList *file_list,
 				    GList *dir_pointer)
 {
 	char  *dirname = dir_pointer->data;
-	int    dirname_l = strlen (dirname);
+	int    dirname_l = strnlen (dirname, BUFSIZ);
 	GList *scan;
 
 	for (scan = dir_pointer->next; scan; /* empty */) {
@@ -3161,7 +3161,7 @@ fr_archive_extract_to_local (FrArchive  *archive,
 		else
 			filename = file_name_from_path (archive_list_filename);
 
-		if ((destination[strlen (destination) - 1] == '/')
+		if ((destination[strnlen (destination, BUFSIZ) - 1] == '/')
 		    || (filename[0] == '/'))
 			sprintf (dest_filename, "%s%s", destination, filename);
 		else
@@ -3309,7 +3309,7 @@ get_desired_destination_for_archive (GFile *file)
 		new_name = g_strconcat (name, "_FILES", NULL);
 	else
 		/* ...else use the name without the extension */
-		new_name = g_strndup (name, strlen (name) - strlen (ext));
+		new_name = g_strndup (name, strnlen (name, BUFSIZ) - strnlen (ext, BUFSIZ));
 	new_name_escaped = g_uri_escape_string (new_name, "", FALSE);
 
 	desired_destination = g_strconcat (directory_uri, "/", new_name_escaped, NULL);

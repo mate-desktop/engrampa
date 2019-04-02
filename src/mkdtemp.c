@@ -126,7 +126,7 @@ gen_tempname (tmpl)
   int count, fd = -1;
   int save_errno = errno;
 
-  len = strlen (tmpl);
+  len = strnlen (tmpl, BUFSIZ);
   if (len < 6 || strcmp (&tmpl[len - 6], "XXXXXX"))
     {
       __set_errno (EINVAL);

@@ -108,22 +108,22 @@ split_line_lha (char *line)
 	if (strncmp (line, "[MS-DOS]", 8) == 0) {
 		fields[i++] = g_strdup ("");
 		fields[i++] = g_strdup ("");
-		line += strlen ("[MS-DOS]");
+		line += strnlen ("[MS-DOS]", BUFSIZ);
 	}
 	else if (strncmp (line, "[generic]", 9) == 0) {
 		fields[i++] = g_strdup ("");
 		fields[i++] = g_strdup ("");
-		line += strlen ("[generic]");
+		line += strnlen ("[generic]", BUFSIZ);
 	}
 	else if (strncmp (line, "[unknown]", 9) == 0) {
 		fields[i++] = g_strdup ("");
 		fields[i++] = g_strdup ("");
-		line += strlen ("[unknown]");
+		line += strnlen ("[unknown]", BUFSIZ);
 	}
 	else if (strncmp (line, "[Amiga]", 7) == 0) {
 		fields[i++] = g_strdup ("");
 		fields[i++] = g_strdup ("");
-		line += strlen ("[Amiga]");
+		line += strnlen ("[Amiga]", BUFSIZ);
 	}
 
 	scan = eat_spaces (line);

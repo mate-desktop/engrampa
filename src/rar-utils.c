@@ -49,7 +49,7 @@ get_first_volume_name (const char           *name,
 		int    l, i;
 
 		parts = g_regex_split (re, name, 0);
-		l = strlen (parts[2]);
+		l = strnlen (parts[2], BUFSIZ);
 		switch (extension_type) {
 		case FIRST_VOLUME_IS_000:
 			for (i = 0; i < l; i++)

@@ -41,7 +41,7 @@ list__process_line (char     *line,
 
 	g_return_if_fail (line != NULL);
 
-	if (strlen (line) == 0)
+	if (strnlen (line, BUFSIZ) == 0)
 		return;
 
 	if (! g_str_has_prefix (line, "Decompressed file size:"))
@@ -61,7 +61,7 @@ list__process_line (char     *line,
 
 	char *new_fname = g_strdup (file_name_from_path (comm->filename));
 	if (g_str_has_suffix (new_fname, ".lrz"))
-		new_fname[strlen (new_fname) - 4] = '\0';
+		new_fname[strnlen (new_fname, BUFSIZ) - 4] = '\0';
 
 	if (*new_fname == '/') {
 		fdata->full_path = g_strdup (new_fname);

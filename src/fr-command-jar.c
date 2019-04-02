@@ -71,7 +71,7 @@ fr_command_jar_add (FrCommand     *comm,
 		else if (file_extension_is (filename, ".class"))
 			package = get_package_name_from_class_file (path);
 
-		if ((package == NULL) || (strlen (package) == 0))
+		if ((package == NULL) || (strnlen (package, BUFSIZ) == 0))
 			zip_list = g_list_append (zip_list, g_strdup (filename));
 		else {
 			JarData *newdata = g_new0 (JarData, 1);

@@ -1144,7 +1144,7 @@ array_prop (const char *name, ...)
   va_start (ap, name);
   while ((value = va_arg (ap, char *)))
     {
-      pv.length = strlen (value);
+      pv.length = strnlen (value, BUFSIZ);
       pv.value = value;
       g_array_append_val (vals, pv);
     }
@@ -1178,7 +1178,7 @@ ptrarray_prop (const char *name, GPtrArray *values)
 
   for (i = 0; i < values->len; i++)
     {
-      pv.length = strlen (values->pdata[i]);
+      pv.length = strnlen (values->pdata[i], BUFSIZ);
       pv.value = values->pdata[i];
       g_array_append_val (vals, pv);
     }
@@ -1207,7 +1207,7 @@ string_prop (const char *name, const char *value)
   prop->num_vals = 1;
   prop->vals = g_new (SmPropValue, 1);
 
-  prop->vals[0].length = strlen (value);
+  prop->vals[0].length = strnlen (value, BUFSIZ);
   prop->vals[0].value = (char *)value;
 
   return prop;

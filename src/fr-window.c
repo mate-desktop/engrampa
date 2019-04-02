@@ -1087,7 +1087,7 @@ get_dir_size (FrWindow   *window,
 	int      i;
 
 	dirname = g_strconcat (current_dir, name, "/", NULL);
-	dirname_l = strlen (dirname);
+	dirname_l = strnlen (dirname, BUFSIZ);
 
 	size = 0;
 	for (i = 0; i < window->archive->command->files->len; i++) {
@@ -1116,7 +1116,7 @@ file_data_respects_filter (FrWindow *window,
 	if (fdata->dir || (fdata->name == NULL))
 		return FALSE;
 
-	return strncasecmp (fdata->name, filter, strlen (filter)) == 0;
+	return strncasecmp (fdata->name, filter, strnlen (filter, BUFSIZ)) == 0;
 }
 
 
@@ -1146,7 +1146,7 @@ compute_file_list_name (FrWindow   *window,
 		return FALSE;
 	}
 
-	if (strlen (fdata->full_path) == current_dir_len)
+	if (strnlen (fdata->full_path, BUFSIZ) == current_dir_len)
 		return FALSE;
 
 	scan = fdata->full_path + current_dir_len;
@@ -1192,7 +1192,7 @@ fr_window_compute_list_names (FrWindow  *window,
 	gboolean    different_name;
 
 	current_dir = fr_window_get_current_location (window);
-	current_dir_len = strlen (current_dir);
+	current_dir_len = strnlen (current_dir, BUFSIZ);
 	names_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 
 	for (i = 0; i < files->len; i++) {
@@ -1230,7 +1230,7 @@ fr_window_dir_exists_in_archive (FrWindow   *window,
 	if (dir_name == NULL)
 		return FALSE;
 
-	dir_name_len = strlen (dir_name);
+	dir_name_len = strnlen (dir_name, BUFSIZ);
 	if (dir_name_len == 0)
 		return TRUE;
 
@@ -1244,7 +1244,7 @@ fr_window_dir_exists_in_archive (FrWindow   *window,
 			return TRUE;
 		}
 		else if (fdata->dir
-			 && (fdata->full_path[strlen (fdata->full_path) -1] != '/')
+			 && (fdata->full_path[strnlen (fdata->full_path, BUFSIZ) -1] != '/')
 			 && (strncmp (dir_name, fdata->full_path, dir_name_len - 1) == 0))
 		{
 			return TRUE;
@@ -1268,11 +1268,11 @@ get_parent_dir (const char *current_dir)
 		return g_strdup ("/");
 
 	dir = g_strdup (current_dir);
-	dir[strlen (dir) - 1] = 0;
+	dir[strnlen (dir, BUFSIZ) - 1] = 0;
 	new_dir = remove_level_from_path (dir);
 	g_free (dir);
 
-	if (new_dir[strlen (new_dir) - 1] == '/')
+	if (new_dir[strnlen (new_dir, BUFSIZ) - 1] == '/')
 		retval = new_dir;
 	else {
 		retval = g_strconcat (new_dir, "/", NULL);
@@ -3392,11 +3392,11 @@ get_dir_list_from_path (FrWindow *window,
 	GList *list = NULL;
 	int    i;
 
-	if (path[strlen (path) - 1] != '/')
+	if (path[strnlen (path, BUFSIZ) - 1] != '/')
 		dirname = g_strconcat (path, "/", NULL);
 	else
 		dirname = g_strdup (path);
-	dirname_l = strlen (dirname);
+	dirname_l = strnlen (dirname, BUFSIZ);
 	for (i = 0; i < window->archive->command->files->len; i++) {
 		FileData *fd = g_ptr_array_index (window->archive->command->files, i);
 		gboolean  matches = FALSE;
@@ -3406,7 +3406,7 @@ get_dir_list_from_path (FrWindow *window,
 #endif
 
 		if (fd->dir) {
-			int full_path_l = strlen (fd->full_path);
+			int full_path_l = strnlen (fd->full_path, BUFSIZ);
 			if ((full_path_l == dirname_l - 1) && (strncmp (dirname, fd->full_path, full_path_l) == 0))
 				/* example: dirname is '/path/to/dir/' and fd->full_path is '/path/to/dir' */
 				matches = TRUE;
@@ -4316,7 +4316,7 @@ file_list_drag_begin (GtkWidget          *widget,
 			     XDS_ATOM, TEXT_ATOM,
 			     8, GDK_PROP_MODE_REPLACE,
 			     (guchar *) XDS_FILENAME,
-			     strlen (XDS_FILENAME));
+			     strnlen (XDS_FILENAME, BUFSIZ));
 
 	return TRUE;
 }
@@ -4478,7 +4478,7 @@ fr_window_folder_tree_drag_data_get (GtkWidget        *widget,
 		tmp->base_dir = g_strdup (fr_window_get_current_location (window));
 
 		data = get_selection_data_from_clipboard_data (window, tmp);
-		gtk_selection_data_set (selection_data, XFR_ATOM, 8, (guchar *) data, strlen (data));
+		gtk_selection_data_set (selection_data, XFR_ATOM, 8, (guchar *) data, strnlen (data, BUFSIZ));
 
 		fr_clipboard_data_unref (tmp);
 		g_free (data);
@@ -4558,7 +4558,7 @@ fr_window_file_list_drag_data_get (FrWindow         *window,
 		tmp->base_dir = g_strdup (fr_window_get_current_location (window));
 
 		data = get_selection_data_from_clipboard_data (window, tmp);
-		gtk_selection_data_set (selection_data, XFR_ATOM, 8, (guchar *) data, strlen (data));
+		gtk_selection_data_set (selection_data, XFR_ATOM, 8, (guchar *) data, strnlen (data, BUFSIZ));
 
 		fr_clipboard_data_unref (tmp);
 		g_free (data);
@@ -6478,7 +6478,7 @@ fr_window_archive_add_files (FrWindow *window,
 	base_dir = g_file_get_path (base);
 	base_len = 0;
 	if (strcmp (base_dir, "/") != 0)
-		base_len = strlen (base_dir);
+		base_len = strnlen (base_dir, BUFSIZ);
 
 	for (scan = file_list; scan; scan = scan->next) {
 		GFile *file = scan->data;
@@ -7176,7 +7176,7 @@ fr_window_go_to_location (FrWindow   *window,
 		window->priv->last_location = NULL;
 	}
 
-	if (path[strlen (path) - 1] != '/')
+	if (path[strnlen (path, BUFSIZ) - 1] != '/')
 		dir = g_strconcat (path, "/", NULL);
 	else
 		dir = g_strdup (path);
@@ -7657,8 +7657,8 @@ rename_selection (FrWindow   *window,
 
 		old_path = g_build_filename (tmp_dir, filename, NULL);
 
-		if (strlen (filename) > (strlen (rdata->current_dir) + strlen (rdata->old_name)))
-			common = g_strdup (filename + strlen (rdata->current_dir) + strlen (rdata->old_name));
+		if (strnlen (filename, BUFSIZ) > (strnlen (rdata->current_dir, BUFSIZ) + strnlen (rdata->old_name, BUFSIZ)))
+			common = g_strdup (filename + strnlen (rdata->current_dir, BUFSIZ) + strnlen (rdata->old_name, BUFSIZ));
 		new_path = g_build_filename (tmp_dir, rdata->current_dir, rdata->new_name, common, NULL);
 
 		if (! rdata->is_dir) {
@@ -7760,7 +7760,7 @@ name_is_present (FrWindow    *window,
 	*reason = NULL;
 
 	new_filename = g_build_filename (current_dir, new_name, NULL);
-	new_filename_l = strlen (new_filename);
+	new_filename_l = strnlen (new_filename, BUFSIZ);
 
 	for (i = 0; i < window->archive->command->files->len; i++) {
 		FileData   *fdata = g_ptr_array_index (window->archive->command->files, i);
@@ -7932,7 +7932,7 @@ fr_clipboard_get (GtkClipboard     *clipboard,
 				gtk_selection_data_get_target (selection_data),
 				8,
 				(guchar *) data,
-				strlen (data));
+				strnlen (data, BUFSIZ));
 	g_free (data);
 }
 
@@ -7967,7 +7967,7 @@ fr_window_get_selection (FrWindow   *window,
 		parent_folder = remove_level_from_path (selected_folder);
 		if (parent_folder == NULL)
 			base_dir = g_strdup ("/");
-		else if (parent_folder[strlen (parent_folder) - 1] == '/')
+		else if (parent_folder[strnlen (parent_folder, BUFSIZ) - 1] == '/')
 			base_dir = g_strdup (parent_folder);
 		else
 			base_dir = g_strconcat (parent_folder, "/", NULL);
@@ -8058,12 +8058,12 @@ add_pasted_files (FrWindow        *window,
 	fr_process_clear (window->archive->process);
 	for (scan = data->files; scan; scan = scan->next) {
 		const char *old_name = (char*) scan->data;
-		char       *new_name = g_build_filename (current_dir_relative, old_name + strlen (data->base_dir) - 1, NULL);
+		char       *new_name = g_build_filename (current_dir_relative, old_name + strnlen (data->base_dir, BUFSIZ) - 1, NULL);
 
 		/* skip folders */
 
 		if ((strcmp (old_name, new_name) != 0)
-		    && (old_name[strlen (old_name) - 1] != '/'))
+		    && (old_name[strnlen (old_name, BUFSIZ) - 1] != '/'))
 		{
 			fr_process_begin_command (window->archive->process, "mv");
 			fr_process_set_working_dir (window->archive->process, data->tmp_dir);
@@ -8197,7 +8197,7 @@ fr_window_paste_from_clipboard_data (FrWindow        *window,
 	created_dirs = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
 	for (scan = data->files; scan; scan = scan->next) {
 		const char *old_name = (char*) scan->data;
-		char       *new_name = g_build_filename (current_dir_relative, old_name + strlen (data->base_dir) - 1, NULL);
+		char       *new_name = g_build_filename (current_dir_relative, old_name + strnlen (data->base_dir, BUFSIZ) - 1, NULL);
 		char       *dir = remove_level_from_path (new_name);
 
 		if ((dir != NULL) && (g_hash_table_lookup (created_dirs, dir) == NULL)) {

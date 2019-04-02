@@ -115,7 +115,7 @@ fr_restore_session (EggSMClient *client)
 
 		window = fr_window_new ();
 		gtk_widget_show (window);
-		if (strlen (archive))
+		if (strnlen (archive, BUFSIZ))
 			fr_window_archive_open (FR_WINDOW (window), archive, GTK_WINDOW (window));
 
 		g_free (archive);

@@ -296,7 +296,7 @@ process_line__generic (char     *line,
 	if (line == NULL)
 		return;
 
-	if (line[strlen (line) - 1] == '/') /* ignore directories */
+	if (line[strnlen (line, BUFSIZ) - 1] == '/') /* ignore directories */
 		return;
 
 	if (comm->n_files != 0) {
@@ -767,7 +767,7 @@ get_uncompressed_name (FrCommandTar *c_tar,
 {
 	FrCommand *comm = FR_COMMAND (c_tar);
 	char      *new_name = g_strdup (e_filename);
-	int        l = strlen (new_name);
+	int        l = strnlen (new_name, BUFSIZ);
 
 	if (is_mime_type (comm->mime_type, "application/x-compressed-tar")) {
 		/* X.tgz     -->  X.tar

@@ -411,7 +411,7 @@ parse_progress_line (FrCommand  *comm,
 		     const char *message_prefix,
 		     const char *line)
 {
-	if (strncmp (line, prefix, strlen (prefix)) == 0)
+	if (strncmp (line, prefix, strnlen (prefix, BUFSIZ)) == 0)
 		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }
 
@@ -434,7 +434,7 @@ process_line__add (char     *line,
 			GFile *volume_file;
 
 			volume_filename = g_strdup (archive_filename);
-			volume_filename[strlen (volume_filename) - 5] = '1';
+			volume_filename[strnlen (volume_filename, BUFSIZ) - 5] = '1';
 			volume_file = g_file_new_for_path (volume_filename);
 			fr_command_set_multi_volume (comm, volume_file);
 
@@ -713,7 +713,7 @@ fr_command_rar_handle_error (FrCommand   *comm,
 			g_clear_error (&error->gerror);
 
 			error->type = FR_PROC_ERROR_MISSING_VOLUME;
-			volume_filename = g_path_get_basename (line + strlen ("Cannot find volume "));
+			volume_filename = g_path_get_basename (line + strnlen ("Cannot find volume ", BUFSIZ));
 			error->gerror = g_error_new (FR_ERROR, error->status, _("Could not find the volume: %s"), volume_filename);
 			g_free (volume_filename);
 			break;

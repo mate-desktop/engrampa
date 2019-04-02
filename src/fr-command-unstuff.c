@@ -91,13 +91,13 @@ unstuff_is_shit_with_filenames (const char *orig)
 	g_free (current_dir);
 
 	/* 3 characters for each ../ plus filename length plus \0 */
-	filename = g_malloc (3 * i + strlen (orig) + 1);
+	filename = g_malloc (3 * i + strnlen (orig, BUFSIZ) + 1);
 	i = 0;
 	for ( ; num_slashes > 0 ; num_slashes--) {
 		memcpy (filename + i, "../", 3);
 		i+=3;
 	}
-	memcpy (filename + i, orig, strlen (orig) + 1);
+	memcpy (filename + i, orig, strnlen (orig, BUFSIZ) + 1);
 
 	return filename;
 }
@@ -121,7 +121,7 @@ process_line (char     *line,
 		guint size;
 
 		ssize = strstr (line, "progressEvent - ")
-			+ strlen ("progressEvent - ");
+			+ strnlen ("progressEvent - ", BUFSIZ);
 		if (ssize[0] == '\0')
 			size = 0;
 		else
@@ -140,7 +140,7 @@ process_line (char     *line,
 
 	/* Look for the filename, ends with a comma */
 	str_start = strstr (line, unstuff_comm->target_dir + 1);
-	str_start = str_start + strlen (unstuff_comm->target_dir) - 1;
+	str_start = str_start + strnlen (unstuff_comm->target_dir, BUFSIZ) - 1;
 	if (str_start[0] != '/')
 		str_start--;
 	if (str_start[0] == '.')

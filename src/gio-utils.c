@@ -20,6 +20,7 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#include <stdio.h>
 #include <string.h>
 #include <glib.h>
 #include <gio/gio.h>
@@ -102,7 +103,7 @@ filter_matches (Filter     *filter,
 		return FALSE;
 
 	if ((filter->options & FILTER_NOBACKUPFILES)
-	    && (file_name[strlen (file_name) - 1] == '~'))
+	    && (file_name[strnlen (file_name, BUFSIZ) - 1] == '~'))
 		return FALSE;
 
 	if (filter->pattern == NULL)
@@ -526,13 +527,13 @@ get_dir_list_from_file_list (GHashTable *h_dirs,
 
 	if (base_dir == NULL)
 		base_dir = "";
-	base_dir_len = strlen (base_dir);
+	base_dir_len = strnlen (base_dir, BUFSIZ);
 
 	for (scan = files; scan; scan = scan->next) {
 		char *filename = scan->data;
 		char *dir_name;
 
-		if (strlen (filename) <= base_dir_len)
+		if (strnlen (filename, BUFSIZ) <= base_dir_len)
 			continue;
 
 		if (is_dir_list)
@@ -825,7 +826,7 @@ g_list_items_async (GList             *items,
 
 	base_len = 0;
 	if (strcmp (base_dir, "/") != 0)
-		base_len = strlen (base_dir);
+		base_len = strnlen (base_dir, BUFSIZ);
 
 	for (scan = items; scan; scan = scan->next) {
 		char *uri = scan->data;

@@ -215,7 +215,7 @@ format_chooser_selection_changed_cb (EggFileFormatChooser *format_chooser,
 		new_ext = mime_type_desc[data->supported_types[n_format - 1]].default_ext;
 		basename = file_name_from_path (uri);
 		if (g_str_has_suffix (basename, ext))
-			basename_noext = g_strndup (basename, strlen (basename) - strlen (ext));
+			basename_noext = g_strndup (basename, strnlen (basename, BUFSIZ) - strnlen (ext, BUFSIZ));
 		else
 			basename_noext = g_strdup (basename);
 		new_basename = g_strconcat (basename_noext, new_ext, NULL);

@@ -302,8 +302,8 @@ path_in_path (const char *dirname,
 	if ((dirname == NULL) || (filename == NULL))
 		return FALSE;
 
-	dirname_l = strlen (dirname);
-	filename_l = strlen (filename);
+	dirname_l = strnlen (dirname, BUFSIZ);
+	filename_l = strnlen (filename, BUFSIZ);
 
 	if ((dirname_l == filename_l + 1)
 	     && (dirname[dirname_l - 1] == '/'))
@@ -445,10 +445,10 @@ const gchar* file_name_from_path(const gchar *file_name)
 	if (file_name == NULL)
 		return NULL;
 
-	if ((file_name[0] == '\0') || (strlen (file_name) == 0))
+	if ((file_name[0] == '\0') || (strnlen (file_name, BUFSIZ) == 0))
 		return "";
 
-	last_char = strlen (file_name) - 1;
+	last_char = strnlen (file_name, BUFSIZ) - 1;
 
 	if (file_name [last_char] == G_DIR_SEPARATOR)
 		return "";
@@ -473,7 +473,7 @@ dir_name_from_path (const gchar *path)
 	if (path[0] == '\0')
 		return g_strdup ("");
 
-	last_char = strlen (path) - 1;
+	last_char = strnlen (path, BUFSIZ) - 1;
 	if (path[last_char] == G_DIR_SEPARATOR)
 		last_char--;
 
@@ -495,7 +495,7 @@ remove_level_from_path (const gchar *path)
 	if (path == NULL)
 		return NULL;
 
-	p = strlen (path) - 1;
+	p = strnlen (path, BUFSIZ) - 1;
 	if (p < 0)
 		return NULL;
 
@@ -517,7 +517,7 @@ remove_ending_separator (const char *path)
 	if (path == NULL)
 		return NULL;
 
-	copy_len = len = strlen (path);
+	copy_len = len = strnlen (path, BUFSIZ);
 	if ((len > 1) && (path[len - 1] == '/'))
 		copy_len--;
 
@@ -557,7 +557,7 @@ remove_extension_from_path (const gchar *path)
 	if (! path)
 		return NULL;
 
-	len = strlen (path);
+	len = strnlen (path, BUFSIZ);
 	if (len == 1)
 		return g_strdup (path);
 
@@ -662,7 +662,7 @@ get_file_extension (const char *filename)
 	if (filename == NULL)
 		return NULL;
 
-	len = strlen (filename);
+	len = strnlen (filename, BUFSIZ);
 	if (len <= 1)
 		return NULL;
 
@@ -688,8 +688,8 @@ file_extension_is (const char *filename,
 {
 	int filename_l, ext_l;
 
-	filename_l = strlen (filename);
-	ext_l = strlen (ext);
+	filename_l = strnlen (filename, BUFSIZ);
+	ext_l = strnlen (ext, BUFSIZ);
 
 	if (filename_l < ext_l)
 		return FALSE;
@@ -962,8 +962,8 @@ is_temp_work_dir (const char *dir)
 
 	for (i = 0; try_folder[i] != NULL; i++) {
 		folder = ith_temp_folder_to_try (i);
-		if (strncmp (dir, folder, strlen (folder)) == 0)
-			if (strncmp (dir + strlen (folder), "/.fr-", 5) == 0) {
+		if (strncmp (dir, folder, strnlen (folder, BUFSIZ)) == 0)
+			if (strncmp (dir + strnlen (folder, BUFSIZ), "/.fr-", 5) == 0) {
 				g_free (folder);
 				return TRUE;
 			}
@@ -1032,8 +1032,8 @@ file_list__get_index_from_pattern (const char *line,
 	int         line_l, pattern_l;
 	const char *l;
 
-	line_l = strlen (line);
-	pattern_l = strlen (pattern);
+	line_l = strnlen (line, BUFSIZ);
+	pattern_l = strnlen (pattern, BUFSIZ);
 
 	if ((pattern_l == 0) || (line_l == 0))
 		return -1;

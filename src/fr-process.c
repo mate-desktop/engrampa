@@ -691,10 +691,10 @@ start_current_command (FrProcess *process)
 		if (g_str_has_prefix (commandline->str, "mv")) {
 
 			if ((i == 3) && (!g_file_test (argv[2], G_FILE_TEST_EXISTS)) && (!fixname)) {
-				char rarfile[strlen (argv[2]) + 7];
+				char rarfile[strnlen (argv[2], BUFSIZ) + 7];
 
 				g_strlcpy (rarfile, argv[2], sizeof (rarfile));
-				rarfile[strlen (rarfile) - 3] = 0;
+				rarfile[strnlen (rarfile, BUFSIZ) - 3] = 0;
 				g_strlcat (rarfile, "part1.rar", sizeof (rarfile));
 
 				if (g_str_has_suffix (argv[2], ".7z")) {
@@ -708,7 +708,7 @@ start_current_command (FrProcess *process)
 					fixname = TRUE;
 				}
 				else if (g_str_has_suffix (argv[2], ".rar")) {
-					rarfile[strlen(rarfile) - 5] = 0;
+					rarfile[strnlen(rarfile, BUFSIZ) - 5] = 0;
 					g_string_append (commandline, " ");
 
 					gchar *tempstr = g_shell_quote (rarfile);

@@ -109,7 +109,7 @@ list__process_line (char     *line,
 	if (FR_COMMAND_ZIP (comm)->is_empty)
 		return;
 
-	line_l = strlen (line);
+	line_l = strnlen (line, BUFSIZ);
 
 	if (line_l == 0)
 		return;

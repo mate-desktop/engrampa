@@ -20,6 +20,7 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#include <stdio.h>
 #include <config.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
@@ -154,7 +155,7 @@ find_path_in_file_data_array (GPtrArray  *array,
 	if (path == NULL)
 		return -1;
 
-	path_l = strlen (path);
+	path_l = strnlen (path, BUFSIZ);
 	left = 0;
 	right = array->len;
 	while (left < right) {
@@ -165,7 +166,7 @@ find_path_in_file_data_array (GPtrArray  *array,
 		if (cmp != 0) {
 			/* consider '/path/to/dir' and '/path/to/dir/' the same path */
 
-			int original_path_l = strlen (fd->original_path);
+			int original_path_l = strnlen (fd->original_path, BUFSIZ);
 			if ((path_l == original_path_l - 1) && (fd->original_path[original_path_l - 1] == '/')) {
 				int cmp2 = strncmp (path, fd->original_path, original_path_l - 1);
 				if (cmp2 == 0)

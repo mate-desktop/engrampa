@@ -115,7 +115,7 @@ process_line (char     *line,
 	fdata->size = g_ascii_strtoull (fields[3], NULL, 10);
 
 	name_field = g_strdup (get_last_field (line, 6));
-	name_len = strlen (name_field);
+	name_len = strnlen (name_field, BUFSIZ);
 
 	name_last = name_field[name_len - 1];
 	fdata->dir = name_last == '\\';

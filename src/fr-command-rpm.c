@@ -151,7 +151,7 @@ list__process_line (char     *line,
 		fdata->full_path = g_strconcat ("/", name, NULL);
 		fdata->original_path = fdata->full_path + 1;
 	}
-	if (fdata->dir && (name[strlen (name) - 1] != '/')) {
+	if (fdata->dir && (name[strnlen (name, BUFSIZ) - 1] != '/')) {
 		char *old_full_path = fdata->full_path;
 		fdata->full_path = g_strconcat (old_full_path, "/", NULL);
 		g_free (old_full_path);

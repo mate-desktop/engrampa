@@ -119,7 +119,7 @@ static int
 count_chars_to_escape (const char *str,
 		       const char *meta_chars)
 {
-	int         meta_chars_n = strlen (meta_chars);
+	int         meta_chars_n = strnlen (meta_chars, BUFSIZ);
 	const char *s;
 	int         n = 0;
 
@@ -141,7 +141,7 @@ escape_str_common (const char *str,
 		   const char  prefix,
 		   const char  postfix)
 {
-	int         meta_chars_n = strlen (meta_chars);
+	int         meta_chars_n = strnlen (meta_chars, BUFSIZ);
 	char       *escaped;
 	int         i, new_l, extra_chars = 0;
 	const char *s;
@@ -155,7 +155,7 @@ escape_str_common (const char *str,
 	if (postfix)
 		extra_chars++;
 
-	new_l = strlen (str) + (count_chars_to_escape (str, meta_chars) * extra_chars);
+	new_l = strnlen (str, BUFSIZ) + (count_chars_to_escape (str, meta_chars) * extra_chars);
 	escaped = g_malloc (new_l + 1);
 
 	s = str;
@@ -200,7 +200,7 @@ g_utf8_strstr (const char *haystack, const char *needle)
 	gsize       i;
 	gsize       haystack_len = g_utf8_strlen (haystack, -1);
 	gsize       needle_len = g_utf8_strlen (needle, -1);
-	int         needle_size = strlen (needle);
+	int         needle_size = strnlen (needle, BUFSIZ);
 
 	s = haystack;
 	for (i = 0; i <= haystack_len - needle_len; i++) {
@@ -234,7 +234,7 @@ g_utf8_strsplit (const char *string,
 	remainder = string;
 	s = g_utf8_strstr (remainder, delimiter);
 	if (s != NULL) {
-		gsize delimiter_size = strlen (delimiter);
+		gsize delimiter_size = strnlen (delimiter, BUFSIZ);
 
 		while (--max_tokens && (s != NULL)) {
 			gsize  size = s - remainder;
@@ -282,7 +282,7 @@ g_utf8_strchug (char *string)
 		c = g_utf8_get_char (scan);
 	}
 
-	g_memmove (string, scan, strlen (scan) + 1);
+	g_memmove (string, scan, strnlen (scan, BUFSIZ) + 1);
 
 	return string;
 }
@@ -412,7 +412,7 @@ _g_strdup_with_max_size (const char *s,
 			 int         max_size)
 {
 	char *result;
-	int   l = strlen (s);
+	int   l = strnlen (s, BUFSIZ);
 
 	if (l > max_size) {
 		char *first_half;
@@ -726,7 +726,7 @@ _g_path_get_file_name (const gchar *file_name)
 	if (file_name[0] == '\0')
 		return "";
 
-	last_char = strlen (file_name) - 1;
+	last_char = strnlen (file_name, BUFSIZ) - 1;
 
 	if (file_name [last_char] == G_DIR_SEPARATOR)
 		return "";
@@ -750,8 +750,8 @@ _g_path_get_base_name (const char *path,
 	if (junk_paths)
 		return _g_path_get_file_name (path);
 
-	base_dir_len = strlen (base_dir);
-	if (strlen (path) < base_dir_len)
+	base_dir_len = strnlen (base_dir, BUFSIZ);
+	if (strnlen (path, BUFSIZ) < base_dir_len)
 		return NULL;
 
 	base_path = path + base_dir_len;
