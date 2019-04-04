@@ -209,18 +209,6 @@ AC_CONFIG_FILES([Makefile
 		 data/engrampa.desktop.in
 		 data/org.mate.engrampa.gschema.xml
 		 data/icons/Makefile
-		 data/icons/16x16/Makefile
-		 data/icons/16x16/actions/Makefile
-		 data/icons/16x16/apps/Makefile
-		 data/icons/22x22/Makefile
-		 data/icons/22x22/apps/Makefile
-		 data/icons/24x24/Makefile
-		 data/icons/24x24/actions/Makefile
-		 data/icons/24x24/apps/Makefile
-		 data/icons/32x32/Makefile
-		 data/icons/32x32/apps/Makefile
-		 data/icons/scalable/Makefile
-		 data/icons/scalable/apps/Makefile
 		 copy-n-paste/Makefile
 		 src/Makefile
 		 src/commands/Makefile
