@@ -4,18 +4,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2019
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-08 10:03+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-03-20 19:54+0100\n"
+"PO-Revision-Date: 2019-03-11 14:27+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/mate/teams/13566/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,31 +59,31 @@ msgstr "문서를 이 desktop 항목에 넘길 수 없습니다"
 msgid "Not a launchable item"
 msgstr "실행할 수 있는 항목이 없습니다"
 
-#: ../copy-n-paste/eggsmclient.c:225
+#: ../copy-n-paste/eggsmclient.c:221
 msgid "Disable connection to session manager"
 msgstr "세션 관리자에 연결하지 않습니다"
 
-#: ../copy-n-paste/eggsmclient.c:228
+#: ../copy-n-paste/eggsmclient.c:224
 msgid "Specify file containing saved configuration"
 msgstr "설정을 저장할 파일을 지정합니다"
 
-#: ../copy-n-paste/eggsmclient.c:228
+#: ../copy-n-paste/eggsmclient.c:224
 msgid "FILE"
 msgstr "<파일>"
 
-#: ../copy-n-paste/eggsmclient.c:231
+#: ../copy-n-paste/eggsmclient.c:227
 msgid "Specify session management ID"
 msgstr "세션 관리 ID를 지정합니다"
 
-#: ../copy-n-paste/eggsmclient.c:231
+#: ../copy-n-paste/eggsmclient.c:227
 msgid "ID"
 msgstr "ID"
 
-#: ../copy-n-paste/eggsmclient.c:252
+#: ../copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
 msgstr "세션 관리 옵션:"
 
-#: ../copy-n-paste/eggsmclient.c:253
+#: ../copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
 msgstr "세션 관리 옵션을 표시합니다"
 
@@ -117,13 +118,30 @@ msgid ""
 "Roller and part of the MATE Desktop Environment. If you would like to know "
 "more about MATE and Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p> 잉그람파는 마테 환경용 압축 관리자입니다. 압축 하일을 만들고 수정하며, 압축 파일에 들어간 파일을 살펴보고, 압축 파일에서 "
+"파일을 꺼낼 수 있습니다. </p> <p> 잉그람파는 tar와 zip과 같은 압축 프로그램의 프론트엔드(그래픽 인터페이스)일 뿐입니다. "
+"지원하는 형식은 다음과 같습니다: </p> <ul> <li>7-Zip 압축 파일 (.7z)</li> <li>WinAce 압축 파일 "
+"(.ace)</li> <li>ALZip 압축 파일 (.alz)</li> <li>AIX 소형 인덱싱 아카이브 (.ar)</li> "
+"<li>ARJ 압축 파일 (.arj)</li> <li>케비넷 파일 (.cab)</li> <li>UNIX CPIO 아카이브 "
+"(.cpio)</li> <li>데비안 리눅스 꾸러미 (.deb) [읽기전용 모드]</li> <li>ISO-9660 CD 디스크 이미지 "
+"(.iso) [읽기전용 모드]</li> <li>Java 아카이브 (.jar)</li> <li>Java 엔터프라이즈 아카이브 "
+"(.ear)</li> <li>Java 웹 아카이브 (.war)</li> <li>LHA Archive (.lzh, .lha)</li> "
+"<li>WinRAR 압축 아카이브 (.rar)</li> <li>RAR 아카이빙 만화책 (.cbr)</li> <li>RPM 리눅스 꾸러미 "
+"(.rpm) [읽기전용 모드]</li> <li>테이브 저장 압축 해제형식 (.tar) 또는 다음 형식으로 압축한 파일: gzip "
+"(.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress "
+"(.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop "
+"(.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> <li>Stuffit 아카이브 (.bin,"
+" .sit)</li> <li>ZIP 아카이브 (.zip)</li> <li>ZIP 아카이빙 만화책 (.cbz)</li> <li>ZOO 압축"
+" 아카이브 파일 (.zoo)</li> <li>gzip, bzip, bzip2, compress, lrzip, lzip, lzop, "
+"rzip, xz로 압축한 단일 파일</li> </ul> <p> 잉그람파는 파일 롤러에서 갈라져 나왔으며 마테 데스크톱 환경의 일부입니다."
+" 마테와 잉그람파를 더 알아보시려면 프로젝트 홈페이지를 방문하세요. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
 msgstr "잉그람파 압축 관리자"
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2003
-#: ../src/fr-window.c:5567
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2004
+#: ../src/fr-window.c:5573
 msgid "Archive Manager"
 msgstr "압축 관리자"
 
@@ -340,48 +358,48 @@ msgstr "잉그람파"
 msgid "Allows to create and extract archives"
 msgstr "압축 파일을 만들거나 푸는 것을 허락합니다"
 
-#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/actions.c:158 ../src/actions.c:197 ../src/actions.c:233
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3069
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3075
 msgid "Could not create the archive"
 msgstr "압축 파일을 만들 수 없습니다"
 
-#: ../src/actions.c:159 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
+#: ../src/actions.c:160 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
 msgstr "압축 파일 이름을 지정해야 합니다."
 
-#: ../src/actions.c:198
+#: ../src/actions.c:199
 msgid "You don't have permission to create an archive in this folder"
 msgstr "이 폴더에 압축 파일을 만들 권한이 없습니다"
 
-#: ../src/actions.c:234 ../src/dlg-package-installer.c:271
+#: ../src/actions.c:235 ../src/dlg-package-installer.c:271
 #: ../src/dlg-package-installer.c:280 ../src/dlg-package-installer.c:308
-#: ../src/fr-archive.c:1161 ../src/fr-window.c:6202 ../src/fr-window.c:6378
+#: ../src/fr-archive.c:1161 ../src/fr-window.c:6208 ../src/fr-window.c:6384
 msgid "Archive type not supported."
 msgstr "지원하지 않는 종류의 압축 파일입니다."
 
-#: ../src/actions.c:248
+#: ../src/actions.c:249
 msgid "Could not delete the old archive."
 msgstr "이전 압축 파일을 지울 수 없습니다."
 
-#: ../src/actions.c:382 ../src/fr-window.c:5943
+#: ../src/actions.c:383 ../src/fr-window.c:5949
 msgid "Open"
 msgstr "열기"
 
-#: ../src/actions.c:393 ../src/fr-window.c:5386
+#: ../src/actions.c:394 ../src/fr-window.c:5392
 msgid "All archives"
 msgstr "모든 압축 파일"
 
-#: ../src/actions.c:400
+#: ../src/actions.c:401
 msgid "All files"
 msgstr "모든 파일"
 
-#: ../src/actions.c:794 ../src/fr-window.c:7411
+#: ../src/actions.c:795 ../src/fr-window.c:7437
 msgid "Last Output"
 msgstr "지난 출력"
 
-#: ../src/actions.c:860
+#: ../src/actions.c:859
 msgid ""
 "Engrampa is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -391,7 +409,7 @@ msgstr ""
 "잉그람파는 자유 소프트웨어 입니다. 자유 소프트웨어 재단이 발표한 GNU 일반 공중 사용 허가서 버전 2 또는 (선택에 따라) 그 이상의"
 " 버전의 조항에 의거하여 재배포하거나 수정할 수 있습니다."
 
-#: ../src/actions.c:864
+#: ../src/actions.c:863
 msgid ""
 "Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -402,7 +420,7 @@ msgstr ""
 "묵시적인 보증을 포함한 어떠한 형태의 보증도 제공하지 않습니다. 보다 자세한 사항에 대해서는 GNU 일반 공중 사용 허가서를 참고하시기 "
 "바랍니다."
 
-#: ../src/actions.c:868
+#: ../src/actions.c:867
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
@@ -411,19 +429,19 @@ msgstr ""
 "GNU 일반 공중 사용 허가서 사본을 이 프로그램과 받아야 합니다. 못받으셨다면 Free Software Foundation, Inc.,"
 " 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA에 요청하십시오."
 
-#: ../src/actions.c:878
+#: ../src/actions.c:900
 msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
-"Copyright © 2012–2018 The MATE developers"
+"Copyright © 2012–2019 The MATE developers"
 msgstr ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
-"Copyright © 2012–2018 The MATE developers"
+"Copyright © 2012–2019 The MATE developers"
 
-#: ../src/actions.c:880
+#: ../src/actions.c:902
 msgid "An archive manager for MATE."
 msgstr "마테 압축 관리자."
 
-#: ../src/actions.c:883
+#: ../src/actions.c:905
 msgid "translator-credits"
 msgstr ""
 "Elex https://launchpad.net/~mysticzizone\n"
@@ -517,7 +535,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7762 ../src/fr-window.c:7764
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7775 ../src/fr-window.c:7777
 msgid "Please use a different name."
 msgstr "다른 이름을 사용하십시오."
 
@@ -527,7 +545,7 @@ msgid ""
 " folder."
 msgstr "압축 파일을 만들 위치에 올바른 권한이 없습니다."
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6980
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6986
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -538,11 +556,11 @@ msgstr ""
 "\n"
 "만드시겠습니까?"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6989
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6995
 msgid "Create _Folder"
 msgstr "폴더 만들기(_F)"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:7006
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:7012
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "목표 폴더를 만들 수 없습니다: %s."
@@ -560,12 +578,12 @@ msgid "_Overwrite"
 msgstr "덮어 쓰기(_O)"
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4332 ../src/fr-window.c:6921 ../src/fr-window.c:6926
-#: ../src/fr-window.c:7010 ../src/fr-window.c:7029 ../src/fr-window.c:7034
+#: ../src/fr-window.c:4338 ../src/fr-window.c:6927 ../src/fr-window.c:6932
+#: ../src/fr-window.c:7016 ../src/fr-window.c:7035 ../src/fr-window.c:7040
 msgid "Extraction not performed"
 msgstr "풀 수 없었습니다"
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4501 ../src/fr-window.c:4581
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4507 ../src/fr-window.c:4587
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -815,11 +833,11 @@ msgstr "ARJ (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "brotli (.br)"
-msgstr ""
+msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:69
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
+msgstr "BROTIL로 압축한 TAR (.tar.br)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with bzip2 (.tar.bz2)"
@@ -953,300 +971,312 @@ msgstr "추가(_A)"
 msgid "_Extract"
 msgstr "풀기(_E)"
 
-#: ../src/fr-window.c:1539
+#: ../src/fr-window.c:1540
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] "%d개 항목 (%s)"
 
-#: ../src/fr-window.c:1544
+#: ../src/fr-window.c:1545
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] "%d개 항목 선택 (%s)"
 
-#: ../src/fr-window.c:1614
+#: ../src/fr-window.c:1615
 msgid "Folder"
 msgstr "폴더"
 
-#: ../src/fr-window.c:2011
+#: ../src/fr-window.c:2012
 msgid "[read only]"
 msgstr "[읽기전용]"
 
-#: ../src/fr-window.c:2271
+#: ../src/fr-window.c:2272
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "\"%s\" 폴더를 보여줄 수 없습니다"
 
-#: ../src/fr-window.c:2303
-msgid "Process paused"
-msgstr ""
-
 #: ../src/fr-window.c:2305
-msgid "_Resume"
-msgstr ""
+msgid "Process paused"
+msgstr "프로세스 일시 정지"
 
-#: ../src/fr-window.c:2312 ../src/fr-window.c:2912
+#: ../src/fr-window.c:2307
+msgid "_Resume"
+msgstr "계속 하기(_R)"
+
+#: ../src/fr-window.c:2315 ../src/fr-window.c:2918
 msgid "Please wait…"
 msgstr "기다려 주세요..."
 
 #. add start button default suspend
-#: ../src/fr-window.c:2314 ../src/fr-window.c:2605
+#: ../src/fr-window.c:2317 ../src/fr-window.c:2608
 msgid "_Pause"
-msgstr ""
+msgstr "일시 정지(_P)"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2390 ../src/fr-window.c:2428
+#: ../src/fr-window.c:2393 ../src/fr-window.c:2431
 #, c-format
 msgid "Creating \"%s\""
 msgstr "\"%s\" 만드는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2394
+#: ../src/fr-window.c:2397
 #, c-format
 msgid "Loading \"%s\""
 msgstr "\"%s\" 불러오는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2398
+#: ../src/fr-window.c:2401
 #, c-format
 msgid "Reading \"%s\""
 msgstr "\"%s\" 읽어들이는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2402
+#: ../src/fr-window.c:2405
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr "\"%s\"에서  지우는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2406
+#: ../src/fr-window.c:2409
 #, c-format
 msgid "Testing \"%s\""
 msgstr "\"%s\" 테스트 중"
 
-#: ../src/fr-window.c:2409
+#: ../src/fr-window.c:2412
 msgid "Getting the file list"
 msgstr "파일 목록 가져오는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2413
+#: ../src/fr-window.c:2416
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr " \"%s\"에 추가할 파일을 복사하는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2417
+#: ../src/fr-window.c:2420
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr "\"%s\"에 파일을 추가하는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2421
+#: ../src/fr-window.c:2424
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr "\"%s\"에서 파일을 푸는 중"
 
-#: ../src/fr-window.c:2424
+#: ../src/fr-window.c:2427
 msgid "Copying the extracted files to the destination"
 msgstr "목적지에 압축이 풀린 파일을 복사하는 중"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2432
+#: ../src/fr-window.c:2435
 #, c-format
 msgid "Saving \"%s\""
 msgstr "\"%s\" 저장하는 중"
 
-#: ../src/fr-window.c:2599
+#: ../src/fr-window.c:2601 ../src/ui/app-menu.ui.h:3
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../src/fr-window.c:2602
 msgid "_Open the Archive"
 msgstr "압축 파일 열기(_O)"
 
-#: ../src/fr-window.c:2600
+#: ../src/fr-window.c:2603
 msgid "_Show the Files"
 msgstr "파일 표시(_S)"
 
-#: ../src/fr-window.c:2601
+#: ../src/fr-window.c:2604
 msgid "Show the _Files and Quit"
 msgstr "파일을 보이고 닫기(_F)"
 
-#: ../src/fr-window.c:2779
+#: ../src/fr-window.c:2605 ../src/ui.h:59
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../src/fr-window.c:2606
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+#: ../src/fr-window.c:2783
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
 msgstr[0] "%d개 파일이 남았습니다"
 
-#: ../src/fr-window.c:2830
+#: ../src/fr-window.c:2835
 msgid "Extraction completed successfully"
 msgstr "압축 풀기를 성공적으로 마쳤습니다"
 
-#: ../src/fr-window.c:2854
+#: ../src/fr-window.c:2860
 msgid "Archive created successfully"
 msgstr "압축 파일을 성공적으로 만들었습니다"
 
-#: ../src/fr-window.c:2981 ../src/fr-window.c:3116
+#: ../src/fr-window.c:2987 ../src/fr-window.c:3122
 msgid "Command exited abnormally."
 msgstr "명령이 비정상적으로 마쳤습니다."
 
-#: ../src/fr-window.c:3074
+#: ../src/fr-window.c:3080
 msgid "An error occurred while extracting files."
 msgstr "파일을 푸는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3080
+#: ../src/fr-window.c:3086
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "\"%s\"을(를) 열 수 없습니다"
 
-#: ../src/fr-window.c:3085
+#: ../src/fr-window.c:3091
 msgid "An error occurred while loading the archive."
 msgstr "압축 파일을 읽는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3089
+#: ../src/fr-window.c:3095
 msgid "An error occurred while deleting files from the archive."
 msgstr "압축 파일에 파일을 지우는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3095
+#: ../src/fr-window.c:3101
 msgid "An error occurred while adding files to the archive."
 msgstr "압축 파일에 파일을 추가하는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3099
+#: ../src/fr-window.c:3105
 msgid "An error occurred while testing archive."
 msgstr "압축 파일을 검사하는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3103
+#: ../src/fr-window.c:3109
 msgid "An error occurred while saving the archive."
 msgstr "압축 파일을 저장하는 중 오류가 발생했습니다."
 
-#: ../src/fr-window.c:3107
+#: ../src/fr-window.c:3113
 msgid "An error occurred."
 msgstr "오류가 발생했습니다."
 
-#: ../src/fr-window.c:3113
+#: ../src/fr-window.c:3119
 msgid "Command not found."
 msgstr "명령을 찾을 수 없습니다."
 
-#: ../src/fr-window.c:3316
+#: ../src/fr-window.c:3322
 msgid "Test Result"
 msgstr "검사 결과"
 
-#: ../src/fr-window.c:4175 ../src/fr-window.c:8314 ../src/fr-window.c:8350
-#: ../src/fr-window.c:8600
+#: ../src/fr-window.c:4181 ../src/fr-window.c:8327 ../src/fr-window.c:8363
+#: ../src/fr-window.c:8613
 msgid "Could not perform the operation"
 msgstr "작업을 수행할 수 없습니다"
 
-#: ../src/fr-window.c:4201
+#: ../src/fr-window.c:4207
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "이 파일을 현재 압축 파일이나 새로운 압축 파일에 추가하시겠습니까?"
 
-#: ../src/fr-window.c:4231
+#: ../src/fr-window.c:4237
 msgid "Do you want to create a new archive with these files?"
 msgstr "이 파일들로 새로운 압축 파일을 만들겠습니까?"
 
-#: ../src/fr-window.c:4234
+#: ../src/fr-window.c:4240
 msgid "Create _Archive"
 msgstr "압축 파일 만들기(_A)"
 
-#: ../src/fr-window.c:4829 ../src/fr-window.c:5890
+#: ../src/fr-window.c:4835 ../src/fr-window.c:5896
 msgid "Folders"
 msgstr "폴더"
 
-#: ../src/fr-window.c:4867
+#: ../src/fr-window.c:4873
 msgctxt "File"
 msgid "Size"
 msgstr "크기"
 
-#: ../src/fr-window.c:4868
+#: ../src/fr-window.c:4874
 msgctxt "File"
 msgid "Type"
-msgstr "형식"
+msgstr "종류"
 
-#: ../src/fr-window.c:4869
+#: ../src/fr-window.c:4875
 msgctxt "File"
 msgid "Date Modified"
 msgstr "수정 시간"
 
-#: ../src/fr-window.c:4870
+#: ../src/fr-window.c:4876
 msgctxt "File"
 msgid "Location"
 msgstr "위치"
 
-#: ../src/fr-window.c:4879
+#: ../src/fr-window.c:4885
 msgctxt "File"
 msgid "Name"
 msgstr "이름"
 
-#: ../src/fr-window.c:5809
+#: ../src/fr-window.c:5815
 msgid "Find:"
 msgstr "찾기:"
 
-#: ../src/fr-window.c:5900
+#: ../src/fr-window.c:5906
 msgid "Close the folders pane"
 msgstr "폴더 창을 닫습니다"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5931
+#: ../src/fr-window.c:5937
 msgid "Open _Recent"
 msgstr "최근 파일 열기(_R)"
 
-#: ../src/fr-window.c:5932 ../src/fr-window.c:5944
+#: ../src/fr-window.c:5938 ../src/fr-window.c:5950
 msgid "Open a recently used archive"
 msgstr "최근 사용한 압축 파일을 엽니다"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:6021 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:6027 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr "위치(_L):"
 
-#: ../src/fr-window.c:6370
+#: ../src/fr-window.c:6376
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "\"%s\" 압축 파일을 저장할 수 없습니다"
 
-#: ../src/fr-window.c:6869
+#: ../src/fr-window.c:6875
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "\"%s\" 파일을 바꾸시겠습니까?"
 
-#: ../src/fr-window.c:6872
+#: ../src/fr-window.c:6878
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "같은 이름의 또 다`른 파일이 \"%s\" 안에 이미 있습니다."
 
-#: ../src/fr-window.c:6879
+#: ../src/fr-window.c:6885
 msgid "Replace _All"
 msgstr "모두 바꾸기(_A)"
 
-#: ../src/fr-window.c:6880
+#: ../src/fr-window.c:6886
 msgid "_Skip"
 msgstr "건너뛰기(_S)"
 
-#: ../src/fr-window.c:6881
+#: ../src/fr-window.c:6887
 msgid "_Replace"
 msgstr "바꾸기(_R)"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7716
+#: ../src/fr-window.c:7729
 msgid "New name is void, please type a name."
 msgstr "새 이름이 비어있으니 이름을 입력하십시오."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7721
+#: ../src/fr-window.c:7734
 msgid "New name is the same as old one, please type other name."
 msgstr "새 이름이 이미 존재하니, 다른 이름을 입력하십시오."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7726
+#: ../src/fr-window.c:7739
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "\"%s\" 이름에 최소한 %s 문자가 있어야 하므로 잘못되었으니, 다른 이름을 입력하십시오."
 
-#: ../src/fr-window.c:7762
+#: ../src/fr-window.c:7775
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1257,7 +1287,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/fr-window.c:7764
+#: ../src/fr-window.c:7777
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1268,43 +1298,43 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/fr-window.c:7834
+#: ../src/fr-window.c:7847
 msgid "Rename"
 msgstr "이름 바꾸기"
 
-#: ../src/fr-window.c:7835
+#: ../src/fr-window.c:7848
 msgid "_New folder name:"
 msgstr "새 폴더 이름(_N):"
 
-#: ../src/fr-window.c:7835
+#: ../src/fr-window.c:7848
 msgid "_New file name:"
 msgstr "새 파일 이름(_N):"
 
-#: ../src/fr-window.c:7839
+#: ../src/fr-window.c:7852
 msgid "_Rename"
 msgstr "이름 바꾸기(_R)"
 
-#: ../src/fr-window.c:7856 ../src/fr-window.c:7875
+#: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the folder"
 msgstr "폴더 이름을 바꿀 수 없습니다"
 
-#: ../src/fr-window.c:7856 ../src/fr-window.c:7875
+#: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the file"
 msgstr "파일의 이름을 바꿀 수 없습니다"
 
-#: ../src/fr-window.c:8275
+#: ../src/fr-window.c:8288
 msgid "Paste Selection"
 msgstr "선택한 파일을 붙여넣기"
 
-#: ../src/fr-window.c:8276
+#: ../src/fr-window.c:8289
 msgid "_Destination folder:"
 msgstr "대상 폴더(_D):"
 
-#: ../src/fr-window.c:8879
+#: ../src/fr-window.c:8892
 msgid "Add files to an archive"
 msgstr "압축 파일에 파일을 추가합니다"
 
-#: ../src/fr-window.c:8922 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8935 ../src/main.c:185 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr "압축 파일을 풉니다"
@@ -1382,10 +1412,6 @@ msgstr "도움말(_H)"
 #: ../src/ui/app-menu.ui.h:2
 msgid "_About Archive Manager"
 msgstr "압축 관리자 소개(_A)"
-
-#: ../src/ui/app-menu.ui.h:3
-msgid "_Quit"
-msgstr "끝내기(_Q)"
 
 #: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
@@ -1470,10 +1496,6 @@ msgstr "압축 파일에 폴더를 추가합니다"
 #: ../src/ui.h:55
 msgid "Add Folder"
 msgstr "폴더 추가"
-
-#: ../src/ui.h:59
-msgid "_Close"
-msgstr "닫기(_C)"
 
 #: ../src/ui.h:60
 msgid "Close the current archive"
