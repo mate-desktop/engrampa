@@ -76,9 +76,9 @@ struct _EggFileFormatSearch
 
 static guint signals[SIGNAL_LAST] = { 0 };
 
-G_DEFINE_TYPE (EggFileFormatChooser, 
-	       egg_file_format_chooser,
-               GTK_TYPE_EXPANDER);
+G_DEFINE_TYPE_WITH_PRIVATE (EggFileFormatChooser,
+                            egg_file_format_chooser,
+                            GTK_TYPE_EXPANDER);
 static EGG_DEFINE_QUARK (EggFileFormatFilterInfo,
                          egg_file_format_filter_info);
 
@@ -386,8 +386,7 @@ egg_file_format_chooser_init (EggFileFormatChooser *self)
   GtkCellRenderer *cell;
   GtkTreeIter iter;
 
-  self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, EGG_TYPE_FILE_FORMAT_CHOOSER, 
-                                            EggFileFormatChooserPrivate);
+  self->priv = egg_file_format_chooser_get_instance_private(self);
 
   self->priv->size_changed_event = 0;
 
@@ -790,8 +789,6 @@ egg_file_format_chooser_class_init (EggFileFormatChooserClass *cls)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (cls);
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (cls);
-
-  g_type_class_add_private (cls, sizeof (EggFileFormatChooserPrivate));
 
   object_class->dispose = egg_file_format_chooser_dispose;
   object_class->finalize = egg_file_format_chooser_finalize;
