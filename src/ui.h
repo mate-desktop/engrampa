@@ -193,7 +193,7 @@ static GtkActionEntry action_entries[] = {
 	  G_CALLBACK (activate_action_open_folder_from_sidebar) },
 
 	{ "GoBack", "go-previous",
-	  "Back", NULL,
+	  NULL, NULL,
 	  N_("Go to the previous visited location"),
 	  G_CALLBACK (activate_action_go_back) },
 	{ "GoForward", "go-next",
