@@ -124,7 +124,7 @@ dlg_ask_password__common (FrWindow       *window,
 	text = g_strdup_printf (_("Enter the password for the archive '%s'."), name);
 	gtk_label_set_label (GTK_LABEL (label), text);
 	g_free (text);
-	
+
 	if (fr_window_get_password (window) != NULL)
 		_gtk_entry_set_locale_text (GTK_ENTRY (data->pw_password_entry),
 					    fr_window_get_password (window));
@@ -149,10 +149,10 @@ dlg_ask_password__common (FrWindow       *window,
 					      GTK_WINDOW (window));
 		gtk_window_set_modal (GTK_WINDOW (data->dialog), TRUE);
 	}
-	else 
+	else
 		gtk_window_set_title (GTK_WINDOW (data->dialog), name);
 	g_free (name);
-	
+
 	gtk_widget_show (data->dialog);
 }
 
@@ -164,7 +164,7 @@ dlg_ask_password (FrWindow *window)
 }
 
 
-void 
+void
 dlg_ask_password_for_paste_operation (FrWindow *window)
 {
 	dlg_ask_password__common (window, FR_PASSWORD_TYPE_PASTE_FROM);

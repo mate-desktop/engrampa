@@ -2318,8 +2318,8 @@ static void change_button_label (FrWindow  *window,
 		gtk_button_set_image (GTK_BUTTON (button),
 				      gtk_image_new_from_icon_name ("media-playback-pause",
 								    GTK_ICON_SIZE_BUTTON));
-	}		
-}		
+	}
+}
 static void fr_state_switch (FrWindow  *window)
 {
 	int ret;
@@ -2329,9 +2329,9 @@ static void fr_state_switch (FrWindow  *window)
 		if (ret == 0)
 		{
 			change_button_label (window, window->priv->pd_state_button);
-		}		
+		}
 	}
-}		
+}
 
 static void
 progress_dialog_response (GtkDialog *dialog,
@@ -2370,7 +2370,7 @@ progress_dialog_response (GtkDialog *dialog,
 		break;
 	case GTK_RESPONSE_ACCEPT:
 		fr_state_switch (window);
-		break;	
+		break;
 	default:
 		break;
 	}

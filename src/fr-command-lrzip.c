@@ -51,7 +51,7 @@ list__process_line (char     *line,
 	fdata->size = g_ascii_strtoull (get_last_field (line, 4), NULL, 10);
 
 	struct stat st;
-	
+
 	if (stat (comm->filename, &st) == 0)
 		fdata->modified = st.st_mtim.tv_sec;
 	else

@@ -79,7 +79,7 @@ GdkPixbuf * get_mime_type_pixbuf            (const char   *mime_type,
 int         get_folder_pixbuf_size_for_list (GtkWidget *widget);
 void        show_help_dialog                (GtkWindow    *parent,
 					     const char   *section);
-GtkBuilder *  
+GtkBuilder *
             _gtk_builder_new_from_file      (const char   *filename);
 GtkBuilder *
 	   _gtk_builder_new_from_resource   (const char   *resource_path);

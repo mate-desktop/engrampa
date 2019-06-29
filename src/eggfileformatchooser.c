@@ -27,7 +27,7 @@
 typedef struct _EggFileFormatFilterInfo EggFileFormatFilterInfo;
 typedef struct _EggFileFormatSearch EggFileFormatSearch;
 
-enum 
+enum
 {
   MODEL_COLUMN_ID,
   MODEL_COLUMN_NAME,
@@ -38,7 +38,7 @@ enum
   MODEL_COLUMN_DESTROY
 };
 
-enum 
+enum
 {
   SIGNAL_SELECTION_CHANGED,
   SIGNAL_LAST
@@ -229,7 +229,7 @@ selection_changed_cb (GtkTreeSelection     *selection,
   GtkTreeIter parent;
   GtkTreeIter iter;
 
-  if (gtk_tree_selection_get_selected (selection, &model, &iter)) 
+  if (gtk_tree_selection_get_selected (selection, &model, &iter))
     {
       gtk_tree_model_get (model, &iter, MODEL_COLUMN_NAME, &name, -1);
 
@@ -254,7 +254,7 @@ selection_changed_cb (GtkTreeSelection     *selection,
     }
 }
 
-/* XXX This hack is needed, as gtk_expander_set_label seems 
+/* XXX This hack is needed, as gtk_expander_set_label seems
  * not to work from egg_file_format_chooser_init */
 static gboolean
 select_default_file_format (gpointer data)
@@ -554,7 +554,7 @@ filter_changed_cb (GObject    *object,
   current_filter = gtk_file_chooser_get_filter (GTK_FILE_CHOOSER (object));
   model = GTK_TREE_MODEL (self->priv->model);
 
-  if (gtk_tree_selection_get_selected (self->priv->selection, &model, &iter)) 
+  if (gtk_tree_selection_get_selected (self->priv->selection, &model, &iter))
     {
       while (gtk_tree_model_iter_parent (model, &parent, &iter))
         iter = parent;
@@ -692,7 +692,7 @@ chooser_response_cb (GtkDialog *dialog,
           g_free (filename);
         }
 
-      g_free (basename); 
+      g_free (basename);
     }
 
 }
@@ -725,7 +725,7 @@ egg_file_format_chooser_realize (GtkWidget *widget)
 
   g_object_ref (self->priv->chooser);
 
-  g_signal_connect (self->priv->chooser, "notify::filter", 
+  g_signal_connect (self->priv->chooser, "notify::filter",
                     G_CALLBACK (filter_changed_cb), self);
   gtk_file_chooser_add_filter (self->priv->chooser, self->priv->all_files);
 
@@ -832,7 +832,7 @@ egg_file_format_chooser_add_format_impl (EggFileFormatChooser *self,
   else
     filter = egg_file_format_filter_new (name, TRUE);
 
-  gtk_tree_store_append (self->priv->model, &iter, 
+  gtk_tree_store_append (self->priv->model, &iter,
                          parent > 0 ? &search.iter : NULL);
 
   gtk_tree_store_set (self->priv->model, &iter,
@@ -932,7 +932,7 @@ get_icon_name (const gchar *mime_type)
   return name;
 }
 
-void           
+void
 egg_file_format_chooser_add_pixbuf_formats (EggFileFormatChooser *self,
                                             guint                 parent G_GNUC_UNUSED,
                                             guint               **formats)
@@ -971,7 +971,7 @@ egg_file_format_chooser_add_pixbuf_formats (EggFileFormatChooser *self,
       description = gdk_pixbuf_format_get_description (format);
       name = gdk_pixbuf_format_get_name (format);
 
-      id = egg_file_format_chooser_add_format_impl (self, parent, description, 
+      id = egg_file_format_chooser_add_format_impl (self, parent, description,
                                                     icon, extensions);
 
       g_free (description);
@@ -1030,7 +1030,7 @@ egg_file_format_chooser_remove_format (EggFileFormatChooser *self,
   gtk_tree_store_remove (self->priv->model, &search.iter);
 }
 
-void            
+void
 egg_file_format_chooser_set_format (EggFileFormatChooser *self,
                                     guint                 format)
 {
@@ -1095,7 +1095,7 @@ egg_file_format_chooser_get_format (EggFileFormatChooser *self,
   return format;
 }
 
-void            
+void
 egg_file_format_chooser_set_format_data (EggFileFormatChooser *self,
                                          guint                 format,
                                          gpointer              data,
@@ -1175,14 +1175,14 @@ egg_file_format_chooser_append_extension (EggFileFormatChooser *self,
 
   g_return_val_if_fail (search.success, NULL);
 
-  gtk_tree_model_get (model, &search.iter, 
+  gtk_tree_model_get (model, &search.iter,
                       MODEL_COLUMN_EXTENSIONS, &extensions,
                       -1);
 
-  if (NULL == extensions && 
+  if (NULL == extensions &&
       gtk_tree_model_iter_nth_child (model, &child, &search.iter, 0))
     {
-      gtk_tree_model_get (model, &child, 
+      gtk_tree_model_get (model, &child,
                           MODEL_COLUMN_EXTENSIONS, &extensions,
                           -1);
     }

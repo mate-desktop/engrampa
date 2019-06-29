@@ -1365,7 +1365,7 @@ egg_desktop_file_launch (EggDesktopFile *desktop_file,
 		       EGG_DESKTOP_FILE_ERROR_NOT_LAUNCHABLE,
 		       _("Can't pass documents to this desktop element"));
 	  return FALSE;
-	}	  
+	}
 
       if (!parse_link (desktop_file, &app_desktop_file, &documents, error))
 	return FALSE;
@@ -1451,10 +1451,10 @@ egg_set_desktop_file (const char *desktop_file_path)
 
 /**
  * egg_get_desktop_file:
- * 
+ *
  * Gets the application's #EggDesktopFile, as set by
  * egg_set_desktop_file().
- * 
+ *
  * Return value: the #EggDesktopFile, or %NULL if it hasn't been set.
  **/
 EggDesktopFile *
