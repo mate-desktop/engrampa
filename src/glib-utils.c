@@ -326,20 +326,20 @@ match_regexps (GRegex           **regexps,
 {
 	gboolean matched;
 	int      i;
-	
+
 	if ((regexps == NULL) || (regexps[0] == NULL))
 		return TRUE;
 
 	if (string == NULL)
 		return FALSE;
-	
+
 	matched = FALSE;
 	for (i = 0; regexps[i] != NULL; i++)
 		if (g_regex_match (regexps[i], string, match_options, NULL)) {
 			matched = TRUE;
 			break;
 		}
-		
+
 	return matched;
 }
 
@@ -348,10 +348,10 @@ void
 free_regexps (GRegex **regexps)
 {
 	int i;
-	
-	if (regexps == NULL) 
+
+	if (regexps == NULL)
 		return;
-		
+
 	for (i = 0; regexps[i] != NULL; i++)
 		g_regex_unref (regexps[i]);
 	g_free (regexps);
@@ -370,11 +370,11 @@ search_util_get_patterns (const char *pattern_string)
 	patterns = g_utf8_strsplit (pattern_string, ";", MAX_PATTERNS);
 	for (i = 0; patterns[i] != NULL; i++) {
 		char *p1, *p2;
-		
+
 		p1 = g_utf8_strstrip (patterns[i]);
 		p2 = str_substitute (p1, ".", "\\.");
 		patterns[i] = str_substitute (p2, "*", ".*");
-		
+
 		g_free (p2);
 		g_free (p1);
 	}
@@ -390,19 +390,19 @@ search_util_get_regexps (const char         *pattern_string,
 	char   **patterns;
 	GRegex **regexps;
 	int      i;
-		
+
 	patterns = search_util_get_patterns (pattern_string);
 	if (patterns == NULL)
 		return NULL;
-		
+
 	regexps = g_new0 (GRegex*, n_fields (patterns) + 1);
-	for (i = 0; patterns[i] != NULL; i++) 
-		regexps[i] = g_regex_new (patterns[i], 
-					  G_REGEX_OPTIMIZE | compile_options, 
-					  G_REGEX_MATCH_NOTEMPTY, 
+	for (i = 0; patterns[i] != NULL; i++)
+		regexps[i] = g_regex_new (patterns[i],
+					  G_REGEX_OPTIMIZE | compile_options,
+					  G_REGEX_MATCH_NOTEMPTY,
 					  NULL);
 	g_strfreev (patterns);
-	
+
 	return regexps;
 }
 
@@ -557,7 +557,7 @@ get_time_string (time_t time)
 
 	tm = localtime (&time);
 	/* This is the time format used in the "Date Modified" column and
-	 * in the Properties dialog.  See the man page of strftime for an 
+	 * in the Properties dialog.  See the man page of strftime for an
 	 * explanation of the values. */
 	locale_format = g_locale_from_utf8 (_("%d %B %Y, %H:%M"), -1, NULL, NULL, NULL);
 	strftime (s_time, sizeof (s_time) - 1, locale_format, tm);
@@ -572,14 +572,14 @@ GPtrArray *
 g_ptr_array_copy (GPtrArray *array)
 {
 	GPtrArray *new_array;
-	
+
 	if (array == NULL)
 		return NULL;
-		
+
 	new_array = g_ptr_array_sized_new (array->len);
-	memcpy (new_array->pdata, array->pdata, array->len * sizeof (gpointer)); 
+	memcpy (new_array->pdata, array->pdata, array->len * sizeof (gpointer));
 	new_array->len = array->len;
-	
+
 	return new_array;
 }
 
@@ -599,7 +599,7 @@ g_ptr_array_reverse (GPtrArray *array)
 {
 	int      i, j;
 	gpointer tmp;
-	
+
 	for (i = 0; i < array->len / 2; i++) {
 		j = array->len - i - 1;
 		tmp = g_ptr_array_index (array, i);
@@ -615,20 +615,20 @@ g_ptr_array_binary_search (GPtrArray    *array,
 			   GCompareFunc  func)
 {
 	int l, r, p, cmp = -1;
-		
+
 	l = 0;
 	r = array->len;
 	while (l < r) {
 		p = l + ((r - l) / 2);
 		cmp = func(value, &g_ptr_array_index (array, p));
 		if (cmp == 0)
-			return p; 
+			return p;
 		else if (cmp < 0)
 			r = p;
-		else 
+		else
 			l = p + 1;
 	}
-	
+
 	return -1;
 }
 
@@ -662,11 +662,11 @@ char*
 g_uri_display_basename (const char  *uri)
 {
 	char *e_name, *name;
-	
+
 	e_name = g_filename_display_basename (uri);
 	name = g_uri_unescape_string (e_name, "");
 	g_free (e_name);
-	
+
 	return name;
 }
 

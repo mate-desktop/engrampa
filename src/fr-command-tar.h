@@ -47,7 +47,7 @@ struct _FrCommandTar
 	char      *uncomp_filename;
 	gboolean   name_modified;
 	char      *compress_command;
-	
+
 	char      *msg;
 };
 

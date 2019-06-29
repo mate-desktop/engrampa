@@ -41,17 +41,17 @@ static const  struct {
 static const GtkStockItem stock_items [] = {
 	{ FR_STOCK_CREATE_ARCHIVE, N_("C_reate"), 0, 0, GETTEXT_PACKAGE },
 	{ FR_STOCK_ADD_FILES, N_("_Add"), 0, 0, GETTEXT_PACKAGE },
-	{ FR_STOCK_ADD_FOLDER, N_("_Add"), 0, 0, GETTEXT_PACKAGE },	
+	{ FR_STOCK_ADD_FOLDER, N_("_Add"), 0, 0, GETTEXT_PACKAGE },
 	{ FR_STOCK_EXTRACT, N_("_Extract"), 0, 0, GETTEXT_PACKAGE }
 };
 
 void
 fr_stock_init (void)
-{        
+{
 	GtkIconFactory *factory;
         GtkIconSource  *source;
         int             i;
-	
+
 	if (stock_initialized)
 		return;
 	stock_initialized = TRUE;

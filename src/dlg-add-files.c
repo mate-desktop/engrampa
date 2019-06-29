@@ -69,13 +69,13 @@ file_sel_response_cb (GtkWidget      *widget,
 		g_settings_set_string (data->settings, PREF_ADD_CURRENT_FOLDER, current_folder);
 		fr_window_set_add_default_dir (window, current_folder);
 	}
-		
+
 	if (uri != NULL)
 	{
 		g_settings_set_string (data->settings, PREF_ADD_FILENAME, uri);
 		g_free (uri);
 	}
-	
+
 
 	if ((response == GTK_RESPONSE_CANCEL) || (response == GTK_RESPONSE_DELETE_EVENT)) {
 		gtk_widget_destroy (data->dialog);

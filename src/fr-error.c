@@ -24,13 +24,13 @@
 #include "fr-error.h"
 
 
-GQuark 
+GQuark
 fr_error_quark (void)
 {
 	static GQuark quark;
-        
+
         if (!quark)
                 quark = g_quark_from_static_string ("engrampa-error");
-	
+
         return quark;
 }

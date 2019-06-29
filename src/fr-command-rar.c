@@ -89,7 +89,7 @@ Details: RAR 4
  Attributes      Size    Packed Ratio   Date   Time   Checksum  Name
 ----------- ---------  -------- ----- -------- -----  --------  ----
  -rw-rw-r--      3165      1310  41%  07-03-17 21:34  888D50B3  loremipsum.txt
- -rw-rw-r--         0         8   0%  07-03-17 21:36  00000000  file2.empty 
+ -rw-rw-r--         0         8   0%  07-03-17 21:36  00000000  file2.empty
 ----------- ---------  -------- ----- -------- -----  --------  ----
                  3165      1318  41%                            2
 
@@ -702,7 +702,7 @@ fr_command_rar_handle_error (FrCommand   *comm,
 			error->type = FR_PROC_ERROR_ASK_PASSWORD;
 			break;
 		}
-		
+
 		if (strncmp (line, "Unexpected end of archive", 25) == 0) {
 			/* FIXME: handle this type of errors at a higher level when the freeze is over. */
 		}

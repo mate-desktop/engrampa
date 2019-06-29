@@ -1,6 +1,6 @@
 /*
  *  Engrampa
- * 
+ *
  *  Copyright (C) 2004 Free Software Foundation, Inc.
  *
  *  This library is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
  *  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  *
  *  Author: Paolo Bacchilega <paobac@cvs.mate.org>
- * 
+ *
  */
 
 #include <config.h>
@@ -44,12 +44,12 @@ caja_module_shutdown (void)
 }
 
 
-void 
+void
 caja_module_list_types (const GType **types,
 			    int          *num_types)
 {
 	static GType type_list[1];
-	
+
 	type_list[0] = CAJA_TYPE_FR;
 	*types = type_list;
 	*num_types = 1;

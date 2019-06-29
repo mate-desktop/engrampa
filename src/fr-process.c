@@ -1057,10 +1057,10 @@ fr_close_suspend_process(FrProcess *process)
     if (process->priv->suspend)
     {
         if (process->priv->command_pid > 0)
-        {    
+        {
             ret = killpg (process->priv->command_pid,SIGTERM);
             ret = killpg (process->priv->command_pid,SIGCONT);
-        }    
+        }
         if(ret == 0)
             process->priv->suspend = FALSE;
     }
