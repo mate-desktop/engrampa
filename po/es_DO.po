@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-08 10:03+0100\n"
+"POT-Creation-Date: 2019-03-20 19:51+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Spanish (Dominican Republic) (https://www.transifex.com/mate/teams/13566/es_DO/)\n"
@@ -56,31 +56,31 @@ msgstr ""
 msgid "Not a launchable item"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:225
+#: ../copy-n-paste/eggsmclient.c:221
 msgid "Disable connection to session manager"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:228
+#: ../copy-n-paste/eggsmclient.c:224
 msgid "Specify file containing saved configuration"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:228
+#: ../copy-n-paste/eggsmclient.c:224
 msgid "FILE"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:231
+#: ../copy-n-paste/eggsmclient.c:227
 msgid "Specify session management ID"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:231
+#: ../copy-n-paste/eggsmclient.c:227
 msgid "ID"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:252
+#: ../copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
 msgstr ""
 
-#: ../copy-n-paste/eggsmclient.c:253
+#: ../copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
 msgstr ""
 
@@ -98,7 +98,7 @@ msgid ""
 "(.7z)</li> <li>WinAce Compressed File (.ace)</li> <li>ALZip Compressed File "
 "(.alz)</li> <li>AIX Small Indexed Archive (.ar)</li> <li>ARJ Compressed "
 "Archive (.arj)</li> <li>Cabinet File (.cab)</li> <li>UNIX CPIO Archive "
-"(.cpio)</li> <li>Debian Linux Package (.deb) [Read-only mode]</li> "
+"(.cpio)</li> <li>Debian Linux Package (.deb, .udeb) [Read-only mode]</li> "
 "<li>ISO-9660 CD Disc Image (.iso) [Read-only mode]</li> <li>Java Archive "
 "(.jar)</li> <li>Java Enterprise archive (.ear)</li> <li>Java Web Archive "
 "(.war)</li> <li>LHA Archive (.lzh, .lha)</li> <li>WinRAR Compressed Archive "
@@ -116,12 +116,12 @@ msgid ""
 "more about MATE and Engrampa, please visit the project's home page. </p>"
 msgstr ""
 
-#: ../data/engrampa.desktop.in.in.h:1
+#: ../data/engrampa.desktop.in.in.h:1 ../src/main.c:49
 msgid "Engrampa Archive Manager"
 msgstr ""
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2003
-#: ../src/fr-window.c:5567
+#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2004
+#: ../src/fr-window.c:5573
 msgid "Archive Manager"
 msgstr ""
 
@@ -324,7 +324,7 @@ msgstr ""
 msgid "Create a compressed archive with the selected objects"
 msgstr ""
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:330
+#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:343
 #: ../src/server.c:457
 msgid "Engrampa"
 msgstr ""
@@ -333,48 +333,48 @@ msgstr ""
 msgid "Allows to create and extract archives"
 msgstr ""
 
-#: ../src/actions.c:157 ../src/actions.c:196 ../src/actions.c:232
+#: ../src/actions.c:158 ../src/actions.c:197 ../src/actions.c:233
 #: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3069
+#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3075
 msgid "Could not create the archive"
 msgstr ""
 
-#: ../src/actions.c:159 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
+#: ../src/actions.c:160 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
 msgstr ""
 
-#: ../src/actions.c:198
+#: ../src/actions.c:199
 msgid "You don't have permission to create an archive in this folder"
 msgstr ""
 
-#: ../src/actions.c:234 ../src/dlg-package-installer.c:271
+#: ../src/actions.c:235 ../src/dlg-package-installer.c:271
 #: ../src/dlg-package-installer.c:280 ../src/dlg-package-installer.c:308
-#: ../src/fr-archive.c:1161 ../src/fr-window.c:6202 ../src/fr-window.c:6378
+#: ../src/fr-archive.c:1161 ../src/fr-window.c:6208 ../src/fr-window.c:6384
 msgid "Archive type not supported."
 msgstr ""
 
-#: ../src/actions.c:248
+#: ../src/actions.c:249
 msgid "Could not delete the old archive."
 msgstr ""
 
-#: ../src/actions.c:382 ../src/fr-window.c:5943
+#: ../src/actions.c:383 ../src/fr-window.c:5949
 msgid "Open"
 msgstr ""
 
-#: ../src/actions.c:393 ../src/fr-window.c:5386
+#: ../src/actions.c:394 ../src/fr-window.c:5392
 msgid "All archives"
 msgstr ""
 
-#: ../src/actions.c:400
+#: ../src/actions.c:401
 msgid "All files"
 msgstr ""
 
-#: ../src/actions.c:794 ../src/fr-window.c:7411
+#: ../src/actions.c:795 ../src/fr-window.c:7437
 msgid "Last Output"
 msgstr ""
 
-#: ../src/actions.c:860
+#: ../src/actions.c:859
 msgid ""
 "Engrampa is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -382,7 +382,7 @@ msgid ""
 "any later version."
 msgstr ""
 
-#: ../src/actions.c:864
+#: ../src/actions.c:863
 msgid ""
 "Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -390,24 +390,24 @@ msgid ""
 "details."
 msgstr ""
 
-#: ../src/actions.c:868
+#: ../src/actions.c:867
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 
-#: ../src/actions.c:878
+#: ../src/actions.c:900
 msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
-"Copyright © 2012–2018 The MATE developers"
+"Copyright © 2012–2019 The MATE developers"
 msgstr ""
 
-#: ../src/actions.c:880
+#: ../src/actions.c:902
 msgid "An archive manager for MATE."
 msgstr ""
 
-#: ../src/actions.c:883
+#: ../src/actions.c:905
 msgid "translator-credits"
 msgstr ""
 "Francisco Javier F. Serrador <serrador@cvs.mate.org>\n"
@@ -494,7 +494,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7762 ../src/fr-window.c:7764
+#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7775 ../src/fr-window.c:7777
 msgid "Please use a different name."
 msgstr ""
 
@@ -504,7 +504,7 @@ msgid ""
 " folder."
 msgstr ""
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6980
+#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:104 ../src/fr-window.c:6986
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -512,11 +512,11 @@ msgid ""
 "Do you want to create it?"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6989
+#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:113 ../src/fr-window.c:6995
 msgid "Create _Folder"
 msgstr ""
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:7006
+#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:7012
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr ""
@@ -534,12 +534,12 @@ msgid "_Overwrite"
 msgstr ""
 
 #: ../src/dlg-extract.c:132 ../src/dlg-extract.c:150 ../src/dlg-extract.c:177
-#: ../src/fr-window.c:4332 ../src/fr-window.c:6921 ../src/fr-window.c:6926
-#: ../src/fr-window.c:7010 ../src/fr-window.c:7029 ../src/fr-window.c:7034
+#: ../src/fr-window.c:4338 ../src/fr-window.c:6927 ../src/fr-window.c:6932
+#: ../src/fr-window.c:7016 ../src/fr-window.c:7035 ../src/fr-window.c:7040
 msgid "Extraction not performed"
 msgstr ""
 
-#: ../src/dlg-extract.c:178 ../src/fr-window.c:4501 ../src/fr-window.c:4581
+#: ../src/dlg-extract.c:178 ../src/fr-window.c:4507 ../src/fr-window.c:4587
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -761,91 +761,123 @@ msgid "Decompressing archive"
 msgstr ""
 
 #: ../src/fr-init.c:61
-msgid "7-Zip (.7z)"
+msgid "Debian package (.deb)"
 msgstr ""
 
 #: ../src/fr-init.c:62
-msgid "Tar compressed with 7z (.tar.7z)"
+msgid "Debian package (.udeb)"
 msgstr ""
 
 #: ../src/fr-init.c:63
-msgid "Ace (.ace)"
-msgstr ""
-
-#: ../src/fr-init.c:65
-msgid "Ar (.a)"
-msgstr ""
-
-#: ../src/fr-init.c:66
-msgid "Ar (.ar)"
-msgstr ""
-
-#: ../src/fr-init.c:67
-msgid "Arj (.arj)"
-msgstr ""
-
-#: ../src/fr-init.c:68
-msgid "brotli (.br)"
-msgstr ""
-
-#: ../src/fr-init.c:69
-msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
-
-#: ../src/fr-init.c:71
-msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr ""
-
-#: ../src/fr-init.c:73
-msgid "Tar compressed with bzip (.tar.bz)"
-msgstr ""
-
-#: ../src/fr-init.c:74
 msgid "Cabinet (.cab)"
 msgstr ""
 
+#: ../src/fr-init.c:64
+msgid "OpenDocument Presentation (.odp)"
+msgstr ""
+
+#: ../src/fr-init.c:65
+msgid "OpenDocument Spreadsheet (.ods)"
+msgstr ""
+
+#: ../src/fr-init.c:66
+msgid "OpenDocument Text (.odt)"
+msgstr ""
+
+#: ../src/fr-init.c:67
+msgid "OpenDocument Presentation Template (.otp)"
+msgstr ""
+
+#: ../src/fr-init.c:68
+msgid "OpenDocument Spreadsheet Template (.ots)"
+msgstr ""
+
+#: ../src/fr-init.c:69
+msgid "OpenDocument Text Template (.ott)"
+msgstr ""
+
+#: ../src/fr-init.c:70
+msgid "7-Zip (.7z)"
+msgstr ""
+
+#: ../src/fr-init.c:71
+msgid "Tar compressed with 7z (.tar.7z)"
+msgstr ""
+
+#: ../src/fr-init.c:72
+msgid "Ace (.ace)"
+msgstr ""
+
+#: ../src/fr-init.c:73
+msgid "ALZip archive (.alz)"
+msgstr ""
+
+#: ../src/fr-init.c:74
+msgid "Ar (.a)"
+msgstr ""
+
 #: ../src/fr-init.c:75
-msgid "OpenDocument Presentation"
+msgid "Ar (.ar)"
 msgstr ""
 
 #: ../src/fr-init.c:76
-msgid "OpenDocument Spreadsheet"
+msgid "Arj (.arj)"
 msgstr ""
 
 #: ../src/fr-init.c:77
-msgid "OpenDocument Text"
+msgid "brotli (.br)"
 msgstr ""
 
 #: ../src/fr-init.c:78
-msgid "OpenDocument Presentation Template"
+msgid "Tar compressed with brotli (.tar.br)"
 msgstr ""
 
 #: ../src/fr-init.c:79
-msgid "OpenDocument Spreadsheet Template"
+msgid "Bzip2 compressed file (.bz2)"
 msgstr ""
 
 #: ../src/fr-init.c:80
-msgid "OpenDocument Text Template"
+msgid "Tar compressed with bzip2 (.tar.bz2)"
 msgstr ""
 
 #: ../src/fr-init.c:81
-msgid "Rar Archived Comic Book (.cbr)"
+msgid "Bzip compressed file (.bz)"
 msgstr ""
 
 #: ../src/fr-init.c:82
+msgid "Tar compressed with bzip (.tar.bz)"
+msgstr ""
+
+#: ../src/fr-init.c:83
+msgid "Rar Archived Comic Book (.cbr)"
+msgstr ""
+
+#: ../src/fr-init.c:84
 msgid "Zip Archived Comic Book (.cbz)"
 msgstr ""
 
 #: ../src/fr-init.c:85
+msgid "Disc Image File (.iso)"
+msgstr ""
+
+#: ../src/fr-init.c:86
+msgid "Unix Compressed Archive file (.Z)"
+msgstr ""
+
+#: ../src/fr-init.c:87
 msgid "Tar compressed with gzip (.tar.gz)"
 msgstr ""
 
 #: ../src/fr-init.c:88
-msgid "Ear (.ear)"
+msgid "Unix CPIO Archive (.cpio)"
 msgstr ""
 
 #: ../src/fr-init.c:89
-msgid "Self-extracting zip (.exe)"
+msgid "Ear (.ear)"
+msgstr ""
+
+#: ../src/fr-init.c:90
+msgid "GZip compressed file (.gz)"
 msgstr ""
 
 #: ../src/fr-init.c:91
@@ -864,12 +896,24 @@ msgstr ""
 msgid "Tar compressed with lrzip (.tar.lrz)"
 msgstr ""
 
+#: ../src/fr-init.c:95
+msgid "LZip compressed file (.lz)"
+msgstr ""
+
 #: ../src/fr-init.c:96
 msgid "Tar compressed with lzip (.tar.lz)"
 msgstr ""
 
+#: ../src/fr-init.c:97
+msgid "LZMA compressed file (.lzma)"
+msgstr ""
+
 #: ../src/fr-init.c:98
 msgid "Tar compressed with lzma (.tar.lzma)"
+msgstr ""
+
+#: ../src/fr-init.c:99
+msgid "LZO compressed file (.lzo)"
 msgstr ""
 
 #: ../src/fr-init.c:100
@@ -877,38 +921,54 @@ msgid "Tar compressed with lzop (.tar.lzo)"
 msgstr ""
 
 #: ../src/fr-init.c:101
-msgid "Windows Imaging Format (.wim)"
+msgid "Self-extracting zip (.exe)"
 msgstr ""
 
 #: ../src/fr-init.c:102
+msgid "Windows Imaging Format (.wim)"
+msgstr ""
+
+#: ../src/fr-init.c:103
 msgid "Rar (.rar)"
 msgstr ""
 
+#: ../src/fr-init.c:104
+msgid "Red Hat Package Manager file (.rpm)"
+msgstr ""
+
 #: ../src/fr-init.c:105
-msgid "Tar uncompressed (.tar)"
+msgid "RZip compressed file (.rz)"
 msgstr ""
 
 #: ../src/fr-init.c:106
-msgid "Tar compressed with compress (.tar.Z)"
+msgid "StuffIt Archive (.sit)"
+msgstr ""
+
+#: ../src/fr-init.c:107
+msgid "Tar uncompressed (.tar)"
 msgstr ""
 
 #: ../src/fr-init.c:108
-msgid "War (.war)"
+msgid "Tar compressed with compress (.tar.Z)"
 msgstr ""
 
 #: ../src/fr-init.c:109
-msgid "Xz (.xz)"
+msgid "War (.war)"
 msgstr ""
 
 #: ../src/fr-init.c:110
-msgid "Tar compressed with xz (.tar.xz)"
+msgid "Xz (.xz)"
 msgstr ""
 
 #: ../src/fr-init.c:111
-msgid "Zoo (.zoo)"
+msgid "Tar compressed with xz (.tar.xz)"
 msgstr ""
 
 #: ../src/fr-init.c:112
+msgid "Zoo (.zoo)"
+msgstr ""
+
+#: ../src/fr-init.c:113
 msgid "Zip (.zip)"
 msgstr ""
 
@@ -924,303 +984,315 @@ msgstr ""
 msgid "_Extract"
 msgstr ""
 
-#: ../src/fr-window.c:1539
+#: ../src/fr-window.c:1540
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:1544
+#: ../src/fr-window.c:1545
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:1614
+#: ../src/fr-window.c:1615
 msgid "Folder"
 msgstr ""
 
-#: ../src/fr-window.c:2011
+#: ../src/fr-window.c:2012
 msgid "[read only]"
 msgstr ""
 
-#: ../src/fr-window.c:2271
+#: ../src/fr-window.c:2272
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2303
+#: ../src/fr-window.c:2305
 msgid "Process paused"
 msgstr ""
 
-#: ../src/fr-window.c:2305
+#: ../src/fr-window.c:2307
 msgid "_Resume"
 msgstr ""
 
-#: ../src/fr-window.c:2312 ../src/fr-window.c:2912
+#: ../src/fr-window.c:2315 ../src/fr-window.c:2918
 msgid "Please wait…"
 msgstr ""
 
 #. add start button default suspend
-#: ../src/fr-window.c:2314 ../src/fr-window.c:2605
+#: ../src/fr-window.c:2317 ../src/fr-window.c:2608
 msgid "_Pause"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2390 ../src/fr-window.c:2428
+#: ../src/fr-window.c:2393 ../src/fr-window.c:2431
 #, c-format
 msgid "Creating \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2394
+#: ../src/fr-window.c:2397
 #, c-format
 msgid "Loading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2398
+#: ../src/fr-window.c:2401
 #, c-format
 msgid "Reading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2402
+#: ../src/fr-window.c:2405
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2406
+#: ../src/fr-window.c:2409
 #, c-format
 msgid "Testing \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2409
+#: ../src/fr-window.c:2412
 msgid "Getting the file list"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2413
+#: ../src/fr-window.c:2416
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2417
+#: ../src/fr-window.c:2420
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2421
+#: ../src/fr-window.c:2424
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2424
+#: ../src/fr-window.c:2427
 msgid "Copying the extracted files to the destination"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2432
+#: ../src/fr-window.c:2435
 #, c-format
 msgid "Saving \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2599
+#: ../src/fr-window.c:2601 ../src/ui/app-menu.ui.h:3
+msgid "_Quit"
+msgstr ""
+
+#: ../src/fr-window.c:2602
 msgid "_Open the Archive"
 msgstr ""
 
-#: ../src/fr-window.c:2600
+#: ../src/fr-window.c:2603
 msgid "_Show the Files"
 msgstr ""
 
-#: ../src/fr-window.c:2601
+#: ../src/fr-window.c:2604
 msgid "Show the _Files and Quit"
 msgstr ""
 
-#: ../src/fr-window.c:2779
+#: ../src/fr-window.c:2605 ../src/ui.h:59
+msgid "_Close"
+msgstr ""
+
+#: ../src/fr-window.c:2606
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/fr-window.c:2783
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:2830
+#: ../src/fr-window.c:2835
 msgid "Extraction completed successfully"
 msgstr ""
 
-#: ../src/fr-window.c:2854
+#: ../src/fr-window.c:2860
 msgid "Archive created successfully"
 msgstr ""
 
-#: ../src/fr-window.c:2981 ../src/fr-window.c:3116
+#: ../src/fr-window.c:2987 ../src/fr-window.c:3122
 msgid "Command exited abnormally."
 msgstr ""
 
-#: ../src/fr-window.c:3074
+#: ../src/fr-window.c:3080
 msgid "An error occurred while extracting files."
 msgstr ""
 
-#: ../src/fr-window.c:3080
+#: ../src/fr-window.c:3086
 #, c-format
 msgid "Could not open \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:3085
+#: ../src/fr-window.c:3091
 msgid "An error occurred while loading the archive."
 msgstr ""
 
-#: ../src/fr-window.c:3089
+#: ../src/fr-window.c:3095
 msgid "An error occurred while deleting files from the archive."
 msgstr ""
 
-#: ../src/fr-window.c:3095
+#: ../src/fr-window.c:3101
 msgid "An error occurred while adding files to the archive."
 msgstr ""
 
-#: ../src/fr-window.c:3099
+#: ../src/fr-window.c:3105
 msgid "An error occurred while testing archive."
 msgstr ""
 
-#: ../src/fr-window.c:3103
+#: ../src/fr-window.c:3109
 msgid "An error occurred while saving the archive."
 msgstr ""
 
-#: ../src/fr-window.c:3107
+#: ../src/fr-window.c:3113
 msgid "An error occurred."
 msgstr ""
 
-#: ../src/fr-window.c:3113
+#: ../src/fr-window.c:3119
 msgid "Command not found."
 msgstr ""
 
-#: ../src/fr-window.c:3316
+#: ../src/fr-window.c:3322
 msgid "Test Result"
 msgstr ""
 
-#: ../src/fr-window.c:4175 ../src/fr-window.c:8314 ../src/fr-window.c:8350
-#: ../src/fr-window.c:8600
+#: ../src/fr-window.c:4181 ../src/fr-window.c:8327 ../src/fr-window.c:8363
+#: ../src/fr-window.c:8613
 msgid "Could not perform the operation"
 msgstr ""
 
-#: ../src/fr-window.c:4201
+#: ../src/fr-window.c:4207
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
 
-#: ../src/fr-window.c:4231
+#: ../src/fr-window.c:4237
 msgid "Do you want to create a new archive with these files?"
 msgstr ""
 
-#: ../src/fr-window.c:4234
+#: ../src/fr-window.c:4240
 msgid "Create _Archive"
 msgstr ""
 
-#: ../src/fr-window.c:4829 ../src/fr-window.c:5890
+#: ../src/fr-window.c:4835 ../src/fr-window.c:5896
 msgid "Folders"
 msgstr ""
 
-#: ../src/fr-window.c:4867
+#: ../src/fr-window.c:4873
 msgctxt "File"
 msgid "Size"
 msgstr ""
 
-#: ../src/fr-window.c:4868
+#: ../src/fr-window.c:4874
 msgctxt "File"
 msgid "Type"
 msgstr ""
 
-#: ../src/fr-window.c:4869
+#: ../src/fr-window.c:4875
 msgctxt "File"
 msgid "Date Modified"
 msgstr ""
 
-#: ../src/fr-window.c:4870
+#: ../src/fr-window.c:4876
 msgctxt "File"
 msgid "Location"
 msgstr "Zona"
 
-#: ../src/fr-window.c:4879
+#: ../src/fr-window.c:4885
 msgctxt "File"
 msgid "Name"
 msgstr ""
 
-#: ../src/fr-window.c:5809
+#: ../src/fr-window.c:5815
 msgid "Find:"
 msgstr ""
 
-#: ../src/fr-window.c:5900
+#: ../src/fr-window.c:5906
 msgid "Close the folders pane"
 msgstr ""
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5931
+#: ../src/fr-window.c:5937
 msgid "Open _Recent"
 msgstr ""
 
-#: ../src/fr-window.c:5932 ../src/fr-window.c:5944
+#: ../src/fr-window.c:5938 ../src/fr-window.c:5950
 msgid "Open a recently used archive"
 msgstr ""
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:6021 ../src/ui/batch-add-files.ui.h:4
+#: ../src/fr-window.c:6027 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
 msgstr ""
 
-#: ../src/fr-window.c:6370
+#: ../src/fr-window.c:6376
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:6869
+#: ../src/fr-window.c:6875
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: ../src/fr-window.c:6872
+#: ../src/fr-window.c:6878
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6879
+#: ../src/fr-window.c:6885
 msgid "Replace _All"
 msgstr ""
 
-#: ../src/fr-window.c:6880
+#: ../src/fr-window.c:6886
 msgid "_Skip"
 msgstr ""
 
-#: ../src/fr-window.c:6881
+#: ../src/fr-window.c:6887
 msgid "_Replace"
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7716
+#: ../src/fr-window.c:7729
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7721
+#: ../src/fr-window.c:7734
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7726
+#: ../src/fr-window.c:7739
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7762
+#: ../src/fr-window.c:7775
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1228,7 +1300,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/fr-window.c:7764
+#: ../src/fr-window.c:7777
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1236,43 +1308,43 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../src/fr-window.c:7834
+#: ../src/fr-window.c:7847
 msgid "Rename"
 msgstr ""
 
-#: ../src/fr-window.c:7835
+#: ../src/fr-window.c:7848
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7835
+#: ../src/fr-window.c:7848
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7839
+#: ../src/fr-window.c:7852
 msgid "_Rename"
 msgstr ""
 
-#: ../src/fr-window.c:7856 ../src/fr-window.c:7875
+#: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the folder"
 msgstr ""
 
-#: ../src/fr-window.c:7856 ../src/fr-window.c:7875
+#: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the file"
 msgstr ""
 
-#: ../src/fr-window.c:8275
+#: ../src/fr-window.c:8288
 msgid "Paste Selection"
 msgstr ""
 
-#: ../src/fr-window.c:8276
+#: ../src/fr-window.c:8289
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8879
+#: ../src/fr-window.c:8892
 msgid "Add files to an archive"
 msgstr ""
 
-#: ../src/fr-window.c:8922 ../src/main.c:185 ../src/server.c:329
+#: ../src/fr-window.c:8935 ../src/main.c:198 ../src/server.c:329
 #: ../src/server.c:354 ../src/server.c:377
 msgid "Extract archive"
 msgstr ""
@@ -1293,49 +1365,53 @@ msgstr ""
 msgid "Could not display help"
 msgstr ""
 
-#: ../src/main.c:51
+#: ../src/main.c:59
 msgid "Add files to the specified archive and quit the program"
 msgstr ""
 
-#: ../src/main.c:52
+#: ../src/main.c:60
 msgid "ARCHIVE"
 msgstr ""
 
-#: ../src/main.c:55
+#: ../src/main.c:63
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 
-#: ../src/main.c:59
+#: ../src/main.c:67
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 
-#: ../src/main.c:60 ../src/main.c:72
+#: ../src/main.c:68 ../src/main.c:80
 msgid "FOLDER"
 msgstr ""
 
-#: ../src/main.c:63
+#: ../src/main.c:71
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 
-#: ../src/main.c:67
+#: ../src/main.c:75
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr ""
 
-#: ../src/main.c:71
+#: ../src/main.c:79
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 
-#: ../src/main.c:75
+#: ../src/main.c:83
 msgid "Create destination folder without asking confirmation"
 msgstr ""
 
-#: ../src/main.c:165 ../src/server.c:296 ../src/ui/batch-add-files.ui.h:1
+#: ../src/main.c:88
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:178 ../src/server.c:296 ../src/ui/batch-add-files.ui.h:1
 msgid "Compress"
 msgstr ""
 
-#: ../src/main.c:314 ../src/server.c:444
+#: ../src/main.c:327 ../src/server.c:444
 msgid "- Create and modify an archive"
 msgstr ""
 
@@ -1349,10 +1425,6 @@ msgstr "Ay_uda"
 
 #: ../src/ui/app-menu.ui.h:2
 msgid "_About Archive Manager"
-msgstr ""
-
-#: ../src/ui/app-menu.ui.h:3
-msgid "_Quit"
 msgstr ""
 
 #: ../src/ui/batch-add-files.ui.h:2
@@ -1437,10 +1509,6 @@ msgstr ""
 
 #: ../src/ui.h:55
 msgid "Add Folder"
-msgstr ""
-
-#: ../src/ui.h:59
-msgid "_Close"
 msgstr ""
 
 #: ../src/ui.h:60
