@@ -362,6 +362,7 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_TAR);
 	register_command (FR_TYPE_COMMAND_CFILE);
 	register_command (FR_TYPE_COMMAND_RAR);
+	register_command (FR_TYPE_COMMAND_ZIP);
 	register_command (FR_TYPE_COMMAND_7Z);
 	register_command (FR_TYPE_COMMAND_DPKG);
 
@@ -375,7 +376,6 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_LHA);
 	register_command (FR_TYPE_COMMAND_RPM);
 	register_command (FR_TYPE_COMMAND_UNSTUFF);
-	register_command (FR_TYPE_COMMAND_ZIP);
 	register_command (FR_TYPE_COMMAND_LRZIP);
 	register_command (FR_TYPE_COMMAND_ZOO);
 #if HAVE_JSON_GLIB
