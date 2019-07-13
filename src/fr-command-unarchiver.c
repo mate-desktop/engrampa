@@ -237,12 +237,16 @@ fr_command_unarchiver_handle_error (FrCommand   *comm,
 	if (error->type == FR_PROC_ERROR_NONE)
 		return;
 
-	for (scan = g_list_last (comm->process->err.raw); scan; scan = scan->prev) {
-		char *line = scan->data;
+	if (error->type == FR_PROC_ERROR_COMMAND_ERROR) {
+		for (scan = g_list_last (comm->process->out.raw); scan; scan = scan->prev) {
+			char *line = scan->data;
 
-		if (strstr (line, "password") != NULL) {
-			error->type = FR_PROC_ERROR_ASK_PASSWORD;
-			break;
+			if ((strstr (line, "This archive requires a password to unpack.") != NULL)  ||
+			    (strstr (line, "Failed! (Missing or wrong password)") != NULL)) { 
+
+				error->type = FR_PROC_ERROR_ASK_PASSWORD;
+				break;
+			}
 		}
 	}
 }
