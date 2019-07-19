@@ -266,7 +266,6 @@ struct _FrWindowPrivateData {
 	GtkWidget         *filter_entry;
 	GtkWidget         *paned;
 	GtkWidget         *sidepane;
-	GtkTreePath       *tree_hover_path;
 	GtkTreePath       *list_hover_path;
 	GtkTreeViewColumn *filename_column;
 
@@ -346,7 +345,6 @@ struct _FrWindowPrivateData {
 	GtkWidget        *file_popup_menu;
 	GtkWidget        *folder_popup_menu;
 	GtkWidget        *sidebar_folder_popup_menu;
-	GtkWidget        *mitem_recents_menu;
 
 	/* dragged files data */
 
