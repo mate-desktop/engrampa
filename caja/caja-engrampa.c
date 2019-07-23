@@ -375,7 +375,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 		item = caja_menu_item_new ("CajaFr::add",
 					       _("Compress..."),
 					       _("Create a compressed archive with the selected objects"),
-					       "mate-mime-application-x-archive");
+					       "package-x-generic");
 		g_signal_connect (item,
 				  "activate",
 				  G_CALLBACK (add_callback),
