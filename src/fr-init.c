@@ -289,7 +289,7 @@ static FrCommandCaps
 fr_registered_command_get_capabilities (FrRegisteredCommand *reg_com,
 				        const char          *mime_type)
 {
-	int i;
+	guint i;
 
 	for (i = 0; i < reg_com->caps->len; i++) {
 		FrMimeTypeCap *cap;
@@ -307,7 +307,7 @@ static FrCommandCaps
 fr_registered_command_get_potential_capabilities (FrRegisteredCommand *reg_com,
 						  const char          *mime_type)
 {
-	int i;
+	guint i;
 
 	if (mime_type == NULL)
 		return FR_COMMAND_CAN_DO_NOTHING;
@@ -336,7 +336,7 @@ register_command (GType command_type)
 G_GNUC_UNUSED static gboolean
 unregister_command (GType command_type)
 {
-	int i;
+	guint i;
 
 	for (i = 0; i < Registered_Commands->len; i++) {
 		FrRegisteredCommand *command;
@@ -390,7 +390,7 @@ GType
 get_command_type_from_mime_type (const char    *mime_type,
 				 FrCommandCaps  requested_capabilities)
 {
-	int i;
+	guint i;
 
 	if (mime_type == NULL)
 		return 0;
@@ -415,7 +415,7 @@ GType
 get_preferred_command_for_mime_type (const char    *mime_type,
 				     FrCommandCaps  requested_capabilities)
 {
-	int i;
+	guint i;
 
 	for (i = 0; i < Registered_Commands->len; i++) {
 		FrRegisteredCommand *command;
@@ -436,14 +436,14 @@ get_preferred_command_for_mime_type (const char    *mime_type,
 void
 update_registered_commands_capabilities (void)
 {
-	int i;
+	guint i;
 
 	g_hash_table_remove_all (ProgramsCache);
 
 	for (i = 0; i < Registered_Commands->len; i++) {
 		FrRegisteredCommand *reg_com;
 		FrCommand           *command;
-		int                  j;
+		guint                j;
 
 		reg_com = g_ptr_array_index (Registered_Commands, i);
 		command = (FrCommand*) g_object_new (reg_com->type, NULL);
@@ -582,11 +582,11 @@ static void
 compute_supported_archive_types (void)
 {
 	int sf_i = 0, s_i = 0, o_i = 0, c_i = 0;
-	int i;
+	guint i;
 
 	for (i = 0; i < Registered_Commands->len; i++) {
 		FrRegisteredCommand *reg_com;
-		int                  j;
+		guint                j;
 
 		reg_com = g_ptr_array_index (Registered_Commands, i);
 		for (j = 0; j < reg_com->caps->len; j++) {

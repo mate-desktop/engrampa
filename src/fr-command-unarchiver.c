@@ -83,7 +83,7 @@ list_command_completed (gpointer data)
 
 		if (json_object_get_int_member (root, "lsarFormatVersion") == LSAR_SUPPORTED_FORMAT) {
 			JsonArray *content;
-			int        i;
+			guint      i;
 
 			content = json_object_get_array_member (root, "lsarContents");
 			for (i = 0; i < json_array_get_length (content); i++) {
