@@ -76,7 +76,7 @@ list__process_line (char     *line,
 	fdata->dir = FALSE;
 	fdata->link = NULL;
 
-	if (fdata->name == 0)
+	if (*fdata->name == '\0')
 		file_data_free (fdata);
 	else
 		fr_command_add_file (comm, fdata);
