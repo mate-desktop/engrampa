@@ -252,7 +252,7 @@ get_package_name_from_class_file (char *fname)
 	guint16        length = 0, end = 0, utf_index = 0;
 	guint32        magic;
 	guint16        major, minor, count;
-	int            i = 0;
+	guint          i = 0;
 
 	if (! g_file_test (fname, G_FILE_TEST_EXISTS))
 		return NULL;

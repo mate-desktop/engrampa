@@ -930,7 +930,7 @@ static GPtrArray *
 fr_window_get_current_dir_list (FrWindow *window)
 {
 	GPtrArray *files;
-	int        i;
+	guint      i;
 
 	files = g_ptr_array_sized_new (128);
 
@@ -1082,7 +1082,7 @@ get_dir_size (FrWindow   *window,
 	guint64  size;
 	char    *dirname;
 	int      dirname_l;
-	int      i;
+	guint    i;
 
 	dirname = g_strconcat (current_dir, name, "/", NULL);
 	dirname_l = strlen (dirname);
@@ -1184,7 +1184,7 @@ fr_window_compute_list_names (FrWindow  *window,
 	const char *current_dir;
 	int         current_dir_len;
 	GHashTable *names_hash;
-	int         i;
+	guint       i;
 	gboolean    visible_list_started = FALSE;
 	gboolean    visible_list_completed = FALSE;
 	gboolean    different_name;
@@ -1223,7 +1223,7 @@ fr_window_dir_exists_in_archive (FrWindow   *window,
 				 const char *dir_name)
 {
 	int dir_name_len;
-	int i;
+	guint i;
 
 	if (dir_name == NULL)
 		return FALSE;
@@ -1499,7 +1499,7 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 
 	if (window->priv->archive_present) {
 		GPtrArray *files = fr_window_get_current_dir_list (window);
-		int        i;
+		guint i;
 
 		for (i = 0; i < files->len; i++) {
 			FileData *fd = g_ptr_array_index (files, i);
@@ -1561,7 +1561,7 @@ static void
 fr_window_populate_file_list (FrWindow  *window,
 			      GPtrArray *files)
 {
-	int i;
+	guint i;
 
 	gtk_list_store_clear (window->priv->list_store);
 
@@ -1770,7 +1770,7 @@ fr_window_update_dir_tree (FrWindow *window)
 {
 	GPtrArray  *dirs;
 	GHashTable *dir_cache;
-	int         i;
+	guint       i;
 	GdkPixbuf  *icon;
 
 	gtk_tree_store_clear (window->priv->tree_store);
@@ -3388,7 +3388,7 @@ get_dir_list_from_path (FrWindow *window,
 	char  *dirname;
 	int    dirname_l;
 	GList *list = NULL;
-	int    i;
+	guint  i;
 
 	if (path[strlen (path) - 1] != '/')
 		dirname = g_strconcat (path, "/", NULL);
@@ -3591,7 +3591,7 @@ fr_window_get_file_list_pattern (FrWindow    *window,
 {
 	GRegex **regexps;
 	GList   *list;
-	int      i;
+	guint    i;
 
 	g_return_val_if_fail (window != NULL, NULL);
 
@@ -3621,7 +3621,7 @@ static GList *
 fr_window_get_file_list (FrWindow *window)
 {
 	GList *list;
-	int    i;
+	guint  i;
 
 	g_return_val_if_fail (window != NULL, NULL);
 
@@ -6666,7 +6666,7 @@ archive_is_encrypted (FrWindow *window,
 	gboolean encrypted = FALSE;
 
 	if (file_list == NULL) {
-		int i;
+		guint i;
 
 		for (i = 0; ! encrypted && i < window->archive->command->files->len; i++) {
 			FileData *fdata = g_ptr_array_index (window->archive->command->files, i);
@@ -6678,7 +6678,7 @@ archive_is_encrypted (FrWindow *window,
 	else {
 
 		GHashTable *file_hash;
-		int         i;
+		guint       i;
 		GList      *scan;
 
 		file_hash = g_hash_table_new (g_str_hash, g_str_equal);
@@ -7751,7 +7751,7 @@ name_is_present (FrWindow    *window,
 		 char       **reason)
 {
 	gboolean  retval = FALSE;
-	int       i;
+	guint     i;
 	char     *new_filename;
 	int       new_filename_l;
 

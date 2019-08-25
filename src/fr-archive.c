@@ -2517,7 +2517,7 @@ delete_from_archive (FrArchive *archive,
 	/* file_list == NULL means delete all the files in the archive. */
 
 	if (file_list == NULL) {
-		int i;
+		guint i;
 
 		for (i = 0; i < archive->command->files->len; i++) {
 			FileData *fdata = g_ptr_array_index (archive->command->files, i);
@@ -3073,7 +3073,7 @@ fr_archive_extract_to_local (FrArchive  *archive,
 
 	extract_all = (file_list == NULL);
 	if (extract_all && (! all_options_supported || ! archive->command->propCanExtractAll)) {
-		int i;
+		guint i;
 
 		file_list = NULL;
 		for (i = 0; i < archive->command->files->len; i++) {
@@ -3126,7 +3126,7 @@ fr_archive_extract_to_local (FrArchive  *archive,
 				 && ! archive->command->propExtractCanJunkPaths)));
 
 	if (extract_all && ! file_list_created) {
-		int i;
+		guint i;
 
 		file_list = NULL;
 		for (i = 0; i < archive->command->files->len; i++) {

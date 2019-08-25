@@ -157,7 +157,7 @@ dlg_prop (FrWindow *window)
 
 	uncompressed_size = 0;
 	if (fr_window_archive_is_present (window)) {
-		int i;
+		guint i;
 
 		for (i = 0; i < window->archive->command->files->len; i++) {
 			FileData *fd = g_ptr_array_index (window->archive->command->files, i);
