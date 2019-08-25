@@ -43,12 +43,11 @@ static int    extract;
 static int    extract_here;
 static char  *default_url = NULL;
 
-static gboolean
+static void
 _print_version_and_exit (const gchar *option_name, const gchar *value, gpointer data, GError *error)
 {
 	g_print("%s %s\n", _("Engrampa Archive Manager"), VERSION);
 	exit (EXIT_SUCCESS);
-	return TRUE;
 }
 
 /* argv[0] from main(); used as the command to restart the program */
