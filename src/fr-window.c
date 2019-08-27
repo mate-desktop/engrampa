@@ -1122,7 +1122,7 @@ static gboolean
 compute_file_list_name (FrWindow   *window,
 			FileData   *fdata,
 			const char *current_dir,
-			int         current_dir_len,
+			size_t      current_dir_len,
 			GHashTable *names_hash,
 			gboolean   *different_name)
 {
@@ -1182,7 +1182,7 @@ fr_window_compute_list_names (FrWindow  *window,
 			      GPtrArray *files)
 {
 	const char *current_dir;
-	int         current_dir_len;
+	size_t      current_dir_len;
 	GHashTable *names_hash;
 	int         i;
 	gboolean    visible_list_started = FALSE;

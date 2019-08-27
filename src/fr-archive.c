@@ -566,8 +566,8 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  4, "LRZI",                                 "application/x-lrzip"         },
 	};
 
-	char buffer[32];
-	int  i;
+	char   buffer[32];
+	size_t i;
 
 	if (! g_load_file_in_buffer (file, buffer, sizeof (buffer), NULL))
 		return NULL;

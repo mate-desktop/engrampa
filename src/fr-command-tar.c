@@ -1102,8 +1102,8 @@ fr_command_tar_get_capabilities (FrCommand  *comm,
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
 	else if (is_mime_type (mime_type, "application/x-7z-compressed-tar")) {
-		char *try_command[3] = { "7za", "7zr", "7z" };
-		int   i;
+		char  *try_command[3] = { "7za", "7zr", "7z" };
+		size_t i;
 
 		for (i = 0; i < G_N_ELEMENTS (try_command); i++) {
 			if (is_program_available (try_command[i], check_command)) {
@@ -1126,8 +1126,8 @@ fr_command_tar_set_mime_type (FrCommand  *comm,
 	FR_COMMAND_CLASS (parent_class)->set_mime_type (comm, mime_type);
 
 	if (is_mime_type (mime_type, "application/x-7z-compressed-tar")) {
-		char *try_command[3] = { "7za", "7zr", "7z" };
-		int   i;
+		char  *try_command[3] = { "7za", "7zr", "7z" };
+		size_t i;
 
 		for (i = 0; i < G_N_ELEMENTS (try_command); i++) {
 			if (is_program_in_path (try_command[i])) {
