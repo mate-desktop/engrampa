@@ -728,7 +728,7 @@ _g_path_get_base_name (const char *path,
 		       const char *base_dir,
 		       gboolean    junk_paths)
 {
-	int         base_dir_len;
+	size_t      base_dir_len;
 	const char *base_path;
 
 	if (junk_paths)

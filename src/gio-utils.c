@@ -522,7 +522,7 @@ get_dir_list_from_file_list (GHashTable *h_dirs,
 {
 	GList *scan;
 	GList *dir_list = NULL;
-	int    base_dir_len;
+	size_t base_dir_len;
 
 	if (base_dir == NULL)
 		base_dir = "";

@@ -50,7 +50,7 @@ fr_stock_init (void)
 {
 	GtkIconFactory *factory;
         GtkIconSource  *source;
-        int             i;
+        size_t          i;
 
 	if (stock_initialized)
 		return;
