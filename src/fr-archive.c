@@ -276,7 +276,7 @@ fr_archive_class_init (FrArchiveClass *class)
 			      G_SIGNAL_RUN_LAST,
 			      G_STRUCT_OFFSET (FrArchiveClass, stoppable),
 			      NULL, NULL,
-			      fr_marshal_VOID__BOOL,
+			      fr_marshal_VOID__BOOLEAN,
 			      G_TYPE_NONE,
 			      1, G_TYPE_BOOLEAN);
 	fr_archive_signals[WORKING_ARCHIVE] =
