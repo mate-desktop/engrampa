@@ -24,6 +24,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <ctype.h>
 #include <glib.h>
 #include "java-utils.h"
 
@@ -423,13 +424,23 @@ get_package_name_from_java_file (char *fname)
 			int  index = 0;
 
 			while (read (cfile->fd, &ch, 1) == 1) {
+				if ((ch != ' ') && (ch != '\t'))
+					break;
+			}
+			do {
 				if (ch == ';')
 					break;
-				if (ch == '.')
+				if (ch == '.') {
 					buffer[index++] = '/';
-				else
+				} else if (isalnum (ch) != 0) {
 					buffer[index++] = ch;
-			}
+				} else if ((ch == '_') || (ch == '$')) {
+					buffer[index++] = ch;
+				} else {
+					index = 0;
+					break;
+				}
+			} while (read (cfile->fd, &ch, 1) == 1);
 			buffer[index] = 0;
 			package = g_strdup (buffer);
 		}
