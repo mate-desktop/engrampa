@@ -307,9 +307,10 @@ get_package_name_from_class_file (char *fname)
 	}
 
 	if (package != NULL) {
-		for (i = length; (i >= 0) && (end == 0); i-- )
-			if (package[i] == '/')
-				end = i;
+		int j;
+		for (j = length; (j >= 0) && (end == 0); j--)
+			if (package[j] == '/')
+				end = j;
 		package = g_strndup (package, end);
 	}
 
