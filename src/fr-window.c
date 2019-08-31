@@ -4932,7 +4932,7 @@ add_file_list_columns (FrWindow    *window,
 	/* Other columns */
 
 	for (j = 0, i = COLUMN_SIZE; i < NUMBER_OF_COLUMNS; i++, j++) {
-		GValue  value = { 0, };
+		GValue  value_oc = { 0, };
 
 		renderer = gtk_cell_renderer_text_new ();
 		column = gtk_tree_view_column_new_with_attributes (g_dpgettext2 (NULL, "File", titles[j]),
@@ -4946,10 +4946,10 @@ add_file_list_columns (FrWindow    *window,
 
 		gtk_tree_view_column_set_sort_column_id (column, i);
 
-		g_value_init (&value, PANGO_TYPE_ELLIPSIZE_MODE);
-		g_value_set_enum (&value, PANGO_ELLIPSIZE_END);
-		g_object_set_property (G_OBJECT (renderer), "ellipsize", &value);
-		g_value_unset (&value);
+		g_value_init (&value_oc, PANGO_TYPE_ELLIPSIZE_MODE);
+		g_value_set_enum (&value_oc, PANGO_ELLIPSIZE_END);
+		g_object_set_property (G_OBJECT (renderer), "ellipsize", &value_oc);
+		g_value_unset (&value_oc);
 
 		gtk_tree_view_append_column (treeview, column);
 	}

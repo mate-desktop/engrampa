@@ -39,26 +39,21 @@ extract_to_callback (CajaMenuItem *item,
 		     gpointer          user_data)
 {
 	GList            *files, *scan;
-	CajaFileInfo *file;
 	char             *default_dir;
 	char             *quoted_default_dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
-	file = files->data;
-
-	default_dir = caja_file_info_get_parent_uri (file);
-
+	default_dir = caja_file_info_get_parent_uri (files->data);
 	quoted_default_dir = g_shell_quote (default_dir);
 
 	cmd = g_string_new ("engrampa");
 	g_string_append_printf(cmd," --default-dir=%s --extract", quoted_default_dir);
 
 	for (scan = files; scan; scan = scan->next) {
-		CajaFileInfo *file = scan->data;
-		char             *uri, *quoted_uri;
+		char *uri, *quoted_uri;
 
-		uri = caja_file_info_get_uri (file);
+		uri = caja_file_info_get_uri (scan->data);
 		quoted_uri = g_shell_quote (uri);
 		g_string_append_printf (cmd, " %s", quoted_uri);
 		g_free (uri);
@@ -114,15 +109,12 @@ add_callback (CajaMenuItem *item,
 	      gpointer          user_data)
 {
 	GList            *files, *scan;
-	CajaFileInfo *file;
 	char             *uri, *dir;
 	char             *quoted_uri, *quoted_dir;
 	GString          *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
-	file = files->data;
-
-	uri = caja_file_info_get_uri (file);
+	uri = caja_file_info_get_uri (files->data);
 	dir = g_path_get_dirname (uri);
 	quoted_dir = g_shell_quote (dir);
 
@@ -134,9 +126,7 @@ add_callback (CajaMenuItem *item,
 	g_free (quoted_dir);
 
 	for (scan = files; scan; scan = scan->next) {
-		CajaFileInfo *file = scan->data;
-
-		uri = caja_file_info_get_uri (file);
+		uri = caja_file_info_get_uri (scan->data);
 		quoted_uri = g_shell_quote (uri);
 		g_string_append_printf (cmd, " %s", quoted_uri);
 		g_free (uri);

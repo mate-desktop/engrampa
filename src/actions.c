@@ -224,9 +224,9 @@ get_archive_filename_from_selector (DlgNewData *data)
     debug (DEBUG_INFO, "create/save %s\n", uri);
 
     if (uri_exists (uri)) {
-        GtkWidget *dialog;
 
         if (! is_supported_extension (data->dialog, uri, data->supported_types)) {
+            GtkWidget *dialog;
             dialog = _gtk_error_dialog_new (GTK_WINDOW (data->dialog),
                             GTK_DIALOG_MODAL,
                             NULL,
