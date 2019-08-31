@@ -116,10 +116,8 @@ file_sel_response_cb (GtkWidget      *widget,
 	/**/
 
 	selections = gtk_file_chooser_get_uris (file_sel);
-	for (iter = selections; iter != NULL; iter = iter->next) {
-		char *uri = iter->data;
-		item_list = g_list_prepend (item_list, g_file_new_for_uri (uri));
-	}
+	for (iter = selections; iter != NULL; iter = iter->next)
+		item_list = g_list_prepend (item_list, g_file_new_for_uri (iter->data));
 
 	if (item_list != NULL)
 		fr_window_archive_add_files (window, item_list, update);
