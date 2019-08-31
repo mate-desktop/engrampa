@@ -94,7 +94,8 @@ fr_command_get_type ()
 			NULL,
 			sizeof (FrCommand),
 			0,
-			(GInstanceInitFunc) fr_command_init
+			(GInstanceInitFunc) fr_command_init,
+			NULL
 		};
 
 		type = g_type_register_static (G_TYPE_OBJECT,

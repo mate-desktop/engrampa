@@ -688,7 +688,8 @@ fr_command_cfile_get_type ()
 			NULL,
 			sizeof (FrCommandCFile),
 			0,
-			(GInstanceInitFunc) fr_command_cfile_init
+			(GInstanceInitFunc) fr_command_cfile_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

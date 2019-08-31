@@ -145,6 +145,7 @@ fr_list_model_get_type (void)
 			sizeof (FRListModel),
 			0,
 			(GInstanceInitFunc) fr_list_model_init,
+			NULL
 		};
 
 		static const GInterfaceInfo multi_drag_source_info = {

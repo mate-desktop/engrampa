@@ -746,7 +746,8 @@ fr_command_7z_get_type ()
 			NULL,
 			sizeof (FrCommand7z),
 			0,
-			(GInstanceInitFunc) fr_command_7z_init
+			(GInstanceInitFunc) fr_command_7z_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

@@ -258,7 +258,8 @@ fr_command_lrzip_get_type ()
 			NULL,
 			sizeof (FrCommandLrzip),
 			0,
-			(GInstanceInitFunc) fr_command_lrzip_init
+			(GInstanceInitFunc) fr_command_lrzip_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

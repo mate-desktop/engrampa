@@ -357,7 +357,8 @@ fr_command_unarchiver_get_type ()
 			NULL,
 			sizeof (FrCommandUnarchiver),
 			0,
-			(GInstanceInitFunc) fr_command_unarchiver_init
+			(GInstanceInitFunc) fr_command_unarchiver_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

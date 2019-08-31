@@ -509,7 +509,8 @@ fr_command_zip_get_type ()
 			NULL,
 			sizeof (FrCommandZip),
 			0,
-			(GInstanceInitFunc) fr_command_zip_init
+			(GInstanceInitFunc) fr_command_zip_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,
