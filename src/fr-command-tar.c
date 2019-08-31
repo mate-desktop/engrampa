@@ -1263,7 +1263,8 @@ fr_command_tar_get_type ()
 			NULL,
 			sizeof (FrCommandTar),
 			0,
-			(GInstanceInitFunc) fr_command_tar_init
+			(GInstanceInitFunc) fr_command_tar_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

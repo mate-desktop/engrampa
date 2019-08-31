@@ -835,7 +835,8 @@ fr_window_get_type (void)
 			NULL,
 			sizeof (FrWindow),
 			0,
-			(GInstanceInitFunc) fr_window_init
+			(GInstanceInitFunc) fr_window_init,
+			NULL
 		};
 
 		type = g_type_register_static (GTK_TYPE_APPLICATION_WINDOW,

@@ -301,7 +301,8 @@ fr_command_dpkg_get_type ()
                         NULL,
                         sizeof (FrCommandDpkg),
                         0,
-                        (GInstanceInitFunc) fr_command_dpkg_init
+                        (GInstanceInitFunc) fr_command_dpkg_init,
+			NULL
                 };
 
                 type = g_type_register_static (FR_TYPE_COMMAND,

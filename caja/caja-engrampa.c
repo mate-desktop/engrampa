@@ -426,6 +426,7 @@ caja_fr_register_type (GTypeModule *module)
 		sizeof (CajaFr),
 		0,
 		(GInstanceInitFunc) caja_fr_instance_init,
+		NULL
 	};
 
 	static const GInterfaceInfo menu_provider_iface_info = {

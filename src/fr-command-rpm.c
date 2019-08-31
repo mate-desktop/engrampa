@@ -315,7 +315,8 @@ fr_command_rpm_get_type ()
 			NULL,
 			sizeof (FrCommandRpm),
 			0,
-			(GInstanceInitFunc) fr_command_rpm_init
+			(GInstanceInitFunc) fr_command_rpm_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

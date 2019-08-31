@@ -66,6 +66,7 @@ egg_tree_multi_drag_source_get_type (void)
 	  NULL,		/* class_data */
 	  0,
 	  0,            /* n_preallocs */
+	  NULL,
 	  NULL
 	};
 

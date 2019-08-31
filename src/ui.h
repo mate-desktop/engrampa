@@ -29,11 +29,11 @@
 
 
 static GtkActionEntry action_entries[] = {
-	{ "FileMenu", NULL, N_("_Archive") },
-	{ "EditMenu", NULL, N_("_Edit") },
-	{ "ViewMenu", NULL, N_("_View") },
-	{ "HelpMenu", NULL, N_("_Help") },
-	{ "ArrangeFilesMenu", NULL, N_("_Arrange Files") },
+	{ "FileMenu",         NULL, N_("_Archive"),       NULL, NULL, NULL },
+	{ "EditMenu",         NULL, N_("_Edit"),          NULL, NULL, NULL },
+	{ "ViewMenu",         NULL, N_("_View"),          NULL, NULL, NULL },
+	{ "HelpMenu",         NULL, N_("_Help"),          NULL, NULL, NULL },
+	{ "ArrangeFilesMenu", NULL, N_("_Arrange Files"), NULL, NULL, NULL },
 
 	{ "About", "help-about",
 	  N_("_About"), NULL,

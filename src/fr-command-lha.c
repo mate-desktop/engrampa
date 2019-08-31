@@ -404,7 +404,8 @@ fr_command_lha_get_type ()
 			NULL,
 			sizeof (FrCommandLha),
 			0,
-			(GInstanceInitFunc) fr_command_lha_init
+			(GInstanceInitFunc) fr_command_lha_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

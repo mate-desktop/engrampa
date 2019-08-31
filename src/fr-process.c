@@ -244,7 +244,8 @@ fr_process_get_type (void)
 			NULL,
 			sizeof (FrProcess),
 			0,
-			(GInstanceInitFunc) fr_process_init
+			(GInstanceInitFunc) fr_process_init,
+			NULL
 		};
 
 		type = g_type_register_static (G_TYPE_OBJECT,

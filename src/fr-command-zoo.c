@@ -415,7 +415,8 @@ fr_command_zoo_get_type ()
 			NULL,
 			sizeof (FrCommandZoo),
 			0,
-			(GInstanceInitFunc) fr_command_zoo_init
+			(GInstanceInitFunc) fr_command_zoo_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

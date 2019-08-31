@@ -379,7 +379,8 @@ fr_command_ar_get_type ()
 			NULL,
 			sizeof (FrCommandAr),
 			0,
-			(GInstanceInitFunc) fr_command_ar_init
+			(GInstanceInitFunc) fr_command_ar_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND,

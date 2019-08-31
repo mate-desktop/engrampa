@@ -230,7 +230,8 @@ fr_command_jar_get_type ()
 			NULL,
 			sizeof (FrCommandJar),
 			0,
-			(GInstanceInitFunc) fr_command_jar_init
+			(GInstanceInitFunc) fr_command_jar_init,
+			NULL
 		};
 
 		type = g_type_register_static (FR_TYPE_COMMAND_ZIP,
