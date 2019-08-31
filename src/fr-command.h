@@ -202,8 +202,6 @@ FrCommandCap   fr_command_get_capabilities    (FrCommand     *comm,
 					       gboolean       check_command);
 void           fr_command_set_mime_type       (FrCommand     *comm,
 					       const char    *mime_type);
-gboolean       fr_command_is_capable_of       (FrCommand     *comm,
-					       FrCommandCaps  capabilities);
 const char *   fr_command_get_packages        (FrCommand     *comm,
 					       const char    *mime_type);
 
