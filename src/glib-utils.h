@@ -65,7 +65,6 @@ char **             split_line                   (const char  *line,
 const char *        get_last_field               (const char  *line,
 						  int          last_field);
 int                 n_fields                     (char       **str_array);
-char *              get_time_string              (time_t       time);
 void                g_ptr_array_free_full        (GPtrArray   *array,
                        				  GFunc        func,
                        				  gpointer     user_data);

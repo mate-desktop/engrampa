@@ -135,7 +135,10 @@ dlg_prop (FrWindow *window)
 	set_label (label_label, _("Last modified:"));
 
 	label = _gtk_builder_get_widget (data->builder, "p_date_label");
-	s = get_time_string (get_file_mtime (fr_window_get_archive_uri (window)));
+	GDateTime *date_time;
+	date_time = g_date_time_new_from_unix_local (get_file_mtime (fr_window_get_archive_uri (window)));
+	s = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
+	g_date_time_unref (date_time);
 	gtk_label_set_text (GTK_LABEL (label), s);
 	g_free (s);
 
