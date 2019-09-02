@@ -136,7 +136,7 @@ msgstr "Luo arkisto tai muokkaa arkistoa"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
-msgstr ""
+msgstr "Kuinka tiedostot lajitellaan"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:2
 msgid ""
@@ -155,16 +155,20 @@ msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
 msgstr ""
+"Lajitellaanko nousevassa vai laskevassa suunnassa. Mahdolliset arvot: "
+"nousevassa, laskevassa."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:5
 msgid "List Mode"
-msgstr ""
+msgstr "Luettelotila"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:6
 msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
+"Näytetäänkö kaikki arkiston tiedostot (all_files), vai näytä arkisto "
+"kansiona (as_folder)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:7
 msgid "Display type"
@@ -232,7 +236,7 @@ msgstr "Näytä työkalupalkki"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:22
 msgid "Whether to display the toolbar."
-msgstr ""
+msgstr "Näytetäänkö työkalupalkki."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:23
 msgid "View statusbar"
@@ -248,11 +252,11 @@ msgstr "Näytä kansiopaneeli"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:26
 msgid "Whether to display the folders pane."
-msgstr ""
+msgstr "Näytetäänkö kansiopaneeli."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:27
 msgid "Editors"
-msgstr ""
+msgstr "Muokkaajat"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:28
 msgid ""
@@ -279,6 +283,8 @@ msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
+"Salataanko arkiston tunniste. Jos tunniste on salattu, salasana vaaditaan "
+"myös kansion sisällön luetteloimiseen."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
@@ -298,7 +304,7 @@ msgstr "Älä korvaa uudempia tiedostoja"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:37
 msgid "Recreate the folders stored in the archive"
-msgstr ""
+msgstr "Luo arkistoon tallennetut kansiot uudelleen"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:38
 msgid "Default volume size"
@@ -808,7 +814,7 @@ msgstr "Ace (.ace)"
 
 #: ../src/fr-init.c:65
 msgid "Ar (.a)"
-msgstr ""
+msgstr "Ar (.a)"
 
 #: ../src/fr-init.c:66
 msgid "Ar (.ar)"
@@ -1018,13 +1024,13 @@ msgstr "Ladataan \"%s\""
 #: ../src/fr-window.c:2401
 #, c-format
 msgid "Reading \"%s\""
-msgstr ""
+msgstr "Luetaan \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2405
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr ""
+msgstr "Poistetaan tiedostoja kohteesta \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2409
@@ -1040,19 +1046,19 @@ msgstr "Haetaan tiedostolista"
 #: ../src/fr-window.c:2416
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr ""
+msgstr "Kopioidaan tiedostoja lisättäväksi kohteeseen \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2420
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr ""
+msgstr "Lisätään tiedostoja kohteeseen \"%s\""
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2424
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr ""
+msgstr "Puretaan tiedostoja kohteesta \"%s\""
 
 #: ../src/fr-window.c:2427
 msgid "Copying the extracted files to the destination"

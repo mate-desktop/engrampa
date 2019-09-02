@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Lluís Tusquellas <lutusq@gmail.com>, 2019
-# Wolfgang Ulbrich <mate@raveit.de>, 2019
 # Pablo Díaz <reznorix@yahoo.es>, 2019
 # seacat <seacat.linux@gmail.com>, 2019
-# Fito JB, 2019
+# Adolfo Jayme-Barrientos, 2019
 # Fabian Rodriguez, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Benjamin Perez Carrillo <benperezc@gmail.com>, 2019
 # Emiliano Fascetti, 2019
 # Fer PC <2001fernandopc@gmail.com>, 2019
 # Joel Barrios <darkshram@gmail.com>, 2019
+# Toni Estévez <toni.estevez@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-20 19:54+0100\n"
 "PO-Revision-Date: 2019-03-11 14:27+0000\n"
-"Last-Translator: Joel Barrios <darkshram@gmail.com>, 2019\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,12 +49,12 @@ msgstr "Iniciando %s"
 #: ../copy-n-paste/eggdesktopfile.c:1100
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "La aplicación no acepta documentos en la consola"
+msgstr "La aplicación no acepta documentos en la línea de órdenes"
 
 #: ../copy-n-paste/eggdesktopfile.c:1168
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Opción de apertura no reconocida: %d"
+msgstr "Opción de inicio no reconocida: %d"
 
 #: ../copy-n-paste/eggdesktopfile.c:1366
 #, c-format
@@ -88,11 +88,11 @@ msgstr "Id."
 
 #: ../copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
-msgstr "Opciones de gestión de la sesión:"
+msgstr "Opciones de gestión de sesiones:"
 
 #: ../copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
-msgstr "Mostrar las opciones de gestión de la sesión"
+msgstr "Mostrar las opciones de gestión de sesiones"
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
@@ -127,28 +127,29 @@ msgid ""
 msgstr ""
 "<p> Engrampa es un gestor de archivadores para el entorno MATE. Le permite "
 "crear y modificar archivadores, ver el contenido de un archivador, ver un "
-"archivo contenido en un archivador, y extraer archivos de un archivador. "
-"</p> <p> Engrampa es sólo un front-end (una interfaz gráfica) para programas"
-" de archivamiento como tar y zip. Tipos de archivadores compatibles: </p> "
-"<ul> <li>Archivador 7-Zip (.7z)</li> <li>Archivador WinAce (.ace)</li> "
-"<li>Archivador ALZip (.alz)</li> <li>Archivador indexado pequeño AIX "
-"(.ar)</li> <li>Archivador ARJ (.arj)</li> <li>Archivo Cabinet (.cab)</li> "
-"<li>Archivador UNIX CPIO (.cpio)</li> <li>Paquete Debian de Linux (.deb) "
-"[Modo de sólo lectura]</li> <li>Imagen de CD ISO-9660 (.iso) [Modo de sólo "
-"lectura]</li> <li>Archivador Java (.jar)</li> <li>Archivador Java Enterprise"
-" (.ear)</li> <li>Archivador Java Web (.war)</li> <li>Archivador LHA (.lzh, "
-".lha)</li> <li>Archivador WinRAR (.rar)</li> <li>Libro de cómic archivado en"
-" RAR (.cbr)</li> <li>Paquete RPM de Linux (.rpm) [Modo de solo lectura]</li>"
-" <li>Archivador Tape Archive no comprimido (.tar) o comprimidos con: gzip "
-"(.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress "
-"(.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop "
-"(.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> <li>Archivadores "
-"Stuffit (.bin, .sit)</li> <li>Archivador ZIP (.zip)</li> <li>Libro de cómic "
-"archivado en ZIP (.cbz)</li> <li>Archivador ZOO comprimido (.zoo)</li> "
-"<li>Archivos únicos comprimidos con gzip, bzip, bzip2, compress, lrzip, "
-"lzip, lzop, rzip, xz</li> </ul> <p> Engrampa es una bifurcación de File "
-"Roller y parte del entorno de escritorio MATE. Si desea saber más acerca de "
-"MATE y Engrampa, visite la página principal del proyecto. </p>"
+"archivo contenido en un archivador y extraer archivos de un archivador. </p>"
+" <p> Engrampa es solo una interfaz gráfica para programas de archivo como "
+"tar y zip. Tipos de archivadores compatibles: </p> <ul> <li>Archivo "
+"comprimido 7-Zip (.7z)</li> <li>Archivo comprimido WinAce (.ace)</li> "
+"<li>Archivo comprimido ALZip (.alz)</li> <li>Archivador indexado pequeño AIX"
+" (.ar)</li> <li>Archivador comprimido ARJ (.arj)</li> <li>Archivo Cabinet "
+"(.cab)</li> <li>Archivador UNIX CPIO (.cpio)</li> <li>Paquete de Debian "
+"Linux (.deb) [modo de solo lectura]</li> <li>Imagen de CD ISO-9660 (.iso) "
+"[modo de solo lectura]</li> <li>Archivador Java (.jar)</li> <li>Archivador "
+"Java Enterprise (.ear)</li> <li>Archivador Java Web (.war)</li> "
+"<li>Archivador LHA (.lzh, .lha)</li> <li>Archivador comprimido WinRAR "
+"(.rar)</li> <li>Libro de cómic archivado en RAR (.cbr)</li> <li>Paquete de "
+"Linux RPM (.rpm) [modo de solo lectura]</li> <li>Archivador de cinta no "
+"comprimido (.tar) o comprimido con: gzip (.tar.gz, .tgz), bzip (.tar.bz, "
+".tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, "
+".tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz "
+"(.tar.xz) </li> <li>Archivadores Stuffit (.bin, .sit)</li> <li>Archivador "
+"ZIP (.zip)</li> <li>Libro de cómic archivado en ZIP (.cbz)</li> "
+"<li>Archivador comprimido ZOO (.zoo)</li> <li>Archivos sueltos comprimidos "
+"con gzip, bzip, bzip2, compress, lrzip, lzip, lzop, rzip, xz</li> </ul> <p> "
+"Engrampa es una bifurcación de File Roller y es parte del entorno de "
+"escritorio MATE. Si quiere saber más sobre MATE y Engrampa, visite la página"
+" principal del proyecto. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -196,8 +197,8 @@ msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
-"Si se observan todos los archivos en este archivo (all_files), o bien se "
-"observa este archivo como una carpeta (as_folder). "
+"Si se muestran todos los archivos en el archivador (all_files), o bien se "
+"mustra este archivador como una carpeta (as_folder). "
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:7
 msgid "Display type"
@@ -240,9 +241,9 @@ msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
-"Si es TRUE mostrara iconos dependiendo del tipo de archivos (mas lento), de "
-"lo contrario siempre usara los mismos iconos para todos los archivos (mas "
-"rapido)."
+"Si se activa, los iconos que se muestran dependen del tipo de archivo (más "
+"lento); en caso contrario, se usará siempre el mismo icono para todos los "
+"archivos (más rapido)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:17
 msgid "Name column width"
@@ -256,11 +257,11 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:19
 msgid "Max history length"
-msgstr "Largo maximo registrado"
+msgstr "Longitud máxima del historial"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:20
 msgid "Max number of items in the Open Recents menu."
-msgstr "Número maximo de items en el menu de archivos abiertos recientemente."
+msgstr "Número maximo de items en el menú de archivos abiertos recientemente."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:21
 msgid "View toolbar"
@@ -295,8 +296,8 @@ msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
-"Lista de aplicaciones introducidas en el cuadro de diálogo «Abrir archivo» y"
-" no asociadas con el tipo de archivo."
+"Lista de aplicaciones introducidas en el diálogo «Abrir archivo» y no "
+"asociadas con el tipo de archivo."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:29
 msgid "Compression level"
@@ -312,24 +313,24 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:31
 msgid "Encrypt the archive header"
-msgstr "Encriptar los datos del archivo"
+msgstr "Encriptar la cabecera del archivador"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:32
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
-"Indica si se  debe encriptar el los datos del archivo.  Si los datos son "
-"encriptados la contraseña se solicitara para enlistar el contenido total de "
-"archivos tambien."
+"Indica si se  debe encriptar la cabecera del archivador.  Si se encripta la "
+"cabecera, la contraseña también será necesaria para listar el contenido del "
+"archivador."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
-msgstr "Agrega soporte 'unar' sobre archivos .zip."
+msgstr "Añadir compatibilidad con «unar» en archivadores .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr "Permite la capacidad de admitir archivos 'unar' sobre archivos .zip."
+msgstr "Activa la compatibilidad con «unar» en archivadores .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Overwrite existing files"
@@ -390,7 +391,7 @@ msgstr "Permitir crear y extraer archivadores"
 #: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
 #: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3075
 msgid "Could not create the archive"
-msgstr "No se pudo crear el archivador"
+msgstr "No se ha podido crear el archivador"
 
 #: ../src/actions.c:160 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
@@ -408,7 +409,7 @@ msgstr "El tipo del archivador no es compatible."
 
 #: ../src/actions.c:249
 msgid "Could not delete the old archive."
-msgstr "No se pudo eliminar el archivador anterior."
+msgstr "No se ha podido eliminar el archivador anterior."
 
 #: ../src/actions.c:383 ../src/fr-window.c:5949
 msgid "Open"
@@ -433,10 +434,10 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Engrampa es software libre; puede redistribuirlo y/o modificarlo bajo los "
-"términos de la Licencia Pública General de GNU tal como la publica la Free "
-"Software Foundation; ya sea la versión 2 de la Licencia, o (a su elección) "
-"cualquier versión posterior."
+"Engrampa es software libre: puede redistribuirlo y/o modificarlo bajo los "
+"términos de la Licencia Pública General de GNU publicada por la Free "
+"Software Foundation, ya sea la versión 2 de la Licencia como (a su elección)"
+" cualquier versión posterior."
 
 #: ../src/actions.c:863
 msgid ""
@@ -446,9 +447,9 @@ msgid ""
 "details."
 msgstr ""
 "Engrampa se distribuye con la esperanza de que le sea útil, pero SIN NINGUNA"
-" GARANTÍA; sin siquiera la garantía implícita de MERCANTILIDAD o IDONEIDAD "
-"PARA UN PROPÓSITO PARTICULAR. Vea la Licencia Pública General GNU para más "
-"detalles."
+" GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD"
+" PARA UN PROPÓSITO PARTICULAR. Consulte la Licencia Pública General de GNU "
+"para más detalles."
 
 #: ../src/actions.c:867
 msgid ""
@@ -457,14 +458,16 @@ msgid ""
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 "Debería haber recibido una copia de la Licencia Pública General de GNU junto"
-" con este programa, si no es así, escriba a la Free Software Foundation, "
-"Inc, 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 EE. UU."
+" con Engrampa, si no es así, escriba a la Free Software Foundation, Inc, 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: ../src/actions.c:900
 msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2018 Los desarrolladores de MATE"
 
 #: ../src/actions.c:902
 msgid "An archive manager for MATE."
@@ -480,7 +483,7 @@ msgstr ""
 
 #: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
-msgstr "No se pudieron añadir los archivos al archivador"
+msgstr "No se han podido añadir los archivos al archivador"
 
 #: ../src/dlg-add-files.c:104 ../src/dlg-add-folder.c:137
 #, c-format
@@ -537,7 +540,7 @@ msgstr "Guardar _opciones"
 
 #: ../src/dlg-add-folder.c:264
 msgid "_Reset Options"
-msgstr "_Restablecer opciones"
+msgstr "_Restablecer las opciones"
 
 #: ../src/dlg-add-folder.c:877
 msgid "Save Options"
@@ -591,11 +594,11 @@ msgstr "Crear _carpeta"
 #: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:133 ../src/fr-window.c:7012
 #, c-format
 msgid "Could not create the destination folder: %s."
-msgstr "No se pudo crear la carpeta de destino %s."
+msgstr "No se ha podido crear la carpeta de destino %s."
 
 #: ../src/dlg-batch-add.c:271
 msgid "Archive not created"
-msgstr "No se creó el archivador"
+msgstr "No se ha creado el archivador"
 
 #: ../src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
@@ -609,7 +612,7 @@ msgstr "_Sobreescribir"
 #: ../src/fr-window.c:4338 ../src/fr-window.c:6927 ../src/fr-window.c:6932
 #: ../src/fr-window.c:7016 ../src/fr-window.c:7035 ../src/fr-window.c:7040
 msgid "Extraction not performed"
-msgstr "No se realizó la extracción"
+msgstr "No se ha realizado la extracción"
 
 #: ../src/dlg-extract.c:178 ../src/fr-window.c:4507 ../src/fr-window.c:4587
 #, c-format
@@ -666,7 +669,7 @@ msgstr "Guardar"
 
 #: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
 msgid "There was an internal error trying to search for applications:"
-msgstr "Hubo un error interno al intentar buscar aplicaciones:"
+msgstr "Se ha producido un error interno al intentar buscar aplicaciones:"
 
 #: ../src/dlg-package-installer.c:290
 #, c-format
@@ -679,7 +682,7 @@ msgstr ""
 
 #: ../src/dlg-package-installer.c:295
 msgid "Could not open this file type"
-msgstr "No se pudo abrir este tipo de archivo"
+msgstr "No se ha podido abrir este tipo de archivo"
 
 #: ../src/dlg-package-installer.c:298
 msgid "_Search Command"
@@ -738,7 +741,7 @@ msgstr[0] ""
 "El archivo has sido modificado con una aplicación externa. Si no lo "
 "actualiza, se perderán todos los cambios."
 msgstr[1] ""
-"%d archivos han sido modificados con una aplicación externa. Si no los "
+"Se han modificado %d archivos con una aplicación externa. Si no los "
 "actualiza, se perderán todos los cambios."
 
 #: ../src/dlg-update.c:193
@@ -757,7 +760,7 @@ msgstr "Todos los archivos"
 
 #: ../src/eggfileformatchooser.c:398
 msgid "All Supported Files"
-msgstr "Todos los archivos soportados"
+msgstr "Todos los archivos compatibles"
 
 #: ../src/eggfileformatchooser.c:407
 msgid "By Extension"
@@ -778,9 +781,9 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"El programa no pudo encontrar el formato de archivo que quiere usar para "
-"«%s». Asegúrese de usar una extensión de archivo conocida para el archivo o "
-"elija manualmente un formato de archivo de la lista de abajo."
+"El programa no ha podido encontrar el formato de archivo que quiere usar "
+"para «%s». Asegúrese de usar una extensión de archivo conocida para el "
+"archivo o elija manualmente un formato de archivo de la lista de abajo."
 
 #: ../src/eggfileformatchooser.c:676
 msgid "File format not recognized"
@@ -788,12 +791,12 @@ msgstr "No se reconoció el formato de archivo"
 
 #: ../src/fr-archive.c:1141
 msgid "File not found."
-msgstr "No se encontró el archivo."
+msgstr "No se ha encontrado el archivo."
 
 #: ../src/fr-archive.c:1247
 #, c-format
 msgid "Archive not found"
-msgstr "No se encontró el archivo"
+msgstr "No se ha encontrado el archivador"
 
 #: ../src/fr-archive.c:2445
 msgid "You don't have the right permissions."
@@ -822,12 +825,12 @@ msgstr "Extrayendo el archivo: "
 #. Translators: after the colon there is a filename.
 #: ../src/fr-command-rar.c:529 ../src/fr-command-tar.c:385
 msgid "Removing file: "
-msgstr "Quitando el archivo: "
+msgstr "Eliminando el archivo: "
 
 #: ../src/fr-command-rar.c:717
 #, c-format
 msgid "Could not find the volume: %s"
-msgstr "No se pudo encontrar el volumen: %s"
+msgstr "No se ha podido encontrar el volumen: %s"
 
 #: ../src/fr-command-tar.c:394
 msgid "Deleting files from archive"
@@ -1030,7 +1033,7 @@ msgstr "[solo lectura]"
 #: ../src/fr-window.c:2272
 #, c-format
 msgid "Could not display the folder \"%s\""
-msgstr "No se pudo mostrar la carpeta «%s»"
+msgstr "No se ha podido mostrar la carpeta «%s»"
 
 #: ../src/fr-window.c:2305
 msgid "Process paused"
@@ -1148,20 +1151,20 @@ msgstr "La extracción se completó satisfactoriamente"
 
 #: ../src/fr-window.c:2860
 msgid "Archive created successfully"
-msgstr "El archivador se creó satisfactoriamente"
+msgstr "El archivador se ha creado satisfactoriamente"
 
 #: ../src/fr-window.c:2987 ../src/fr-window.c:3122
 msgid "Command exited abnormally."
-msgstr "La orden finalizó erróneamente."
+msgstr "La orden ha finalizado erróneamente."
 
 #: ../src/fr-window.c:3080
 msgid "An error occurred while extracting files."
-msgstr "Ha ocurrido un error mientras se extraían los archivos."
+msgstr "Se ha producido un error mientras se extraían los archivos."
 
 #: ../src/fr-window.c:3086
 #, c-format
 msgid "Could not open \"%s\""
-msgstr "No se pudo abrir «%s»"
+msgstr "No se ha podido abrir «%s»"
 
 #: ../src/fr-window.c:3091
 msgid "An error occurred while loading the archive."
@@ -1185,11 +1188,11 @@ msgstr "Se produjo un error al guardar el archivador."
 
 #: ../src/fr-window.c:3113
 msgid "An error occurred."
-msgstr "Ocurrió un error."
+msgstr "Se ha producido un error."
 
 #: ../src/fr-window.c:3119
 msgid "Command not found."
-msgstr "No se encontró la orden."
+msgstr "No se ha encontrado la orden."
 
 #: ../src/fr-window.c:3322
 msgid "Test Result"
@@ -1198,7 +1201,7 @@ msgstr "Resultado de la comprobación"
 #: ../src/fr-window.c:4181 ../src/fr-window.c:8327 ../src/fr-window.c:8363
 #: ../src/fr-window.c:8613
 msgid "Could not perform the operation"
-msgstr "No se pudo efectuar la operación"
+msgstr "No se ha podido efectuar la operación"
 
 #: ../src/fr-window.c:4207
 msgid ""
@@ -1238,7 +1241,7 @@ msgstr "Fecha de modificación"
 #: ../src/fr-window.c:4876
 msgctxt "File"
 msgid "Location"
-msgstr "Lugar"
+msgstr "Ubicación"
 
 #: ../src/fr-window.c:4885
 msgctxt "File"
@@ -1247,7 +1250,7 @@ msgstr "Nombre"
 
 #: ../src/fr-window.c:5815
 msgid "Find:"
-msgstr "Buscar:"
+msgstr "Encontrar:"
 
 #: ../src/fr-window.c:5906
 msgid "Close the folders pane"
@@ -1265,12 +1268,12 @@ msgstr "Abrir un archivador usado recientemente"
 #. Translators: after the colon there is a folder name.
 #: ../src/fr-window.c:6027 ../src/ui/batch-add-files.ui.h:4
 msgid "_Location:"
-msgstr "_Lugar:"
+msgstr "_Ubicación:"
 
 #: ../src/fr-window.c:6376
 #, c-format
 msgid "Could not save the archive \"%s\""
-msgstr "No se pudo guardar el archivador «%s»"
+msgstr "No se ha podido guardar el archivador «%s»"
 
 #: ../src/fr-window.c:6875
 #, c-format
@@ -1314,8 +1317,8 @@ msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
-"El nombre «%s» no es válido porque contiene al menos uno de los siguientes "
-"caracteres: %s, introduzca otro nombre."
+"El nombre «%s» no es válido porque contiene al menos uno de los caracteres "
+"siguientes: %s, introduzca otro nombre."
 
 #: ../src/fr-window.c:7775
 #, c-format
@@ -1357,11 +1360,11 @@ msgstr "_Renombrar"
 
 #: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the folder"
-msgstr "No se pudo renombrar la carpeta"
+msgstr "No se ha podido renombrar la carpeta"
 
 #: ../src/fr-window.c:7869 ../src/fr-window.c:7888
 msgid "Could not rename the file"
-msgstr "No se pudo renombrar el archivo"
+msgstr "No se ha podido renombrar el archivo"
 
 #: ../src/fr-window.c:8288
 msgid "Paste Selection"
@@ -1394,7 +1397,7 @@ msgstr "Salida de conso_la"
 
 #: ../src/gtk-utils.c:740
 msgid "Could not display help"
-msgstr "No se pudo mostrar la ayuda"
+msgstr "No se ha podido mostrar la ayuda"
 
 #: ../src/main.c:51
 msgid "Add files to the specified archive and quit the program"
@@ -1457,7 +1460,7 @@ msgstr "Ay_uda"
 
 #: ../src/ui/app-menu.ui.h:2
 msgid "_About Archive Manager"
-msgstr "_Acerca de Gestor de Archivos"
+msgstr "_Acerca de Gestor de archivadores"
 
 #: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
@@ -1465,7 +1468,7 @@ msgstr "Nombre del _archivo:"
 
 #: ../src/ui/batch-add-files.ui.h:3
 msgid "Location"
-msgstr "Lugar"
+msgstr "Ubicación"
 
 #: ../src/ui/batch-add-files.ui.h:5 ../src/ui/new.ui.h:2
 msgid "_Encrypt the file list too"
@@ -1497,7 +1500,7 @@ msgstr "<span weight=\"bold\" size=\"larger\">Se necesita una contraseña</span>
 
 #: ../src/ui/delete.ui.h:1
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: ../src/ui.h:32
 msgid "_Archive"
@@ -1613,7 +1616,7 @@ msgstr "Extraer archivos del archivador"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr "Buscar…"
+msgstr "Encontrar…"
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1682,7 +1685,7 @@ msgstr "Guardar como…"
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"
-msgstr "Guarda el archivo actual con un nombre diferente"
+msgstr "Guarda el archivador actual con un nombre diferente"
 
 #: ../src/ui.h:167
 msgid "Select _All"
@@ -1718,11 +1721,11 @@ msgstr "Abrir la carpeta seleccionada"
 
 #: ../src/ui.h:197
 msgid "Go to the previous visited location"
-msgstr "Ir al anterior lugar visitado"
+msgstr "Ir a la ubicación visitada anterior"
 
 #: ../src/ui.h:201
 msgid "Go to the next visited location"
-msgstr "Ir al siguiente lugar visitado"
+msgstr "Ir a la ubicación visitada siguiente"
 
 #: ../src/ui.h:205
 msgid "Go up one level"
@@ -1731,7 +1734,7 @@ msgstr "Subir un nivel"
 #. Translators: the home location is the home folder.
 #: ../src/ui.h:210
 msgid "Go to the home location"
-msgstr "Ir al lugar inicial"
+msgstr "Ir a la ubicación inicial"
 
 #: ../src/ui.h:218
 msgid "_Toolbar"
@@ -1775,7 +1778,7 @@ msgstr "por _nombre"
 
 #: ../src/ui.h:255
 msgid "Sort file list by name"
-msgstr "Ordena los archivos por su nombre"
+msgstr "Ordena la lista de archivos por su nombre"
 
 #: ../src/ui.h:257
 msgid "by _Size"
@@ -1783,7 +1786,7 @@ msgstr "por _tamaño"
 
 #: ../src/ui.h:258
 msgid "Sort file list by file size"
-msgstr "Ordena los archivos por su tamaño"
+msgstr "Ordena la lista de archivos por su tamaño"
 
 #: ../src/ui.h:260
 msgid "by T_ype"
@@ -1791,7 +1794,7 @@ msgstr "por ti_po"
 
 #: ../src/ui.h:261
 msgid "Sort file list by type"
-msgstr "Ordena los archivos por su tipo"
+msgstr "Ordena la lista de archivos por su tipo"
 
 #: ../src/ui.h:263
 msgid "by _Date Modified"
@@ -1799,17 +1802,17 @@ msgstr "por _fecha de modificación"
 
 #: ../src/ui.h:264
 msgid "Sort file list by modification time"
-msgstr "Ordena los archivos por su fecha de modificación"
+msgstr "Ordena la lista de archivos por su fecha de modificación"
 
 #. Translators: this is the "sort by file location" menu item
 #: ../src/ui.h:267
 msgid "by _Location"
-msgstr "por _ruta"
+msgstr "por _ubicación"
 
 #. Translators: location is the file location
 #: ../src/ui.h:269
 msgid "Sort file list by location"
-msgstr "Ordena los archivos por su ruta"
+msgstr "Ordena la lista de archivos por ubicación"
 
 #: ../src/ui/password.ui.h:1
 msgid "Password"
@@ -1826,9 +1829,8 @@ msgid ""
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
 "<i><b>Nota:</b> la contraseña se usará para cifrar los archivos que añada al"
-" archivador actual, y para descifrar los archivos que extraiga del "
-"archivador actual. Cuando se cierre el archivador se eliminará la "
-"contraseña.</i>"
+" archivador actual y para descifrar los archivos que extraiga del archivador"
+" actual. Cuando se cierre el archivador se eliminará la contraseña.</i>"
 
 #: ../src/ui/update.ui.h:1
 msgid "_Update"
