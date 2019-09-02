@@ -4,18 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mattias Põldaru <mahfiaz@gmail.com>, 2018
-# Ivar Smolin <okul@linux.ee>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Ivar Smolin <okul@linux.ee>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-20 19:51+0100\n"
+"POT-Creation-Date: 2019-07-01 18:44+0200\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>, 2019\n"
 "Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -329,7 +328,7 @@ msgstr "Paki..."
 
 #: ../caja/caja-engrampa.c:377
 msgid "Create a compressed archive with the selected objects"
-msgstr "Pakitud arhiivi loomine valitud objektidest"
+msgstr "Tihendatud arhiivi loomine valitud objektidest"
 
 #: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:343
 #: ../src/server.c:457
@@ -420,6 +419,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Autoriõigus © 2001–2010 Free Software Foundation, Inc.\n"
+"Autoriõigus © 2012–2019 MATE arendajad"
 
 #: ../src/actions.c:902
 msgid "An archive manager for MATE."
@@ -690,7 +691,11 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"Faili on välise rakenduse poolt muudetud. Kui sa arhiivis olevaid faile ei "
+"värskenda, siis lähevad muutused jäädavalt kaotsi."
 msgstr[1] ""
+"%d faili on välise rakenduse poolt muudetud. Kui sa arhiivis olevaid faile "
+"ei värskenda, siis lähevad muutused jäädavalt kaotsi."
 
 #: ../src/dlg-update.c:193
 #, c-format
@@ -702,27 +707,27 @@ msgstr "Kas uuendada arhiivis \"%s\" olevaid faile?"
 msgid "File _Format: %s"
 msgstr "Faili _vorming: %s"
 
-#: ../src/eggfileformatchooser.c:397
+#: ../src/eggfileformatchooser.c:396
 msgid "All Files"
 msgstr "Kõik failid"
 
-#: ../src/eggfileformatchooser.c:398
+#: ../src/eggfileformatchooser.c:397
 msgid "All Supported Files"
 msgstr "Kõik toetatud failid"
 
-#: ../src/eggfileformatchooser.c:407
+#: ../src/eggfileformatchooser.c:406
 msgid "By Extension"
 msgstr "Laiendi järgi"
 
-#: ../src/eggfileformatchooser.c:421
+#: ../src/eggfileformatchooser.c:420
 msgid "File Format"
 msgstr "Faili vorming"
 
-#: ../src/eggfileformatchooser.c:439
+#: ../src/eggfileformatchooser.c:438
 msgid "Extension(s)"
 msgstr "Laiend(id)"
 
-#: ../src/eggfileformatchooser.c:669
+#: ../src/eggfileformatchooser.c:668
 #, c-format
 msgid ""
 "The program was not able to find out the file format you want to use for "
@@ -733,7 +738,7 @@ msgstr ""
 "et failil on vormingule vastav laiend või vali allolevast nimekirjast sobiv "
 "vorming."
 
-#: ../src/eggfileformatchooser.c:676
+#: ../src/eggfileformatchooser.c:675
 msgid "File format not recognized"
 msgstr "Tundmatu failivorming"
 
@@ -794,11 +799,11 @@ msgstr "Arhiivi lahtipakkimine"
 
 #: ../src/fr-init.c:61
 msgid "Debian package (.deb)"
-msgstr ""
+msgstr "Debiani pakk (.deb)"
 
 #: ../src/fr-init.c:62
 msgid "Debian package (.udeb)"
-msgstr ""
+msgstr "Debiani pakk (.udeb)"
 
 #: ../src/fr-init.c:63
 msgid "Cabinet (.cab)"
@@ -834,7 +839,7 @@ msgstr "7-Zip (.7z)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with 7z (.tar.7z)"
-msgstr "7z'iga pakitud Tar (.tar.7z)"
+msgstr "7z abil tihendatud Tar (.tar.7z)"
 
 #: ../src/fr-init.c:72
 msgid "Ace (.ace)"
@@ -842,7 +847,7 @@ msgstr "Ace (.ace)"
 
 #: ../src/fr-init.c:73
 msgid "ALZip archive (.alz)"
-msgstr ""
+msgstr "ALZip-arhiiv (.alz)"
 
 #: ../src/fr-init.c:74
 msgid "Ar (.a)"
@@ -862,23 +867,23 @@ msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:78
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr "Brotliga pakitud Tar (.tar.br)"
+msgstr "Brotli abil tihendatud Tar (.tar.br)"
 
 #: ../src/fr-init.c:79
 msgid "Bzip2 compressed file (.bz2)"
-msgstr ""
+msgstr "Bzip2 abil tihendatud fail (.bz2)"
 
 #: ../src/fr-init.c:80
 msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Bzip2'ga pakitud Tar (.tar.bz2)"
+msgstr "Bzip2 abil tihendatud Tar (.tar.bz2)"
 
 #: ../src/fr-init.c:81
 msgid "Bzip compressed file (.bz)"
-msgstr ""
+msgstr "Bzipi abil tihendatud fail (.bz)"
 
 #: ../src/fr-init.c:82
 msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Bzip'iga pakitud Tar (.tar.bz)"
+msgstr "Bzipi abil tihendatud Tar (.tar.bz)"
 
 #: ../src/fr-init.c:83
 msgid "Rar Archived Comic Book (.cbr)"
@@ -890,19 +895,19 @@ msgstr "Zip-arhiveeritud koomiksiraamat (.cbr)"
 
 #: ../src/fr-init.c:85
 msgid "Disc Image File (.iso)"
-msgstr ""
+msgstr "Plaaditõmmise fail (.iso)"
 
 #: ../src/fr-init.c:86
 msgid "Unix Compressed Archive file (.Z)"
-msgstr ""
+msgstr "Unixi tihendatud arhiivifail (.Z)"
 
 #: ../src/fr-init.c:87
 msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Gzip'iga pakitud Tar (.tar.gz)"
+msgstr "Gzipi abil tihendatud Tar (.tar.gz)"
 
 #: ../src/fr-init.c:88
 msgid "Unix CPIO Archive (.cpio)"
-msgstr ""
+msgstr "Unixi CPIO-arhiiv (.cpio)"
 
 #: ../src/fr-init.c:89
 msgid "Ear (.ear)"
@@ -910,7 +915,7 @@ msgstr "Ear (.ear)"
 
 #: ../src/fr-init.c:90
 msgid "GZip compressed file (.gz)"
-msgstr ""
+msgstr "GZipi abil tihendatud fail (.gz)"
 
 #: ../src/fr-init.c:91
 msgid "Jar (.jar)"
@@ -926,31 +931,31 @@ msgstr "Lrzip (.lrz)"
 
 #: ../src/fr-init.c:94
 msgid "Tar compressed with lrzip (.tar.lrz)"
-msgstr "Lrzip'iga pakitud Tar (.tar.lz)"
+msgstr "Lrzipi abil tihendatud Tar (.tar.lz)"
 
 #: ../src/fr-init.c:95
 msgid "LZip compressed file (.lz)"
-msgstr ""
+msgstr "LZipi abil tihendatud fail (.lz)"
 
 #: ../src/fr-init.c:96
 msgid "Tar compressed with lzip (.tar.lz)"
-msgstr "Lzip'iga pakitud Tar (.tar.lz)"
+msgstr "Lzipi abil tihendatud Tar (.tar.lz)"
 
 #: ../src/fr-init.c:97
 msgid "LZMA compressed file (.lzma)"
-msgstr ""
+msgstr "LZMA abil tihendatud fail (.lzma)"
 
 #: ../src/fr-init.c:98
 msgid "Tar compressed with lzma (.tar.lzma)"
-msgstr "Lzma'ga pakitud Tar (.tar.lzma)"
+msgstr "Lzma abil tihendatud Tar (.tar.lzma)"
 
 #: ../src/fr-init.c:99
 msgid "LZO compressed file (.lzo)"
-msgstr ""
+msgstr "LZO abil tihendatud fail (.lzo)"
 
 #: ../src/fr-init.c:100
 msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Lzop'iga pakitud Tar (.tar.lzo)"
+msgstr "Lzopi abil tihendatud Tar (.tar.lzo)"
 
 #: ../src/fr-init.c:101
 msgid "Self-extracting zip (.exe)"
@@ -966,11 +971,11 @@ msgstr "Rar (.rar)"
 
 #: ../src/fr-init.c:104
 msgid "Red Hat Package Manager file (.rpm)"
-msgstr ""
+msgstr "Red Hati pakihalduri fail (.rpm)"
 
 #: ../src/fr-init.c:105
 msgid "RZip compressed file (.rz)"
-msgstr ""
+msgstr "RZipi abil tihendatud fail (.rz)"
 
 #: ../src/fr-init.c:106
 msgid "StuffIt Archive (.sit)"
@@ -978,11 +983,11 @@ msgstr ""
 
 #: ../src/fr-init.c:107
 msgid "Tar uncompressed (.tar)"
-msgstr "Pakkimata Tar (.tar)"
+msgstr "Tihendamata Tar (.tar)"
 
 #: ../src/fr-init.c:108
 msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Compress'iga pakitud Tar (.tar.Z)"
+msgstr "Compressi abil tihendatud Tar (.tar.Z)"
 
 #: ../src/fr-init.c:109
 msgid "War (.war)"
@@ -994,7 +999,7 @@ msgstr "Xz (.xz)"
 
 #: ../src/fr-init.c:111
 msgid "Tar compressed with xz (.tar.xz)"
-msgstr "Xz'ga pakitud Tar (.tar.xz)"
+msgstr "Xz abil tihendatud Tar (.tar.xz)"
 
 #: ../src/fr-init.c:112
 msgid "Zoo (.zoo)"

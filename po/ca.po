@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-20 19:51+0100\n"
+"POT-Creation-Date: 2019-07-01 18:44+0200\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2019\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
@@ -118,6 +118,8 @@ msgid ""
 "Roller and part of the MATE Desktop Environment. If you would like to know "
 "more about MATE and Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p> Engrampa és un gestor d'arxius per a l'entorn de MATE. Us permet crear i modificar arxius, visualitzar el contingut d'un arxiu, visualitzar un fitxer inclòs en un arxiu i extreure fitxers de l'arxiu.\n"
+" </p> <p> Engrampa tan sols és una aplicació de presentació (una interfície gràfica) per als programes d'arxivament com ara zip. Els tipus de fitxers compatibles són: </p> <ul> <li>els fitxers amb compressió 7-Zip (.7z)</li> <li>els fitxers amb compressió WinAce (.ace)</li> <li>els fitxers amb compressió ALZip (.alz)</li> <li>els arxius amb indexació reduïda d'AIX (.ar)</li> <li>els arxius amb compressió ARJ (.arj)</li> <li>els fitxers Cabinet (.cab)</li> <li>els arxius CPIO d'UNIX (.cpio)</li> <li>Els paquets de Linux Debian (.deb, .udeb) [amb mode de només lectura]</li> <li>les imatges de discs de CD en ISO-9660 (.iso) [amb mode de només lectura]</li> <li>els arxius de Java (.jar)</li> <li>els arxius de Java Enterprise (.ear)</li> <li>els arxius de Java Web (.war)</li> <li>els arxius LHA (.lzh, .lha)</li> <li>els arxius amb compressió WinRAR (.rar)</li> <li>els llibres de còmics amb arxivament RAR (.cbr)</li> <li>els paquets de Linux RPM (.rpm) [amb mode de només lectura]</li> <li>Els fitxers d'arxivament de cintes sense compressió (.tar) o els que estan comprimits amb: gzip (.tar.gz, .tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz) </li> <li>els arxius Stuffit (.bin, .sit)</li> <li>els arxius ZIP (.zip)</li> <li>els llibres de còmics amb arxivament ZIP (.cbz)</li> <li>els fitxers d'arxivament amb compressió ZOO (.zoo)</li> <li>els fitxers individuals que estiguin comprimits amb gzip (.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz) o xz (.xz).</li> </ul> <p> Engrampa és una bifurcació de File Roller, i part de l'entorn d'escriptori MATE. Si voleu conèixer més coses sobre MATE i Engrampa, visiteu la pàgina principal del projecte. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1 ../src/main.c:49
 msgid "Engrampa Archive Manager"
@@ -721,27 +723,27 @@ msgstr "Voleu actualitzar els fitxers de l'arxiu «%s»?"
 msgid "File _Format: %s"
 msgstr "_Format del fitxer: %s"
 
-#: ../src/eggfileformatchooser.c:397
+#: ../src/eggfileformatchooser.c:396
 msgid "All Files"
 msgstr "Tots els fitxers"
 
-#: ../src/eggfileformatchooser.c:398
+#: ../src/eggfileformatchooser.c:397
 msgid "All Supported Files"
 msgstr "Tots els fitxers compatibles"
 
-#: ../src/eggfileformatchooser.c:407
+#: ../src/eggfileformatchooser.c:406
 msgid "By Extension"
 msgstr "Per extensió"
 
-#: ../src/eggfileformatchooser.c:421
+#: ../src/eggfileformatchooser.c:420
 msgid "File Format"
 msgstr "Format del fitxer"
 
-#: ../src/eggfileformatchooser.c:439
+#: ../src/eggfileformatchooser.c:438
 msgid "Extension(s)"
 msgstr "Extensions"
 
-#: ../src/eggfileformatchooser.c:669
+#: ../src/eggfileformatchooser.c:668
 #, c-format
 msgid ""
 "The program was not able to find out the file format you want to use for "
@@ -752,7 +754,7 @@ msgstr ""
 "per «%s». Assegureu-vos que utilitzeu una extensió coneguda o seleccioneu un"
 " format de fitxer de la llista de sota."
 
-#: ../src/eggfileformatchooser.c:676
+#: ../src/eggfileformatchooser.c:675
 msgid "File format not recognized"
 msgstr "No s'ha reconegut el format del fitxer"
 
