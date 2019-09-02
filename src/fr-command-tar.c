@@ -107,14 +107,14 @@ tar_get_last_field (const char *line,
 	while ((field_n > 0) && (*f_end != 0)) {
 		if (*f_end == ' ') {
 			field_n--;
-			if (field_n != 0) {
-				while ((*f_end == ' ') && (*f_end != *line))
-					f_end++;
+			if (field_n == 1)
 				f_start = f_end;
-			}
-		} else
-			f_end++;
+		}
+		f_end++;
 	}
+
+	if (*f_start == ' ')
+		f_start++;
 
 	return g_strdup (f_start);
 }
