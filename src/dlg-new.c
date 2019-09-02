@@ -36,7 +36,7 @@
 #define GET_WIDGET(x) (_gtk_builder_get_widget (data->builder, (x)))
 #define DEFAULT_EXTENSION ".tar.gz"
 #define BAD_CHARS "/\\*"
-#define MEGABYTE (1024 * 1024)
+#define MEGABYTE (1024.0 * 1024.0)
 
 
 /* called when the main dialog is closed. */
@@ -318,7 +318,7 @@ dlg_new_archive (FrWindow  *window,
         g_object_unref (settings);
 
         settings = g_settings_new (ENGRAMPA_SCHEMA_BATCH_ADD);
-        gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton), (double) g_settings_get_int (settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
+        gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton), g_settings_get_int (settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
         g_object_unref (settings);
 
 	/* format chooser */

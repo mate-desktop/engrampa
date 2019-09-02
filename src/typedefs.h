@@ -26,7 +26,7 @@
 #include <glib.h>
 #include <glib-object.h>
 
-#define MEGABYTE (1024 * 1024)
+#define MEGABYTE (1024.0 * 1024.0)
 
 #define ADD_FOLDER_OPTIONS_DIR  "engrampa/options"
 
