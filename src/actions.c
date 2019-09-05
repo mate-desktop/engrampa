@@ -122,7 +122,7 @@ get_full_uri (DlgNewData *data)
     idx = egg_file_format_chooser_get_format (EGG_FILE_FORMAT_CHOOSER (data->format_chooser), uri);
     if (idx > 0) {
         const char *uri_ext;
-        char       *default_ext;
+        const char *default_ext;
 
         uri_ext = get_archive_filename_extension (uri);
         default_ext = mime_type_desc[data->supported_types[idx-1]].default_ext;
@@ -209,7 +209,7 @@ get_archive_filename_from_selector (DlgNewData *data)
     if (get_archive_filename_extension (uri) == NULL) {
         int   idx;
         char *new_uri;
-        char *ext = NULL;
+        const char *ext = NULL;
 
         idx = egg_file_format_chooser_get_format (EGG_FILE_FORMAT_CHOOSER (data->format_chooser), uri);
         if (idx > 0)

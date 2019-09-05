@@ -326,7 +326,7 @@ dlg_new_archive (FrWindow  *window,
 	data->format_chooser = (EggFileFormatChooser *) egg_file_format_chooser_new ();
 	for (i = 0; data->supported_types[i] != -1; i++) {
 		int   idx = data->supported_types[i];
-		char *exts[4];
+		const char *exts[4];
 		int   e;
 		int   n_exts;
 		char *icon_name;

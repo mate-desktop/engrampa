@@ -111,13 +111,13 @@ typedef struct {
 
 typedef struct {
 	const char    *mime_type;
-	char          *default_ext;
-	char          *name;
+	const char    *default_ext;
+	const char    *name;
 	FrCommandCaps  capabilities;
 } FrMimeTypeDescription;
 
 typedef struct {
-	char       *ext;
+	const char *ext;
 	const char *mime_type;
 } FrExtensionType;
 

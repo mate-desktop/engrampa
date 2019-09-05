@@ -29,8 +29,8 @@
 static gboolean stock_initialized = FALSE;
 
 static const  struct {
-        char *stock_id;
-        char *icon;
+        const char *stock_id;
+        const char *icon;
 } stock_icons [] = {
 	{ FR_STOCK_CREATE_ARCHIVE, "add-files-to-archive" },
         { FR_STOCK_ADD_FILES, "add-files-to-archive" },

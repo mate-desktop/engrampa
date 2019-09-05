@@ -140,8 +140,8 @@ add_callback (CajaMenuItem *item,
 
 
 static struct {
-	char     *mime_type;
-	gboolean  is_compressed;
+	const char *mime_type;
+	gboolean    is_compressed;
 } archive_mime_types[] = {
 		{ "application/vnd.debian.binary-package", TRUE },
 		{ "application/vnd.ms-cab-compressed", TRUE },
