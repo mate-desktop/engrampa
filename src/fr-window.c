@@ -4869,7 +4869,7 @@ static void
 add_file_list_columns (FrWindow    *window,
 		       GtkTreeView *treeview)
 {
-	static char       *titles[] = {NC_("File", "Size"),
+	static const char *titles[] = {NC_("File", "Size"),
 				       NC_("File", "Type"),
 				       NC_("File", "Date Modified"),
 				       NC_("File", "Location")};
