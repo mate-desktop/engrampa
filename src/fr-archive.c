@@ -42,7 +42,7 @@
 #include "fr-process.h"
 #include "fr-init.h"
 
-#if ENABLE_MAGIC
+#ifdef ENABLE_MAGIC
 #include <magic.h>
 #endif
 
@@ -516,7 +516,7 @@ get_mime_type_from_content (GFile *file)
 static const char *
 get_mime_type_from_magic_numbers (GFile *file)
 {
-#if ENABLE_MAGIC
+#ifdef ENABLE_MAGIC
 	static magic_t magic = NULL;
 
 	if (! magic) {
