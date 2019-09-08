@@ -120,6 +120,9 @@ process_line (char     *line,
 		return;
 	}
 
+	if (g_str_has_prefix (line, "listed"))
+		return;
+
 	fdata = file_data_new ();
 
 	if (ace_comm->command_type == FR_ACE_COMMAND_PUBLIC)
