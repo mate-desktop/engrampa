@@ -46,24 +46,6 @@ destroy_cb (GtkWidget  *widget,
 }
 
 
-static void
-set_label_type (GtkWidget *label, const char *text, const char *type)
-{
-	char *t;
-
-	t = g_strdup_printf ("<%s>%s</%s>", type, text, type);
-	gtk_label_set_markup (GTK_LABEL (label), t);
-	g_free (t);
-}
-
-
-static void
-set_label (GtkWidget *label, const char *text)
-{
-	set_label_type (label, text, "b");
-}
-
-
 static int
 help_cb (GtkWidget   *w,
 	 DialogData  *data)
@@ -79,7 +61,6 @@ dlg_prop (FrWindow *window)
 	DialogData       *data;
 	GtkWidget        *ok_button;
 	GtkWidget        *help_button;
-	GtkWidget        *label_label;
 	GtkWidget        *label;
 	GFile            *parent;
 	char             *uri;
@@ -106,10 +87,6 @@ dlg_prop (FrWindow *window)
 
 	/* Set widgets data. */
 
-	label_label = _gtk_builder_get_widget (data->builder, "p_path_label_label");
-	/* Translators: after the colon there is a folder name. */
-	set_label (label_label, _("Location:"));
-
 	label = _gtk_builder_get_widget (data->builder, "p_path_label");
 	uri = remove_level_from_path (fr_window_get_archive_uri (window));
 	parent = g_file_new_for_uri (uri);
@@ -124,9 +101,6 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label_label = _gtk_builder_get_widget (data->builder, "p_name_label_label");
-	set_label (label_label, C_("File", "Name:"));
-
 	label = _gtk_builder_get_widget (data->builder, "p_name_label");
 	utf8_name = g_uri_display_basename (fr_window_get_archive_uri (window));
 	gtk_label_set_text (GTK_LABEL (label), utf8_name);
@@ -139,9 +113,6 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label_label = _gtk_builder_get_widget (data->builder, "p_date_label_label");
-	set_label (label_label, _("Last modified:"));
-
 	label = _gtk_builder_get_widget (data->builder, "p_date_label");
 	GDateTime *date_time;
 	date_time = g_date_time_new_from_unix_local (get_file_mtime (fr_window_get_archive_uri (window)));
@@ -152,9 +123,6 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label_label = _gtk_builder_get_widget (data->builder, "p_size_label_label");
-	set_label (label_label, _("Archive size:"));
-
 	label = _gtk_builder_get_widget (data->builder, "p_size_label");
 	size = get_file_size (fr_window_get_archive_uri (window));
 	s = g_format_size_full (size, G_FORMAT_SIZE_LONG_FORMAT);
@@ -162,9 +130,6 @@ dlg_prop (FrWindow *window)
 	g_free (s);
 
 	/**/
-
-	label_label = _gtk_builder_get_widget (data->builder, "p_uncomp_size_label_label");
-	set_label (label_label, _("Content size:"));
 
 	uncompressed_size = 0;
 	if (fr_window_archive_is_present (window)) {
@@ -183,9 +148,6 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label_label = _gtk_builder_get_widget (data->builder, "p_cratio_label_label");
-	set_label (label_label, _("Compression ratio:"));
-
 	label = _gtk_builder_get_widget (data->builder, "p_cratio_label");
 
 	if (uncompressed_size != 0)
@@ -197,9 +159,6 @@ dlg_prop (FrWindow *window)
 	g_free (s);
 
 	/**/
-
-	label_label = _gtk_builder_get_widget (data->builder, "p_files_label_label");
-	set_label (label_label, _("Number of files:"));
 
 	label = _gtk_builder_get_widget (data->builder, "p_files_label");
 	s = g_strdup_printf ("%d", window->archive->command->n_regular_files);
