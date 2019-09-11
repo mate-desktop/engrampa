@@ -81,6 +81,9 @@ dlg_prop (FrWindow *window)
 	GtkWidget        *help_button;
 	GtkWidget        *label_label;
 	GtkWidget        *label;
+	GFile            *parent;
+	char             *uri;
+	char             *markup;
 	char             *s;
 	goffset           size, uncompressed_size;
 	char             *utf8_name;
@@ -108,11 +111,16 @@ dlg_prop (FrWindow *window)
 	set_label (label_label, _("Location:"));
 
 	label = _gtk_builder_get_widget (data->builder, "p_path_label");
-	s = remove_level_from_path (fr_window_get_archive_uri (window));
-	utf8_name = g_filename_display_name (s);
-	gtk_label_set_text (GTK_LABEL (label), utf8_name);
+	uri = remove_level_from_path (fr_window_get_archive_uri (window));
+	parent = g_file_new_for_uri (uri);
+	utf8_name = g_file_get_parse_name (parent);
+	markup = g_strdup_printf ("<a href=\"%s\">%s</a>", uri, utf8_name);
+	gtk_label_set_markup (GTK_LABEL (label), markup);
+
+	g_free (markup);
 	g_free (utf8_name);
-	g_free (s);
+	g_free (uri);
+	g_object_unref (parent);
 
 	/**/
 
