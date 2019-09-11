@@ -43,11 +43,6 @@ gchar*      _gtk_request_dialog_run         (GtkWindow        *parent,
 					     int               max_length,
 					     const char       *no_button_text,
 					     const char       *yes_button_text);
-GtkWidget*  _gtk_yesno_dialog_new           (GtkWindow        *parent,
-					     GtkDialogFlags    flags,
-					     const char       *message,
-					     const char       *no_button_text,
-					     const char       *yes_button_text);
 GtkWidget*  _gtk_error_dialog_new           (GtkWindow        *parent,
 					     GtkDialogFlags    flags,
 					     GList            *row_output,
@@ -61,22 +56,14 @@ void        _gtk_error_dialog_run           (GtkWindow        *parent,
 void        _gtk_entry_set_locale_text      (GtkEntry   *entry,
 					     const char *text);
 char *      _gtk_entry_get_locale_text      (GtkEntry   *entry);
-void        _gtk_label_set_locale_text      (GtkLabel   *label,
-					     const char *text);
-char *      _gtk_label_get_locale_text      (GtkLabel   *label);
 void        _gtk_entry_set_filename_text    (GtkEntry   *entry,
 					     const char *text);
-char *      _gtk_entry_get_filename_text    (GtkEntry   *entry);
-void        _gtk_label_set_filename_text    (GtkLabel   *label,
-					     const char *text);
-char *      _gtk_label_get_filename_text    (GtkLabel   *label);
 GdkPixbuf * get_icon_pixbuf                 (GIcon        *icon,
 		 			     int           size,
 		 			     GtkIconTheme *icon_theme);
 GdkPixbuf * get_mime_type_pixbuf            (const char   *mime_type,
 		                             int           icon_size,
 		                             GtkIconTheme *icon_theme);
-int         get_folder_pixbuf_size_for_list (GtkWidget *widget);
 void        show_help_dialog                (GtkWindow    *parent,
 					     const char   *section);
 GtkBuilder *

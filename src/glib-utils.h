@@ -31,7 +31,6 @@
 
 /* gobject utils */
 
-gpointer _g_object_ref (gpointer object);
 void _g_object_unref (gpointer object);
 
 /* string utils */
@@ -48,7 +47,6 @@ char*               escape_str_common            (const char *str,
 						  const char  postfix);
 char*               escape_str                   (const char  *str,
 						  const char  *meta_chars);
-gchar *             shell_escape                 (const gchar *filename);
 gboolean            match_regexps                (GRegex     **regexps,
 						  const char  *string,
 						  GRegexMatchFlags match_options);
@@ -56,10 +54,7 @@ char **             search_util_get_patterns     (const char  *pattern_string);
 GRegex **           search_util_get_regexps      (const char  *pattern_string,
 			                          GRegexCompileFlags  compile_options);
 void                free_regexps                 (GRegex     **regexps);
-char *              _g_strdup_with_max_size      (const char  *s,
-						  int          max_size);
 const char *        eat_spaces                   (const char  *line);
-const char *        eat_void_chars               (const char  *line);
 char **             split_line                   (const char  *line,
 						  int          n_fields);
 const char *        get_last_field               (const char  *line,
@@ -68,16 +63,8 @@ int                 n_fields                     (char       **str_array);
 void                g_ptr_array_free_full        (GPtrArray   *array,
                        				  GFunc        func,
                        				  gpointer     user_data);
-void                g_ptr_array_reverse          (GPtrArray   *array);
-int                 g_ptr_array_binary_search    (GPtrArray   *array,
-						  gpointer     value,
-						  GCompareFunc func);
 const char *        get_static_string            (const char  *s);
 char*               g_uri_display_basename       (const char  *uri);
-char **            _g_strv_prepend               (char **str_array,
-                                                  const char *str);
-gboolean           _g_strv_remove                (char **str_array,
-                                                  const char *str);
 
 /* path filename */
 
