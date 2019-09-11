@@ -272,71 +272,6 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 
 
 GtkWidget*
-_gtk_yesno_dialog_new (GtkWindow        *parent,
-		       GtkDialogFlags    flags,
-		       const char       *message,
-		       const char       *no_button_text,
-		       const char       *yes_button_text)
-{
-	GtkWidget    *d;
-	GtkWidget    *label;
-	GtkWidget    *image;
-	GtkWidget    *hbox;
-	GtkWidget    *button;
-	GtkWidget    *content_area;
-
-	d = gtk_dialog_new_with_buttons ("", parent, flags, NULL, NULL);
-	gtk_window_set_resizable (GTK_WINDOW (d), FALSE);
-
-	content_area = gtk_dialog_get_content_area (GTK_DIALOG (d));
-
-	/* Add label and image */
-
-	image = gtk_image_new_from_icon_name ("dialog-warning", GTK_ICON_SIZE_DIALOG);
-	gtk_widget_set_valign (image, GTK_ALIGN_START);
-
-	label = gtk_label_new (message);
-	gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
-	gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-
-	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 24);
-	gtk_container_set_border_width (GTK_CONTAINER (hbox), 6);
-
-	gtk_box_pack_start (GTK_BOX (hbox), image,
-			    FALSE, FALSE, 0);
-
-	gtk_box_pack_start (GTK_BOX (hbox), label,
-			    TRUE, TRUE, 0);
-
-	gtk_box_pack_start (GTK_BOX (content_area),
-			    hbox,
-			    FALSE, FALSE, 0);
-
-	gtk_widget_show_all (hbox);
-
-	/* Add buttons */
-
-	button = create_button ("gtk-cancel", no_button_text);
-	gtk_dialog_add_action_widget (GTK_DIALOG (d),
-				      button,
-				      GTK_RESPONSE_CANCEL);
-
-	/**/
-
-	button = create_button ("gtk-ok", yes_button_text);
-	gtk_dialog_add_action_widget (GTK_DIALOG (d),
-				      button,
-				      GTK_RESPONSE_YES);
-
-	/**/
-
-	gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_YES);
-
-	return d;
-}
-
-
-GtkWidget*
 _gtk_error_dialog_new (GtkWindow        *parent,
 		       GtkDialogFlags    flags,
 		       GList            *row_output,
@@ -544,37 +479,6 @@ _gtk_entry_get_locale_text (GtkEntry *entry)
 
 
 void
-_gtk_label_set_locale_text (GtkLabel   *label,
-			    const char *text)
-{
-	char *utf8_text;
-
-	utf8_text = g_locale_to_utf8 (text, -1, NULL, NULL, NULL);
-	if (utf8_text != NULL) {
-		gtk_label_set_text (label, utf8_text);
-		g_free (utf8_text);
-	} else
-		gtk_label_set_text (label, "");
-}
-
-
-char *
-_gtk_label_get_locale_text (GtkLabel *label)
-{
-	const char *utf8_text;
-	char       *text;
-
-	utf8_text = gtk_label_get_text (label);
-	if (utf8_text == NULL)
-		return NULL;
-
-	text = g_locale_from_utf8 (utf8_text, -1, NULL, NULL, NULL);
-
-	return text;
-}
-
-
-void
 _gtk_entry_set_filename_text (GtkEntry   *entry,
 			      const char *text)
 {
@@ -586,50 +490,6 @@ _gtk_entry_set_filename_text (GtkEntry   *entry,
 		g_free (utf8_text);
 	} else
 		gtk_entry_set_text (entry, "");
-}
-
-
-char *
-_gtk_entry_get_filename_text (GtkEntry   *entry)
-{
-	const char *utf8_text;
-	char       *text;
-
-	utf8_text = gtk_entry_get_text (entry);
-	if (utf8_text == NULL)
-		return NULL;
-
-	text = g_filename_from_utf8 (utf8_text, -1, NULL, NULL, NULL);
-
-	return text;
-}
-
-
-void
-_gtk_label_set_filename_text (GtkLabel   *label,
-			      const char *text)
-{
-	char *utf8_text;
-
-	utf8_text = g_filename_display_name (text);
-	gtk_label_set_text (label, utf8_text);
-	g_free (utf8_text);
-}
-
-
-char *
-_gtk_label_get_filename_text (GtkLabel   *label)
-{
-	const char *utf8_text;
-	char       *text;
-
-	utf8_text = gtk_label_get_text (label);
-	if (utf8_text == NULL)
-		return NULL;
-
-	text = g_filename_from_utf8 (utf8_text, -1, NULL, NULL, NULL);
-
-	return text;
 }
 
 
@@ -711,16 +571,6 @@ get_mime_type_pixbuf (const char   *mime_type,
 	g_object_unref (icon);
 
 	return pixbuf;
-}
-
-int
-get_folder_pixbuf_size_for_list (GtkWidget *widget)
-{
-	int icon_width, icon_height;
-
-	gtk_icon_size_lookup (GTK_ICON_SIZE_SMALL_TOOLBAR,
-			      &icon_width, &icon_height);
-	return MAX (icon_width, icon_height);
 }
 
 void
