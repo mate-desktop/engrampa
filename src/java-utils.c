@@ -125,20 +125,16 @@ java_class_file_free (JavaClassFile *cfile)
 {
 	GSList *scan;
 
-	if (cfile->const_pool_class != NULL) {
-		g_slist_foreach (cfile->const_pool_class, (GFunc)g_free, NULL);
-		g_slist_free (cfile->const_pool_class);
-	}
+	if (cfile->const_pool_class != NULL)
+		g_slist_free_full (cfile->const_pool_class, g_free);
 
 	for (scan = cfile->const_pool_utf; scan ; scan = scan->next) {
 		struct utf_string *string = scan->data;
 		g_free (string->str);
 	}
 
-	if (cfile->const_pool_utf != NULL) {
-		g_slist_foreach (cfile->const_pool_utf, (GFunc)g_free, NULL);
-		g_slist_free (cfile->const_pool_utf);
-	}
+	if (cfile->const_pool_utf != NULL)
+		g_slist_free_full (cfile->const_pool_utf, g_free);
 
 	if (cfile->fd != -1)
 		close (cfile->fd);

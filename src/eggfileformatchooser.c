@@ -106,8 +106,7 @@ egg_file_format_filter_info_free (gpointer boxed)
       self = boxed;
 
       g_hash_table_unref (self->extension_set);
-      g_slist_foreach (self->extension_list, (GFunc) g_free, NULL);
-      g_slist_free (self->extension_list);
+      g_slist_free_full (self->extension_list, g_free);
       g_free (self->name);
       g_free (self);
     }

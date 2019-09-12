@@ -1129,8 +1129,7 @@ directory_copy_data_free (DirectoryCopyData *dcd)
 		g_object_unref (dcd->current_destination);
 		dcd->current_destination = NULL;
 	}
-	g_list_foreach (dcd->to_copy, (GFunc) child_data_free, NULL);
-	g_list_free (dcd->to_copy);
+	g_list_free_full (dcd->to_copy, (GDestroyNotify) child_data_free);
 	g_free (dcd);
 }
 
