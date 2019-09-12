@@ -93,8 +93,7 @@ fr_command_info_free (FrCommandInfo *info)
 		return;
 
 	if (info->args != NULL) {
-		g_list_foreach (info->args, (GFunc) g_free, NULL);
-		g_list_free (info->args);
+		g_list_free_full (info->args, g_free);
 		info->args = NULL;
 	}
 
@@ -173,8 +172,7 @@ fr_channel_data_reset (FrChannelData *channel)
 	fr_channel_data_close_source (channel);
 
 	if (channel->raw != NULL) {
-		g_list_foreach (channel->raw, (GFunc) g_free, NULL);
-		g_list_free (channel->raw);
+		g_list_free_full (channel->raw, g_free);
 		channel->raw = NULL;
 	}
 }
