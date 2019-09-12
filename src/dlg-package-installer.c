@@ -291,10 +291,10 @@ dlg_package_installer (FrWindow  *window,
 						  g_content_type_get_description (idata->archive->content_type));
 		dialog = _gtk_message_dialog_new (GTK_WINDOW (idata->window),
 						  GTK_DIALOG_MODAL,
-						  GTK_STOCK_DIALOG_ERROR,
+						  "dialog-error",
 						  _("Could not open this file type"),
 						  secondary_text,
-						  GTK_STOCK_CANCEL, GTK_RESPONSE_NO,
+						  _("_Cancel"), GTK_RESPONSE_NO,
 						  _("_Search Command"), GTK_RESPONSE_YES,
 						  NULL);
 		g_signal_connect (dialog, "response", G_CALLBACK (confirm_search_dialog_response_cb), idata);
