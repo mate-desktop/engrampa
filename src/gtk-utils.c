@@ -150,30 +150,19 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 
 
 static GtkWidget *
-create_button (const char *stock_id,
+create_button (const char *icon_name,
 	       const char *text)
 {
+	GtkIconTheme *icon_theme;
 	GtkWidget    *button;
-	GtkWidget    *image;
-	const char   *label_text;
-	gboolean      text_is_stock;
-	GtkStockItem  stock_item;
 
-	if (gtk_stock_lookup (text, &stock_item)) {
-		label_text = stock_item.label;
-		text_is_stock = TRUE;
-	} else {
-		label_text = text;
-		text_is_stock = FALSE;
+	button = gtk_button_new_with_mnemonic (text);
+	icon_theme = gtk_icon_theme_get_default ();
+	if (gtk_icon_theme_has_icon (icon_theme, icon_name)) {
+		GtkWidget *image;
+		image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
+		gtk_button_set_image (GTK_BUTTON (button), image);
 	}
-
-	if (text_is_stock)
-		image = gtk_image_new_from_stock (text, GTK_ICON_SIZE_BUTTON);
-	else
-		image = gtk_image_new_from_stock (stock_id, GTK_ICON_SIZE_BUTTON);
-	button = gtk_button_new_with_mnemonic (label_text);
-	gtk_button_set_image (GTK_BUTTON (button), image);
-
 	gtk_widget_set_can_default (button, TRUE);
 
 	gtk_widget_show (button);
@@ -244,7 +233,7 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 
 	/* Add buttons */
 
-	button = create_button ("gtk-cancel", no_button_text);
+	button = create_button ("process-stop", no_button_text);
 	gtk_dialog_add_action_widget (GTK_DIALOG (dialog),
 				      button,
 				      GTK_RESPONSE_CANCEL);
