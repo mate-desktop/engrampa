@@ -878,8 +878,8 @@ save_options_cb (GtkWidget  *w,
 				_("_Options Name:"),
 				(data->last_options != NULL) ? data->last_options : "",
 				1024,
-				"gtk-cancel",
-				"gtk-save");
+				_("_Cancel"),
+				_("_Save"));
 	if (opt_filename == NULL)
 		return;
 

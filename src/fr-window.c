@@ -7854,7 +7854,7 @@ fr_window_rename_selection (FrWindow *window,
 						 (renaming_dir ? _("_New folder name:") : _("_New file name:")),
 						 utf8_old_name,
 						 1024,
-						 "gtk-cancel",
+						 _("_Cancel"),
 						 _("_Rename"));
 	g_free (utf8_old_name);
 
@@ -8295,8 +8295,8 @@ fr_window_paste_selection (FrWindow *window,
 					       _("_Destination folder:"),
 					       utf8_old_path,
 					       1024,
-					       "gtk-cancel",
-					       "gtk-paste");
+					       _("_Cancel"),
+					       _("_Paste"));
 	g_free (utf8_old_path);
 	if (utf8_path == NULL)
 		return;
