@@ -1056,69 +1056,6 @@ g_copy_file_async (GFile                 *source,
 }
 
 
-void
-g_copy_uris_async (GList                 *sources,
-		   GList                 *destinations,
-		   GFileCopyFlags         flags,
-		   int                    io_priority,
-		   GCancellable          *cancellable,
-		   CopyProgressCallback   progress_callback,
-		   gpointer               progress_callback_data,
-		   CopyDoneCallback       callback,
-		   gpointer               user_data)
-{
-	GList *source_files, *destination_files;
-
-	source_files = gio_file_list_new_from_uri_list (sources);
-	destination_files = gio_file_list_new_from_uri_list (destinations);
-
-	g_copy_files_async (source_files,
-			    destination_files,
-			    flags,
-			    io_priority,
-			    cancellable,
-			    progress_callback,
-			    progress_callback_data,
-			    callback,
-			    user_data);
-
-	gio_file_list_free (source_files);
-	gio_file_list_free (destination_files);
-}
-
-
-void
-g_copy_uri_async (const char            *source,
-		  const char            *destination,
-		  GFileCopyFlags         flags,
-		  int                    io_priority,
-		  GCancellable          *cancellable,
-		  CopyProgressCallback   progress_callback,
-		  gpointer               progress_callback_data,
-		  CopyDoneCallback       callback,
-		  gpointer               user_data)
-{
-	GList *source_list;
-	GList *destination_list;
-
-	source_list = g_list_append (NULL, (gpointer)source);
-	destination_list = g_list_append (NULL, (gpointer)destination);
-
-	g_copy_uris_async (source_list,
-			   destination_list,
-			   flags,
-			   io_priority,
-			   cancellable,
-			   progress_callback,
-			   progress_callback_data,
-			   callback,
-			   user_data);
-
-	g_list_free (source_list);
-	g_list_free (destination_list);
-}
-
-
 /* -- g_directory_copy_async -- */
 
 
