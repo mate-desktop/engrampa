@@ -246,6 +246,26 @@ confirm_search_dialog_response_cb (GtkDialog *dialog,
 	}
 }
 
+static GtkWidget *
+create_button (const char *icon_name,
+	       const char *text)
+{
+	GtkIconTheme *icon_theme;
+	GtkWidget    *button;
+
+	button = gtk_button_new_with_mnemonic (text);
+	icon_theme = gtk_icon_theme_get_default ();
+	if (gtk_icon_theme_has_icon (icon_theme, icon_name)) {
+		GtkWidget *image;
+		image = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_BUTTON);
+		gtk_button_set_image (GTK_BUTTON (button), image);
+	}
+	gtk_widget_set_can_default (button, TRUE);
+
+	gtk_widget_show (button);
+
+	return button;
+}
 
 #endif /* ENABLE_PACKAGEKIT */
 
@@ -294,9 +314,18 @@ dlg_package_installer (FrWindow  *window,
 						  "dialog-error",
 						  _("Could not open this file type"),
 						  secondary_text,
-						  _("_Cancel"), GTK_RESPONSE_NO,
-						  _("_Search Command"), GTK_RESPONSE_YES,
 						  NULL);
+
+		gtk_dialog_add_action_widget (GTK_DIALOG (dialog),
+		                              create_button ("process-stop", _("_Cancel")),
+		                              GTK_RESPONSE_NO);
+
+		gtk_dialog_add_action_widget (GTK_DIALOG (dialog),
+		                              create_button ("edit-find", _("_Search Command")),
+		                              GTK_RESPONSE_YES);
+
+		gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_YES);
+
 		g_signal_connect (dialog, "response", G_CALLBACK (confirm_search_dialog_response_cb), idata);
 		gtk_widget_show (dialog);
 
