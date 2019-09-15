@@ -110,8 +110,8 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-xz",                                         ".xz",       N_("Xz (.xz)"), 0 },
 	{ "application/x-xz-compressed-tar",                          ".tar.xz",   N_("Tar compressed with xz (.tar.xz)"), 0 },
 	{ "application/x-zoo",                                        ".zoo",      N_("Zoo (.zoo)"), 0 },
+	{ "application/x-zstd",                                       ".zst",      N_("Zstandard (.zst)"), 0 },
 	{ "application/zip",                                          ".zip",      N_("Zip (.zip)"), 0 },
-	{ "application/zstd",                                         ".zst",      N_("Zstandard (.zst)"), 0 },
 	{ NULL, NULL, NULL, 0 }
 };
 
@@ -181,7 +181,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".Z", "application/x-compress" },
 	{ ".zip", "application/zip" },
 	{ ".zoo", "application/x-zoo" },
-	{ ".zst", "application/zstd" },
+	{ ".zst", "application/x-zstd" },
 	{ NULL, NULL }
 };
 
