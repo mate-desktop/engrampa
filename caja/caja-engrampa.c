@@ -169,7 +169,7 @@ static struct {
 		{ "application/x-gzpostscript", TRUE },
 		{ "application/x-java-archive", TRUE },
 		{ "application/x-lha", TRUE },
-		{ "application/x-lhz", TRUE },
+		{ "application/x-lzh-compressed", TRUE },
 		{ "application/x-lzip", TRUE },
 		{ "application/x-lzip-compressed-tar", TRUE },
 		{ "application/x-lzma", TRUE },
