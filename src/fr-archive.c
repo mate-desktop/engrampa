@@ -550,6 +550,7 @@ get_mime_type_from_magic_numbers (GFile *file)
 		const char * const mime_type;
 	} magic_ids [] = {
 		/* magic ids taken from magic/Magdir/archive from the file-4.21 tarball */
+		{ 0, 21, "!<arch>\ndebian-binary",     "application/vnd.debian.binary-package" },
 		{ 0,  6, "7z\274\257\047\034",                   "application/x-7z-compressed" },
 		{ 7,  7, "**ACE**",                              "application/x-ace"           },
 		{ 0,  2, "\x60\xea",                             "application/x-arj"           },
