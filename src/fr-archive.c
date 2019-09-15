@@ -558,15 +558,19 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  4, "\xce\xb2\xcf\x81",                     "application/x-brotli"        },
 		{ 0,  3, "BZh",                                  "application/x-bzip2"         },
 		{ 0,  2, "\037\213",                             "application/x-gzip"          },
+		{ 2,  3, "-lh",                                  "application/x-lzh-compressed"},
 		{ 0,  4, "LZIP",                                 "application/x-lzip"          },
 		{ 0,  9, "\x89\x4c\x5a\x4f\x00\x0d\x0a\x1a\x0a", "application/x-lzop",         },
 		{ 0,  4, "Rar!",                                 "application/x-rar"           },
+		{ 0,  4, "\xed\xab\xee\xdb",                     "application/x-rpm"           },
 		{ 0,  4, "RZIP",                                 "application/x-rzip"          },
 		{ 0,  6, "\3757zXZ\000",                         "application/x-xz"            },
 		{ 20, 4, "\xdc\xa7\xc4\xfd",                     "application/x-zoo",          },
 		{ 0,  4, "PK\003\004",                           "application/zip"             },
 		{ 0,  8, "PK00PK\003\004",                       "application/zip"             },
 		{ 0,  4, "LRZI",                                 "application/x-lrzip"         },
+		{ 0,  2, "\x1f\x9d",                             "application/x-compress"      }, /* using Lempel-Ziv-Welch   algorithm */
+		{ 0,  2, "\x1f\xa0",                             "application/x-compress"      }, /* using Lempel-Ziv-Huffman algorithm */
 	};
 
 	char   buffer[32];
