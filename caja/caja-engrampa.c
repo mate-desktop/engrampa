@@ -191,9 +191,9 @@ static struct {
 		{ "application/x-zip", TRUE },
 		{ "application/x-zip-compressed", TRUE },
 		{ "application/x-zoo", TRUE },
+		{ "application/x-zstd", TRUE },
 		{ "application/zip", TRUE },
 		{ "multipart/x-zip", TRUE },
-		{ "application/zstd", TRUE },
 		{ NULL, FALSE }
 };
 
