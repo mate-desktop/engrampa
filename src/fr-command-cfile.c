@@ -490,7 +490,7 @@ fr_command_cfile_test (FrCommand   *comm)
 {
 	const char *compress_cmd;
 	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
-	compress_cmd = "gzip";
+		compress_cmd = "gzip";
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-brotli")) {
 		compress_cmd = "brotli";
@@ -512,6 +512,15 @@ fr_command_cfile_test (FrCommand   *comm)
 	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop")) {
 		compress_cmd = "lzop";
+	}
+	else if (is_mime_type (comm->mime_type, "application/x-zstd")) {
+		compress_cmd = "zstd";
+		fr_process_begin_command (comm->process, compress_cmd);
+		fr_process_add_arg (comm->process, "-v");
+		fr_process_add_arg (comm->process, "--test");
+		fr_process_add_arg (comm->process, comm->filename);
+		fr_process_end_command (comm->process);
+		return;
 	} else { // i.e. if (is_mime_type (comm->mime_type, "application/x-rzip"))
 		g_warning ("Test integrity is unsupported for %s\n", comm->mime_type);
 		return;
