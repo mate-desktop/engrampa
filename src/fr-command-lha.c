@@ -309,6 +309,16 @@ fr_command_lha_extract (FrCommand  *comm,
 }
 
 
+static void
+fr_command_lha_test (FrCommand   *comm)
+{
+	fr_process_begin_command (comm->process, "lha");
+	fr_process_add_arg (comm->process, "t");
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_end_command (comm->process);
+}
+
+
 const char *lha_mime_type[] = { "application/x-lzh-compressed", "application/x-lha",  NULL };
 
 
@@ -357,6 +367,7 @@ fr_command_lha_class_init (FrCommandLhaClass *class)
 	afc->add              = fr_command_lha_add;
 	afc->delete           = fr_command_lha_delete;
 	afc->extract          = fr_command_lha_extract;
+	afc->test             = fr_command_lha_test;
 	afc->get_mime_types   = fr_command_lha_get_mime_types;
 	afc->get_capabilities = fr_command_lha_get_capabilities;
 	afc->get_packages     = fr_command_lha_get_packages;
@@ -373,7 +384,7 @@ fr_command_lha_init (FrCommand *comm)
 	comm->propExtractCanSkipOlder      = FALSE;
 	comm->propExtractCanJunkPaths      = TRUE;
 	comm->propPassword                 = FALSE;
-	comm->propTest                     = FALSE;
+	comm->propTest                     = TRUE;
 }
 
 
