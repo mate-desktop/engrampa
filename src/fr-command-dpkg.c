@@ -20,6 +20,8 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#define _XOPEN_SOURCE /* strptime */
+
 #include <config.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,6 +35,8 @@
 #include "fr-command.h"
 #include "fr-command-dpkg.h"
 
+#define LSDPKG_DATE_FORMAT "%Y-%m-%d %H:%M"
+
 static void fr_command_dpkg_class_init  (FrCommandDpkgClass *class);
 static void fr_command_dpkg_init        (FrCommand         *afile);
 static void fr_command_dpkg_finalize    (GObject           *object);
@@ -40,6 +44,15 @@ static void fr_command_dpkg_finalize    (GObject           *object);
 /* Parent Class */
 
 static FrCommandClass *parent_class = NULL;
+
+static time_t
+mktime_from_string (const char *time_s)
+{
+        struct tm tm = {0, };
+        tm.tm_isdst = -1;
+        strptime (time_s, LSDPKG_DATE_FORMAT, &tm);
+        return mktime (&tm);
+}
 
 static void
 process_metadata_line (char      *line,
@@ -87,8 +100,7 @@ process_data_line (char     *line,
         FileData    *fdata;
         FrCommand   *comm = FR_COMMAND (data);
         char       **fields;
-        char       **tmfields;
-        struct tm    tm = {0, };
+	char        *time_s;
         const char  *name;
 
         g_return_if_fail (line != NULL);
@@ -102,22 +114,12 @@ process_data_line (char     *line,
         fdata = file_data_new ();
 
         fields = split_line (line, 5);
+
         fdata->size = g_ascii_strtoull (fields[2], NULL, 10);
-        tmfields = g_strsplit(fields[3], "-", 3);
-        if (tmfields[2]) {
-                tm.tm_year = atoi (tmfields[0]) - 1900;
-                tm.tm_mon = atoi (tmfields[1]);
-                tm.tm_mday = atoi (tmfields[2]);
-        }
-        g_strfreev (tmfields);
-        tmfields = g_strsplit (fields[4], ":", 2);
-        if (tmfields[1]) {
-                tm.tm_hour = atoi (tmfields[0]);
-                tm.tm_min = atoi (tmfields[1]);
-        }
-        g_strfreev (tmfields);
-        fdata->modified = mktime (&tm);
-        g_strfreev (fields);
+
+	time_s = g_strjoin (" ", fields[3], fields[4], NULL);
+	fdata->modified = mktime_from_string (time_s);
+	g_free (time_s);
 
         name = get_last_field (line, 6);
         fields = g_strsplit (name, " -> ", 2);
