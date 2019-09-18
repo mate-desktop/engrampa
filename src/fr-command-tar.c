@@ -20,6 +20,8 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#define _XOPEN_SOURCE /* strptime */
+
 #include <config.h>
 
 #include <sys/types.h>
@@ -39,6 +41,7 @@
 #include "fr-command-tar.h"
 
 #define ACTIVITY_DELAY 20
+#define LSTAR_DATE_FORMAT "%Y-%m-%d %H:%M"
 
 static void fr_command_tar_class_init  (FrCommandTarClass *class);
 static void fr_command_tar_init        (FrCommand         *afile);
@@ -52,40 +55,11 @@ static FrCommandClass *parent_class = NULL;
 /* -- list -- */
 
 static time_t
-mktime_from_string (char *date_s,
-		    char *time_s)
+mktime_from_string (const char *time_s)
 {
-	struct tm   tm = {0, };
-	char      **fields;
-
+	struct tm tm = {0, };
 	tm.tm_isdst = -1;
-
-	/* date */
-
-	fields = g_strsplit (date_s, "-", 3);
-	if (fields[0] != NULL) {
-		tm.tm_year = atoi (fields[0]) - 1900;
-		if (fields[1] != NULL) {
-			tm.tm_mon = atoi (fields[1]) - 1;
-			if (fields[2] != NULL)
-				tm.tm_mday = atoi (fields[2]);
-		}
-	}
-	g_strfreev (fields);
-
-	/* time */
-
-	fields = g_strsplit (time_s, ":", 3);
-	if (fields[0] != NULL) {
-		tm.tm_hour = atoi (fields[0]);
-		if (fields[1] != NULL) {
-			tm.tm_min  = atoi (fields[1]);
-			if (fields[2] != NULL)
-				tm.tm_sec  = atoi (fields[2]);
-		}
-	}
-	g_strfreev (fields);
-
+	strptime (time_s, LSTAR_DATE_FORMAT, &tm);
 	return mktime (&tm);
 }
 
@@ -128,7 +102,7 @@ process_line (char     *line,
 	FrCommand   *comm = FR_COMMAND (data);
 	char       **fields;
 	int          date_idx;
-	char        *field_date, *field_time, *field_size, *field_name;
+	char        *field_date, *field_size, *field_name;
 	char        *name;
 
 	g_return_if_fail (line != NULL);
@@ -143,11 +117,9 @@ process_line (char     *line,
 	fdata->size = g_ascii_strtoull (field_size, NULL, 10);
 	g_free (field_size);
 
-	field_date = file_list__get_next_field (line, date_idx, 1);
-	field_time = file_list__get_next_field (line, date_idx, 2);
-	fdata->modified = mktime_from_string (field_date, field_time);
+	field_date = g_strndup (line + date_idx, 16);
+	fdata->modified = mktime_from_string (field_date);
 	g_free (field_date);
-	g_free (field_time);
 
 	/* Full path */
 
