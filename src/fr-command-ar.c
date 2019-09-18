@@ -20,6 +20,8 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#define _XOPEN_SOURCE /* strptime */
+
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
@@ -30,6 +32,8 @@
 #include "file-utils.h"
 #include "fr-command.h"
 #include "fr-command-ar.h"
+
+#define LS_AR_DATE_FORMAT "%b %e %H:%M %Y"
 
 static void fr_command_ar_class_init  (FrCommandArClass *class);
 static void fr_command_ar_init        (FrCommand        *afile);
@@ -43,47 +47,13 @@ static FrCommandClass *parent_class = NULL;
 /* -- list -- */
 
 static time_t
-mktime_from_string (char *time_s,
-		    char *day_s,
-		    char *month_s,
-		    char *year_s)
+mktime_from_string (const char *time_s)
 {
-	static char  *months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-				   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-	struct tm    tm = {0, };
-	char       **fields;
-
-	tm.tm_isdst = -1;
-
-	/* date */
-
-	if (month_s != NULL) {
-		int i;
-		for (i = 0; i < 12; i++)
-			if (strcmp (months[i], month_s) == 0) {
-				tm.tm_mon = i;
-				break;
-			}
-	}
-	tm.tm_mday = atoi (day_s);
-	tm.tm_year = atoi (year_s) - 1900;
-
-	/* time */
-
-	fields = g_strsplit (time_s, ":", 3);
-	if (fields[0] != NULL) {
-		tm.tm_hour = atoi (fields[0]);
-		if (fields[1] != NULL) {
-			tm.tm_min  = atoi (fields[1]);
-			if (fields[2] != NULL)
-				tm.tm_sec  = atoi (fields[2]);
-		}
-	}
-	g_strfreev (fields);
-
-	return mktime (&tm);
+        struct tm tm = {0, };
+        tm.tm_isdst = -1;
+        strptime (time_s, LS_AR_DATE_FORMAT, &tm);
+        return mktime (&tm);
 }
-
 
 static char*
 ar_get_last_field (const char *line,
@@ -123,7 +93,7 @@ process_line (char     *line,
 	FrCommand   *comm = FR_COMMAND (data);
 	char       **fields;
 	int          date_idx;
-	char        *field_month, *field_day, *field_time, *field_year;
+	char        *field_date;
 	char        *field_size, *field_name;
 
 	g_return_if_fail (line != NULL);
@@ -136,15 +106,9 @@ process_line (char     *line,
 	fdata->size = g_ascii_strtoull (field_size, NULL, 10);
 	g_free (field_size);
 
-	field_month = file_list__get_next_field (line, date_idx, 1);
-	field_day = file_list__get_next_field (line, date_idx, 2);
-	field_time = file_list__get_next_field (line, date_idx, 3);
-	field_year = file_list__get_next_field (line, date_idx, 4);
-	fdata->modified = mktime_from_string (field_time, field_day, field_month, field_year);
-	g_free (field_day);
-	g_free (field_month);
-	g_free (field_year);
-	g_free (field_time);
+	field_date = g_strndup (line + date_idx, 17);
+	fdata->modified = mktime_from_string (field_date);
+	g_free (field_date);
 
 	/* Full path */
 
