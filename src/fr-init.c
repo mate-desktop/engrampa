@@ -71,8 +71,8 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-7z-compressed-tar",                          ".tar.7z",   N_("Tar compressed with 7z (.tar.7z)"), 0 },
 	{ "application/x-ace",                                        ".ace",      N_("Ace (.ace)"), 0 },
 	{ "application/x-alz",                                        ".alz",      N_("ALZip archive (.alz)"), 0 },
-	{ "application/x-ar",                                         ".a",        N_("Ar (.a)"), 0 },
-	{ "application/x-ar",                                         ".ar",       N_("Ar (.ar)"), 0 },
+	{ "application/x-archive",                                    ".a",        N_("Ar (.a)"), 0 },
+	{ "application/x-archive",                                    ".ar",       N_("Ar (.ar)"), 0 },
 	{ "application/x-arj",                                        ".arj",      N_("Arj (.arj)"), 0 },
 	{ "application/x-brotli",                                     ".br",       N_("brotli (.br)"), 0 },
 	{ "application/x-brotli-compressed-tar",                      ".tar.br",   N_("Tar compressed with brotli (.tar.br)"), 0 },
@@ -117,10 +117,10 @@ FrMimeTypeDescription mime_type_desc[] = {
 
 FrExtensionType file_ext_type[] = {
 	{ ".7z", "application/x-7z-compressed" },
-	{ ".a", "application/x-ar" },
+	{ ".a", "application/x-archive" },
 	{ ".ace", "application/x-ace" },
 	{ ".alz", "application/x-alz" },
-	{ ".ar", "application/x-ar" },
+	{ ".ar", "application/x-archive" },
 	{ ".arj", "application/x-arj" },
 	{ ".bin", "application/x-stuffit" },
 	{ ".br", "application/x-brotli" },
