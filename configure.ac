@@ -113,14 +113,6 @@ AM_CONDITIONAL(ENABLE_JSON_GLIB, test x"$enable_json_glib" != x"no")
 
 dnl ******************************
 
-dnl Checks for mkdtemp function
-
-mkdtemp_missing=false
-AC_CHECK_FUNC(mkdtemp,
-    [AC_DEFINE([HAVE_MKDTEMP], 1, [Have GlibC function to make temp dirs])],
-    mkdtemp_missing=true)
-AM_CONDITIONAL(MKDTEMP_MISSING, test x$mkdtemp_missing = xtrue)
-
 AC_CHECK_LIB(m, floor)
 
 dnl ==========================================================================
@@ -206,7 +198,6 @@ Configuration:
 
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
-	Internal mkdtemp:       ${mkdtemp_missing}
 	Caja support:           ${enable_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}
