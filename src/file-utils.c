@@ -20,6 +20,8 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#define _XOPEN_SOURCE 700
+
 #include <config.h>
 #include <pwd.h>
 #include <stdio.h>
@@ -40,10 +42,6 @@
 #include "glib-utils.h"
 #include "fr-init.h"
 
-
-#ifndef HAVE_MKDTEMP
-#include "mkdtemp.h"
-#endif
 
 #define BUF_SIZE 4096
 #define FILE_PREFIX    "file://"

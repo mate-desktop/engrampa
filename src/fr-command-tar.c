@@ -20,7 +20,7 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
-#define _XOPEN_SOURCE /* strptime */
+#define _XOPEN_SOURCE 700
 
 #include <config.h>
 
