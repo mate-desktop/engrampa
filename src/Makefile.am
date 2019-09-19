@@ -4,12 +4,6 @@ bin_PROGRAMS = engrampa
 libexec_PROGRAMS = engrampa-server
 noinst_PROGRAMS = test-server
 
-if MKDTEMP_MISSING
-MKDTEMP_FILES=mkdtemp.c mkdtemp.h
-else
-MKDTEMP_FILES=
-endif
-
 if RUN_IN_PLACE
 privdatadir = $(top_srcdir)/data/
 privexecdir = $(abs_top_builddir)/src/commands/
@@ -153,7 +147,6 @@ COMMON_SOURCES = 			\
 	rar-utils.h			\
 	typedefs.h			\
 	ui.h				\
-	$(MKDTEMP_FILES)		\
 	$(BUILT_SOURCES)
 
 if ENABLE_JSON_GLIB
