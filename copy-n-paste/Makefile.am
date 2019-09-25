@@ -1,10 +1,15 @@
+NULL =
+
 AM_CPPFLAGS = \
 	-UGETTEXT_PACKAGE
 
 noinst_LTLIBRARIES = libeggsmclient.la
 
 libeggsmclient_la_LIBADD = $(GTK_LIBS)
-libeggsmclient_la_CFLAGS = $(GTK_CFLAGS)
+libeggsmclient_la_CFLAGS = 		\
+	$(GTK_CFLAGS)			\
+	$(WARN_CFLAGS)			\
+	$(NULL)
 libeggsmclient_la_SOURCES = eggdesktopfile.h \
 			    eggdesktopfile.c \
 			    eggsmclient.h \
