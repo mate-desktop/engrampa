@@ -64,6 +64,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/engrampa
+    - autoconf-archive
     - caja
     - clang
     - file
@@ -80,6 +81,7 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/engrampa
+    - autoconf-archive
     - clang
     - clang-tools
     - cppcheck
@@ -98,6 +100,7 @@ requires:
 
   fedora:
     # Useful URL: https://src.fedoraproject.org/cgit/rpms/engrampa.git
+    - autoconf-archive
     - caja-devel
     - clang
     - clang-analyzer
@@ -114,6 +117,7 @@ requires:
     - redhat-rpm-config
 
   ubuntu:
+    - autoconf-archive
     - clang
     - clang-tools
     - gettext

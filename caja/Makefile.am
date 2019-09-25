@@ -1,4 +1,5 @@
 AM_CPPFLAGS =						\
+	$(WARN_CFLAGS)					\
 	-DFR_DATADIR=\"$(datadir)\"			\
 	-DMATELOCALEDIR=\""$(datadir)/locale"\" 	\
 	-I$(top_srcdir)					\

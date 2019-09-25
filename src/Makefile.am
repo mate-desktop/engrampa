@@ -1,3 +1,5 @@
+NULL =
+
 SUBDIRS = commands sh ui
 
 bin_PROGRAMS = engrampa
@@ -36,7 +38,9 @@ AM_CPPFLAGS =						\
 	-DPRIVEXECDIR=\"$(privexecdir)\"		\
 	-DSHDIR=\"$(shdir)\"				\
 	$(FR_CFLAGS)					\
-	$(JSON_GLIB_CFLAGS)
+	$(JSON_GLIB_CFLAGS)				\
+	$(WARN_CFLAGS)					\
+	$(NULL)
 
 BUILT_SOURCES =			\
 	fr-marshal.c		\

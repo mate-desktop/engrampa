@@ -11,6 +11,7 @@ AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 MATE_COMMON_INIT
+MATE_COMPILE_WARNINGS
 
 AC_PROG_CC
 AM_DISABLE_STATIC
@@ -45,26 +46,6 @@ dnl ===========================================================================
 PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= $GTK_REQUIRED])
 AC_SUBST([GTK_CFLAGS])
 AC_SUBST([GTK_LIBS])
-
-dnl ===========================================================================
-
-WARN_CFLAGS="-Wall -Wcast-align -Wtype-limits -Wclobbered -Wempty-body -Wignored-qualifiers"
-
-for option in $WARN_CFLAGS; do
-	SAVE_CFLAGS="$CFLAGS"
-	CFLAGS="$CFLAGS $option"
-	AC_MSG_CHECKING([whether gcc understands $option])
-	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]], [[]])],[has_option=yes],[has_option=no])
-	if test x$has_option = xyes; then
-		WARNINGS="$WARNINGS $option"
-	fi
-	AC_MSG_RESULT($has_option)
-	CFLAGS="$SAVE_CFLAGS"
-	unset has_option
-	unset SAVE_CFLAGS
-done
-unset option
-CFLAGS="$CFLAGS $WARNINGS"
 
 dnl ===========================================================================
 
