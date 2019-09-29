@@ -34,6 +34,7 @@
 #include "fr-command-cpio.h"
 #include "fr-command-dpkg.h"
 #include "fr-command-iso.h"
+#include "fr-command-jlha.h"
 #include "fr-command-jar.h"
 #include "fr-command-lha.h"
 #include "fr-command-rar.h"
@@ -375,6 +376,7 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_ISO);
 	register_command (FR_TYPE_COMMAND_JAR);
 	register_command (FR_TYPE_COMMAND_LHA);
+	register_command (FR_TYPE_COMMAND_JLHA);
 	register_command (FR_TYPE_COMMAND_RPM);
 	register_command (FR_TYPE_COMMAND_UNSTUFF);
 	register_command (FR_TYPE_COMMAND_ZIP);
