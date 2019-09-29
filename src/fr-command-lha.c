@@ -309,7 +309,7 @@ fr_command_lha_extract (FrCommand  *comm,
 }
 
 
-const char *lha_mime_type[] = { "application/x-lzh-compressed", NULL };
+const char *lha_mime_type[] = { "application/x-lzh-compressed", "application/x-lha",  NULL };
 
 
 static const char **
