@@ -332,7 +332,6 @@ fr_command_7z_add (FrCommand     *comm,
 
 	if (base_dir != NULL) {
 		fr_process_set_working_dir (comm->process, base_dir);
-		fr_process_add_arg_concat (comm->process, "-w", base_dir, NULL);
 	}
 
 	if (is_mime_type (comm->mime_type, "application/zip")
