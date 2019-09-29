@@ -162,9 +162,9 @@ egg_file_format_filter_add_extensions (GtkFileFilter *filter,
 {
   EggFileFormatFilterInfo *info;
   GString *filter_name;
-  const gchar *extptr;
+  gchar **strings;
+  gchar **ptr;
   gchar *pattern;
-  gsize length;
 
   g_assert (NULL != extensions);
 
@@ -182,31 +182,22 @@ egg_file_format_filter_add_extensions (GtkFileFilter *filter,
   else
     filter_name = NULL;
 
-  extptr = extensions;
-  while (*extptr)
+  strings = g_strsplit (extensions, ", ", -1);
+  for (ptr = strings; *ptr; ptr++)
     {
-      length = strcspn (extptr, ",");
-      pattern = g_new (gchar, length + 3);
-
-      memcpy (pattern, "*.", 2);
-      memcpy (pattern + 2, extptr, length);
-      pattern[length + 2] = '\0';
+      pattern = g_strdup_printf ("*%s", *ptr);
 
       if (filter_name)
         {
-          if (extptr != extensions)
+          if (ptr != strings)
             g_string_append (filter_name, ", ");
 
           g_string_append (filter_name, pattern);
         }
 
-      extptr += length;
-
-      if (*extptr)
-        extptr += 2;
-
       g_hash_table_replace (info->extension_set, pattern, pattern);
     }
+  g_strfreev (strings);
 
   if (filter_name)
     {
