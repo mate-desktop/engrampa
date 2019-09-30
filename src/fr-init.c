@@ -190,10 +190,10 @@ GList        *CommandList;
 gint          ForceDirectoryCreation;
 GHashTable   *ProgramsCache;
 GPtrArray    *Registered_Commands;
-int           single_file_save_type[64];
-int           save_type[64];
-int           open_type[64];
-int           create_type[64];
+int           single_file_save_type[G_N_ELEMENTS (mime_type_desc)];
+int           save_type[G_N_ELEMENTS (mime_type_desc)];
+int           open_type[G_N_ELEMENTS (mime_type_desc)];
+int           create_type[G_N_ELEMENTS (mime_type_desc)];
 
 
 static void
