@@ -20,6 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <config.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
@@ -226,7 +227,7 @@ load_constant_pool_utfs (JavaClassFile *cfile)
 		i++;
 	}
 
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 	g_print( "Number of Entries: %d\n", i );
 #endif
 }

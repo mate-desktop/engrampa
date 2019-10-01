@@ -20,6 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <config.h>
 #include <string.h>
 #include <stdio.h>
 #include <glib.h>
@@ -472,7 +473,7 @@ debug (const char *file,
        const char *function,
        const char *format, ...)
 {
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 	va_list  args;
 	char    *str;
 

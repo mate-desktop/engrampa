@@ -23,6 +23,7 @@
 #ifndef FR_COMMAND_H
 #define FR_COMMAND_H
 
+#include <config.h>
 #include <glib.h>
 #include "file-data.h"
 #include "fr-process.h"
@@ -59,8 +60,8 @@ typedef enum {
 	FR_ACTION_SAVING_REMOTE_ARCHIVE       /* copying the archive to a remote location */
 } FrAction;
 
-#ifdef DEBUG
-extern char *action_names[];
+#if MATE_ENABLE_DEBUG
+const char * get_action_name (FrAction action);
 #endif
 
 struct _FrCommand

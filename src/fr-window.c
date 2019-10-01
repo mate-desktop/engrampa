@@ -2901,8 +2901,8 @@ action_started (FrArchive *archive,
 	window->priv->action = action;
 	fr_window_start_activity_mode (window);
 
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [START] (FR::Window)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [START] (FR::Window)\n", get_action_name (action));
 #endif
 
 	message = get_action_description (action, window->priv->pd_last_archive);
@@ -3163,8 +3163,8 @@ convert__action_performed (FrArchive   *archive,
 {
 	FrWindow *window = data;
 
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [CONVERT::DONE] (FR::Window)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [CONVERT::DONE] (FR::Window)\n", get_action_name (action));
 #endif
 
 	if ((action == FR_ACTION_GETTING_FILE_LIST) || (action == FR_ACTION_ADDING_FILES)) {
@@ -3203,8 +3203,8 @@ action_performed (FrArchive   *archive,
 	char     *archive_dir;
 	gboolean  temp_dir;
 
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [DONE] (FR::Window)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [DONE] (FR::Window)\n", get_action_name (action));
 #endif
 
 	fr_window_stop_activity_mode (window);
@@ -8118,8 +8118,8 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 	FrWindow *window = data;
 	gboolean  UNUSED_VARIABLE continue_batch = FALSE;
 
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [DONE] (FR::Window)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [DONE] (FR::Window)\n", get_action_name (action));
 #endif
 
 	fr_window_stop_activity_mode (window);
