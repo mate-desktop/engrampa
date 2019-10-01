@@ -11,6 +11,7 @@ AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
 MATE_COMMON_INIT
+MATE_DEBUG_CHECK([no])
 MATE_COMPILE_WARNINGS
 
 AC_PROG_CC
@@ -198,6 +199,9 @@ Configuration:
 
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
+        Compiler flags:         ${CFLAGS}
+        Warning flags:          ${WARN_CFLAGS}
+        Linker flags:           ${LDFLAGS}
 	Caja support:           ${enable_caja_actions}
 	PackageKit support:     ${enable_packagekit}
 	Run in place            ${enable_run_in_place}

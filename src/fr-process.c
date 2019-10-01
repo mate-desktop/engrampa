@@ -20,6 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <config.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
@@ -739,7 +740,7 @@ start_current_command (FrProcess *process)
 
 	argv[i] = NULL;
 
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 	{
 		int j;
 
@@ -946,7 +947,7 @@ check_child (gpointer data)
 	if (continue_process) {
 		if (process->error.type != FR_PROC_ERROR_NONE) {
 			allow_sticky_processes_only (process, TRUE);
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 			{
 				GList *scan;
 

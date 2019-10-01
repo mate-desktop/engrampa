@@ -20,6 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <config.h>
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
@@ -78,6 +79,13 @@ const char *action_names[] = { "NONE",
                                "COPYING_FILES_TO_REMOTE",
                                "CREATING_ARCHIVE",
                                "SAVING_REMOTE_ARCHIVE" };
+
+#if MATE_ENABLE_DEBUG
+const char * get_action_name (FrAction action)
+{
+	return action_names[action];
+}
+#endif
 
 GType
 fr_command_get_type ()

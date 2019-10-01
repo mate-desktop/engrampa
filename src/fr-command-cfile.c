@@ -20,6 +20,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <config.h>
+
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -76,7 +78,7 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 			while (g_input_stream_read (stream, buffer, 1, NULL, NULL) > 0) {
 				if (buffer[0] == '\0') {
 					filename = g_strdup (file_name_from_path (str->str));
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 					g_message ("filename is: %s", filename);
 #endif
 					break;

@@ -60,7 +60,7 @@ extract_to_callback (CajaMenuItem *item,
 		g_free (quoted_uri);
 	}
 
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 	g_print ("EXEC: %s\n", cmd->str);
 #endif
 
@@ -96,7 +96,7 @@ extract_here_callback (CajaMenuItem *item,
 
 	g_spawn_command_line_async (cmd->str, NULL);
 
-#ifdef DEBUG
+#ifdef MATE_ENABLE_DEBUG
 	g_print ("EXEC: %s\n", cmd->str);
 #endif
 

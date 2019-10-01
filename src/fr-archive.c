@@ -693,8 +693,8 @@ action_started (FrCommand *command,
 		FrAction   action,
 		FrArchive *archive)
 {
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [START] (FR::Archive)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [START] (FR::Archive)\n", get_action_name (action));
 #endif
 
 	g_signal_emit (G_OBJECT (archive),
@@ -930,8 +930,8 @@ action_performed (FrCommand   *command,
 		  FrProcError *error,
 		  FrArchive   *archive)
 {
-#ifdef DEBUG
-	debug (DEBUG_INFO, "%s [DONE] (FR::Archive)\n", action_names[action]);
+#ifdef MATE_ENABLE_DEBUG
+	debug (DEBUG_INFO, "%s [DONE] (FR::Archive)\n", get_action_name (action));
 #endif
 
 	switch (action) {
