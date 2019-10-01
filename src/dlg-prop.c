@@ -165,6 +165,11 @@ dlg_prop (FrWindow *window)
 	gtk_label_set_text (GTK_LABEL (label), s);
 	g_free (s);
 
+	/**/
+
+	label = _gtk_builder_get_widget (data->builder, "p_mime_type_label");
+	gtk_label_set_text (GTK_LABEL (label), window->archive->command->mime_type);
+
 	/* Set the signals handlers. */
 
 	g_signal_connect (G_OBJECT (data->dialog),
