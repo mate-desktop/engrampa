@@ -501,6 +501,17 @@ get_archive_filename_extension (const char *filename)
 	return NULL;
 }
 
+static gboolean
+is_mime_type_alias (const char *mime_type)
+{
+	size_t i;
+
+	for (i = 0; mime_type_desc[i].mime_type != NULL; i++)
+		if (g_content_type_equals (mime_type_desc[i].mime_type, mime_type))
+			return TRUE;
+
+	return FALSE;
+}
 
 int
 get_mime_type_index (const char *mime_type)
@@ -596,7 +607,9 @@ compute_supported_archive_types (void)
 			cap = g_ptr_array_index (reg_com->caps, j);
 			idx = get_mime_type_index (cap->mime_type);
 			if (idx < 0) {
-				g_warning ("mime type not recognized: %s", cap->mime_type);
+				if (!is_mime_type_alias (cap->mime_type)) {
+					g_warning ("mime type not recognized: %s", cap->mime_type);
+				}
 				continue;
 			}
 			mime_type_desc[idx].capabilities |= cap->current_capabilities;
