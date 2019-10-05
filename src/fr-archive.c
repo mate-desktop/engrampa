@@ -569,8 +569,8 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  4, "PK\003\004",                           "application/zip"             },
 		{ 0,  8, "PK00PK\003\004",                       "application/zip"             },
 		{ 0,  4, "LRZI",                                 "application/x-lrzip"         },
-		{ 0,  2, "\x1f\x9d",                             "application/x-compress"      }, /* using Lempel-Ziv-Welch   algorithm */
-		{ 0,  2, "\x1f\xa0",                             "application/x-compress"      }, /* using Lempel-Ziv-Huffman algorithm */
+		{ 0,  2, "\x1f\x9d",                             "application/x-tarz"          }, /* using Lempel-Ziv-Welch   algorithm */
+		{ 0,  2, "\x1f\xa0",                             "application/x-tarz"          }, /* using Lempel-Ziv-Huffman algorithm */
 	};
 
 	char   buffer[32];
