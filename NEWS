@@ -1,3 +1,42 @@
+### engrampa 1.23.2
+
+  * tx: sync with transifex
+  * LHA: add test for checking compressed file integrity
+  * Add application/(x-compress|x-rpm|x-lzh-compressed) in local magic
+  * Show archive type in properties dialog
+  * Zstandard: read .tar.zst files
+  * Zstandard: add test for checking compressed file integrity
+  * Zstandard: Update MIME type
+  * Ar: Update MIME type and add magic numbers
+  * fr-command-ar: fetch dates with strptime
+  * Remove internal mkdtemp and define feature test macro
+  * fr-command-tar: fetch dates with strptime
+  * Use mate-compiler-flags.m4 provided by mate-common
+  * ar: don't remove leading whitespaces in filename field
+  * i18n caja extension copyright
+  * LHA: make compatible with content-type response from gio file query
+  * fr-command-dpkg: fetch dates with strptime
+  * dlg-prop: set property label in ui file
+  * Add extract-dialog-options.ui
+  * LHA: Fix internet media type
+  * Use g_list_free_full and g_slist_free_full
+  * dlg-prop: show the exact number of bytes as part of the size
+  * dlg-prop: allow to open the archive's folder
+  * remove warnings: ‘gtk_image_new_from_stock’ is deprecated
+  * glib-utils & gtk-utils: Remove unused functions
+  * dlg-package-installer: show icons in error dialog buttons
+  * dlg-package-installer: remove warning ‘GtkStock’ is deprecated
+  * gio-utils: Remove unused functions
+  * glib-utils: Remove get_time_string()
+  * unace 2.5: Don't show archive summary in file listing
+  * tar: don't remove leading whitespaces in filename field
+  * Initialization discards ‘const’ qualifier from pointer target type
+  * remove warnings: "ENABLE_MAGIC" is not defined, evaluates to 0
+  * comparison of integer expressions of different signedness: ‘size_t’
+  * Missing initializer for struct field
+  * remove warnings: cast from function call [-Wbad-function-cast]
+  * remove build warning: local variable shadows another variable
+
 ### engrampa 1.23.1
 
   * tx: sync with transifex
