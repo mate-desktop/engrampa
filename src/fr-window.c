@@ -2299,7 +2299,7 @@ static void change_button_label (FrWindow  *window,
 	const gchar *state;
 	state = gtk_button_get_label (GTK_BUTTON (button));
 
-	if (g_strrstr ("_Pause", state) != NULL)
+	if (g_strrstr (_("_Pause"), state) != NULL)
 	{
 		gtk_widget_set_visible (window->priv->pd_progress_bar, FALSE);
 		fr_command_message (window->archive->command, _("Process paused"));
