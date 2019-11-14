@@ -71,7 +71,6 @@ requires:
     - gcc
     - git
     - gtk3
-    - intltool
     - json-glib
     - make
     - mate-common
@@ -82,13 +81,13 @@ requires:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/engrampa
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - gettext
     - gcc
     - git
-    - intltool
     - libcaja-extension-dev
     - libglib2.0-dev
     - libgtk-3-dev
@@ -118,11 +117,11 @@ requires:
 
   ubuntu:
     - autoconf-archive
+    - autopoint
     - clang
     - clang-tools
     - gettext
     - git
-    - intltool
     - libcaja-extension-dev
     - libglib2.0-dev
     - libgtk-3-dev
@@ -152,10 +151,6 @@ variables:
     -enable-checker security.insecureAPI.strcpy"'
 
 build_scripts:
-  - if [ ${DISTRO_NAME} == "debian" ];then
-  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
-  -     bash ./debian.sh
-  - fi
   - ./autogen.sh --enable-compile-warnings=maximum
   - scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
   - if [ $CPU_COUNT -gt 1 ]; then
