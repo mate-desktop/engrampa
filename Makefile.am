@@ -25,16 +25,9 @@ EXTRA_DIST = 			\
 	HACKING			\
 	NEWS			\
 	README			\
-	autogen.sh		\
-	intltool-merge.in	\
-	intltool-update.in	\
-	intltool-extract.in
+	autogen.sh
 
-DISTCLEANFILES =                        \
-	po/.intltool-merge-cache        \
-	intltool-extract                \
-	intltool-merge                  \
-	intltool-update
+DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS = \
 	--with-cajadir='$${libdir}/caja/extensions-2.0-distcheck'    \

@@ -131,8 +131,9 @@ GETTEXT_PACKAGE=engrampa
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
-AM_GLIB_GNU_GETTEXT
-IT_PROG_INTLTOOL([0.50.1])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
 
 if test "x${prefix}" = "xNONE"; then
   AC_DEFINE_UNQUOTED(LOCALEDIR, "${ac_default_prefix}/${DATADIRNAME}/locale", [Locale dir])
@@ -189,7 +190,7 @@ AC_CONFIG_FILES([Makefile
 		 src/sh/Makefile
 		 src/ui/Makefile
 		 caja/Makefile
-		 caja/libcaja-engrampa.caja-extension.in
+		 caja/libcaja-engrampa.caja-extension.desktop.in
 		 help/Makefile
 		 po/Makefile.in])
 AC_OUTPUT

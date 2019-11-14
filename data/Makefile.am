@@ -4,8 +4,8 @@ desktopdir = $(datadir)/applications
 desktop_in_in_files = engrampa.desktop.in.in
 desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in) 
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-
-@INTLTOOL_DESKTOP_RULE@
+$(desktop_DATA): $(desktop_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
@@ -16,10 +16,11 @@ service_DATA = $(service_in_files:.service.in=.service)
 $(service_DATA): $(service_in_files) Makefile
 	$(AM_V_GEN) $(SED) -e "s|\@libexecdir\@|$(libexecdir)|" $< > $@
 
-@INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/metainfo
 appdata_in_files = engrampa.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+$(appdata_DATA): $(appdata_in_files)
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 gsettingsschema_in_files = org.mate.engrampa.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
@@ -65,7 +66,7 @@ CLEANFILES = \
        engrampa.appdata.xml \
        $(NULL)
 
-dist-hook: 
+dist-hook:
 	cd $(distdir); rm -f $(CLEANFILES)
 
 -include $(top_srcdir)/git.mk
