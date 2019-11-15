@@ -29,7 +29,7 @@ msgstr "Enrico Bella, 2019"
 #. (itstool) path: info/title
 #: C/index.docbook:15
 msgid "Archive Manager Manual"
-msgstr "Manuale Gestore Archivi"
+msgstr "Manuale del Gestore di archivi Engrampa"
 
 #. (itstool) path: abstract/para
 #: C/index.docbook:18
@@ -895,6 +895,12 @@ msgid ""
 "/filechooser-open\">Desktop User Guide</link> to learn more about using the "
 "file browsing dialogs."
 msgstr ""
+"Varie finestre del <application>Gestore di archivi Engrampa</application> "
+"(<guilabel>Nuovo</guilabel>, <guilabel>Apri</guilabel>, "
+"<guilabel>Estrai</guilabel>,...) permettono di sfogliare le cartelle del "
+"computer. Fai riferimento alla <link xlink:href=\"help:mate-user-guide"
+"/filechooser-open\">Guida utente di MATE</link> per imparare come usare le "
+"finestre di gestione dei file."
 
 #. (itstool) path: section/para
 #: C/index.docbook:464
@@ -904,6 +910,10 @@ msgid ""
 "you can use the <guilabel>Places</guilabel> pane to access your favorite "
 "locations."
 msgstr ""
+"Puoi anche fare riferimento alla sezione <link xlink:href=\"help:mate-user-"
+"guide/caja-bookmarks\">Segnalibri</link> della guida utente per l'ambiente "
+"grafico al fine di capire come impostare il pannello "
+"<guilabel>Risorse</guilabel> per accedere ai percorsi preferiti."
 
 #. (itstool) path: info/title
 #: C/index.docbook:475
@@ -921,6 +931,14 @@ msgid ""
 "to disk only when you quit the application or select "
 "<guimenuitem>Save</guimenuitem> in the menu."
 msgstr ""
+"Quando si utilizza il <application>Gestore di archivi Engrampa</application>"
+" per lavorare con un archivio, tutte le modifiche vengono salvate "
+"immediatamente su disco. Ad esempio, se elimini un file da un archivio, il "
+"<application>Gestore di archivi Engrampa</application> elimina il file non "
+"appena fai clic su <guibutton>OK</guibutton>. Questo comportamento è diverso"
+" da quello della maggior parte delle applicazioni, che salvano le modifiche "
+"solo quando si esce dall'applicazione o si seleziona "
+"<guimenuitem>Salva</guimenuitem> nel menu."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -931,6 +949,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Stop</guimenuitem></menuchoice>,"
 " or click <guibutton>Stop</guibutton> in the toolbar."
 msgstr ""
+"Se un archivio è molto grande, o se il sistema è lento, alcune operazioni "
+"possono richiedere molto tempo. Per interrompere l'azione corrente, premi "
+"<keycap>Esc</keycap>. In alternativa, seleziona "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Stop</guimenuitem></menuchoice>"
+" o fai clic <guibutton>Stop</guibutton> nella barra degli strumenti."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:491
@@ -1020,6 +1043,9 @@ msgid ""
 "action in several ways. For example, you can open an archive in the "
 "following ways: <_:informaltable-1/>"
 msgstr ""
+"Nel <application>Gestore di archivi Engrampa</application> è possibile "
+"eseguire la stessa azione in modi diversi. Ad esempio puoi aprire un "
+"archivio tramite: <_:informaltable-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:524
@@ -1044,6 +1070,16 @@ msgid ""
 "The examples in the following table show how to use filename patterns to "
 "select files."
 msgstr ""
+"Il <application>Gestore di archivi Engrampa</application> consente di "
+"aggiungere, estrarre o eliminare più file contemporaneamente. Per applicare "
+"un'azione a tutti i file secondo un modello definiti, inserisci il criterio "
+"nella casella di testo. Lo schema può includere simboli jolly standard come "
+"<keycap>*</keycap> per identificare qualsiasi stringa e <keycap>?</keycap> "
+"per identificare a qualsiasi singolo simbolo. È possibile inserire diversi "
+"criteri separati da punti e virgola. Il <application>Gestore di archivi "
+"Entrampa</application> applica l'azione a tutti i file che corrispondono ad "
+"almeno uno dei modelli definiti. Gli esempi della tabella seguente mostrano "
+"come utilizzare i modelli per selezionare i file."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:539
@@ -1196,6 +1232,10 @@ msgid ""
 "application displays an error message. See <xref linkend=\"engrampa-"
 "intro\"/> for a list of supported formats."
 msgstr ""
+"Se si tenta di aprire un archivio in un formato non riconosciuto dal "
+"<application>Gestore di archivi Engrampa</application>, l'applicazione "
+"visualizza un messaggio di errore. Vedi <xref linkend=\"engrampa-intro\"/> "
+"per un elenco dei formati supportati."
 
 #. (itstool) path: info/title
 #: C/index.docbook:606
@@ -1223,6 +1263,10 @@ msgid ""
 "All</guimenuitem></menuchoice> or press "
 "<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>."
 msgstr ""
+"Per deselezionare tutti i file di un archivio, seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Deseleziona "
+"tutto</guimenuitem></menuchoice> o premi "
+"<keycombo><keycap>Shift</keycap><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:616
@@ -1235,6 +1279,8 @@ msgid ""
 "Select the files that you want to extract. To select more files, press-and-"
 "hold <keycap>Ctrl</keycap> and click on the files you want to select."
 msgstr ""
+"Seleziona i file da estrarre. Per selezionare altri file, tieni premuto Ctrl"
+" e fai clic sui file che si desideri."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:624
@@ -1256,6 +1302,8 @@ msgid ""
 "Select the folder where <application>Archive Manager</application> extracts "
 "the files."
 msgstr ""
+"Seleziona la cartella dove il <application>Gestore di archivi "
+"Engrampa</application> estrae i file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:630
@@ -1263,6 +1311,9 @@ msgid ""
 "Select the required extract options. For more information about the extract "
 "options, see <xref linkend=\"engrampa-extract-options\"/>."
 msgstr ""
+"Seleziona le opzioni di estrazione desiderate. Per ulteriori informazioni "
+"sulle opzioni di estrazione, vedi <xref linkend=\"engrampa-extract-"
+"options\"/>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:633
@@ -1276,6 +1327,9 @@ msgid ""
 " not specified it, <application>Archive Manager</application> asks you to "
 "enter the password."
 msgstr ""
+"Se tutti i file dell'archivio sono protetti da una password che non è stata "
+"specificata, <application>Gestore di archivi Engrampa</application> chiederà"
+" di inserirla."
 
 #. (itstool) path: note/para
 #: C/index.docbook:639
@@ -1286,6 +1340,10 @@ msgid ""
 "<application>Archive Manager</application> extracts only the unprotected "
 "files."
 msgstr ""
+"Se solo alcuni file dell'archivio sono protetti da una password, e non è "
+"stata specificata, <application>Gestore di archivi Engrampa</application> "
+"non la richiede. Tuttavia, <application>Gestore di archivi "
+"Engrampa</application> estrarrà solo i file non protetti."
 
 #. (itstool) path: note/para
 #: C/index.docbook:642 C/index.docbook:800
@@ -1293,6 +1351,8 @@ msgid ""
 "For more information about passwords, see <xref linkend=\"engrampa-encrypt-"
 "files\"/>."
 msgstr ""
+"Per ulteriori informazioni sulle password, vedi <xref linkend=\"engrampa-"
+"encrypt-files\"/>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:618
@@ -1300,6 +1360,8 @@ msgid ""
 "To extract files from an open archive, perform the following steps: "
 "<_:orderedlist-1/>"
 msgstr ""
+"Per estrarre i file da un archivio, segui questi passaggi: "
+"<_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:649
@@ -1309,6 +1371,10 @@ msgid ""
 "<application>Archive Manager</application> window. See <xref linkend"
 "=\"engrampa-fmgr\"/> for more information."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> fornisce anche degli "
+"strumenti per estrarre i file da un archivio senza aprire una finestra del "
+"<application>Gestore di archivi Engrampa</application>. Vedi <xref linkend"
+"=\"engrampa-fmgr\"/> per ulteriori informazioni."
 
 #. (itstool) path: section/para
 #: C/index.docbook:650
@@ -1317,6 +1383,9 @@ msgid ""
 "files from the archive. The extracted files have the same permissions and "
 "modification date as the original files that were added to the archive."
 msgstr ""
+"L'operazione di estrazione estrae una <emphasis>copia</emphasis> dei file "
+"dell'archivio. I file estratti hanno gli stessi permessi e la stessa data di"
+" modifica dei file originali contenuti nell'archivio."
 
 #. (itstool) path: section/para
 #: C/index.docbook:653
@@ -1325,11 +1394,14 @@ msgid ""
 "information on how to delete files from an archive, see <xref linkend"
 "=\"engrampa-delete-files\"/>."
 msgstr ""
+"L'operazione di estrazione non modifica il contenuto dell'archivio. Per "
+"informazioni su come eliminare i file da un archivio, vedi <xref linkend"
+"=\"engrampa-delete-files\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:659
 msgid "To Close an Archive"
-msgstr ""
+msgstr "Chiudere un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:661
@@ -1339,6 +1411,10 @@ msgid ""
 " <guimenuitem>Close</guimenuitem> </menuchoice>, or press "
 "<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>."
 msgstr ""
+"Per chiudere l'archivio e la finestra del <application> Gestore di archivi "
+"Engrampa</application>, scegli "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Chiudi</guimenuitem></menuchoice>"
+" oppure premi <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:664
@@ -1346,11 +1422,13 @@ msgid ""
 "There is no way to close the current archive but not the "
 "<application>Archive Manager</application> window."
 msgstr ""
+"Non è possibile chiudere l'archivio senza chiudere anche la finestra del "
+"<application>Gestore di archivi Engrampa</application> relativa."
 
 #. (itstool) path: info/title
 #: C/index.docbook:672
 msgid "Creating Archives"
-msgstr ""
+msgstr "Creare archivi"
 
 #. (itstool) path: section/para
 #: C/index.docbook:674
@@ -1358,11 +1436,13 @@ msgid ""
 "In addition to opening existing archives, you can also create new archives "
 "with <application>Archive Manager</application>."
 msgstr ""
+"Oltre ad aprire gli archivi esistenti, è anche possibile creare nuovi "
+"archivi con il <application>Gestore di archivi Engrampa</application>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:676
 msgid "To Create an Archive"
-msgstr ""
+msgstr "Creare un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:682
@@ -1373,6 +1453,12 @@ msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>, or click "
 "<guibutton>New</guibutton> in the toolbar."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Nuovo</guimenuitem></menuchoice>"
+" per mostrare la finestra <guilabel>Nuovo archivio</guilabel>. In "
+"alternativa, premi "
+"<keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo> o clicca il "
+"tasto <guibutton>Nuovo</guibutton> nella barra degli strumenti."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:686
@@ -1384,6 +1470,12 @@ msgid ""
 "folder. Alternatively, enter the path in the <guilabel>Name</guilabel> text "
 "box."
 msgstr ""
+"Specifica la cartella in cui il <application>Gestore di archivi "
+"Engrampa</application> creerà il nuovo archivio cliccando sulla voce "
+"nell'elenco a discesa <guilabel>Nuovo</guilabel>. Se la cartella non è "
+"presente nell'elenco, fai clic su <guilabel>Sfoglia</guilabel> e seleziona "
+"la cartella. In alternativa, inserisci il percorso completo nella casella di"
+" testo <guilabel>Nome</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:690
@@ -1394,6 +1486,11 @@ msgid ""
 "<guilabel>Archive type</guilabel> drop-down menu, this way the extension "
 "will be added automatically."
 msgstr ""
+"Inserisci il nome del nuovo archivio, compresa l'estensione del file, nella "
+"casella di testo <guilabel>Nome</guilabel>. In alternativa, scrivi il nome "
+"dell'archivio senza estensione e seleziona il tipo di archivio dal menu a "
+"discesa <guilabel>Formato del file</guilabel>, così facendo l'estensione "
+"verrà aggiunta automaticamente."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:693 C/index.docbook:787 C/index.docbook:1323
@@ -1402,6 +1499,9 @@ msgid ""
 "Options</guilabel>. For more information about the create options, see <xref"
 " linkend=\"engrampa-create-options\"/>."
 msgstr ""
+"Seleziona le opzioni di creazione desiderate cliccando su <guilabel>Altre "
+"opzioni</guilabel>. Per ulteriori informazioni sulle opzioni di creazione, "
+"vedi <xref linkend=\"engrampa-create-options\"/>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:697
@@ -1409,6 +1509,9 @@ msgid ""
 "Click <guibutton>New</guibutton>. <application>Archive Manager</application>"
 " creates an empty archive, but does not yet write the archive to disk."
 msgstr ""
+"Clicca su <guibutton>Nuovo</guibutton>. <application>Gestore di archivi "
+"Engrampa</application> crea un archivio vuoto, ma non lo scrive ancora sul "
+"disco."
 
 #. (itstool) path: note/para
 #: C/index.docbook:703
@@ -1419,6 +1522,11 @@ msgid ""
 " to the archive, <application>Archive Manager</application> deletes the "
 "archive."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> scrive l'archivio su "
+"disco solo quando contiene almeno un file. Se crei un nuovo archivio e esci "
+"dal <application>Gestore di archivi Engrampa</application> prima di aver "
+"aggiunto un file, il <application>Gestore di archivi Engrampa</application> "
+"elimina l'archivio."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:701
@@ -1426,16 +1534,18 @@ msgid ""
 "Add files to the new archive as described in <xref linkend=\"engrampa-add-"
 "files\"/>. <_:note-1/>"
 msgstr ""
+"Aggiungi i file all'archivio come descritto in <xref linkend=\"engrampa-add-"
+"files\"/>. <_:note-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:678
 msgid "To create an archive, perform the following steps: <_:orderedlist-1/>"
-msgstr ""
+msgstr "Per creare un archivio, segui questi passaggi: <_:orderedlist-1/>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:713
 msgid "To Add Files to an Archive"
-msgstr ""
+msgstr "Aggiungere elementi ad un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:719 C/index.docbook:747
@@ -1443,6 +1553,8 @@ msgid ""
 "Decide where in the archive you want to add the files, then open that "
 "location in the archive."
 msgstr ""
+"Identifica in quale posizione dell'archivio desideri aggiungere i file e "
+"apri quella posizione nel gestore archivi."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:722
@@ -1452,6 +1564,10 @@ msgid ""
 "Files</guilabel> dialog, or click <guibutton>Add Files</guibutton> in the "
 "toolbar."
 msgstr ""
+"Seleziona <menuchoice><guimenu>Modifca</guimenu><guimenuitem>Aggiungi "
+"file</guimenuitem></menuchoice> per visualizzare la finestra "
+"<guilabel>Aggiungi file</guilabel> o clicca <guibutton>Aggiungi "
+"file</guibutton> nella barra degli strumenti."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:725
@@ -1459,6 +1575,8 @@ msgid ""
 "Select the files that you want to add. To select more files press-and-hold "
 "<keycap>Ctrl</keycap> and click the files."
 msgstr ""
+"Seleziona i file che desideri aggiungere. Per selezionarne altri tieni "
+"premuto <keycap>Ctrl</keycap> e clicca sui file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:728
@@ -1466,12 +1584,17 @@ msgid ""
 "Click <guibutton>Add</guibutton>. <application>Archive Manager</application>"
 " adds the files to the current folder in the archive."
 msgstr ""
+"Clicca <guibutton>Aggiungi</guibutton>. Il <application>Gestore di archivi "
+"Engrampa</application> aggiunge i file alla cartella dell'archivio "
+"correntemente visualizzata."
 
 #. (itstool) path: section/para
 #: C/index.docbook:715
 msgid ""
 "To add files to an archive, perform the following steps: <_:orderedlist-1/>"
 msgstr ""
+"Per aggiungere file ad un archivio, segui questi passaggi: "
+"<_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:733
@@ -1480,6 +1603,9 @@ msgid ""
 "Files</guilabel> dialog. To add a folder see <xref linkend=\"engrampa-add-"
 "folder\"/>."
 msgstr ""
+"Non è possibile aggiungere cartelle ad un archivio tramite "
+"<guilabel>Aggiungi file</guilabel>. Per aggiungere una cartella vedi <xref "
+"linkend=\"engrampa-add-folder\"/>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:734
@@ -1488,6 +1614,9 @@ msgid ""
 " newer</guilabel> option, see <xref linkend=\"engrampa-add-options\"/> for "
 "more information on this option."
 msgstr ""
+"La finestra <guilabel>Aggiungi file</guilabel> dà accesso all'opzione "
+"<guilabel>Aggiungi solo se più recente</guilabel>, vedi <xref linkend"
+"=\"engrampa-add-options\"/> per ulteriori informazioni su questa opzione."
 
 #. (itstool) path: section/para
 #: C/index.docbook:735
@@ -1496,6 +1625,10 @@ msgid ""
 "opening an <application>Archive Manager</application> window. See <xref "
 "linkend=\"engrampa-fmgr\"/> for more information."
 msgstr ""
+"È anche possibile aggiungere file ad un archivio tramite il gestore dei "
+"file, senza dover aprire una finestra del <application>Gestore di archivi "
+"Engrampa</application>. Vedi <xref linkend=\"engrampa-fmgr\"/> per ulteriori"
+" informazioni."
 
 #. (itstool) path: section/para
 #: C/index.docbook:736
@@ -1506,11 +1639,16 @@ msgid ""
 "copies that are added to the archive have the same permissions and "
 "modification date as the original files."
 msgstr ""
+"L'operazione Aggiungi aggiunge <emphasis>una copia</emphasis> dei file o "
+"delle cartelle specificate all'archivio. <application>Gestore di archivi "
+"Engrampa</application> non rimuove i file originali, che rimangono invariati"
+" nel file system locale. Le copie aggiunte all'archivio hanno le stesse "
+"autorizzazioni e la stessa data di modifica dei file originali."
 
 #. (itstool) path: info/title
 #: C/index.docbook:741
 msgid "To Add a Folder to an Archive"
-msgstr ""
+msgstr "Aggiungere una cartella ad un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:750
@@ -1519,11 +1657,14 @@ msgid ""
 "Folder</guimenuitem></menuchoice> to display the <guilabel>Add a "
 "Folder</guilabel> dialog."
 msgstr ""
+"Seleziona <menuchoice><guimenu>Modifica</guimenu><guimenuitem>Aggiungi una "
+"cartella</guimenuitem></menuchoice> per far apparire la finestra "
+"<guilabel>Aggiungi ad una cartella</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:753
 msgid "Select the folder that you want to add."
-msgstr ""
+msgstr "Seleziona la cartella che desideri aggiungere."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:756
@@ -1531,6 +1672,9 @@ msgid ""
 "Click <guibutton>Add</guibutton>. <application>Archive Manager</application>"
 " adds the folder to the current folder in the archive."
 msgstr ""
+"Clicca <guibutton>Aggiungi</guibutton>. <application>Gestore di archivi "
+"Engrampa</application> aggiunge la cartella a quella dell'archivio "
+"attualmente aperta."
 
 #. (itstool) path: section/para
 #: C/index.docbook:743
@@ -1538,6 +1682,8 @@ msgid ""
 "To add a folder to an archive, perform the following steps: "
 "<_:orderedlist-1/>"
 msgstr ""
+"Per aggiungere una cartella ad un archivio, segui questi passaggi: "
+"<_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:761
@@ -1545,11 +1691,14 @@ msgid ""
 "The <guilabel>Add a Folder</guilabel> dialog provides several advanced "
 "options. See <xref linkend=\"engrampa-add-options\"/> for more information."
 msgstr ""
+"La finestra <guilabel>Aggiungi una cartella</guilabel> fornisce varie "
+"opzioni avanzate. Vedi <xref linkend=\"engrampa-add-options\"/> per "
+"ulteriori informazioni."
 
 #. (itstool) path: info/title
 #: C/index.docbook:765
 msgid "To Convert an Archive to Another Format"
-msgstr ""
+msgstr "Convertire un archivio in un altro formato"
 
 #. (itstool) path: section/para
 #: C/index.docbook:767
@@ -1557,11 +1706,13 @@ msgid ""
 "To convert an archive to another format and save as a new file, perform the "
 "following steps:"
 msgstr ""
+"Per convertire un archivio in un altro formato e salvarlo come nuovo file, "
+"segui i seguenti passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:771
 msgid "Open the archive that you want to convert."
-msgstr ""
+msgstr "Apri l'archivio che desideri convertire"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:775
@@ -1570,11 +1721,14 @@ msgid ""
 "As</guimenuitem></menuchoice> to display the <guilabel>Save</guilabel> "
 "dialog."
 msgstr ""
+"Seleziona <menuchoice><guimenu>Archivio</guimenu><guimenuitem>Salva "
+"come..</guimenuitem></menuchoice> per mostrare la finestra <guilabel>Salva "
+"come</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:779
 msgid "Enter the new archive name in the <guilabel>Name</guilabel> text box."
-msgstr ""
+msgstr "Inserisci il nome dell'archivio nel campo <guilabel>Nome</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:783
@@ -1585,6 +1739,11 @@ msgid ""
 "<guilabel>Automatic</guilabel> from the <guilabel>Archive type</guilabel> "
 "drop-down list."
 msgstr ""
+"Seleziona il nuovo formato dall'elenco <guilabel>Formato del "
+"file</guilabel>. In alternativa puoi inserire l'estensione dopo il nome del "
+"file nella casella di testo <guilabel>Nome</guilabel> e selezionare "
+"<guilabel>Per estensione</guilabel> dall'elenco a discesa <guilabel>Formato "
+"del file</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:791
@@ -1600,21 +1759,26 @@ msgid ""
 "<application>Archive Manager</application> copies only the unprotected files"
 " to the new archive."
 msgstr ""
+"Se alcuni, ma non tutti, i file dell'archivio sono protetti da una password "
+"che non è stata specificata <application>Gestore di archivi "
+"Engrampa</application> non richiede la password. Tuttavia, il "
+"<application>Gestore di archivi Engrampa</application> copierà nel nuovo "
+"archivio solo i file non protetti."
 
 #. (itstool) path: info/title
 #: C/index.docbook:810
 msgid "Modifying the Contents of an Archive"
-msgstr ""
+msgstr "Modificare i contenuti dell'archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:812
 msgid "You can modify the contents of an archive in several ways."
-msgstr ""
+msgstr "E' possibile modificare i contenuti dell'archivio in vari modi."
 
 #. (itstool) path: info/title
 #: C/index.docbook:817
 msgid "To Encrypt Files in an Archive"
-msgstr ""
+msgstr "Cifrare i file di un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:819
@@ -1622,6 +1786,8 @@ msgid ""
 "For security, you might want to encrypt the files that you add to an "
 "archive."
 msgstr ""
+"Per motivi di sicurezza è anche possibile crittografare i file aggiunti ad "
+"un archivio."
 
 #. (itstool) path: section/para
 #: C/index.docbook:820
@@ -1629,17 +1795,19 @@ msgid ""
 "If the archive format supports encryption, you can specify a password to "
 "encrypt the files that you add to the archive."
 msgstr ""
+"Se il formato dell'archivio supporta la crittografia, puoi inserire una "
+"password per crittografare i file  aggiunti all'archivio."
 
 #. (itstool) path: note/para
 #: C/index.docbook:822
 msgid "Currently, only 7-Zip, ZIP, RAR and ARJ archives support encryption."
-msgstr ""
+msgstr "Attualmente supportano la cifratura gli archivi 7-Zip, RAR e ARJ."
 
 #. (itstool) path: section/para
 #: C/index.docbook:824
 msgid ""
 "To specify a password for file encryption, perform the following steps:"
-msgstr ""
+msgstr "Per inserire una password di cifratura, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:826
@@ -1648,11 +1816,14 @@ msgid ""
 "<guimenuitem>Password</guimenuitem></menuchoice> to display the "
 "<guilabel>Password</guilabel> dialog."
 msgstr ""
+"Seleziona <menuchoice><guimenu>Modifica</guimenu> "
+"<guimenuitem>Password</guimenuitem></menuchoice> per mostrare la finestra "
+"<guilabel>Password</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:827
 msgid "Enter the password in the <guilabel>Password</guilabel> text box."
-msgstr ""
+msgstr "Inserisci la password nel campo <guilabel>Password</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:828 C/index.docbook:942
@@ -1667,6 +1838,10 @@ msgid ""
 " extract from the current archive. <application>Archive "
 "Manager</application> deletes the password when you close the archive."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> utilizza la password "
+"per crittografare i file aggiunti all'archivio attuale e per decifrare i "
+"file che vengono estratti. <application>Gestore di archivi "
+"Engrampa</application> dimentica la password quando l'archivio viene chiuso."
 
 #. (itstool) path: section/para
 #: C/index.docbook:832
@@ -1674,6 +1849,8 @@ msgid ""
 "For information on how to check whether an archive contains encrypted files,"
 " see <xref linkend=\"engrampa-extra-info\"/>."
 msgstr ""
+"Per ulteriori informazioni su come verificare se un archivio contiene file "
+"cifrati, vedi <xref linkend=\"engrampa-encrypt-files\"/>."
 
 #. (itstool) path: note/para
 #: C/index.docbook:835
@@ -1682,21 +1859,27 @@ msgid ""
 "security is important, use a strong encryption tool such as <link "
 "xlink:href=\"http://www.gnupg.org\">GNU Privacy Guard</link>."
 msgstr ""
+"La crittografia fornita dalle utilità di archiviazione è debole e insicura. "
+"Se per te la sicurezza è davvero importante, utilizza uno strumento di "
+"crittografia avanzato come <link xlink:href=\"http://www.gnupg.org\">GNU "
+"Privacy Guard</link>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:841
 msgid "To Rename a File in an Archive"
-msgstr ""
+msgstr "Rinominare un file in un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:843
 msgid "To rename a file in an archive, perform the following steps:"
 msgstr ""
+"Per rinominare un file in un archivio, segui questi passaggi: "
+"<_:orderedlist-1/>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:846
 msgid "Select the file that you want to rename."
-msgstr ""
+msgstr "Seleziona il file che desideri rinominare."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:849
@@ -1706,32 +1889,38 @@ msgid ""
 " or press <keycombo><keycap>F2</keycap></keycombo>, to display the "
 "<guilabel>Rename</guilabel> dialog."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Rinomina</guimenuitem></menuchoice>"
+" o premi <keycombo><keycap>F2</keycap></keycombo>, per mostrare la finestra "
+"<guilabel>Rinomina</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:852
 msgid ""
 "Enter the new filename in the <guilabel>New file name</guilabel> text box."
 msgstr ""
+"Inserisci il nome del file nella casella <guilabel>Nuovo nome del "
+"file</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:855
 msgid "Click <guibutton>Rename</guibutton>."
-msgstr ""
+msgstr "Clicca <guibutton>Rinomina</guibutton>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:862
 msgid "To Copy Files in an Archive"
-msgstr ""
+msgstr "Copiare i file in un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:864
 msgid "To copy files in an archive, perform the following steps:"
-msgstr ""
+msgstr "Per copiare file in un archivio, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:867
 msgid "Select the files that you want to copy."
-msgstr ""
+msgstr "Seleziona i file che desideri copiare."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:870
@@ -1740,11 +1929,14 @@ msgid ""
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Copy</guimenuitem></menuchoice>,"
 " or press <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Copia</guimenuitem> o "
+"premi <keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:873
 msgid "Open the location where you want to put the copied files."
-msgstr ""
+msgstr "Apri la posizione in cui desideri che i file vengano copiati."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:876 C/index.docbook:896
@@ -1753,21 +1945,24 @@ msgid ""
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Paste</guimenuitem></menuchoice>,"
 " or press <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Incolla</guimenuitem></menuchoice>"
+" o premi <keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:882
 msgid "To Move Files in an Archive"
-msgstr ""
+msgstr "Spostare i file in un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:884
 msgid "To move files in an archive, perform the following steps:"
-msgstr ""
+msgstr "Per spostare i file in un archivio, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:887
 msgid "Select the files that you want to move."
-msgstr ""
+msgstr "Seleziona i file che desideri spostare."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:890
@@ -1776,26 +1971,29 @@ msgid ""
 "<menuchoice><guimenu>Edit</guimenu><guimenuitem>Cut</guimenuitem></menuchoice>,"
 " or press <keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Taglia</guimenuitem></menuchoice>"
+" o premi <keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:893
 msgid "Open the location where you want to put the moved files."
-msgstr ""
+msgstr "Apri la posizione in cui desideri che i file vengano spostati."
 
 #. (itstool) path: info/title
 #: C/index.docbook:902
 msgid "To Delete Files From an Archive"
-msgstr ""
+msgstr "Eliminare file da un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:904
 msgid "To delete files from an archive, perform the following steps:"
-msgstr ""
+msgstr "Per eliminare i file da un archivio, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:907
 msgid "Select the files that you want to delete."
-msgstr ""
+msgstr "Seleziona i file che desideri eliminare."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:910
@@ -1805,36 +2003,40 @@ msgid ""
 " or press <keycap>Delete</keycap> to display the <guilabel>Delete</guilabel>"
 " dialog."
 msgstr ""
+"Seleziona "
+"<menuchoice><guimenu>Modifica</guimenu><guimenuitem>Elimina</guimenuitem></menuchoice>"
+" o premi <keycap>Canc</keycap> per mostrare la finestra "
+"<guilabel>Elimina</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:913
 msgid "Select one of the following delete options:"
-msgstr ""
+msgstr "Seleziona una delle seguenti opzioni di eliminazione:"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:916 C/index.docbook:1550
 msgid "<guilabel>All files</guilabel>"
-msgstr ""
+msgstr "<guilabel>Tutti i file</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:918
 msgid "Delete all files from the archive."
-msgstr ""
+msgstr "Elimina tutti i file dall'archivio."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:924 C/index.docbook:1558
 msgid "<guilabel>Selected files</guilabel>"
-msgstr ""
+msgstr "<guilabel>File selezionati</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:926
 msgid "Delete the selected files from the archive."
-msgstr ""
+msgstr "Elimina i file selezionati dall'archivio."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:932 C/index.docbook:1566
 msgid "<guilabel>Files</guilabel>"
-msgstr ""
+msgstr "<guilabel>File</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:934
@@ -1843,11 +2045,14 @@ msgid ""
 "<xref linkend=\"engrampa-pattern\"/> for more information about filename "
 "patterns."
 msgstr ""
+"Elimina dall'archivio tutti i file che corrispondono ai criteri specificati."
+" Vedi <xref linkend=\"engrampa-pattern\"/> per ulteriori informazioni sui "
+"criteri di selezione dei file."
 
 #. (itstool) path: info/title
 #: C/index.docbook:949
 msgid "To Modify a File in an Archive"
-msgstr ""
+msgstr "Modificare file in un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:954
@@ -1855,11 +2060,14 @@ msgid ""
 "Double-click the file that you want to open. Alternatively right-click the "
 "file and choose <menuchoice><guimenuitem>Open</guimenuitem></menuchoice>."
 msgstr ""
+"Fai doppio clic sul file che desideri aprire oppure fai clic con il tasto "
+"destro del mouse sul file e seleziona "
+"<menuchoice><guimenuitem>Apri</guimenuitem></menuchoice>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:955
 msgid "Edit the file opened in step 1, and then save your changes."
-msgstr ""
+msgstr "Modifica il file aperto al punto 1 e salva le modifiche."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:956
@@ -1868,11 +2076,14 @@ msgid ""
 "asking confirmation to update the file in the archive with the changes you "
 "made."
 msgstr ""
+"Il <application>Gestore di archivi Engrampa</application> mostra una "
+"finestra di conferma per aggiornare il file nell'archivio con le modifiche "
+"recenti. "
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:957
 msgid "Click on <guilabel>Update</guilabel>."
-msgstr ""
+msgstr "Clicca <guilabel>Aggiorna</guilabel>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:951
@@ -1880,6 +2091,8 @@ msgid ""
 "To modify a file in an archive perform the following steps: "
 "<_:orderedlist-1/>"
 msgstr ""
+"Per modificare i file in un archivio, segui questi passaggi: "
+"<_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:960
@@ -1893,22 +2106,32 @@ msgid ""
 "Manager</application> displays the <guilabel>Open Files</guilabel> dialog to"
 " let you choose an application, as described in below."
 msgstr ""
+"Il <application>Gestore di archivi Engrampa</application> utilizza le "
+"associazioni tra tipi di file e programmi definite a livello di sistema per "
+"determinare l'applicazione adatta per ogni file. Queste associazioni possono"
+" essere visualizzate e modificate nella scheda <guilabel>Apri con</guilabel>"
+" delle proprietà dei file. Se <application>Gestore di archivi "
+"Engrampa</application> non è in grado di trovare un'applicazione "
+"appropriata, <application>Gestore di archivi Engrampa</application> "
+"visualizzerà la finestra <guilabel>Apri file</guilabel> per permetterti di "
+"scegliere un'applicazione, come descritto di seguito."
 
 #. (itstool) path: info/title
 #: C/index.docbook:962
 msgid "To Modify a File in an Archive with a Custom Application"
-msgstr ""
+msgstr "Modificare file con un programma personalizzato"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:967
 msgid "Right click the file."
-msgstr ""
+msgstr "Fai clic destro sul file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:968
 msgid ""
 "Choose <menuchoice><guimenuitem>Open With...</guimenuitem></menuchoice>."
 msgstr ""
+"Seleziona <menuchoice><guimenuitem>Apri con...</guimenuitem></menuchoice>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:964
@@ -1917,6 +2140,9 @@ msgid ""
 "application, to modify a file. To use an external application to open a "
 "file: <_:orderedlist-1/>"
 msgstr ""
+"Puoi usare un'applicazione da te specificata per modificare un file, al "
+"posto dell'applicazione predefinita. Per utilizzare un'applicazione esterna:"
+" <_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:971
@@ -1929,6 +2155,14 @@ msgid ""
 "the <guilabel>Application</guilabel> text box and then click "
 "<guibutton>Open</guibutton> to launch the application of your choice."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> visualizza la "
+"finestra <guilabel>Apri file</guilabel> che elenca tutte le applicazioni in "
+"grado di aprire file scelto. Per selezionare una delle applicazioni, fai "
+"doppio clic sul nome dell'applicazione o un clic singolo sul nome "
+"dell'applicazione seguito da <guibutton>Apri</guibutton>. In alternativa, "
+"scrivi il nome dell'applicazione nella casella di testo "
+"<guilabel>Applicazione</guilabel>, quindi clicca su "
+"<guibutton>Apri</guibutton> per avviare l'applicazione."
 
 #. (itstool) path: section/para
 #: C/index.docbook:972
@@ -1936,11 +2170,13 @@ msgid ""
 "Once the application starts follow the procedure from step 2 as described in"
 " <xref linkend=\"engrampa-modify-archive-file\"/>."
 msgstr ""
+"Una volta avviata la applicazione, segui la procedura dal passo 2, come "
+"descritto in <xref linkend=\"engrampa-modify-archive-file\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:979
 msgid "Viewing Archives"
-msgstr ""
+msgstr "Visualizzare archivi"
 
 #. (itstool) path: section/para
 #: C/index.docbook:981
@@ -1948,21 +2184,23 @@ msgid ""
 "<application>Archive Manager</application> enables you to view several "
 "aspects of an archive."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> permette di "
+"visualizzare vari aspetti di un archivio."
 
 #. (itstool) path: info/title
 #: C/index.docbook:985
 msgid "To View the Properties of an Archive"
-msgstr ""
+msgstr "Visualizzare le proprietà di un archivio"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:990 C/index.docbook:1038
 msgid "<guilabel>Name</guilabel>"
-msgstr ""
+msgstr "<guilabel>Nome</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:991
 msgid "The name of the archive."
-msgstr ""
+msgstr "Il nome dell'archivio."
 
 #. (itstool) path: varlistentry/term
 #. (itstool) path: entry/para
@@ -1973,32 +2211,32 @@ msgstr "<guilabel>Posizione</guilabel>"
 #. (itstool) path: listitem/para
 #: C/index.docbook:996
 msgid "The position of the archive in the file system."
-msgstr ""
+msgstr "Posizione dell'archivio nel disco."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1000
 msgid "<guilabel>Modified on</guilabel>"
-msgstr ""
+msgstr "<guilabel>Ultima modifica</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1001
 msgid "The date and time at which the archive was last modified."
-msgstr ""
+msgstr "Data e ora in cui l'archivio è stato modificato l'ultima volta."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1005
 msgid "<guilabel>Archive size</guilabel>"
-msgstr ""
+msgstr "<guilabel>Dimensioni archivio</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1006
 msgid "The size of the archive contents when compressed."
-msgstr ""
+msgstr "Dimensione dell'archivio compresso"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1010
 msgid "<guilabel>Content size</guilabel>"
-msgstr ""
+msgstr "<guilabel>Dimensioni contenuto</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1011
@@ -2006,11 +2244,13 @@ msgid ""
 "The size of the archive contents when uncompressed. This information is also"
 " available in the statusbar."
 msgstr ""
+"Dimensione dell'archivio quando non compresso. L'informazione è disponibile "
+"anche nella barra di stato."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1016
 msgid "<guilabel>Compression ratio</guilabel>"
-msgstr ""
+msgstr "<guilabel>Livello di compressione</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1017
@@ -2019,16 +2259,20 @@ msgid ""
 "the data. For example a compression ratio of 5 means that the compressed "
 "archive is 1/5th the size of the original data."
 msgstr ""
+"Il livello di compressione è un valore utilizzato per descrivere la "
+"riduzione delle dimensioni ottenuta. Ad esempio, un rapporto di compressione"
+" di 5 significa che l'archivio compresso è pari a 1/5 della dimensione dei "
+"dati originali."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1022
 msgid "<guilabel>Number of files</guilabel>"
-msgstr ""
+msgstr "<guilabel>Numero di file</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1023
 msgid "The number of files in the archive."
-msgstr ""
+msgstr "Numero dei file nell'archivio."
 
 #. (itstool) path: section/para
 #: C/index.docbook:987
@@ -2039,21 +2283,26 @@ msgid ""
 "<guilabel>Properties</guilabel> dialog displays the following information "
 "about the archive: <_:variablelist-1/>"
 msgstr ""
+"Per vedere le proprtietà di un archivio, seleziona "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Proprietà</guimenuitem></menuchoice>"
+"  per far appareire la finestra <guilabel>Proprietà</guilabel>. La finestra "
+"<guilabel>Proprietà</guilabel> mostra le seguenti informazioni "
+"sull'archivio: <_:variablelist-1/>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:1032
 msgid "To View the Contents of an Archive"
-msgstr ""
+msgstr "Visualizzare i contenuti di un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1039
 msgid "The name of a file or folder in the archive."
-msgstr ""
+msgstr "Il nome del file o della cartella nell'archivio."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1043
 msgid "<guilabel>Size</guilabel>"
-msgstr ""
+msgstr "<guilabel>Dimensione</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1044
@@ -2063,6 +2312,10 @@ msgid ""
 " to display the size of the compressed file, see <xref linkend=\"engrampa-"
 "extra-info\"/>."
 msgstr ""
+"La dimensione del file estratto dall'archivio. Per le cartelle il campo "
+"<guilabel>Dimensione</guilabel> è vuoto. Per informazioni su come "
+"visualizzare le dimensioni del file compresso, vedi <xref linkend"
+"=\"engrampa-extra-info\"/>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1048
@@ -2075,11 +2328,13 @@ msgid ""
 "The type of the file. For a folder, the value in the "
 "<guilabel>Type</guilabel> field is <literal>Folder</literal>."
 msgstr ""
+"Il tipo di file. Per le cartelle, il valore di <guilabel>Tipo</guilabel> è "
+"definito come <literal>Cartella</literal>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1053
 msgid "<guilabel>Date modified</guilabel>"
-msgstr ""
+msgstr "<guilabel>Data ultima modifica</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1054
@@ -2087,6 +2342,8 @@ msgid ""
 "The date on which the file was last modified. For a folder, the "
 "<guilabel>Date modified</guilabel> field is blank."
 msgstr ""
+"Data in cui l'oggetto è stato modificato l'ultima volta. Per le cartelle la "
+"<guilabel>Data ultima modifica</guilabel> è vuota."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1059
@@ -2097,6 +2354,12 @@ msgid ""
 "For more information about view types see <xref linkend=\"engrampa-view-"
 "type-folder\"/>."
 msgstr ""
+"Percorso del file all'interno dell'archivio. Questa colonna è visibile solo "
+"quando la finestra è in modalità di visualizzazione file, quando è in "
+"visualizzazione cartella la posizione dei file viene visualizzata nella "
+"casella di testo <guilabel>Posizione</guilabel> della barra. Per ulteriori "
+"informazioni sui tipi di visualizzazione, vedi <xref linkend=\"engrampa-"
+"view-type-folder\"/>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1035
@@ -2105,6 +2368,9 @@ msgid ""
 "the main window as a file list with the following columns: "
 "<_:variablelist-1/>"
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> visualizza il "
+"contenuto dell'archivio nella finestra principale come elenco di file, con "
+"le seguenti colonne : <_:variablelist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1064
@@ -2114,6 +2380,10 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Reload</guimenuitem></menuchoice>"
 " to reload the archive contents from disk."
 msgstr ""
+"Se un altro programma ha modificato l'archivio dopo che <application>Gestore"
+" di archivi Engrampa</application> lo ha aperto, seleziona "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Aggiorna</guimenuitem></menuchoice>"
+" per ricaricare il contenuto dal disco."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1066
@@ -2122,6 +2392,9 @@ msgid ""
 "Manager</application> displays the archive contents, see <xref linkend"
 "=\"engrampa-archive-custom\"/>."
 msgstr ""
+"Per informazioni su come personalizzare il modo in cui <application>Gestore "
+"di archivi Engrampa</application> mostra i contenuti dell'archivio, vedi "
+"<xref linkend=\"engrampa-archive-custom\"/>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1068
@@ -2129,11 +2402,14 @@ msgid ""
 "For more advanced tasks, use an application installed on your system. For "
 "more information, see <xref linkend=\"engrampa-view-archive-file\"/>."
 msgstr ""
+"Per le attività più avanzate utilizza un'applicazione installata nel "
+"sistema. Per ulteriori informazioni, vedi <xref linkend=\"engrampa-view-"
+"archive-file\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1073
 msgid "To View a File in an Archive"
-msgstr ""
+msgstr "Visualizzare un file di un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1075
@@ -2143,11 +2419,16 @@ msgid ""
 "<guilabel>Cancel</guilabel> when <application>Archive Manager</application> "
 "asks confirmation to update the file in the archive."
 msgstr ""
+"Per visualizzare un file in un archivio, segui la procedura descritta in "
+"<xref linkend=\"engrampa-modify-archive-file\"/>. Se salvi il file aperto, "
+"fai clic su <guilabel>Annulla</guilabel> quando <application>Gestore di "
+"archivi Engrampa</application> chiede conferma per aggiornare il file "
+"nell'archivio."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1081
 msgid "To Test the Integrity of an Archive"
-msgstr ""
+msgstr "Verificare l'integrità di un archivio"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1086
@@ -2157,6 +2438,10 @@ msgid ""
 "list each file in the archive, and indicates that each file has status "
 "<literal>OK</literal>."
 msgstr ""
+"Se l'archivio non contiene errori, <application>Gestore di archivi "
+"Engrampa</application> apre la finestra <guilabel>Risultato della "
+"verifica</guilabel> in cui sono elencati i file con, a fianco, l'indicazione"
+" <literal>OK</literal>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1090
@@ -2165,6 +2450,10 @@ msgid ""
 "Manager</application> opens the <guilabel>Test Result</guilabel> dialog "
 "displaying the part of the archive contains the error."
 msgstr ""
+"Se l'archivio contiene qualche errore, <application>Gestore di archivi "
+"Engrampa</application> apre la finestra <guilabel>Risultato della "
+"verifica</guilabel> in cui vengono mostrate le parti dell'archivio "
+"contenenti errori."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1083
@@ -2174,6 +2463,10 @@ msgid ""
 "<menuchoice><guimenu>Archive</guimenu><guimenuitem>Test "
 "Integrity</guimenuitem></menuchoice>: <_:itemizedlist-1/>"
 msgstr ""
+"A volte un archivio può essere danneggiato per qualsivoglia motivo, per "
+"verificarne l'integrità seleziona "
+"<menuchoice><guimenu>Archivio</guimenu><guimenuitem>Controlla "
+"integrità</guimenuitem></menuchoice>:<_:itemizedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1095
@@ -2182,6 +2475,9 @@ msgid ""
 "data. For this reason you should test the archive integrity before deleting "
 "the original files."
 msgstr ""
+"Un archivio danneggiato può essere impossibile da estrarre e questo può "
+"portare ad una perdita di dati. Per questo motivo è necessario verificare "
+"l'integrità dell'archivio prima di cancellare i file originali."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1097
@@ -2190,6 +2486,9 @@ msgid ""
 "Manager</application> asks the password of the archive before performing the"
 " test."
 msgstr ""
+"Se l'archivio contiene file crittografati, <application>Gestore di archivi "
+"Engrampa</application> chiede la password dell'archivio prima di eseguire il"
+" test."
 
 #. (itstool) path: note/para
 #: C/index.docbook:1100
@@ -2198,6 +2497,8 @@ msgid ""
 "the list of archive types that can be tested for integrity: 7-Zip, RAR, ZIP,"
 " ACE, ARJ and Zoo."
 msgstr ""
+"Non tutti i tipi di archivio supportano il test di integrità, i tipi di "
+"archivio che possono essere testati sono: 7-Zip, RAR, ZIP, ACE, ARJ e Zoo."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1103 C/index.docbook:1404
@@ -2211,11 +2512,14 @@ msgid ""
 "testing, extract all the files from the archive and check that the operation"
 " is completed successfully."
 msgstr ""
+"Per verificare l'integrità di un archivio che non supporta il test di "
+"integrità, estrai tutti i file dall'archivio e assicurati che l'operazione "
+"sia stata completata con successo."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1112
 msgid "Customizing the Archive Display"
-msgstr ""
+msgstr "Personalizzare la visualizzazione di un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1114
@@ -2223,6 +2527,8 @@ msgid ""
 "You can customize the way that <application>Archive Manager</application> "
 "displays the archive contents, as follows:"
 msgstr ""
+"Puoi personalizzare il modo in cui <application>Gestore di archivi "
+"Engrampa</application> visualizza il contenuto dell'archivio come segue:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1118
@@ -2230,6 +2536,8 @@ msgid ""
 "Switch between folder view and file view. For more information, see <xref "
 "linkend=\"engrampa-view-type\"/>."
 msgstr ""
+"Passa dalla visualizzazione per cartelle a quella per file. Vedi <xref "
+"linkend=\"engrampa-view-type\"/> per ulteriori informazioni."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1122
@@ -2237,6 +2545,8 @@ msgid ""
 "Specify the order in which to display files in the list. For more "
 "information, see <xref linkend=\"engrampa-view-sort\"/>."
 msgstr ""
+"Definisci l'ordine di visualizzazione nella lista. Vedi <xref linkend"
+"=\"engrampa-view-type\"/> per ulteriori informazioni."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1126
@@ -2244,6 +2554,8 @@ msgid ""
 "Display additional details about the contents of the archive. For more "
 "information, see <xref linkend=\"engrampa-extra-info\"/>."
 msgstr ""
+"Mostra informazioni aggiuntive sui contenuti dell'archivio. Vedi <xref "
+"linkend=\"engrampa-view-type\"/> per ulteriori informazioni."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1130
@@ -2251,11 +2563,14 @@ msgid ""
 "<application>Archive Manager</application> updates the display immediately, "
 "when you make any of the above customizations."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> modifica la "
+"visualizzazione appena vengono modificate le opzioni di personalizzazione di"
+" cui sopra."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1133
 msgid "To Set the View Type"
-msgstr ""
+msgstr "Impostare il tipo di visualizzazione"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1135
@@ -2264,11 +2579,14 @@ msgid ""
 " <xref linkend=\"engrampa-view-type-folder\"/> or <xref linkend=\"engrampa-"
 "view-type-file\"/>."
 msgstr ""
+"Se l'archivio contiene delle cartelle, puoi mostrare i contenuti in <xref "
+"linkend=\"engrampa-view-type-folder\"/> o <xref linkend=\"engrampa-view-"
+"type-file\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1138
 msgid "Folder View"
-msgstr ""
+msgstr "Visualizza come cartella"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1140
@@ -2278,6 +2596,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>View as a "
 "Folder</guimenuitem></menuchoice>."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> mostra i contenuti "
+"nella visualizzazione per cartelle per impostazione predefinita. Per "
+"selezionarla manualmene, seleziona "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Vedi come una "
+"cartella</guimenuitem></menuchoice>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1142
@@ -2301,6 +2624,9 @@ msgid ""
 "only in folder view, contains the components described in the following "
 "table."
 msgstr ""
+"La barra della cartella, che <application>Gestore di archivi "
+"Engrampa</application> mostra solo nella visualizzazione come cartella, "
+"contiene gli strumenti descritti sotto."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1153
@@ -2334,12 +2660,16 @@ msgid ""
 "<textobject> <phrase>Shows icon to navigate backwards in location history "
 "list.</phrase> </textobject> </inlinemediaobject>"
 msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata "
+"fileref=\"figures/engrampa_leftarrow.png\" format=\"PNG\"/> </imageobject> "
+"<textobject> <phrase>Mostra l'icona per navigare all'indietro nei percorsi "
+"selezionati.</phrase> </textobject> </inlinemediaobject>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1173
 msgid ""
 "Click on this button to navigate backwards in the location history list."
-msgstr ""
+msgstr "Clicca questo pulsante per tornare indietro al percorso precedente."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -2363,12 +2693,16 @@ msgid ""
 "<textobject> <phrase>Shows icon to navigate forwards in location history "
 "list.</phrase> </textobject> </inlinemediaobject>"
 msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata "
+"fileref=\"figures/engrampa_rightarrow.png\" format=\"PNG\"/> </imageobject> "
+"<textobject> <phrase>Mostra l'icona per navigare in avanti nei percorsi "
+"selezionati.</phrase> </textobject> </inlinemediaobject>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1192
 msgid ""
 "Click on this button to navigate forwards in the location history list."
-msgstr ""
+msgstr "Clicca questo pulsante per andare al percorso successivo."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -2392,11 +2726,17 @@ msgid ""
 "<textobject> <phrase>Shows icon to navigate up one level in folder "
 "tree.</phrase> </textobject> </inlinemediaobject>"
 msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata "
+"fileref=\"figures/engrampa_uparrow.png\" format=\"PNG\"/> </imageobject> "
+"<textobject> <phrase>Mostra l'icona per navigare indietro nell'albero delle "
+"cartelle.</phrase> </textobject> </inlinemediaobject>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1211
 msgid "Click on this button to navigate up one level in the folder tree."
 msgstr ""
+"Clicca su questo pulsante per salire di un livello nell'albero gerarchico "
+"delle cartelle."
 
 #. (itstool) path: imageobject/imagedata
 #. This is a reference to an external file such as an image or video. When
@@ -2420,11 +2760,17 @@ msgid ""
 "<textobject> <phrase>Shows icon to open the top-level folder in the "
 "archive.</phrase> </textobject> </inlinemediaobject>"
 msgstr ""
+"<inlinemediaobject> <imageobject> <imagedata "
+"fileref=\"figures/engrampa_home.png\" format=\"PNG\"/> </imageobject> "
+"<textobject> <phrase>Mostra l'icona per aprire la posizione iniziale "
+"dell'archivio.</phrase> </textobject> </inlinemediaobject>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1230
 msgid "Click on this button to open the top-level folder in the archive."
 msgstr ""
+"Clicca questo pulsante per salire al livello più alto dell'albero gerarchico"
+" delle cartelle."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1242
@@ -2432,6 +2778,8 @@ msgid ""
 "This field shows the full pathname, within the archive, of the current "
 "folder."
 msgstr ""
+"Questo campo mostra il percorso completo all'interno dell'archivio della "
+"cartella attuale."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:1245
@@ -2441,11 +2789,16 @@ msgid ""
 "<keycap>Return</keycap>. <application>Archive Manager</application> displays"
 " the contents of the new location."
 msgstr ""
+"Per passare a un livello diverso nell'albero delle cartelle, inserisci "
+"manualmente la nuova posizione nella casella di testo "
+"<guilabel>Posizione</guilabel> e premi <keycap>Invio</keycap>. "
+"<application>Gestore di archivi Engrampa</application> visualizzerà il "
+"contenuto della nuova posizione."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1254
 msgid "File View"
-msgstr ""
+msgstr "Visualizzazione come elenco file"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1256
@@ -2454,6 +2807,9 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>View All "
 "Files</guimenuitem></menuchoice>."
 msgstr ""
+"Per scegliere questa visualizzazione, seleziona "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Vedi come elenco di "
+"file</guimenuitem></menuchoice>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1258
@@ -2461,11 +2817,14 @@ msgid ""
 "In file view, <application>Archive Manager</application> displays all files "
 "in the archive, including files from subfolders, in a single list."
 msgstr ""
+"Nella vista per file, <application>Gestore di archivi Engrampa</application>"
+" mostra tutti i file dell'archivio, compresi i file contenuti nelle "
+"sottocartelle, come un unico elenco."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1264
 msgid "To Sort the File List"
-msgstr ""
+msgstr "Ordinare l'elenco file"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1266
@@ -2473,17 +2832,22 @@ msgid ""
 "You can sort the file list by name, size, type, modification date, or "
 "location."
 msgstr ""
+"È possibile ordinare l'elenco per nome, dimensione, tipo, data di modifica o"
+" posizione."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1267
 msgid ""
 "To specify a sort order, click on the heading of the corresponding column."
 msgstr ""
+"Per selezionare l'ordinamento, fai clic sull'intestazione della colonna "
+"corrispondente."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1268
 msgid "To reverse the sort order, click on the column heading again."
 msgstr ""
+"Per invertire l'ordine, clicca nuovamente sull'intestazione della colonna."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1270
@@ -2494,6 +2858,12 @@ msgid ""
 "modification date, starting with the earliest. To display the latest files "
 "first, click on the <guilabel>Date modified</guilabel> heading again."
 msgstr ""
+"Ad esempio, per ordinare l'elenco dei file per data di modifica, fare clic "
+"sull'intestazione <guilabel>Data ultima modifica</guilabel>. "
+"<application>Gestore di archivi Engrampa</application> riorganizza l'elenco "
+"dei file per visualizzare i file per data di modifica, a partire dalla più "
+"vecchi. Per visualizzare prima i file più recenti, fai nuovamente clic "
+"sull'intestazione <guilabel>Data ultima modifica</guilabel>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1272
@@ -2503,11 +2873,15 @@ msgid ""
 "Manager</application> sorts by name any files that have the same "
 "modification date."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> esegue sempre un "
+"ordinamento secondario in base al nome del file. Nell'esempio precedente, "
+"<application>Gestore di archivi Engrampa</application> ordina per nome tutti"
+" i file che hanno la stessa data di modifica."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1276
 msgid "To Display Additional Details"
-msgstr ""
+msgstr "Mostrare informazioni aggiuntive"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1281
@@ -2516,6 +2890,9 @@ msgid ""
 "Manager</application> session, the <guilabel>Last Output</guilabel> dialog "
 "displays the results of the last test."
 msgstr ""
+"Se l'archivio è stato verificato nella sessione corrente del "
+"<application>Gestore di archivi Engrampa</application> la voce "
+"<guilabel>Ultimo output</guilabel> mostra i risultati dell'ultimo test."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1285
@@ -2527,6 +2904,13 @@ msgid ""
 "provides the compressed size of each file and the percentage of compression,"
 " and the date and time at which the file was last modified."
 msgstr ""
+"Se invece l'archivio non è stato verificato nella sessione attuale del "
+"<application>Gestore di archivi Engrampa</application>, la voce "
+"<guilabel>Ultimo output</guilabel> visualizza un elenco di tutti i file "
+"presenti nell'archivio, ma non indica lo stato dei file. La finestra "
+"<guilabel>Ultimo output</guilabel> fornisce la dimensione compressa di "
+"ciascun file, la percentuale di compressione e la data e l'ora dell'ultima "
+"modifica."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1278
@@ -2535,11 +2919,14 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Last "
 "Output</guimenuitem></menuchoice>: <_:itemizedlist-1/>"
 msgstr ""
+"Per aprire la finestra <guilabel>Ultimo output</guilabel> seleziona "
+"<menuchoice><guimenu>Visualizza</guimenu><guimenuitem>Ultimo "
+"output</guimenuitem></menuchoice>: <_:itemizedlist-1/>"
 
 #. (itstool) path: info/title
 #: C/index.docbook:1295
 msgid "Using the File Manager to Work with an Archive"
-msgstr ""
+msgstr "Usare il gestore file per operare su un archivio"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1297
@@ -2547,11 +2934,13 @@ msgid ""
 "You can use the file manager to add files to an archive, or to extract files"
 " from an archive."
 msgstr ""
+"È possibile utilizzare il gestore file per aggiungere o estrarre elementi da"
+" un archivio."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1301
 msgid "To Add Files to an Archive by Using the File Manager"
-msgstr ""
+msgstr "Aggiungere elementi dal gestore file"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1305
@@ -2559,11 +2948,13 @@ msgid ""
 "Drag the files into a <application>Archive Manager</application> window from"
 " a file manager window."
 msgstr ""
+"Trascina i file nella finestra del <application>Gestore di archivi "
+"Engrampa</application> dal gestore di file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1307
 msgid "Use the file manager popup menu to add the files to the archive."
-msgstr ""
+msgstr "Utilizza il menu a scomparse per aggiungere file ad un archivio."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1303
@@ -2571,6 +2962,7 @@ msgid ""
 "You can use the file manager to add files to an archive, in the following "
 "ways: <_:itemizedlist-1/>"
 msgstr ""
+"Puoi aggiungere file ad un archivio nei seguenti modi: <_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1311
@@ -2578,11 +2970,13 @@ msgid ""
 "To use the file manager popup menu to add files to an archive, perform the "
 "following steps:"
 msgstr ""
+"Per utilizzare il menu a scomparsa del gestore file per aggiungere elementi "
+"a un archivio, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1313
 msgid "Right-click on the files or folders in a file manager window."
-msgstr ""
+msgstr "Clica destro sui file o sulle cartelle dal gestore file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1315
@@ -2591,6 +2985,9 @@ msgid ""
 " menu to display the <application>Archive Manager</application> "
 "<guilabel>Create Archive</guilabel> dialog."
 msgstr ""
+"Seleziona <guimenuitem>Crea archivio</guimenuitem> dal menu del gestore di "
+"file per far comparire la finestra del <application>Gestore di archivi "
+"Engrampa</application> denominata <guilabel>Crea archivio</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1317
@@ -2598,11 +2995,13 @@ msgid ""
 "Enter the archive name, without the file extension, in the "
 "<guilabel>Archive</guilabel> text box."
 msgstr ""
+"Inserisci il nome dell'archivio, senza estensione, nel campo "
+"<guilabel>Archivio</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1319
 msgid "Choose the archive type from the drop-down list."
-msgstr ""
+msgstr "Seleziona il tipo di archivio dalla lista disponibile."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1321
@@ -2612,6 +3011,10 @@ msgid ""
 " in the list choose <guilabel>Other...</guilabel> to select it with the "
 "<guilabel>Location</guilabel> dialog."
 msgstr ""
+"Imposta il percorso in cui salvare il file di archivio, dal menu "
+"<guilabel>Posizione</guilabel>. Se la posizione non è elencata, seleziona "
+"<guilabel>Altro...</guilabel> per aprire la finestra di selezione della "
+"<guilabel>Posizione</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1326
@@ -2619,6 +3022,8 @@ msgid ""
 "Click <guilabel>Create</guilabel> to add the selected files to the root "
 "folder of the specified archive."
 msgstr ""
+"Premi <guilabel>Crea</guilabel> per aggiungere i file selezionati alla "
+"cartella principale dell'archivio specificato. "
 
 #. (itstool) path: note/para
 #: C/index.docbook:1328
@@ -2627,11 +3032,14 @@ msgid ""
 "<application>Archive Manager</application> as described in <xref linkend"
 "=\"engrampa-to-start\"/>."
 msgstr ""
+"Per selezionare una delle opzioni avanzate, è necessario richiamare il "
+"<application>Gestore di archivi Engrampa</application> come descritto in "
+"<xref linkend=\"engrampa-to-start\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1334
 msgid "To Extract Files From an Archive by Using the File Manager"
-msgstr ""
+msgstr "Estrarre elementi dal gestore file"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1338
@@ -2639,11 +3047,13 @@ msgid ""
 "Drag the files from a <application>Archive Manager</application> window into"
 " a file manager window."
 msgstr ""
+"Trascina i file dalla finestra del <application>Gestore di archivi "
+"Engrampa</application> a quella del gestore file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1340
 msgid "Use the file manager popup menu to extract the files from the archive."
-msgstr ""
+msgstr "Utilizza il menu a scomparsa per estrarre i file da un archivio."
 
 #. (itstool) path: section/para
 #: C/index.docbook:1336
@@ -2651,6 +3061,7 @@ msgid ""
 "You can use the file manager to extract files from an archive, in the "
 "following ways: <_:itemizedlist-1/>"
 msgstr ""
+"Puoi estrarre i file da un archivio nei seguenti modi: <_:orderedlist-1/>"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1344
@@ -2658,11 +3069,13 @@ msgid ""
 "To use the file manager popup menu to extract files from an archive, perform"
 " the following steps:"
 msgstr ""
+"Per utilizzare il menu a scomparsa del gestore file per estrarre elementi da"
+" un archivio, segui questi passaggi:"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1346
 msgid "Right-click on the archive in a file manager window."
-msgstr ""
+msgstr "Fai Clic con il tasto destro sull'archivio dal gestore file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1348
@@ -2670,6 +3083,8 @@ msgid ""
 "Choose <guimenuitem>Extract Here</guimenuitem> to extract all of the archive"
 " contents into the directory where the archive is located."
 msgstr ""
+"Seleziona <guimenuitem>Estrai qui</guimenuitem> per estrarre tutti i "
+"contenuti dell'archivio nella cartella in cui si trova l'archivio. "
 
 #. (itstool) path: note/para
 #: C/index.docbook:1351
@@ -2677,11 +3092,13 @@ msgid ""
 "If the archive is encrypted, <application>Archive Manager</application> will"
 " ask to enter the password before extracting the files."
 msgstr ""
+"Se l'archivio è cifrato, il <application>Gestore di archivi "
+"Engrampa</application> chiderà la password prima di estrarre i file."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1357
 msgid "Create Options"
-msgstr ""
+msgstr "Opzioni di creazione"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1359
@@ -2694,7 +3111,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1364
 msgid "<guilabel>Password</guilabel>"
-msgstr ""
+msgstr "<guilabel>Password</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1366
@@ -2723,11 +3140,15 @@ msgid ""
 "to extract the files from the archive. This option is available only if a "
 "password is specified."
 msgstr ""
+"Selezionando questa opzione verrà richiesta la password anche per "
+"visualizzare l'elenco dei file contenuti nell'archivio, altrimenti verrà "
+"richiesta solo per estrarre i file. Questa opzione è disponibile solo se "
+"viene specificata una password."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1379
 msgid "<guilabel>Split in volumes</guilabel>"
-msgstr ""
+msgstr "<guilabel>Dividi in volumi</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1381
@@ -2735,16 +3156,18 @@ msgid ""
 "Select this option to split the archive in more files of the specified "
 "dimension."
 msgstr ""
+"Seleziona questa opzione per dividere l'archivio in più file della "
+"dimensione specificata."
 
 #. (itstool) path: note/para
 #: C/index.docbook:1383
 msgid "Only 7-Zip and RAR archives support this feature."
-msgstr ""
+msgstr "Solo gli archivi 7-Zip e RAR supportano questa funzione."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1391
 msgid "Add Options"
-msgstr ""
+msgstr "Opzioni di aggiunta"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1393
@@ -2756,7 +3179,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1398
 msgid "<guilabel>Add only if newer</guilabel>"
-msgstr ""
+msgstr "<guilabel>Aggiungi solo se più recente</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1400
@@ -2769,6 +3192,12 @@ msgid ""
 "recent, <application>Archive Manager</application> does not add the "
 "specified file to the archive."
 msgstr ""
+"Seleziona questa opzione per aggiungere il file specificato all'archivio "
+"solo se non è già presente o se la versione nell'archivio è più vecchia. "
+"<application>Gestore di archivi Engrampa</application> utilizza la data di "
+"modifica per determinare quale file è il più recente. Se la versione "
+"presente nell'archivio è più recente, <application>Gestore di archivi "
+"Engrampa</application> non aggiunge il file."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1402
@@ -2776,6 +3205,9 @@ msgid ""
 "If you do not select this option, <application>Archive Manager</application>"
 " adds the file to the archive and overwrites the previous archive contents."
 msgstr ""
+"Se l'opzione non è selezionata, <application>Gestore di archivi "
+"Engrampa</application> aggiunge il file sovrascrivendo la versione presente "
+"nell'archivio."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1409
@@ -2783,6 +3215,8 @@ msgid ""
 "Open the <filename>backup.tar.gz</filename> archive in <application>Archive "
 "Manager</application>."
 msgstr ""
+"Apri l'archivio <filename>backup.tar.gz</filename> nel <application>Gestore "
+"di archivi Engrampa</application>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1414
@@ -2816,6 +3250,12 @@ msgid ""
 " your home folder. To update the archive to contain a current backup of your"
 " home folder, perform the following steps: <_:orderedlist-1/>"
 msgstr ""
+"Se utilizzi <application>Gestore di archivi Engrampa</application> per "
+"creare backup, l'opzione <guilabel>Aggiungi solo se più recente</guilabel> è"
+" molto utile. Supponiamo che l'archivio <filename>backup.tar.gz</filename> "
+"contenga il backup della scorsa settimana della cartella home. Per "
+"aggiornare l'archivio in modo che contenga un backup aggiornato della stessa"
+" cartella segui questi passaggi: "
 
 #. (itstool) path: tip/para
 #: C/index.docbook:1434
@@ -2827,6 +3267,13 @@ msgid ""
 "deleted during the last week. The archive update operation is much faster "
 "than doing a full backup of your home folder."
 msgstr ""
+"<application>Gestore di archivi Engrampa</application> aggiunge "
+"automaticamente all'archivio tutti i file creati nell'ultima settimana e "
+"aggiorna i file modificati nello stesso periodo. Tuttavia, "
+"<application>Gestore di archivi Engrampa</application> non rimuove "
+"dall'archivio i file eliminati durante l'ultima settimana. L'operazione di "
+"aggiornamento dell'archivio è molto più veloce di un backup completo della "
+"cartella principale."
 
 #. (itstool) path: info/title
 #: C/index.docbook:1440
