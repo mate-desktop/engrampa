@@ -30,6 +30,7 @@ AM_CPPFLAGS =						\
 	-DPIXMAPSDIR=\""$(datadir)/pixmaps"\"		\
 	-DGLADEDIR=\""$(gladedir)"\" 			\
 	-DPRIVEXECDIR=\"$(privexecdir)\"		\
+	-DLOCALEDIR=\""$(datadir)/locale"\" 	\
 	-DSHDIR=\"$(shdir)\"				\
 	$(FR_CFLAGS)					\
 	$(JSON_GLIB_CFLAGS)				\

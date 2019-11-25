@@ -135,14 +135,6 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-if test "x${prefix}" = "xNONE"; then
-  AC_DEFINE_UNQUOTED(LOCALEDIR, "${ac_default_prefix}/${DATADIRNAME}/locale", [Locale dir])
-else
-  AC_DEFINE_UNQUOTED(LOCALEDIR, "${prefix}/${DATADIRNAME}/locale", [Locale dir])
-fi
-
-dnl ******************************
-
 dnl ******************************
 
 AC_ARG_ENABLE([magic],
