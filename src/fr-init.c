@@ -36,6 +36,7 @@
 #include "fr-command-iso.h"
 #include "fr-command-jar.h"
 #include "fr-command-lha.h"
+#include "fr-command-nomarch.h"
 #include "fr-command-rar.h"
 #include "fr-command-rpm.h"
 #include "fr-command-tar.h"
@@ -70,6 +71,7 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-7z-compressed-tar",                          ".tar.7z",   N_("Tar compressed with 7z"), 0 },
 	{ "application/x-ace",                                        ".ace",      N_("Ace"), 0 },
 	{ "application/x-alz",                                        ".alz",      N_("ALZip archive"), 0 },
+	{ "application/x-arc",                                        ".arc",	   N_("ARC archive"), 0 },
 	{ "application/x-archive",                                    ".ar",       N_("Ar"), 0 },
 	{ "application/x-arj",                                        ".arj",      N_("Arj"), 0 },
 	{ "application/x-brotli",                                     ".br",       N_("Brotli compressed file"), 0 },
@@ -120,6 +122,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".ace", "application/x-ace" },
 	{ ".alz", "application/x-alz" },
 	{ ".ar", "application/x-archive" },
+	{ ".arc", "application/x-arc" },
 	{ ".arj", "application/x-arj" },
 	{ ".bin", "application/x-stuffit" },
 	{ ".br", "application/x-brotli" },
@@ -370,6 +373,7 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_ACE);
 	register_command (FR_TYPE_COMMAND_ALZ);
 	register_command (FR_TYPE_COMMAND_AR);
+	register_command (FR_TYPE_COMMAND_NOMARCH);
 	register_command (FR_TYPE_COMMAND_ARJ);
 	register_command (FR_TYPE_COMMAND_CPIO);
 	register_command (FR_TYPE_COMMAND_ISO);
