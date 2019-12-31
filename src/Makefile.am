@@ -103,6 +103,8 @@ COMMON_SOURCES = 			\
 	fr-command-jar.c		\
 	fr-command-lha.c		\
 	fr-command-lha.h		\
+	fr-command-nomarch.c		\
+	fr-command-nomarch.h		\
 	fr-command-rar.c		\
 	fr-command-rar.h		\
 	fr-command-rpm.c		\

@@ -149,6 +149,7 @@ static struct {
 		{ "application/x-7z-compressed-tar", TRUE },
 		{ "application/x-ace", TRUE },
 		{ "application/x-alz", TRUE },
+		{ "application/x-arc", TRUE },
 		{ "application/x-archive", TRUE },
 		{ "application/x-arj", TRUE },
 		{ "application/x-brotli", TRUE },
