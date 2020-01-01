@@ -182,7 +182,6 @@ AC_CONFIG_FILES([Makefile
 		 data/icons/Makefile
 		 copy-n-paste/Makefile
 		 src/Makefile
-		 src/commands/Makefile
 		 src/sh/Makefile
 		 src/ui/Makefile
 		 caja/Makefile
