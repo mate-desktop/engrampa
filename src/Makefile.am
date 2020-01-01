@@ -1,6 +1,6 @@
 NULL =
 
-SUBDIRS = commands sh ui
+SUBDIRS = sh ui
 
 bin_PROGRAMS = engrampa
 libexec_PROGRAMS = engrampa-server
@@ -8,11 +8,9 @@ noinst_PROGRAMS = test-server
 
 if RUN_IN_PLACE
 privdatadir = $(top_srcdir)/data/
-privexecdir = $(abs_top_builddir)/src/commands/
 shdir = $(top_srcdir)/src/sh/
 else
 privdatadir = $(datadir)/engrampa/
-privexecdir = $(libexecdir)/engrampa/
 shdir = $(libexecdir)/engrampa/
 endif
 
@@ -29,7 +27,6 @@ AM_CPPFLAGS =						\
         -DPKG_DATA_DIR=\"$(pkgdatadir)\"                \
 	-DPIXMAPSDIR=\""$(datadir)/pixmaps"\"		\
 	-DGLADEDIR=\""$(gladedir)"\" 			\
-	-DPRIVEXECDIR=\"$(privexecdir)\"		\
 	-DLOCALEDIR=\""$(datadir)/locale"\" 	\
 	-DSHDIR=\"$(shdir)\"				\
 	$(FR_CFLAGS)					\
