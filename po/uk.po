@@ -45,7 +45,7 @@ msgstr "Запускаю '%s'"
 #: ../copy-n-paste/eggdesktopfile.c:1100
 #, c-format
 msgid "Application does not accept documents on command line"
-msgstr "Проґрама не може приймати документи з командного рядка"
+msgstr "Програма не може приймати документи з командного рядка"
 
 #: ../copy-n-paste/eggdesktopfile.c:1168
 #, c-format
@@ -92,7 +92,7 @@ msgstr "Показати параметри взаємодії з керівни
 
 #: ../data/engrampa.appdata.xml.in.h:1
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr "Керівник архівів для стільничного середовища МАТЕ  "
+msgstr "Упорядник архівів для стільничного середовища МАТЕ  "
 
 #: ../data/engrampa.appdata.xml.in.h:2
 msgid ""
@@ -124,16 +124,16 @@ msgstr ""
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
-msgstr "Керівник архівів Engrampa "
+msgstr "Упорядник архівів Engrampa "
 
 #: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2004
 #: ../src/fr-window.c:5573
 msgid "Archive Manager"
-msgstr "Керівник архівів"
+msgstr "Упорядник архівів"
 
 #: ../data/engrampa.desktop.in.in.h:3
 msgid "Create and modify an archive"
-msgstr "Проґрама створення та зміни архівів"
+msgstr "Програма створення та зміни архівів"
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:1
 msgid "How to sort files"
@@ -212,8 +212,8 @@ msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
-"Якщо TRUE буде відображати піктограми в залежности від типу файлу "
-"(повільніше) , у иньшому випадку буде завжди використовувати одну й ту саму "
+"Якщо TRUE буде відображати піктограми в залежності від типу файлу "
+"(повільніше) , у иншому випадку буде завжди використовувати одну й ту саму "
 "піктограму для усіх файлів (швидше)."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:17
@@ -294,7 +294,7 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
-msgstr ""
+msgstr "Додає підтримку 'unar' для архівів .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "It enables the ability to support 'unar' over .zip archives."
@@ -402,7 +402,7 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Engrampa ― вільна проґрама. Ви можете розповсюджувати або змінювати її за "
+"Engrampa ― вільна програма. Ви можете розповсюджувати або змінювати її за "
 "умовами GNU General Public License, що видана Free Software Foundation; або "
 "версії 2 ліцензії, або (на ваш розсуд) будь-якої пізнішої версії."
 
@@ -413,7 +413,7 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Engrampa розповсюджується зі сподіванням, що проґрама буде корисною, але БЕЗ"
+"Engrampa розповсюджується зі сподіванням, що програма буде корисною, але БЕЗ"
 " БУДЬ-ЯКИХ ЗАПОРУК; не гарантується навіть ПРИДАТНІСТЬ чи ВІДПОВІДНІСТЬ "
 "БУДЬ-ЯКИМ ВИМОГАМ. Для отримання додаткової інформації ознайомтеся з GNU "
 "General Public License."
@@ -433,10 +433,12 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Авторське право © 2001–2010 Фундація вільного програмного забезпечення, Inc.\n"
+"Авторське право © 2012–2019 Розробники MATE"
 
 #: ../src/actions.c:902
 msgid "An archive manager for MATE."
-msgstr "Керівник архівів для середовища MATE."
+msgstr "Упорядник архівів для середовища MATE."
 
 #: ../src/actions.c:905
 msgid "translator-credits"
@@ -614,7 +616,7 @@ msgstr "Відтворювати стру_ктуру каталогів"
 
 #: ../src/dlg-extract.c:394
 msgid "Over_write existing files"
-msgstr "Пере_записувати існуючі файли"
+msgstr "Пере_записувати наявні файли"
 
 #: ../src/dlg-extract.c:398
 msgid "Do not e_xtract older files"
@@ -632,7 +634,7 @@ msgstr "Зберегти"
 
 #: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
 msgid "There was an internal error trying to search for applications:"
-msgstr "Внутрішня помилка при спробі запуску проґрами:"
+msgstr "Внутрішня помилка при спробі запуску програми:"
 
 #: ../src/dlg-package-installer.c:290
 #, c-format
@@ -664,7 +666,7 @@ msgstr "Назва:"
 #: ../src/dlg-prop.c:126
 #, c-format
 msgid "%s Properties"
-msgstr "Властивости %s"
+msgstr "Властивості %s"
 
 #: ../src/dlg-prop.c:135
 msgid "Last modified:"
@@ -701,9 +703,17 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"Файл було змінено за допомогою зовнішньої програми. Якщо не оновити файл в "
+"архіві, усі ваші зміни будуть втрачені."
 msgstr[1] ""
+"%d Файли було змінено за допомогою зовнішньої програми. Якщо не оновити "
+"файли в архіві, усі ваші зміни будуть втрачені."
 msgstr[2] ""
+"%d Файлів було змінено за допомогою зовнішньої програми. Якщо не оновити "
+"файли в архіві, усі ваші зміни будуть втрачені."
 msgstr[3] ""
+"%d Файлів було змінено за допомогою зовнішньої програми. Якщо не оновити "
+"файли в архіві, усі ваші зміни будуть втрачені."
 
 #: ../src/dlg-update.c:193
 #, c-format
@@ -810,7 +820,7 @@ msgstr "7-Zip (.7z)"
 
 #: ../src/fr-init.c:62
 msgid "Tar compressed with 7z (.tar.7z)"
-msgstr "Tar, стиснений проґрамою 7z (.tar.7z)"
+msgstr "Tar, стиснений програмою 7z (.tar.7z)"
 
 #: ../src/fr-init.c:63
 msgid "Ace (.ace)"
@@ -830,19 +840,19 @@ msgstr "Arj (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "brotli (.br)"
-msgstr ""
+msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:69
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
+msgstr "Tar стиснений програмою brotli (.tar.br)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Tar, стиснений проґрамою bzip2 (.tar.bz2)"
+msgstr "Tar, стиснений програмою bzip2 (.tar.bz2)"
 
 #: ../src/fr-init.c:73
 msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Tar, стиснений проґрамою bzip (.tar.bz)"
+msgstr "Tar, стиснений програмою bzip (.tar.bz)"
 
 #: ../src/fr-init.c:74
 msgid "Cabinet (.cab)"
@@ -882,7 +892,7 @@ msgstr "Книга коміксів у архіві Zip (.cbz)"
 
 #: ../src/fr-init.c:85
 msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Tar, стиснений проґрамою gzip (.tar.gz)"
+msgstr "Tar, стиснений програмою gzip (.tar.gz)"
 
 #: ../src/fr-init.c:88
 msgid "Ear (.ear)"
@@ -890,7 +900,7 @@ msgstr "Ear (.ear)"
 
 #: ../src/fr-init.c:89
 msgid "Self-extracting zip (.exe)"
-msgstr "Само-розкривний zip (.exe)"
+msgstr "Саморозкривний zip (.exe)"
 
 #: ../src/fr-init.c:91
 msgid "Jar (.jar)"
@@ -906,19 +916,19 @@ msgstr "Lrzip (.lrz)"
 
 #: ../src/fr-init.c:94
 msgid "Tar compressed with lrzip (.tar.lrz)"
-msgstr "Tar, стиснений проґрамою lrzip (.tar.lrz)"
+msgstr "Tar, стиснений програмою lrzip (.tar.lrz)"
 
 #: ../src/fr-init.c:96
 msgid "Tar compressed with lzip (.tar.lz)"
-msgstr "Tar, стиснений проґрамою lzip (.tar.lz)"
+msgstr "Tar, стиснений програмою lzip (.tar.lz)"
 
 #: ../src/fr-init.c:98
 msgid "Tar compressed with lzma (.tar.lzma)"
-msgstr "Tar, стиснений проґрамою lzma (.tar.lzma)"
+msgstr "Tar, стиснений програмою lzma (.tar.lzma)"
 
 #: ../src/fr-init.c:100
 msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Tar, стиснений проґрамою lzop (.tar.lzo)"
+msgstr "Tar, стиснений програмою lzop (.tar.lzo)"
 
 #: ../src/fr-init.c:101
 msgid "Windows Imaging Format (.wim)"
@@ -934,7 +944,7 @@ msgstr "Tar, не стиснений (.tar)"
 
 #: ../src/fr-init.c:106
 msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Tar, стиснений проґрамою compress (.tar.Z)"
+msgstr "Tar, стиснений програмою compress (.tar.Z)"
 
 #: ../src/fr-init.c:108
 msgid "War (.war)"
@@ -946,7 +956,7 @@ msgstr "Xz (.xz)"
 
 #: ../src/fr-init.c:110
 msgid "Tar compressed with xz (.tar.xz)"
-msgstr "Tar, стиснений проґрамою xz (.tar.xz)"
+msgstr "Tar, стиснений програмою xz (.tar.xz)"
 
 #: ../src/fr-init.c:111
 msgid "Zoo (.zoo)"
@@ -981,10 +991,10 @@ msgstr[3] "%d об'єктів (%s)"
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%dобрано об'єкт  (%s)"
+msgstr[1] "%d обрано об'єкти (%s)"
+msgstr[2] "%dобрано об'єктів  (%s)"
+msgstr[3] "%d обрано об'єктів (%s)"
 
 #: ../src/fr-window.c:1615
 msgid "Folder"
@@ -1001,7 +1011,7 @@ msgstr "Не вдається показати теку: \"%s\""
 
 #: ../src/fr-window.c:2305
 msgid "Process paused"
-msgstr ""
+msgstr "Процес призупинено"
 
 #: ../src/fr-window.c:2307
 msgid "_Resume"
@@ -1014,7 +1024,7 @@ msgstr "Будь ласка, зачекайте..."
 #. add start button default suspend
 #: ../src/fr-window.c:2317 ../src/fr-window.c:2608
 msgid "_Pause"
-msgstr ""
+msgstr "_Павза"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2393 ../src/fr-window.c:2431
@@ -1106,10 +1116,10 @@ msgstr "_Скасувати"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d залишився файл"
+msgstr[1] "%d залишилося файли"
+msgstr[2] "%d залишилося файлів"
+msgstr[3] "%d залишилося файлів"
 
 #: ../src/fr-window.c:2835
 msgid "Extraction completed successfully"
@@ -1121,7 +1131,7 @@ msgstr "Архів успішно створено"
 
 #: ../src/fr-window.c:2987 ../src/fr-window.c:3122
 msgid "Command exited abnormally."
-msgstr "Робота проґрами завершилася неналежно."
+msgstr "Робота програми завершилася неналежно."
 
 #: ../src/fr-window.c:3080
 msgid "An error occurred while extracting files."
@@ -1308,7 +1318,7 @@ msgstr ""
 
 #: ../src/fr-window.c:7847
 msgid "Rename"
-msgstr "Змінити назву"
+msgstr "Перейменувати"
 
 #: ../src/fr-window.c:7848
 msgid "_New folder name:"
@@ -1391,7 +1401,7 @@ msgstr "Розпакувати файли із запитом назви тек�
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
-msgstr "Розпакувати вміст архівів до вказаної теки і вийти з проґрами."
+msgstr "Розпакувати вміст архівів до вказаної теки і вийти з програми."
 
 #: ../src/main.c:71
 msgid "Default folder to use for the '--add' and '--extract' commands"
@@ -1419,7 +1429,7 @@ msgstr "_Допомога"
 
 #: ../src/ui/app-menu.ui.h:2
 msgid "_About Archive Manager"
-msgstr "_Про Керівник Архівів"
+msgstr "_Про Упорядник Архівів"
 
 #: ../src/ui/batch-add-files.ui.h:2
 msgid "_Filename:"
@@ -1483,7 +1493,7 @@ msgstr "_Про програму"
 
 #: ../src/ui.h:40
 msgid "Information about the program"
-msgstr "Відомости про проґраму"
+msgstr "Відомості про програму"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
@@ -1612,7 +1622,7 @@ msgstr "_Відкрити за допомогою…"
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
-msgstr "Відкрити виділені файли за допомогою відповідної проґрами"
+msgstr "Відкрити виділені файли за допомогою відповідної програми"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"

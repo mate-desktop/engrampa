@@ -15,6 +15,7 @@
 # theirix <theirix@gmail.com>, 2019
 # Alex Putz, 2019
 # Alexei Sorokin <sor.alexei@meowr.ru>, 2019
+# Александр Кураченко <alexander@basealt.ru>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-20 19:54+0100\n"
 "PO-Revision-Date: 2019-03-11 14:27+0000\n"
-"Last-Translator: Alexei Sorokin <sor.alexei@meowr.ru>, 2019\n"
+"Last-Translator: Александр Кураченко <alexander@basealt.ru>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,6 +126,30 @@ msgid ""
 "Roller and part of the MATE Desktop Environment. If you would like to know "
 "more about MATE and Engrampa, please visit the project's home page. </p>"
 msgstr ""
+"<p> Engrampa — это менеджер архивов среды MATE. Он позволяет создавать и "
+"изменять архивы, просматривать содержимое архива и файлы внутри него, "
+"извлекать файлы из архива. </p> <p> Engrampa — это лишь фронтенд "
+"(графический интерфейс) к таким приложениям для архивирования, как tar и "
+"zip. Поддерживаемые типы файлов: </p> <ul> <li>Сжатый файл 7-Zip (.7z)</li> "
+"<li>Сжатый файл WinAce (.ace)</li> <li>Сжатый файл ALZip (.alz)</li> "
+"<li>Малый индексированный архив AIX (.ar)</li> <li>Сжатый архив ARJ "
+"(.arj)</li> <li>Файл Cabinet (.cab)</li> <li>Архив UNIX CPIO (.cpio)</li> "
+"<li>Пакет Debian Linux (.deb) [Режим только для чтения]</li> <li>Образ диска"
+" CD ISO-9660 (.iso) [Режим только для чтения]</li> <li>Архив Java "
+"(.jar)</li> <li>Архив Java Enterprise (.ear)</li> <li>Сетевой архив Java "
+"(.war)</li> <li>Архив LHA (.lzh, .lha)</li> <li>Сжатый архив WinRAR "
+"(.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>Пакет RPM для Linux "
+"(.rpm) [Режим только для чтения]</li> <li>Файл Tape Archive несжатый (.tar) "
+"или сжатый с помощью: gzip (.tar.gz, .tgz), brotli (.tar.br), bzip (.tar.bz,"
+" .tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, "
+".tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz "
+"(.tar.xz) </li> <li>Архивы Stuffit (.bin, .sit)</li> <li>Архив ZIP "
+"(.zip)</li> <li>Comic Book в архиве ZIP (.cbz)</li> <li>Сжатый архивный файл"
+" ZOO (.zoo)</li> <li>Одиночные файлы, сжатые с gzip, brotli (.br), bzip, "
+"bzip2 (.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), "
+"rzip(.rz), xz (.xz).</li> </ul> <p> Engrampa — форк File Roller и часть "
+"рабочей среды MATE. Для получения дополнительной информации о MATE и "
+"Engrampa посетите домашнюю страницу проекта. </p>"
 
 #: ../data/engrampa.desktop.in.in.h:1
 msgid "Engrampa Archive Manager"
@@ -298,11 +323,11 @@ msgstr ""
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
-msgstr ""
+msgstr "Добавляет поддержку unar для архивов .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr ""
+msgstr "Включает возможность поддержки unar для архивов .zip."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Overwrite existing files"
@@ -438,6 +463,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2019 Разработчики MATE"
 
 #: ../src/actions.c:902
 msgid "An archive manager for MATE."
@@ -735,9 +762,17 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"Этот файл был изменён внешним приложением. Если не обновить этот файл в "
+"архиве, все изменения будут потеряны."
 msgstr[1] ""
+"%d файла изменены внешним приложением. Если не обновить эти файлы в архиве, "
+"все изменения будут потеряны."
 msgstr[2] ""
+"%d файлов изменены внешним приложением. Если не обновить эти файлы в архиве,"
+" все изменения будут потеряны."
 msgstr[3] ""
+"%d файла были изменены внешним приложением. Если не обновить эти файлы в "
+"архиве, все изменения будут потеряны."
 
 #: ../src/dlg-update.c:193
 #, c-format
@@ -865,11 +900,11 @@ msgstr "Arj (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "brotli (.br)"
-msgstr ""
+msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:69
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
+msgstr "Tar, сжатый с помощью brotli (.tar.br)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with bzip2 (.tar.bz2)"
@@ -1007,19 +1042,19 @@ msgstr "_Распаковать"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d объект (%s)"
+msgstr[1] "%d объекта (%s)"
+msgstr[2] "%d объектов (%s)"
+msgstr[3] "%d объекта (%s)"
 
 #: ../src/fr-window.c:1545
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d объект выбран (%s)"
+msgstr[1] "%d объекта выбрано (%s)"
+msgstr[2] "%d объектов выбрано (%s)"
+msgstr[3] "%d объекта выбрано (%s)"
 
 #: ../src/fr-window.c:1615
 msgid "Folder"
@@ -1036,11 +1071,11 @@ msgstr "Не удалось показать папку «%s»"
 
 #: ../src/fr-window.c:2305
 msgid "Process paused"
-msgstr ""
+msgstr "Процесс приостановлен"
 
 #: ../src/fr-window.c:2307
 msgid "_Resume"
-msgstr ""
+msgstr "_Возобновить"
 
 #: ../src/fr-window.c:2315 ../src/fr-window.c:2918
 msgid "Please wait…"
@@ -1049,7 +1084,7 @@ msgstr "Подождите…"
 #. add start button default suspend
 #: ../src/fr-window.c:2317 ../src/fr-window.c:2608
 msgid "_Pause"
-msgstr ""
+msgstr "_Приостановить"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2393 ../src/fr-window.c:2431
@@ -1141,10 +1176,10 @@ msgstr "О_тмена"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d файл остался"
+msgstr[1] "%d файла осталось"
+msgstr[2] "%d файлов осталось"
+msgstr[3] "%d файла осталось"
 
 #: ../src/fr-window.c:2835
 msgid "Extraction completed successfully"

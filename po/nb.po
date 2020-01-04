@@ -7,6 +7,8 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Kenneth Jenssen <kennethjenssen@yahoo.com>, 2019
 # Allan Nordhøy <epost@anotheragency.no>, 2019
+# Kim Malmo <berencamlost@msn.com>, 2019
+# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-20 19:54+0100\n"
 "PO-Revision-Date: 2019-03-11 14:27+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>, 2019\n"
+"Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -284,16 +286,16 @@ msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
-"Hvorvbidt arkivhodet skal krypteres. Hvis hodet er kryptert vil passord også"
-" kreves for å liste opp arkivinnholdet."
+"Hvorvidt arkivhodet skal krypteres. Hvis hodet er kryptert vil passord også "
+"kreves for å liste opp arkivinnholdet."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:33
 msgid "Adds 'unar' support over .zip archives."
-msgstr ""
+msgstr "Legger til «unar»-støtte over .zip-arkiver."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:34
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr ""
+msgstr "Dette slår på «unar»-støtte over .zip-arkiver."
 
 #: ../data/org.mate.engrampa.gschema.xml.in.h:35
 msgid "Overwrite existing files"
@@ -428,6 +430,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2019 The MATE developers"
 msgstr ""
+"Opphavsrett © 2001–2010 Free Software Foundation, Inc.\n"
+"Opphavsrett © 2012–2019 The MATE utviklerne"
 
 #: ../src/actions.c:902
 msgid "An archive manager for MATE."
@@ -703,7 +707,11 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"Filen er endret med et eksternt program. Hvis du ikke oppdaterer filen i "
+"arkivet vil alle endringene gå tapt."
 msgstr[1] ""
+"%d filer er endret med et eksternt program. Hvis du ikke oppdaterer filene i"
+" arkivet vil alle endringene gå tapt."
 
 #: ../src/dlg-update.c:193
 #, c-format
@@ -819,7 +827,7 @@ msgstr "Ace (.ace)"
 
 #: ../src/fr-init.c:65
 msgid "Ar (.a)"
-msgstr ""
+msgstr "Ar (.a)"
 
 #: ../src/fr-init.c:66
 msgid "Ar (.ar)"
@@ -831,11 +839,11 @@ msgstr "Arj (.arj)"
 
 #: ../src/fr-init.c:68
 msgid "brotli (.br)"
-msgstr ""
+msgstr "brotli (.br)"
 
 #: ../src/fr-init.c:69
 msgid "Tar compressed with brotli (.tar.br)"
-msgstr ""
+msgstr "Tar komprimert med brotli (.tar.br)"
 
 #: ../src/fr-init.c:71
 msgid "Tar compressed with bzip2 (.tar.bz2)"
@@ -851,27 +859,27 @@ msgstr "Kabinett (.cab)"
 
 #: ../src/fr-init.c:75
 msgid "OpenDocument Presentation"
-msgstr ""
+msgstr "OpenDocument-presentasjon"
 
 #: ../src/fr-init.c:76
 msgid "OpenDocument Spreadsheet"
-msgstr ""
+msgstr "OpenDocument-regneark"
 
 #: ../src/fr-init.c:77
 msgid "OpenDocument Text"
-msgstr ""
+msgstr "OpenDocument-tekst"
 
 #: ../src/fr-init.c:78
 msgid "OpenDocument Presentation Template"
-msgstr ""
+msgstr "OpenDocument-presentasjonsmal"
 
 #: ../src/fr-init.c:79
 msgid "OpenDocument Spreadsheet Template"
-msgstr ""
+msgstr "OpenDocument-regnearkmal"
 
 #: ../src/fr-init.c:80
 msgid "OpenDocument Text Template"
-msgstr ""
+msgstr "OpenDocument-tekstmal"
 
 #: ../src/fr-init.c:81
 msgid "Rar Archived Comic Book (.cbr)"
@@ -973,15 +981,15 @@ msgstr "_Pakk ut"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d objekt (%s)"
+msgstr[1] "%d objekter (%s)"
 
 #: ../src/fr-window.c:1545
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d objekt valgt (%s)"
+msgstr[1] "%d objekter valgt (%s)"
 
 #: ../src/fr-window.c:1615
 msgid "Folder"
@@ -998,50 +1006,50 @@ msgstr "Kunne ikke vise mappe «%s»"
 
 #: ../src/fr-window.c:2305
 msgid "Process paused"
-msgstr ""
+msgstr "Prosessen er pauset"
 
 #: ../src/fr-window.c:2307
 msgid "_Resume"
-msgstr ""
+msgstr "Fo_rtsett"
 
 #: ../src/fr-window.c:2315 ../src/fr-window.c:2918
 msgid "Please wait…"
-msgstr "Vent…"
+msgstr "Vent …"
 
 #. add start button default suspend
 #: ../src/fr-window.c:2317 ../src/fr-window.c:2608
 msgid "_Pause"
-msgstr ""
+msgstr "_Pause"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2393 ../src/fr-window.c:2431
 #, c-format
 msgid "Creating \"%s\""
-msgstr "Oppretter \"%s\""
+msgstr "Oppretter «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2397
 #, c-format
 msgid "Loading \"%s\""
-msgstr "Laster \"%s\""
+msgstr "Laster «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2401
 #, c-format
 msgid "Reading \"%s\""
-msgstr "Leser \"%s\""
+msgstr "Leser «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2405
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr "Sletter filer fra \"%s\""
+msgstr "Sletter filer fra «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2409
 #, c-format
 msgid "Testing \"%s\""
-msgstr "Tester \"%s\""
+msgstr "Tester «%s»"
 
 #: ../src/fr-window.c:2412
 msgid "Getting the file list"
@@ -1051,19 +1059,19 @@ msgstr "Henter fillisten"
 #: ../src/fr-window.c:2416
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr "Kopierer filene som skal legges til \"%s\""
+msgstr "Kopierer filene som skal legges til «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2420
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr "Legger til filer til \"%s\""
+msgstr "Legger til filer til «%s»"
 
 #. Translators: %s is a filename
 #: ../src/fr-window.c:2424
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr "Pakker ut filer fra \"%s\""
+msgstr "Pakker ut filer fra «%s»"
 
 #: ../src/fr-window.c:2427
 msgid "Copying the extracted files to the destination"
@@ -1073,7 +1081,7 @@ msgstr "Kopier de utpakkede filene til målet"
 #: ../src/fr-window.c:2435
 #, c-format
 msgid "Saving \"%s\""
-msgstr "Lagrer \"%s\""
+msgstr "Lagrer «%s»"
 
 #: ../src/fr-window.c:2601 ../src/ui/app-menu.ui.h:3
 msgid "_Quit"
@@ -1103,8 +1111,8 @@ msgstr "_Avbryt"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d fil gjenstår"
+msgstr[1] "%d filer gjenstår"
 
 #: ../src/fr-window.c:2835
 msgid "Extraction completed successfully"
@@ -1239,7 +1247,7 @@ msgstr "Kunne ikke lagre arkivet «%s»"
 #: ../src/fr-window.c:6875
 #, c-format
 msgid "Replace file \"%s\"?"
-msgstr "Erstatt filen '%s'?"
+msgstr "Erstatt filen «%s»?"
 
 #: ../src/fr-window.c:6878
 #, c-format
@@ -1484,7 +1492,7 @@ msgstr "Informasjon om programet"
 
 #: ../src/ui.h:43
 msgid "_Add Files…"
-msgstr "_Legg til filter…"
+msgstr "_Legg til filer …"
 
 #: ../src/ui.h:44 ../src/ui.h:48
 msgid "Add files to the archive"
@@ -1492,7 +1500,7 @@ msgstr "Legg til filer til arkivet"
 
 #: ../src/ui.h:51
 msgid "Add a _Folder…"
-msgstr "Legg til en _mappe…"
+msgstr "Legg til en _mappe …"
 
 #: ../src/ui.h:52 ../src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1512,7 +1520,7 @@ msgstr "Innhold"
 
 #: ../src/ui.h:64
 msgid "Display the Engrampa Manual"
-msgstr "Vis håndboken for Filknuser"
+msgstr "Vis håndboken for Engrampa"
 
 #: ../src/ui.h:68 ../src/ui.h:89
 msgid "_Copy"
@@ -1540,7 +1548,7 @@ msgstr "Lim inn fra utklippstavlen"
 
 #: ../src/ui.h:80 ../src/ui.h:101
 msgid "_Rename…"
-msgstr "_Gi nytt navn…"
+msgstr "_Gi nytt navn …"
 
 #: ../src/ui.h:81 ../src/ui.h:102
 msgid "Rename the selection"
@@ -1564,7 +1572,7 @@ msgstr "Velg bort alle filer"
 
 #: ../src/ui.h:114 ../src/ui.h:118
 msgid "_Extract…"
-msgstr "_Pakk ut…"
+msgstr "_Pakk ut …"
 
 #: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
 msgid "Extract files from the archive"
@@ -1572,7 +1580,7 @@ msgstr "Pakk ut filer fra arkivet"
 
 #: ../src/ui.h:126
 msgid "Find…"
-msgstr "Finn…"
+msgstr "Finn …"
 
 #: ../src/ui.h:131
 msgid "_Last Output"
@@ -1584,7 +1592,7 @@ msgstr "Vis utdata fra sist kjørte kommando"
 
 #: ../src/ui.h:135
 msgid "New…"
-msgstr "Ny…"
+msgstr "Ny …"
 
 #: ../src/ui.h:136
 msgid "Create a new archive"
@@ -1592,7 +1600,7 @@ msgstr "Lag et nytt arkiv"
 
 #: ../src/ui.h:139
 msgid "Open…"
-msgstr "Åpne…"
+msgstr "Åpne …"
 
 #: ../src/ui.h:140 ../src/ui.h:144
 msgid "Open archive"
@@ -1605,7 +1613,7 @@ msgstr "_Åpne"
 
 #: ../src/ui.h:147
 msgid "_Open With…"
-msgstr "_Åpne med…"
+msgstr "_Åpne med …"
 
 #: ../src/ui.h:148
 msgid "Open selected files with an application"
@@ -1613,7 +1621,7 @@ msgstr "Åpne valgte filer i et program"
 
 #: ../src/ui.h:151
 msgid "Pass_word…"
-msgstr "Adgangs_kode…"
+msgstr "Adgangs_kode …"
 
 #: ../src/ui.h:152
 msgid "Specify a password for this archive"
@@ -1637,7 +1645,7 @@ msgstr "Gjenles dette arkivet"
 
 #: ../src/ui.h:163
 msgid "Save As…"
-msgstr "Lagre som…"
+msgstr "Lagre som …"
 
 #: ../src/ui.h:164
 msgid "Save the current archive with a different name"
@@ -1657,7 +1665,7 @@ msgstr "_Stopp"
 
 #: ../src/ui.h:172
 msgid "Stop current operation"
-msgstr "Stop denne handlingen"
+msgstr "Stopp denne handlingen"
 
 #: ../src/ui.h:175
 msgid "_Test Integrity"

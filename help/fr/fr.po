@@ -11,13 +11,14 @@
 # Charles Monzat <c.monzat@laposte.net>, 2019
 # David D, 2019
 # Stéphane PETRUS <stephane.petrus@posteo.net>, 2019
+# Sébastien RADIGOIS <seb@alnk.net>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
-"POT-Creation-Date: 2019-03-10 00:00+0100\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-09-02 21:36+0200\n"
 "PO-Revision-Date: 2019-03-11 14:30+0000\n"
-"Last-Translator: Stéphane PETRUS <stephane.petrus@posteo.net>, 2019\n"
+"Last-Translator: Sébastien RADIGOIS <seb@alnk.net>, 2019\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -291,6 +292,11 @@ msgid ""
 "as a container for other files. An archive can contain many files, folders, "
 "and subfolders, usually in compressed form."
 msgstr ""
+"Vous pouvez utiliser l'application <application>Gestionnaire "
+"d'Archives</application> pour créer, examiner, modifier, ou décompresser une"
+" archive. Une archive est un fichier qui se comporte comme un conteneur pour"
+" d'autres fichiers. Une archive peut contenir beaucoup d'autres fichiers, "
+"dossiers, et sous-dossiers, le plus souvent sous une forme compressée."
 
 #. (itstool) path: section/para
 #: C/index.docbook:244
@@ -300,6 +306,10 @@ msgid ""
 "<command>tar</command>, <command>gzip</command>, and "
 "<command>bzip2</command> for archive operations."
 msgstr ""
+"Le <application>Gestionnaire d'Archives</application> fournit simplement une"
+" interface graphique, qui se sert d'utilitaires en ligne de commande comme "
+"<command>tar</command>, <command>gzip</command>, et <command>bzip2</command>"
+" pour les opérations sur les archives."
 
 #. (itstool) path: section/para
 #: C/index.docbook:247
@@ -308,56 +318,59 @@ msgid ""
 "<application>Archive Manager</application> supports the archive formats "
 "listed in the following table."
 msgstr ""
+"Si vous avez les utilitaires en ligne de commande nécessaires installés sur "
+"votre système, le <application>Gestionnaire d'Archives</application> "
+"supportera tous les formats d'archives listés dans le tableau suivant."
 
 #. (itstool) path: entry/para
 #: C/index.docbook:256
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:258
 msgid "Filename Extension"
-msgstr ""
+msgstr "Extension de Fichier"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:263
 msgid "7-zip archive"
-msgstr ""
+msgstr "Archive 7-zip"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:264
 msgid "<filename>.7z</filename>"
-msgstr ""
+msgstr "<filename>.7z</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:267
 msgid "ACE archive"
-msgstr ""
+msgstr "Archive ACE"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:268
 msgid "<filename>.ace</filename>"
-msgstr ""
+msgstr "<filename>.ace</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:271
 msgid "Alzip archive"
-msgstr ""
+msgstr "Archive Alzip"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:272
 msgid "<filename>.alz</filename>"
-msgstr ""
+msgstr "<filename>.alz</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:275
 msgid "AR archive"
-msgstr ""
+msgstr "Archive AR"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:276
 msgid "<filename>.ar</filename>"
-msgstr ""
+msgstr "<filename>.ar</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:279
@@ -367,7 +380,7 @@ msgstr "Archive ARJ"
 #. (itstool) path: entry/para
 #: C/index.docbook:280
 msgid "<filename>.arj</filename>"
-msgstr ""
+msgstr "<filename>.arj</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:283
@@ -377,7 +390,7 @@ msgstr ""
 #. (itstool) path: entry/para
 #: C/index.docbook:284
 msgid "<filename>.cab</filename>"
-msgstr ""
+msgstr "<filename>.cab</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:287
@@ -387,7 +400,7 @@ msgstr "Archive CPIO"
 #. (itstool) path: entry/para
 #: C/index.docbook:288
 msgid "<filename>.cpio</filename>"
-msgstr ""
+msgstr "<filename>.cpio</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:291
@@ -396,8 +409,8 @@ msgstr "Paquet Debian"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:292
-msgid "<filename>.deb</filename>, <filename>.udeb</filename>"
-msgstr ""
+msgid "<filename>.deb</filename>"
+msgstr "<filename>.deb</filename>"
 
 #. (itstool) path: entry/para
 #: C/index.docbook:295
@@ -850,6 +863,14 @@ msgid ""
 "to disk only when you quit the application or select "
 "<guimenuitem>Save</guimenuitem> in the menu."
 msgstr ""
+"Quand vous utilisez le <application>Gestionnaire d'Archives</application> "
+"pour travailler avec une archive, tous les changements sont sauvés sur le "
+"disque immédiatement. Par exemple, si vous effacez un fichier d'une archive,"
+" le <application>Gestionnaire d'Archives</application> l'efface dès que vous"
+" cliquez sur <guibutton>OK</guibutton>.  Ce comportement est différent de la"
+" plupart des applications, qui sauvent les changements sur le disque "
+"uniquement quand vous quitter l'application ou bien quand vous sélectionnez "
+"<guimenuitem>Sauver</guimenuitem> dans le menu."
 
 #. (itstool) path: section/para
 #: C/index.docbook:479
@@ -2149,8 +2170,8 @@ msgstr ""
 #: C/index.docbook:1135
 msgid ""
 "If the archive contains folders, you can show the archive contents in either"
-" <link linkend=\"engrampa-view-type-folder\">folder view</link> or <link "
-"linkend=\"engrampa-view-type-file\">file view</link>."
+" <xref linkend=\"engrampa-view-type-folder\"/> or <xref linkend=\"engrampa-"
+"view-type-file\"/>."
 msgstr ""
 
 #. (itstool) path: info/title
