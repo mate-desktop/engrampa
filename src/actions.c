@@ -898,7 +898,7 @@ activate_action_about (GtkAction *action,
     gtk_show_about_dialog (GTK_WINDOW (window),
                    "version", VERSION,
                    "copyright", _("Copyright \xc2\xa9 2001–2010 Free Software Foundation, Inc.\n"
-                                  "Copyright \xc2\xa9 2012–2019 The MATE developers"),
+                                  "Copyright \xc2\xa9 2012–2020 The MATE developers"),
                    "comments", _("An archive manager for MATE."),
                    "authors", authors,
                    "documenters", documenters,
