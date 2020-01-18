@@ -191,7 +191,7 @@ static struct {
 		{ "application/x-zip", TRUE },
 		{ "application/x-zip-compressed", TRUE },
 		{ "application/x-zoo", TRUE },
-		{ "application/x-zstd", TRUE },
+		{ ZSTD_MIME_TYPE, TRUE },
 		{ "application/x-zstd-compressed-tar", TRUE },
 		{ "application/zip", TRUE },
 		{ "multipart/x-zip", TRUE },
