@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the engrampa package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,12 +9,11 @@
 # Maurious Paul Vincent <paulmaurious@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-09 09:42+0200\n"
+"Project-Id-Version: engrampa 1.23.2\n"
+"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
+"POT-Creation-Date: 2020-01-10 14:13+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Tamil (https://www.transifex.com/mate/teams/13566/ta/)\n"
@@ -24,368 +23,455 @@ msgstr ""
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../copy-n-paste/eggdesktopfile.c:165
-#, c-format
+#: copy-n-paste/eggdesktopfile.c:165
 msgid "File is not a valid .desktop file"
 msgstr "கோப்பு சரியான .desktop கோப்பில்லை"
 
-#: ../copy-n-paste/eggdesktopfile.c:190
+#: copy-n-paste/eggdesktopfile.c:190
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "அங்கீகரிக்கப்படாத பணிமேடை கோப்பு பதிப்பு '%s'"
 
-#: ../copy-n-paste/eggdesktopfile.c:959
+#: copy-n-paste/eggdesktopfile.c:959
 #, c-format
 msgid "Starting %s"
 msgstr "%sஐ துவக்குகிறது"
 
-#: ../copy-n-paste/eggdesktopfile.c:1100
-#, c-format
+#: copy-n-paste/eggdesktopfile.c:1100
 msgid "Application does not accept documents on command line"
 msgstr "பயன்பாடு ஆவணங்களை கட்டளைவரியில் ஏற்காது"
 
-#: ../copy-n-paste/eggdesktopfile.c:1168
+#: copy-n-paste/eggdesktopfile.c:1168
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "அங்கீகரிக்கப்படாத ஏற்ற விருப்பம்: %d"
 
-#: ../copy-n-paste/eggdesktopfile.c:1366
-#, c-format
+#: copy-n-paste/eggdesktopfile.c:1366
 msgid "Can't pass documents to this desktop element"
 msgstr "ஆவணங்களை இந்த பணிமேடை மூலகத்துக்கு கொடுக்க முடியவில்லை"
 
-#: ../copy-n-paste/eggdesktopfile.c:1385
-#, c-format
+#: copy-n-paste/eggdesktopfile.c:1385
 msgid "Not a launchable item"
 msgstr "ஏற்றக்கூடிய உருப்படி இல்லை"
 
-#: ../copy-n-paste/eggsmclient.c:221
+#: copy-n-paste/eggsmclient.c:221
 msgid "Disable connection to session manager"
 msgstr "அமர்வு மேலாளருக்கு இணைப்பை செயல்நீக்கு"
 
-#: ../copy-n-paste/eggsmclient.c:224
+#: copy-n-paste/eggsmclient.c:224
 msgid "Specify file containing saved configuration"
 msgstr "சேமிக்கப்பட்ட கட்டமைப்பை கொண்ட கோப்பினை குறிப்பிடு"
 
-#: ../copy-n-paste/eggsmclient.c:224
+#: copy-n-paste/eggsmclient.c:224
 msgid "FILE"
 msgstr "FILE"
 
-#: ../copy-n-paste/eggsmclient.c:227
+#: copy-n-paste/eggsmclient.c:227
 msgid "Specify session management ID"
 msgstr "அமர்வு மேலாண்மை IDஐ குறிப்பிடு"
 
-#: ../copy-n-paste/eggsmclient.c:227
+#: copy-n-paste/eggsmclient.c:227
 msgid "ID"
 msgstr "எண்"
 
-#: ../copy-n-paste/eggsmclient.c:248
+#: copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
 msgstr "அமர்வு மேலாண்மை விருப்பங்கள்:"
 
-#: ../copy-n-paste/eggsmclient.c:249
+#: copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
 msgstr "அமர்வு மேலாண்மை விருப்பங்களை காட்டு"
 
-#: ../data/engrampa.appdata.xml.in.h:1
-msgid "An Archive Manager for the MATE desktop environment"
-msgstr ""
-
-#: ../data/engrampa.appdata.xml.in.h:2
-msgid ""
-"<p> Engrampa is an archive manager for the MATE environment. It allows you "
-"to create and modify archives, view the contents of an archive, view a file "
-"contained in an archive, and extract files from archive. </p> <p> Engrampa "
-"is only a front-end (a graphical interface) to archiving programs like tar "
-"and zip. The supported file types are: </p> <ul> <li>7-Zip Compressed File "
-"(.7z)</li> <li>WinAce Compressed File (.ace)</li> <li>ALZip Compressed File "
-"(.alz)</li> <li>AIX Small Indexed Archive (.ar)</li> <li>ARJ Compressed "
-"Archive (.arj)</li> <li>Cabinet File (.cab)</li> <li>UNIX CPIO Archive "
-"(.cpio)</li> <li>Debian Linux Package (.deb, .udeb) [Read-only mode]</li> "
-"<li>ISO-9660 CD Disc Image (.iso) [Read-only mode]</li> <li>Java Archive "
-"(.jar)</li> <li>Java Enterprise archive (.ear)</li> <li>Java Web Archive "
-"(.war)</li> <li>LHA Archive (.lzh, .lha)</li> <li>WinRAR Compressed Archive "
-"(.rar)</li> <li>RAR Archived Comic Book (.cbr)</li> <li>RPM Linux Package "
-"(.rpm) [Read-only mode]</li> <li>Tape Archive File uncompressed (.tar) or "
-"compressed with: gzip (.tar.gz, .tgz), brotli (.tar.br), bzip (.tar.bz, "
-".tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, "
-".tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz "
-"(.tar.xz), Zstandard (.zst) </li> <li>Stuffit Archives (.bin, .sit)</li> "
-"<li>ZIP Archive (.zip)</li> <li>ZIP Archived Comic Book (.cbz)</li> <li>ZOO "
-"Compressed Archive File (.zoo)</li> <li>Single files compressed with gzip "
-"(.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip (.lrz), "
-"lzip (.lz), lzop (.lzo), rzip(.rz), xz (.xz).</li> </ul> <p> Engrampa is a "
-"fork of File Roller and part of the MATE Desktop Environment. If you would "
-"like to know more about MATE and Engrampa, please visit the project's home "
-"page. </p>"
-msgstr ""
-
-#: ../data/engrampa.desktop.in.in.h:1 ../src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
 msgid "Engrampa Archive Manager"
 msgstr ""
 
-#: ../data/engrampa.desktop.in.in.h:2 ../src/fr-window.c:2009
-#: ../src/fr-window.c:5578
+#: data/engrampa.appdata.xml.in:8
+msgid "An Archive Manager for the MATE desktop environment"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:10
+msgid ""
+"Engrampa is an archive manager for the MATE environment. It allows you to "
+"create and modify archives, view the contents of an archive, view a file "
+"contained in an archive, and extract files from archive."
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:15
+msgid ""
+"Engrampa is only a front-end (a graphical interface) to archiving programs "
+"like tar and zip. The supported file types are:"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:20
+msgid "7-Zip Compressed File (.7z)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:21
+msgid "WinAce Compressed File (.ace)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:22
+msgid "ALZip Compressed File (.alz)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:23
+msgid "AIX Small Indexed Archive (.ar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:24
+msgid "ARJ Compressed Archive (.arj)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:25
+msgid "Cabinet File (.cab)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:26
+msgid "UNIX CPIO Archive (.cpio)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:27
+msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:28
+msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:29
+msgid "Java Archive (.jar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:30
+msgid "Java Enterprise archive (.ear)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:31
+msgid "Java Web Archive (.war)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:32
+msgid "LHA Archive (.lzh, .lha)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:33
+msgid "WinRAR Compressed Archive (.rar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:34
+msgid "RAR Archived Comic Book (.cbr)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:35
+msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:36
+msgid ""
+"Tape Archive File uncompressed (.tar) or compressed with: gzip (.tar.gz, "
+".tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), "
+"compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
+" (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:39
+msgid "Stuffit Archives (.bin, .sit)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:40
+msgid "ZIP Archive (.zip)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:41
+msgid "ZIP Archived Comic Book (.cbz)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:42
+msgid "ZOO Compressed Archive File (.zoo)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:43
+msgid ""
+"Single files compressed with gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
+"(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
+"(.xz)."
+msgstr ""
+
+#: data/engrampa.appdata.xml.in:46
+msgid ""
+"Engrampa is a fork of File Roller and part of the MATE Desktop Environment. "
+"If you would like to know more about MATE and Engrampa, please visit the "
+"project's home page."
+msgstr ""
+
+#: data/engrampa.desktop.in.in:4 src/fr-window.c:2009 src/fr-window.c:5578
 msgid "Archive Manager"
 msgstr "காப்பு மேலாளர்"
 
-#: ../data/engrampa.desktop.in.in.h:3
+#: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "காப்பு உருவாக்குதல் அல்லது திருத்துதல்"
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: data/engrampa.desktop.in.in:12
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
+msgid "engrampa"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/engrampa.desktop.in.in:17
+msgid "MATE;archive;manager;compression;"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:2
+#: data/org.mate.engrampa.gschema.xml.in:39
 msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:3
+#: data/org.mate.engrampa.gschema.xml.in:43
 msgid "Sort type"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:4
+#: data/org.mate.engrampa.gschema.xml.in:44
 msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:5
+#: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:6
+#: data/org.mate.engrampa.gschema.xml.in:49
 msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:7
+#: data/org.mate.engrampa.gschema.xml.in:53
 msgid "Display type"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:8
+#: data/org.mate.engrampa.gschema.xml.in:54
 msgid "Display the Type column in the main window."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:9
+#: data/org.mate.engrampa.gschema.xml.in:58
 msgid "Display size"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:10
+#: data/org.mate.engrampa.gschema.xml.in:59
 msgid "Display the Size column in the main window."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:11
+#: data/org.mate.engrampa.gschema.xml.in:63
 msgid "Display time"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:12
+#: data/org.mate.engrampa.gschema.xml.in:64
 msgid "Display the Time column in the main window."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:13
+#: data/org.mate.engrampa.gschema.xml.in:68
 msgid "Display path"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:14
+#: data/org.mate.engrampa.gschema.xml.in:69
 msgid "Display the Path column in the main window."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:15
+#: data/org.mate.engrampa.gschema.xml.in:73
 msgid "Use MIME icons"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:16
+#: data/org.mate.engrampa.gschema.xml.in:74
 msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:17
+#: data/org.mate.engrampa.gschema.xml.in:78
 msgid "Name column width"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:18
+#: data/org.mate.engrampa.gschema.xml.in:79
 msgid "The default width of the name column in the file list."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:19
+#: data/org.mate.engrampa.gschema.xml.in:85
 msgid "Max history length"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:20
+#: data/org.mate.engrampa.gschema.xml.in:86
 msgid "Max number of items in the Open Recents menu."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:21
+#: data/org.mate.engrampa.gschema.xml.in:99
 msgid "View toolbar"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:22
+#: data/org.mate.engrampa.gschema.xml.in:100
 msgid "Whether to display the toolbar."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:23
+#: data/org.mate.engrampa.gschema.xml.in:104
 msgid "View statusbar"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:24
+#: data/org.mate.engrampa.gschema.xml.in:105
 msgid "Whether to display the statusbar."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:25 ../src/ui.h:234
+#: data/org.mate.engrampa.gschema.xml.in:109 src/ui.h:234
 msgid "View the folders pane"
 msgstr "அடைவுகள் பலகத்தைப் பார்க்கவும்"
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:26
+#: data/org.mate.engrampa.gschema.xml.in:110
 msgid "Whether to display the folders pane."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:27
+#: data/org.mate.engrampa.gschema.xml.in:116
 msgid "Editors"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:28
+#: data/org.mate.engrampa.gschema.xml.in:117
 msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:29
+#: data/org.mate.engrampa.gschema.xml.in:121
 msgid "Compression level"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:30
+#: data/org.mate.engrampa.gschema.xml.in:122
 msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:31
+#: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:32
+#: data/org.mate.engrampa.gschema.xml.in:127
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:33
+#: data/org.mate.engrampa.gschema.xml.in:131
 msgid "Adds 'unar' support over .zip archives."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:34
+#: data/org.mate.engrampa.gschema.xml.in:132
 msgid "It enables the ability to support 'unar' over .zip archives."
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:35
+#: data/org.mate.engrampa.gschema.xml.in:143
 msgid "Overwrite existing files"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:36
+#: data/org.mate.engrampa.gschema.xml.in:147
 msgid "Do not overwrite newer files"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:37
+#: data/org.mate.engrampa.gschema.xml.in:151
 msgid "Recreate the folders stored in the archive"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:38
+#: data/org.mate.engrampa.gschema.xml.in:189
 msgid "Default volume size"
 msgstr ""
 
-#: ../data/org.mate.engrampa.gschema.xml.in.h:39
+#: data/org.mate.engrampa.gschema.xml.in:190
 msgid "The default size for volumes."
 msgstr ""
 
-#: ../caja/caja-engrampa.c:329
+#: caja/caja-engrampa.c:329
 msgid "Extract Here"
 msgstr "இங்கு பிரிக்கவும்"
 
 #. Translators: the current position is the current folder
-#: ../caja/caja-engrampa.c:331
+#: caja/caja-engrampa.c:331
 msgid "Extract the selected archive to the current position"
 msgstr "தற்போதைய இடத்தில் தேர்ந்தெடுக்கப்பட்ட காப்பகத்தைப் பிரிக்கவும்"
 
-#: ../caja/caja-engrampa.c:348
+#: caja/caja-engrampa.c:348
 msgid "Extract To..."
 msgstr "பிரிக்கவும்..."
 
-#: ../caja/caja-engrampa.c:349
+#: caja/caja-engrampa.c:349
 msgid "Extract the selected archive"
 msgstr "தேர்ந்தெடுக்கப்பட்ட காப்பகத்தில் பிரிக்கவும்"
 
-#: ../caja/caja-engrampa.c:368
+#: caja/caja-engrampa.c:368
 msgid "Compress..."
 msgstr "குறுக்கவும்..."
 
-#: ../caja/caja-engrampa.c:369
+#: caja/caja-engrampa.c:369
 msgid "Create a compressed archive with the selected objects"
 msgstr ""
 "தேர்ந்தெடுக்கப்பட்ட பொருட்களுடன் ஒரு குறுக்கப்பட்ட காப்பகத்தை உருவாக்கவும்"
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:1 ../src/main.c:342
-#: ../src/server.c:457
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:2
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:6
 msgid "Allows to create and extract archives"
 msgstr ""
 
-#: ../caja/libcaja-engrampa.caja-extension.in.in.h:3
-msgid ""
-"Copyright (C) 2001–2010 Free Software Foundation, Inc.\\nCopyright (C) "
-"2012–2019 The MATE developers"
-msgstr ""
-
-#: ../src/actions.c:158 ../src/actions.c:197 ../src/actions.c:233
-#: ../src/dlg-batch-add.c:163 ../src/dlg-batch-add.c:179
-#: ../src/dlg-batch-add.c:208 ../src/dlg-batch-add.c:253
-#: ../src/dlg-batch-add.c:299 ../src/fr-window.c:3080
+#: src/actions.c:158 src/actions.c:197 src/actions.c:233
+#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
+#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "காப்பகத்தை உருவாக்க முடியவில்லை"
 
-#: ../src/actions.c:160 ../src/dlg-batch-add.c:165 ../src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
 msgid "You have to specify an archive name."
 msgstr "காப்பகத்தின் பெயரைக் குறிப்பிட வேண்டும்."
 
-#: ../src/actions.c:199
+#: src/actions.c:199
 msgid "You don't have permission to create an archive in this folder"
 msgstr "இந்த அடைவில் காப்பகம் உருவாக்க உங்களுக்கு அனுமதி இல்லை"
 
-#: ../src/actions.c:235 ../src/dlg-package-installer.c:291
-#: ../src/dlg-package-installer.c:300 ../src/dlg-package-installer.c:337
-#: ../src/fr-archive.c:1168 ../src/fr-window.c:6213 ../src/fr-window.c:6389
+#: src/actions.c:235 src/dlg-package-installer.c:291
+#: src/dlg-package-installer.c:300 src/dlg-package-installer.c:337
+#: src/fr-archive.c:1168 src/fr-window.c:6213 src/fr-window.c:6389
 msgid "Archive type not supported."
 msgstr "ஆவண வகைக்கு ஆதரவு இல்லை."
 
-#: ../src/actions.c:249
+#: src/actions.c:249
 msgid "Could not delete the old archive."
 msgstr "பழைய காப்பகத்தை நீக்க முடியவில்லை."
 
-#: ../src/actions.c:383 ../src/fr-window.c:5954
+#: src/actions.c:383 src/fr-window.c:5954
 msgid "Open"
 msgstr "திறத்தல்"
 
-#: ../src/actions.c:394 ../src/fr-window.c:5397
+#: src/actions.c:394 src/fr-window.c:5397
 msgid "All archives"
 msgstr "அனைத்து காப்பகங்கள்"
 
-#: ../src/actions.c:401
+#: src/actions.c:401
 msgid "All files"
 msgstr "அனைத்து கோப்புகள்"
 
-#: ../src/actions.c:795 ../src/fr-window.c:7442
+#: src/actions.c:795 src/fr-window.c:7442
 msgid "Last Output"
 msgstr "முந்தைய வெளிப்பாடு"
 
-#: ../src/actions.c:859
+#: src/actions.c:859
 msgid ""
 "Engrampa is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -397,7 +483,7 @@ msgstr ""
 "பதிப்புகள் விதிகளின் படி நீங்கள் (விருப்பப்படி) மாற்றலாம். அல்லது மீண்டும் "
 "பரிமாறலாம்."
 
-#: ../src/actions.c:863
+#: src/actions.c:863
 msgid ""
 "Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -409,7 +495,7 @@ msgstr ""
 "அளிக்கப்படவில்லை. மேற் கொண்டு விவரங்களுக்கு ஜிஎன்யு பொது அனுமதிக்கான விதிகளை"
 " பார்க்கவும்"
 
-#: ../src/actions.c:867
+#: src/actions.c:867
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
@@ -420,106 +506,105 @@ msgstr ""
 "Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
 "02110-1301, USA "
 
-#: ../src/actions.c:900
+#: src/actions.c:900
 msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
-"Copyright © 2012–2019 The MATE developers"
+"Copyright © 2012–2020 The MATE developers"
 msgstr ""
 
-#: ../src/actions.c:902
+#: src/actions.c:902
 msgid "An archive manager for MATE."
 msgstr "MATEக்கான காப்பக மேலாளர்."
 
-#: ../src/actions.c:905
+#: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Valmantas Palikša https://launchpad.net/~walmis\n"
 "  bhuvi https://launchpad.net/~bhuvanesh"
 
-#: ../src/dlg-add-files.c:103 ../src/dlg-add-folder.c:136
+#: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
 msgstr "காப்பகத்துக்கு கோப்புகளை சேர்க்க முடியவில்லை"
 
-#: ../src/dlg-add-files.c:104 ../src/dlg-add-folder.c:137
+#: src/dlg-add-files.c:104 src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
 msgstr "\"%s\" என்ற அடைவிலிருந்து கோப்புகளை பார்க்க உங்களுக்கு அனுமதி இல்லை"
 
-#: ../src/dlg-add-files.c:149 ../src/ui.h:47
+#: src/dlg-add-files.c:149 src/ui.h:47
 msgid "Add Files"
 msgstr "கோப்புகளை சேர்த்தல்"
 
 #. Translators: add a file to the archive only if the disk version is
 #. * newer than the archive version.
-#: ../src/dlg-add-files.c:165 ../src/dlg-add-folder.c:237
+#: src/dlg-add-files.c:165 src/dlg-add-folder.c:237
 msgid "Add only if _newer"
 msgstr "புதிதாக இருந்தால் மட்டும் சேர்க்கவும் (_n)"
 
-#: ../src/dlg-add-folder.c:223
+#: src/dlg-add-folder.c:223
 msgid "Add a Folder"
 msgstr "ஒரு அடைவை சேர்த்தல்"
 
-#: ../src/dlg-add-folder.c:238
+#: src/dlg-add-folder.c:238
 msgid "_Include subfolders"
 msgstr "துணை அடைவுகளை சேர்க்கவும் (_I)"
 
-#: ../src/dlg-add-folder.c:239
+#: src/dlg-add-folder.c:239
 msgid "Exclude folders that are symbolic lin_ks"
 msgstr "அடையாள இணைப்பாக உள்ள அடைவுகளை விட்டுவிடவும் (_k)"
 
-#: ../src/dlg-add-folder.c:245 ../src/dlg-add-folder.c:251
-#: ../src/dlg-add-folder.c:257
+#: src/dlg-add-folder.c:245 src/dlg-add-folder.c:251 src/dlg-add-folder.c:257
 msgid "example: *.o; *.bak"
 msgstr "எடுத்துக்காட்டு: *.o; *.bak"
 
-#: ../src/dlg-add-folder.c:246
+#: src/dlg-add-folder.c:246
 msgid "Include _files:"
 msgstr "கோப்புகளை சேர்த்தல் (_f):"
 
-#: ../src/dlg-add-folder.c:252
+#: src/dlg-add-folder.c:252
 msgid "E_xclude files:"
 msgstr "கோப்புகளை நீக்குதல் (_x):"
 
-#: ../src/dlg-add-folder.c:258
+#: src/dlg-add-folder.c:258
 msgid "_Exclude folders:"
 msgstr "கோப்புகளை விலக்குக (_E):"
 
-#: ../src/dlg-add-folder.c:262
+#: src/dlg-add-folder.c:262
 msgid "_Load Options"
 msgstr "ஏற்றும் விருப்பங்கள் (_L)"
 
-#: ../src/dlg-add-folder.c:263
+#: src/dlg-add-folder.c:263
 msgid "Sa_ve Options"
 msgstr "சேமித்தல் விருப்பங்கள் (_v)"
 
-#: ../src/dlg-add-folder.c:264
+#: src/dlg-add-folder.c:264
 msgid "_Reset Options"
 msgstr "விருப்பங்களை மீட்டு அமைக்கவும் (_R)"
 
-#: ../src/dlg-add-folder.c:877
+#: src/dlg-add-folder.c:877
 msgid "Save Options"
 msgstr "சேமித்தல் விருப்பங்கள்"
 
-#: ../src/dlg-add-folder.c:878
+#: src/dlg-add-folder.c:878
 msgid "_Options Name:"
 msgstr ""
 
-#: ../src/dlg-add-folder.c:881 ../src/dlg-package-installer.c:320
-#: ../src/fr-window.c:2611 ../src/fr-window.c:7856 ../src/fr-window.c:8297
+#: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
+#: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
 msgid "_Cancel"
 msgstr "ரத்து (_C)"
 
-#: ../src/dlg-add-folder.c:882
+#: src/dlg-add-folder.c:882
 msgid "_Save"
 msgstr "சேமி (_S)"
 
-#: ../src/dlg-ask-password.c:124
+#: src/dlg-ask-password.c:124
 #, c-format
 msgid "Enter the password for the archive '%s'."
 msgstr "'%s' காப்பகத்திற்கான கடவுச்சொல்லை குறிப்பிடுக"
 
-#: ../src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:180
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -530,18 +615,18 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/dlg-batch-add.c:183 ../src/fr-window.c:7780 ../src/fr-window.c:7782
+#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "வேறு பெயரை பயன்படுத்தவும்."
 
-#: ../src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:210
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr ""
 "உங்களுக்கு இலக்கு அடைவில் ஒரு காப்பகத்தை உருவாக்க சரியான அனுமதி இல்லை."
 
-#: ../src/dlg-batch-add.c:226 ../src/dlg-extract.c:100 ../src/fr-window.c:6991
+#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -552,34 +637,34 @@ msgstr ""
 "\n"
 "நீங்கள் உருவாக்க வேண்டுமா?"
 
-#: ../src/dlg-batch-add.c:235 ../src/dlg-extract.c:109 ../src/fr-window.c:7000
+#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "அடைவு உருவாக்குதல் (_F)"
 
-#: ../src/dlg-batch-add.c:254 ../src/dlg-extract.c:129 ../src/fr-window.c:7017
+#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "சேர்வு அடைவு %s ஐ உருவாக்க முடியவில்லை."
 
-#: ../src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:271
 msgid "Archive not created"
 msgstr "களஞ்சியத்தை உருவாக்க முடியவில்லை"
 
-#: ../src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "காப்பகம் ஏற்கனவே உள்ளது .  அதன் மேலெழுத வேண்டுமா?"
 
-#: ../src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:322
 msgid "_Overwrite"
 msgstr "மேலெழுதவும் (_O)"
 
-#: ../src/dlg-extract.c:128 ../src/dlg-extract.c:146 ../src/dlg-extract.c:173
-#: ../src/fr-window.c:4343 ../src/fr-window.c:6932 ../src/fr-window.c:6937
-#: ../src/fr-window.c:7021 ../src/fr-window.c:7040 ../src/fr-window.c:7045
+#: src/dlg-extract.c:128 src/dlg-extract.c:146 src/dlg-extract.c:173
+#: src/fr-window.c:4343 src/fr-window.c:6932 src/fr-window.c:6937
+#: src/fr-window.c:7021 src/fr-window.c:7040 src/fr-window.c:7045
 msgid "Extraction not performed"
 msgstr "பிரித்தெடுப்பு நடக்கவில்லை"
 
-#: ../src/dlg-extract.c:174 ../src/fr-window.c:4512 ../src/fr-window.c:4592
+#: src/dlg-extract.c:174 src/fr-window.c:4512 src/fr-window.c:4592
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -587,25 +672,25 @@ msgid ""
 msgstr ""
 "\"%s\" என்ற அடைவில் உள்ள காப்பகங்களை பிரித்தெடுக்க உங்களுக்கு அனுமதி இல்லை"
 
-#: ../src/dlg-extract.c:304 ../src/ui.h:122
+#: src/dlg-extract.c:304 src/ui.h:122
 msgid "Extract"
 msgstr "பிரித்தெடுத்தல்"
 
-#: ../src/dlg-new.c:426
+#: src/dlg-new.c:426
 msgctxt "File"
 msgid "New"
 msgstr "புதியது"
 
-#: ../src/dlg-new.c:439
+#: src/dlg-new.c:439
 msgctxt "File"
 msgid "Save"
 msgstr "சேமி"
 
-#: ../src/dlg-package-installer.c:108 ../src/dlg-package-installer.c:222
+#: src/dlg-package-installer.c:108 src/dlg-package-installer.c:222
 msgid "There was an internal error trying to search for applications:"
 msgstr "பயன்பாடுகளை தேடியதில் உள்ளமை  பிழை:"
 
-#: ../src/dlg-package-installer.c:310
+#: src/dlg-package-installer.c:310
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
@@ -614,30 +699,29 @@ msgstr ""
 "%s கோப்புகளுக்கு கட்டளை ஏதும் நிறுவப்படவில்லை.\n"
 "இந்த கோப்பை திறக்க ஒரு கட்டளைக்கு தேட வேண்டுமா?"
 
-#: ../src/dlg-package-installer.c:315
+#: src/dlg-package-installer.c:315
 msgid "Could not open this file type"
 msgstr "கோப்பினை திறக்க முடியவில்லை"
 
-#: ../src/dlg-package-installer.c:324
+#: src/dlg-package-installer.c:324
 msgid "_Search Command"
 msgstr "_S தேடல் கட்டளை"
 
-#: ../src/dlg-prop.c:108
+#: src/dlg-prop.c:108
 #, c-format
 msgid "%s Properties"
 msgstr "%s பண்புகள்"
 
-#: ../src/dlg-prop.c:119 ../src/fr-window.c:1608 ../src/fr-window.c:1637
+#: src/dlg-prop.c:119 src/fr-window.c:1608 src/fr-window.c:1637
 msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
-#: ../src/dlg-update.c:164
+#: src/dlg-update.c:164
 #, c-format
 msgid "Update the file \"%s\" in the archive \"%s\"?"
 msgstr "கோப்பு \"%s\" ஐ காப்பகம் \"%s\"இல் மேம்படுத்த வேண்டுமா?"
 
-#. secondary text
-#: ../src/dlg-update.c:176 ../src/dlg-update.c:204 ../src/ui/update.ui.h:2
+#: src/dlg-update.c:176 src/dlg-update.c:204 src/ui/update.ui:152
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
@@ -648,37 +732,37 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/dlg-update.c:193
+#: src/dlg-update.c:193
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
 msgstr "கோப்புகளை காப்பகம் \"%s\" இல் மேம்படுத்த வேண்டுமா?"
 
-#: ../src/eggfileformatchooser.c:235
+#: src/eggfileformatchooser.c:226
 #, c-format
 msgid "File _Format: %s"
 msgstr "கோப்பு: %s"
 
-#: ../src/eggfileformatchooser.c:395
+#: src/eggfileformatchooser.c:386
 msgid "All Files"
 msgstr "அனைத்து கோப்புகள்"
 
-#: ../src/eggfileformatchooser.c:396
+#: src/eggfileformatchooser.c:387
 msgid "All Supported Files"
 msgstr "எல்லா ஆதரவுள்ள கோப்புகளும்"
 
-#: ../src/eggfileformatchooser.c:405
+#: src/eggfileformatchooser.c:396
 msgid "By Extension"
 msgstr "விரிவாக்க படி"
 
-#: ../src/eggfileformatchooser.c:419
+#: src/eggfileformatchooser.c:410
 msgid "File Format"
 msgstr "கோப்பு வடிவம்"
 
-#: ../src/eggfileformatchooser.c:437
+#: src/eggfileformatchooser.c:428
 msgid "Extension(s)"
 msgstr "விரிவாக்கம்(கள்)"
 
-#: ../src/eggfileformatchooser.c:667
+#: src/eggfileformatchooser.c:658
 #, c-format
 msgid ""
 "The program was not able to find out the file format you want to use for "
@@ -690,489 +774,477 @@ msgstr ""
 "கைமுரையாக கீழ் காணும் பட்டியலில் இருந்து ஒரு கோப்பு முறையை "
 "தேர்ந்தெடுக்கவும். "
 
-#: ../src/eggfileformatchooser.c:674
+#: src/eggfileformatchooser.c:665
 msgid "File format not recognized"
 msgstr "கோப்பு வடிவம் அடையாளம் தெரியாதது"
 
-#: ../src/fr-archive.c:1148
+#: src/fr-archive.c:1148
 msgid "File not found."
 msgstr "கோப்பை கண்டுபிடிக்க முடியவில்லை."
 
-#: ../src/fr-archive.c:1254
-#, c-format
+#: src/fr-archive.c:1254
 msgid "Archive not found"
 msgstr ""
 
-#: ../src/fr-archive.c:2452
+#: src/fr-archive.c:2452
 msgid "You don't have the right permissions."
 msgstr "உங்களுக்கு சரியான அனுமதிகள் இல்லை."
 
-#: ../src/fr-archive.c:2452
+#: src/fr-archive.c:2452
 msgid "This archive type cannot be modified"
 msgstr "ஆவண காப்பக வகையை மாற்ற இயலாது"
 
-#: ../src/fr-archive.c:2464
+#: src/fr-archive.c:2464
 msgid "You can't add an archive to itself."
 msgstr "நீங்கள் ஒரு காப்பகத்தில் அதனை சேர்க்க முடியாது."
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:307 ../src/fr-command-rar.c:451
-#: ../src/fr-command-tar.c:291
+#: src/fr-command-7z.c:307 src/fr-command-rar.c:451 src/fr-command-tar.c:291
 msgid "Adding file: "
 msgstr "கோப்பு சேர்க்கப்படுகிறது:"
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-7z.c:454 ../src/fr-command-rar.c:578
-#: ../src/fr-command-tar.c:412
+#: src/fr-command-7z.c:453 src/fr-command-rar.c:578 src/fr-command-tar.c:412
 msgid "Extracting file: "
 msgstr "கோப்பு பிரிக்கப்படுகிறது:"
 
 #. Translators: after the colon there is a filename.
-#: ../src/fr-command-rar.c:529 ../src/fr-command-tar.c:357
+#: src/fr-command-rar.c:529 src/fr-command-tar.c:357
 msgid "Removing file: "
 msgstr "கோப்பு நீக்கப்படுகிறது:"
 
-#: ../src/fr-command-rar.c:717
+#: src/fr-command-rar.c:717
 #, c-format
 msgid "Could not find the volume: %s"
 msgstr "%s தொகுதியை காண முடியவில்லை:"
 
-#: ../src/fr-command-tar.c:366
+#: src/fr-command-tar.c:366
 msgid "Deleting files from archive"
 msgstr "காப்பகத்திலிருந்து கோப்புகள் நீக்கப்படுகின்றன"
 
-#: ../src/fr-command-tar.c:472
+#: src/fr-command-tar.c:472
 msgid "Recompressing archive"
 msgstr "காப்பகம் மீண்டும் குறுக்கப்படுகிறது"
 
-#: ../src/fr-command-tar.c:732
+#: src/fr-command-tar.c:732
 msgid "Decompressing archive"
 msgstr "காப்பகம் விரிக்கப்படுகிறது"
 
-#: ../src/fr-init.c:61
-msgid "Debian package (.deb)"
+#: src/fr-init.c:61
+msgid "Debian package"
+msgstr "டெபியன் மென்பொருள் பொதி"
+
+#: src/fr-init.c:62
+msgid "Cabinet"
 msgstr ""
 
-#: ../src/fr-init.c:62
-msgid "Debian package (.udeb)"
+#: src/fr-init.c:63
+msgid "OpenDocument Presentation"
 msgstr ""
 
-#: ../src/fr-init.c:63
-msgid "Cabinet (.cab)"
-msgstr "கேபினட் (.cab)"
-
-#: ../src/fr-init.c:64
-msgid "OpenDocument Presentation (.odp)"
+#: src/fr-init.c:64
+msgid "OpenDocument Spreadsheet"
 msgstr ""
 
-#: ../src/fr-init.c:65
-msgid "OpenDocument Spreadsheet (.ods)"
+#: src/fr-init.c:65
+msgid "OpenDocument Text"
 msgstr ""
 
-#: ../src/fr-init.c:66
-msgid "OpenDocument Text (.odt)"
+#: src/fr-init.c:66
+msgid "OpenDocument Presentation Template"
 msgstr ""
 
-#: ../src/fr-init.c:67
-msgid "OpenDocument Presentation Template (.otp)"
+#: src/fr-init.c:67
+msgid "OpenDocument Spreadsheet Template"
 msgstr ""
 
-#: ../src/fr-init.c:68
-msgid "OpenDocument Spreadsheet Template (.ots)"
+#: src/fr-init.c:68
+msgid "OpenDocument Text Template"
 msgstr ""
 
-#: ../src/fr-init.c:69
-msgid "OpenDocument Text Template (.ott)"
+#: src/fr-init.c:69
+msgid "7-Zip"
 msgstr ""
 
-#: ../src/fr-init.c:70
-msgid "7-Zip (.7z)"
-msgstr "7-Zip (.7z)"
-
-#: ../src/fr-init.c:71
-msgid "Tar compressed with 7z (.tar.7z)"
-msgstr "7z ஆல் குறுக்கப்பட்ட (.tar.7z)"
-
-#: ../src/fr-init.c:72
-msgid "Ace (.ace)"
-msgstr "Ace (.ace)"
-
-#: ../src/fr-init.c:73
-msgid "ALZip archive (.alz)"
+#: src/fr-init.c:70
+msgid "Tar compressed with 7z"
 msgstr ""
 
-#: ../src/fr-init.c:74
-msgid "Ar (.a)"
+#: src/fr-init.c:71
+msgid "Ace"
 msgstr ""
 
-#: ../src/fr-init.c:75
-msgid "Ar (.ar)"
-msgstr "Ar (.ar)"
-
-#: ../src/fr-init.c:76
-msgid "Arj (.arj)"
-msgstr "Arj (.arj)"
-
-#: ../src/fr-init.c:77
-msgid "brotli (.br)"
+#: src/fr-init.c:72
+msgid "ALZip archive"
 msgstr ""
 
-#: ../src/fr-init.c:78
-msgid "Tar compressed with brotli (.tar.br)"
+#: src/fr-init.c:73
+msgid "Ar"
 msgstr ""
 
-#: ../src/fr-init.c:79
-msgid "Bzip2 compressed file (.bz2)"
+#: src/fr-init.c:74
+msgid "Arj"
 msgstr ""
 
-#: ../src/fr-init.c:80
-msgid "Tar compressed with bzip2 (.tar.bz2)"
-msgstr "Tar bzip2 ஆல் குறுக்கப்பட்ட (.tar.bz2)"
-
-#: ../src/fr-init.c:81
-msgid "Bzip compressed file (.bz)"
+#: src/fr-init.c:75
+msgid "Brotli compressed file"
 msgstr ""
 
-#: ../src/fr-init.c:82
-msgid "Tar compressed with bzip (.tar.bz)"
-msgstr "Tar bzip ஆல் குறுக்கப்பட்ட (.tar.bz)"
-
-#: ../src/fr-init.c:83
-msgid "Rar Archived Comic Book (.cbr)"
-msgstr "குறுக்கப்பட்ட காமிக் புத்தகம் (.cbr)"
-
-#: ../src/fr-init.c:84
-msgid "Zip Archived Comic Book (.cbz)"
-msgstr "குறுக்கப்பட்ட காமிக் புத்தகம் (.cbz)"
-
-#: ../src/fr-init.c:85
-msgid "Disc Image File (.iso)"
+#: src/fr-init.c:76
+msgid "Tar compressed with brotli"
 msgstr ""
 
-#: ../src/fr-init.c:86
-msgid "Unix Compressed Archive file (.Z)"
+#: src/fr-init.c:77
+msgid "Bzip2 compressed file"
+msgstr "Bzip2 சுருக்கப்பட்ட கோப்பு"
+
+#: src/fr-init.c:78
+msgid "Tar compressed with bzip2"
 msgstr ""
 
-#: ../src/fr-init.c:87
-msgid "Tar compressed with gzip (.tar.gz)"
-msgstr "Tar gzip ஆல் குறுக்கப்பட்ட (.tar.gz)"
-
-#: ../src/fr-init.c:88
-msgid "Unix CPIO Archive (.cpio)"
+#: src/fr-init.c:79
+msgid "Bzip compressed file"
 msgstr ""
 
-#: ../src/fr-init.c:89
-msgid "Ear (.ear)"
-msgstr "Ear (.ear)"
-
-#: ../src/fr-init.c:90
-msgid "GZip compressed file (.gz)"
+#: src/fr-init.c:80
+msgid "Tar compressed with bzip"
 msgstr ""
 
-#: ../src/fr-init.c:91
-msgid "Jar (.jar)"
-msgstr "Jar (.jar)"
-
-#: ../src/fr-init.c:92
-msgid "Lha (.lzh)"
-msgstr "Lha (.lzh)"
-
-#: ../src/fr-init.c:93
-msgid "Lrzip (.lrz)"
-msgstr "எல்ஆர்ஃஜிப் (.lrz)"
-
-#: ../src/fr-init.c:94
-msgid "Tar compressed with lrzip (.tar.lrz)"
-msgstr "எல்ஆர்ஃஜிப் ஆல் குறுக்கப்பட்ட டார்  (.tar.lz)"
-
-#: ../src/fr-init.c:95
-msgid "LZip compressed file (.lz)"
+#: src/fr-init.c:81
+msgid "Rar Archived Comic Book"
 msgstr ""
 
-#: ../src/fr-init.c:96
-msgid "Tar compressed with lzip (.tar.lz)"
-msgstr "lzip ஆல் குறுக்கப்பட்ட Tar  (.tar.lz)"
-
-#: ../src/fr-init.c:97
-msgid "LZMA compressed file (.lzma)"
+#: src/fr-init.c:82
+msgid "Zip Archived Comic Book"
 msgstr ""
 
-#: ../src/fr-init.c:98
-msgid "Tar compressed with lzma (.tar.lzma)"
-msgstr "Tar compressed with lzma (.tar.lzma)"
-
-#: ../src/fr-init.c:99
-msgid "LZO compressed file (.lzo)"
+#: src/fr-init.c:83
+msgid "Disc Image File"
 msgstr ""
 
-#: ../src/fr-init.c:100
-msgid "Tar compressed with lzop (.tar.lzo)"
-msgstr "Tar lzop ஆல் குறுக்கப்பட்ட (.tar.lzo)"
-
-#: ../src/fr-init.c:101
-msgid "Self-extracting zip (.exe)"
-msgstr "தானியங்கி பிரித்தெடுக்கும் ஜிப் (.exe)"
-
-#: ../src/fr-init.c:102
-msgid "Windows Imaging Format (.wim)"
+#: src/fr-init.c:84
+msgid "Unix Compressed Archive file"
 msgstr ""
 
-#: ../src/fr-init.c:103
-msgid "Rar (.rar)"
-msgstr "Rar (.rar)"
-
-#: ../src/fr-init.c:104
-msgid "Red Hat Package Manager file (.rpm)"
+#: src/fr-init.c:85
+msgid "Tar compressed with gzip"
 msgstr ""
 
-#: ../src/fr-init.c:105
-msgid "RZip compressed file (.rz)"
+#: src/fr-init.c:86
+msgid "Unix CPIO Archive"
 msgstr ""
 
-#: ../src/fr-init.c:106
-msgid "StuffIt Archive (.sit)"
+#: src/fr-init.c:87
+msgid "Ear"
 msgstr ""
 
-#: ../src/fr-init.c:107
-msgid "Tar uncompressed (.tar)"
-msgstr "Tar uncompressed (.tar)"
-
-#: ../src/fr-init.c:108
-msgid "Tar compressed with compress (.tar.Z)"
-msgstr "Tar compress ஆல் குறுக்கப்பட்ட (.tar.Z)"
-
-#: ../src/fr-init.c:109
-msgid "War (.war)"
-msgstr "War (.war)"
-
-#: ../src/fr-init.c:110
-msgid "Xz (.xz)"
-msgstr "Xz (.xz)"
-
-#: ../src/fr-init.c:111
-msgid "Tar compressed with xz (.tar.xz)"
-msgstr "xz ஆல் குறுக்கப்பட்ட (.tar.xz)"
-
-#: ../src/fr-init.c:112
-msgid "Zoo (.zoo)"
-msgstr "Zoo (.zoo)"
-
-#: ../src/fr-init.c:113
-msgid "Zstandard (.zst)"
+#: src/fr-init.c:88
+msgid "GZip compressed file"
 msgstr ""
 
-#: ../src/fr-init.c:114
-msgid "Tar compressed with zstd (.tar.zst)"
+#: src/fr-init.c:89
+msgid "Jar"
 msgstr ""
 
-#: ../src/fr-init.c:115
-msgid "Zip (.zip)"
-msgstr "Zip (.zip)"
+#: src/fr-init.c:90
+msgid "Lha"
+msgstr ""
 
-#: ../src/fr-stock.c:42
+#: src/fr-init.c:91
+msgid "Lrzip "
+msgstr ""
+
+#: src/fr-init.c:92
+msgid "Tar compressed with lrzip"
+msgstr ""
+
+#: src/fr-init.c:93
+msgid "LZip compressed file"
+msgstr ""
+
+#: src/fr-init.c:94
+msgid "Tar compressed with lzip"
+msgstr ""
+
+#: src/fr-init.c:95
+msgid "LZMA compressed file"
+msgstr ""
+
+#: src/fr-init.c:96
+msgid "Tar compressed with lzma"
+msgstr ""
+
+#: src/fr-init.c:97
+msgid "LZO compressed file"
+msgstr ""
+
+#: src/fr-init.c:98
+msgid "Tar compressed with lzop"
+msgstr ""
+
+#: src/fr-init.c:99
+msgid "Self-extracting zip"
+msgstr ""
+
+#: src/fr-init.c:100
+msgid "Windows Imaging Format"
+msgstr ""
+
+#: src/fr-init.c:101
+msgid "Rar"
+msgstr ""
+
+#: src/fr-init.c:102
+msgid "Red Hat Package Manager file"
+msgstr ""
+
+#: src/fr-init.c:103
+msgid "RZip compressed file"
+msgstr ""
+
+#: src/fr-init.c:104
+msgid "StuffIt Archive"
+msgstr ""
+
+#: src/fr-init.c:105
+msgid "Tar uncompressed"
+msgstr ""
+
+#: src/fr-init.c:106
+msgid "Tar compressed with compress"
+msgstr ""
+
+#: src/fr-init.c:107
+msgid "War"
+msgstr ""
+
+#: src/fr-init.c:108
+msgid "Xz compressed file"
+msgstr ""
+
+#: src/fr-init.c:109
+msgid "Tar compressed with xz"
+msgstr ""
+
+#: src/fr-init.c:110
+msgid "Zoo"
+msgstr ""
+
+#: src/fr-init.c:111
+msgid "Zstandard compressed file"
+msgstr ""
+
+#: src/fr-init.c:112
+msgid "Tar compressed with zstd"
+msgstr ""
+
+#: src/fr-init.c:113
+msgid "Zip"
+msgstr ""
+
+#: src/fr-stock.c:42
 msgid "C_reate"
 msgstr "உருவாக்குதல் (_r)"
 
-#: ../src/fr-stock.c:43 ../src/fr-stock.c:44
+#: src/fr-stock.c:43 src/fr-stock.c:44
 msgid "_Add"
 msgstr "சேர்த்தல் (_A)"
 
-#: ../src/fr-stock.c:45
+#: src/fr-stock.c:45
 msgid "_Extract"
 msgstr "பிரித்தல் (_E)"
 
-#: ../src/fr-window.c:1538
+#: src/fr-window.c:1538
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:1543
+#: src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:1617
+#: src/fr-window.c:1617
 msgid "Folder"
 msgstr "அடைவு"
 
-#: ../src/fr-window.c:2017
+#: src/fr-window.c:2017
 msgid "[read only]"
 msgstr "[வாசிக்க மட்டும்]"
 
-#: ../src/fr-window.c:2277
+#: src/fr-window.c:2277
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "\"%s\" அடைவை காட்ட முடியவில்லை"
 
-#: ../src/fr-window.c:2310
-msgid "Process paused"
-msgstr ""
-
-#: ../src/fr-window.c:2312
-msgid "_Resume"
-msgstr ""
-
-#: ../src/fr-window.c:2320 ../src/fr-window.c:2923
-msgid "Please wait…"
-msgstr ""
-
-#. add start button default suspend
-#: ../src/fr-window.c:2322 ../src/fr-window.c:2613
+#: src/fr-window.c:2307 src/fr-window.c:2322 src/fr-window.c:2613
 msgid "_Pause"
 msgstr ""
 
+#: src/fr-window.c:2310
+msgid "Process paused"
+msgstr ""
+
+#: src/fr-window.c:2312
+msgid "_Resume"
+msgstr ""
+
+#: src/fr-window.c:2320 src/fr-window.c:2923
+msgid "Please wait…"
+msgstr ""
+
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2398 ../src/fr-window.c:2436
+#: src/fr-window.c:2398 src/fr-window.c:2436
 #, c-format
 msgid "Creating \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2402
+#: src/fr-window.c:2402
 #, c-format
 msgid "Loading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2406
+#: src/fr-window.c:2406
 #, c-format
 msgid "Reading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2410
+#: src/fr-window.c:2410
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2414
+#: src/fr-window.c:2414
 #, c-format
 msgid "Testing \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2417
+#: src/fr-window.c:2417
 msgid "Getting the file list"
 msgstr "கோப்பு பட்டியல் பெறப்படுகிறது"
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2421
+#: src/fr-window.c:2421
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2425
+#: src/fr-window.c:2425
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2429
+#: src/fr-window.c:2429
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2432
+#: src/fr-window.c:2432
 msgid "Copying the extracted files to the destination"
 msgstr ""
 
 #. Translators: %s is a filename
-#: ../src/fr-window.c:2440
+#: src/fr-window.c:2440
 #, c-format
 msgid "Saving \"%s\""
 msgstr ""
 
-#: ../src/fr-window.c:2606 ../src/ui/app-menu.ui.h:3
+#: src/fr-window.c:2606 src/ui/app-menu.ui:14
 msgid "_Quit"
 msgstr "_வ _வெளிச்செல்"
 
-#: ../src/fr-window.c:2607
+#: src/fr-window.c:2607
 msgid "_Open the Archive"
 msgstr "காப்பகத்தைத் திற (_O)"
 
-#: ../src/fr-window.c:2608
+#: src/fr-window.c:2608
 msgid "_Show the Files"
 msgstr "கோப்புகளை காட்டுக(_S)"
 
-#: ../src/fr-window.c:2609
+#: src/fr-window.c:2609
 msgid "Show the _Files and Quit"
 msgstr ""
 
-#: ../src/fr-window.c:2610 ../src/ui.h:59
+#: src/fr-window.c:2610 src/ui.h:59
 msgid "_Close"
 msgstr "மூடு (_C)"
 
-#: ../src/fr-window.c:2788
+#: src/fr-window.c:2788
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/fr-window.c:2840
+#: src/fr-window.c:2840
 msgid "Extraction completed successfully"
 msgstr "பிரித்தல் வெற்றிபரமாக முடிந்தது"
 
-#: ../src/fr-window.c:2865
+#: src/fr-window.c:2865
 msgid "Archive created successfully"
 msgstr "களஞ்சியம் உருவாக்கப் பட்டது"
 
-#: ../src/fr-window.c:2992 ../src/fr-window.c:3127
+#: src/fr-window.c:2992 src/fr-window.c:3127
 msgid "Command exited abnormally."
 msgstr "கட்டளை அசாதாரணமாக வெளியேறியது."
 
-#: ../src/fr-window.c:3085
+#: src/fr-window.c:3085
 msgid "An error occurred while extracting files."
 msgstr "கோப்புக்களை பிரித்தெடுக்கும் போது ஒரு பிழை நேர்ந்தது."
 
-#: ../src/fr-window.c:3091
+#: src/fr-window.c:3091
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "\"%s\" ஐ திறக்க முடியவில்லை"
 
-#: ../src/fr-window.c:3096
+#: src/fr-window.c:3096
 msgid "An error occurred while loading the archive."
 msgstr "காப்பகத்தை ஏற்றும் போது பிழை ஏற்பட்டுள்ளது."
 
-#: ../src/fr-window.c:3100
+#: src/fr-window.c:3100
 msgid "An error occurred while deleting files from the archive."
 msgstr "காப்பகத்திலிருந்து கோப்புக்களை நீக்கும் போது ஒரு பிழை நேர்ந்தது."
 
-#: ../src/fr-window.c:3106
+#: src/fr-window.c:3106
 msgid "An error occurred while adding files to the archive."
 msgstr "காப்பகத்தில் கோப்புக்களை சேர்க்கும் போது ஒரு பிழை நேர்ந்தது."
 
-#: ../src/fr-window.c:3110
+#: src/fr-window.c:3110
 msgid "An error occurred while testing archive."
 msgstr "காப்பகத்தை சோதிக்கும் போது ஒரு பிழை நேர்ந்தது."
 
-#: ../src/fr-window.c:3114
+#: src/fr-window.c:3114
 msgid "An error occurred while saving the archive."
 msgstr "காப்பகத்தை சேமிக்கும் போது பிழை ஏற்பட்ட்ளது."
 
-#: ../src/fr-window.c:3118
+#: src/fr-window.c:3118
 msgid "An error occurred."
 msgstr "ஒரு பிழை நேர்ந்தது."
 
-#: ../src/fr-window.c:3124
+#: src/fr-window.c:3124
 msgid "Command not found."
 msgstr "கட்டளையை கண்டுபிடிக்க முடியவில்லை."
 
-#: ../src/fr-window.c:3327
+#: src/fr-window.c:3327
 msgid "Test Result"
 msgstr "சோதனை முடிவு"
 
-#: ../src/fr-window.c:4186 ../src/fr-window.c:8332 ../src/fr-window.c:8368
-#: ../src/fr-window.c:8618
+#: src/fr-window.c:4186 src/fr-window.c:8332 src/fr-window.c:8368
+#: src/fr-window.c:8618
 msgid "Could not perform the operation"
 msgstr "செயலை செய்ய முடியவில்லை"
 
-#: ../src/fr-window.c:4212
+#: src/fr-window.c:4212
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
@@ -1180,114 +1252,114 @@ msgstr ""
 "இந்த கோப்பினை தற்போதைய காப்பகத்தில் சேர்க்க வேண்டுமா அல்லது புதிய காப்பகத்தை"
 " திறக்க வேண்டுமா?"
 
-#: ../src/fr-window.c:4242
+#: src/fr-window.c:4242
 msgid "Do you want to create a new archive with these files?"
 msgstr "இந்த கோப்புக்களுடன் புதிய காப்பகத்தை உருவாக்க வேண்டுமா?"
 
-#: ../src/fr-window.c:4245
+#: src/fr-window.c:4245
 msgid "Create _Archive"
 msgstr "காப்பகம் உருவாக்குதல் (_A)"
 
-#: ../src/fr-window.c:4840 ../src/fr-window.c:5901
+#: src/fr-window.c:4840 src/fr-window.c:5901
 msgid "Folders"
 msgstr "அடைவுகள்"
 
-#: ../src/fr-window.c:4878
+#: src/fr-window.c:4878
 msgctxt "File"
 msgid "Size"
 msgstr "அளவு"
 
-#: ../src/fr-window.c:4879
+#: src/fr-window.c:4879
 msgctxt "File"
 msgid "Type"
 msgstr "þனம்"
 
-#: ../src/fr-window.c:4880
+#: src/fr-window.c:4880
 msgctxt "File"
 msgid "Date Modified"
 msgstr "மாற்றப்பட்ட தேதி"
 
-#: ../src/fr-window.c:4881
+#: src/fr-window.c:4881
 msgctxt "File"
 msgid "Location"
 msgstr "இடம்"
 
-#: ../src/fr-window.c:4890
+#: src/fr-window.c:4890
 msgctxt "File"
 msgid "Name"
 msgstr "பெயர்"
 
-#: ../src/fr-window.c:5820
+#: src/fr-window.c:5820
 msgid "Find:"
 msgstr "தேடுதல்:"
 
-#: ../src/fr-window.c:5911
+#: src/fr-window.c:5911
 msgid "Close the folders pane"
 msgstr "பகுக்க வேண்டிய அடைவுகளை தேர்ந்தெடுக்கவும்"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: ../src/fr-window.c:5942
+#: src/fr-window.c:5942
 msgid "Open _Recent"
 msgstr "சமீபத்தியவற்றை திறத்தல் (_R)"
 
-#: ../src/fr-window.c:5943 ../src/fr-window.c:5955
+#: src/fr-window.c:5943 src/fr-window.c:5955
 msgid "Open a recently used archive"
 msgstr "சமீபத்தில் பயன்படுத்தப்பட்ட காப்பகத்தை திறக்கவும்"
 
 #. Translators: after the colon there is a folder name.
-#: ../src/fr-window.c:6032 ../src/ui/batch-add-files.ui.h:4
+#: src/fr-window.c:6032 src/ui/batch-add-files.ui:191
 msgid "_Location:"
 msgstr "(_L) இடம்:"
 
-#: ../src/fr-window.c:6381
+#: src/fr-window.c:6381
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "\"%s\" காப்பகத்தை சேமிக்க முடியவில்லை"
 
-#: ../src/fr-window.c:6880
+#: src/fr-window.c:6880
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "\"%s\" கோப்பை மாற்றவா?"
 
-#: ../src/fr-window.c:6883
+#: src/fr-window.c:6883
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: ../src/fr-window.c:6890
+#: src/fr-window.c:6890
 msgid "Replace _All"
 msgstr "_A அனைத்தையும் மாற்று"
 
-#: ../src/fr-window.c:6891
+#: src/fr-window.c:6891
 msgid "_Skip"
 msgstr "_தவிர்"
 
-#: ../src/fr-window.c:6892
+#: src/fr-window.c:6892
 msgid "_Replace"
 msgstr "மாற்று (_R)"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7734
+#: src/fr-window.c:7734
 msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: ../src/fr-window.c:7739
+#: src/fr-window.c:7739
 msgid "New name is the same as old one, please type other name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: ../src/fr-window.c:7744
+#: src/fr-window.c:7744
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: ../src/fr-window.c:7780
+#: src/fr-window.c:7780
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1298,7 +1370,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/fr-window.c:7782
+#: src/fr-window.c:7782
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1309,519 +1381,517 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../src/fr-window.c:7852
+#: src/fr-window.c:7852
 msgid "Rename"
 msgstr "மறுபெயர்"
 
-#: ../src/fr-window.c:7853
+#: src/fr-window.c:7853
 msgid "_New folder name:"
 msgstr ""
 
-#: ../src/fr-window.c:7853
+#: src/fr-window.c:7853
 msgid "_New file name:"
 msgstr ""
 
-#: ../src/fr-window.c:7857
+#: src/fr-window.c:7857
 msgid "_Rename"
 msgstr "மறுபெயர் (_R)"
 
-#: ../src/fr-window.c:7874 ../src/fr-window.c:7893
+#: src/fr-window.c:7874 src/fr-window.c:7893
 msgid "Could not rename the folder"
 msgstr "அடைவுக்கு வேறு பெயரிட முடியவில்லை"
 
-#: ../src/fr-window.c:7874 ../src/fr-window.c:7893
+#: src/fr-window.c:7874 src/fr-window.c:7893
 msgid "Could not rename the file"
 msgstr "கோப்புக்கு வேறு பெயரிட முடியவில்லை"
 
-#: ../src/fr-window.c:8293
+#: src/fr-window.c:8293
 msgid "Paste Selection"
 msgstr "ஒட்டுதல் தேர்ந்தெடுத்தல்"
 
-#: ../src/fr-window.c:8294
+#: src/fr-window.c:8294
 msgid "_Destination folder:"
 msgstr ""
 
-#: ../src/fr-window.c:8298 ../src/ui.h:76 ../src/ui.h:97
+#: src/fr-window.c:8298 src/ui.h:76 src/ui.h:97
 msgid "_Paste"
 msgstr "_ஒட்டு"
 
-#: ../src/fr-window.c:8897
+#: src/fr-window.c:8897
 msgid "Add files to an archive"
 msgstr "காப்பகத்தில் கோப்புகளைச் சேர்"
 
-#: ../src/fr-window.c:8940 ../src/main.c:197 ../src/server.c:329
-#: ../src/server.c:354 ../src/server.c:377
+#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/server.c:377
 msgid "Extract archive"
 msgstr "காப்பகத்தைப் பிரித்தெடுத்தல்"
 
-#. Expander
-#: ../src/gtk-utils.c:340
+#: src/gtk-utils.c:340
 msgid "Command _Line Output"
 msgstr "கட்டளை வரி வெளிப்பாடு (_L)"
 
-#: ../src/gtk-utils.c:579
+#: src/gtk-utils.c:579
 msgid "Could not display help"
 msgstr "உதவியைக் காட்ட முடியவில்லை"
 
-#: ../src/main.c:58
+#: src/main.c:58
 msgid "Add files to the specified archive and quit the program"
 msgstr "குறிப்பிட்ட காப்பகத்தில் கோப்புகளை சேர்த்து விட்டு வெளியேறவும்"
 
-#: ../src/main.c:59
+#: src/main.c:59
 msgid "ARCHIVE"
 msgstr "காப்பகம்"
 
-#: ../src/main.c:62
+#: src/main.c:62
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 "காப்பகத்தின் பெயரை கேட்டு கோப்புக்களை சேர்த்து நிரலில் இருந்து வெளியேறுக"
 
-#: ../src/main.c:66
+#: src/main.c:66
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 "காப்பகத்தை பிரித்து குறித்த அடைவுக்கு சேர்த்து நிரலில் இருந்து வெளியேறுக"
 
-#: ../src/main.c:67 ../src/main.c:79
+#: src/main.c:67 src/main.c:79
 msgid "FOLDER"
 msgstr "அடைவு"
 
-#: ../src/main.c:70
+#: src/main.c:70
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "காப்பகத்தை பிரித்து இலக்கு அடைவுக்கு சேர்த்து நிரலில் இருந்து வெளியேறுக"
 
-#: ../src/main.c:74
+#: src/main.c:74
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr "காப்பக அடைவு உள்ளடகத்தை  பிரித்து நிரலில் இருந்து வெளியேறுக "
 
-#: ../src/main.c:78
+#: src/main.c:78
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "'--add' மற்றும் '--extract' கட்டளைகளை பயன்படுத்த இயல்பான அடைவு"
 
-#: ../src/main.c:82
+#: src/main.c:82
 msgid "Create destination folder without asking confirmation"
 msgstr "உறுதிப்படுத்தாமல் இலக்கு அடைவை உருவாக்கவும்"
 
-#: ../src/main.c:87
+#: src/main.c:87
 msgid "Show the application's version"
 msgstr "பயன்பாட்டின் பதிப்பினை காட்டு"
 
-#: ../src/main.c:177 ../src/server.c:296 ../src/ui/batch-add-files.ui.h:1
+#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "குறுக்கவும்"
 
-#: ../src/main.c:326 ../src/server.c:444
+#: src/main.c:326 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- காப்பகத்தை உருவாக்கி திருத்தவும்"
 
-#: ../src/ui/add-options.ui.h:1
+#: src/ui/add-options.ui:8
 msgid "Load Options"
 msgstr "ஏற்றம் விருப்பங்கள்"
 
-#: ../src/ui/app-menu.ui.h:1 ../src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui.h:35
 msgid "_Help"
 msgstr "_உதவி"
 
-#: ../src/ui/app-menu.ui.h:2
+#: src/ui/app-menu.ui:10
 msgid "_About Archive Manager"
 msgstr ""
 
-#: ../src/ui/batch-add-files.ui.h:2
+#: src/ui/batch-add-files.ui:124
 msgid "_Filename:"
 msgstr "(_F) கோப்பின் பெயர்:"
 
-#: ../src/ui/batch-add-files.ui.h:3
+#: src/ui/batch-add-files.ui:140
 msgid "Location"
 msgstr "இடம்"
 
-#: ../src/ui/batch-add-files.ui.h:5 ../src/ui/new.ui.h:2
+#: src/ui/batch-add-files.ui:228 src/ui/new.ui:87
 msgid "_Encrypt the file list too"
 msgstr "(_E) கோப்பு பட்டியலையும் சுருக்க மறையாக்கம் செய்க"
 
 #. this is part of a sentence, for example "split into volumes of 10.0 MB",
 #. where MB stands for megabyte.
-#: ../src/ui/batch-add-files.ui.h:7 ../src/ui/new.ui.h:3
+#: src/ui/batch-add-files.ui:243 src/ui/new.ui:124
 msgid "Split into _volumes of"
 msgstr "இந்த வகையில் தொகுதியை பிரிக்கவும் (_v)"
 
 #. MB means megabytes
-#: ../src/ui/batch-add-files.ui.h:9 ../src/ui/new.ui.h:5
+#: src/ui/batch-add-files.ui:281 src/ui/new.ui:157
 msgid "MB"
 msgstr "எம்பி (MB)"
 
-#: ../src/ui/batch-add-files.ui.h:10 ../src/ui/batch-password.ui.h:2
-#: ../src/ui/new.ui.h:1 ../src/ui/password.ui.h:3
+#: src/ui/batch-add-files.ui:305 src/ui/batch-password.ui:131 src/ui/new.ui:76
+#: src/ui/password.ui:110
 msgid "_Password:"
 msgstr "(_P) கடவுச்சொல்:"
 
-#: ../src/ui/batch-add-files.ui.h:11 ../src/ui/new.ui.h:6
+#: src/ui/batch-add-files.ui:346 src/ui/new.ui:180
 msgid "_Other Options"
 msgstr "மற்ற விருப்பங்கள் (_O)"
 
-#: ../src/ui/batch-password.ui.h:1
+#: src/ui/batch-password.ui:100
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
 msgstr "<span weight=\"bold\" size=\"larger\">கடவுச்சொல் தேவை</span>"
 
-#: ../src/ui/delete.ui.h:1
+#: src/ui/delete.ui:8
 msgid "Delete"
 msgstr "அழித்தல்"
 
-#: ../src/ui/delete.ui.h:2 ../src/ui/extract-dialog-options.ui.h:2
+#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
 msgid "_All files"
 msgstr "அனைத்து கோப்புகள் (_A)"
 
-#: ../src/ui/delete.ui.h:3 ../src/ui/extract-dialog-options.ui.h:3
+#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
 msgid "_Selected files"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகள் (_S)"
 
-#: ../src/ui/delete.ui.h:4 ../src/ui/extract-dialog-options.ui.h:5
+#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
 msgid "example: *.txt; *.doc"
 msgstr "எடுத்துக்காட்டு: *.txt; *.doc"
 
-#: ../src/ui/delete.ui.h:5 ../src/ui/extract-dialog-options.ui.h:4
+#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
 msgid "_Files:"
 msgstr "கோப்புகள் (_F):"
 
-#: ../src/ui/extract-dialog-options.ui.h:1
+#: src/ui/extract-dialog-options.ui:20
 msgctxt "Action"
 msgid "Extract"
 msgstr "பிரித்தெடுத்தல்"
 
-#: ../src/ui/extract-dialog-options.ui.h:6
+#: src/ui/extract-dialog-options.ui:141
 msgid "Actions"
 msgstr "செயல்கள்"
 
-#: ../src/ui/extract-dialog-options.ui.h:7
+#: src/ui/extract-dialog-options.ui:162
 msgid "Re-crea_te folders"
 msgstr "அடைவுகளை மீண்டும் உருவாக்கவும் (_t)"
 
-#: ../src/ui/extract-dialog-options.ui.h:8
+#: src/ui/extract-dialog-options.ui:178
 msgid "Do not e_xtract older files"
 msgstr "பழைய கோப்புகளை பிரிக்க வேண்டாம் (_x)"
 
-#: ../src/ui/extract-dialog-options.ui.h:9
+#: src/ui/extract-dialog-options.ui:194
 msgid "Over_write existing files"
 msgstr "இருக்கும் கோப்புகளை மேலெழுதவும் (_w)"
 
-#: ../src/ui.h:32
+#: src/ui.h:32
 msgid "_Archive"
 msgstr "காப்பகம் (_A)"
 
-#: ../src/ui.h:33
+#: src/ui.h:33
 msgid "_Edit"
 msgstr "தொகு (_E)"
 
-#: ../src/ui.h:34
+#: src/ui.h:34
 msgid "_View"
 msgstr "_பார்"
 
-#: ../src/ui.h:36
+#: src/ui.h:36
 msgid "_Arrange Files"
 msgstr "கோப்புகளை ஒழுங்குபடுத்துதல் (_A)"
 
-#: ../src/ui.h:39
+#: src/ui.h:39
 msgid "_About"
 msgstr "பற்றி "
 
-#: ../src/ui.h:40
+#: src/ui.h:40
 msgid "Information about the program"
 msgstr "நிரலைப்பற்றிய தகவல்"
 
-#: ../src/ui.h:43
+#: src/ui.h:43
 msgid "_Add Files…"
 msgstr ""
 
-#: ../src/ui.h:44 ../src/ui.h:48
+#: src/ui.h:44 src/ui.h:48
 msgid "Add files to the archive"
 msgstr "காப்பகத்தில் கோப்புகளைச் சேர்த்தல்"
 
-#: ../src/ui.h:51
+#: src/ui.h:51
 msgid "Add a _Folder…"
 msgstr ""
 
-#: ../src/ui.h:52 ../src/ui.h:56
+#: src/ui.h:52 src/ui.h:56
 msgid "Add a folder to the archive"
 msgstr "காப்பகத்தில் ஒரு அடைவைச்சேர்த்தல் (_F)"
 
-#: ../src/ui.h:55
+#: src/ui.h:55
 msgid "Add Folder"
 msgstr "அடைவை சேர்த்தல்"
 
-#: ../src/ui.h:60
+#: src/ui.h:60
 msgid "Close the current archive"
 msgstr "நடப்பு காப்பகத்தை மூடுதல்"
 
-#: ../src/ui.h:63
+#: src/ui.h:63
 msgid "Contents"
 msgstr "உள்ளடக்கங்கள்"
 
-#: ../src/ui.h:64
+#: src/ui.h:64
 msgid "Display the Engrampa Manual"
 msgstr "Engrampa கையேட்டை காட்டவும்"
 
-#: ../src/ui.h:68 ../src/ui.h:89
+#: src/ui.h:68 src/ui.h:89
 msgid "_Copy"
 msgstr "நகல் (_C)"
 
-#: ../src/ui.h:69 ../src/ui.h:90
+#: src/ui.h:69 src/ui.h:90
 msgid "Copy the selection"
 msgstr "தேர்ந்தெடுத்ததை நகலெடுக்கவும்"
 
-#: ../src/ui.h:72 ../src/ui.h:93
+#: src/ui.h:72 src/ui.h:93
 msgid "Cu_t"
 msgstr "வெ_ட்டு"
 
-#: ../src/ui.h:73 ../src/ui.h:94
+#: src/ui.h:73 src/ui.h:94
 msgid "Cut the selection"
 msgstr "தேர்ந்தெடுத்ததை வெட்டுதல்"
 
-#: ../src/ui.h:77 ../src/ui.h:98
+#: src/ui.h:77 src/ui.h:98
 msgid "Paste the clipboard"
 msgstr "கிளிப்போர்டில் இருந்து ஒட்டுதல்"
 
-#: ../src/ui.h:80 ../src/ui.h:101
+#: src/ui.h:80 src/ui.h:101
 msgid "_Rename…"
 msgstr ""
 
-#: ../src/ui.h:81 ../src/ui.h:102
+#: src/ui.h:81 src/ui.h:102
 msgid "Rename the selection"
 msgstr "தேர்ந்தெடுத்ததை மறுபெயரிடுதல்"
 
-#: ../src/ui.h:84 ../src/ui.h:105
+#: src/ui.h:84 src/ui.h:105
 msgid "_Delete"
 msgstr "(_D)நீக்கவும்"
 
-#: ../src/ui.h:85 ../src/ui.h:106
+#: src/ui.h:85 src/ui.h:106
 msgid "Delete the selection from the archive"
 msgstr "தேர்ந்தெடுத்ததை காப்பகத்திலிருந்து அழித்தல்"
 
-#: ../src/ui.h:110
+#: src/ui.h:110
 msgid "Dese_lect All"
 msgstr "அனைத்து தேர்வுசெய்தலையும் நீக்குதல் (_l)"
 
-#: ../src/ui.h:111
+#: src/ui.h:111
 msgid "Deselect all files"
 msgstr "அனைத்து கோப்புகளையும் தேர்வுசெய்தலையும் நீக்குதல்"
 
-#: ../src/ui.h:114 ../src/ui.h:118
+#: src/ui.h:114 src/ui.h:118
 msgid "_Extract…"
 msgstr ""
 
-#: ../src/ui.h:115 ../src/ui.h:119 ../src/ui.h:123
+#: src/ui.h:115 src/ui.h:119 src/ui.h:123
 msgid "Extract files from the archive"
 msgstr "காப்பகத்திலிருந்து கோப்புகளை பிரித்தல்"
 
-#: ../src/ui.h:126
+#: src/ui.h:126
 msgid "Find…"
 msgstr ""
 
-#: ../src/ui.h:131
+#: src/ui.h:131
 msgid "_Last Output"
 msgstr "கடைசி வெளிப்பாடு (_L)"
 
-#: ../src/ui.h:132
+#: src/ui.h:132
 msgid "View the output produced by the last executed command"
 msgstr "கடைசியாக இயக்கிய கட்டளையின் வெளியீட்டை காண்க"
 
-#: ../src/ui.h:135
+#: src/ui.h:135
 msgid "New…"
 msgstr ""
 
-#: ../src/ui.h:136
+#: src/ui.h:136
 msgid "Create a new archive"
 msgstr "புதிய காப்பகம் உருவாக்குதல்"
 
-#: ../src/ui.h:139
+#: src/ui.h:139
 msgid "Open…"
 msgstr ""
 
-#: ../src/ui.h:140 ../src/ui.h:144
+#: src/ui.h:140 src/ui.h:144
 msgid "Open archive"
 msgstr "காப்பகத்தைத் திறத்தல்"
 
-#: ../src/ui.h:143 ../src/ui.h:179 ../src/ui.h:183 ../src/ui.h:187
-#: ../src/ui.h:191
+#: src/ui.h:143 src/ui.h:179 src/ui.h:183 src/ui.h:187 src/ui.h:191
 msgid "_Open"
 msgstr "(_O)திற"
 
-#: ../src/ui.h:147
+#: src/ui.h:147
 msgid "_Open With…"
 msgstr ""
 
-#: ../src/ui.h:148
+#: src/ui.h:148
 msgid "Open selected files with an application"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகளை பயன்பாடு ஒன்றினால் திறக்கவும்"
 
-#: ../src/ui.h:151
+#: src/ui.h:151
 msgid "Pass_word…"
 msgstr ""
 
-#: ../src/ui.h:152
+#: src/ui.h:152
 msgid "Specify a password for this archive"
 msgstr "இந்த காப்பகத்திற்கான கடவுச்சொல்லை குறிப்பிடவும்"
 
-#: ../src/ui.h:155
+#: src/ui.h:155
 msgid "_Properties"
 msgstr "(_P)பண்புகள்"
 
-#: ../src/ui.h:156
+#: src/ui.h:156
 msgid "Show archive properties"
 msgstr "காப்பக பண்புகளை காட்டவும்"
 
-#: ../src/ui.h:159
+#: src/ui.h:159
 msgid "_Refresh"
 msgstr "புதுப்பி (_R)"
 
-#: ../src/ui.h:160
+#: src/ui.h:160
 msgid "Reload current archive"
 msgstr "நடப்பு காப்பகத்தை மீண்டும் ஏற்றவும்"
 
-#: ../src/ui.h:163
+#: src/ui.h:163
 msgid "Save As…"
 msgstr "இந்த பெயரில் சேமிக்கவும்..."
 
-#: ../src/ui.h:164
+#: src/ui.h:164
 msgid "Save the current archive with a different name"
 msgstr "நடப்பு காப்பகத்தை வேறு பெயரில் சேமிக்கவும்"
 
-#: ../src/ui.h:167
+#: src/ui.h:167
 msgid "Select _All"
 msgstr "அனைத்தையும் தேர்ந்தெடு (_A)"
 
-#: ../src/ui.h:168
+#: src/ui.h:168
 msgid "Select all files"
 msgstr "அனைத்து கோப்புகளையும் தேர்ந்தெடுக்கவும்"
 
-#: ../src/ui.h:171
+#: src/ui.h:171
 msgid "_Stop"
 msgstr "(_S) நிறுத்து"
 
-#: ../src/ui.h:172
+#: src/ui.h:172
 msgid "Stop current operation"
 msgstr "நடப்பு செயலை நிறுத்தவும்"
 
-#: ../src/ui.h:175
+#: src/ui.h:175
 msgid "_Test Integrity"
 msgstr "ஒருங்கிணைப்பினை சோதிக்கவும் (_T)"
 
-#: ../src/ui.h:176
+#: src/ui.h:176
 msgid "Test whether the archive contains errors"
 msgstr "காப்பகத்தில் பிழைகள் உள்ளனவா என்று சோதிக்கவும்"
 
-#: ../src/ui.h:180 ../src/ui.h:184
+#: src/ui.h:180 src/ui.h:184
 msgid "Open the selected file"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்பினை திறக்கவும்"
 
-#: ../src/ui.h:188 ../src/ui.h:192
+#: src/ui.h:188 src/ui.h:192
 msgid "Open the selected folder"
 msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்பினை திறக்கவும்"
 
-#: ../src/ui.h:197
+#: src/ui.h:197
 msgid "Go to the previous visited location"
 msgstr "முந்தைய இடத்திற்குப் போகவும்"
 
-#: ../src/ui.h:201
+#: src/ui.h:201
 msgid "Go to the next visited location"
 msgstr "அடுத்து போன இடத்துக்குப் போகவும்"
 
-#: ../src/ui.h:205
+#: src/ui.h:205
 msgid "Go up one level"
 msgstr "ஒரு நிலை மேலே போகவும்"
 
 #. Translators: the home location is the home folder.
-#: ../src/ui.h:210
+#: src/ui.h:210
 msgid "Go to the home location"
 msgstr "இல்ல இடத்துக்குப் போகவும்"
 
-#: ../src/ui.h:218
+#: src/ui.h:218
 msgid "_Toolbar"
 msgstr "கருவிப்பட்டை (_T)"
 
-#: ../src/ui.h:219
+#: src/ui.h:219
 msgid "View the main toolbar"
 msgstr "முக்கிய கருவிப்பட்டையை பார்க்கவும்"
 
-#: ../src/ui.h:223
+#: src/ui.h:223
 msgid "Stat_usbar"
 msgstr "நிலைப்பட்டை (_u)"
 
-#: ../src/ui.h:224
+#: src/ui.h:224
 msgid "View the statusbar"
 msgstr "நிலைப்பட்டியை பார்க்கவும்"
 
-#: ../src/ui.h:228
+#: src/ui.h:228
 msgid "_Reversed Order"
 msgstr "தலைகீழ் வரிசை (_R)"
 
-#: ../src/ui.h:229
+#: src/ui.h:229
 msgid "Reverse the list order"
 msgstr "பட்டியல் வரிசையை தலைகீழாக்கவும்"
 
-#: ../src/ui.h:233
+#: src/ui.h:233
 msgid "_Folders"
 msgstr "அடைவுகள் (_F)"
 
-#: ../src/ui.h:243
+#: src/ui.h:243
 msgid "View All _Files"
 msgstr "அனைத்து கோப்புகளையும் பார்க்கவும் (_F)"
 
-#: ../src/ui.h:246
+#: src/ui.h:246
 msgid "View as a F_older"
 msgstr "ஒரு அடைவாக பார்க்கவும் (_F)"
 
-#: ../src/ui.h:254
+#: src/ui.h:254
 msgid "by _Name"
 msgstr "பெயரின் படி (_N)"
 
-#: ../src/ui.h:255
+#: src/ui.h:255
 msgid "Sort file list by name"
 msgstr "கோப்பு பட்டியலை பெயர்படி அடுக்கவும்"
 
-#: ../src/ui.h:257
+#: src/ui.h:257
 msgid "by _Size"
 msgstr "அளவு படி (_S)"
 
-#: ../src/ui.h:258
+#: src/ui.h:258
 msgid "Sort file list by file size"
 msgstr "கோப்பு பட்டியலை கோப்பு அளவுப்படி அடுக்கவும்"
 
-#: ../src/ui.h:260
+#: src/ui.h:260
 msgid "by T_ype"
 msgstr "வகை படி (_y)"
 
-#: ../src/ui.h:261
+#: src/ui.h:261
 msgid "Sort file list by type"
 msgstr "கோப்புப் பட்டியலை வகைப்படி அடுக்கவும்"
 
-#: ../src/ui.h:263
+#: src/ui.h:263
 msgid "by _Date Modified"
 msgstr "மாற்றப்பட்ட தேதி படி (_D)"
 
-#: ../src/ui.h:264
+#: src/ui.h:264
 msgid "Sort file list by modification time"
 msgstr "கோப்புப் பட்டியலை மாற்றிய நேரப்படி அடுக்கவும்"
 
 #. Translators: this is the "sort by file location" menu item
-#: ../src/ui.h:267
+#: src/ui.h:267
 msgid "by _Location"
 msgstr "இடத்தின் படி (_L)"
 
 #. Translators: location is the file location
-#: ../src/ui.h:269
+#: src/ui.h:269
 msgid "Sort file list by location"
 msgstr "கோப்புப் பட்டியலை  இடத்தைப் பொறுத்து அடுக்கவும்"
 
-#: ../src/ui/password.ui.h:1
+#: src/ui/password.ui:8
 msgid "Password"
 msgstr "கடவுச்சொல்"
 
-#: ../src/ui/password.ui.h:2
+#: src/ui/password.ui:78
 msgid "_Encrypt the file list"
 msgstr ""
 
-#: ../src/ui/password.ui.h:4
+#: src/ui/password.ui:151
 msgid ""
 "<i><b>Note:</b> the password will be used to encrypt files you add to the "
 "current archive, and to decrypt files you extract from the current archive. "
@@ -1832,43 +1902,43 @@ msgstr ""
 "செய்யவும் கடவுச்சொல் பயன்படும். களஞ்சியத்தை மூடும் போது கடவுச்சொல் "
 "நீக்கப்படும்.</i>"
 
-#: ../src/ui/properties.ui.h:1
+#: src/ui/properties.ui:77
 msgctxt "File"
 msgid "Name:"
 msgstr "பெயர்:"
 
-#: ../src/ui/properties.ui.h:2
+#: src/ui/properties.ui:93
 msgid "Archive size:"
 msgstr "காப்பக வகை:"
 
-#: ../src/ui/properties.ui.h:3
+#: src/ui/properties.ui:133
 msgid "Compression ratio:"
 msgstr "குறுக்க விகிதம்:"
 
-#: ../src/ui/properties.ui.h:4
+#: src/ui/properties.ui:160
 msgid "Content size:"
 msgstr "உள்ளடக்க அளவு:"
 
-#: ../src/ui/properties.ui.h:5
+#: src/ui/properties.ui:199
 msgid "Number of files:"
 msgstr "கோப்புகளின் எண்ணிக்கை:"
 
-#: ../src/ui/properties.ui.h:6
+#: src/ui/properties.ui:241
 msgid "Location:"
 msgstr "இடம்:"
 
-#: ../src/ui/properties.ui.h:7
+#: src/ui/properties.ui:257
 msgid "Last modified:"
 msgstr "கடைசியாக திருத்தப்பட்ட தேதி:"
 
-#: ../src/ui/properties.ui.h:8
+#: src/ui/properties.ui:273
 msgid "Type:"
 msgstr "வகை:"
 
-#: ../src/ui/update.ui.h:1
+#: src/ui/update.ui:68 src/ui/update.ui:245
 msgid "_Update"
 msgstr "மேம்படுத்தல் (_U)"
 
-#: ../src/ui/update.ui.h:3
+#: src/ui/update.ui:348
 msgid "S_elect the files you want to update:"
 msgstr "மேம்படுத்த வேண்டிய கோப்புகளை தேர்ந்தெடுக்கவும் (_e):"
