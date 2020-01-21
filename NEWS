@@ -1,6 +1,24 @@
+### engrampa 1.23.3
+
+  * Translations update
+  * Update copyright to 2020
+  * fr-command-rpm: Use rpm2cpio binary shipped with rpm package
+  * help: pull updated Italian translation with fixed msgstr
+  * add source rpm to supported mime-types
+  * use cpio if no binary is found
+  * add a configure environment variable to select the cpio path
+  * 7z: Don't set the work directory, i.e. use temporary directory
+  * Check if a mime-type is an alias in compute_supported_archive_types
+  * define LOCALEDIR for bindtextdomain()
+  * migrate from intltool to gettext
+  * Clean file type selection in new archive dialog
+  * pull fixed Italian language for user-guide
+  * Automatically sets the maximum size of static arrays
+  * Fix localized pause UI logic
+
 ### engrampa 1.23.2
 
-  * tx: sync with transifex
+  * Translations update
   * LHA: add test for checking compressed file integrity
   * Add application/(x-compress|x-rpm|x-lzh-compressed) in local magic
   * Show archive type in properties dialog
@@ -39,7 +57,7 @@
 
 ### engrampa 1.23.1
 
-  * tx: sync with transifex
+  * Translations update
   * java-utils: Remove blank spaces before reading package name
   * fr-command-lrzip: Fix empty string check
   * Redundant redeclaration of ‘fr_command_is_capable_of’
@@ -56,7 +74,7 @@
 
 ### engrampa 1.23.0
 
-  * tx: sync with transifex
+  * Translations update
   * Remove trailing whitespaces
   * Update FSF address
   * [ci] Add cppcheck html report
