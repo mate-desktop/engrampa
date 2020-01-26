@@ -640,8 +640,11 @@ child_setup (gpointer user_data)
 {
 	FrProcess *process = user_data;
 
-	if (process->priv->use_standard_locale)
-		putenv ("LC_ALL=C");
+	if (process->priv->use_standard_locale) {
+		putenv ("LC_MESSAGES=C");
+		putenv ("LC_TIME=C");
+		putenv ("LC_NUMERIC=C");
+	}
 
 	/* detach from the tty */
 
@@ -744,8 +747,11 @@ start_current_command (FrProcess *process)
 	{
 		int j;
 
-		if (process->priv->use_standard_locale)
-			g_print ("\tLC_ALL=C\n");
+		if (process->priv->use_standard_locale) {
+			g_print ("\tLC_MESSAGES=C\n");
+			g_print ("\tLC_TIME=C\n");
+			g_print ("\tLC_NUMERIC=C\n");
+		}
 
 		if (info->dir != NULL)
 			g_print ("\tcd %s\n", info->dir);
