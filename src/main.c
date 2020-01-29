@@ -33,8 +33,6 @@
 
 #include "fr-init.h"
 
-gint          ForceDirectoryCreation;
-
 static char **remaining_args;
 static char  *add_to = NULL;
 static int    add;
