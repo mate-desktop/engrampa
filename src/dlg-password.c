@@ -88,13 +88,7 @@ dlg_password (GtkWidget *widget,
 	DialogData *data;
 
 	data = g_new0 (DialogData, 1);
-
-	data->builder = _gtk_builder_new_from_resource ("password.ui");
-	if (data->builder == NULL) {
-		g_free (data);
-		return;
-	}
-
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "password.ui");
 	data->window = window;
 
 	/* Get the widgets. */

@@ -72,12 +72,7 @@ dlg_prop (FrWindow *window)
 	double            ratio;
 
 	data = g_new (DialogData, 1);
-
-	data->builder = _gtk_builder_new_from_resource ("properties.ui");
-	if (data->builder == NULL) {
-		g_free (data);
-		return;
-	}
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "properties.ui");
 
 	/* Get the widgets. */
 

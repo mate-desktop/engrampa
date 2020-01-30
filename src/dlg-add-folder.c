@@ -204,10 +204,7 @@ add_folder_cb (GtkWidget *widget,
 	GtkBuilder  *builder;
 	DialogData  *data;
 
-	builder = _gtk_builder_new_from_resource ("dlg-add-folder.ui");
-	if (builder == NULL) {
-		return;
-	}
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "dlg-add-folder.ui");
 
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
@@ -668,11 +665,7 @@ load_options_cb (GtkWidget  *w,
 	aod_data = g_new0 (LoadOptionsDialogData, 1);
 
 	aod_data->data = data;
-	aod_data->builder = _gtk_builder_new_from_resource ("add-options.ui");
-	if (aod_data->builder == NULL) {
-		g_free (aod_data);
-		return;
-	}
+	aod_data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "add-options.ui");
 
 	/* Get the widgets. */
 

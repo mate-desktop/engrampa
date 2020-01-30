@@ -114,12 +114,7 @@ dlg_delete__common (FrWindow *window,
 	data = g_new (DialogData, 1);
 	data->window = window;
 	data->selected_files = selected_files;
-
-	data->builder = _gtk_builder_new_from_resource ("delete.ui");
-	if (data->builder == NULL) {
-		g_free (data);
-		return;
-	}
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "delete.ui");
 
 	/* Get the widgets. */
 
