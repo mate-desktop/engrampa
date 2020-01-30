@@ -97,13 +97,7 @@ dlg_ask_password__common (FrWindow       *window,
 	char       *name = NULL;
 
 	data = g_new0 (DialogData, 1);
-
-	data->builder = _gtk_builder_new_from_resource ("batch-password.ui");
-	if (data->builder == NULL) {
-		g_free (data);
-		return;
-	}
-
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "batch-password.ui");
 	data->window = window;
 	data->pwd_type = pwd_type;
 

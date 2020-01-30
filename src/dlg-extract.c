@@ -295,10 +295,7 @@ dlg_extract__common (FrWindow *window,
 	DialogData *data;
 
 	data = g_new0 (DialogData, 1);
-	if ((data->builder = _gtk_builder_new_from_resource ("dlg-extract.ui")) == NULL) {
-		g_free (data);
-		return;
-	}
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "dlg-extract.ui");
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_EXTRACT);
 	data->window = window;
 	data->selected_files = selected_files;

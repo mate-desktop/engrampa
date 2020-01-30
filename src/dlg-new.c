@@ -272,13 +272,7 @@ dlg_new_archive (FrWindow  *window,
 	int            i;
 
 	data = g_new0 (DlgNewData, 1);
-
-	data->builder = _gtk_builder_new_from_resource ("new.ui");
-	if (data->builder == NULL) {
-		g_free (data);
-		return NULL;
-	}
-
+	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "new.ui");
 	data->window = window;
 	data->supported_types = supported_types;
 	sort_mime_types_by_description (data->supported_types);

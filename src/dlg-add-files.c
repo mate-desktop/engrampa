@@ -140,9 +140,7 @@ add_files_cb (GtkWidget *widget,
 	DialogData *data;
 	char       *folder;
 
-	builder = _gtk_builder_new_from_resource ("dlg-add-files.ui");
-	if (builder == NULL)
-		return;
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "dlg-add-files.ui");
 
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
