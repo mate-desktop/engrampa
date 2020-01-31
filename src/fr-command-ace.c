@@ -130,7 +130,7 @@ process_line (char     *line,
 	else if (ace_comm->command_type == FR_ACE_COMMAND_NONFREE)
 		fields = split_line (line, 5);
 
-	if ((fields == NULL) || (fields[0] == NULL) || (n_fields (fields) < 5))
+	if ((fields == NULL) || (g_strv_length (fields) < 5))
 		return;
 
 	fdata->size = g_ascii_strtoull (fields[3], NULL, 10);
