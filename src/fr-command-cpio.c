@@ -66,7 +66,7 @@ mktime_from_string (char *month,
 	tm.tm_mday = atoi (mday);
 	if (strchr (year, ':') != NULL) {
 		char **fields = g_strsplit (year, ":", 2);
-        	if (n_fields (fields) == 2) {
+		if ((fields != NULL) && (g_strv_length (fields) == 2)) {
 	        	time_t      now;
         		struct tm  *now_tm;
 
