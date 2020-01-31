@@ -37,7 +37,6 @@
 #include "typedefs.h"
 
 
-#define ARCHIVE_ICON_SIZE (48)
 #define BAD_CHARS "/\\*"
 #define GET_WIDGET(x) (_gtk_builder_get_widget (data->builder, (x)))
 
@@ -401,16 +400,14 @@ archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 {
 	const char *mime_type;
 	int         idx = gtk_combo_box_get_active (combo_box);
-	GdkPixbuf  *icon;
+	char       *icon_name;
 
 	mime_type = mime_type_desc[data->supported_types[idx]].mime_type;
-
-	icon = get_mime_type_pixbuf (mime_type, ARCHIVE_ICON_SIZE, NULL);
-	if (icon != NULL) {
-		gtk_image_set_from_pixbuf (GTK_IMAGE (GET_WIDGET ("archive_icon_image")), icon);
-		g_object_unref (icon);
+	if ((icon_name = g_content_type_get_generic_icon_name (mime_type)) != NULL) {
+		gtk_image_set_from_icon_name (GTK_IMAGE (GET_WIDGET ("archive_icon_image")),
+		                              icon_name, GTK_ICON_SIZE_DIALOG);
+		g_free (icon_name);
 	}
-
 	update_sensitivity_for_mime_type (data, mime_type);
 }
 
