@@ -26,7 +26,6 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include "file-utils.h"
-#include "fr-stock.h"
 #include "fr-window.h"
 #include "gtk-utils.h"
 #include "preferences.h"
@@ -137,62 +136,36 @@ void
 add_files_cb (GtkWidget *widget,
 	      void      *callback_data)
 {
-	GtkWidget  *file_sel;
+	GtkBuilder *builder;
 	DialogData *data;
-	GtkWidget  *main_box;
 	char       *folder;
+
+	builder = _gtk_builder_new_from_resource ("dlg-add-files.ui");
+	if (builder == NULL)
+		return;
 
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_ADD);
-	data->dialog = file_sel =
-		gtk_file_chooser_dialog_new (_("Add Files"),
-					     GTK_WINDOW (data->window),
-					     GTK_FILE_CHOOSER_ACTION_OPEN,
-					     "gtk-cancel", GTK_RESPONSE_CANCEL,
-					     FR_STOCK_ADD_FILES, GTK_RESPONSE_OK,
-					     "gtk-help", GTK_RESPONSE_HELP,
-					     NULL);
-
-	gtk_window_set_default_size (GTK_WINDOW (data->dialog), 530, 450);
-
-	gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (file_sel), TRUE);
-	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (file_sel), FALSE);
-	gtk_dialog_set_default_response (GTK_DIALOG (file_sel), GTK_RESPONSE_OK);
-
-	/* Translators: add a file to the archive only if the disk version is
-	 * newer than the archive version. */
-	data->add_if_newer_checkbutton = gtk_check_button_new_with_mnemonic (_("Add only if _newer"));
-
-	main_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 20);
-	gtk_container_set_border_width (GTK_CONTAINER (main_box), 0);
-	gtk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (file_sel), main_box);
-
-	gtk_box_pack_start (GTK_BOX (main_box), data->add_if_newer_checkbutton,
-			    TRUE, TRUE, 0);
-
-	gtk_widget_show_all (main_box);
+	data->dialog = _gtk_builder_get_widget (builder, "dialog_add_files");
+	data->add_if_newer_checkbutton = _gtk_builder_get_widget (builder, "add_if_newer_checkbutton");
 
 	/* set data */
-
 	folder = g_settings_get_string (data->settings, PREF_ADD_CURRENT_FOLDER);
 	if ((folder == NULL) || (strcmp (folder, "") == 0))
 		folder = g_strdup (fr_window_get_add_default_dir (data->window));
-	gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (file_sel), folder);
+	gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (GTK_WIDGET (data->dialog)), folder);
 	g_free (folder);
 
 	/* signals */
+	gtk_builder_add_callback_symbols (builder,
+	                                  "on_dlg_add_files_destroy", G_CALLBACK (open_file_destroy_cb),
+	                                  "on_dlg_add_files_response", G_CALLBACK (file_sel_response_cb),
+	                                  NULL);
+	gtk_builder_connect_signals (builder, data);
 
-	g_signal_connect (G_OBJECT (file_sel),
-			  "destroy",
-			  G_CALLBACK (open_file_destroy_cb),
-			  data);
+	g_object_unref (builder);
 
-	g_signal_connect (G_OBJECT (file_sel),
-			  "response",
-			  G_CALLBACK (file_sel_response_cb),
-			  data);
-
-	gtk_window_set_modal (GTK_WINDOW (file_sel), TRUE);
-	gtk_widget_show (file_sel);
+	gtk_window_set_modal (GTK_WINDOW (data->dialog), TRUE);
+	gtk_widget_show (data->dialog);
 }
