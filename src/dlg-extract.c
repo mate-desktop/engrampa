@@ -295,34 +295,16 @@ dlg_extract__common (FrWindow *window,
 	DialogData *data;
 
 	data = g_new0 (DialogData, 1);
+	if ((data->builder = _gtk_builder_new_from_resource ("dlg-extract.ui")) == NULL) {
+		g_free (data);
+		return;
+	}
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_EXTRACT);
 	data->window = window;
 	data->selected_files = selected_files;
 	data->base_dir_for_selection = base_dir_for_selection;
 	data->extract_clicked = FALSE;
-
-	data->dialog = gtk_file_chooser_dialog_new (_("Extract"),
-	                                            GTK_WINDOW (data->window),
-	                                            GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-	                                            "gtk-cancel", GTK_RESPONSE_CANCEL,
-	                                            FR_STOCK_EXTRACT, GTK_RESPONSE_OK,
-	                                            "gtk-help", GTK_RESPONSE_HELP,
-	                                            NULL);
-
-	gtk_window_set_default_size (GTK_WINDOW (data->dialog), 530, 510);
-
-	gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER (data->dialog), FALSE);
-	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (data->dialog), FALSE);
-	gtk_dialog_set_default_response (GTK_DIALOG (data->dialog), GTK_RESPONSE_OK);
-
-	data->builder = _gtk_builder_new_from_resource ("extract-dialog-options.ui");
-	if (data->builder == NULL) {
-		g_object_unref (data->settings);
-		gtk_widget_destroy (data->dialog);
-		g_free (data);
-		return;
-	}
-	gtk_file_chooser_set_extra_widget (GTK_FILE_CHOOSER (data->dialog), GET_WIDGET ("extra_widget"));
+	data->dialog = GET_WIDGET ("dialog_extract");
 
 	/* Set widgets data. */
 
@@ -347,25 +329,13 @@ dlg_extract__common (FrWindow *window,
 
 	/* Set the signals handlers. */
 
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "destroy",
-			  G_CALLBACK (destroy_cb),
-			  data);
-
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "response",
-			  G_CALLBACK (file_sel_response_cb),
-			  data);
-
-	g_signal_connect (G_OBJECT (GET_WIDGET ("overwrite_checkbutton")),
-			  "toggled",
-			  G_CALLBACK (overwrite_toggled_cb),
-			  data);
-
-	g_signal_connect (G_OBJECT (GET_WIDGET ("file_pattern_entry")),
-			  "changed",
-			  G_CALLBACK (files_entry_changed_cb),
-			  data);
+	gtk_builder_add_callback_symbols (data->builder,
+	                                  "on_dialog_extract_destroy", G_CALLBACK (destroy_cb),
+	                                  "on_dialog_extract_response", G_CALLBACK (file_sel_response_cb),
+	                                  "on_overwrite_checkbutton_toggled", G_CALLBACK (overwrite_toggled_cb),
+	                                  "on_file_pattern_entry_changed", G_CALLBACK (files_entry_changed_cb),
+	                                  NULL);
+	gtk_builder_connect_signals (data->builder, data);
 
 	/* Run dialog. */
 

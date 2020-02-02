@@ -4,8 +4,8 @@ EXTRA_DIST = 			\
 	batch-add-files.ui	\
 	batch-password.ui	\
 	delete.ui		\
+	dlg-extract.ui		\
 	engrampa.about		\
-	extract-dialog-options.ui \
 	menus-toolbars.ui	\
 	new.ui			\
 	password.ui		\
