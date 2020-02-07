@@ -285,7 +285,7 @@ dlg_new_archive (FrWindow  *window,
 
 	/* Get the widgets. */
 
-	data->dialog = GET_WIDGET ("filechooserdialog");
+	data->dialog = GET_WIDGET ("dialog");
 
 	data->n_password_entry = GET_WIDGET ("n_password_entry");
 	data->n_password_label = GET_WIDGET ("n_password_label");
@@ -358,42 +358,18 @@ dlg_new_archive (FrWindow  *window,
 
 	/* Set the signals handlers. */
 
-	/*g_signal_connect (G_OBJECT (data->dialog),
-			  "response",
-			  G_CALLBACK (new_file_response_cb),
-			  data);*/
+	gtk_builder_add_callback_symbols (data->builder,
+	                                  "on_dialog_destroy", G_CALLBACK (destroy_cb),
+	                                  "on_n_password_entry_changed", G_CALLBACK (password_entry_changed_cb),
+	                                  "on_n_volume_checkbutton_toggled", G_CALLBACK (volume_toggled_cb),
+	                                  NULL);
+	gtk_builder_connect_signals (data->builder, data);
 
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "destroy",
-			  G_CALLBACK (destroy_cb),
-			  data);
-
-	/*
-	g_signal_connect_swapped (G_OBJECT (cancel_button),
-				  "clicked",
-				  G_CALLBACK (gtk_widget_destroy),
-				  G_OBJECT (data->dialog));
-	g_signal_connect (G_OBJECT (add_button),
-			  "clicked",
-			  G_CALLBACK (add_clicked_cb),
-			  data);*/
-
-	/* FIXME g_signal_connect (G_OBJECT (data->n_archive_type_combo_box),
-			  "changed",
-			  G_CALLBACK (archive_type_combo_box_changed_cb),
-			  data); */
-	g_signal_connect (G_OBJECT (data->n_password_entry),
-			  "changed",
-			  G_CALLBACK (password_entry_changed_cb),
-			  data);
-	g_signal_connect (G_OBJECT (data->n_volume_checkbutton),
-			  "toggled",
-			  G_CALLBACK (volume_toggled_cb),
-			  data);
 	g_signal_connect (G_OBJECT (data->format_chooser),
 			  "selection-changed",
 			  G_CALLBACK (format_chooser_selection_changed_cb),
 			  data);
+
 	g_signal_connect_after (GET_WIDGET ("other_oprtions_alignment"),
 				"unmap",
 				G_CALLBACK (options_expander_unmap_cb),
