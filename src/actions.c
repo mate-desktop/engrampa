@@ -906,7 +906,7 @@ activate_action_about (GtkAction *action,
                    "logo-icon-name", "engrampa",
                    "license", license_text,
                    "wrap-license", TRUE,
-                   "website", "http://mate-desktop.org",
+                   "website", "https://mate-desktop.org",
                    NULL);
 
     g_strfreev (authors);
