@@ -27,7 +27,6 @@
 #include <gio/gio.h>
 #include "dlg-new.h"
 #include "file-utils.h"
-#include "fr-stock.h"
 #include "gtk-utils.h"
 #include "fr-init.h"
 #include "preferences.h"
@@ -268,7 +267,6 @@ dlg_new_archive (FrWindow  *window,
 		const char *default_name)
 {
 	DlgNewData    *data;
-	GtkWidget     *n_new_button;
         GSettings *settings;
 	/*char          *default_ext;*/
 	int            i;
@@ -298,8 +296,6 @@ dlg_new_archive (FrWindow  *window,
 	data->n_volume_spinbutton = GET_WIDGET ("n_volume_spinbutton");
 	data->n_volume_box = GET_WIDGET ("n_volume_box");
 
-	n_new_button = GET_WIDGET ("n_new_button");
-
 	/* Set widgets data. */
 
 	gtk_dialog_set_default_response (GTK_DIALOG (data->dialog), GTK_RESPONSE_OK);
@@ -310,8 +306,6 @@ dlg_new_archive (FrWindow  *window,
 
 	/**/
 
-	gtk_button_set_use_stock (GTK_BUTTON (n_new_button), TRUE);
-	gtk_button_set_label (GTK_BUTTON (n_new_button), FR_STOCK_CREATE_ARCHIVE);
 	gtk_expander_set_expanded (GTK_EXPANDER (data->n_other_options_expander), FALSE);
 	settings = g_settings_new (ENGRAMPA_SCHEMA_GENERAL);
         gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->n_encrypt_header_checkbutton), g_settings_get_boolean (settings, PREF_GENERAL_ENCRYPT_HEADER));
