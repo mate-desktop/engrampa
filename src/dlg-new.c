@@ -287,18 +287,18 @@ dlg_new_archive (FrWindow  *window,
 
 	/* Get the widgets. */
 
-	data->dialog = _gtk_builder_get_widget (data->builder, "filechooserdialog");
+	data->dialog = GET_WIDGET ("filechooserdialog");
 
-	data->n_password_entry = _gtk_builder_get_widget (data->builder, "n_password_entry");
-	data->n_password_label = _gtk_builder_get_widget (data->builder, "n_password_label");
-	data->n_other_options_expander = _gtk_builder_get_widget (data->builder, "n_other_options_expander");
-	data->n_encrypt_header_checkbutton = _gtk_builder_get_widget (data->builder, "n_encrypt_header_checkbutton");
+	data->n_password_entry = GET_WIDGET ("n_password_entry");
+	data->n_password_label = GET_WIDGET ("n_password_label");
+	data->n_other_options_expander = GET_WIDGET ("n_other_options_expander");
+	data->n_encrypt_header_checkbutton = GET_WIDGET ("n_encrypt_header_checkbutton");
 
-	data->n_volume_checkbutton = _gtk_builder_get_widget (data->builder, "n_volume_checkbutton");
-	data->n_volume_spinbutton = _gtk_builder_get_widget (data->builder, "n_volume_spinbutton");
-	data->n_volume_box = _gtk_builder_get_widget (data->builder, "n_volume_box");
+	data->n_volume_checkbutton = GET_WIDGET ("n_volume_checkbutton");
+	data->n_volume_spinbutton = GET_WIDGET ("n_volume_spinbutton");
+	data->n_volume_box = GET_WIDGET ("n_volume_box");
 
-	n_new_button = _gtk_builder_get_widget (data->builder, "n_new_button");
+	n_new_button = GET_WIDGET ("n_new_button");
 
 	/* Set widgets data. */
 
