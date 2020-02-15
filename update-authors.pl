@@ -40,6 +40,7 @@ sub ReplaceAuthors {
   $_ eq 'rbuj <robert.buj%gmail.com>' and $_ = 'Robert Buj <robert.buj%gmail.com>' for @authors;
   $_ eq 'Scott Balneaves <sbalneav%ltsp.org>' and $_ = 'Scott Balneaves <sbalneav%mate-desktop.org>' for @authors;
   $_ eq 'sc0w <scow%riseup.net>' and $_ = 'ZenWalker <scow%riseup.net>' for @authors;
+  $_ eq 'Victor Kareh <vkareh%vkareh.net>' and $_ = 'Victor Kareh <vkareh%redhat.com>' for @authors;
   $_ eq 'Wolfgang Ulbrich <chat-to-me%raveit.de>' and $_ = 'Wolfgang Ulbrich <mate%raveit.de>' for @authors;
   return @authors;
 }
@@ -64,5 +65,9 @@ sub GetNewAuthors {
 
 my @A = GetCurrentAuthors;
 my @B = GetNewAuthors;
+for (@B) {
+  s/<\d+\+(.+?)%users\.noreply\.github\.com>/<$1%users\.noreply\.github\.com>/;
+  s/<(.+?)%users\.noreply\.github\.com>/https:\/\/github.com\/$1/;
+}
 my @merged = sort { $a cmp $b } keys %{{map {($_ => 1)} (@A, @B)}};
 print join(';',@merged) . ';';
