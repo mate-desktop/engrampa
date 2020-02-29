@@ -59,9 +59,6 @@ char **             split_line                   (const char  *line,
 						  int          n_fields);
 const char *        get_last_field               (const char  *line,
 						  int          last_field);
-void                g_ptr_array_free_full        (GPtrArray   *array,
-                       				  GFunc        func,
-                       				  gpointer     user_data);
 const char *        get_static_string            (const char  *s);
 char*               g_uri_display_basename       (const char  *uri);
 
