@@ -27,7 +27,6 @@
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
-int         _gtk_count_selected             (GtkTreeSelection *selection);
 GtkWidget*  _gtk_message_dialog_new         (GtkWindow        *parent,
 					     GtkDialogFlags    flags,
 					     const char       *icon_name,

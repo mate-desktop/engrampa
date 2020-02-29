@@ -28,29 +28,6 @@
 
 #define LOAD_BUFFER_SIZE 65536
 
-static void
-count_selected (GtkTreeModel *model,
-		GtkTreePath  *path,
-		GtkTreeIter  *iter,
-		gpointer      data)
-{
-	int *n = data;
-	*n = *n + 1;
-}
-
-
-int
-_gtk_count_selected (GtkTreeSelection *selection)
-{
-	int n = 0;
-
-	if (selection == NULL)
-		return 0;
-	gtk_tree_selection_selected_foreach (selection, count_selected, &n);
-	return n;
-}
-
-
 GtkWidget*
 _gtk_message_dialog_new (GtkWindow        *parent,
 			 GtkDialogFlags    flags,

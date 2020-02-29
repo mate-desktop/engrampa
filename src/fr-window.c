@@ -3590,7 +3590,7 @@ fr_window_get_file_list (FrWindow *window)
 int
 fr_window_get_n_selected_files (FrWindow *window)
 {
-	return _gtk_count_selected (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
+	return gtk_tree_selection_count_selected_rows (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
 }
 
 
