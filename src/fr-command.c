@@ -506,7 +506,7 @@ fr_command_class_init (FrCommandClass *class)
 static void
 fr_command_init (FrCommand *comm)
 {
-	comm->files = g_ptr_array_sized_new (INITIAL_SIZE);
+	comm->files = g_ptr_array_new_full (INITIAL_SIZE, (GDestroyNotify) file_data_free);
 
 	comm->password = NULL;
 	comm->encrypt_header = FALSE;
@@ -545,7 +545,7 @@ fr_command_finalize (GObject *object)
 	g_free (comm->e_filename);
 	g_free (comm->password);
 	if (comm->files != NULL)
-		g_ptr_array_free_full (comm->files, (GFunc) file_data_free, NULL);
+		g_ptr_array_free (comm->files, TRUE);
 	fr_command_set_process (comm, NULL);
 
 	/* Chain up */
@@ -624,8 +624,8 @@ fr_command_list (FrCommand *comm)
 	fr_command_progress (comm, -1.0);
 
 	if (comm->files != NULL) {
-		g_ptr_array_free_full (comm->files, (GFunc) file_data_free, NULL);
-		comm->files = g_ptr_array_sized_new (INITIAL_SIZE);
+		g_ptr_array_free (comm->files, TRUE);
+		comm->files = g_ptr_array_new_full (INITIAL_SIZE, (GDestroyNotify) file_data_free);
 	}
 
 	comm->action = FR_ACTION_LISTING_CONTENT;
