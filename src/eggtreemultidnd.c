@@ -192,9 +192,7 @@ stop_drag_check (GtkWidget *widget)
 
 
 static gboolean
-egg_tree_multi_drag_button_release_event (GtkWidget      *widget,
-					  GdkEventButton *event,
-					  gpointer        data)
+egg_tree_multi_drag_button_release_event (GtkWidget      *widget)
 {
   EggTreeMultiDndData *priv_data;
   GSList *l;
@@ -216,6 +214,8 @@ selection_foreach (GtkTreeModel *model,
 		   GtkTreeIter  *iter,
 		   gpointer      data)
 {
+  (void) iter; /* unused parameter */
+
   GList **list_ptr;
 
   list_ptr = (GList **) data;
@@ -254,9 +254,7 @@ get_context_data (GdkDragContext *context)
 static gboolean
 egg_tree_multi_drag_drag_data_get (GtkWidget        *widget,
 				   GdkDragContext   *context,
-				   GtkSelectionData *selection_data,
-				   guint             info,
-				   guint             time)
+				   GtkSelectionData *selection_data)
 {
   GtkTreeView  *tree_view;
   GtkTreeModel *model;
@@ -291,6 +289,8 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
 				  GdkEventMotion *event,
 				  gpointer        data)
 {
+  (void) data; /* unused parameter */
+
   EggTreeMultiDndData *priv_data;
 
   priv_data = g_object_get_data (G_OBJECT (widget), EGG_TREE_MULTI_DND_STRING);
@@ -370,6 +370,8 @@ egg_tree_multi_drag_button_press_event (GtkWidget      *widget,
 					GdkEventButton *event,
 					gpointer        data)
 {
+  (void) data; /* unused parameter */
+
   GtkTreeView         *tree_view;
   GtkTreePath         *path = NULL;
   GtkTreeViewColumn   *column = NULL;

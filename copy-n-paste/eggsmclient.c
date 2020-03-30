@@ -52,7 +52,7 @@ static EggSMClientMode global_client_mode = EGG_SM_CLIENT_MODE_NORMAL;
 static void
 egg_sm_client_init (EggSMClient *client)
 {
-  ;
+  (void) client; /* unused parameter */
 }
 
 static void
@@ -182,6 +182,12 @@ sm_client_post_parse_func (GOptionContext  *context,
 			   gpointer         data,
 			   GError         **error)
 {
+  /* unused parameters */
+  (void) context;
+  (void) group;
+  (void) data;
+  (void) error;
+
   EggSMClient *client = egg_sm_client_get ();
 
   if (sm_client_id == NULL)
@@ -575,6 +581,8 @@ egg_sm_client_debug_handler (const char *log_domain,
 			     const char *message,
 			     gpointer user_data)
 {
+  (void) user_data; /* unused parameter */
+
   static int debug = -1;
 
   if (debug < 0)

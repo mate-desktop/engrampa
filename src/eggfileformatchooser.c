@@ -360,6 +360,8 @@ static void
 expander_unmap_cb (GtkWidget *widget,
 		   gpointer   user_data)
 {
+  (void) widget; /* unused parameter */
+
   EggFileFormatChooser *self = user_data;
 
   if (self->priv->size_changed_event == 0)
@@ -529,6 +531,8 @@ filter_changed_cb (GObject    *object,
                    GParamSpec *spec,
                    gpointer    data)
 {
+  (void) spec; /* unused parameter */
+
   EggFileFormatChooser *self;
 
   GtkFileFilter *current_filter;

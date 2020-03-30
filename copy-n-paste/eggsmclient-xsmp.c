@@ -445,6 +445,8 @@ sm_client_xsmp_end_session (EggSMClient         *client,
 			    EggSMClientEndStyle  style,
 			    gboolean             request_confirmation)
 {
+  (void) style; /* unused parameter */
+
   EggSMClientXSMP *xsmp = (EggSMClientXSMP *)client;
   int save_type;
 
@@ -612,6 +614,8 @@ xsmp_save_yourself (SmcConn   smc_conn,
 		    int       interact_style,
 		    Bool      fast)
 {
+  (void) smc_conn; /* unused parameter */
+
   EggSMClientXSMP *xsmp = client_data;
   gboolean wants_quit_requested;
 
@@ -927,6 +931,8 @@ static void
 xsmp_interact (SmcConn   smc_conn,
 	       SmPointer client_data)
 {
+  (void) smc_conn; /* unused parameter */
+
   EggSMClientXSMP *xsmp = client_data;
   EggSMClient *client = client_data;
 
@@ -947,6 +953,8 @@ static void
 xsmp_die (SmcConn   smc_conn,
 	  SmPointer client_data)
 {
+  (void) smc_conn; /* unused parameter */
+
   EggSMClientXSMP *xsmp = client_data;
   EggSMClient *client = client_data;
 
@@ -961,6 +969,8 @@ static void
 xsmp_save_complete (SmcConn   smc_conn,
 		    SmPointer client_data)
 {
+  (void) smc_conn; /* unused parameter */
+
   EggSMClientXSMP *xsmp = client_data;
 
   g_debug ("Received SaveComplete message in state %s",
@@ -976,6 +986,8 @@ static void
 xsmp_shutdown_cancelled (SmcConn   smc_conn,
 			 SmPointer client_data)
 {
+  (void) smc_conn; /* unused parameter */
+
   EggSMClientXSMP *xsmp = client_data;
   EggSMClient *client = client_data;
 
@@ -1303,6 +1315,10 @@ ice_iochannel_watch (GIOChannel   *channel,
 		     GIOCondition  condition,
 		     gpointer      client_data)
 {
+  /* unused parameters */
+  (void) channel;
+  (void) condition;
+
   return process_ice_messages (client_data);
 }
 
@@ -1312,6 +1328,8 @@ ice_connection_watch (IceConn     ice_conn,
 		      Bool        opening,
 		      IcePointer *watch_data)
 {
+  (void) client_data; /* unused parameter */
+
   guint watch_id;
 
   if (opening)
@@ -1343,12 +1361,23 @@ ice_error_handler (IceConn       ice_conn,
 		   int           severity,
 		   IcePointer    values)
 {
+  /* unused parameters */
+  (void) ice_conn;
+  (void) swap;
+  (void) offending_minor_opcode;
+  (void) offending_sequence;
+  (void) error_class;
+  (void) severity;
+  (void) values;
+
   /* Do nothing */
 }
 
 static void
 ice_io_error_handler (IceConn ice_conn)
 {
+  (void) ice_conn; /* unused parameter */
+
   /* Do nothing */
 }
 
@@ -1361,5 +1390,14 @@ smc_error_handler (SmcConn       smc_conn,
                    int           severity,
                    SmPointer     values)
 {
+  /* unused parameters */
+  (void) smc_conn;
+  (void) swap;
+  (void) offending_minor_opcode;
+  (void) offending_sequence;
+  (void) error_class;
+  (void) severity;
+  (void) values;
+
   /* Do nothing */
 }
