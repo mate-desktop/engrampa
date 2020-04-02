@@ -25,7 +25,6 @@
 #include <unistd.h>
 #include <gtk/gtk.h>
 #include "file-utils.h"
-#include "fr-stock.h"
 #include "fr-init.h"
 #include "gtk-utils.h"
 #include "fr-window.h"

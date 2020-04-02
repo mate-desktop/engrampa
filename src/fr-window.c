@@ -43,7 +43,6 @@
 #include "fr-list-model.h"
 #include "fr-archive.h"
 #include "fr-error.h"
-#include "fr-stock.h"
 #include "fr-window.h"
 #include "file-data.h"
 #include "file-utils.h"
