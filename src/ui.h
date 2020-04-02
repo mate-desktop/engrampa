@@ -25,7 +25,6 @@
 
 
 #include "actions.h"
-#include "fr-stock.h"
 
 
 static GtkActionEntry action_entries[] = {
@@ -39,19 +38,19 @@ static GtkActionEntry action_entries[] = {
 	  N_("_About"), NULL,
 	  N_("Information about the program"),
 	  G_CALLBACK (activate_action_about) },
-	{ "AddFiles", FR_STOCK_ADD_FILES,
+	{ "AddFiles", "add-files-to-archive",
 	  N_("_Add Files…"), NULL,
 	  N_("Add files to the archive"),
 	  G_CALLBACK (activate_action_add_files) },
-	{ "AddFiles_Toolbar", FR_STOCK_ADD_FILES,
+	{ "AddFiles_Toolbar", "add-files-to-archive",
 	  N_("Add Files"), NULL,
 	  N_("Add files to the archive"),
 	  G_CALLBACK (activate_action_add_files) },
-	{ "AddFolder", FR_STOCK_ADD_FOLDER,
+	{ "AddFolder", "add-folder-to-archive",
 	  N_("Add a _Folder…"), NULL,
 	  N_("Add a folder to the archive"),
 	  G_CALLBACK (activate_action_add_folder) },
-	{ "AddFolder_Toolbar", FR_STOCK_ADD_FOLDER,
+	{ "AddFolder_Toolbar", "add-folder-to-archive",
 	  N_("Add Folder"), NULL,
 	  N_("Add a folder to the archive"),
 	  G_CALLBACK (activate_action_add_folder) },
@@ -110,15 +109,15 @@ static GtkActionEntry action_entries[] = {
 	  N_("Dese_lect All"), "<shift><control>A",
 	  N_("Deselect all files"),
 	  G_CALLBACK (activate_action_deselect_all) },
-	{ "Extract", FR_STOCK_EXTRACT,
+	{ "Extract", "extract-archive",
 	  N_("_Extract…"), "<control>E",
 	  N_("Extract files from the archive"),
 	  G_CALLBACK (activate_action_extract) },
-	{ "ExtractFolderFromSidebar", FR_STOCK_EXTRACT,
+	{ "ExtractFolderFromSidebar", "extract-archive",
 	  N_("_Extract…"), NULL,
 	  N_("Extract files from the archive"),
 	  G_CALLBACK (activate_action_extract_folder_from_sidebar) },
-	{ "Extract_Toolbar", FR_STOCK_EXTRACT,
+	{ "Extract_Toolbar", "extract-archive",
 	  N_("Extract"), NULL,
 	  N_("Extract files from the archive"),
 	  G_CALLBACK (activate_action_extract) },
