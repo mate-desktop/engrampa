@@ -39,6 +39,8 @@
 #define UNUSED_VARIABLE
 #endif
 
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
+
 typedef struct {
 	FrWindow    *window;
 	GSettings   *settings;
@@ -209,13 +211,13 @@ add_folder_cb (GtkWidget *widget,
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_ADD);
-	data->dialog = _gtk_builder_get_widget (builder, "dialog_add_folder");
-	data->add_if_newer_checkbutton = _gtk_builder_get_widget (builder, "add_if_newer_checkbutton");
-	data->exclude_symlinks = _gtk_builder_get_widget (builder, "exclude_symlinks");
-	data->include_subfold_checkbutton = _gtk_builder_get_widget (builder, "include_subfold_checkbutton");
-	data->include_files_entry = _gtk_builder_get_widget (builder, "include_files_entry");
-	data->exclude_files_entry = _gtk_builder_get_widget (builder, "exclude_files_entry");
-	data->exclude_folders_entry = _gtk_builder_get_widget (builder, "exclude_folders_entry");
+	data->dialog = GET_WIDGET ("dialog_add_folder");
+	data->add_if_newer_checkbutton = GET_WIDGET ("add_if_newer_checkbutton");
+	data->exclude_symlinks = GET_WIDGET ("exclude_symlinks");
+	data->include_subfold_checkbutton = GET_WIDGET ("include_subfold_checkbutton");
+	data->include_files_entry = GET_WIDGET ("include_files_entry");
+	data->exclude_files_entry = GET_WIDGET ("exclude_files_entry");
+	data->exclude_folders_entry = GET_WIDGET ("exclude_folders_entry");
 
 	/* set data */
 	dlg_add_folder_load_last_options (data);
@@ -516,7 +518,6 @@ dlg_add_folder_save_last_options (DialogData *data)
 
 typedef struct {
 	DialogData   *data;
-	GtkBuilder *builder;
 	GtkWidget    *dialog;
 	GtkWidget    *aod_treeview;
 	GtkTreeModel *aod_model;
@@ -527,7 +528,6 @@ static void
 aod_destroy_cb (GtkWidget             *widget,
 		LoadOptionsDialogData *aod_data)
 {
-	g_object_unref (aod_data->builder);
 	g_free (aod_data);
 }
 
@@ -656,8 +656,8 @@ load_options_cb (GtkWidget  *w,
 		 DialogData *data)
 {
 	LoadOptionsDialogData *aod_data;
+	GtkBuilder            *builder;
 	GtkWidget             *ok_button;
-	GtkWidget             *cancel_button;
 	GtkWidget             *remove_button;
 	GtkCellRenderer       *renderer;
 	GtkTreeViewColumn     *column;
@@ -665,16 +665,15 @@ load_options_cb (GtkWidget  *w,
 	aod_data = g_new0 (LoadOptionsDialogData, 1);
 
 	aod_data->data = data;
-	aod_data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "add-options.ui");
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "add-options.ui");
 
 	/* Get the widgets. */
 
-	aod_data->dialog = _gtk_builder_get_widget (aod_data->builder, "add_options_dialog");
-	aod_data->aod_treeview = _gtk_builder_get_widget (aod_data->builder, "aod_treeview");
+	aod_data->dialog = GET_WIDGET ("add_options_dialog");
+	aod_data->aod_treeview = GET_WIDGET ("aod_treeview");
 
-	ok_button = _gtk_builder_get_widget (aod_data->builder, "aod_okbutton");
-	cancel_button = _gtk_builder_get_widget (aod_data->builder, "aod_cancelbutton");
-	remove_button = _gtk_builder_get_widget (aod_data->builder, "aod_remove_button");
+	ok_button = GET_WIDGET ("aod_okbutton");
+	remove_button = GET_WIDGET ("aod_remove_button");
 
 	/* Set the signals handlers. */
 
@@ -686,7 +685,7 @@ load_options_cb (GtkWidget  *w,
 			  "row_activated",
 			  G_CALLBACK (aod_activated_cb),
 			  aod_data);
-	g_signal_connect_swapped (G_OBJECT (cancel_button),
+	g_signal_connect_swapped (gtk_builder_get_object (builder, "aod_cancelbutton"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (aod_data->dialog));
@@ -698,6 +697,8 @@ load_options_cb (GtkWidget  *w,
 			  "clicked",
 			  G_CALLBACK (aod_remove_cb),
 			  aod_data);
+
+	g_object_unref (builder);
 
 	/* Set data. */
 

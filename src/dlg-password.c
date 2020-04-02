@@ -28,9 +28,9 @@
 #include "preferences.h"
 #include "dlg-password.h"
 
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 
 typedef struct {
-	GtkBuilder *builder;
 	FrWindow  *window;
 	GtkWidget *dialog;
 	GtkWidget *pw_password_entry;
@@ -43,7 +43,6 @@ static void
 destroy_cb (GtkWidget  *widget,
 	    DialogData *data)
 {
-	g_object_unref (data->builder);
 	g_free (data);
 }
 
@@ -84,18 +83,19 @@ void
 dlg_password (GtkWidget *widget,
 	      gpointer   callback_data)
 {
+	GtkBuilder *builder;
 	FrWindow   *window = callback_data;
 	DialogData *data;
 
 	data = g_new0 (DialogData, 1);
-	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "password.ui");
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "password.ui");
 	data->window = window;
 
 	/* Get the widgets. */
 
-	data->dialog = _gtk_builder_get_widget (data->builder, "password_dialog");
-	data->pw_password_entry = _gtk_builder_get_widget (data->builder, "pw_password_entry");
-	data->pw_encrypt_header_checkbutton = _gtk_builder_get_widget (data->builder, "pw_encrypt_header_checkbutton");
+	data->dialog = GET_WIDGET ("password_dialog");
+	data->pw_password_entry = GET_WIDGET ("pw_password_entry");
+	data->pw_encrypt_header_checkbutton = GET_WIDGET ("pw_encrypt_header_checkbutton");
 
 	/* Set widgets data. */
 
@@ -113,6 +113,8 @@ dlg_password (GtkWidget *widget,
 			  "response",
 			  G_CALLBACK (response_cb),
 			  data);
+
+	g_object_unref (builder);
 
 	/* Run dialog. */
 

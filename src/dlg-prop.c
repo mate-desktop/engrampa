@@ -29,9 +29,10 @@
 #include "fr-window.h"
 #include "dlg-prop.h"
 
+#define GET_LABEL(x) (GTK_LABEL (gtk_builder_get_object (builder, (x))))
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 
 typedef struct {
-	GtkBuilder *builder;
 	GtkWidget *dialog;
 } DialogData;
 
@@ -41,7 +42,6 @@ static void
 destroy_cb (GtkWidget  *widget,
 	    DialogData *data)
 {
-	g_object_unref (G_OBJECT (data->builder));
 	g_free (data);
 }
 
@@ -58,10 +58,9 @@ help_cb (GtkWidget   *w,
 void
 dlg_prop (FrWindow *window)
 {
+	GtkBuilder       *builder;
 	DialogData       *data;
-	GtkWidget        *ok_button;
 	GtkWidget        *help_button;
-	GtkWidget        *label;
 	GFile            *parent;
 	char             *uri;
 	char             *markup;
@@ -72,22 +71,20 @@ dlg_prop (FrWindow *window)
 	double            ratio;
 
 	data = g_new (DialogData, 1);
-	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "properties.ui");
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "properties.ui");
 
 	/* Get the widgets. */
 
-	data->dialog = _gtk_builder_get_widget (data->builder, "prop_dialog");
-	ok_button = _gtk_builder_get_widget (data->builder, "p_ok_button");
-	help_button = _gtk_builder_get_widget (data->builder, "p_help_button");
+	help_button = GET_WIDGET ("p_help_button");
+	data->dialog = GET_WIDGET ("prop_dialog");
 
 	/* Set widgets data. */
 
-	label = _gtk_builder_get_widget (data->builder, "p_path_label");
 	uri = remove_level_from_path (fr_window_get_archive_uri (window));
 	parent = g_file_new_for_uri (uri);
 	utf8_name = g_file_get_parse_name (parent);
 	markup = g_strdup_printf ("<a href=\"%s\">%s</a>", uri, utf8_name);
-	gtk_label_set_markup (GTK_LABEL (label), markup);
+	gtk_label_set_markup (GET_LABEL ("p_path_label"), markup);
 
 	g_free (markup);
 	g_free (utf8_name);
@@ -96,9 +93,8 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label = _gtk_builder_get_widget (data->builder, "p_name_label");
 	utf8_name = g_uri_display_basename (fr_window_get_archive_uri (window));
-	gtk_label_set_text (GTK_LABEL (label), utf8_name);
+	gtk_label_set_text (GET_LABEL ("p_name_label"), utf8_name);
 
 	title_txt = g_strdup_printf (_("%s Properties"), utf8_name);
 	gtk_window_set_title (GTK_WINDOW (data->dialog), title_txt);
@@ -108,20 +104,18 @@ dlg_prop (FrWindow *window)
 
 	/**/
 
-	label = _gtk_builder_get_widget (data->builder, "p_date_label");
 	GDateTime *date_time;
 	date_time = g_date_time_new_from_unix_local (get_file_mtime (fr_window_get_archive_uri (window)));
 	s = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
 	g_date_time_unref (date_time);
-	gtk_label_set_text (GTK_LABEL (label), s);
+	gtk_label_set_text (GET_LABEL ("p_date_label"), s);
 	g_free (s);
 
 	/**/
 
-	label = _gtk_builder_get_widget (data->builder, "p_size_label");
 	size = get_file_size (fr_window_get_archive_uri (window));
 	s = g_format_size_full (size, G_FORMAT_SIZE_LONG_FORMAT);
-	gtk_label_set_text (GTK_LABEL (label), s);
+	gtk_label_set_text (GET_LABEL ("p_size_label"), s);
 	g_free (s);
 
 	/**/
@@ -136,34 +130,29 @@ dlg_prop (FrWindow *window)
 		}
 	}
 
-	label = _gtk_builder_get_widget (data->builder, "p_uncomp_size_label");
 	s = g_format_size_full (uncompressed_size, G_FORMAT_SIZE_LONG_FORMAT);
-	gtk_label_set_text (GTK_LABEL (label), s);
+	gtk_label_set_text (GET_LABEL ("p_uncomp_size_label"), s);
 	g_free (s);
 
 	/**/
-
-	label = _gtk_builder_get_widget (data->builder, "p_cratio_label");
 
 	if (uncompressed_size != 0)
 		ratio = (double) uncompressed_size / size;
 	else
 		ratio = 0.0;
 	s = g_strdup_printf ("%0.2f", ratio);
-	gtk_label_set_text (GTK_LABEL (label), s);
+	gtk_label_set_text (GET_LABEL ("p_cratio_label"), s);
 	g_free (s);
 
 	/**/
 
-	label = _gtk_builder_get_widget (data->builder, "p_files_label");
 	s = g_strdup_printf ("%d", window->archive->command->n_regular_files);
-	gtk_label_set_text (GTK_LABEL (label), s);
+	gtk_label_set_text (GET_LABEL ("p_files_label"), s);
 	g_free (s);
 
 	/**/
 
-	label = _gtk_builder_get_widget (data->builder, "p_mime_type_label");
-	gtk_label_set_text (GTK_LABEL (label), window->archive->command->mime_type);
+	gtk_label_set_text (GET_LABEL ("p_mime_type_label"), window->archive->command->mime_type);
 
 	/* Set the signals handlers. */
 
@@ -171,7 +160,7 @@ dlg_prop (FrWindow *window)
 			  "destroy",
 			  G_CALLBACK (destroy_cb),
 			  data);
-	g_signal_connect_swapped (G_OBJECT (ok_button),
+	g_signal_connect_swapped (gtk_builder_get_object (builder, "p_ok_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (data->dialog));
@@ -179,6 +168,8 @@ dlg_prop (FrWindow *window)
 			  "clicked",
 			  G_CALLBACK (help_cb),
 			  data);
+
+	g_object_unref (builder);
 
 	/* Run dialog. */
 

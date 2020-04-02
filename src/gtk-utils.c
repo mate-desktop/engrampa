@@ -573,13 +573,6 @@ show_help_dialog (GtkWindow  *parent,
 }
 
 
-GtkWidget *
-_gtk_builder_get_widget (GtkBuilder *builder,
-			 const char *name)
-{
-	return (GtkWidget *) gtk_builder_get_object (builder, name);
-}
-
 int
 _gtk_widget_lookup_for_size (GtkWidget *widget,
                              GtkIconSize icon_size)

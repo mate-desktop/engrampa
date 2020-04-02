@@ -31,6 +31,8 @@
 #include "preferences.h"
 #include "dlg-add-files.h"
 
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
+
 typedef struct {
 	FrWindow  *window;
 	GSettings *settings;
@@ -145,8 +147,8 @@ add_files_cb (GtkWidget *widget,
 	data = g_new0 (DialogData, 1);
 	data->window = callback_data;
 	data->settings = g_settings_new (ENGRAMPA_SCHEMA_ADD);
-	data->dialog = _gtk_builder_get_widget (builder, "dialog_add_files");
-	data->add_if_newer_checkbutton = _gtk_builder_get_widget (builder, "add_if_newer_checkbutton");
+	data->dialog = GET_WIDGET ("dialog_add_files");
+	data->add_if_newer_checkbutton = GET_WIDGET ("add_if_newer_checkbutton");
 
 	/* set data */
 	folder = g_settings_get_string (data->settings, PREF_ADD_CURRENT_FOLDER);

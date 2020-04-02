@@ -32,7 +32,7 @@
 #include "preferences.h"
 
 
-#define GET_WIDGET(x) (_gtk_builder_get_widget (data->builder, (x)))
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 #define DEFAULT_EXTENSION ".tar.gz"
 #define BAD_CHARS "/\\*"
 #define MEGABYTE (1024.0 * 1024.0)
@@ -43,7 +43,6 @@ static void
 destroy_cb (GtkWidget  *widget,
 	    DlgNewData *data)
 {
-	g_object_unref (data->builder);
 	g_free (data);
 }
 
@@ -266,13 +265,13 @@ dlg_new_archive (FrWindow  *window,
 		int        *supported_types,
 		const char *default_name)
 {
+	GtkBuilder    *builder;
 	DlgNewData    *data;
-        GSettings *settings;
-	/*char          *default_ext;*/
+	GSettings     *settings;
 	int            i;
 
 	data = g_new0 (DlgNewData, 1);
-	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "new.ui");
+	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "new.ui");
 	data->window = window;
 	data->supported_types = supported_types;
 	sort_mime_types_by_description (data->supported_types);
@@ -352,12 +351,12 @@ dlg_new_archive (FrWindow  *window,
 
 	/* Set the signals handlers. */
 
-	gtk_builder_add_callback_symbols (data->builder,
+	gtk_builder_add_callback_symbols (builder,
 	                                  "on_dialog_destroy", G_CALLBACK (destroy_cb),
 	                                  "on_n_password_entry_changed", G_CALLBACK (password_entry_changed_cb),
 	                                  "on_n_volume_checkbutton_toggled", G_CALLBACK (volume_toggled_cb),
 	                                  NULL);
-	gtk_builder_connect_signals (data->builder, data);
+	gtk_builder_connect_signals (builder, data);
 
 	g_signal_connect (G_OBJECT (data->format_chooser),
 			  "selection-changed",
@@ -368,6 +367,8 @@ dlg_new_archive (FrWindow  *window,
 				"unmap",
 				G_CALLBACK (options_expander_unmap_cb),
 				data->format_chooser);
+
+	g_object_unref (builder);
 
 	/* Run dialog. */
 
