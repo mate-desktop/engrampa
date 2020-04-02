@@ -31,7 +31,7 @@
 #include "typedefs.h"
 #include "dlg-extract.h"
 
-#define GET_WIDGET(x) (_gtk_builder_get_widget (data->builder, (x)))
+#define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (data->builder, (x))))
 
 typedef struct {
 	FrWindow     *window;
