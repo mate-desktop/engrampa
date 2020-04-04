@@ -90,18 +90,6 @@ variables:
     -enable-checker alpha.core.FixedAddr
     -enable-checker security.insecureAPI.strcpy"'
 
-build_scripts:
-  - ./autogen.sh --enable-compile-warnings=maximum
-  - scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
-  - if [ $CPU_COUNT -gt 1 ]; then
-  -     scan-build $CHECKERS --keep-cc -o html-report make -j $(( $CPU_COUNT + 1 ))
-  - else
-  -     scan-build $CHECKERS --keep-cc -o html-report make
-  - fi
-  - if [ ${DISTRO_NAME} == "debian" ];then
-  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude .
-  - fi
-
 before_scripts:
   - cd ${START_DIR}
   - '[ -f mate-common-1.24.1.tar.xz ] || curl -Ls -o mate-common-1.24.1.tar.xz https://github.com/mate-desktop/mate-common/releases/download/v1.24.1/mate-common-1.24.1.tar.xz'
@@ -114,6 +102,18 @@ before_scripts:
   - fi
   - make
   - make install
+
+build_scripts:
+  - ./autogen.sh
+  - scan-build $CHECKERS ./configure
+  - if [ $CPU_COUNT -gt 1 ]; then
+  -     scan-build $CHECKERS --keep-cc -o html-report make -j $(( $CPU_COUNT + 1 ))
+  - else
+  -     scan-build $CHECKERS --keep-cc -o html-report make
+  - fi
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     cppcheck --enable=warning,style,performance,portability,information,missingInclude .
+  - fi
 
 after_scripts:
   - make distcheck
