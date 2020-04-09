@@ -92,9 +92,10 @@ variables:
 
 build_scripts:
   - if [ ${DISTRO_NAME} == "debian" ];then
-  -     export CFLAGS+=" -Wunused-parameter"
+  -     export CFLAGS+=" -Wsign-compare -Wunused-parameter"
   -     cppcheck --enable=warning,style,performance,portability,information,missingInclude .
   - fi
+
   - ./autogen.sh --enable-compile-warnings=maximum
   - scan-build $CHECKERS ./configure --enable-compile-warnings=maximum
   - if [ $CPU_COUNT -gt 1 ]; then
