@@ -474,7 +474,6 @@ dlg_batch_add_files (FrWindow *window,
 		     GList    *file_list)
 {
 	DialogData   *data;
-	GtkSizeGroup *size_group;
 	char         *automatic_name = NULL;
 	char         *default_ext;
 	const char   *first_filename;
@@ -494,11 +493,6 @@ dlg_batch_add_files (FrWindow *window,
 	data->add_clicked = FALSE;
 
 	/* Set widgets data. */
-
-	size_group = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
-	gtk_size_group_add_widget (size_group, GET_WIDGET ("a_archive_label"));
-	gtk_size_group_add_widget (size_group, GET_WIDGET ("a_location_label"));
-	gtk_size_group_add_widget (size_group, GET_WIDGET ("a_password_label"));
 
 	gtk_expander_set_expanded (GTK_EXPANDER (GET_WIDGET ("a_other_options_expander")), FALSE /*g_settings_get_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS)*/);
 	gtk_toggle_button_set_active (GET_TOGGLE_BUTTON ("a_encrypt_header_checkbutton"), g_settings_get_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER));
