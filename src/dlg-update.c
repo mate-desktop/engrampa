@@ -299,26 +299,20 @@ dlg_update (FrWindow *window)
 
 	/* Set the signals handlers. */
 
-	g_signal_connect (G_OBJECT (data->update_file_dialog),
-			  "destroy",
-			  G_CALLBACK (dlg_update__destroy_cb),
-			  data);
-	g_signal_connect (gtk_builder_get_object (builder, "update_file_ok_button"),
-			  "clicked",
-			  G_CALLBACK (update_cb),
-			  data);
+	gtk_builder_add_callback_symbols (builder,
+	                                  "on_update_file_dialog_destroy",	G_CALLBACK (dlg_update__destroy_cb),
+	                                  "update_file_ok_button_clicked",	G_CALLBACK (update_cb),
+	                                  "on_update_files_dialog_destroy",	G_CALLBACK (dlg_update__destroy_cb),
+	                                  "update_file_ok_button_clicked",	G_CALLBACK (update_cb),
+	                                  NULL);
+
+	gtk_builder_connect_signals (builder, data);
+
 	g_signal_connect_swapped (gtk_builder_get_object (builder, "update_file_cancel_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (data->update_file_dialog));
-	g_signal_connect (G_OBJECT (data->update_files_dialog),
-			  "destroy",
-			  G_CALLBACK (dlg_update__destroy_cb),
-			  data);
-	g_signal_connect (G_OBJECT (data->update_files_ok_button),
-			  "clicked",
-			  G_CALLBACK (update_cb),
-			  data);
+
 	g_signal_connect_swapped (gtk_builder_get_object (builder, "update_files_cancel_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),

@@ -657,8 +657,6 @@ load_options_cb (GtkWidget  *w,
 {
 	LoadOptionsDialogData *aod_data;
 	GtkBuilder            *builder;
-	GtkWidget             *ok_button;
-	GtkWidget             *remove_button;
 	GtkCellRenderer       *renderer;
 	GtkTreeViewColumn     *column;
 
@@ -672,31 +670,19 @@ load_options_cb (GtkWidget  *w,
 	aod_data->dialog = GET_WIDGET ("add_options_dialog");
 	aod_data->aod_treeview = GET_WIDGET ("aod_treeview");
 
-	ok_button = GET_WIDGET ("aod_okbutton");
-	remove_button = GET_WIDGET ("aod_remove_button");
-
 	/* Set the signals handlers. */
+	gtk_builder_add_callback_symbols (builder,
+	                                  "on_add_options_dialog_destroy",	G_CALLBACK (aod_destroy_cb),
+	                                  "on_aod_treeview_row_activated",	G_CALLBACK (aod_activated_cb),
+	                                  "on_aod_okbutton_clicked",		G_CALLBACK (aod_apply_cb),
+	                                  "on_aod_cancelbutton_clicked",	G_CALLBACK (aod_remove_cb),
+	                                  NULL);
+	gtk_builder_connect_signals (builder, aod_data);
 
-	g_signal_connect (G_OBJECT (aod_data->dialog),
-			  "destroy",
-			  G_CALLBACK (aod_destroy_cb),
-			  aod_data);
-	g_signal_connect (G_OBJECT (aod_data->aod_treeview),
-			  "row_activated",
-			  G_CALLBACK (aod_activated_cb),
-			  aod_data);
 	g_signal_connect_swapped (gtk_builder_get_object (builder, "aod_cancelbutton"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (aod_data->dialog));
-	g_signal_connect (G_OBJECT (ok_button),
-			  "clicked",
-			  G_CALLBACK (aod_apply_cb),
-			  aod_data);
-	g_signal_connect (G_OBJECT (remove_button),
-			  "clicked",
-			  G_CALLBACK (aod_remove_cb),
-			  aod_data);
 
 	g_object_unref (builder);
 

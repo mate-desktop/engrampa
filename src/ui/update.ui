@@ -6,6 +6,10 @@
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="type_hint">dialog</property>
+    <signal name="destroy" handler="on_update_file_dialog_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
@@ -38,6 +42,7 @@
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
+                <signal name="clicked" handler="on_update_file_ok_button_clicked" swapped="no"/>
                 <child>
                   <object class="GtkAlignment" id="alignment1">
                     <property name="visible">True</property>
@@ -183,6 +188,10 @@
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="type_hint">dialog</property>
+    <signal name="destroy" handler="on_update_files_dialog_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="vbox5">
         <property name="visible">True</property>
@@ -215,6 +224,7 @@
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
+                <signal name="clicked" handler="on_update_files_ok_button_clicked" swapped="no"/>
                 <child>
                   <object class="GtkAlignment" id="alignment2">
                     <property name="visible">True</property>

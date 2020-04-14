@@ -9,6 +9,10 @@
     <property name="resizable">False</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
+    <signal name="destroy" handler="on_delete_dialog_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox14">
         <property name="visible">True</property>
@@ -43,6 +47,7 @@
                 <property name="has_default">True</property>
                 <property name="receives_default">False</property>
                 <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_d_ok_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -105,6 +110,7 @@
                 <property name="can_focus">True</property>
                 <property name="tooltip_text" translatable="yes">example: *.txt; *.doc</property>
                 <property name="hexpand">True</property>
+                <signal name="changed" handler="on_d_files_entry_changed" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>

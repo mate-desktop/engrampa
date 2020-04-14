@@ -21,6 +21,7 @@
     <property name="resizable">False</property>
     <property name="window_position">center</property>
     <property name="type_hint">normal</property>
+    <signal name="destroy" handler="on_dialog_destroy" swapped="no"/>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -60,6 +61,10 @@
                 <property name="receives_default">False</property>
                 <property name="image">image1</property>
                 <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_a_add_button_clicked" swapped="no"/>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -254,6 +259,7 @@
                                 <property name="halign">start</property>
                                 <property name="use_underline">True</property>
                                 <property name="draw_indicator">True</property>
+                                <signal name="toggled" handler="on_a_volume_checkbutton_toggled" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="left_attach">0</property>

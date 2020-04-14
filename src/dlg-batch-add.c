@@ -545,22 +545,19 @@ dlg_batch_add_files (FrWindow *window,
 
 	/* Set the signals handlers. */
 
-	g_signal_connect (G_OBJECT (GET_WIDGET ("dialog")),
-			  "destroy",
-			  G_CALLBACK (destroy_cb),
-			  data);
-	g_signal_connect_swapped (GET_WIDGET ("a_cancel_button"),
+	gtk_builder_add_callback_symbols (data->builder,
+	                                  "on_dialog_destroy", G_CALLBACK (destroy_cb),
+	                                  "on_a_add_button_clicked", G_CALLBACK (add_clicked_cb),
+	                                  "on_a_help_button_clicked", G_CALLBACK (help_clicked_cb),
+	                                  "on_a_volume_checkbutton_toggled", G_CALLBACK (volume_toggled_cb),
+	                                  NULL);
+
+	gtk_builder_connect_signals (data->builder, data);
+
+	g_signal_connect_swapped (gtk_builder_get_object (data->builder, "a_cancel_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
-				  G_OBJECT (GET_WIDGET ("dialog")));
-	g_signal_connect (G_OBJECT (GET_WIDGET ("a_add_button")),
-			  "clicked",
-			  G_CALLBACK (add_clicked_cb),
-			  data);
-	g_signal_connect (G_OBJECT (GET_WIDGET ("a_help_button")),
-			  "clicked",
-			  G_CALLBACK (help_clicked_cb),
-			  data);
+				  gtk_builder_get_object (data->builder, "dialog"));
 	g_signal_connect (G_OBJECT (data->archive_type_combo_box),
 			  "changed",
 			  G_CALLBACK (archive_type_combo_box_changed_cb),
@@ -568,10 +565,6 @@ dlg_batch_add_files (FrWindow *window,
 	g_signal_connect (gtk_builder_get_object (data->builder, "a_password_entry"),
 			  "notify::text",
 			  G_CALLBACK (password_entry_notify_text_cb),
-			  data);
-	g_signal_connect (GET_WIDGET ("a_volume_checkbutton"),
-			  "toggled",
-			  G_CALLBACK (volume_toggled_cb),
 			  data);
 
 	/* Run dialog. */

@@ -60,7 +60,6 @@ dlg_prop (FrWindow *window)
 {
 	GtkBuilder       *builder;
 	DialogData       *data;
-	GtkWidget        *help_button;
 	GFile            *parent;
 	char             *uri;
 	char             *markup;
@@ -75,7 +74,6 @@ dlg_prop (FrWindow *window)
 
 	/* Get the widgets. */
 
-	help_button = GET_WIDGET ("p_help_button");
 	data->dialog = GET_WIDGET ("prop_dialog");
 
 	/* Set widgets data. */
@@ -156,18 +154,17 @@ dlg_prop (FrWindow *window)
 
 	/* Set the signals handlers. */
 
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "destroy",
-			  G_CALLBACK (destroy_cb),
-			  data);
+	gtk_builder_add_callback_symbols (builder,
+	                                  "on_prop_dialog_destroy",	G_CALLBACK (destroy_cb),
+	                                  "on_p_help_button_clicked",	G_CALLBACK (help_cb),
+	                                  NULL);
+
+	gtk_builder_connect_signals (builder, data);
+
 	g_signal_connect_swapped (gtk_builder_get_object (builder, "p_ok_button"),
 				  "clicked",
 				  G_CALLBACK (gtk_widget_destroy),
 				  G_OBJECT (data->dialog));
-	g_signal_connect (G_OBJECT (help_button),
-			  "clicked",
-			  G_CALLBACK (help_cb),
-			  data);
 
 	g_object_unref (builder);
 
