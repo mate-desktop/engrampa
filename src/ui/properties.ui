@@ -7,7 +7,8 @@
     <property name="border_width">5</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
-    <child>
+    <signal name="destroy" handler="on_prop_dialog_destroy" swapped="no"/>
+    <child type="titlebar">
       <placeholder/>
     </child>
     <child internal-child="vbox">

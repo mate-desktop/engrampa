@@ -123,15 +123,12 @@ dlg_ask_password__common (FrWindow       *window,
 
 	/* Set the signals handlers. */
 
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "destroy",
-			  G_CALLBACK (destroy_cb),
-			  data);
+	gtk_builder_add_callback_symbols (builder,
+	                                  "on_password_dialog_destroy", G_CALLBACK (destroy_cb),
+	                                  "on_password_dialog_response", G_CALLBACK (ask_password__response_cb),
+	                                  NULL);
 
-	g_signal_connect (G_OBJECT (data->dialog),
-			  "response",
-			  G_CALLBACK (ask_password__response_cb),
-			  data);
+	gtk_builder_connect_signals (builder, data);
 
 	g_object_unref (builder);
 
