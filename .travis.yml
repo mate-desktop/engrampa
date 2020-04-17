@@ -32,7 +32,7 @@ notifications:
       - "irc.freenode.org#mate-dev"
     template:
       - "[%{repository_name}] %{author}: %{commit_subject}"
-      - "%{commit} %{message} %{build_url}"
+      - "[%{branch}] %{commit} %{message} %{build_url}"
     on_success: never
     on_failure: always
 
