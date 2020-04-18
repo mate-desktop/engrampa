@@ -30,7 +30,8 @@ EXTRA_DIST = 			\
 DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--with-cajadir='$${libdir}/caja/extensions-2.0-distcheck'    \
+	--with-cajadir='$${libdir}/caja/extensions-2.0-distcheck' \
+	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
 
 
