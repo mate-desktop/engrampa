@@ -48,6 +48,11 @@ PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= $GTK_REQUIRED])
 AC_SUBST([GTK_CFLAGS])
 AC_SUBST([GTK_LIBS])
 
+LIBEGG_CFLAGS="$GTK_CFLAGS"
+LIBEGG_LIBS="$GTK_LIBS"
+AC_SUBST([LIBEGG_CFLAGS])
+AC_SUBST([LIBEGG_LIBS])
+
 dnl ===========================================================================
 
 AC_ARG_ENABLE(run_in_place,
@@ -226,7 +231,8 @@ AC_CONFIG_FILES([Makefile
 		 data/engrampa.desktop.in
 		 data/org.mate.engrampa.gschema.xml
 		 data/icons/Makefile
-		 copy-n-paste/Makefile
+		 mate-submodules/Makefile
+		 mate-submodules/libegg/Makefile
 		 src/Makefile
 		 src/sh/Makefile
 		 src/ui/Makefile

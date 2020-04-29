@@ -15,7 +15,7 @@ shdir = $(libexecdir)/engrampa/
 endif
 
 AM_CPPFLAGS =						\
-	-I$(top_srcdir)/copy-n-paste/			\
+	-I$(top_srcdir)/mate-submodules/libegg/			\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
 	-DENGRAMPA_RESOURCE_UI_PATH="\"/org/mate/Engrampa/ui\"" \
@@ -196,7 +196,7 @@ engrampa_SOURCES = 			\
 	main.c
 
 engrampa_LDADD =					\
-	$(top_builddir)/copy-n-paste/libeggsmclient.la	\
+	$(top_builddir)/mate-submodules/libegg/libegg.la	\
 	$(FR_LIBS)					\
 	${JSON_GLIB_LIBS}
 
