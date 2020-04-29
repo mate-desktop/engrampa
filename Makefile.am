@@ -8,7 +8,7 @@ CAJA =
 endif
 
 SUBDIRS =		\
-	copy-n-paste	\
+	mate-submodules \
 	data		\
 	src		\
 	help		\
