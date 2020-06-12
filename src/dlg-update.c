@@ -301,9 +301,9 @@ dlg_update (FrWindow *window)
 
 	gtk_builder_add_callback_symbols (builder,
 	                                  "on_update_file_dialog_destroy",	G_CALLBACK (dlg_update__destroy_cb),
-	                                  "update_file_ok_button_clicked",	G_CALLBACK (update_cb),
+	                                  "on_update_file_ok_button_clicked",	G_CALLBACK (update_cb),
 	                                  "on_update_files_dialog_destroy",	G_CALLBACK (dlg_update__destroy_cb),
-	                                  "update_file_ok_button_clicked",	G_CALLBACK (update_cb),
+	                                  "on_update_files_ok_button_clicked",	G_CALLBACK (update_cb),
 	                                  NULL);
 
 	gtk_builder_connect_signals (builder, data);
