@@ -36,6 +36,8 @@ GIO_REQUIRED=2.50.0
 GTK_REQUIRED=3.22.0
 CAJA_REQUIRED=1.17.1
 JSON_GLIB_REQUIRED=0.14.0
+SM_REQUIRED=1.0.0
+ICE_REQUIRED=1.0.0
 
 AC_SUBST(GLIB_REQUIRED)
 AC_SUBST(GIO_REQUIRED)
@@ -44,12 +46,10 @@ AC_SUBST(CAJA_REQUIRED)
 
 dnl ===========================================================================
 
-PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= $GTK_REQUIRED])
-AC_SUBST([GTK_CFLAGS])
-AC_SUBST([GTK_LIBS])
-
-LIBEGG_CFLAGS="$GTK_CFLAGS"
-LIBEGG_LIBS="$GTK_LIBS"
+PKG_CHECK_MODULES(LIBEGG, [glib-2.0 >= $GLIB_REQUIRED
+                           gtk+-3.0 >= $GTK_REQUIRED
+                           sm >= $SM_REQUIRED
+                           ice >= $ICE_REQUIRED])
 AC_SUBST([LIBEGG_CFLAGS])
 AC_SUBST([LIBEGG_LIBS])
 
