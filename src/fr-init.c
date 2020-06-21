@@ -363,9 +363,14 @@ register_commands (void)
 	 * have higher priority over commands that can only read the same
 	 * format, regardless of the registration order. */
 
+	/* Allow preferring unzip over 7z, as it supports OEM encodings (#5) */
+	gboolean prefer_zip = (getenv("UNZIP") != NULL);
+
 	register_command (FR_TYPE_COMMAND_TAR);
 	register_command (FR_TYPE_COMMAND_CFILE);
 	register_command (FR_TYPE_COMMAND_RAR);
+	if (prefer_zip)
+		register_command (FR_TYPE_COMMAND_ZIP);
 	register_command (FR_TYPE_COMMAND_7Z);
 	register_command (FR_TYPE_COMMAND_DPKG);
 
@@ -380,7 +385,8 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_LHA);
 	register_command (FR_TYPE_COMMAND_RPM);
 	register_command (FR_TYPE_COMMAND_UNSTUFF);
-	register_command (FR_TYPE_COMMAND_ZIP);
+	if (!prefer_zip)
+		register_command (FR_TYPE_COMMAND_ZIP);
 	register_command (FR_TYPE_COMMAND_LRZIP);
 	register_command (FR_TYPE_COMMAND_ZOO);
 #if HAVE_JSON_GLIB
