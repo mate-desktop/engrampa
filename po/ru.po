@@ -10,12 +10,13 @@
 # monsta <monsta@inbox.ru>, 2018
 # theirix <theirix@gmail.com>, 2018
 # Alex Putz, 2018
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2019
+# Alexei Sorokin, 2019
 # Olesya Gerasimenko <gammaray@basealt.ru>, 2019
 # ZenWalker <scow@riseup.net>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Aleksey Kabanov <ak099@mail.ru>, 2019
 # Александр Кураченко <alexander@basealt.ru>, 2019
+# Aleksey Kabanov <ak099@mail.ru>, 2020
+# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -23,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Александр Кураченко <alexander@basealt.ru>, 2019\n"
+"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,76 +105,81 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
+"Engrampa — менеджер архивов для среды MATE. Он позволяет создавать и "
+"модифицировать архивы, просматривать содержимое архива, просматривать файлы "
+"из архива, а также извлекать файлы из архива."
 
 #: data/engrampa.appdata.xml.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr ""
+"Engrampa представляет собой лишь графический интерфейс для программ-"
+"архиваторов, таких как tar и zip. Поддерживаемые типы файлов:"
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr ""
+msgstr "Сжатый файл 7-Zip (.7z)"
 
 #: data/engrampa.appdata.xml.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr ""
+msgstr "Сжатый файл WinAce (.ace)"
 
 #: data/engrampa.appdata.xml.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr ""
+msgstr "Сжатый файл ALZip (.alz)"
 
 #: data/engrampa.appdata.xml.in:23
 msgid "AIX Small Indexed Archive (.ar)"
-msgstr ""
+msgstr "Архив AIX Small Indexed (.ar)"
 
 #: data/engrampa.appdata.xml.in:24
 msgid "ARJ Compressed Archive (.arj)"
-msgstr ""
+msgstr "Сжатый архив ARJ (.arj)"
 
 #: data/engrampa.appdata.xml.in:25
 msgid "Cabinet File (.cab)"
-msgstr ""
+msgstr "Файл Cabinet (.cab)"
 
 #: data/engrampa.appdata.xml.in:26
 msgid "UNIX CPIO Archive (.cpio)"
-msgstr ""
+msgstr "Архив UNIX CPIO (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
 msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr ""
+msgstr "Пакет Debian Linux (.deb, .udeb) [режим только для чтения]"
 
 #: data/engrampa.appdata.xml.in:28
 msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr ""
+msgstr "Образ компакт-диска ISO-9660 (.iso) [режим только для чтения]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
-msgstr ""
+msgstr "Архив Java (.jar)"
 
 #: data/engrampa.appdata.xml.in:30
 msgid "Java Enterprise archive (.ear)"
-msgstr ""
+msgstr "Архив Java Enterprise (.ear)"
 
 #: data/engrampa.appdata.xml.in:31
 msgid "Java Web Archive (.war)"
-msgstr ""
+msgstr "Архив Java Web (.war)"
 
 #: data/engrampa.appdata.xml.in:32
 msgid "LHA Archive (.lzh, .lha)"
-msgstr ""
+msgstr "Архив LHA (.lzh, .lha)"
 
 #: data/engrampa.appdata.xml.in:33
 msgid "WinRAR Compressed Archive (.rar)"
-msgstr ""
+msgstr "Сжатый архив WinRAR (.rar)"
 
 #: data/engrampa.appdata.xml.in:34
 msgid "RAR Archived Comic Book (.cbr)"
-msgstr ""
+msgstr "Книга комиксов в архиве RAR (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
 msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr ""
+msgstr "RPM-пакет Linux (.rpm) [режим только для чтения]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -182,22 +188,26 @@ msgid ""
 "compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
 " (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 msgstr ""
+"Файл архива Tape без сжатия (.tar) или сжатый с помощью: gzip (.tar.gz, "
+".tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), "
+"compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
+" (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 
 #: data/engrampa.appdata.xml.in:39
 msgid "Stuffit Archives (.bin, .sit)"
-msgstr ""
+msgstr "Архивы Stuffit (.bin, .sit)"
 
 #: data/engrampa.appdata.xml.in:40
 msgid "ZIP Archive (.zip)"
-msgstr ""
+msgstr "ZIP-архив (.zip)"
 
 #: data/engrampa.appdata.xml.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
-msgstr ""
+msgstr "Книга комиксов в архиве ZIP (.cbz)"
 
 #: data/engrampa.appdata.xml.in:42
 msgid "ZOO Compressed Archive File (.zoo)"
-msgstr ""
+msgstr "Сжатый файл архива ZOO (.zoo)"
 
 #: data/engrampa.appdata.xml.in:43
 msgid ""
@@ -205,6 +215,9 @@ msgid ""
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
 msgstr ""
+"Одиночные файлы, сжатые с помощью gzip (.gz), brotli (.br), bzip (.bz), "
+"bzip2 (.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), "
+"rzip(.rz), xz (.xz)."
 
 #: data/engrampa.appdata.xml.in:46
 msgid ""
@@ -212,6 +225,8 @@ msgid ""
 "If you would like to know more about MATE and Engrampa, please visit the "
 "project's home page."
 msgstr ""
+"Engrampa – форк File Roller и часть рабочей среды MATE. Если вы хотите знать"
+" больше о MATE и Engrampa, пожалуйста, посетите домашнюю страницу проекта."
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:2009 src/fr-window.c:5578
 msgid "Archive Manager"
@@ -226,13 +241,13 @@ msgstr "Создать или изменить архив"
 #: data/engrampa.desktop.in.in:12
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
 msgid "engrampa"
-msgstr ""
+msgstr "engrampa"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr ""
+msgstr "MATE;архив;диспетчер;сжатие;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -532,6 +547,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2020 The MATE developers"
 
 #: src/actions.c:902
 msgid "An archive manager for MATE."
@@ -893,7 +910,7 @@ msgstr "Пакет формата Debian"
 
 #: src/fr-init.c:62
 msgid "Cabinet"
-msgstr ""
+msgstr "Cabinet"
 
 #: src/fr-init.c:63
 msgid "OpenDocument Presentation"
@@ -921,15 +938,15 @@ msgstr "Шаблон текстового документа OpenDocument"
 
 #: src/fr-init.c:69
 msgid "7-Zip"
-msgstr ""
+msgstr "7-Zip"
 
 #: src/fr-init.c:70
 msgid "Tar compressed with 7z"
-msgstr ""
+msgstr "Tar, сжатый программой 7z"
 
 #: src/fr-init.c:71
 msgid "Ace"
-msgstr ""
+msgstr "Ace"
 
 #: src/fr-init.c:72
 msgid "ALZip archive"
@@ -937,19 +954,19 @@ msgstr "Архив ALZip"
 
 #: src/fr-init.c:73
 msgid "Ar"
-msgstr ""
+msgstr "Ar"
 
 #: src/fr-init.c:74
 msgid "Arj"
-msgstr ""
+msgstr "Arj"
 
 #: src/fr-init.c:75
 msgid "Brotli compressed file"
-msgstr ""
+msgstr "Brotli-сжатый файл"
 
 #: src/fr-init.c:76
 msgid "Tar compressed with brotli"
-msgstr ""
+msgstr "Tar, сжатый с помощью brotli"
 
 #: src/fr-init.c:77
 msgid "Bzip2 compressed file"
@@ -957,147 +974,147 @@ msgstr "сжатый (программой bzip2) файл"
 
 #: src/fr-init.c:78
 msgid "Tar compressed with bzip2"
-msgstr ""
+msgstr "Tar, сжатый с помощью bzip2"
 
 #: src/fr-init.c:79
 msgid "Bzip compressed file"
-msgstr ""
+msgstr "Bzip-сжатый файл"
 
 #: src/fr-init.c:80
 msgid "Tar compressed with bzip"
-msgstr ""
+msgstr "Tar, сжатый с помощью bzip"
 
 #: src/fr-init.c:81
 msgid "Rar Archived Comic Book"
-msgstr ""
+msgstr "Книга комиксов в архиве Rar"
 
 #: src/fr-init.c:82
 msgid "Zip Archived Comic Book"
-msgstr ""
+msgstr "Книга комиксов в архиве Zip"
 
 #: src/fr-init.c:83
 msgid "Disc Image File"
-msgstr ""
+msgstr "Файл образа диска"
 
 #: src/fr-init.c:84
 msgid "Unix Compressed Archive file"
-msgstr ""
+msgstr "Сжатый архивный файл Unix"
 
 #: src/fr-init.c:85
 msgid "Tar compressed with gzip"
-msgstr ""
+msgstr "Tar, сжатый с помощью gzip"
 
 #: src/fr-init.c:86
 msgid "Unix CPIO Archive"
-msgstr ""
+msgstr "Архив UNIX CPIO"
 
 #: src/fr-init.c:87
 msgid "Ear"
-msgstr ""
+msgstr "Ear"
 
 #: src/fr-init.c:88
 msgid "GZip compressed file"
-msgstr ""
+msgstr "GZip-сжатый файл"
 
 #: src/fr-init.c:89
 msgid "Jar"
-msgstr ""
+msgstr "Jar"
 
 #: src/fr-init.c:90
 msgid "Lha"
-msgstr ""
+msgstr "Lha"
 
 #: src/fr-init.c:91
 msgid "Lrzip "
-msgstr ""
+msgstr "Lrzip "
 
 #: src/fr-init.c:92
 msgid "Tar compressed with lrzip"
-msgstr ""
+msgstr "Tar, сжатый с помощью lrzip"
 
 #: src/fr-init.c:93
 msgid "LZip compressed file"
-msgstr ""
+msgstr "LZip-сжатый файл"
 
 #: src/fr-init.c:94
 msgid "Tar compressed with lzip"
-msgstr ""
+msgstr "Tar, сжатый с помощью lzip"
 
 #: src/fr-init.c:95
 msgid "LZMA compressed file"
-msgstr ""
+msgstr "LZMA-сжатый файл"
 
 #: src/fr-init.c:96
 msgid "Tar compressed with lzma"
-msgstr ""
+msgstr "Tar, сжатый с помощью lzma"
 
 #: src/fr-init.c:97
 msgid "LZO compressed file"
-msgstr ""
+msgstr "LZO-сжатый файл"
 
 #: src/fr-init.c:98
 msgid "Tar compressed with lzop"
-msgstr ""
+msgstr "Tar, сжатый с помощью lzop"
 
 #: src/fr-init.c:99
 msgid "Self-extracting zip"
-msgstr ""
+msgstr "Самоизвлекающийся zip"
 
 #: src/fr-init.c:100
 msgid "Windows Imaging Format"
-msgstr ""
+msgstr "Формат файлов образов Windows"
 
 #: src/fr-init.c:101
 msgid "Rar"
-msgstr ""
+msgstr "Rar"
 
 #: src/fr-init.c:102
 msgid "Red Hat Package Manager file"
-msgstr ""
+msgstr "Файл менеджера пакетов RPM"
 
 #: src/fr-init.c:103
 msgid "RZip compressed file"
-msgstr ""
+msgstr "RZip-сжатый файл"
 
 #: src/fr-init.c:104
 msgid "StuffIt Archive"
-msgstr ""
+msgstr "Архив StuffIt"
 
 #: src/fr-init.c:105
 msgid "Tar uncompressed"
-msgstr ""
+msgstr "Несжатый Tar"
 
 #: src/fr-init.c:106
 msgid "Tar compressed with compress"
-msgstr ""
+msgstr "Tar, сжатый с помощью compress"
 
 #: src/fr-init.c:107
 msgid "War"
-msgstr ""
+msgstr "War"
 
 #: src/fr-init.c:108
 msgid "Xz compressed file"
-msgstr ""
+msgstr "Xz-сжатый файл"
 
 #: src/fr-init.c:109
 msgid "Tar compressed with xz"
-msgstr ""
+msgstr "Tar, сжатый с помощью xz"
 
 #: src/fr-init.c:110
 msgid "Zoo"
-msgstr ""
+msgstr "Zoo"
 
 #: src/fr-init.c:111
 msgid "Zstandard compressed file"
-msgstr ""
+msgstr "Zstandart-сжатый файл"
 
 #: src/fr-init.c:112
 msgid "Tar compressed with zstd"
-msgstr ""
+msgstr "Tar, сжатый с помощью zstd"
 
 #: src/fr-init.c:113
 msgid "Zip"
-msgstr ""
+msgstr "Zip"
 
 #: src/fr-stock.c:42
 msgid "C_reate"

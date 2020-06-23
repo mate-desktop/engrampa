@@ -5,15 +5,17 @@
 # 
 # Translators:
 # Dianjin Wang <1132321739qq@gmail.com>, 2018
-# 玉堂白鹤 <yjwork@qq.com>, 2018
 # 775405984, 2018
-# Wylmer Wang, 2018
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
 # Christopher M <i@cicku.me>, 2018
-# liushuyu011 <liushuyu011@gmail.com>, 2018
+# shuyu liu <liushuyu011@gmail.com>, 2018
 # biqiu-ssw <shenshuaiwen@gmail.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Baron Hou <houbaron@gmail.com>, 2019
+# Mingtian Yang <i@skylee.xyz>, 2020
+# liulitchi <xingzuo88@qq.com>, 2020
+# 玉堂白鹤 <yjwork@qq.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -21,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Baron Hou <houbaron@gmail.com>, 2019\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,77 +103,77 @@ msgid ""
 "Engrampa is an archive manager for the MATE environment. It allows you to "
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
-msgstr ""
+msgstr "Engrampa 是 MATE 桌面的存档管理器。可用来创建或修改存档、查看存档的内容、查看存档中包含的文件，以及从存档中提取文件。"
 
 #: data/engrampa.appdata.xml.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
-msgstr ""
+msgstr "Engrampa 只是归档程序如 tar 和 zip 的一个前端（图形界面）。受支持的文件类型有："
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr ""
+msgstr "7-Zip 压缩文件 (.7z)"
 
 #: data/engrampa.appdata.xml.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr ""
+msgstr "WinAce 压缩文件 (.ace)"
 
 #: data/engrampa.appdata.xml.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr ""
+msgstr "ALZip 压缩文件 (.alz)"
 
 #: data/engrampa.appdata.xml.in:23
 msgid "AIX Small Indexed Archive (.ar)"
-msgstr ""
+msgstr "AIX 小索引归档 (.ar)"
 
 #: data/engrampa.appdata.xml.in:24
 msgid "ARJ Compressed Archive (.arj)"
-msgstr ""
+msgstr "ARJ 压缩归档 (.arj)"
 
 #: data/engrampa.appdata.xml.in:25
 msgid "Cabinet File (.cab)"
-msgstr ""
+msgstr "Cabinet 文件 (.cab)"
 
 #: data/engrampa.appdata.xml.in:26
 msgid "UNIX CPIO Archive (.cpio)"
-msgstr ""
+msgstr "UNIX CPIO 归档 (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
 msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr ""
+msgstr "Debian Linux 包 (.deb, .udeb) [只读模式]"
 
 #: data/engrampa.appdata.xml.in:28
 msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr ""
+msgstr "ISO-9660 CD 光盘映像 (.iso) [只读模式]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
-msgstr ""
+msgstr "Java 归档 (.jar)"
 
 #: data/engrampa.appdata.xml.in:30
 msgid "Java Enterprise archive (.ear)"
-msgstr ""
+msgstr "Java 企业归档 (.ear)"
 
 #: data/engrampa.appdata.xml.in:31
 msgid "Java Web Archive (.war)"
-msgstr ""
+msgstr "Java Web 归档 (.war)"
 
 #: data/engrampa.appdata.xml.in:32
 msgid "LHA Archive (.lzh, .lha)"
-msgstr ""
+msgstr "LHA 归档 (.lzh, .lha)"
 
 #: data/engrampa.appdata.xml.in:33
 msgid "WinRAR Compressed Archive (.rar)"
-msgstr ""
+msgstr "WinRAR 压缩归档 (.rar)"
 
 #: data/engrampa.appdata.xml.in:34
 msgid "RAR Archived Comic Book (.cbr)"
-msgstr ""
+msgstr "RAR 归档的漫画书 (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
 msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr ""
+msgstr "RPM Linux 包 (.rpm) [只读模式]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -180,22 +182,26 @@ msgid ""
 "compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
 " (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 msgstr ""
+"未经压缩的磁带归档文件 (.tar) 或使用 gzip (.tar.gz, .tgz), brotli (.tar.br), bzip "
+"(.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), compress (.tar.Z, .taz), lrzip "
+"(.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip "
+"(.tar.7z), xz (.tar.xz), Zstandard (.zst) 压缩的磁带归档文件。"
 
 #: data/engrampa.appdata.xml.in:39
 msgid "Stuffit Archives (.bin, .sit)"
-msgstr ""
+msgstr "Stuffit 归档 (.bin, .sit)"
 
 #: data/engrampa.appdata.xml.in:40
 msgid "ZIP Archive (.zip)"
-msgstr ""
+msgstr "ZIP 归档 (.zip)"
 
 #: data/engrampa.appdata.xml.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
-msgstr ""
+msgstr "ZIP 压缩的漫画书 (.cbz)"
 
 #: data/engrampa.appdata.xml.in:42
 msgid "ZOO Compressed Archive File (.zoo)"
-msgstr ""
+msgstr "ZOO 压缩的归档文件 (.zoo)"
 
 #: data/engrampa.appdata.xml.in:43
 msgid ""
@@ -203,6 +209,8 @@ msgid ""
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
 msgstr ""
+"使用 gzip (.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip "
+"(.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz (.xz) 压缩的单个文件。"
 
 #: data/engrampa.appdata.xml.in:46
 msgid ""
@@ -210,6 +218,8 @@ msgid ""
 "If you would like to know more about MATE and Engrampa, please visit the "
 "project's home page."
 msgstr ""
+"Engrampa 为 MATE 桌面环境的一部分，是 File Roller 的复刻。想了解更多 MATE 及 Engrampa "
+"的信息，请访问项目主页。"
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:2009 src/fr-window.c:5578
 msgid "Archive Manager"
@@ -224,13 +234,13 @@ msgstr "创建并修改归档文件"
 #: data/engrampa.desktop.in.in:12
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
 msgid "engrampa"
-msgstr ""
+msgstr "engrampa"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr ""
+msgstr "MATE;归档;管理;压缩;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -430,7 +440,7 @@ msgstr "使用选择的对象创建一个压缩的归档"
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
 #: src/server.c:457
 msgid "Engrampa"
-msgstr "文件打包器"
+msgstr "Engrampa"
 
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:6
 msgid "Allows to create and extract archives"
@@ -507,6 +517,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 自由软件基金会\n"
+"Copyright © 2012–2020 MATE 开发者"
 
 #: src/actions.c:902
 msgid "An archive manager for MATE."
@@ -524,7 +536,8 @@ msgstr ""
 "玉堂白鹤 <yjwork@qq.com>, 2015\n"
 "Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
 "白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
+"Mingtian Yang <i@skylee.xyz>, 2020"
 
 #: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -832,7 +845,7 @@ msgstr "Debian 包"
 
 #: src/fr-init.c:62
 msgid "Cabinet"
-msgstr ""
+msgstr "Cabinet"
 
 #: src/fr-init.c:63
 msgid "OpenDocument Presentation"
@@ -860,35 +873,35 @@ msgstr "OpenDocument 文字处理模板"
 
 #: src/fr-init.c:69
 msgid "7-Zip"
-msgstr ""
+msgstr "7-Zip"
 
 #: src/fr-init.c:70
 msgid "Tar compressed with 7z"
-msgstr ""
+msgstr "使用 7z 压缩的 tar"
 
 #: src/fr-init.c:71
 msgid "Ace"
-msgstr ""
+msgstr "Ace"
 
 #: src/fr-init.c:72
 msgid "ALZip archive"
-msgstr ""
+msgstr "ALZip 归档"
 
 #: src/fr-init.c:73
 msgid "Ar"
-msgstr ""
+msgstr "Ar"
 
 #: src/fr-init.c:74
 msgid "Arj"
-msgstr ""
+msgstr "Arj"
 
 #: src/fr-init.c:75
 msgid "Brotli compressed file"
-msgstr ""
+msgstr "brotli 压缩文件"
 
 #: src/fr-init.c:76
 msgid "Tar compressed with brotli"
-msgstr ""
+msgstr "使用 brotli 压缩的 tar"
 
 #: src/fr-init.c:77
 msgid "Bzip2 compressed file"
@@ -896,147 +909,147 @@ msgstr "Bzip2 压缩文件"
 
 #: src/fr-init.c:78
 msgid "Tar compressed with bzip2"
-msgstr ""
+msgstr "使用 bzip2 压缩的 tar"
 
 #: src/fr-init.c:79
 msgid "Bzip compressed file"
-msgstr ""
+msgstr "bzip 压缩文件"
 
 #: src/fr-init.c:80
 msgid "Tar compressed with bzip"
-msgstr ""
+msgstr "使用 bzip 压缩的 tar"
 
 #: src/fr-init.c:81
 msgid "Rar Archived Comic Book"
-msgstr ""
+msgstr "Rar 归档的漫画书"
 
 #: src/fr-init.c:82
 msgid "Zip Archived Comic Book"
-msgstr ""
+msgstr "Zip 归档的漫画书"
 
 #: src/fr-init.c:83
 msgid "Disc Image File"
-msgstr ""
+msgstr "光盘映像文件"
 
 #: src/fr-init.c:84
 msgid "Unix Compressed Archive file"
-msgstr ""
+msgstr "Unix 压缩的归档文件"
 
 #: src/fr-init.c:85
 msgid "Tar compressed with gzip"
-msgstr ""
+msgstr "使用 gzip 压缩的 tar"
 
 #: src/fr-init.c:86
 msgid "Unix CPIO Archive"
-msgstr ""
+msgstr "Unix CPIO 归档"
 
 #: src/fr-init.c:87
 msgid "Ear"
-msgstr ""
+msgstr "Ear"
 
 #: src/fr-init.c:88
 msgid "GZip compressed file"
-msgstr ""
+msgstr "GZip 压缩文件"
 
 #: src/fr-init.c:89
 msgid "Jar"
-msgstr ""
+msgstr "Jar"
 
 #: src/fr-init.c:90
 msgid "Lha"
-msgstr ""
+msgstr "Lha"
 
 #: src/fr-init.c:91
 msgid "Lrzip "
-msgstr ""
+msgstr "Lrzip "
 
 #: src/fr-init.c:92
 msgid "Tar compressed with lrzip"
-msgstr ""
+msgstr "使用 lrzip 压缩的 tar"
 
 #: src/fr-init.c:93
 msgid "LZip compressed file"
-msgstr ""
+msgstr "LZip 压缩文件"
 
 #: src/fr-init.c:94
 msgid "Tar compressed with lzip"
-msgstr ""
+msgstr "使用 lzip 压缩的 tar"
 
 #: src/fr-init.c:95
 msgid "LZMA compressed file"
-msgstr ""
+msgstr "LZMA 压缩文件"
 
 #: src/fr-init.c:96
 msgid "Tar compressed with lzma"
-msgstr ""
+msgstr "使用 lzma 压缩的 tar"
 
 #: src/fr-init.c:97
 msgid "LZO compressed file"
-msgstr ""
+msgstr "LZO 压缩文件"
 
 #: src/fr-init.c:98
 msgid "Tar compressed with lzop"
-msgstr ""
+msgstr "使用 lzop 压缩的 tar"
 
 #: src/fr-init.c:99
 msgid "Self-extracting zip"
-msgstr ""
+msgstr "自解压 zip"
 
 #: src/fr-init.c:100
 msgid "Windows Imaging Format"
-msgstr ""
+msgstr "Windows 映像格式"
 
 #: src/fr-init.c:101
 msgid "Rar"
-msgstr ""
+msgstr "Rar"
 
 #: src/fr-init.c:102
 msgid "Red Hat Package Manager file"
-msgstr ""
+msgstr "Red Hat 包管理文件"
 
 #: src/fr-init.c:103
 msgid "RZip compressed file"
-msgstr ""
+msgstr "RZip 压缩文件"
 
 #: src/fr-init.c:104
 msgid "StuffIt Archive"
-msgstr ""
+msgstr "StuffIt 归档"
 
 #: src/fr-init.c:105
 msgid "Tar uncompressed"
-msgstr ""
+msgstr "未压缩的 tar"
 
 #: src/fr-init.c:106
 msgid "Tar compressed with compress"
-msgstr ""
+msgstr "用 compress 压缩的 Tar"
 
 #: src/fr-init.c:107
 msgid "War"
-msgstr ""
+msgstr "War"
 
 #: src/fr-init.c:108
 msgid "Xz compressed file"
-msgstr ""
+msgstr "zx 压缩文件"
 
 #: src/fr-init.c:109
 msgid "Tar compressed with xz"
-msgstr ""
+msgstr "用 xz 压缩的 tar"
 
 #: src/fr-init.c:110
 msgid "Zoo"
-msgstr ""
+msgstr "Zoo"
 
 #: src/fr-init.c:111
 msgid "Zstandard compressed file"
-msgstr ""
+msgstr "Zstandard 压缩文件"
 
 #: src/fr-init.c:112
 msgid "Tar compressed with zstd"
-msgstr ""
+msgstr "用 zstd 压缩的 tar"
 
 #: src/fr-init.c:113
 msgid "Zip"
-msgstr ""
+msgstr "Zip"
 
 #: src/fr-stock.c:42
 msgid "C_reate"
@@ -1481,7 +1494,7 @@ msgstr "载入选项"
 
 #: src/ui/app-menu.ui:6 src/ui.h:35
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: src/ui/app-menu.ui:10
 msgid "_About Archive Manager"
@@ -1570,11 +1583,11 @@ msgstr "归档文件(_A)"
 
 #: src/ui.h:33
 msgid "_Edit"
-msgstr "编辑（_E）"
+msgstr "编辑(_E)"
 
 #: src/ui.h:34
 msgid "_View"
-msgstr "视图（_V）"
+msgstr "视图(_V)"
 
 #: src/ui.h:36
 msgid "_Arrange Files"
@@ -1590,7 +1603,7 @@ msgstr "关于程序的信息"
 
 #: src/ui.h:43
 msgid "_Add Files…"
-msgstr "添加文件 (_A) ..."
+msgstr "添加文件(_A) ..."
 
 #: src/ui.h:44 src/ui.h:48
 msgid "Add files to the archive"
@@ -1598,7 +1611,7 @@ msgstr "向归档文件中添加文件"
 
 #: src/ui.h:51
 msgid "Add a _Folder…"
-msgstr "添加文件夹 (_F) ..."
+msgstr "添加文件夹(_F) ..."
 
 #: src/ui.h:52 src/ui.h:56
 msgid "Add a folder to the archive"
@@ -1618,7 +1631,7 @@ msgstr "目录"
 
 #: src/ui.h:64
 msgid "Display the Engrampa Manual"
-msgstr "显示文件打包器的手册"
+msgstr "显示 Engrampa 的手册"
 
 #: src/ui.h:68 src/ui.h:89
 msgid "_Copy"
@@ -1642,7 +1655,7 @@ msgstr "粘贴剪贴板中的内容"
 
 #: src/ui.h:80 src/ui.h:101
 msgid "_Rename…"
-msgstr "重命名 (_R) ..."
+msgstr "重命名(_R) ..."
 
 #: src/ui.h:81 src/ui.h:102
 msgid "Rename the selection"
@@ -1666,7 +1679,7 @@ msgstr "不选任何文件"
 
 #: src/ui.h:114 src/ui.h:118
 msgid "_Extract…"
-msgstr "解压缩 (_E) ..."
+msgstr "解压缩(_E) ..."
 
 #: src/ui.h:115 src/ui.h:119 src/ui.h:123
 msgid "Extract files from the archive"
@@ -1714,7 +1727,7 @@ msgstr "用应用程序打开选中文件"
 
 #: src/ui.h:151
 msgid "Pass_word…"
-msgstr "密码 (_w) ..."
+msgstr "密码(_W) ..."
 
 #: src/ui.h:152
 msgid "Specify a password for this archive"
@@ -1722,7 +1735,7 @@ msgstr "为此归档文件指定密码"
 
 #: src/ui.h:155
 msgid "_Properties"
-msgstr "属性 (_P)"
+msgstr "属性(_P)"
 
 #: src/ui.h:156
 msgid "Show archive properties"

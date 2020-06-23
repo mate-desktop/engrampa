@@ -12,7 +12,7 @@
 # Herick Vinicius <herick.gustavo@gmail.com>, 2018
 # Felipe Rozelio <feliperozelio@gmail.com>, 2018
 # Aldo Oliveira <america103@gmail.com>, 2018
-# Marcus Vinícius Marques, 2018
+# 65f2af3cfa184c075942a0418b98d2de_d688669, 2018
 # Victor Gonçalves <hotcyv@gmail.com>, 2018
 # Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
 # Roger Araújo <roger.rf@gmail.com>, 2018
@@ -21,6 +21,7 @@
 # Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
 # Danylo Sa <kaiserblast@gmail.com>, 2019
+# gustavo s, 2020
 # 
 msgid ""
 msgstr ""
@@ -28,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Danylo Sa <kaiserblast@gmail.com>, 2019\n"
+"Last-Translator: gustavo s, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -109,24 +110,29 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
+"Engrampa é um gerenciador de arquivos para o ambiente MATE. Te permite criar"
+" e modificar arquivos, ver os conteúdos de um arquivo, ver um arquivo "
+"contido noutro arquivo e extrair conteúdo de um arquivo."
 
 #: data/engrampa.appdata.xml.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr ""
+"Engrampa é apenas um front-end (uma interface gráfica) para arquivar "
+"programas como tar e zip. Os tipos de arquivos suportados são:"
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr ""
+msgstr "Arquivo compactado 7-Zip (.7z)"
 
 #: data/engrampa.appdata.xml.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr ""
+msgstr "Arquivo compactado WinAce (.ace)"
 
 #: data/engrampa.appdata.xml.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr ""
+msgstr "Arquivo compactado ALZip (.alz)"
 
 #: data/engrampa.appdata.xml.in:23
 msgid "AIX Small Indexed Archive (.ar)"
@@ -154,7 +160,7 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
-msgstr ""
+msgstr "Arquivo Java (.jar)"
 
 #: data/engrampa.appdata.xml.in:30
 msgid "Java Enterprise archive (.ear)"
@@ -170,7 +176,7 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:33
 msgid "WinRAR Compressed Archive (.rar)"
-msgstr ""
+msgstr "Arquivo compactado WinRAR (.rar)"
 
 #: data/engrampa.appdata.xml.in:34
 msgid "RAR Archived Comic Book (.cbr)"
@@ -194,7 +200,7 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:40
 msgid "ZIP Archive (.zip)"
-msgstr ""
+msgstr "Arquivo ZIP (.zip)"
 
 #: data/engrampa.appdata.xml.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
@@ -231,7 +237,7 @@ msgstr "Crie e modifique um pacote"
 #: data/engrampa.desktop.in.in:12
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
 msgid "engrampa"
-msgstr ""
+msgstr "engrampa"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -913,19 +919,19 @@ msgstr "Modelo de Texto do OpenDocument"
 
 #: src/fr-init.c:69
 msgid "7-Zip"
-msgstr ""
+msgstr "7-Zip"
 
 #: src/fr-init.c:70
 msgid "Tar compressed with 7z"
-msgstr ""
+msgstr "Tar comprimido com 7z"
 
 #: src/fr-init.c:71
 msgid "Ace"
-msgstr ""
+msgstr "Ace"
 
 #: src/fr-init.c:72
 msgid "ALZip archive"
-msgstr ""
+msgstr "arquivo alzip"
 
 #: src/fr-init.c:73
 msgid "Ar"
@@ -937,11 +943,11 @@ msgstr ""
 
 #: src/fr-init.c:75
 msgid "Brotli compressed file"
-msgstr ""
+msgstr "Arquivo compactado brotli"
 
 #: src/fr-init.c:76
 msgid "Tar compressed with brotli"
-msgstr ""
+msgstr "Tar compactado com brotli"
 
 #: src/fr-init.c:77
 msgid "Bzip2 compressed file"
@@ -949,15 +955,15 @@ msgstr "Arquivo comprimido com Bzip2"
 
 #: src/fr-init.c:78
 msgid "Tar compressed with bzip2"
-msgstr ""
+msgstr "Tar compactado com bzip2"
 
 #: src/fr-init.c:79
 msgid "Bzip compressed file"
-msgstr ""
+msgstr "Arquivo compactado Bzip"
 
 #: src/fr-init.c:80
 msgid "Tar compressed with bzip"
-msgstr ""
+msgstr "Tar compactado com bzip"
 
 #: src/fr-init.c:81
 msgid "Rar Archived Comic Book"
@@ -977,7 +983,7 @@ msgstr ""
 
 #: src/fr-init.c:85
 msgid "Tar compressed with gzip"
-msgstr ""
+msgstr "Tar compactado com gzip"
 
 #: src/fr-init.c:86
 msgid "Unix CPIO Archive"
@@ -989,11 +995,11 @@ msgstr ""
 
 #: src/fr-init.c:88
 msgid "GZip compressed file"
-msgstr ""
+msgstr "Arquivo compactado GZip"
 
 #: src/fr-init.c:89
 msgid "Jar"
-msgstr ""
+msgstr "Jar"
 
 #: src/fr-init.c:90
 msgid "Lha"
@@ -1005,31 +1011,31 @@ msgstr ""
 
 #: src/fr-init.c:92
 msgid "Tar compressed with lrzip"
-msgstr ""
+msgstr "Tar compactado com Irzip"
 
 #: src/fr-init.c:93
 msgid "LZip compressed file"
-msgstr ""
+msgstr "Arquivo compactado lzip"
 
 #: src/fr-init.c:94
 msgid "Tar compressed with lzip"
-msgstr ""
+msgstr "Tar compactado com lzip"
 
 #: src/fr-init.c:95
 msgid "LZMA compressed file"
-msgstr ""
+msgstr "Arquivo compactado LZMA"
 
 #: src/fr-init.c:96
 msgid "Tar compressed with lzma"
-msgstr ""
+msgstr "Tar compactado com LZMA"
 
 #: src/fr-init.c:97
 msgid "LZO compressed file"
-msgstr ""
+msgstr "Arquivo compactado LZO"
 
 #: src/fr-init.c:98
 msgid "Tar compressed with lzop"
-msgstr ""
+msgstr "Tar compactado com LZOP"
 
 #: src/fr-init.c:99
 msgid "Self-extracting zip"
@@ -1049,7 +1055,7 @@ msgstr ""
 
 #: src/fr-init.c:103
 msgid "RZip compressed file"
-msgstr ""
+msgstr "Arquivo compactado RZIP"
 
 #: src/fr-init.c:104
 msgid "StuffIt Archive"
@@ -1057,11 +1063,11 @@ msgstr ""
 
 #: src/fr-init.c:105
 msgid "Tar uncompressed"
-msgstr ""
+msgstr "Tar descompactado"
 
 #: src/fr-init.c:106
 msgid "Tar compressed with compress"
-msgstr ""
+msgstr "Tar compactado com COMPRESS"
 
 #: src/fr-init.c:107
 msgid "War"
@@ -1069,11 +1075,11 @@ msgstr ""
 
 #: src/fr-init.c:108
 msgid "Xz compressed file"
-msgstr ""
+msgstr "Arquivo compactado Xz"
 
 #: src/fr-init.c:109
 msgid "Tar compressed with xz"
-msgstr ""
+msgstr "Tar compactado com XZ"
 
 #: src/fr-init.c:110
 msgid "Zoo"
@@ -1081,15 +1087,15 @@ msgstr ""
 
 #: src/fr-init.c:111
 msgid "Zstandard compressed file"
-msgstr ""
+msgstr "Ae"
 
 #: src/fr-init.c:112
 msgid "Tar compressed with zstd"
-msgstr ""
+msgstr "Tar compactado com ZSTD"
 
 #: src/fr-init.c:113
 msgid "Zip"
-msgstr ""
+msgstr "Zip"
 
 #: src/fr-stock.c:42
 msgid "C_reate"
@@ -1132,15 +1138,15 @@ msgstr "Não foi possível exibir a pasta \"%s\""
 
 #: src/fr-window.c:2307 src/fr-window.c:2322 src/fr-window.c:2613
 msgid "_Pause"
-msgstr ""
+msgstr "_Pausa"
 
 #: src/fr-window.c:2310
 msgid "Process paused"
-msgstr ""
+msgstr "Processo pausado"
 
 #: src/fr-window.c:2312
 msgid "_Resume"
-msgstr ""
+msgstr "_Resumir"
 
 #: src/fr-window.c:2320 src/fr-window.c:2923
 msgid "Please wait…"
@@ -1766,7 +1772,7 @@ msgstr "_Abrir"
 
 #: src/ui.h:147
 msgid "_Open With…"
-msgstr "Abrir c_om..."
+msgstr "_Abrir Com..."
 
 #: src/ui.h:148
 msgid "Open selected files with an application"
@@ -1790,7 +1796,7 @@ msgstr "Mostra as propriedades do pacote"
 
 #: src/ui.h:159
 msgid "_Refresh"
-msgstr "At_ualizar"
+msgstr "_Atualizar"
 
 #: src/ui.h:160
 msgid "Reload current archive"
@@ -1855,7 +1861,7 @@ msgstr "Ir para a localização de origem"
 
 #: src/ui.h:218
 msgid "_Toolbar"
-msgstr "Barra de _ferramentas"
+msgstr "_Barra de Ferramentas"
 
 #: src/ui.h:219
 msgid "View the main toolbar"
@@ -1879,7 +1885,7 @@ msgstr "Inverte a ordem da lista de arquivos"
 
 #: src/ui.h:233
 msgid "_Folders"
-msgstr "Pa_sta"
+msgstr "_Pastas"
 
 #: src/ui.h:243
 msgid "View All _Files"
