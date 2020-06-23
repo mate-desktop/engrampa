@@ -1,3 +1,32 @@
+### engrampa 1.25.0
+
+  * Translations update
+  * build: includes all required modules by libegg in PKG_CHECK_MODULES
+  * Update compilation instructions after use of git submodule
+  * add git.mk to generate .gitignore
+  * dlg-update: Fix callback names for callback symbol update_cb
+  * use git submodule of libegg
+  * dlg-batch-add: Set labels GtkSizeGroup in ui file
+  * Use callback symbols defined in ui files
+  * gtk-utils: Remove _gtk_builder_get_widget
+  * Remove fr-stock.c and fr-stock.h
+  * build: silent build warnings for distcheck
+  * help: fix and update archive format names
+  * actions: expand the comment on about dialog
+  * Terminate the application if the resource doesn't exists
+  * gtk-utils: Remove _gtk_count_selected
+  * engrampa.appdata.xml: recursive acronyms for .iso, .rpm filetypes
+  * glib-utils: remove g_ptr_array_free_full
+  * fr-window: duplicated code
+  * Add ARC archive support
+  * glib-utils: remove n_fields function
+  * Add dlg-add-files.ui and dlg-add-folder.ui
+  * Update authors
+  * dlg-new: Adding many callbacks at once
+  * new.ui: Stock icons are deprecated
+  * dlg-new: Use GET_WIDGET macro
+  * autoconf: get zstd mime type using libmagic if enabled
+
 ### engrampa 1.24.0
 
   * Translations update
