@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.36.0 -->
 <interface>
   <requires lib="gtk+" version="3.22"/>
+  <object class="GtkImage" id="aod_apply_button">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">gtk-apply</property>
+  </object>
+  <object class="GtkImage" id="aod_cancel_image">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">window-close</property>
+  </object>
+  <object class="GtkImage" id="aod_remove_image">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">list-remove</property>
+  </object>
   <object class="GtkDialog" id="add_options_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -9,9 +24,6 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <signal name="destroy" handler="on_add_options_dialog_destroy" swapped="no"/>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox19">
         <property name="visible">True</property>
@@ -24,14 +36,16 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="aod_cancelbutton">
-                <property name="label">gtk-close</property>
+              <object class="GtkButton" id="aod_cancel_button">
+                <property name="label" translatable="yes">_Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="use_stock">True</property>
-                <signal name="clicked" handler="on_aod_cancelbutton_clicked" swapped="no"/>
+                <property name="image">aod_cancel_image</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_aod_cancel_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -40,14 +54,16 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="aod_okbutton">
-                <property name="label">gtk-apply</property>
+              <object class="GtkButton" id="aod_ok_button">
+                <property name="label" translatable="yes">_Apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="can_default">True</property>
                 <property name="receives_default">False</property>
-                <property name="use_stock">True</property>
-                <signal name="clicked" handler="on_aod_okbutton_clicked" swapped="no"/>
+                <property name="image">aod_apply_button</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_aod_ok_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -78,11 +94,13 @@
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkButton" id="aod_remove_button">
-                    <property name="label">gtk-remove</property>
+                    <property name="label" translatable="yes">_Remove</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="use_stock">True</property>
+                    <property name="image">aod_remove_image</property>
+                    <property name="use_underline">True</property>
+                    <property name="always_show_image">True</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -136,8 +154,11 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="-7">aod_cancelbutton</action-widget>
-      <action-widget response="-10">aod_okbutton</action-widget>
+      <action-widget response="-7">aod_cancel_button</action-widget>
+      <action-widget response="-10">aod_ok_button</action-widget>
     </action-widgets>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
   </object>
 </interface>

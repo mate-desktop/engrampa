@@ -674,8 +674,8 @@ load_options_cb (GtkWidget  *w,
 	gtk_builder_add_callback_symbols (builder,
 	                                  "on_add_options_dialog_destroy",	G_CALLBACK (aod_destroy_cb),
 	                                  "on_aod_treeview_row_activated",	G_CALLBACK (aod_activated_cb),
-	                                  "on_aod_okbutton_clicked",		G_CALLBACK (aod_apply_cb),
-	                                  "on_aod_cancelbutton_clicked",	G_CALLBACK (aod_remove_cb),
+	                                  "on_aod_ok_button_clicked",		G_CALLBACK (aod_apply_cb),
+	                                  "on_aod_cancel_button_clicked",	G_CALLBACK (aod_remove_cb),
 	                                  NULL);
 	gtk_builder_connect_signals (builder, aod_data);
 
