@@ -43,9 +43,6 @@
 #include "fr-init.h"
 
 
-#define BUF_SIZE 4096
-#define FILE_PREFIX    "file://"
-#define FILE_PREFIX_L  7
 #define SPECIAL_DIR(x) ((strcmp ((x), "..") == 0) || (strcmp ((x), ".") == 0))
 
 

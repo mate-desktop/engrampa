@@ -53,7 +53,6 @@
 
 /* Sizes of structures */
 
-#define CONST_CLASS_INFO			 2
 #define CONST_FIELDREF_INFO			 4
 #define CONST_METHODREF_INFO	 		 4
 #define CONST_INTERFACEMETHODREF_INFO		 4

@@ -40,7 +40,6 @@
 #include "fr-command.h"
 #include "fr-command-tar.h"
 
-#define ACTIVITY_DELAY 20
 #define LSTAR_DATE_FORMAT "%Y-%m-%d %H:%M"
 
 static void fr_command_tar_class_init  (FrCommandTarClass *class);
@@ -835,9 +834,6 @@ get_uncompressed_name (FrCommandTar *c_tar,
 
 	return new_name;
 }
-
-
-#define MAX_TRIES 50
 
 
 static char *
