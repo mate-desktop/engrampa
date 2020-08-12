@@ -34,7 +34,6 @@
 
 #define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 #define DEFAULT_EXTENSION ".tar.gz"
-#define BAD_CHARS "/\\*"
 #define MEGABYTE (1024.0 * 1024.0)
 
 

@@ -60,10 +60,8 @@
 #endif
 
 #define LAST_OUTPUT_DIALOG_NAME "last-output"
-#define MAX_HISTORY_LEN 5
 #define ACTIVITY_DELAY 100
 #define ACTIVITY_PULSE_STEP (0.033)
-#define MAX_MESSAGE_LENGTH 50
 
 #define PROGRESS_TIMEOUT_MSECS 5000
 #define PROGRESS_DIALOG_DEFAULT_WIDTH 500
@@ -73,11 +71,6 @@
 #define HIDE_PROGRESS_TIMEOUT_MSECS 500
 #define DEFAULT_NAME_COLUMN_WIDTH 250
 #define OTHER_COLUMNS_WIDTH 100
-#define RECENT_ITEM_MAX_WIDTH 25
-
-#define DEF_WIN_WIDTH 600
-#define DEF_WIN_HEIGHT 480
-#define DEF_SIDEBAR_WIDTH 200
 
 #define FILE_LIST_ICON_SIZE GTK_ICON_SIZE_LARGE_TOOLBAR
 
@@ -91,7 +84,6 @@ static int             file_list_icon_size = 0;
 #define MAX_XDS_ATOM_VAL_LEN 4096
 #define XDS_ATOM   gdk_atom_intern  ("XdndDirectSave0", FALSE)
 #define TEXT_ATOM  gdk_atom_intern  ("text/plain", FALSE)
-#define OCTET_ATOM gdk_atom_intern  ("application/octet-stream", FALSE)
 #define XFR_ATOM   gdk_atom_intern  ("XdndEngrampa0", FALSE)
 
 #define FR_CLIPBOARD (gdk_atom_intern_static_string ("_RNGRAMPA_SPECIAL_CLIPBOARD"))

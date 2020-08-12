@@ -162,8 +162,6 @@ xfer_data_free (XferData *data)
 
 
 #define MAX_CHUNK_LEN (NCARGS * 2 / 3) /* Max command line length */
-#define UNKNOWN_TYPE "application/octet-stream"
-#define SAME_FS (FALSE)
 #define NO_BACKUP_FILES (TRUE)
 #define NO_DOT_FILES (FALSE)
 #define IGNORE_CASE (FALSE)

@@ -26,7 +26,6 @@
 #include <gtk/gtk.h>
 #include "gtk-utils.h"
 
-#define LOAD_BUFFER_SIZE 65536
 
 GtkWidget*
 _gtk_message_dialog_new (GtkWindow        *parent,
