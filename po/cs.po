@@ -4,26 +4,27 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# huskyviking <husky.viking@seznam.cz>, 2018
-# Radek kohout <radekpv@seznam.cz>, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# Roman Horník <roman.hornik@debian-linux.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2019
-# Lucas Lommer <drom@kdyne.net>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Honza Lafek <hlafek99@gmail.com>, 2019
-# ToMáš Marný, 2019
+# Radek kohout <radekpv@seznam.cz>, 2020
+# Roman Horník <roman.hornik@debian-linux.cz>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# ToMáš Marný, 2020
+# Michal <sinope@seznam.cz>, 2020
+# huskyviking <husky.viking@seznam.cz>, 2020
+# Honza Lafek <hlafek99@gmail.com>, 2020
+# LiberteCzech <liberte.czech@gmail.com>, 2020
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.23.2\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: ToMáš Marný, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:57+0000\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -542,6 +543,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2020 The MATE developers"
 msgstr ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2020 Vývojáři MATE"
 
 #: src/actions.c:902
 msgid "An archive manager for MATE."
@@ -555,12 +558,13 @@ msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
-"Lucas Lommer <drom@kdyne.net>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
 "Kamil Páral <ripper42@gmail.com>\n"
 "Petr Kovář <pknbe@volny.cz>\n"
-"Adrian Guniš <andygun696@gmail.com>\n"
-"Roman Horník <roman.hornik@debian-linux.cz>\n"
-"Jan Lafek <hlafek99@gmail.com>"
+"Lucas Lommer <drom@kdyne.net>\n"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
+"Roman Horník <roman.hornik@debian-linux.cz>"
 
 #: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -767,7 +771,7 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Soubor byl upraven externí aplikací. Jestliže neaktualizujete soubor v "
+"Soubor byl upraven externí aplikací. Jestliže neaktualizujete soubory v "
 "archivu, veškeré vaše změny budou ztraceny."
 msgstr[1] ""
 "%d soubory byly upraveny externí aplikací. Jestliže neaktualizujete soubory "
@@ -799,7 +803,7 @@ msgstr "Všechny podporované soubory"
 
 #: src/eggfileformatchooser.c:396
 msgid "By Extension"
-msgstr "Dle přípony"
+msgstr "Podle přípony"
 
 #: src/eggfileformatchooser.c:410
 msgid "File Format"
@@ -1113,10 +1117,10 @@ msgstr[3] "%d objektů (%s)"
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "%d objekt vybrán (%s)"
-msgstr[1] "%d objekty vybrány (%s)"
-msgstr[2] "%d objektů vybráno (%s)"
-msgstr[3] "%d objektů vybráno (%s)"
+msgstr[0] "Vybrán %d objekt (%s)"
+msgstr[1] "Vybrány %d objekty (%s)"
+msgstr[2] "Vybráno %d objektů (%s)"
+msgstr[3] "Vybráno %d objektů (%s)"
 
 #: src/fr-window.c:1617
 msgid "Folder"
@@ -1211,7 +1215,7 @@ msgstr "Ukládání \"%s\""
 
 #: src/fr-window.c:2606 src/ui/app-menu.ui:14
 msgid "_Quit"
-msgstr "_Ukončit"
+msgstr "U_končit"
 
 #: src/fr-window.c:2607
 msgid "_Open the Archive"
@@ -1449,7 +1453,7 @@ msgstr "_Nový název souboru:"
 
 #: src/fr-window.c:7857
 msgid "_Rename"
-msgstr "Pře_jmenovat"
+msgstr "_Přejmenovat"
 
 #: src/fr-window.c:7874 src/fr-window.c:7893
 msgid "Could not rename the folder"
@@ -1809,7 +1813,7 @@ msgstr "Uložit aktuální archiv pod jiným názvem"
 
 #: src/ui.h:167
 msgid "Select _All"
-msgstr "Vy_brat vše"
+msgstr "Vybr_at vše"
 
 #: src/ui.h:168
 msgid "Select all files"
@@ -1817,7 +1821,7 @@ msgstr "Vybrat všechny soubory"
 
 #: src/ui.h:171
 msgid "_Stop"
-msgstr "_Stop"
+msgstr "_Deaktivovat"
 
 #: src/ui.h:172
 msgid "Stop current operation"
@@ -1858,7 +1862,7 @@ msgstr "Přejít do domovského umístění"
 
 #: src/ui.h:218
 msgid "_Toolbar"
-msgstr "_Lišta nástrojů"
+msgstr "_Nástrojová lišta"
 
 #: src/ui.h:219
 msgid "View the main toolbar"
@@ -1987,7 +1991,7 @@ msgstr "Typ:"
 
 #: src/ui/update.ui:68 src/ui/update.ui:245
 msgid "_Update"
-msgstr "Akt_ualizovat"
+msgstr "_Aktualizovat"
 
 #: src/ui/update.ui:348
 msgid "S_elect the files you want to update:"

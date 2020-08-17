@@ -4,9 +4,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daniel <danicases@gmail.com>, 2018
-# Pere O. <gotrunks@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Daniel <danicases@gmail.com>, 2020
+# Pere O. <gotrunks@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2020
 # 
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: engrampa 1.23.2\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2020\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -96,12 +96,17 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
+"Engrampa és un gestor d’arxius per a l’entorn MATE. Permet crear i modificar"
+" arxius, visualitzar el contingut d’un arxiu, visualitzar un fitxer que està"
+" dins d'un arxiu i extreure fitxers de l’arxiu."
 
 #: data/engrampa.appdata.xml.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr ""
+"Engrampa només és una interfície gràfica per als programes d'arxivament, com"
+" ara tar i zip. Els tipus de fitxers compatibles són:"
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
@@ -133,11 +138,11 @@ msgstr "Arxiu CPIO UNIX (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
 msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr ""
+msgstr "Paquet de Debian Linux (.deb, .udeb) [mode només lectura]"
 
 #: data/engrampa.appdata.xml.in:28
 msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr ""
+msgstr "Imatge de CD ISO-9660 (.rpm) [mode només lectura]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
@@ -165,7 +170,7 @@ msgstr "Llibre de còmic amb arxivament RAR (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
 msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr ""
+msgstr "Paquet RPM de Linux (.rpm) [mode només lectura]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -174,6 +179,10 @@ msgid ""
 "compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
 " (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 msgstr ""
+"Fitxer d'arxiu de cinta sense comprimir (.tar) o comprimit amb: gzip "
+"(.tar.gz, .tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, "
+".tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, "
+".tlz), lzop (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 
 #: data/engrampa.appdata.xml.in:39
 msgid "Stuffit Archives (.bin, .sit)"
@@ -197,6 +206,9 @@ msgid ""
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
 msgstr ""
+"Fitxers únics comprimits amb gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
+"(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
+"(.xz)."
 
 #: data/engrampa.appdata.xml.in:46
 msgid ""
@@ -537,11 +549,9 @@ msgstr "Un gestor d'arxius per a MATE."
 #: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
-"Gil Forcada <gilforcada@guifi.net>\n"
-"Jordi Mallach <jordi@sindominio.net>\n"
-"Pere O. <gotrunks@gmail.com>\n"
-"Raül Cambeiro <rulet@menta.net>\n"
-"Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
+"Joan Duran <jodufi@gmail.com>, 2007\n"
+"Pere O. <gotrunks@gmail.com>, 2018\n"
+"Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018, 2019, 2020"
 
 #: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -659,7 +669,7 @@ msgstr ""
 
 #: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
-msgstr "Crea la _carpeta"
+msgstr "Crea una _carpeta"
 
 #: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format

@@ -4,23 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# crazyd <lebendig2002@yahoo.de>, 2018
-# Xpistian <xpistianbecker2@web.de>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Julian Rüger <jr98@gmx.net>, 2018
-# nautilusx, 2018
-# Tobias Bannert <tobannert@gmail.com>, 2019
-# Stefan Kadow <git17@ska67.de>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Ettore Atalan <atalanttore@googlemail.com>, 2019
+# Xpistian <xpistianbecker2@web.de>, 2020
+# nautilusx, 2020
+# Marcel Artz <email@marcel-artz.de>, 2020
+# crazyd <lebendig2002@yahoo.de>, 2020
+# Wolfgang Ulbrich <mate@raveit.de>, 2020
+# Stefan Kadow <git17@ska67.de>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ettore Atalan <atalanttore@googlemail.com>, 2020
+# Tobias Bannert <tobannert@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Julian Rüger <jr98@gmx.net>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.23.2\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>, 2019\n"
+"PO-Revision-Date: 2020-02-14 11:57+0000\n"
+"Last-Translator: Julian Rüger <jr98@gmx.net>, 2020\n"
 "Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -396,7 +398,7 @@ msgstr "Fügt 'unar' Unterstützung über .zip Archive hinzu."
 
 #: data/org.mate.engrampa.gschema.xml.in:132
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr "Aktiviert die Fähigkeit für 'unar' Unterstützung über .zip Archive."
+msgstr "Aktiviert die Fähigkeit für unar-Unterstützung über .zip-Archive."
 
 #: data/org.mate.engrampa.gschema.xml.in:143
 msgid "Overwrite existing files"
@@ -547,7 +549,8 @@ msgstr ""
 "Hendrik Richter\n"
 "Christian Kirbach\n"
 "Wolfgang Stoeggl\n"
-"Tobias Bannert"
+"Tobias Bannert\n"
+"Marcel Artz"
 
 #: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -662,7 +665,7 @@ msgid ""
 "\n"
 "Do you want to create it?"
 msgstr ""
-"Der Zielordner »%s« existiert nicht.\n"
+"Der Zielordner »%s« ist nicht vorhanden.\n"
 "\n"
 "Soll er angelegt werden?"
 
@@ -760,13 +763,7 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Die Datei wurden durch eine externe Anwendung verändert. Wenn Sie diese "
-"Datei im Archiv nicht aktualisieren, werden alle Ihre Änderungen verloren "
-"gehen."
 msgstr[1] ""
-"%d Dateien wurden durch eine externe Anwendung verändert. Wenn Sie diese "
-"Dateien im Archiv nicht aktualisieren, werden alle Ihre Änderungen verloren "
-"gehen."
 
 #: src/dlg-update.c:193
 #, c-format
@@ -1093,15 +1090,15 @@ msgstr "_Entpacken"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] "%d Objekt (%s)"
-msgstr[1] "%d Objekte (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "%d Objekt ausgewählt (%s)"
-msgstr[1] "%d Objekte ausgewählt (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1617
 msgid "Folder"
@@ -1218,8 +1215,8 @@ msgstr "S_chließen"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] "%d verbleibende Datei"
-msgstr[1] "%d verbleibende Dateien"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:2840
 msgid "Extraction completed successfully"

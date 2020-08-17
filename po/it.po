@@ -4,16 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Riccardo Di Maio <riccardodimaio11@gmail.com>, 2018
-# Simone Centonze <mypythonit@gmail.com>, 2018
-# lc_ <luca.caroppo@bluewin.ch>, 2018
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# Marco Z. <minaz666@gmail.com>, 2018
-# l3nn4rt, 2018
-# Giuseppe Pignataro <rogepix@gmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Enrico B. <enricobe@hotmail.com>, 2019
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Marco Bartolucci <nap.84@live.it>, 2020
+# Simone Centonze <mypythonit@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Dario Di Nucci <linkin88mail@gmail.com>, 2020
+# Giuseppe Pignataro <rogepix@gmail.com>, 2020
+# Enrico B. <enricobe@hotmail.com>, 2020
+# Marco Z. <minaz666@gmail.com>, 2020
 # Alessandro Volturno <alelvb@inwind.it>, 2020
 # 
 msgid ""
@@ -21,7 +19,7 @@ msgstr ""
 "Project-Id-Version: engrampa 1.23.2\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +40,7 @@ msgstr "Versione «%s» del file desktop non riconosciuta"
 #: copy-n-paste/eggdesktopfile.c:959
 #, c-format
 msgid "Starting %s"
-msgstr "Avvio di «%s»"
+msgstr "Avvio di %s"
 
 #: copy-n-paste/eggdesktopfile.c:1100
 msgid "Application does not accept documents on command line"
@@ -51,7 +49,7 @@ msgstr "L'applicazione non accetta documenti sulla riga di comando"
 #: copy-n-paste/eggdesktopfile.c:1168
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Opzione di lancio non riconosciuta: %d"
+msgstr "Opzione di avvio non riconosciuta: %d"
 
 #: copy-n-paste/eggdesktopfile.c:1366
 msgid "Can't pass documents to this desktop element"
@@ -75,7 +73,7 @@ msgstr "FILE"
 
 #: copy-n-paste/eggsmclient.c:227
 msgid "Specify session management ID"
-msgstr "Specifica l'ID di gestione sessione"
+msgstr "Specifica l'ID della gestione della sessione"
 
 #: copy-n-paste/eggsmclient.c:227
 msgid "ID"
@@ -83,7 +81,7 @@ msgstr "ID"
 
 #: copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
-msgstr "Opzioni di gestione sessione:"
+msgstr "Opzioni di gestione della sessione:"
 
 #: copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
@@ -145,11 +143,11 @@ msgstr "Archivio UNIX CPIO (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
 msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr "Pacchetto Debian Linux (.deb, .udeb) [sola-lettura]"
+msgstr "Pacchetto Debian Linux (.deb, .udeb) [modalità di sola-lettura]"
 
 #: data/engrampa.appdata.xml.in:28
 msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr "Immagine disco ISO-9660 CD (.iso) [sola-lettura]"
+msgstr "Immagine disco ISO-9660 CD (.iso) [modalità di sola-lettura]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
@@ -177,7 +175,7 @@ msgstr "Fumetto archivio RAR (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
 msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr "Pacchetto RPM Linux (.rpm) [sola-lettura]"
+msgstr "Pacchetto RPM Linux (.rpm) [modalità di sola-lettura]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -228,7 +226,7 @@ msgstr ""
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:2009 src/fr-window.c:5578
 msgid "Archive Manager"
-msgstr "Gestore di archivi"
+msgstr "Gestore di Archivi"
 
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
@@ -245,7 +243,7 @@ msgstr "engrampa"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr "MATE;archivio;gestore;comprimi;zip;rar;"
+msgstr "MATE;archive;manager;compression;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -256,12 +254,12 @@ msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
-"Il criterio da utilizzare per ordinare i file. I possibili valori sono: "
-"nome, dimensione, tipo, orario, percorso."
+"Che criterio utilizzare per ordinare i file. I possibili valori sono: nome, "
+"dimensione, tipo, orario, percorso."
 
 #: data/org.mate.engrampa.gschema.xml.in:43
 msgid "Sort type"
-msgstr "Ordina tipo"
+msgstr "Tipo di Ordinamento"
 
 #: data/org.mate.engrampa.gschema.xml.in:44
 msgid ""
@@ -273,7 +271,7 @@ msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
-msgstr "Elenco modalità"
+msgstr "Modalità Lista"
 
 #: data/org.mate.engrampa.gschema.xml.in:49
 msgid ""
@@ -285,7 +283,7 @@ msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:53
 msgid "Display type"
-msgstr "Tipo di schermo"
+msgstr "Mostra il tipo"
 
 #: data/org.mate.engrampa.gschema.xml.in:54
 msgid "Display the Type column in the main window."
@@ -293,7 +291,7 @@ msgstr "Visualizza la colonna Tipo nella finestra principale."
 
 #: data/org.mate.engrampa.gschema.xml.in:58
 msgid "Display size"
-msgstr "Grandezza dello schermo"
+msgstr "Mostra la dimensione"
 
 #: data/org.mate.engrampa.gschema.xml.in:59
 msgid "Display the Size column in the main window."
@@ -324,7 +322,7 @@ msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
-"Se impostata a VERO, visualizzerà le icone secondo il tipo di file (più "
+"Se impostata a \"vero\", visualizzerà le icone secondo il tipo di file (più "
 "lento), altrimenti visualizzerà sempre la stessa icona per tutti i file (più"
 " veloce)."
 
@@ -334,11 +332,11 @@ msgstr "Larghezza della colonna Nome"
 
 #: data/org.mate.engrampa.gschema.xml.in:79
 msgid "The default width of the name column in the file list."
-msgstr "La larghezza predefinita della colonna nome nella lista file."
+msgstr "La larghezza predefinita della colonna nome nella lista dei file."
 
 #: data/org.mate.engrampa.gschema.xml.in:85
 msgid "Max history length"
-msgstr "Lunghezza massima cronologia"
+msgstr "Lunghezza massima della cronologia"
 
 #: data/org.mate.engrampa.gschema.xml.in:86
 msgid "Max number of items in the Open Recents menu."
@@ -377,7 +375,7 @@ msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
-"Lista delle applicazioni visualizzate nella finestra di dialogo Apri File, "
+"Lista delle applicazioni visualizzate nella finestra di dialogo Apri File e "
 "non associate con il tipo di file."
 
 #: data/org.mate.engrampa.gschema.xml.in:121
@@ -389,20 +387,20 @@ msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
-"Livello di compressione utilizzata quando si aggiungono file ad un archivio."
+"Livello di compressione utilizzato quando si aggiungono file ad un archivio."
 " I valori possibili sono: molto veloce, veloce, normale, massimo."
 
 #: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
-msgstr "Cripta l'intestazione archivio"
+msgstr "Cripta l'intestazione dell'archivio"
 
 #: data/org.mate.engrampa.gschema.xml.in:127
 msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
-"Indica se decrittare l'intestazione archivio. Se l'intestazione è decrittata"
-" sarà richiesta la password anche per elencare il contenuto dell'archivio."
+"Indica se cifrare l'intestazione dell'archivio. Se l'intestazione è cifrata "
+"sarà richiesta la password anche per elencare il contenuto dell'archivio."
 
 #: data/org.mate.engrampa.gschema.xml.in:131
 msgid "Adds 'unar' support over .zip archives."
@@ -536,10 +534,9 @@ msgid ""
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
-"Una copia della GNU General Public License dovrebbe essere stata fornita con Engrampa. In caso contrario scrivere a:\n"
-"  Free Software Foundation, Inc.\n"
-"  51 Franklin St, Fifth Floor, Boston, MA\n"
-"  02111-1307  USA"
+"Una copia della GNU General Public License dovrebbe essere stata fornita con"
+" Engrampa. In caso contrario scrivere a:  Free Software Foundation, Inc. 51 "
+"Franklin St, Fifth Floor, Boston, MA 02110-1307 USA"
 
 #: src/actions.c:900
 msgid ""
@@ -555,7 +552,7 @@ msgstr "Un gestore di archivi per MATE."
 
 #: src/actions.c:905
 msgid "translator-credits"
-msgstr "Riconoscimenti-traduzione"
+msgstr " Alessandro Volturno, 2020"
 
 #: src/dlg-add-files.c:103 src/dlg-add-folder.c:136
 msgid "Could not add the files to the archive"
@@ -564,7 +561,7 @@ msgstr "Impossibile aggiungere i file all'archivio"
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:137
 #, c-format
 msgid "You don't have the right permissions to read files from folder \"%s\""
-msgstr "Permessi non sufficienti per leggere file nella cartella «%s»"
+msgstr "Permessi non sufficienti per leggere i file nella cartella «%s»"
 
 #: src/dlg-add-files.c:149 src/ui.h:47
 msgid "Add Files"
@@ -582,7 +579,7 @@ msgstr "Aggiungi una cartella"
 
 #: src/dlg-add-folder.c:238
 msgid "_Include subfolders"
-msgstr "Includi _sotto-cartelle"
+msgstr ":Includi sottocartelle"
 
 #: src/dlg-add-folder.c:239
 msgid "Exclude folders that are symbolic lin_ks"
@@ -602,7 +599,7 @@ msgstr "Escl_udere i file:"
 
 #: src/dlg-add-folder.c:258
 msgid "_Exclude folders:"
-msgstr "Escludere le c_artelle:"
+msgstr "_Escludere le cartelle:"
 
 #: src/dlg-add-folder.c:262
 msgid "_Load Options"
@@ -614,7 +611,7 @@ msgstr "Sal_va opzioni"
 
 #: src/dlg-add-folder.c:264
 msgid "_Reset Options"
-msgstr "Azzera _opzioni"
+msgstr "Resetta _opzioni"
 
 #: src/dlg-add-folder.c:877
 msgid "Save Options"
@@ -670,7 +667,7 @@ msgid ""
 msgstr ""
 "La cartella di destinazione «%s» non esiste. \n"
 "\n"
-"Creare tale cartella?"
+"Volete crearla?"
 
 #: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
@@ -687,7 +684,7 @@ msgstr "Archivio non creato"
 
 #: src/dlg-batch-add.c:319
 msgid "The archive is already present.  Do you want to overwrite it?"
-msgstr "L'archivio esiste già. Sovrascriverlo veramente?"
+msgstr "L'archivio esiste già. Si desidera ovrascriverlo?"
 
 #: src/dlg-batch-add.c:322
 msgid "_Overwrite"
@@ -722,7 +719,8 @@ msgstr "Salva"
 
 #: src/dlg-package-installer.c:108 src/dlg-package-installer.c:222
 msgid "There was an internal error trying to search for applications:"
-msgstr "Si è verificato un errore interno cercando le applicazioni:"
+msgstr ""
+"Si è verificato un errore interno tentando di cercare le applicazioni:"
 
 #: src/dlg-package-installer.c:310
 #, c-format
@@ -731,7 +729,7 @@ msgid ""
 "Do you want to search for a command to open this file?"
 msgstr ""
 "Non c'è alcun comando installato per i file %s.\n"
-"Cercare un comando per aprire questo file?"
+"Volete cercare un comando per aprire questo file?"
 
 #: src/dlg-package-installer.c:315
 msgid "Could not open this file type"
@@ -739,7 +737,7 @@ msgstr "Impossibile aprire questo tipo di file"
 
 #: src/dlg-package-installer.c:324
 msgid "_Search Command"
-msgstr "Ce_rca comando"
+msgstr "Comando _Cerca"
 
 #: src/dlg-prop.c:108
 #, c-format
@@ -748,7 +746,7 @@ msgstr "Proprietà di «%s»"
 
 #: src/dlg-prop.c:119 src/fr-window.c:1608 src/fr-window.c:1637
 msgid "%d %B %Y, %H:%M"
-msgstr "%d %B %Y, %k.%M"
+msgstr "%d %B %Y, %H.%M"
 
 #: src/dlg-update.c:164
 #, c-format
@@ -764,11 +762,11 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-" Il file è stato modificato con un'applicazione esterna. Se non aggiorni il "
-"file nell'archivio, tutti le modifiche apportate andranno perse."
+"Il file è stato modificato con un'applicazione esterna. Se non si aggiorna "
+"il file nell'archivio, tutte le modifiche andranno perse."
 msgstr[1] ""
-"%d file sono stati modificati con un'applicazione esterna. Se non aggiorni i"
-" file nell'archivio, tutti le modifiche apportate andranno perse."
+"%d file sono stati modificati con un'applicazione esterna. Se non si "
+"aggiornano i file nell'archivio, tutte le modifiche andranno perse."
 
 #: src/dlg-update.c:193
 #, c-format
@@ -778,7 +776,7 @@ msgstr "Aggiornare i file nell'archivio «%s»?"
 #: src/eggfileformatchooser.c:226
 #, c-format
 msgid "File _Format: %s"
-msgstr "Formato del _file: %s"
+msgstr "_Formato del file: %s"
 
 #: src/eggfileformatchooser.c:386
 msgid "All Files"
@@ -798,7 +796,7 @@ msgstr "Formato del file"
 
 #: src/eggfileformatchooser.c:428
 msgid "Extension(s)"
-msgstr "Estensioni"
+msgstr "Estensione(i)"
 
 #: src/eggfileformatchooser.c:658
 #, c-format
@@ -807,9 +805,9 @@ msgid ""
 "`%s'. Please make sure to use a known extension for that file or manually "
 "choose a file format from the list below."
 msgstr ""
-"Il programma non ha individuato il formato di file da usare per "
-"«%s».Assicurarsi di usare un'estensione conosciuta per quel file o "
-"sceglierne una dall'elenco sottostante."
+"Il programma non ha individuato il formato di file da usare per «%s». "
+"Assicurarsi di usare un'estensione conosciuta per quel file o sceglierne una"
+" dall'elenco sottostante."
 
 #: src/eggfileformatchooser.c:665
 msgid "File format not recognized"
@@ -957,11 +955,11 @@ msgstr "Fumetti archiviati Zip"
 
 #: src/fr-init.c:83
 msgid "Disc Image File"
-msgstr "File immagine disco"
+msgstr "File Immagine Disco"
 
 #: src/fr-init.c:84
 msgid "Unix Compressed Archive file"
-msgstr "File archivio compresso Unix"
+msgstr "File Archivio Compresso Unix"
 
 #: src/fr-init.c:85
 msgid "Tar compressed with gzip"
@@ -1085,7 +1083,7 @@ msgstr "C_rea"
 
 #: src/fr-stock.c:43 src/fr-stock.c:44
 msgid "_Add"
-msgstr "A_ggiungi"
+msgstr "_Aggiungi"
 
 #: src/fr-stock.c:45
 msgid "_Extract"
@@ -1138,53 +1136,53 @@ msgstr "Attendere prego..."
 #: src/fr-window.c:2398 src/fr-window.c:2436
 #, c-format
 msgid "Creating \"%s\""
-msgstr "Creando \"%s\""
+msgstr "Sto creando «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2402
 #, c-format
 msgid "Loading \"%s\""
-msgstr "Caricamento di \"%s\""
+msgstr "Caricamento di  «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2406
 #, c-format
 msgid "Reading \"%s\""
-msgstr "Leggendo \"%s\""
+msgstr "Lettura di  «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2410
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr "Eliminazione file da \"%s\""
+msgstr "Eliminazione file da  «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2414
 #, c-format
 msgid "Testing \"%s\""
-msgstr "Testando \"%s\""
+msgstr "Sto verificando  «%s»"
 
 #: src/fr-window.c:2417
 msgid "Getting the file list"
-msgstr "Recupero dell'elenco di file"
+msgstr "Recupero dell'elenco dei file"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2421
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr "Copia dei file da aggiungere a \"%s\""
+msgstr "Copia dei file da aggiungere a  «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2425
 #, c-format
 msgid "Adding files to \"%s\""
-msgstr "Aggiunta file a \"%s\""
+msgstr "Aggiungo i file a  «%s»"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2429
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr "Estrazione file da \"%s\""
+msgstr "Estrazione file da  «%s»"
 
 #: src/fr-window.c:2432
 msgid "Copying the extracted files to the destination"
@@ -1194,7 +1192,7 @@ msgstr "Copia dei file estratti nella destinazione"
 #: src/fr-window.c:2440
 #, c-format
 msgid "Saving \"%s\""
-msgstr "Salvando \"%s\""
+msgstr "Sto salvando  «%s» "
 
 #: src/fr-window.c:2606 src/ui/app-menu.ui:14
 msgid "_Quit"
@@ -1202,7 +1200,7 @@ msgstr "_Esci"
 
 #: src/fr-window.c:2607
 msgid "_Open the Archive"
-msgstr "_Apri archivio"
+msgstr "_Apri l'archivio"
 
 #: src/fr-window.c:2608
 msgid "_Show the Files"
@@ -1233,7 +1231,7 @@ msgstr "Archivio creato con successo"
 
 #: src/fr-window.c:2992 src/fr-window.c:3127
 msgid "Command exited abnormally."
-msgstr "Comando uscito in modo anomalo."
+msgstr "Il comando è terminato in modo anomalo."
 
 #: src/fr-window.c:3085
 msgid "An error occurred while extracting files."
@@ -1338,7 +1336,7 @@ msgstr "Chiude il riquadro delle cartelle"
 #. Translators: this is the label for the "open recent file" sub-menu.
 #: src/fr-window.c:5942
 msgid "Open _Recent"
-msgstr "Apri _recenti"
+msgstr "Apri _recente"
 
 #: src/fr-window.c:5943 src/fr-window.c:5955
 msgid "Open a recently used archive"
@@ -1380,7 +1378,7 @@ msgstr "_Sostituisci"
 #. when renaming a file.
 #: src/fr-window.c:7734
 msgid "New name is void, please type a name."
-msgstr "Il nuovo nome è vuoto, immetti un nome."
+msgstr "Il nuovo nome è vuoto, immettere un nome."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1427,7 +1425,7 @@ msgstr "Rinomina"
 
 #: src/fr-window.c:7853
 msgid "_New folder name:"
-msgstr "_Nome nuova cartella"
+msgstr "_Nome della nuova cartella"
 
 #: src/fr-window.c:7853
 msgid "_New file name:"
@@ -1510,7 +1508,7 @@ msgstr ""
 
 #: src/main.c:78
 msgid "Default folder to use for the '--add' and '--extract' commands"
-msgstr "Cartella predefinita da usare per i comandi \"--add\" e \"--extract\""
+msgstr "Cartella predefinita da usare per i comandi \"--add\" ed \"--extract\""
 
 #: src/main.c:82
 msgid "Create destination folder without asking confirmation"
@@ -1556,7 +1554,7 @@ msgstr "Cifrar_e anche l'elenco dei file"
 #. where MB stands for megabyte.
 #: src/ui/batch-add-files.ui:243 src/ui/new.ui:124
 msgid "Split into _volumes of"
-msgstr "Dividere in _volumi da"
+msgstr "Dividi in _volumi da"
 
 #. MB means megabytes
 #: src/ui/batch-add-files.ui:281 src/ui/new.ui:157
@@ -1566,7 +1564,7 @@ msgstr "MB"
 #: src/ui/batch-add-files.ui:305 src/ui/batch-password.ui:131 src/ui/new.ui:76
 #: src/ui/password.ui:110
 msgid "_Password:"
-msgstr "Pass_word:"
+msgstr "_Password:"
 
 #: src/ui/batch-add-files.ui:346 src/ui/new.ui:180
 msgid "_Other Options"
@@ -1574,7 +1572,7 @@ msgstr "Altre _opzioni"
 
 #: src/ui/batch-password.ui:100
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Richiesta la password</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Password richiesta</span>"
 
 #: src/ui/delete.ui:8
 msgid "Delete"
@@ -1607,7 +1605,7 @@ msgstr "Azioni"
 
 #: src/ui/extract-dialog-options.ui:162
 msgid "Re-crea_te folders"
-msgstr "Ricr_eare le cartelle"
+msgstr "Ri-creare le car_telle"
 
 #: src/ui/extract-dialog-options.ui:178
 msgid "Do not e_xtract older files"
@@ -1647,7 +1645,7 @@ msgstr "_Aggiungi file..."
 
 #: src/ui.h:44 src/ui.h:48
 msgid "Add files to the archive"
-msgstr "Aggiunge dei file all'archivio"
+msgstr "Aggiungi file all'archivio"
 
 #: src/ui.h:51
 msgid "Add a _Folder…"
@@ -1695,7 +1693,7 @@ msgstr "Incolla il contenuto degli appunti"
 
 #: src/ui.h:80 src/ui.h:101
 msgid "_Rename…"
-msgstr "_Rinomina"
+msgstr "_Rinomina..."
 
 #: src/ui.h:81 src/ui.h:102
 msgid "Rename the selection"
@@ -1815,7 +1813,7 @@ msgstr "Ferma l'operazione corrente"
 
 #: src/ui.h:175
 msgid "_Test Integrity"
-msgstr "Controlla _integrità"
+msgstr "Verifica _integrità"
 
 #: src/ui.h:176
 msgid "Test whether the archive contains errors"
@@ -1831,20 +1829,20 @@ msgstr "Apre la cartella selezionata"
 
 #: src/ui.h:197
 msgid "Go to the previous visited location"
-msgstr "Va alla posizione precedente"
+msgstr "Vai alla posizione precedente"
 
 #: src/ui.h:201
 msgid "Go to the next visited location"
-msgstr "Va alla posizione successiva"
+msgstr "Vai alla posizione successiva"
 
 #: src/ui.h:205
 msgid "Go up one level"
-msgstr "Sale al livello superiore"
+msgstr "Sali di un livello"
 
 #. Translators: the home location is the home folder.
 #: src/ui.h:210
 msgid "Go to the home location"
-msgstr "Va alla posizione predefinita"
+msgstr "Vai alla posizione home"
 
 #: src/ui.h:218
 msgid "_Toolbar"
@@ -1876,15 +1874,15 @@ msgstr "Ca_rtelle"
 
 #: src/ui.h:243
 msgid "View All _Files"
-msgstr "Vedi come _elenco di file"
+msgstr "Visualizza tutti i file"
 
 #: src/ui.h:246
 msgid "View as a F_older"
-msgstr "Vedi come una _cartella"
+msgstr "Visualizza come una _cartella"
 
 #: src/ui.h:254
 msgid "by _Name"
-msgstr "Per _nome"
+msgstr "per _Nome"
 
 #: src/ui.h:255
 msgid "Sort file list by name"
@@ -1892,7 +1890,7 @@ msgstr "Ordina l'elenco dei file per nome"
 
 #: src/ui.h:257
 msgid "by _Size"
-msgstr "Per _dimensione"
+msgstr "per _Dimensione"
 
 #: src/ui.h:258
 msgid "Sort file list by file size"
@@ -1900,7 +1898,7 @@ msgstr "Ordina l'elenco dei file per dimensione"
 
 #: src/ui.h:260
 msgid "by T_ype"
-msgstr "Per _tipo"
+msgstr "per _Tipo"
 
 #: src/ui.h:261
 msgid "Sort file list by type"
@@ -1908,7 +1906,7 @@ msgstr "Ordina l'elenco dei file per tipo"
 
 #: src/ui.h:263
 msgid "by _Date Modified"
-msgstr "Per data di _modifica"
+msgstr "per _Data di modifica"
 
 #: src/ui.h:264
 msgid "Sort file list by modification time"
@@ -1917,7 +1915,7 @@ msgstr "Ordina l'elenco dei file per data di modifica"
 #. Translators: this is the "sort by file location" menu item
 #: src/ui.h:267
 msgid "by _Location"
-msgstr "Per _posizione"
+msgstr "per _Posizione"
 
 #. Translators: location is the file location
 #: src/ui.h:269

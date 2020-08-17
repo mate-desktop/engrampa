@@ -4,15 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Fabian Rodriguez, 2018
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# seacat <seacat.linux@gmail.com>, 2018
-# Adolfo Jayme-Barrientos, 2018
-# Benjamin Perez Carrillo <benperezc@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# Pablo Díaz <reznorix@yahoo.es>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
+# Lluís Tusquellas <lutusq@gmail.com>, 2020
+# Fabian Rodriguez, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Benjamin Perez Carrillo <benperezc@gmail.com>, 2020
+# Joel Barrios <darkshram@gmail.com>, 2020
+# Pablo Díaz <reznorix@yahoo.es>, 2020
+# seacat <seacat.linux@gmail.com>, 2020
+# Adolfo Jayme-Barrientos, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Emiliano Fascetti, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
 msgid ""
@@ -20,7 +21,7 @@ msgstr ""
 "Project-Id-Version: engrampa 1.23.2\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
 "POT-Creation-Date: 2020-01-10 14:13+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
@@ -45,12 +46,12 @@ msgstr "Iniciando %s"
 
 #: copy-n-paste/eggdesktopfile.c:1100
 msgid "Application does not accept documents on command line"
-msgstr "La aplicación no acepta documentos en la línea de órdenes"
+msgstr "La aplicación no acepta documentos en la consola"
 
 #: copy-n-paste/eggdesktopfile.c:1168
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Opción de inicio no reconocida: %d"
+msgstr "Opción de apertura no reconocida: %d"
 
 #: copy-n-paste/eggdesktopfile.c:1366
 msgid "Can't pass documents to this desktop element"
@@ -78,15 +79,15 @@ msgstr "Especificar el id. de gestión de sesión"
 
 #: copy-n-paste/eggsmclient.c:227
 msgid "ID"
-msgstr "Id."
+msgstr "ID"
 
 #: copy-n-paste/eggsmclient.c:248
 msgid "Session management options:"
-msgstr "Opciones de gestión de sesiones:"
+msgstr "Opciones de gestión de la sesión:"
 
 #: copy-n-paste/eggsmclient.c:249
 msgid "Show session management options"
-msgstr "Mostrar las opciones de gestión de sesiones"
+msgstr "Mostrar las opciones de gestión de la sesión"
 
 #: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
 msgid "Engrampa Archive Manager"
@@ -557,7 +558,7 @@ msgstr "Un gestor de archivadores para MATE."
 #: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -768,12 +769,7 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"El archivo ha sido modificado con una aplicación externa. Si no actualiza "
-"éste en el archivo que lo contiene, se perderán todos los cambios."
 msgstr[1] ""
-"Se han modificado %d archivos con una aplicación externa. Si no actualiza "
-"los archivos en el archivador que los contiene, se perderán todos los "
-"cambios."
 
 #: src/dlg-update.c:193
 #, c-format
@@ -1100,15 +1096,15 @@ msgstr "_Extraer"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] "%d objeto (%s)"
-msgstr[1] "%d objetos (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] "%d objeto seleccionado (%s)"
-msgstr[1] "%d objetos seleccionados (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1617
 msgid "Folder"
@@ -1225,8 +1221,8 @@ msgstr "_Cerrar"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] "%d archivo restante"
-msgstr[1] "%d archivos restantes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:2840
 msgid "Extraction completed successfully"
@@ -1518,7 +1514,7 @@ msgstr "Carpeta predeterminada para las órdenes «--add» y «--extract»"
 
 #: src/main.c:82
 msgid "Create destination folder without asking confirmation"
-msgstr "Crea una carpeta de destino si pedir confirmación"
+msgstr "Crea una carpeta de destino sin solicitar confirmación"
 
 #: src/main.c:87
 msgid "Show the application's version"
@@ -1835,7 +1831,7 @@ msgstr "Abrir la carpeta seleccionada"
 
 #: src/ui.h:197
 msgid "Go to the previous visited location"
-msgstr "Ir a la ubicación visitada anterior"
+msgstr "Ir a la ubicación visitada anteriormente"
 
 #: src/ui.h:201
 msgid "Go to the next visited location"
