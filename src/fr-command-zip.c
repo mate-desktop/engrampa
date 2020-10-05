@@ -382,6 +382,7 @@ fr_command_zip_handle_error (FrCommand   *comm,
 
 
 const char *zip_mime_type[] = {
+				"application/epub+zip",
 				"application/vnd.oasis.opendocument.presentation",
 				"application/vnd.oasis.opendocument.spreadsheet",
 				"application/vnd.oasis.opendocument.text",
