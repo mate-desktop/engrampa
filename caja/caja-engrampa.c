@@ -145,6 +145,7 @@ static struct {
 } archive_mime_types[] = {
 		{ "application/vnd.debian.binary-package", TRUE },
 		{ "application/vnd.ms-cab-compressed", TRUE },
+		{ "application/epub+zip", TRUE },
 		{ "application/x-7z-compressed", TRUE },
 		{ "application/x-7z-compressed-tar", TRUE },
 		{ "application/x-ace", TRUE },

@@ -578,7 +578,8 @@ fr_command_7z_handle_error (FrCommand   *comm,
 }
 
 
-const char *sevenz_mime_types[] = { "application/x-7z-compressed",
+const char *sevenz_mime_types[] = { "application/epub+zip",
+				    "application/x-7z-compressed",
 				    "application/x-arj",
 				    "application/vnd.ms-cab-compressed",
 				    "application/x-cd-image",
@@ -641,7 +642,8 @@ fr_command_7z_get_capabilities (FrCommand  *comm,
 		else
 			capabilities |= FR_COMMAND_CAN_READ;
 
-		if (is_mime_type (mime_type, "application/x-cbz")
+		if (is_mime_type (mime_type, "application/epub+zip")
+		    || is_mime_type (mime_type, "application/x-cbz")
 		    || is_mime_type (mime_type, "application/x-ms-dos-executable")
 		    || is_mime_type (mime_type, "application/zip"))
 		{
