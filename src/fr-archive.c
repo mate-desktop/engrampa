@@ -1917,7 +1917,6 @@ copy_remote_files (FrArchive     *archive,
 	xfer_data->base_uri = g_strdup (base_uri);
 	xfer_data->dest_dir = g_strdup (dest_dir);
 	xfer_data->update = update;
-	xfer_data->dest_dir = g_strdup (dest_dir);
 	xfer_data->password = g_strdup (password);
 	xfer_data->encrypt_header = encrypt_header;
 	xfer_data->compression = compression;
