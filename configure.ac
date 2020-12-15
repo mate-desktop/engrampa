@@ -148,7 +148,6 @@ AC_ARG_ENABLE([magic],
               AS_HELP_STRING([--enable-magic], [use libmagic to detect file type]),,
               [enable_magic=no])
 
-zstd_mime_type="application/zstd"
 if test x"$enable_magic" = x"yes" ; then
 	save_LIBS="$LIBS"
 	LIBS="$LIBS -lmagic"
@@ -160,47 +159,6 @@ int main () { magic_t m = magic_open(MAGIC_NONE); }
 		       [AC_MSG_RESULT([yes])],
 		       [AC_MSG_RESULT([no])
 		        AC_MSG_ERROR([libmagic is needed for magic])])
-
-	dnl *******************************************
-	dnl This check can be removed with file >= 5.38
-	dnl *******************************************
-	AC_MSG_CHECKING([for zstd mime type])
-	AC_RUN_IFELSE([AC_LANG_PROGRAM([[#include <stdio.h>
-#include <string.h>
-#include <magic.h>]],
-		[[
-    FILE *fptr;
-    char *test_file = "test.zst";
-    char *default_mime_type = "application/zstd";
-    int status = 0;
-    if ((fptr = fopen (test_file,"wb")) == NULL) {
-        status = 1;
-    } else {
-	const unsigned char data[5] = "\x28\xb5\x2f\xfd\0";
-        int i;
-	for (i = 0; i < strlen (data); i++)
-            fwrite (&data[i], 1, 1, fptr);
-        fclose (fptr);
-        magic_t magic_cookie = magic_open (MAGIC_MIME_TYPE);
-        if (magic_cookie == NULL) {
-            status = 1;
-        } else {
-            if (magic_load (magic_cookie, NULL) != 0) {
-                status = 1;
-            } else {
-                const char *mime = magic_file (magic_cookie, test_file);
-                status = (strcmp (default_mime_type, mime) == 0);
-            }
-            magic_close(magic_cookie);
-        }
-	remove (test_file);
-    }
-    return status;]])],
-		[zstd_mime_type="application/x-zstd"],
-		[zstd_mime_type="application/zstd"]
-	)
-	AC_MSG_RESULT($zstd_mime_type)
-	dnl *******************************************
 
 	LIBS="$save_LIBS"
 
@@ -214,9 +172,6 @@ int main () { magic_t m = magic_open(MAGIC_NONE); }
 fi
 
 AM_CONDITIONAL(ENABLE_MAGIC, test x"$enable_magic" != x"no")
-ZSTD_MIME_TYPE="$zstd_mime_type"
-AC_SUBST(ZSTD_MIME_TYPE)
-AC_DEFINE_UNQUOTED(ZSTD_MIME_TYPE, "$zstd_mime_type", [define zstd mime type])
 
 AC_ARG_VAR([CPIO], [Path to the `cpio` command])
 AC_PATH_PROGS(CPIO, gcpio cpio, cpio)
