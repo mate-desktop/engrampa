@@ -903,12 +903,12 @@ get_temp_work_dir (const char *parent_folder)
 {
 	guint64  max_size = 0;
 	char    *best_folder = NULL;
-	int      i;
 	char    *template;
 	char    *result = NULL;
 
 	if (parent_folder == NULL) {
 		/* find the folder with more free space. */
+		int i;
 
 		for (i = 0; try_folder[i] != NULL; i++) {
 			char    *folder;

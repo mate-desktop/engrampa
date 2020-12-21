@@ -85,7 +85,7 @@ extract_here_callback (CajaMenuItem *item,
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
-		char             *uri, *quoted_uri;
+		char *uri, *quoted_uri;
 
 		uri = caja_file_info_get_uri (file);
 		quoted_uri = g_shell_quote (uri);
@@ -106,12 +106,12 @@ extract_here_callback (CajaMenuItem *item,
 
 static void
 add_callback (CajaMenuItem *item,
-	      gpointer          user_data)
+              gpointer      user_data)
 {
-	GList            *files, *scan;
-	char             *uri, *dir;
-	char             *quoted_uri, *quoted_dir;
-	GString          *cmd;
+	GList     *files, *scan;
+	char      *uri, *dir;
+	char      *quoted_dir;
+	GString   *cmd;
 
 	files = g_object_get_data (G_OBJECT (item), "files");
 	uri = caja_file_info_get_uri (files->data);
@@ -126,6 +126,8 @@ add_callback (CajaMenuItem *item,
 	g_free (quoted_dir);
 
 	for (scan = files; scan; scan = scan->next) {
+		char *quoted_uri;
+
 		uri = caja_file_info_get_uri (scan->data);
 		quoted_uri = g_shell_quote (uri);
 		g_string_append_printf (cmd, " %s", quoted_uri);
@@ -295,7 +297,7 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 
 	for (scan = files; scan; scan = scan->next) {
 		CajaFileInfo *file = scan->data;
-		FileMimeInfo      file_mime_info;
+		FileMimeInfo file_mime_info;
 
 		file_mime_info = get_file_mime_info (file);
 

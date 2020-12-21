@@ -3335,10 +3335,11 @@ get_extract_here_destination (GFile   *file,
 	char  *desired_destination;
 	char  *destination = NULL;
 	int    n = 1;
-	GFile *directory;
 
 	desired_destination = get_desired_destination_for_archive (file);
 	do {
+		GFile *directory;
+
 		*error = NULL;
 
 		g_free (destination);
