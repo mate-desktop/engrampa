@@ -2261,16 +2261,13 @@ static void change_button_label (FrWindow  *window,
 								    GTK_ICON_SIZE_BUTTON));
 	}
 }
-static void fr_state_switch (FrWindow  *window)
+
+static void
+fr_state_switch (FrWindow  *window)
 {
-	int ret;
-	if (window->archive->process != NULL)
-	{
-		ret = start_switch_state (window->archive->process);
-		if (ret == 0)
-		{
-			change_button_label (window, window->priv->pd_state_button);
-		}
+	if ((window->archive->process != NULL) &&
+	    ((start_switch_state (window->archive->process) == 0))) {
+		change_button_label (window, window->priv->pd_state_button);
 	}
 }
 
@@ -4308,7 +4305,7 @@ get_xds_atom_value (GdkDragContext *context)
 {
 	gint actual_length;
 	char *data;
-	char *ret;
+	char *ret = NULL;
 
 	g_return_val_if_fail (context != NULL, NULL);
 	g_return_val_if_fail (gdk_drag_context_get_source_window (context) != NULL, NULL);
@@ -4321,10 +4318,9 @@ get_xds_atom_value (GdkDragContext *context)
 		/* add not included \0 to the end of the string */
 		ret = g_strndup ((gchar *) data, actual_length);
 		g_free (data);
-		return ret;
 	}
 
-	return NULL;
+	return ret;
 }
 
 
@@ -4711,10 +4707,11 @@ fr_window_delete_event_cb (GtkWidget *caller,
 static gboolean
 is_single_click_policy (FrWindow *window)
 {
-	char     *value;
 	gboolean  result = FALSE;
 
 	if (window->priv->settings_caja) {
+		char *value;
+
 		value = g_settings_get_string (window->priv->settings_caja, CAJA_CLICK_POLICY);
 		result = (value != NULL) && (strncmp (value, "single", 6) == 0);
 		g_free (value);
@@ -4732,7 +4729,6 @@ filename_cell_data_func (GtkTreeViewColumn *column,
 			 FrWindow          *window)
 {
 	char           *text;
-	GtkTreePath    *path;
 	PangoUnderline  underline;
 
 	gtk_tree_model_get (model, iter,
@@ -4740,6 +4736,8 @@ filename_cell_data_func (GtkTreeViewColumn *column,
 			    -1);
 
 	if (window->priv->single_click) {
+		GtkTreePath *path;
+
 		path = gtk_tree_model_get_path (model, iter);
 
 		if ((window->priv->list_hover_path == NULL)

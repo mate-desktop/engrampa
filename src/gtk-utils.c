@@ -254,11 +254,9 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	GtkWidget     *expander;
 	GtkWidget     *content_area;
 	GtkWidget     *action_area;
-	GtkTextBuffer *text_buf;
 	GtkTextIter    iter;
 	GList         *scan;
 	char          *escaped_message, *markup_text;
-	va_list        args;
 	gboolean       view_output = (row_output != NULL);
 
 	dialog = gtk_dialog_new_with_buttons ("",
@@ -287,6 +285,7 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 
 	escaped_message = g_markup_escape_text (primary_text, -1);
 	if (secondary_text != NULL) {
+		va_list args;
 		char *secondary_message;
 		char *escaped_secondary_message;
 
@@ -309,6 +308,8 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	g_free (escaped_message);
 
 	if (view_output) {
+		GtkTextBuffer *text_buf;
+
 		gtk_widget_set_size_request (dialog, 500, -1);
 
 		/* Expander */
