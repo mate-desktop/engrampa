@@ -550,7 +550,11 @@ _g_path_get_base_name (const char *path,
 	if (junk_paths)
 		return _g_path_get_file_name (path);
 
-	base_dir_len = strlen (base_dir);
+	if (base_dir != NULL)
+		base_dir_len = strlen (base_dir);
+	else
+		base_dir_len = 0;
+
 	if (strlen (path) < base_dir_len)
 		return NULL;
 
