@@ -19,12 +19,15 @@ libcaja_engrampa_la_LDFLAGS = -module -avoid-version -no-undefined
 libcaja_engrampa_la_LIBADD  = $(CAJA_LIBS)
 
 extensiondir = $(datadir)/caja/extensions
-extension_in_files = libcaja-engrampa.caja-extension.desktop.in
+extension_in_in_files = libcaja-engrampa.caja-extension.desktop.in.in
+extension_in_files = $(extension_in_in_files:.caja-extension.desktop.in.in=.caja-extension.desktop.in)
 extension_DATA = $(extension_in_files:.caja-extension.desktop.in=.caja-extension)
 $(extension_DATA): $(extension_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
+DISTCLEANFILES = $(extension_in_files)
 CLEANFILES = $(extension_DATA)
 
-EXTRA_DIST = $(extension_in_files)
+EXTRA_DIST = $(extension_in_in_files)
+
 -include $(top_srcdir)/git.mk
