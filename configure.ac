@@ -243,7 +243,10 @@ AC_CONFIG_FILES([Makefile
 AC_OUTPUT
 
 echo "
-Configuration:
+Configure summary:
+
+	${PACKAGE_STRING}
+	`echo $PACKAGE_STRING | sed "s/./=/g"`
 
 	Source code location:   ${srcdir}
 	Compiler:               ${CC}
