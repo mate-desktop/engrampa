@@ -129,6 +129,7 @@ AC_ARG_ENABLE(packagekit,
 if test "x$enable_packagekit" != "xno"; then
 	AC_DEFINE(ENABLE_PACKAGEKIT, 1, [define to enable PackageKit installer])
 fi
+AM_CONDITIONAL(ENABLE_PACKAGEKIT, test x"$enable_packagekit" != x"no")
 
 dnl ******************************
 

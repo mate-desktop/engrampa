@@ -11,8 +11,10 @@ else
 	$(AM_V_GEN) sed '/^# Translators/d' < $< > $@
 endif
 
+if ENABLE_PACKAGEKIT
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
+endif
 
 servicedir = $(datadir)/dbus-1/services
 service_in_files = org.mate.Engrampa.service.in
