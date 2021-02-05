@@ -7,8 +7,10 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 $(desktop_DATA): $(desktop_in_files)
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
+if ENABLE_PACKAGEKIT
 matchdir = $(datadir)/engrampa
 match_DATA = packages.match
+endif
 
 servicedir = $(datadir)/dbus-1/services
 service_in_files = org.mate.Engrampa.service.in
