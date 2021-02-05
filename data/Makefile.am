@@ -64,7 +64,6 @@ CLEANFILES = \
 	$(appdata_DATA) \
 	$(desktop_DATA) \
 	$(gsettings_SCHEMAS) \
-	engrampa.appdata.xml \
 	$(NULL)
 
 dist-hook:
