@@ -125,13 +125,13 @@ get_packages_real_names (char **names)
 {
 	char     **real_names;
 	GKeyFile  *key_file;
-	char      *filename;
 	int        i;
 
 	real_names = g_new0 (char *, g_strv_length (names));
 	key_file = g_key_file_new ();
-	filename = g_build_filename (PRIVDATADIR, "packages.match", NULL);
-	g_key_file_load_from_file (key_file, filename, G_KEY_FILE_NONE, NULL);
+	g_key_file_load_from_file (key_file,
+	                           PRIVDATADIR "/packages.match",
+	                           G_KEY_FILE_NONE, NULL);
 
 	for (i = 0; names[i] != NULL; i++) {
 		char *real_name;
@@ -147,7 +147,6 @@ get_packages_real_names (char **names)
 		real_name = NULL;
 	}
 
-	g_free (filename);
 	g_key_file_free (key_file);
 
 	return real_names;
