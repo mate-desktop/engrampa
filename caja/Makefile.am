@@ -23,7 +23,11 @@ extension_in_in_files = libcaja-engrampa.caja-extension.desktop.in.in
 extension_in_files = $(extension_in_in_files:.caja-extension.desktop.in.in=.caja-extension.desktop.in)
 extension_DATA = $(extension_in_files:.caja-extension.desktop.in=.caja-extension)
 $(extension_DATA): $(extension_in_files)
-	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+if USE_NLS
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Copyright --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp -f $< $@
+endif
 
 DISTCLEANFILES = $(extension_in_files)
 CLEANFILES = $(extension_DATA)

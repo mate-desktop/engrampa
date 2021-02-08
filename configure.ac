@@ -136,9 +136,10 @@ GETTEXT_PACKAGE=AC_PACKAGE_NAME
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [GetText Package])
 
+AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
-AM_GNU_GETTEXT([external])
+AM_CONDITIONAL([USE_NLS], [test "x${USE_NLS}" = "xyes"])
 
 dnl ******************************
 
@@ -249,14 +250,15 @@ Configure summary:
 	${PACKAGE_STRING}
 	`echo $PACKAGE_STRING | sed "s/./=/g"`
 
-	Source code location:   ${srcdir}
-	Compiler:               ${CC}
-        Compiler flags:         ${CFLAGS}
-        Warning flags:          ${WARN_CFLAGS}
-        Linker flags:           ${LDFLAGS}
-	Caja support:           ${enable_caja_actions}
-	PackageKit support:     ${enable_packagekit}
-	Run in place            ${enable_run_in_place}
-	Use libmagic:           ${enable_magic}
-	JSON support:           ${enable_json_glib}
+	Source code location:      ${srcdir}
+	Compiler:                  ${CC}
+	Compiler flags:            ${CFLAGS}
+	Warning flags:             ${WARN_CFLAGS}
+	Linker flags:              ${LDFLAGS}
+	Caja support:              ${enable_caja_actions}
+	PackageKit support:        ${enable_packagekit}
+	Run in place               ${enable_run_in_place}
+	Use libmagic:              ${enable_magic}
+	JSON support:              ${enable_json_glib}
+	Native Language support:   ${USE_NLS}
 "

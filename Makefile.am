@@ -7,13 +7,17 @@ else
 CAJA =
 endif
 
+if USE_NLS
+PO_SUBDIR = po
+endif
+
 SUBDIRS =		\
 	mate-submodules \
 	data		\
 	src		\
 	help		\
-	$(CAJA)	\
-	po
+	$(CAJA)		\
+	$(PO_SUBDIR)
 
 distcleancheck_listfiles = find . -type f -print | grep -v 'omf\.out'
 
