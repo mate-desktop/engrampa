@@ -1418,8 +1418,10 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 {
 	char    *info, *archive_info, *selected_info;
 	char    *size_txt, *sel_size_txt;
-	int      tot_n, sel_n;
-	goffset  tot_size, sel_size;
+	gulong   tot_n = 0;
+	gulong   sel_n = 0;
+	goffset  tot_size = 0;
+	goffset  sel_size = 0;
 	GList   *scan;
 
 	if (window == NULL)
@@ -1429,9 +1431,6 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 		gtk_statusbar_pop (GTK_STATUSBAR (window->priv->statusbar), window->priv->list_info_cid);
 		return;
 	}
-
-	tot_n = 0;
-	tot_size = 0;
 
 	if (window->priv->archive_present) {
 		GPtrArray *files = fr_window_get_current_dir_list (window);
@@ -1448,9 +1447,6 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 		}
 		g_ptr_array_free (files, TRUE);
 	}
-
-	sel_n = 0;
-	sel_size = 0;
 
 	if (window->priv->archive_present) {
 		GList *selection = get_selection_as_fd (window);
@@ -1471,12 +1467,12 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 	if (tot_n == 0)
 		archive_info = g_strdup ("");
 	else
-		archive_info = g_strdup_printf (ngettext ("%d object (%s)", "%d objects (%s)", tot_n), tot_n, size_txt);
+		archive_info = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE, "%lu object (%s)", "%lu objects (%s)", tot_n), tot_n, size_txt);
 
 	if (sel_n == 0)
 		selected_info = g_strdup ("");
 	else
-		selected_info = g_strdup_printf (ngettext ("%d object selected (%s)", "%d objects selected (%s)", sel_n), sel_n, sel_size_txt);
+		selected_info = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE, "%lu object selected (%s)", "%lu objects selected (%s)", sel_n), sel_n, sel_size_txt);
 
 	info = g_strconcat (archive_info,
 			    ((sel_n == 0) ? NULL : ", "),
@@ -2710,17 +2706,19 @@ fr_window_progress_cb (FrArchive *archive,
 
 		if ((archive != NULL) && (archive->command != NULL) && (archive->command->n_files > 0)) {
 			char *message = NULL;
-			int   remaining_files;
+			gulong remaining_files;
 
-			remaining_files = archive->command->n_files - archive->command->n_file + 1;
+			remaining_files = (gulong) (archive->command->n_files - archive->command->n_file + 1);
 
 			switch (window->priv->action) {
 			case FR_ACTION_ADDING_FILES:
 			case FR_ACTION_EXTRACTING_FILES:
 			case FR_ACTION_DELETING_FILES:
-				message = g_strdup_printf (ngettext ("%d file remaining",
-								     "%d files remaining",
-								     remaining_files), remaining_files);
+				message = g_strdup_printf (g_dngettext (GETTEXT_PACKAGE,
+				                                        "%lu file remaining",
+				                                        "%lu files remaining",
+			                                                remaining_files),
+				                           remaining_files);
 				break;
 			default:
 				break;
