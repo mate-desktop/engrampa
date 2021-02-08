@@ -437,12 +437,16 @@ main (int argc, char *argv[])
 	GError         *error = NULL;
 	guint           owner_id;
 
+#ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	context = g_option_context_new (N_("- Create and modify an archive"));
+#ifdef ENABLE_NLS
 	g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 	g_option_context_add_group (context, gtk_get_option_group (TRUE));
 
 	if (! g_option_context_parse (context, &argc, &argv, &error)) {
