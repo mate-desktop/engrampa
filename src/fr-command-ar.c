@@ -70,7 +70,7 @@ ar_get_last_field (const char *line,
 	f_end = f_start;
 
 	while ((field_n > 0) && (*f_end != 0)) {
-		if (*f_end == ' ') {
+		if (*f_end == ' ' && *(f_end-1) != ' ') {
 			field_n--;
 			if (field_n == 1)
 				f_start = f_end;
