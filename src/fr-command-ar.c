@@ -43,47 +43,22 @@ static void fr_command_ar_finalize    (GObject          *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
-mktime_from_string (const char *time_s)
+mktime_from_string (const char  *time_s,
+                    int          index,
+                    char       **end)
 {
         struct tm tm = {0, };
+        char *p;
+
         tm.tm_isdst = -1;
-        strptime (time_s, LS_AR_DATE_FORMAT, &tm);
+        p = strptime (time_s + index, LS_AR_DATE_FORMAT, &tm);
+        if (p != NULL)
+                *end = p + 1;
         return mktime (&tm);
 }
-
-static char*
-ar_get_last_field (const char *line,
-		   int         start_from,
-		   int         field_n)
-{
-	const char *f_start, *f_end;
-
-	line = line + start_from;
-
-	f_start = line;
-	while ((*f_start == ' ') && (*f_start != *line))
-		f_start++;
-	f_end = f_start;
-
-	while ((field_n > 0) && (*f_end != 0)) {
-		if (*f_end == ' ') {
-			field_n--;
-			if (field_n == 1)
-				f_start = f_end;
-		}
-		f_end++;
-	}
-
-	if (*f_start == ' ')
-		f_start++;
-
-	return g_strdup (f_start);
-}
-
 
 static void
 process_line (char     *line,
@@ -93,8 +68,8 @@ process_line (char     *line,
 	FrCommand   *comm = FR_COMMAND (data);
 	char       **fields;
 	int          date_idx;
-	char        *field_date;
-	char        *field_size, *field_name;
+	char        *field_size;
+	char        *field_name = NULL;
 
 	g_return_if_fail (line != NULL);
 
@@ -106,19 +81,14 @@ process_line (char     *line,
 	fdata->size = g_ascii_strtoull (field_size, NULL, 10);
 	g_free (field_size);
 
-	field_date = g_strndup (line + date_idx, 17);
-	fdata->modified = mktime_from_string (field_date);
-	g_free (field_date);
+	fdata->modified = mktime_from_string (line, date_idx, &field_name);
 
 	/* Full path */
-
-	field_name = ar_get_last_field (line, date_idx, 5);
 
 	fields = g_strsplit (field_name, " -> ", 2);
 
 	if (fields[0] == NULL) {
 		g_strfreev (fields);
-		g_free (field_name);
 		file_data_free (fdata);
 		return;
 	}
@@ -139,7 +109,6 @@ process_line (char     *line,
 	if (fields[1] != NULL)
 		fdata->link = g_strdup (fields[1]);
 	g_strfreev (fields);
-	g_free (field_name);
 
 	fdata->name = g_strdup (file_name_from_path (fdata->full_path));
 	fdata->path = remove_level_from_path (fdata->full_path);
