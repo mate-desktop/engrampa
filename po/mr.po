@@ -9,9 +9,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Vaibhav S Dalvi <vaibhav.dlv@gmail.com>, 2020\n"
 "Language-Team: Marathi (https://www.transifex.com/mate/teams/13566/mr/)\n"
@@ -80,7 +80,7 @@ msgstr "सत्र व्यवस्थापन पर्याय:"
 msgid "Show session management options"
 msgstr "सत्र व्यवस्थापन पर्याय दाखवा"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "एनग्राम्पा आर्काइव्ह व्यवस्थापक"
 
@@ -130,11 +130,11 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
@@ -162,7 +162,7 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:36
@@ -210,13 +210,6 @@ msgstr "आर्काइव्ह व्यवस्थापक"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "आर्काइव्ह निर्माण व संपादीत करा"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -419,7 +412,7 @@ msgstr "संकुचन करा..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "निवडलेले घटकांसह संकुचीत आर्काइव्ह बनवा"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "फाइल रोलर"
@@ -429,12 +422,12 @@ msgid "Allows to create and extract archives"
 msgstr ""
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "आर्काइव्ह बनवू शकले नाही"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "तुम्हांस आर्काइव्हाचे नाव दर्शवावे लागेल."
 
@@ -585,6 +578,7 @@ msgstr ""
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "रद्द करा(_C)"
 
@@ -597,7 +591,7 @@ msgstr "संचयीत करा (_S)"
 msgid "Enter the password for the archive '%s'."
 msgstr "संचयन '%s' करीता गुप्तशब्द प्रविष्ट करा."
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -608,18 +602,18 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "कृपया वेगळे नाव वापरा."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr ""
 "लक्ष्य संचयीका मध्ये संचयन बनविण्याकरीता तुमच्याकडे लेखन परवानगी नाही."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -630,24 +624,24 @@ msgstr ""
 "\n"
 "तुम्हाला बनवायचे आहे का?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "संचयीका बनवा (_F)"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "हे गंतव्य संचयीका निर्माण करता आले नाही: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "आर्काइव्ह बनविले नाही"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "आर्काइव्ह आधीच अस्तित्वात आहे. तुम्ही त्यावर गिरवू इच्छिता?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "खोडून पुन्हलेखन (_O)"
 
@@ -663,10 +657,6 @@ msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "संचयीका \"%s\" मध्ये संचयन प्राप्त करण्यास तुमच्याकडे परवानगी नाही"
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "बाहेर काढा"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1041,7 +1031,7 @@ msgstr "बनवा (_r)"
 msgid "_Add"
 msgstr "जोडा(_A)"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "काढा(_E)"
 
@@ -1412,7 +1402,7 @@ msgstr "चिकटवा (_P)"
 msgid "Add files to an archive"
 msgstr "फाइली आर्काइव्हात मिळवा"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "आर्काइव्ह काढा"
@@ -1425,31 +1415,31 @@ msgstr "आदेश ओळ आऊटपुट (_L)"
 msgid "Could not display help"
 msgstr "मदत दर्शवता आली नाही"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr "दर्शवलेल्या आर्काइव्हात फाइली मिळवा आणि कार्यक्रम सोडा"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "संचयन"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "आर्काइव्हाचे नाव विचारून फाइली मिळवा आणि कार्यक्रम सोडा"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "दर्शवलेल्या संचयीकामध्ये आर्काइव्ह काढा आणि कार्यक्रम सोडा"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "संचयीका"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr "गंतव्य संचयीका विचारून आर्काइव्ह काढा आणि कार्यक्रम सोडा"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
@@ -1457,23 +1447,23 @@ msgstr ""
 "आर्काइव्ह फोल्डरमध्ये आर्काइव्हचे अनुक्रम प्राप्त करा व कार्यक्रातून बाहेर "
 "पडा"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr " '--add' आणि '--extract' या आदेशांसाठी मुलभूत संचयीका"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "विना निश्चितता लक्ष्य संचयीका बनवा"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "अनुप्रोयगची आवृत्ती दाखवा"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "संकुचन"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- संचयनचे निर्माण व संपादन करा"
 
@@ -1481,7 +1471,7 @@ msgstr "- संचयनचे निर्माण व संपादन क
 msgid "Load Options"
 msgstr "पर्याय दाखल करा"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "मदत(_H)"
 
@@ -1529,42 +1519,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">गुप्तशब्ध आव
 msgid "Delete"
 msgstr "काढून टाका"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "सर्व फाइल (_A)"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "निवडलेले फाइल (_S)"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "उदाहरण: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "फाइल (_F):"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "बाहेर काढा"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "क्रिया"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "संचयीका पुन्हा बनवा (_t)"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "अस्तित्वातील फाइल खोडून पुन्हा लिहा (_w)"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "जुणी फाइल बाहेर काढू नका (_x)"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "अस्तित्वातील फाइल खोडून पुन्हा लिहा (_w)"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "क्रिया"
 
 #: src/ui.h:32
 msgid "_Archive"

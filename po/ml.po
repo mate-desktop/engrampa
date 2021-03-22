@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -79,7 +79,7 @@ msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധി�
 msgid "Show session management options"
 msgstr "സെഷന്‍ മാനേജ്മെന്റ് ഉപാധികള്‍ കാണിക്കുക"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr ""
 
@@ -129,11 +129,11 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
@@ -161,7 +161,7 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:36
@@ -209,13 +209,6 @@ msgstr "ശേഖരപാലകന്‍"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "ഒരു പുതിയ ശേഖരം നിര്‍മ്മിക്കുകയോ മാറ്റം വരുത്തുകയോ ചെയ്യുക"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -419,7 +412,7 @@ msgid "Create a compressed archive with the selected objects"
 msgstr ""
 "തെരഞ്ഞെടുത്ത വസ്തുക്കളുമായി ഒരു കംപ്രസ്സ് ചെയ്ത ആര്‍ക്കൈവ് നിര്‍മ്മിക്കുക"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "ഫയല്‍ റോളര്‍"
@@ -429,12 +422,12 @@ msgid "Allows to create and extract archives"
 msgstr ""
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "ശേഖരം ഉണ്ടാക്കുവാന്‍ സാധ്യമായില്ല"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "ശേഖരത്തിനു് ഒരു് പേരു് പറഞ്ഞിരിയ്ക്കണം."
 
@@ -587,6 +580,7 @@ msgstr ""
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "_റദ്ദാക്കുക"
 
@@ -599,7 +593,7 @@ msgstr "സംരക്ഷിക്കുക"
 msgid "Enter the password for the archive '%s'."
 msgstr "%s ശേഖരത്തിനു് ഒരു അടയാളവാക്കു് നല്‍കുക"
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -610,11 +604,11 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "ദയവായി മറ്റൊരു പേരു് തെരഞ്ഞെടുക്കുക."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
@@ -622,7 +616,7 @@ msgstr ""
 "ലക്ഷ്യസ്ഥാന അറകളില്‍ ശേഖരം ഉണ്ടാക്കുന്നതിനുളള ശരിയായ അനുവാദങ്ങള്‍ "
 "നിങ്ങള്‍ക്കുല്ല."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -633,24 +627,24 @@ msgstr ""
 "\n"
 "നിങ്ങള്‍ക്ക് ഇതു് ഉണ്ടാക്കണമോ?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "അറ _നിര്‍മ്മിക്കുക"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "ലക്ഷ്യസ്ഥാന അറ നിര്‍മ്മിക്കുവാന്‍ സാധ്യമായില്ല: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "ശേഖരം നിര്‍മ്മിച്ചില്ല"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "ശേഖരം നിലവിലുണ്ട്. നിങ്ങള്‍ക്ക് ഇതില്‍ വീണ്ടും എഴുതണമോ?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "_മുകളിലൂടെ എഴുതുക"
 
@@ -666,10 +660,6 @@ msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "അറ \"%s\"-ല്‍ ശേഖരങ്ങള്‍ തുറന്നിടുവാനുളള അനുവാദം നിങ്ങള്‍ക്കില്ല"
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "തുറന്നിടുക"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1039,7 +1029,7 @@ msgstr "_നിര്‍മ്മിക്കുക"
 msgid "_Add"
 msgstr "_ചേര്‍ക്കുക"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "_തുറന്നിടുക"
 
@@ -1413,7 +1403,7 @@ msgstr "ഒട്ടിയ്ക്കുക"
 msgid "Add files to an archive"
 msgstr "ശേഖരത്തിലേയ്ക്കു് ഫയലുകള്‍ ചേര്‍ക്കുക"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "ശേഖരം തുറന്നിടുക"
@@ -1426,39 +1416,39 @@ msgstr "ആജ്ഞാമേഖലയില്‍ _നിന്നുളള ഫ
 msgid "Could not display help"
 msgstr "സഹായത്തിനുളള ഫയല്‍ തുറക്കുവാന്‍ സാധ്യമാകുന്നില്ല"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr ""
 "പറഞ്ഞിരിക്കുന്ന ശേഖരത്തിലേയ്ക്കു് ഫയലുകളെ ചേര്‍ത്തു് പ്രോഗ്രാമില്‍ നിന്നും "
 "പുറത്തു് പോകുക"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ARCHIVE"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 "ശേഖരത്തിന്റെ പേരു് ആവശ്യപ്പെട്ട് ഫയലുകള്‍ ചേര്‍ത്തു് പ്രോഗ്രാമില്‍ നിന്നും "
 "പുറത്തു് പോകുക"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 "പറഞ്ഞിരിക്കുന്ന അറയിലേയ്ക്കു് ശേഖരങ്ങള്‍ തുറന്നിട്ടശേഷം പ്രോഗ്രാമില്‍ "
 "നിന്നും പുറത്തു് പോകുക"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "FOLDER"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "തുറന്നിടേണ്ട അറ ആവശ്യപ്പെട്ട് ശേഖരങ്ങള്‍ തുറന്നിട്ടു് പ്രോഗ്രാമില്‍ നിന്നും "
 "പുറത്തു് പോകുക"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
@@ -1466,25 +1456,25 @@ msgstr ""
 "ആര്‍ക്കൈവിലുള്ളവ ആര്‍ക്കൈവ് ഫോള്‍ഡറിലേക്ക് ലഭ്യമാക്കി പ്രോഗ്രമില്‍ നിന്നും "
 "പുറത്തു് കടക്കുക"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 "'--add', '--extract' നിര്‍ദ്ദേശങ്ങള്‍ക്ക് ഉപയോഗിക്കുന്നതിനുളള ഡീഫോള്‍ട്ട്  "
 "അറ"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "ഉറപ്പ് വരുത്തല്‍ ഇല്ലാതെ ലക്ഷ്യസ്ഥാനത്തു് അറ  ഉണ്ടാക്കുക"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "പ്രയോഗത്തിന്റെ പതിപ്പു് കാണിക്കുക"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "കംപ്രസ്സ് ചെയ്യുക"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- ഒരു പുതിയ ശേഖരം നിര്‍മ്മിയ്ക്കാനും പരിഷ്കരിയ്ക്കാനും"
 
@@ -1492,7 +1482,7 @@ msgstr "- ഒരു പുതിയ ശേഖരം നിര്‍മ്മി�
 msgid "Load Options"
 msgstr "ഐച്ഛികങ്ങള്‍ ചേര്‍ക്കുക"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "_സഹായം"
 
@@ -1540,42 +1530,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">അടയാളവാക്കു�
 msgid "Delete"
 msgstr "നീക്കം ചെയ്യുക"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "_എല്ലാ ഫയലുകളും"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "_തെരഞ്ഞെടുത്ത ഫയലുകള്‍"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "ഉദാഹരണം : *.txt ; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "_ഫയലുകള്‍:"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "തുറന്നിടുക"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "പ്രവര്‍ത്തനങ്ങള്‍"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "അറകള്‍ പുനഃസൃഷ്ടിക്കുക"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "നിലവിലുളള ഫയലുകള്‍ വീണ്ടും _മാറ്റി എഴുതുക"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "പഴയ ഫയലുകള്‍ തുറന്നിടേണ്ട ആവശ്യമില്ല"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "നിലവിലുളള ഫയലുകള്‍ വീണ്ടും _മാറ്റി എഴുതുക"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "പ്രവര്‍ത്തനങ്ങള്‍"
 
 #: src/ui.h:32
 msgid "_Archive"

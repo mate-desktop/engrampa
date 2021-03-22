@@ -15,9 +15,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Károly Papp <pkaroly82@gmail.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
@@ -86,7 +86,7 @@ msgstr "Munkamenet-kezelés kapcsolói:"
 msgid "Show session management options"
 msgstr "Munkamenet-kezelési kapcsolók megjelenítése"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "Engrampa archívumkezelő"
 
@@ -136,11 +136,11 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
@@ -168,7 +168,7 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:36
@@ -216,13 +216,6 @@ msgstr "Archívumkezelő"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "Archívum létrehozása és módosítása"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -439,7 +432,7 @@ msgstr "Tömörítés…"
 msgid "Create a compressed archive with the selected objects"
 msgstr "Tömörített archívum létrehozása a kijelölt objektumokkal"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
@@ -449,12 +442,12 @@ msgid "Allows to create and extract archives"
 msgstr "Archívumok készítése és kibontása"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "Nem sikerült létrehozni az archívumot"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "Meg kell adnia egy archívumnevet."
 
@@ -613,6 +606,7 @@ msgstr "_Beállítások neve:"
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "Mé_gse"
 
@@ -625,7 +619,7 @@ msgstr "_Mentés"
 msgid "Enter the password for the archive '%s'."
 msgstr "Adja meg „%s” archívum jelszavát."
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -636,17 +630,17 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "Használjon más nevet."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr "Nincs megfelelő jogosultsága archívum létrehozására a célmappában."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -657,24 +651,24 @@ msgstr ""
 "\n"
 "Létre akarja hozni?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "Mappa _létrehozása"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nem sikerült létrehozni a célmappát: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "Az archívum nem került létrehozásra"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Az archívum már létezik. Felül kívánja írni?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "_Felülírás"
 
@@ -691,10 +685,6 @@ msgid ""
 "\"%s\""
 msgstr ""
 "Nincs megfelelő jogosultsága archívumok kibontásához ebbe a könyvtárba: „%s”"
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "Kibontás"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1069,7 +1059,7 @@ msgstr "_Létrehozás"
 msgid "_Add"
 msgstr "Hozzá_adás"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "_Kibontás"
 
@@ -1442,7 +1432,7 @@ msgstr "_Beillesztés"
 msgid "Add files to an archive"
 msgstr "Fájlok hozzáadása az archívumhoz"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "Archívum kibontása"
@@ -1455,34 +1445,34 @@ msgstr "Parancssori _kimenet"
 msgid "Could not display help"
 msgstr "A súgó megjelenítése nem sikerült"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr "Fájlok hozzáadása a megadott archívumhoz és kilépés a programból"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ARCHÍVUM"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 "Fájlok hozzáadása az archívum nevének bekérésével, majd kilépés a programból"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "Archívumok kibontása a megadott mappába, majd kilépés a programból"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "MAPPA"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "Archívumok kibontása a célmappa nevének bekérésével, majd kilépés a "
 "programból"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
@@ -1490,24 +1480,24 @@ msgstr ""
 "Az archívum tartalmának kibontása az archívummappába, majd kilépés a "
 "programból"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 "A „--add” és „--extract” kapcsolókhoz használandó alapértelmezett mappa"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "Célmappa létrehozása megerősítés kérése nélkül"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "Az alkalmazás verziószámának megjelenítése"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "Tömörítés"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "– Archívum létrehozása és módosítása"
 
@@ -1515,7 +1505,7 @@ msgstr "– Archívum létrehozása és módosítása"
 msgid "Load Options"
 msgstr "Beállítások betöltése"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "_Súgó"
 
@@ -1563,42 +1553,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">Jelszó szükséges</span>"
 msgid "Delete"
 msgstr "Eltávolítás"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "_Minden fájl"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "Kij_elölt fájlok"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "például: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "_Fájlok:"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "Kibontás"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "Műveletek"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "Mappák új_ralétrehozása"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "Léte_ző fájlok felülírása"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "Ne _bontson ki régebbi fájlokat"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "Léte_ző fájlok felülírása"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "Műveletek"
 
 #: src/ui.h:32
 msgid "_Archive"

@@ -8,9 +8,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Oriya (https://www.transifex.com/mate/teams/13566/or/)\n"
@@ -79,7 +79,7 @@ msgstr "ଅଧିବେଶନ ପରିଚାଳନା ବିକଳ୍ପଗୁ�
 msgid "Show session management options"
 msgstr "ଅଧିବେଶନ ପରିଚାଳନା ବିକଳ୍ପଗୁଡ଼ିକୁ ଦର୍ଶାନ୍ତୁ"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr ""
 
@@ -129,11 +129,11 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
@@ -161,7 +161,7 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:36
@@ -209,13 +209,6 @@ msgstr "ଅଭିଲେଖ ପରିଚାଳକ"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "ଗୋଟିଏ ଅଭିଲେଖକୁ ସ୍ରୁଷ୍ଟି ଏବଂ ରୂପାନ୍ତରିତ କରନ୍ତୁ"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -418,7 +411,7 @@ msgstr "ସଙ୍କୋଚନ କରନ୍ତୁ..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "ଚୟିତ ବସ୍ତୁ ମାନଙ୍କ ସହିତ ଗୋଟିଏ ସଙ୍କୋଚିତ ଅଭିଲେଖକୁ ସ୍ରୁଷ୍ଟି କରନ୍ତୁ"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "ଫାଇଲ ରୋଲର"
@@ -428,12 +421,12 @@ msgid "Allows to create and extract archives"
 msgstr ""
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "ଅଭିଲେଖକୁ ସ୍ରୁଷ୍ଟି କରିପାରିଲା ନାହିଁ"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "ଆପଣ ଗୋଟିଏ ଅଭିଲେଖର ନାମ ଉଲ୍ଲେଖ କରିବା ଉଚିତ।"
 
@@ -585,6 +578,7 @@ msgstr ""
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "ବାତିଲ କରନ୍ତୁ (_C)"
 
@@ -597,7 +591,7 @@ msgstr "ସଂରକ୍ଷଣ କରନ୍ତୁ (_S)"
 msgid "Enter the password for the archive '%s'."
 msgstr "'%s' ଅଭିଲେଖ ପାଇଁ ଗୋଟିଏ ପ୍ରବେଶ ସଙ୍କେତ ଭରଣ କରନ୍ତୁ।"
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -608,11 +602,11 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "ଦୟାକରି ଗୋଟିଏ ଭିନ୍ନ ନାମକୁ ବ୍ଯବହାର କରନ୍ତୁ।"
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
@@ -620,7 +614,7 @@ msgstr ""
 "ଲକ୍ଷ୍ଯ ଫୋଲଡରରେ ଗୋଟିଏ ଅଭିଲେଖ ସ୍ରୁଷ୍ଟି କରିବା ପାଇଁ ଆପଣଙ୍କ ନିକଟରେ ଉପଯୁକ୍ତ ଅନୁମତି"
 " ନାହିଁ।"
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -631,25 +625,25 @@ msgstr ""
 "\n"
 "ଆପଣ ଏହାକୁ ସ୍ରୁଷ୍ଟି କରିବା ପାଇଁ ଚାହୁଁଛନ୍ତି କି?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "ଫୋଲଡର ସ୍ରୁଷ୍ଟି କରନ୍ତୁ (_F)"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "ଲକ୍ଷ୍ଯ ଫୋଲଡରକୁ ସ୍ରୁଷ୍ଟି କରିପାରିଲା ନାହିଁ: %s।"
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "ଅଭିଲେଖ ସ୍ରୁଷ୍ଟି କରାଯାଇ ନାହିଁ"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr ""
 "ଏହି ଅଭିଲେଖଟି ପୂର୍ବରୁ ଅବସ୍ଥିତ। ଆପଣ ଏହାକୁ ନବଲିଖନ କରିବା ପାଇଁ ଚାହୁଁଛନ୍ତି କି?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "ନବଲିଖନ କରନ୍ତୁ (_O)"
 
@@ -666,10 +660,6 @@ msgid ""
 "\"%s\""
 msgstr ""
 "\"%s\" ଫୋଲଡରରେ ଅଭିଲେଖ ମାନଙ୍କୁ କାଢିବା ପାଇଁ ଆପଣଙ୍କ ନିକଟରେ ଉପଯୁକ୍ତ ଅନୁମତି ନାହିଁ"
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "କାଢନ୍ତୁ"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1040,7 +1030,7 @@ msgstr "ସ୍ରୁଷ୍ଟି କରନ୍ତୁ (_r)"
 msgid "_Add"
 msgstr "ଯୋଗ କରନ୍ତୁ (_A)"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "କାଢନ୍ତୁ (_E)"
 
@@ -1413,7 +1403,7 @@ msgstr "ଲଗାନ୍ତୁ (_P)"
 msgid "Add files to an archive"
 msgstr "ଗୋଟିଏ ଅଭିଲେଖରେ ଫାଇଲ ମାନଙ୍କୁ ଯୋଗ କରନ୍ତୁ"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "ଅଭିଲେଖକୁ କାଢନ୍ତୁ"
@@ -1426,59 +1416,59 @@ msgstr "ପାଠ୍ଯ ନିର୍ଦ୍ଦେଶ ନିର୍ଗମ (_L)"
 msgid "Could not display help"
 msgstr "ସହାୟତାକୁ ପ୍ରଦର୍ଶନ କରିପାରିଲା ନାହିଁ"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr ""
 "ନିର୍ଦ୍ଦିଷ୍ଟ ଅଭିଲେଖରେ ଫାଇଲ ମାନଙ୍କୁ ଯୋଗ କରନ୍ତୁ ଏବଂ ପ୍ରୋଗ୍ରାମକୁ ବନ୍ଦ କରନ୍ତୁ"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ଅଭିଲେଖ"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "ଅଭିଲେଖର ନାମ ପଚାରି ଫାଇଲ ମାନଙ୍କୁ ଯୋଗ କରନ୍ତୁ ଏବଂ ପ୍ରୋଗ୍ରାମକୁ ବନ୍ଦ କରନ୍ତୁ"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 "ନିର୍ଦ୍ଦିଷ୍ଟ ଫୋଲଡରରେ ଅଭିଲେଖ ମାନଙ୍କୁ କାଢନ୍ତୁ ଏବଂ ପ୍ରୋଗ୍ରାମକୁ ବନ୍ଦ କରନ୍ତୁ"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "ଫୋଲଡର"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "ଲକ୍ଷ୍ଯ ଫୋଲଡର କେଉଁଠି ଅଛି ପଚାରି ଅଭିଲେଖ ମାନଙ୍କୁ କାଢନ୍ତୁ ଏବଂ ପ୍ରୋଗ୍ରାମକୁ ବନ୍ଦ "
 "କରନ୍ତୁ"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr "ଅଭିଲେଖ ଫୋଲଡରରେ ଅଭିଲେଖମାନଙ୍କୁ କାଢନ୍ତୁ ଏବଂ ପ୍ରୋଗ୍ରାମକୁ ବନ୍ଦ କରନ୍ତୁ"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 "'--add' ଏବଂ '--extract' ନିର୍ଦ୍ଦେଶ ମାନଙ୍କୁ ବ୍ଯବହାର କରିବା ପାଇଁ ପୂର୍ବ "
 "ନିର୍ଦ୍ଧାରିତ ଫୋଲଡର"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "ଅନୁମୋଦନ ପାଇଁ ନ ପଚାରି ଲକ୍ଷ୍ଯ ଫୋଲଡରକୁ ସ୍ରୁଷ୍ଟି କରନ୍ତୁ"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "ପ୍ରୟୋଗର ସଂସ୍କରଣକୁ ଦେଖାନ୍ତୁ"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "ସଙ୍କୋଚନ କରନ୍ତୁ"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- ଗୋଟିଏ ଅଭିଲେଖକୁ ସୃଷ୍ଟି ଏବଂ ରୂପାନ୍ତରିତ କରନ୍ତୁ"
 
@@ -1486,7 +1476,7 @@ msgstr "- ଗୋଟିଏ ଅଭିଲେଖକୁ ସୃଷ୍ଟି ଏବଂ 
 msgid "Load Options"
 msgstr "ବିକଲ୍ପ ଧାରଣ କରନ୍ତୁ"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "ସହାୟତା (_H)"
 
@@ -1534,42 +1524,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">ପ୍ରବେଶ ସଂକେତ
 msgid "Delete"
 msgstr "ଅପସାରଣ କରନ୍ତୁ"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "ସମସ୍ତ ଫାଇଲ (_A)"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "ଚୟିତ ଫାଇଲ (_S)"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "ଉଦାହରଣ: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "ଫାଇଲ (_F):"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "କାଢନ୍ତୁ"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "କାର୍ଯ୍ଯ"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "ଫୋଲଡର ମାନଙ୍କୁ ପୁନଃ ସୃଷ୍ଟି କରନ୍ତୁ (_t)"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "ଅବସ୍ଥିତ ଫାଇଲ ମାନଙ୍କୁ ନବଲିଖନ କରନ୍ତୁ (_w)"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "ପୁରୁଣା ଫାଇଲ ମାନଙ୍କୁ କାଢନ୍ତୁ ନାହିଁ (_x)"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "ଅବସ୍ଥିତ ଫାଇଲ ମାନଙ୍କୁ ନବଲିଖନ କରନ୍ତୁ (_w)"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "କାର୍ଯ୍ଯ"
 
 #: src/ui.h:32
 msgid "_Archive"

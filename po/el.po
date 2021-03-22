@@ -13,14 +13,14 @@
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # thunk <thunk77@gmail.com>, 2020
-# Angelos Chraniotis <chraniotis@gmail.com>, 2020
+# Angel Chr. <chraniotis@gmail.com>, 2020
 # Christos Pappis <pappis@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
 "Last-Translator: Christos Pappis <pappis@gmail.com>, 2020\n"
 "Language-Team: Greek (https://www.transifex.com/mate/teams/13566/el/)\n"
@@ -91,7 +91,7 @@ msgstr "Επιλογές διαχείρισης συνεδρίας"
 msgid "Show session management options"
 msgstr "Εμφάνιση επιλογών διαχείρισης συνεδρίας"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "Πρόγραμμα διαχείρισης συμπιεσμένων αρχείων Engrampa"
 
@@ -143,11 +143,11 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:29
@@ -175,7 +175,7 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr ""
 
 #: data/engrampa.appdata.xml.in:36
@@ -223,13 +223,6 @@ msgstr "Πρόγραμμα διαχείρισης συμπιεσμένων αρ�
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "Δημιουργία και τροποποίηση ενός συμπιεσμένου αρχείου"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -453,7 +446,7 @@ msgstr "Συμπίεση..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "Δημιουργία ενός συμπιεσμένου αρχείου με τα επιλεγμένα αντικείμενα"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
@@ -463,12 +456,12 @@ msgid "Allows to create and extract archives"
 msgstr "Επιτρέπει τη δημιουργία και εξαγωγή συμπιεσμένων αρχειοθηκών"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "Αδυναμία δημιουργίας του συμπιεσμένου αρχείου"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "Θα πρέπει να καθορίσετε ένα όνομα συμπιεσμένου αρχείου."
 
@@ -627,6 +620,7 @@ msgstr "Ε_πιλογές Ονόματος:"
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "Α_κύρωση"
 
@@ -639,7 +633,7 @@ msgstr "Απο_θήκευση"
 msgid "Enter the password for the archive '%s'."
 msgstr "Εισάγετε ένα κωδικό για το συμπιεσμένο αρχείο '%s'."
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -650,11 +644,11 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "Παρακαλώ κάντε χρήση ενός διαφορετικού ονόματος."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
@@ -662,7 +656,7 @@ msgstr ""
 "Δεν έχετε τα απαραίτητα δικαιώματα να δημιουργήσετε ένα συμπιεσμένο αρχείο "
 "σε αυτόν το φάκελο προορισμού."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -673,24 +667,24 @@ msgstr ""
 "\n"
 "Θέλετε να δημιουργηθεί;"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "Δημιουργία _φακέλου"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Αδυναμία δημιουργίας φακέλου προορισμού: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "Το συμπιεσμένο αρχείο δεν δημιουργήθηκε"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Το συμπιεσμένο αρχείο υπάρχει ήδη.  Να αντικατασταθεί;"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "_Αντικατάσταση"
 
@@ -707,10 +701,6 @@ msgid ""
 "\"%s\""
 msgstr ""
 "Δεν έχετε τα σωστά δικαιώματα για την αποσυμπίεση αρχείων στο φάκελο \"%s\""
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "Αποσυμπίεση"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1086,7 +1076,7 @@ msgstr "_Δημιουργία"
 msgid "_Add"
 msgstr "Προσ_θήκη"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "Ε_ξαγωγή"
 
@@ -1464,7 +1454,7 @@ msgstr "Επι_κόλληση"
 msgid "Add files to an archive"
 msgstr "Προσθήκη αρχείων σε ένα συμπιεσμένο αρχείο"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "Αποσυμπίεση συμπιεσμένου αρχείου"
@@ -1477,37 +1467,37 @@ msgstr "Αποτέλεσμα Γραμμής _Εντολών"
 msgid "Could not display help"
 msgstr "Αδυναμία προβολής βοήθειας"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr ""
 "Προσθήκη αρχείων στο καθορισμένο συμπιεσμένο αρχείο και έξοδος από το "
 "πρόγραμμα"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ΣΥΜΠΙΕΣΜΕΝΟ ΑΡΧΕΙΟ"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr ""
 "Προσθήκη αρχείων με ερώτηση για το όνομα του συμπιεσμένου αρχείου και έξοδος"
 " από το πρόγραμμα"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "Αποσυμπίεση στον καθορισμένο φάκελο και έξοδος από το πρόγραμμα"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "ΦΑΚΕΛΟΣ"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "Προσθήκη αρχείων με ερώτηση για το φάκελο προορισμού και έξοδος από το "
 "πρόγραμμα"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
@@ -1515,25 +1505,25 @@ msgstr ""
 "Αποσυμπίεση του περιεχομένου στον φάκελο αρχειοθήκης και έξοδος από το "
 "πρόγραμμα"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr ""
 "Προεπιλεγμένος φάκελος που θα χρησιμοποιείται για τις εντολές '--add' και '"
 "--extract'"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "Δημιουργία φακέλου προορισμού χωρίς ερώτηση επιβεβαίωσης"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "Προβολή της έκδοσης της εφαρμογής"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "Συμπίεση"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- Δημιουργία και τροποποίηση ενός συμπιεσμένου αρχείου"
 
@@ -1541,7 +1531,7 @@ msgstr "- Δημιουργία και τροποποίηση ενός συμπι
 msgid "Load Options"
 msgstr "Επιλογές φόρτωσης"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "_Βοήθεια"
 
@@ -1589,42 +1579,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">Απαιτείται κωδικό�
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "Ό_λα τα αρχεία"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "Επι_λεγμένα αρχεία"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "παράδειγμα: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "Αρ_χεία:"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "Αποσυμπίεση"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "Ενέργειες"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "Α_ναδημιουργία φακέλων"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "Αν_τικατάσταση υπαρχόντων αρχείων"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "Να _μην αποσυμπιέζονται παλιά αρχεία"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "Αν_τικατάσταση υπαρχόντων αρχείων"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "Ενέργειες"
 
 #: src/ui.h:32
 msgid "_Archive"

@@ -19,17 +19,18 @@
 # Artur Motyka <slashcraftpl@gmail.com>, 2020
 # Jan Bońkowski <bonkowskijan@gmail.com>, 2020
 # Marcin Mikołajczak <me@mkljczk.pl>, 2020
-# pietrasagh <pietrasagh@gmail.com>, 2020
+# pietrasagh <kowalik.piotr@pm.me>, 2020
 # Daniel Tokarzewski <bezimo@gmail.com>, 2020
 # Dominik Adrian Grzywak, 2020
+# No Ne, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
-"Last-Translator: Dominik Adrian Grzywak, 2020\n"
+"Last-Translator: No Ne, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,7 +97,7 @@ msgstr "Opcje zarządzania sesją:"
 msgid "Show session management options"
 msgstr "Wyświetla opcje zarządzania sesją"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "Menedżer archiwów Engrampa"
 
@@ -124,7 +125,7 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr "7-Zip Plik skompresowany (.7z)"
+msgstr "Plik skompresowany 7-Zip (.7z)"
 
 #: data/engrampa.appdata.xml.in:21
 msgid "WinAce Compressed File (.ace)"
@@ -151,12 +152,12 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr "Archiwum UNIX CPIO (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr "Pakiet Dabian'a (.deb, .udeb) [Tylko odczyt]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
+msgstr "Pakiet Debiana (.deb, .udeb) [Tryb tylko do odczytu]"
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr "Obraz płyty CD ISO-9660 (.iso) [Tylko oczyt]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
+msgstr "Obraz dysku ISO-9660 (.iso) [Tryb tylko do odczytu]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
@@ -183,8 +184,8 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr "Archiwum komiksu RAR (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr "Pakiet Linuxa RPM (.rpm) [Tylko odczyt]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
+msgstr "Menedżer pakietów RPM (.rpm) [Tryb tylko do odczytu]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -242,13 +243,6 @@ msgstr "Menedżer archiwów"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "Tworzenie i modyfikowanie archiwów"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr "engrampa"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -465,7 +459,7 @@ msgstr "Utwórz archiwum..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "Tworzy skompresowane archiwum z zaznaczonych obiektów"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
@@ -475,12 +469,12 @@ msgid "Allows to create and extract archives"
 msgstr "Umożliwia tworzenie i rozpakowywanie archiwów"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "Nie można utworzyć archiwum"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "Należy wprowadzić nazwę archiwum."
 
@@ -645,6 +639,7 @@ msgstr "Nazwa _opcji:"
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "_Anuluj"
 
@@ -657,7 +652,7 @@ msgstr "_Zapisz"
 msgid "Enter the password for the archive '%s'."
 msgstr "Proszę wprowadzić hasło dla archiwum \"%s\"."
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -668,17 +663,17 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "Proszę użyć innej nazwy."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr "Brak uprawnień do utworzenia archiwum w katalogu docelowym."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -689,24 +684,24 @@ msgstr ""
 "\n"
 "Utworzyć go?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "U_twórz katalog"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nie można utworzyć katalogu docelowego: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "Nie utworzono archiwum"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Archiwum już istnieje. Zastąpić je?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "_Zastąp"
 
@@ -722,10 +717,6 @@ msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "Brak uprawnień do rozpakowania plików do katalogu \"%s\""
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "Rozpakuj"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -781,9 +772,19 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"%d plik został zmodyfikowany za pomocą zewnętrznego programu. Jeśli plik w "
+"archiwum nie zostanie zaktualizowany, to wszystkie zmiany zostaną utracone."
 msgstr[1] ""
+"%d pliki zostały zmodyfikowane za pomocą zewnętrznego programu. Jeśli pliki "
+"w archiwum nie zostaną zaktualizowane, to wszystkie zmiany zostaną utracone."
 msgstr[2] ""
+"%d plików zostało zmodyfikowanych za pomocą zewnętrznego programu. Jeśli "
+"pliki w archiwum nie zostaną zaktualizowane, to wszystkie zmiany zostaną "
+"utracone."
 msgstr[3] ""
+"%d plików zostało zmodyfikowanych za pomocą zewnętrznego programu. Jeśli "
+"pliki w archiwum nie zostaną zaktualizowane, to wszystkie zmiany zostaną "
+"utracone."
 
 #: src/dlg-update.c:193
 #, c-format
@@ -1102,7 +1103,7 @@ msgstr "_Utwórz"
 msgid "_Add"
 msgstr "_Dodaj"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "R_ozpakuj"
 
@@ -1110,19 +1111,19 @@ msgstr "R_ozpakuj"
 #, c-format
 msgid "%d object (%s)"
 msgid_plural "%d objects (%s)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%d obiekt (%s)"
+msgstr[1] "%d obiekty (%s)"
+msgstr[2] "%d obiektów (%s)"
+msgstr[3] "%d obiektów (%s)"
 
 #: src/fr-window.c:1543
 #, c-format
 msgid "%d object selected (%s)"
 msgid_plural "%d objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Zaznaczono %d obiekt (%s)"
+msgstr[1] "Zaznaczono %d obiekty (%s)"
+msgstr[2] "Zaznaczono %d obiektów (%s)"
+msgstr[3] "Zaznaczono %d obiektów (%s)"
 
 #: src/fr-window.c:1617
 msgid "Folder"
@@ -1239,10 +1240,10 @@ msgstr "_Zamknij"
 #, c-format
 msgid "%d file remaining"
 msgid_plural "%d files remaining"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Pozostał %d plik"
+msgstr[1] "Pozostały %d pliki"
+msgstr[2] "Pozostało %d plików"
+msgstr[3] "Pozostało %d plików"
 
 #: src/fr-window.c:2840
 msgid "Extraction completed successfully"
@@ -1481,7 +1482,7 @@ msgstr "Wk_lej"
 msgid "Add files to an archive"
 msgstr "Dodaje pliki do archiwum"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "Rozpakowanie plików z archiwum"
@@ -1494,34 +1495,34 @@ msgstr "Dane _w wierszu poleceń"
 msgid "Could not display help"
 msgstr "Nie można wyświetlić pomocy"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr "Dodaje pliki do podanego archiwum i kończy działanie programu"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ARCHIWUM"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "Dodaje pliki pytając o nazwę archiwum i kończy działanie programu"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr ""
 "Rozpakowuje pliki z archiwów do podanego katalogu i kończy działanie "
 "programu"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "KATALOG"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr ""
 "Rozpakowuje pliki z archiwów pytając o katalog i kończy działanie programu"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
@@ -1529,23 +1530,23 @@ msgstr ""
 "Rozpakowuje zawartość archiwów do katalogu archiwum i kończy działanie "
 "programu"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "Domyślny katalog, używany przy poleceniach \"--add\" i \"--extract\""
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "Tworzy katalog docelowy bez potwierdzenia"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "Wyświetla wersję programu"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "Kompresja"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- Tworzenie i modyfikowanie archiwów"
 
@@ -1553,7 +1554,7 @@ msgstr "- Tworzenie i modyfikowanie archiwów"
 msgid "Load Options"
 msgstr "Wczytanie opcji"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "_Pomoc"
 
@@ -1601,42 +1602,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">Wymagane hasło</span>"
 msgid "Delete"
 msgstr "Skasuj"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "W_szystkie pliki"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "_Wybrane pliki"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "Na przykład: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "O_kreślone pliki:"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "Rozpakuj"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "Działania"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "Od_tworzenie katalogów"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "_Zastąpienie istniejących plików"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "_Bez rozpakowywania starszych plików"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "_Zastąpienie istniejących plików"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "Działania"
 
 #: src/ui.h:32
 msgid "_Archive"

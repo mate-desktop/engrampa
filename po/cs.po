@@ -10,21 +10,21 @@
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2020
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
-# ToMáš Marný, 2020
 # Michal <sinope@seznam.cz>, 2020
 # huskyviking <husky.viking@seznam.cz>, 2020
 # Honza Lafek <hlafek99@gmail.com>, 2020
 # LiberteCzech <liberte.czech@gmail.com>, 2020
 # 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
 # Lucas Lommer <drom@kdyne.net>, 2020
+# ToMáš Marný, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.23.2\n"
-"Report-Msgid-Bugs-To: http://www.mate-desktop.org/\n"
-"POT-Creation-Date: 2020-01-10 14:13+0100\n"
+"Project-Id-Version: engrampa 1.24.0\n"
+"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
+"POT-Creation-Date: 2020-08-17 16:41+0200\n"
 "PO-Revision-Date: 2020-02-14 11:57+0000\n"
-"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
+"Last-Translator: ToMáš Marný, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,7 +91,7 @@ msgstr "Možnosti Správy sezení:"
 msgid "Show session management options"
 msgstr "Zobrazit možnosti Správy sezení"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:49
+#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "Engrampa správce archivů"
 
@@ -146,12 +146,12 @@ msgid "UNIX CPIO Archive (.cpio)"
 msgstr "UNIX CPIO archiv (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
-msgid "Debian Linux Package (.deb, .udeb) [Read-only mode]"
-msgstr "Debian Linux Package (.deb, .udeb) [režim jen pro čtení]"
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
+msgstr "Balíček Debian (.deb, .udeb) [režim jen pro čtení]"
 
 #: data/engrampa.appdata.xml.in:28
-msgid "ISO-9660 CD Disc Image (.iso) [Read-only mode]"
-msgstr "Obraz disku CD ISO-9660 (.iso) [režim jen pro čtení]"
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
+msgstr "Obraz disku ISO-9660 (.iso) [režim jen pro čtení]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
@@ -178,8 +178,8 @@ msgid "RAR Archived Comic Book (.cbr)"
 msgstr "Komiks archivovaný pomocí RAR (.cbr)"
 
 #: data/engrampa.appdata.xml.in:35
-msgid "RPM Linux Package (.rpm) [Read-only mode]"
-msgstr "RPM Linux Package (.rpm) [režim jen pro čtení]"
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
+msgstr "RPM Package Manager (.rpm) [režim jen pro čtení]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -236,13 +236,6 @@ msgstr "Správce archivů"
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
 msgstr "Vytvářet a upravovat archivy"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/engrampa.desktop.in.in:12
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:4
-msgid "engrampa"
-msgstr "engrampa"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -456,7 +449,7 @@ msgstr "Komprimovat…"
 msgid "Create a compressed archive with the selected objects"
 msgstr "Vytvořit komprimovaný archiv s vybranými objekty"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:342
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
 msgid "Engrampa"
 msgstr "Engrampa"
@@ -466,12 +459,12 @@ msgid "Allows to create and extract archives"
 msgstr "Umožňuje vytváření a rozbalování archivů"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
-#: src/dlg-batch-add.c:163 src/dlg-batch-add.c:179 src/dlg-batch-add.c:208
-#: src/dlg-batch-add.c:253 src/dlg-batch-add.c:299 src/fr-window.c:3080
+#: src/dlg-batch-add.c:162 src/dlg-batch-add.c:178 src/dlg-batch-add.c:207
+#: src/dlg-batch-add.c:252 src/dlg-batch-add.c:298 src/fr-window.c:3080
 msgid "Could not create the archive"
 msgstr "Archiv nelze vytvořit"
 
-#: src/actions.c:160 src/dlg-batch-add.c:165 src/dlg-batch-add.c:301
+#: src/actions.c:160 src/dlg-batch-add.c:164 src/dlg-batch-add.c:300
 msgid "You have to specify an archive name."
 msgstr "Musíte stanovit název archivu."
 
@@ -635,6 +628,7 @@ msgstr "_Název nastavení:"
 
 #: src/dlg-add-folder.c:881 src/dlg-package-installer.c:320
 #: src/fr-window.c:2611 src/fr-window.c:7856 src/fr-window.c:8297
+#: src/ui/dlg-extract.ui:56
 msgid "_Cancel"
 msgstr "_Zrušit"
 
@@ -647,7 +641,7 @@ msgstr "_Uložit"
 msgid "Enter the password for the archive '%s'."
 msgstr "Zadejte heslo k archivu „%s“."
 
-#: src/dlg-batch-add.c:180
+#: src/dlg-batch-add.c:179
 #, c-format
 msgid ""
 "The name \"%s\" is not valid because it cannot contain the characters: %s\n"
@@ -658,17 +652,17 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:183 src/fr-window.c:7780 src/fr-window.c:7782
+#: src/dlg-batch-add.c:182 src/fr-window.c:7780 src/fr-window.c:7782
 msgid "Please use a different name."
 msgstr "Použijte prosím jiný název."
 
-#: src/dlg-batch-add.c:210
+#: src/dlg-batch-add.c:209
 msgid ""
 "You don't have the right permissions to create an archive in the destination"
 " folder."
 msgstr "Nemáte oprávnění potřebná pro vytvoření archivu v cílové složce."
 
-#: src/dlg-batch-add.c:226 src/dlg-extract.c:100 src/fr-window.c:6991
+#: src/dlg-batch-add.c:225 src/dlg-extract.c:100 src/fr-window.c:6991
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -679,24 +673,24 @@ msgstr ""
 "\n"
 "Chcete ji vytvořit?"
 
-#: src/dlg-batch-add.c:235 src/dlg-extract.c:109 src/fr-window.c:7000
+#: src/dlg-batch-add.c:234 src/dlg-extract.c:109 src/fr-window.c:7000
 msgid "Create _Folder"
 msgstr "Vytvořit _složku"
 
-#: src/dlg-batch-add.c:254 src/dlg-extract.c:129 src/fr-window.c:7017
+#: src/dlg-batch-add.c:253 src/dlg-extract.c:129 src/fr-window.c:7017
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "Nelze vytvořit cílovou složku: %s."
 
-#: src/dlg-batch-add.c:271
+#: src/dlg-batch-add.c:270
 msgid "Archive not created"
 msgstr "Archiv nebyl vytvořen"
 
-#: src/dlg-batch-add.c:319
+#: src/dlg-batch-add.c:318
 msgid "The archive is already present.  Do you want to overwrite it?"
 msgstr "Archiv již existuje. Chcete jej přepsat?"
 
-#: src/dlg-batch-add.c:322
+#: src/dlg-batch-add.c:321
 msgid "_Overwrite"
 msgstr "_Přepsat"
 
@@ -712,10 +706,6 @@ msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "Nemáte oprávnění potřebná pro rozbalení archivů ve složce „%s“"
-
-#: src/dlg-extract.c:304 src/ui.h:122
-msgid "Extract"
-msgstr "Rozbalit"
 
 #: src/dlg-new.c:426
 msgctxt "File"
@@ -1100,7 +1090,7 @@ msgstr "_Vytvořit"
 msgid "_Add"
 msgstr "Při_dat"
 
-#: src/fr-stock.c:45
+#: src/fr-stock.c:45 src/ui/dlg-extract.ui:71
 msgid "_Extract"
 msgstr "_Rozbalit"
 
@@ -1479,7 +1469,7 @@ msgstr "V_ložit"
 msgid "Add files to an archive"
 msgstr "Přidat soubory do archivu"
 
-#: src/fr-window.c:8940 src/main.c:197 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8940 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "Rozbalit archiv"
@@ -1492,53 +1482,53 @@ msgstr "Výstup příkazového řá_dku"
 msgid "Could not display help"
 msgstr "Nelze zobrazit nápovědu"
 
-#: src/main.c:58
+#: src/main.c:56
 msgid "Add files to the specified archive and quit the program"
 msgstr "Přidat soubory do určeného archivu a ukončit program"
 
-#: src/main.c:59
+#: src/main.c:57
 msgid "ARCHIVE"
 msgstr "ARCHIV"
 
-#: src/main.c:62
+#: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
 msgstr "Zeptat se na název archivu, přidat soubory a ukončit program"
 
-#: src/main.c:66
+#: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
 msgstr "Rozbalit archivy do určené složky a ukončit program"
 
-#: src/main.c:67 src/main.c:79
+#: src/main.c:65 src/main.c:77
 msgid "FOLDER"
 msgstr "SLOŽKA"
 
-#: src/main.c:70
+#: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
 msgstr "Zeptat se na cílovou složku, rozbalit archivy a ukončit program"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
 msgstr "Rozbalit obsah archivů do složky archivu a ukončit program"
 
-#: src/main.c:78
+#: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
 msgstr "Výchozí složka pro příkazy „--add“ a „--extract“"
 
-#: src/main.c:82
+#: src/main.c:80
 msgid "Create destination folder without asking confirmation"
 msgstr "Vytvořit cílovou složku bez dotazu na potvrzení"
 
-#: src/main.c:87
+#: src/main.c:85
 msgid "Show the application's version"
 msgstr "Zobrazit verzi aplikace"
 
-#: src/main.c:177 src/server.c:296 src/ui/batch-add-files.ui:15
+#: src/main.c:175 src/server.c:296 src/ui/batch-add-files.ui:15
 msgid "Compress"
 msgstr "Komprimovat"
 
-#: src/main.c:326 src/server.c:444
+#: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
 msgstr "- Vytváření a úprava archivu"
 
@@ -1546,7 +1536,7 @@ msgstr "- Vytváření a úprava archivu"
 msgid "Load Options"
 msgstr "Načíst nastavení"
 
-#: src/ui/app-menu.ui:6 src/ui.h:35
+#: src/ui/app-menu.ui:6 src/ui/dlg-extract.ui:41 src/ui.h:35
 msgid "_Help"
 msgstr "_Nápověda"
 
@@ -1594,42 +1584,41 @@ msgstr "<span weight=\"bold\" size=\"larger\">Je vyžadováno heslo</span>"
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/ui/delete.ui:70 src/ui/extract-dialog-options.ui:41
+#: src/ui/delete.ui:70 src/ui/dlg-extract.ui:122
 msgid "_All files"
 msgstr "_Všechny soubory"
 
-#: src/ui/delete.ui:87 src/ui/extract-dialog-options.ui:58
+#: src/ui/delete.ui:87 src/ui/dlg-extract.ui:139
 msgid "_Selected files"
 msgstr "Vy_brané soubory"
 
-#: src/ui/delete.ui:106 src/ui/extract-dialog-options.ui:101
+#: src/ui/delete.ui:106 src/ui/dlg-extract.ui:183
 msgid "example: *.txt; *.doc"
 msgstr "příklad: *.txt; *.doc"
 
-#: src/ui/delete.ui:116 src/ui/extract-dialog-options.ui:81
+#: src/ui/delete.ui:116 src/ui/dlg-extract.ui:161
 msgid "_Files:"
 msgstr "_Soubory:"
 
-#: src/ui/extract-dialog-options.ui:20
-msgctxt "Action"
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:122
 msgid "Extract"
 msgstr "Rozbalit"
 
-#: src/ui/extract-dialog-options.ui:141
-msgid "Actions"
-msgstr "Akce"
-
-#: src/ui/extract-dialog-options.ui:162
+#: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
 msgstr "Znovu vytvoři_t složky"
 
-#: src/ui/extract-dialog-options.ui:178
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr "Přepisovat _existující soubory"
+
+#: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
 msgstr "Ner_ozbalovat starší soubory"
 
-#: src/ui/extract-dialog-options.ui:194
-msgid "Over_write existing files"
-msgstr "Přepisovat _existující soubory"
+#: src/ui/dlg-extract.ui:299
+msgid "Actions"
+msgstr "Akce"
 
 #: src/ui.h:32
 msgid "_Archive"
