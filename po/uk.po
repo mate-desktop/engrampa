@@ -7,9 +7,7 @@
 # Denis <prohibiti@gmail.com>, 2018
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
 # zubr139, 2019
-# ZenWalker <scow@riseup.net>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
 # Yuri Chornoivan <yurchor@ukr.net>, 2020
 # Микола Ткач <chistomov@gmail.com>, 2021
 # 
@@ -100,32 +98,37 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
+"Engrampa — упорядник архівів для середовища MATE. Він дозволяє створювати та"
+" змінювати архіви, переглядати вміст архівів, переглядати файли, що "
+"міститься в архіві, та видобувати файли з архівів."
 
 #: data/engrampa.appdata.xml.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr ""
+"Engrampa — це лише інтерфейс (графічний інтерфейс) для архівування таких "
+"програм, як tar і zip. Підтримувані типи файлів:"
 
 #: data/engrampa.appdata.xml.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr ""
+msgstr "7-Zip Стиснений файл (.7z)"
 
 #: data/engrampa.appdata.xml.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr ""
+msgstr "WinAce Стиснений файл (.ace)"
 
 #: data/engrampa.appdata.xml.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr ""
+msgstr "ALZip Стиснений файл (.alz)"
 
 #: data/engrampa.appdata.xml.in:23
 msgid "AIX Small Indexed Archive (.ar)"
-msgstr ""
+msgstr "AIX Невеликий індексований архів (.ar)"
 
 #: data/engrampa.appdata.xml.in:24
 msgid "ARJ Compressed Archive (.arj)"
-msgstr ""
+msgstr "ARJ Стиснений архів (.arj)"
 
 #: data/engrampa.appdata.xml.in:25
 msgid "Cabinet File (.cab)"
@@ -133,35 +136,35 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:26
 msgid "UNIX CPIO Archive (.cpio)"
-msgstr ""
+msgstr "UNIX CPIO Архів (.cpio)"
 
 #: data/engrampa.appdata.xml.in:27
 msgid "Debian Package (.deb, .udeb) [Read-only mode]"
-msgstr ""
+msgstr "Пакунок Debian (.deb, .udeb) [Режим лише для читання]"
 
 #: data/engrampa.appdata.xml.in:28
 msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
-msgstr ""
+msgstr "Образ диска ISO-9660 (.iso) [режим лише для читання]"
 
 #: data/engrampa.appdata.xml.in:29
 msgid "Java Archive (.jar)"
-msgstr ""
+msgstr "Архів Java (.jar)"
 
 #: data/engrampa.appdata.xml.in:30
 msgid "Java Enterprise archive (.ear)"
-msgstr ""
+msgstr "Java Enterprise архів (.ear)"
 
 #: data/engrampa.appdata.xml.in:31
 msgid "Java Web Archive (.war)"
-msgstr ""
+msgstr "Java Web Архів (.war)"
 
 #: data/engrampa.appdata.xml.in:32
 msgid "LHA Archive (.lzh, .lha)"
-msgstr ""
+msgstr "Архів LHA (.lzh, .lha)"
 
 #: data/engrampa.appdata.xml.in:33
 msgid "WinRAR Compressed Archive (.rar)"
-msgstr ""
+msgstr "WinRAR Стиснений архів (.rar)"
 
 #: data/engrampa.appdata.xml.in:34
 msgid "RAR Archived Comic Book (.cbr)"
@@ -169,7 +172,7 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:35
 msgid "RPM Package Manager (.rpm) [Read-only mode]"
-msgstr ""
+msgstr "Розпорядник пакунків RPM (.rpm) [Режим лише для читання]"
 
 #: data/engrampa.appdata.xml.in:36
 msgid ""
@@ -181,11 +184,11 @@ msgstr ""
 
 #: data/engrampa.appdata.xml.in:39
 msgid "Stuffit Archives (.bin, .sit)"
-msgstr ""
+msgstr "Stuffit архіви (.bin, .sit)"
 
 #: data/engrampa.appdata.xml.in:40
 msgid "ZIP Archive (.zip)"
-msgstr ""
+msgstr "ZIP архів (.zip)"
 
 #: data/engrampa.appdata.xml.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
@@ -208,6 +211,9 @@ msgid ""
 "If you would like to know more about MATE and Engrampa, please visit the "
 "project's home page."
 msgstr ""
+"Engrampa — це відгалуження File Roller і частина робочого середовища MATE. "
+"Якщо ви волієте дізнатись більше про MATE й Engrampa, відвідайте домашню "
+"сторінку проєкту."
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:1945 src/fr-window.c:5495
 msgid "Archive Manager"
@@ -221,7 +227,7 @@ msgstr "Програма створення та зміни архівів"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr ""
+msgstr "MATE;архів;упорядник;стиснення;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -244,7 +250,7 @@ msgid ""
 "Whether to sort in ascending or descending direction. Possible values: "
 "ascending, descending."
 msgstr ""
-"Ґатункувати за зростанням або за спаданням. Можливі значення: ascending, "
+"Ґатункувати за зростанням, або за спаданням. Можливі значення: ascending, "
 "descending."
 
 #: data/org.mate.engrampa.gschema.xml.in:48
@@ -256,7 +262,7 @@ msgid ""
 "Whether to view all files in the archive (all_files), or view the archive as"
 " a folder (as_folder)."
 msgstr ""
-"Показувати усі файли в архіві (all_files), чи показувати архів як теку "
+"Показувати всі файли в архіві (all_files), чи показувати архів як теку "
 "(as_folder)."
 
 #: data/org.mate.engrampa.gschema.xml.in:53
@@ -300,9 +306,9 @@ msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
-"Якщо TRUE буде показувати піктограми в залежності від типу файлу "
-"(повільніше) , у іншому випадку буде завжди використовувати одну й ту саму "
-"піктограму для усіх файлів (швидше)."
+"Якщо TRUE буде показувати піктограми у залежності від типу файлу "
+"(повільніше) , в иншому випадку буде завжди використовувати одну й ту саму "
+"піктограму для всіх файлів (швидше)."
 
 #: data/org.mate.engrampa.gschema.xml.in:78
 msgid "Name column width"
@@ -353,7 +359,7 @@ msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
-"Перелік додатків уведений в діялоґовому вікні Відкрити файл і не пов'язаний "
+"Перелік додатків уведений у діалоговому вікні Відкрити файл і не пов'язаний "
 "з типом файлу."
 
 #: data/org.mate.engrampa.gschema.xml.in:121
@@ -365,8 +371,8 @@ msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
-"Ступінь стиснення, що використовується при додаванні файлів в архів. "
-"Припустимі значення: very_fast, fast, normal, maximum."
+"Ступінь стиснення, що використовується при додаванні файлів до архіву. "
+"Дозволені значення: very_fast, fast, normal, maximum."
 
 #: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
@@ -431,7 +437,7 @@ msgstr "Стиснути..."
 
 #: caja/caja-engrampa.c:373
 msgid "Create a compressed archive with the selected objects"
-msgstr "Створити стиснений архів з виділеними об'єктами"
+msgstr "Створити стиснений архів із виділеними об'єктами"
 
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
 #: src/server.c:457
@@ -440,7 +446,7 @@ msgstr "Архіватор файлів"
 
 #: caja/libcaja-engrampa.caja-extension.desktop.in.in:6
 msgid "Allows to create and extract archives"
-msgstr "Дозволяє створювати і розпаковувати архіви"
+msgstr "Дозволяє створювати та розпаковувати архіви"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
 #: src/dlg-batch-add.c:165 src/dlg-batch-add.c:181 src/dlg-batch-add.c:210
@@ -489,9 +495,9 @@ msgid ""
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Engrampa ― вільна програма. Ви можете розповсюджувати або змінювати її за "
+"Engrampa ― вільна програма. Ви можете розповсюджувати, чи змінювати її за "
 "умовами GNU General Public License, що видана Free Software Foundation; або "
-"версії 2 ліцензії, або (на ваш розсуд) будь-якої пізнішої версії."
+"версії 2 ліцензії, чи (на ваш розсуд) будь-якої пізнішої версії."
 
 #: src/actions.c:863
 msgid ""
@@ -501,7 +507,7 @@ msgid ""
 "details."
 msgstr ""
 "Engrampa розповсюджується зі сподіванням, що програма буде корисною, але БЕЗ"
-" БУДЬ-ЯКИХ ЗАПОРУК; не гарантується навіть ПРИДАТНІСТЬ чи ВІДПОВІДНІСТЬ "
+" БУДЬ-ЯКИХ ЗАПОРУК; не гарантується навіть ПРИДАТНІСТЬ, чи ВІДПОВІДНІСТЬ "
 "БУДЬ-ЯКИМ ВИМОГАМ. Для отримання додаткової інформації ознайомтеся з GNU "
 "General Public License."
 
@@ -520,10 +526,12 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Авторське право © 2001–2010 Фонд вільного програмного забезпечення, Inc.\n"
+"Авторське право © 2012–2021 Розробники MATE"
 
 #: src/actions.c:902
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
-msgstr ""
+msgstr "Engrampa — упорядник архівів робочого середовища MATE."
 
 #: src/actions.c:905
 msgid "translator-credits"
@@ -574,13 +582,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Назва \"%s\" не є правильною, вона не повинна містити символи: %s\n"
+"Назва \"%s\" не є правильною, вона не повинна містити символів: %s\n"
 "\n"
 "%s"
 
 #: src/dlg-batch-add.c:185 src/fr-window.c:7696 src/fr-window.c:7698
 msgid "Please use a different name."
-msgstr "Вкажіть іншу назву."
+msgstr "Вкажіть иншу назву."
 
 #: src/dlg-batch-add.c:212
 msgid ""
@@ -687,22 +695,22 @@ msgid_plural ""
 "%d files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"%d Файл змінено зовнішнім додатком. Якщо не оновити файл у архіві, усі зміни"
+"%d Файл змінено зовнішнім додатком. Якщо не оновити файл у архіві, всі зміни"
 " буде втрачено."
 msgstr[1] ""
-"%d файли змінено зовнішнім додатком. Якщо не оновити файли у архіві, усі "
+"%d файли змінено зовнішнім додатком. Якщо не оновити файли в архіві, всі "
 "зміни буде втрачено."
 msgstr[2] ""
-"%d файлів змінено зовнішнім додатком. Якщо не оновити файли у архіві, усі "
+"%d файлів змінено зовнішнім додатком. Якщо не оновити файли в архіві, всі "
 "зміни буде втрачено."
 msgstr[3] ""
-"%dфайлів змінено зовнішнім додатком. Якщо не оновити файли у архіві, усі "
+"%dфайлів змінено зовнішнім додатком. Якщо не оновити файли в архіві, всі "
 "зміни буде втрачено."
 
 #: src/dlg-update.c:192
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
-msgstr "Оновити файли у архіві \"%s\"?"
+msgstr "Оновити файли в архіві \"%s\"?"
 
 #: src/eggfileformatchooser.c:224
 #, c-format
@@ -737,7 +745,7 @@ msgid ""
 "choose a file format from the list below."
 msgstr ""
 "Неможливо визначити формат файлу `%s'. Перевірте, що Вам відоме розширення "
-"цього файлу або вручну виберіть формат файлу з переліку."
+"цього файлу, чи вручну виберіть формат файлу з переліку."
 
 #: src/eggfileformatchooser.c:665
 msgid "File format not recognized"
@@ -757,7 +765,7 @@ msgstr "Бракує прав."
 
 #: src/fr-archive.c:2449
 msgid "This archive type cannot be modified"
-msgstr "Тип архіву не може бути змінений"
+msgstr "Тип архіву не може бути змінено"
 
 #: src/fr-archive.c:2461
 msgid "You can't add an archive to itself."
@@ -785,7 +793,7 @@ msgstr "Не вдається знайти том: \"%s\""
 
 #: src/fr-command-tar.c:365
 msgid "Deleting files from archive"
-msgstr "Вилучення файлів з архіву"
+msgstr "Вилучення файлів із архіву"
 
 #: src/fr-command-tar.c:471
 msgid "Recompressing archive"
@@ -829,7 +837,7 @@ msgstr "Шаблон текстового документу OpenDocument"
 
 #: src/fr-init.c:69
 msgid "Electronic Publication"
-msgstr ""
+msgstr "Електронне видання"
 
 #: src/fr-init.c:70
 msgid "7-Zip"
@@ -837,35 +845,35 @@ msgstr "7-Zip"
 
 #: src/fr-init.c:71
 msgid "Tar compressed with 7z"
-msgstr ""
+msgstr "Tar стиснено з 7z"
 
 #: src/fr-init.c:72
 msgid "Ace"
-msgstr ""
+msgstr "Ace"
 
 #: src/fr-init.c:73
 msgid "ALZip archive"
-msgstr ""
+msgstr "ALZip архів"
 
 #: src/fr-init.c:74
 msgid "ARC archive"
-msgstr ""
+msgstr "ARC архів"
 
 #: src/fr-init.c:75
 msgid "Ar"
-msgstr ""
+msgstr "Ar"
 
 #: src/fr-init.c:76
 msgid "Arj"
-msgstr ""
+msgstr "Arj"
 
 #: src/fr-init.c:77
 msgid "Brotli compressed file"
-msgstr ""
+msgstr "Стиснений файл Brotli"
 
 #: src/fr-init.c:78
 msgid "Tar compressed with brotli"
-msgstr ""
+msgstr "Tar стиснено з brotli"
 
 #: src/fr-init.c:79
 msgid "Bzip2 compressed file"
@@ -873,15 +881,15 @@ msgstr "файл стиснений у форматі bzip2"
 
 #: src/fr-init.c:80
 msgid "Tar compressed with bzip2"
-msgstr ""
+msgstr "Tar стиснено з bzip2"
 
 #: src/fr-init.c:81
 msgid "Bzip compressed file"
-msgstr ""
+msgstr "Стиснений файл Bzip"
 
 #: src/fr-init.c:82
 msgid "Tar compressed with bzip"
-msgstr ""
+msgstr "Tar стиснено з bzip"
 
 #: src/fr-init.c:83
 msgid "Rar Archived Comic Book"
@@ -893,7 +901,7 @@ msgstr ""
 
 #: src/fr-init.c:85
 msgid "Disc Image File"
-msgstr ""
+msgstr "Файл образу диска"
 
 #: src/fr-init.c:86
 msgid "Unix Compressed Archive file"
@@ -905,55 +913,55 @@ msgstr ""
 
 #: src/fr-init.c:88
 msgid "Unix CPIO Archive"
-msgstr ""
+msgstr "Unix CPIO Архів"
 
 #: src/fr-init.c:89
 msgid "Ear"
-msgstr ""
+msgstr "Ear"
 
 #: src/fr-init.c:90
 msgid "GZip compressed file"
-msgstr ""
+msgstr "GZip стиснений файл"
 
 #: src/fr-init.c:91
 msgid "Jar"
-msgstr ""
+msgstr "Jar"
 
 #: src/fr-init.c:92
 msgid "Lha"
-msgstr ""
+msgstr "Lha"
 
 #: src/fr-init.c:93
 msgid "Lrzip "
-msgstr ""
+msgstr "Lrzip "
 
 #: src/fr-init.c:94
 msgid "Tar compressed with lrzip"
-msgstr ""
+msgstr "Tar стиснений lrzip"
 
 #: src/fr-init.c:95
 msgid "LZip compressed file"
-msgstr ""
+msgstr "LZip стиснений файл"
 
 #: src/fr-init.c:96
 msgid "Tar compressed with lzip"
-msgstr ""
+msgstr "Tar стиснений lzip"
 
 #: src/fr-init.c:97
 msgid "LZMA compressed file"
-msgstr ""
+msgstr "LZMA стиснений файл"
 
 #: src/fr-init.c:98
 msgid "Tar compressed with lzma"
-msgstr ""
+msgstr "Tar стиснений lzma"
 
 #: src/fr-init.c:99
 msgid "LZO compressed file"
-msgstr ""
+msgstr "LZO стиснений файл"
 
 #: src/fr-init.c:100
 msgid "Tar compressed with lzop"
-msgstr ""
+msgstr "Tar стиснений lzop"
 
 #: src/fr-init.c:101
 msgid "Self-extracting zip"
@@ -969,15 +977,15 @@ msgstr "Rar"
 
 #: src/fr-init.c:104
 msgid "Red Hat Package Manager file"
-msgstr ""
+msgstr "Red Hat файл Розпорядника пакунків"
 
 #: src/fr-init.c:105
 msgid "RZip compressed file"
-msgstr ""
+msgstr "RZip стиснений файл"
 
 #: src/fr-init.c:106
 msgid "StuffIt Archive"
-msgstr ""
+msgstr "StuffIt Архів"
 
 #: src/fr-init.c:107
 msgid "Tar uncompressed"
@@ -993,11 +1001,11 @@ msgstr ""
 
 #: src/fr-init.c:110
 msgid "Xz compressed file"
-msgstr ""
+msgstr "Xz стиснений файл"
 
 #: src/fr-init.c:111
 msgid "Tar compressed with xz"
-msgstr ""
+msgstr "Tar стиснений xz"
 
 #: src/fr-init.c:112
 msgid "Zoo"
@@ -1005,11 +1013,11 @@ msgstr ""
 
 #: src/fr-init.c:113
 msgid "Zstandard compressed file"
-msgstr ""
+msgstr "Zstandard стиснений файл"
 
 #: src/fr-init.c:114
 msgid "Tar compressed with zstd"
-msgstr ""
+msgstr "Tar стиснений zstd"
 
 #: src/fr-init.c:115
 msgid "Zip"
@@ -1116,7 +1124,7 @@ msgstr "Розпаковування файлів з \"%s\""
 
 #: src/fr-window.c:2365
 msgid "Copying the extracted files to the destination"
-msgstr "Копіювання розпакованих файлів до обраної директорії"
+msgstr "Копіювання розпакованих файлів до вибраної директорії"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2373
@@ -1138,7 +1146,7 @@ msgstr "_Показати файли"
 
 #: src/fr-window.c:2542
 msgid "Show the _Files and Quit"
-msgstr "Показати _Файли і Вийти"
+msgstr "Показати _Файли та Вийти"
 
 #: src/fr-window.c:2543 src/ui/add-options.ui:40 src/ui.h:58
 #: src/ui/properties.ui:52
@@ -1181,7 +1189,7 @@ msgstr "Помилка при завантаженні архіву."
 
 #: src/fr-window.c:3033
 msgid "An error occurred while deleting files from the archive."
-msgstr "Помилка при вилученні файлів з архіву."
+msgstr "Помилка при вилученні файлів із архіву."
 
 #: src/fr-window.c:3039
 msgid "An error occurred while adding files to the archive."
@@ -1290,11 +1298,11 @@ msgstr "Замінити файл «%s»?"
 #: src/fr-window.c:6799
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
-msgstr "Інший файл з таким ім’ям вже існує у «%s»."
+msgstr "Инший файл з таким ім’ям вже існує у «%s»."
 
 #: src/fr-window.c:6806
 msgid "Replace _All"
-msgstr "Замінити _усе"
+msgstr "Замінити _все"
 
 #: src/fr-window.c:6807
 msgid "_Skip"
@@ -1314,7 +1322,7 @@ msgstr "Нове ім’я порожнє, будь ласка уведіть і
 #. when renaming a file.
 #: src/fr-window.c:7655
 msgid "New name is the same as old one, please type other name."
-msgstr "Нове ім’я таке ж, як і старе, уведіть інше ім’я."
+msgstr "Нове ім’я таке ж, як і старе, уведіть инше ім’я."
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
@@ -1324,8 +1332,8 @@ msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
-"Ім’я «%s» неприпустиме, оскільки містить принаймні один з таких символів %s,"
-" будь ласка уведіть інше ім’я"
+"Ім’я «%s» неприпустиме, оскільки містить принаймні один із таких символів "
+"%s, будь ласка уведіть инше ім’я"
 
 #: src/fr-window.c:7696
 #, c-format
@@ -1387,7 +1395,7 @@ msgstr "Вст_авити"
 
 #: src/fr-window.c:8813
 msgid "Add files to an archive"
-msgstr "Додати файли у архів"
+msgstr "Додати файли в архів"
 
 #: src/fr-window.c:8856 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
@@ -1412,11 +1420,11 @@ msgstr "АРХІВ"
 
 #: src/main.c:60
 msgid "Add files asking the name of the archive and quit the program"
-msgstr "Додати файли у архів із запитом назви архіву і вийти."
+msgstr "Додати файли в архів із запитом назви архіву та вийти."
 
 #: src/main.c:64
 msgid "Extract archives to the specified folder and quit the program"
-msgstr "Розпакувати у вказану теку і вийти."
+msgstr "Розпакувати у вказану теку та вийти."
 
 #: src/main.c:65 src/main.c:77
 msgid "FOLDER"
@@ -1424,13 +1432,13 @@ msgstr "ТЕКА"
 
 #: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
-msgstr "Розпакувати файли із запитом назви теки призначення і вийти."
+msgstr "Розпакувати файли з запитом назви теки призначення та вийти."
 
 #: src/main.c:72
 msgid ""
 "Extract the contents of the archives in the archive folder and quit the "
 "program"
-msgstr "Розпакувати вміст архівів до вказаної теки і вийти з програми."
+msgstr "Розпакувати вміст архівів до вказаної теки та вийти з програми."
 
 #: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
@@ -1450,7 +1458,7 @@ msgstr "Стиснення"
 
 #: src/main.c:324 src/server.c:444
 msgid "- Create and modify an archive"
-msgstr " - створити або змінити архів"
+msgstr " - створити, чи змінити архів"
 
 #: src/ui/add-options.ui:23
 msgid "Load Options"
@@ -1694,7 +1702,7 @@ msgstr "Вирізати виділене"
 
 #: src/ui.h:76 src/ui.h:97
 msgid "Paste the clipboard"
-msgstr "Вставити вміст буферу обміну"
+msgstr "Вставити вміст буфера обміну"
 
 #: src/ui.h:79 src/ui.h:100
 msgid "_Rename…"
@@ -1794,15 +1802,15 @@ msgstr "Зберегти як..."
 
 #: src/ui.h:163
 msgid "Save the current archive with a different name"
-msgstr "Зберегти поточний архів під іншою назвою"
+msgstr "Зберегти поточний архів під иншою назвою"
 
 #: src/ui.h:166
 msgid "Select _All"
-msgstr "Виді_лити усе"
+msgstr "Виді_лити все"
 
 #: src/ui.h:167
 msgid "Select all files"
-msgstr "Виділити усі файли"
+msgstr "Виділити всі файли"
 
 #: src/ui.h:170
 msgid "_Stop"
@@ -1818,7 +1826,7 @@ msgstr "Перевірити _цілісність"
 
 #: src/ui.h:175
 msgid "Test whether the archive contains errors"
-msgstr "Перевірити чи архів містить помилки"
+msgstr "Перевірити архів на вміст помилок"
 
 #: src/ui.h:179 src/ui.h:183
 msgid "Open the selected file"
@@ -1937,7 +1945,7 @@ msgid ""
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
-"<i><b>Нотатка:</b> пароль буде використано для шифрування і розшифрування "
+"<i><b>Нотатка:</b> пароль буде використано для шифрування та розшифрування "
 "файлів під час роботи з поточним архівом. Пароль буде знищено після закриття"
 " архіву.</i>"
 
@@ -1980,4 +1988,4 @@ msgstr "_Оновити"
 
 #: src/ui/update.ui:305
 msgid "S_elect the files you want to update:"
-msgstr "_Виберіть файли, які треба оновити:"
+msgstr "_Оберіть файли, які треба оновити:"
