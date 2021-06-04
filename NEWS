@@ -1,3 +1,32 @@
+### engrampa 1.25.1
+
+  * Translations update
+  * ar: fix filename in file list
+  * dlg-package-installer: Don't build the path to packages.match
+  * build: Don't install packages.match when packagekit is disabled
+  * packages.match: add and run update-packages-match script
+  * build: don't add twice the file engrampa.appdata.xml to CLEANFILES
+  * rar 6.00: fix listing archive content with encrypted file list
+  * i18n: use g_dngettext instead of ngettext
+  * build: allow users to disable gettext support (--disable-nls)
+  * build: Use PACKAGE_URL variable
+  * build: display package name and version in configure summary
+  * build: set GETTEXT_PACKAGE=AC_PACKAGE_NAME
+  * update resource for transifex
+  * Update copyright to 2021
+  * Remove cppcheck warnings about the variable scope can be reduced
+  * update issue template
+  * update issue template
+  * Remove USE_MATE2_MACROS from autogen.sh (legacy)
+  * fr-archive: Fix memory leak
+  * Add Electronic Publication (EPUB) support
+  * Remove unused macros
+  * update.ui: missing on_update_file_ok_button_clicked handler
+  * fr-command-unarchiver: Remove trailing spaces
+  * Avoid memory leak in java utils
+  * Do not use stock icons in ui files (#392)
+  * Update compilation instructions
+
 ### engrampa 1.25.0
 
   * Translations update
