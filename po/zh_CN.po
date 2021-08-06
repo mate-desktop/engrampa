@@ -12,18 +12,19 @@
 # biqiu-ssw <shenshuaiwen@gmail.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2019
 # Baron Hou <houbaron@gmail.com>, 2019
-# Ming-Tian Yang <i@skylee.xyz>, 2020
+# Skylee Ming-Tian Yang <i@skylee.xyz>, 2020
 # liulitchi <xingzuo88@qq.com>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 玉堂白鹤 <yjwork@qq.com>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
-"Report-Msgid-Bugs-To: https://mate-desktop.org\n"
-"POT-Creation-Date: 2021-01-16 10:39+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
+"POT-Creation-Date: 2021-06-04 23:14+0200\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2021\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,92 +91,93 @@ msgstr "会话管理选项："
 msgid "Show session management options"
 msgstr "显示会话管理选项"
 
-#: data/engrampa.appdata.xml.in:7 data/engrampa.desktop.in.in:3 src/main.c:47
+#: data/engrampa.appdata.xml.in.in:7 data/engrampa.desktop.in.in:3
+#: src/main.c:47
 msgid "Engrampa Archive Manager"
 msgstr "Engrampa 归档管理器"
 
-#: data/engrampa.appdata.xml.in:8
+#: data/engrampa.appdata.xml.in.in:8
 msgid "An Archive Manager for the MATE desktop environment"
 msgstr "MATE 的归档管理器"
 
-#: data/engrampa.appdata.xml.in:10
+#: data/engrampa.appdata.xml.in.in:10
 msgid ""
 "Engrampa is an archive manager for the MATE environment. It allows you to "
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr "Engrampa 是 MATE 桌面的存档管理器。可用来创建或修改存档、查看存档的内容、查看存档中包含的文件，以及从存档中提取文件。"
 
-#: data/engrampa.appdata.xml.in:15
+#: data/engrampa.appdata.xml.in.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr "Engrampa 只是归档程序如 tar 和 zip 的一个前端（图形界面）。受支持的文件类型有："
 
-#: data/engrampa.appdata.xml.in:20
+#: data/engrampa.appdata.xml.in.in:20
 msgid "7-Zip Compressed File (.7z)"
 msgstr "7-Zip 压缩文件 (.7z)"
 
-#: data/engrampa.appdata.xml.in:21
+#: data/engrampa.appdata.xml.in.in:21
 msgid "WinAce Compressed File (.ace)"
 msgstr "WinAce 压缩文件 (.ace)"
 
-#: data/engrampa.appdata.xml.in:22
+#: data/engrampa.appdata.xml.in.in:22
 msgid "ALZip Compressed File (.alz)"
 msgstr "ALZip 压缩文件 (.alz)"
 
-#: data/engrampa.appdata.xml.in:23
+#: data/engrampa.appdata.xml.in.in:23
 msgid "AIX Small Indexed Archive (.ar)"
 msgstr "AIX 小索引归档 (.ar)"
 
-#: data/engrampa.appdata.xml.in:24
+#: data/engrampa.appdata.xml.in.in:24
 msgid "ARJ Compressed Archive (.arj)"
 msgstr "ARJ 压缩归档 (.arj)"
 
-#: data/engrampa.appdata.xml.in:25
+#: data/engrampa.appdata.xml.in.in:25
 msgid "Cabinet File (.cab)"
 msgstr "Cabinet 文件 (.cab)"
 
-#: data/engrampa.appdata.xml.in:26
+#: data/engrampa.appdata.xml.in.in:26
 msgid "UNIX CPIO Archive (.cpio)"
 msgstr "UNIX CPIO 归档 (.cpio)"
 
-#: data/engrampa.appdata.xml.in:27
+#: data/engrampa.appdata.xml.in.in:27
 msgid "Debian Package (.deb, .udeb) [Read-only mode]"
 msgstr "Debian 软件包 (.deb, .udeb) [只读模式]"
 
-#: data/engrampa.appdata.xml.in:28
+#: data/engrampa.appdata.xml.in.in:28
 msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
 msgstr "ISO-9660 CD 光盘映像 (.iso) [只读模式]"
 
-#: data/engrampa.appdata.xml.in:29
+#: data/engrampa.appdata.xml.in.in:29
 msgid "Java Archive (.jar)"
 msgstr "Java 归档 (.jar)"
 
-#: data/engrampa.appdata.xml.in:30
+#: data/engrampa.appdata.xml.in.in:30
 msgid "Java Enterprise archive (.ear)"
 msgstr "Java 企业归档 (.ear)"
 
-#: data/engrampa.appdata.xml.in:31
+#: data/engrampa.appdata.xml.in.in:31
 msgid "Java Web Archive (.war)"
 msgstr "Java Web 归档 (.war)"
 
-#: data/engrampa.appdata.xml.in:32
+#: data/engrampa.appdata.xml.in.in:32
 msgid "LHA Archive (.lzh, .lha)"
 msgstr "LHA 归档 (.lzh, .lha)"
 
-#: data/engrampa.appdata.xml.in:33
+#: data/engrampa.appdata.xml.in.in:33
 msgid "WinRAR Compressed Archive (.rar)"
 msgstr "WinRAR 压缩归档 (.rar)"
 
-#: data/engrampa.appdata.xml.in:34
+#: data/engrampa.appdata.xml.in.in:34
 msgid "RAR Archived Comic Book (.cbr)"
 msgstr "RAR 归档的漫画书 (.cbr)"
 
-#: data/engrampa.appdata.xml.in:35
+#: data/engrampa.appdata.xml.in.in:35
 msgid "RPM Package Manager (.rpm) [Read-only mode]"
 msgstr "RPM 软件管理包 (.rpm) [只读模式]"
 
-#: data/engrampa.appdata.xml.in:36
+#: data/engrampa.appdata.xml.in.in:36
 msgid ""
 "Tape Archive File uncompressed (.tar) or compressed with: gzip (.tar.gz, "
 ".tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), "
@@ -187,23 +189,23 @@ msgstr ""
 "(.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop (.tar.lzo, .tzo), 7zip "
 "(.tar.7z), xz (.tar.xz), Zstandard (.zst) 压缩的磁带归档文件。"
 
-#: data/engrampa.appdata.xml.in:39
+#: data/engrampa.appdata.xml.in.in:39
 msgid "Stuffit Archives (.bin, .sit)"
 msgstr "Stuffit 归档 (.bin, .sit)"
 
-#: data/engrampa.appdata.xml.in:40
+#: data/engrampa.appdata.xml.in.in:40
 msgid "ZIP Archive (.zip)"
 msgstr "ZIP 归档 (.zip)"
 
-#: data/engrampa.appdata.xml.in:41
+#: data/engrampa.appdata.xml.in.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
 msgstr "ZIP 压缩的漫画书 (.cbz)"
 
-#: data/engrampa.appdata.xml.in:42
+#: data/engrampa.appdata.xml.in.in:42
 msgid "ZOO Compressed Archive File (.zoo)"
 msgstr "ZOO 压缩的归档文件 (.zoo)"
 
-#: data/engrampa.appdata.xml.in:43
+#: data/engrampa.appdata.xml.in.in:43
 msgid ""
 "Single files compressed with gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
@@ -212,7 +214,7 @@ msgstr ""
 "使用 gzip (.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip "
 "(.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz (.xz) 压缩的单个文件。"
 
-#: data/engrampa.appdata.xml.in:46
+#: data/engrampa.appdata.xml.in.in:46
 msgid ""
 "Engrampa is a fork of File Roller and part of the MATE Desktop Environment. "
 "If you would like to know more about MATE and Engrampa, please visit the "
@@ -221,7 +223,7 @@ msgstr ""
 "Engrampa 为 MATE 桌面环境的一部分，是 File Roller 的复刻。想了解更多 MATE 及 Engrampa "
 "的信息，请访问项目主页。"
 
-#: data/engrampa.desktop.in.in:4 src/fr-window.c:1945 src/fr-window.c:5495
+#: data/engrampa.desktop.in.in:4 src/fr-window.c:1941 src/fr-window.c:5493
 msgid "Archive Manager"
 msgstr "归档管理器"
 
@@ -430,8 +432,8 @@ msgstr "压缩..."
 msgid "Create a compressed archive with the selected objects"
 msgstr "使用选择的对象创建一个压缩的归档"
 
-#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
-#: src/server.c:457
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:344
+#: src/server.c:461
 msgid "Engrampa"
 msgstr "Engrampa"
 
@@ -441,7 +443,7 @@ msgstr "允许你创建和解压归档文件"
 
 #: src/actions.c:158 src/actions.c:197 src/actions.c:233
 #: src/dlg-batch-add.c:165 src/dlg-batch-add.c:181 src/dlg-batch-add.c:210
-#: src/dlg-batch-add.c:255 src/dlg-batch-add.c:301 src/fr-window.c:3013
+#: src/dlg-batch-add.c:255 src/dlg-batch-add.c:301 src/fr-window.c:3011
 msgid "Could not create the archive"
 msgstr "无法创建归档文件"
 
@@ -453,9 +455,9 @@ msgstr "您必须指定归档文件名称。"
 msgid "You don't have permission to create an archive in this folder"
 msgstr "您没有在此文件夹中创建归档文件的权限"
 
-#: src/actions.c:235 src/dlg-package-installer.c:291
-#: src/dlg-package-installer.c:300 src/dlg-package-installer.c:337
-#: src/fr-archive.c:1166 src/fr-window.c:6129 src/fr-window.c:6305
+#: src/actions.c:235 src/dlg-package-installer.c:290
+#: src/dlg-package-installer.c:299 src/dlg-package-installer.c:336
+#: src/fr-archive.c:1166 src/fr-window.c:6127 src/fr-window.c:6303
 msgid "Archive type not supported."
 msgstr "不支持的归档文件类型。"
 
@@ -463,11 +465,11 @@ msgstr "不支持的归档文件类型。"
 msgid "Could not delete the old archive."
 msgstr "无法删除旧归档文件。"
 
-#: src/actions.c:383 src/fr-window.c:5870
+#: src/actions.c:383 src/fr-window.c:5868
 msgid "Open"
 msgstr "打开"
 
-#: src/actions.c:394 src/fr-window.c:5316
+#: src/actions.c:394 src/fr-window.c:5314
 msgid "All archives"
 msgstr "全部归档文件"
 
@@ -475,7 +477,7 @@ msgstr "全部归档文件"
 msgid "All files"
 msgstr "全部文件"
 
-#: src/actions.c:795 src/fr-window.c:7358
+#: src/actions.c:795 src/fr-window.c:7356
 msgid "Last Output"
 msgstr "上次的输出"
 
@@ -510,6 +512,8 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"版权所有 © 2001–2010 自由软件基金会\n"
+"版权所有 © 2012–2021 MATE 开发者"
 
 #: src/actions.c:902
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
@@ -547,8 +551,8 @@ msgstr "保存选项"
 msgid "_Options Name:"
 msgstr "选项名称 (_O) ："
 
-#: src/dlg-add-folder.c:741 src/dlg-package-installer.c:320
-#: src/fr-window.c:2544 src/fr-window.c:7772 src/fr-window.c:8213
+#: src/dlg-add-folder.c:741 src/dlg-package-installer.c:319
+#: src/fr-window.c:2540 src/fr-window.c:7770 src/fr-window.c:8211
 #: src/ui/batch-add-files.ui:46 src/ui/batch-password.ui:36
 #: src/ui/delete.ui:36 src/ui/dlg-add-files.ui:56 src/ui/dlg-add-folder.ui:57
 #: src/ui/dlg-extract.ui:56 src/ui/new.ui:235 src/ui/password.ui:37
@@ -576,7 +580,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:185 src/fr-window.c:7696 src/fr-window.c:7698
+#: src/dlg-batch-add.c:185 src/fr-window.c:7694 src/fr-window.c:7696
 msgid "Please use a different name."
 msgstr "请使用其它不同的文件名。"
 
@@ -586,7 +590,7 @@ msgid ""
 " folder."
 msgstr "您没有在目标文件夹中创建归档文件的权限。"
 
-#: src/dlg-batch-add.c:228 src/dlg-extract.c:99 src/fr-window.c:6907
+#: src/dlg-batch-add.c:228 src/dlg-extract.c:99 src/fr-window.c:6905
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -597,11 +601,11 @@ msgstr ""
 "\n"
 "您是否想要创建？"
 
-#: src/dlg-batch-add.c:237 src/dlg-extract.c:108 src/fr-window.c:6916
+#: src/dlg-batch-add.c:237 src/dlg-extract.c:108 src/fr-window.c:6914
 msgid "Create _Folder"
 msgstr "新建文件夹(_F)"
 
-#: src/dlg-batch-add.c:256 src/dlg-extract.c:128 src/fr-window.c:6933
+#: src/dlg-batch-add.c:256 src/dlg-extract.c:128 src/fr-window.c:6931
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "无法创建目的文件夹：%s。"
@@ -619,12 +623,12 @@ msgid "_Overwrite"
 msgstr "覆盖(_O)"
 
 #: src/dlg-extract.c:127 src/dlg-extract.c:145 src/dlg-extract.c:172
-#: src/fr-window.c:4276 src/fr-window.c:6848 src/fr-window.c:6853
-#: src/fr-window.c:6937 src/fr-window.c:6956 src/fr-window.c:6961
+#: src/fr-window.c:4274 src/fr-window.c:6846 src/fr-window.c:6851
+#: src/fr-window.c:6935 src/fr-window.c:6954 src/fr-window.c:6959
 msgid "Extraction not performed"
 msgstr "解压缩操作未执行"
 
-#: src/dlg-extract.c:173 src/fr-window.c:4444 src/fr-window.c:4524
+#: src/dlg-extract.c:173 src/fr-window.c:4442 src/fr-window.c:4522
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
@@ -641,11 +645,11 @@ msgctxt "File"
 msgid "Save"
 msgstr "保存"
 
-#: src/dlg-package-installer.c:108 src/dlg-package-installer.c:222
+#: src/dlg-package-installer.c:108 src/dlg-package-installer.c:221
 msgid "There was an internal error trying to search for applications:"
 msgstr "在试图搜索应用程序时出现了一个内部错误："
 
-#: src/dlg-package-installer.c:310
+#: src/dlg-package-installer.c:309
 #, c-format
 msgid ""
 "There is no command installed for %s files.\n"
@@ -654,11 +658,11 @@ msgstr ""
 "没有为 %s 文件安装的命令。\n"
 "您想搜索一个命令来打开这个文件吗？"
 
-#: src/dlg-package-installer.c:315
+#: src/dlg-package-installer.c:314
 msgid "Could not open this file type"
 msgstr "不能打开这个文件类型"
 
-#: src/dlg-package-installer.c:324
+#: src/dlg-package-installer.c:323
 msgid "_Search Command"
 msgstr "搜索命令(_S)"
 
@@ -667,26 +671,26 @@ msgstr "搜索命令(_S)"
 msgid "%s Properties"
 msgstr "%s 的属性"
 
-#: src/dlg-prop.c:107 src/fr-window.c:1544 src/fr-window.c:1573
+#: src/dlg-prop.c:107 src/fr-window.c:1540 src/fr-window.c:1569
 msgid "%d %B %Y, %H:%M"
 msgstr "%Y年%-m月%-d日 %H:%M"
 
-#: src/dlg-update.c:163
+#: src/dlg-update.c:165
 #, c-format
 msgid "Update the file \"%s\" in the archive \"%s\"?"
 msgstr "更新归档“%2$s”中的文件“%1$s”"
 
-#: src/dlg-update.c:175 src/dlg-update.c:203 src/ui/update.ui:129
+#: src/dlg-update.c:178 src/dlg-update.c:207 src/ui/update.ui:129
 #, c-format
 msgid ""
 "The file has been modified with an external application. If you don't update"
 " the file in the archive, all of your changes will be lost."
 msgid_plural ""
-"%d files have been modified with an external application. If you don't "
+"%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
-msgstr[0] "%d 个文件已被外部应用程序修改。如果您不更新归档中的这些文件，您所有的更改将丢失。"
+msgstr[0] "%u 个文件已被外部应用程序所修改。如果您不更新归档中的这些文件，您所有的更改都将丢失。"
 
-#: src/dlg-update.c:192
+#: src/dlg-update.c:195
 #, c-format
 msgid "Update the files in the archive \"%s\"?"
 msgstr "更新归档“%s”中的文件"
@@ -763,7 +767,7 @@ msgstr "归档文件："
 msgid "Removing file: "
 msgstr "删除文件："
 
-#: src/fr-command-rar.c:717
+#: src/fr-command-rar.c:709
 #, c-format
 msgid "Could not find the volume: %s"
 msgstr "找不到卷：%s"
@@ -814,7 +818,7 @@ msgstr "OpenDocument 文字处理模板"
 
 #: src/fr-init.c:69
 msgid "Electronic Publication"
-msgstr ""
+msgstr "电子出版物"
 
 #: src/fr-init.c:70
 msgid "7-Zip"
@@ -834,7 +838,7 @@ msgstr "ALZip 归档"
 
 #: src/fr-init.c:74
 msgid "ARC archive"
-msgstr ""
+msgstr "ARC 归档"
 
 #: src/fr-init.c:75
 msgid "Ar"
@@ -1000,308 +1004,308 @@ msgstr "用 zstd 压缩的 tar"
 msgid "Zip"
 msgstr "Zip"
 
-#: src/fr-window.c:1474
+#: src/fr-window.c:1470
 #, c-format
-msgid "%d object (%s)"
-msgid_plural "%d objects (%s)"
-msgstr[0] "%d 个对象(%s)"
+msgid "%lu object (%s)"
+msgid_plural "%lu objects (%s)"
+msgstr[0] "%lu 个对象(%s)"
 
-#: src/fr-window.c:1479
+#: src/fr-window.c:1475
 #, c-format
-msgid "%d object selected (%s)"
-msgid_plural "%d objects selected (%s)"
-msgstr[0] "已选择 %d 个对象 (%s)"
+msgid "%lu object selected (%s)"
+msgid_plural "%lu objects selected (%s)"
+msgstr[0] "已选择 %lu 个对象 (%s)"
 
-#: src/fr-window.c:1553
+#: src/fr-window.c:1549
 msgid "Folder"
 msgstr "文件夹"
 
-#: src/fr-window.c:1953
+#: src/fr-window.c:1949
 msgid "[read only]"
 msgstr "[只读]"
 
-#: src/fr-window.c:2213
+#: src/fr-window.c:2209
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "无法显示文件夹“%s”"
 
-#: src/fr-window.c:2243 src/fr-window.c:2258 src/fr-window.c:2546
+#: src/fr-window.c:2239 src/fr-window.c:2254 src/fr-window.c:2542
 msgid "_Pause"
 msgstr "暂停(_P)"
 
-#: src/fr-window.c:2246
+#: src/fr-window.c:2242
 msgid "Process paused"
 msgstr "进程已暂停"
 
-#: src/fr-window.c:2248
+#: src/fr-window.c:2244
 msgid "_Resume"
 msgstr "继续(_R)"
 
-#: src/fr-window.c:2256 src/fr-window.c:2856
+#: src/fr-window.c:2252 src/fr-window.c:2854
 msgid "Please wait…"
 msgstr "请稍候..."
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2331 src/fr-window.c:2369
+#: src/fr-window.c:2327 src/fr-window.c:2365
 #, c-format
 msgid "Creating \"%s\""
 msgstr "正在创建 \"%s\""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2335
+#: src/fr-window.c:2331
 #, c-format
 msgid "Loading \"%s\""
 msgstr "正在载入 \"%s\""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2339
+#: src/fr-window.c:2335
 #, c-format
 msgid "Reading \"%s\""
 msgstr "正在读取 \"%s\""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2343
+#: src/fr-window.c:2339
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr "正在从 \"%s\" 删除文件"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2347
+#: src/fr-window.c:2343
 #, c-format
 msgid "Testing \"%s\""
 msgstr "正在测试 \"%s\""
 
-#: src/fr-window.c:2350
+#: src/fr-window.c:2346
 msgid "Getting the file list"
 msgstr "获取文件列表"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2354
+#: src/fr-window.c:2350
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr "正在复制要添加到 \"%s\" 的文件"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2358
+#: src/fr-window.c:2354
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr "正在向 \"%s\" 添加文件"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2362
+#: src/fr-window.c:2358
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr "正在从 \"%s\" 解压文件"
 
-#: src/fr-window.c:2365
+#: src/fr-window.c:2361
 msgid "Copying the extracted files to the destination"
 msgstr "将解压后的文件复制到目标位置"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2373
+#: src/fr-window.c:2369
 #, c-format
 msgid "Saving \"%s\""
 msgstr "正在保存 \"%s\""
 
-#: src/fr-window.c:2539 src/ui/app-menu.ui:14
+#: src/fr-window.c:2535 src/ui/app-menu.ui:14
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: src/fr-window.c:2540
+#: src/fr-window.c:2536
 msgid "_Open the Archive"
 msgstr "打开归档文件(_O)"
 
-#: src/fr-window.c:2541
+#: src/fr-window.c:2537
 msgid "_Show the Files"
 msgstr "显示文件(_S)"
 
-#: src/fr-window.c:2542
+#: src/fr-window.c:2538
 msgid "Show the _Files and Quit"
 msgstr "显示文件并退出(_F)"
 
-#: src/fr-window.c:2543 src/ui/add-options.ui:40 src/ui.h:58
+#: src/fr-window.c:2539 src/ui/add-options.ui:40 src/ui.h:58
 #: src/ui/properties.ui:52
 msgid "_Close"
 msgstr "关闭(_C)"
 
-#: src/fr-window.c:2721
+#: src/fr-window.c:2718
 #, c-format
-msgid "%d file remaining"
-msgid_plural "%d files remaining"
-msgstr[0] "还剩 %d 个文件"
+msgid "%lu file remaining"
+msgid_plural "%lu files remaining"
+msgstr[0] "剩余 %lu 个文件"
 
-#: src/fr-window.c:2773
+#: src/fr-window.c:2771
 msgid "Extraction completed successfully"
 msgstr "解压缩成功完成"
 
-#: src/fr-window.c:2798
+#: src/fr-window.c:2796
 msgid "Archive created successfully"
 msgstr "归档文件成功创建"
 
-#: src/fr-window.c:2925 src/fr-window.c:3060
+#: src/fr-window.c:2923 src/fr-window.c:3058
 msgid "Command exited abnormally."
 msgstr "命令异常退出。"
 
-#: src/fr-window.c:3018
+#: src/fr-window.c:3016
 msgid "An error occurred while extracting files."
 msgstr "解压缩文件时发生了错误。"
 
-#: src/fr-window.c:3024
+#: src/fr-window.c:3022
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "无法打开“%s”"
 
-#: src/fr-window.c:3029
+#: src/fr-window.c:3027
 msgid "An error occurred while loading the archive."
 msgstr "装入归档文件时出现了一个错误。"
 
-#: src/fr-window.c:3033
+#: src/fr-window.c:3031
 msgid "An error occurred while deleting files from the archive."
 msgstr "从归档文件中删除文件时出现了一个错误。"
 
-#: src/fr-window.c:3039
+#: src/fr-window.c:3037
 msgid "An error occurred while adding files to the archive."
 msgstr "将文件添加到归档文件时出现了一个错误。"
 
-#: src/fr-window.c:3043
+#: src/fr-window.c:3041
 msgid "An error occurred while testing archive."
 msgstr "测试归档文件时出现了一个错误。"
 
-#: src/fr-window.c:3047
+#: src/fr-window.c:3045
 msgid "An error occurred while saving the archive."
 msgstr "保存归档文件时出现了一个错误。"
 
-#: src/fr-window.c:3051
+#: src/fr-window.c:3049
 msgid "An error occurred."
 msgstr "出现了一个错误。"
 
-#: src/fr-window.c:3057
+#: src/fr-window.c:3055
 msgid "Command not found."
 msgstr "命令没有找到。"
 
-#: src/fr-window.c:3260
+#: src/fr-window.c:3258
 msgid "Test Result"
 msgstr "测试结果"
 
-#: src/fr-window.c:4119 src/fr-window.c:8248 src/fr-window.c:8284
-#: src/fr-window.c:8534
+#: src/fr-window.c:4117 src/fr-window.c:8246 src/fr-window.c:8282
+#: src/fr-window.c:8532
 msgid "Could not perform the operation"
 msgstr "无法执行这个操作"
 
-#: src/fr-window.c:4145
+#: src/fr-window.c:4143
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr "您想要将此文件添加到当前归档文件还是打开为新归档文件？"
 
-#: src/fr-window.c:4175
+#: src/fr-window.c:4173
 msgid "Do you want to create a new archive with these files?"
 msgstr "您是否想要创建包含这些文件在内的新归档文件？"
 
-#: src/fr-window.c:4178
+#: src/fr-window.c:4176
 msgid "Create _Archive"
 msgstr "创建归档文件(_A)"
 
-#: src/fr-window.c:4774 src/fr-window.c:5817
+#: src/fr-window.c:4772 src/fr-window.c:5815
 msgid "Folders"
 msgstr "文件夹"
 
-#: src/fr-window.c:4812
+#: src/fr-window.c:4810
 msgctxt "File"
 msgid "Size"
 msgstr "大小"
 
-#: src/fr-window.c:4813
+#: src/fr-window.c:4811
 msgctxt "File"
 msgid "Type"
 msgstr "类型"
 
-#: src/fr-window.c:4814
+#: src/fr-window.c:4812
 msgctxt "File"
 msgid "Date Modified"
 msgstr "修改日期"
 
-#: src/fr-window.c:4815
+#: src/fr-window.c:4813
 msgctxt "File"
 msgid "Location"
 msgstr "位置"
 
-#: src/fr-window.c:4824
+#: src/fr-window.c:4822
 msgctxt "File"
 msgid "Name"
 msgstr "名称"
 
-#: src/fr-window.c:5736
+#: src/fr-window.c:5734
 msgid "Find:"
 msgstr "查找："
 
-#: src/fr-window.c:5827
+#: src/fr-window.c:5825
 msgid "Close the folders pane"
 msgstr "关闭文件夹面板"
 
 #. Translators: this is the label for the "open recent file" sub-menu.
-#: src/fr-window.c:5858
+#: src/fr-window.c:5856
 msgid "Open _Recent"
 msgstr "打开最近访问的(_R)"
 
-#: src/fr-window.c:5859 src/fr-window.c:5871
+#: src/fr-window.c:5857 src/fr-window.c:5869
 msgid "Open a recently used archive"
 msgstr "打开最近使用的归档文件"
 
 #. Translators: after the colon there is a folder name.
-#: src/fr-window.c:5948 src/ui/batch-add-files.ui:209
+#: src/fr-window.c:5946 src/ui/batch-add-files.ui:209
 msgid "_Location:"
 msgstr "位置(_L)："
 
-#: src/fr-window.c:6297
+#: src/fr-window.c:6295
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "无法保存归档文件“%s”"
 
-#: src/fr-window.c:6796
+#: src/fr-window.c:6794
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr "替换文件“%s”？"
 
-#: src/fr-window.c:6799
+#: src/fr-window.c:6797
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr "在“%s”中存在相同名称的文件。"
 
-#: src/fr-window.c:6806
+#: src/fr-window.c:6804
 msgid "Replace _All"
 msgstr "全部替换 (_A)"
 
-#: src/fr-window.c:6807
+#: src/fr-window.c:6805
 msgid "_Skip"
 msgstr "跳过 (_S)"
 
-#: src/fr-window.c:6808
+#: src/fr-window.c:6806
 msgid "_Replace"
 msgstr "替换 (_R)"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: src/fr-window.c:7650
+#: src/fr-window.c:7648
 msgid "New name is void, please type a name."
 msgstr "新名称为空，请键入名称。"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: src/fr-window.c:7655
+#: src/fr-window.c:7653
 msgid "New name is the same as old one, please type other name."
 msgstr "新旧名称一致，请键入另一个名称。"
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: src/fr-window.c:7660
+#: src/fr-window.c:7658
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr "名称 \"%s\" 无效，因为它至少包含这些字符中的其中一个：%s，请键入另一个名称。"
 
-#: src/fr-window.c:7696
+#: src/fr-window.c:7694
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1312,7 +1316,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/fr-window.c:7698
+#: src/fr-window.c:7696
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1323,47 +1327,47 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/fr-window.c:7768
+#: src/fr-window.c:7766
 msgid "Rename"
 msgstr "重命名"
 
-#: src/fr-window.c:7769
+#: src/fr-window.c:7767
 msgid "_New folder name:"
 msgstr "新文件夹名称 (_N) ："
 
-#: src/fr-window.c:7769
+#: src/fr-window.c:7767
 msgid "_New file name:"
 msgstr "新文件名 (_N) ："
 
-#: src/fr-window.c:7773
+#: src/fr-window.c:7771
 msgid "_Rename"
 msgstr "重命名(_R)"
 
-#: src/fr-window.c:7790 src/fr-window.c:7809
+#: src/fr-window.c:7788 src/fr-window.c:7807
 msgid "Could not rename the folder"
 msgstr "无法重命名文件夹"
 
-#: src/fr-window.c:7790 src/fr-window.c:7809
+#: src/fr-window.c:7788 src/fr-window.c:7807
 msgid "Could not rename the file"
 msgstr "无法重命名文件"
 
-#: src/fr-window.c:8209
+#: src/fr-window.c:8207
 msgid "Paste Selection"
 msgstr "粘贴选中内容"
 
-#: src/fr-window.c:8210
+#: src/fr-window.c:8208
 msgid "_Destination folder:"
 msgstr "目标文件夹 (_D) ："
 
-#: src/fr-window.c:8214 src/ui.h:75 src/ui.h:96
+#: src/fr-window.c:8212 src/ui.h:75 src/ui.h:96
 msgid "_Paste"
 msgstr "粘贴(_P)"
 
-#: src/fr-window.c:8813
+#: src/fr-window.c:8811
 msgid "Add files to an archive"
 msgstr "向归档文件中添加文件"
 
-#: src/fr-window.c:8856 src/main.c:195 src/server.c:329 src/server.c:354
+#: src/fr-window.c:8854 src/main.c:195 src/server.c:329 src/server.c:354
 #: src/server.c:377
 msgid "Extract archive"
 msgstr "解压缩文件"
@@ -1422,7 +1426,7 @@ msgstr "显示应用程序版本"
 msgid "Compress"
 msgstr "压缩"
 
-#: src/main.c:324 src/server.c:444
+#: src/main.c:326 src/server.c:446
 msgid "- Create and modify an archive"
 msgstr "- 创建并修改归档文件"
 

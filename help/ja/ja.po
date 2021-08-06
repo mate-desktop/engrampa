@@ -4,16 +4,16 @@
 # あわしろいくや <ikunya@gmail.com>, 2018
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 323484, 2019
-# Green, 2021
+# c7a0a66e0476db158663636124cfb54f_370a183, 2019
 # Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Green, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2021-01-16 10:39+0100\n"
 "PO-Revision-Date: 2018-09-26 16:05+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2021\n"
+"Last-Translator: Green, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1116,6 +1116,7 @@ msgid ""
 "<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>, or click "
 "<guibutton>Open</guibutton> in the toolbar."
 msgstr ""
+"<menuchoice><guimenu>書庫</guimenu><guimenuitem>開く</guimenuitem></menuchoice>を選択して、<guilabel>開く</guilabel>ダイアログボックスを表示します。または、<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>を押すか、ツールバーの<guibutton>開く</guibutton>をクリックします。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:581
@@ -2779,6 +2780,7 @@ msgid ""
 "If the archive is encrypted, <application>Archive Manager</application> will"
 " ask to enter the password before extracting the files."
 msgstr ""
+"書庫が暗号化されている場合、<application>書庫マネージャ</application>はファイルを展開する前にパスワードの入力を要求します。"
 
 #. (itstool) path: info/title
 #: C/index.docbook:1361
@@ -2863,7 +2865,7 @@ msgstr ""
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1402
 msgid "<guilabel>Add only if newer</guilabel>"
-msgstr ""
+msgstr "<guilabel>新しい場合にのみ追加</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1404
@@ -2892,6 +2894,8 @@ msgid ""
 "Open the <filename>backup.tar.gz</filename> archive in <application>Archive "
 "Manager</application>."
 msgstr ""
+"<application>書庫マネージャ</application>で <filename>backup.tar.gz</filename> "
+"アーカイブを開きます。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1418
@@ -2911,7 +2915,7 @@ msgstr "ホーム・フォルダを選択する"
 #. (itstool) path: listitem/para
 #: C/index.docbook:1427
 msgid "Select the <guilabel>Add only if newer</guilabel> option."
-msgstr ""
+msgstr "<guilabel>新しい場合にのみ追加</guilabel>オプションを選択します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1432
@@ -2941,11 +2945,12 @@ msgid ""
 "deleted during the last week. The archive update operation is much faster "
 "than doing a full backup of your home folder."
 msgstr ""
+"<application>書庫マネージャ</application>では、前の週に作成した全ファイルが自動的に書庫に追加され、前の週に変更した全ファイルが更新されます。ただし、<application>書庫マネージャ</application>では、前の週に削除したファイルは書庫から削除されません。書庫の更新操作は、ホームフォルダの全アップよりもはるかに高速です。"
 
 #. (itstool) path: info/title
 #: C/index.docbook:1444
 msgid "Add to Folder Options"
-msgstr ""
+msgstr "フォルダオプションへ追加する"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1446
@@ -2954,11 +2959,12 @@ msgid ""
 " dialog and allow to automatically select and add all files that satisfy "
 "certain criteria:"
 msgstr ""
+"<guilabel>フォルダの追加</guilabel>ダイアログボックスでは、次のオプションを使用できます。このオプションを使用すると、特定の条件を満たすような全ファイルを自動的に選択して追加できます。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1451
 msgid "<guilabel>Include files</guilabel>"
-msgstr ""
+msgstr "<guilabel>含めるファイル</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1453
@@ -2967,11 +2973,13 @@ msgid ""
 "match the specified pattern. See <xref linkend=\"engrampa-pattern\"/> for "
 "more information about filename patterns."
 msgstr ""
+"このテキストボックスにファイル名パターンを入力すると、指定したパターンに一致する名前のファイルを含めることができます。ファイル名パターンの詳細は、<xref"
+" linkend=\"engrampa-pattern\"/>を参照してください。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1459
 msgid "<guilabel>Exclude files</guilabel>"
-msgstr ""
+msgstr "<guilabel>除外するファイル</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1461
@@ -2980,11 +2988,13 @@ msgid ""
 "match the specified pattern. See <xref linkend=\"engrampa-pattern\"/> for "
 "more information about filename patterns."
 msgstr ""
+"このテキストボックスにファイル名パターンを入力すると、指定したパターンに一致する名前のファイルが除外されます。ファイル名パターンの詳細は、<xref "
+"linkend=\"engrampa-pattern\"/>を参照してください。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1467
 msgid "<guilabel>Exclude folders</guilabel>"
-msgstr ""
+msgstr "<guilabel>除外するフォルダ</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1469
@@ -2993,24 +3003,26 @@ msgid ""
 "match the specified pattern. See <xref linkend=\"engrampa-pattern\"/> for "
 "more information about filename patterns."
 msgstr ""
+"このテキストボックスにファイル名パターンを入力すると、指定したパターンに一致する名前のフォルダが除外されます。ファイル名パターンの詳細は、<xref "
+"linkend=\"engrampa-pattern\"/>を参照してください。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1475
 msgid "<guilabel>Include subfolders</guilabel>"
-msgstr ""
+msgstr "<guilabel>含めるサブフォルダ</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1477
 msgid ""
 "Select this option to add all files that match the specified pattern, from "
 "the current folder and from subfolders."
-msgstr ""
+msgstr "このオプションを選択すると、現在のフォルダおよびサブフォルダから、指定したパターンに一致するすべてのファイルを追加します。"
 
 #. (itstool) path: note/para
 #: C/index.docbook:1480
 msgid ""
 "The filename, not the subfolder name, must match the specified pattern."
-msgstr ""
+msgstr "ファイル名はサブフォルダ名とは異なって、指定したパターンと一致している必要があります。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1484
@@ -3018,11 +3030,12 @@ msgid ""
 "If you do not select this option, <application>Archive Manager</application>"
 " adds the matching files from the current folder only."
 msgstr ""
+"もしこのオプションを選択しない場合、<application>書庫マネージャ</application>は現在のフォルダ内で一致するファイルだけを追加します。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1490
 msgid "<guilabel>Exclude folders that are symbolic links</guilabel>"
-msgstr ""
+msgstr "<guilabel>フォルダがシンボリックリンクの場合は除く</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1492
@@ -3030,6 +3043,7 @@ msgid ""
 "Select this option to omit files from folders that are symbolic links. "
 "Symbolic links are pointers or shortcuts to other folders."
 msgstr ""
+"このオプションを選択すると、フォルダからシンボリックリンクであるファイルを除外します。シンボリックリンクとは、他のフォルダへのポインタまたはショートカットです。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1494
@@ -3037,11 +3051,12 @@ msgid ""
 "If you do not select this option, <application>Archive Manager</application>"
 " adds the matching files from folders that are symbolic links."
 msgstr ""
+"もしこのオプションを選択しない場合、<application>書庫マネージャ</application>はフォルダからシンボリックリンクと一致するファイルも追加します。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1500
 msgid "<guibutton>Save Options</guibutton>"
-msgstr ""
+msgstr "<guibutton>オプションを保存する</guibutton>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1502
@@ -3051,11 +3066,12 @@ msgid ""
 "a descriptive filename in the <guilabel>Options Name</guilabel> text box, "
 "then click <guibutton>Save</guibutton>."
 msgstr ""
+"このボタンをクリックすると、現在選択している追加の拡張オプションをファイルへ保存します。<guilabel>オプションの保存</guilabel>ダイアログボックスが表示されます。オプション名<guilabel>テキストボックスに分かりやすいファイル名を入力し、<guibutton>保存</guibutton>をクリックします。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1508
 msgid "<guibutton>Load Options</guibutton>"
-msgstr ""
+msgstr "<guibutton>起動オプション</guibutton>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1510
@@ -3064,6 +3080,7 @@ msgid ""
 "advanced add options. The <guilabel>Load Options</guilabel> dialog is "
 "displayed."
 msgstr ""
+"このボタンをクリックすると、追加の拡張オプション選択をロードまたは削除できます。<guilabel>起動オプション</guilabel>ダイアログが表示されます。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1513
@@ -3071,6 +3088,7 @@ msgid ""
 "To load a set of options, select the options file in the list box, then "
 "click <guibutton>Apply</guibutton>."
 msgstr ""
+"オプションのセットを開始するには、リストボックスでオプションファイルを選択し、<guibutton>を適用する</guibutton>をクリックします。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1518
@@ -3079,23 +3097,24 @@ msgid ""
 "click <guibutton>Remove</guibutton>. Click <guibutton>Close</guibutton> to "
 "close the <guilabel>Load Options</guilabel> dialog."
 msgstr ""
+"オプションのセットを削除するには、リストボックスでオプションファイルを選択し、<guibutton>削除</guibutton>をクリックします。<guibutton>閉じる</guibutton>をクリックして<guilabel>起動オプション</guilabel>ダイアログを閉じます。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1527
 msgid "<guibutton>Reset Options</guibutton>"
-msgstr ""
+msgstr "<guibutton>オプションをリセットする</guibutton>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1529
 msgid ""
 "Click on this button to reset the current selection of advanced add options "
 "to the default values."
-msgstr ""
+msgstr "このボタンをクリックすると、現在選択されている追加の拡張オプションが既定値にリセットされます。"
 
 #. (itstool) path: info/title
 #: C/index.docbook:1538
 msgid "Extract Options"
-msgstr ""
+msgstr "展開オプション"
 
 #. (itstool) path: section/para
 #: C/index.docbook:1541
@@ -3103,26 +3122,27 @@ msgid ""
 "The <guilabel>Extract</guilabel> dialog provides the following options, "
 "which are saved when you quit <application>Archive Manager</application>:"
 msgstr ""
+"<guilabel>展開</guilabel>ダイアログには、次のオプションがあります。これは、<application>書庫マネージャ</application>を終了したときに保存されます。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1547
 msgid "<guilabel>Extract</guilabel>"
-msgstr ""
+msgstr "<guilabel>展開</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1549
 msgid "Select the files to be extracted:"
-msgstr ""
+msgstr "展開するファイルを選択します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1556
 msgid "Extract all files from the archive."
-msgstr ""
+msgstr "書庫からすべてのファイルを展開します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1564
 msgid "Extract the selected files from the archive."
-msgstr ""
+msgstr "書庫から選択したファイルだけを展開します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1572
@@ -3131,28 +3151,30 @@ msgid ""
 "<xref linkend=\"engrampa-pattern\"/> for more information about filename "
 "patterns."
 msgstr ""
+"指定したパターンに一致するすべてのファイルを書庫から展開します。ファイル名のパターンに関する詳細は、<xref linkend=\"engrampa-"
+"pattern\"/>を参照してください。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1582
 msgid "<guilabel>Actions</guilabel>"
-msgstr ""
+msgstr "<guilabel>オプション</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1584
 msgid "Select the following extract options:"
-msgstr ""
+msgstr "次の中から展開オプションを選択します。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1589
 msgid "<guilabel>Re-create folders</guilabel>"
-msgstr ""
+msgstr "<guilabel>フォルダを再作成する</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1590
 msgid ""
 "Select this option to reconstruct the folder structure when extracting the "
 "specified files."
-msgstr ""
+msgstr "指定したファイルを展開するとき、フォルダ構造を再構築するには、このオプションを選択します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1594
@@ -3161,6 +3183,8 @@ msgid ""
 "<application>Archive Manager</application> extracts the contents of the "
 "subfolder to <filename>/tmp/doc</filename>."
 msgstr ""
+"<guilabel>フォルダを再作成する</guilabel>オプションを選択すると、<application>書庫マネージャ</application>はサブフォルダの内容を"
+" /tmp/doc へ展開します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1598
@@ -3170,6 +3194,8 @@ msgid ""
 "Instead, <application>Archive Manager</application> extracts all files from "
 "the archive, including files from subfolders, to <filename>/tmp</filename>."
 msgstr ""
+"<guilabel>フォルダを再作成する</guilabel>オプションを選択しない場合、<application>書庫マネージャ</application>はサブフォルダを作成しません。代わりに、<application>書庫マネージャ</application>は、サブフォルダのファイルを含む全ファイルを書庫から"
+" <filename>/tmp</filename> に展開します。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1592
@@ -3179,18 +3205,21 @@ msgid ""
 "archive contains a subfolder called <filename>doc</filename>. "
 "<_:itemizedlist-1/>"
 msgstr ""
+"たとえば、<guilabel>ファイル名</guilabel>テキスト・ボックスで <filename>/tmp</filename> "
+"を指定し、すべてのファイルを展開するように選択します。書庫には <filename>doc</filename> "
+"というサブフォルダが含まれます。<_:itemizedlist-1/>"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1607
 msgid "<guilabel>Overwrite existing files</guilabel>"
-msgstr ""
+msgstr "<guilabel>既存のファイルに上書きする</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1608
 msgid ""
 "Select this option to overwrite any files in the destination folder that "
 "have the same name as the specified files."
-msgstr ""
+msgstr "このオプションを選択すると、展開先において指定したファイルと同じ名前を持つフォルダ内のファイルが上書きされます。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1610
@@ -3199,18 +3228,19 @@ msgid ""
 " does not extract the specified file if an existing file with the same name "
 "already exists in the destination folder."
 msgstr ""
+"もしこのオプションを選択しないときは、同じ名前の既存のファイルが保存先フォルダにあった場合、<application>書庫マネージャ</application>は指定されたファイルを展開しません。"
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:1616
 msgid "<guilabel>Do not extract older files</guilabel>"
-msgstr ""
+msgstr "<guilabel>古いファイルは展開しない</guilabel>"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1618
 msgid ""
 "This option is only effective while the <guilabel>Overwrite existing "
 "files</guilabel> option is selected."
-msgstr ""
+msgstr "このオプションは、<guilabel>既存のファイルに上書きする</guilabel>オプションが選択されている場合にのみ有効です。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1620
@@ -3224,6 +3254,7 @@ msgid ""
 "Manager</application> does not extract the specified file to the destination"
 " folder."
 msgstr ""
+"<guilabel>古いファイルは展開しない</guilabel>オプションは、展開先のフォルダに指定したファイルが含まれていない場合、または指定したファイルより古いバージョンが含まれている場合にのみ、選択してください。<application>書庫マネージャ</application>は、更新日時を利用してどのファイルが最新であるかを判別します。書庫内のファイルのバージョンが古い場合、<application>書庫マネージャ</application>は指定したファイルを展開予定のフォルダへ展開しません。"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:1622
@@ -3234,6 +3265,7 @@ msgid ""
 "file from the archive and overwrites the previous contents of the "
 "destination folder."
 msgstr ""
+"<guilabel>既存ファイルに上書きする</guilabel>オプションが選択されているとき、<guilabel>古いファイルは展開しない</guilabel>オプションを選択しなかった場合、<application>書庫マネージャ</application>は指定されたファイルを書庫から展開して、保存先フォルダの以前の内容を上書きします。"
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:4
@@ -3260,9 +3292,8 @@ msgid ""
 "you can do so by adding a copy of the license to the manual, as described in"
 " section 6 of the license."
 msgstr ""
-"本ドキュメントは GFDL の下で配布されているその他の MATE "
-"マニュアル集の一部である。これらのマニュアルとは別に本ドキュメントを別個に配布する場合は、GFDL "
-"のセクション6で説明しているように、そのマニュアル集に対するライセンスの複製を添付することで実現できる。"
+"本文書は GFDL の下で配布されているその他の MATE マニュアル集の一部です。これらのマニュアルとは別に本文書を別個に配布する場合は、GFDL "
+"の第6節で説明しているように、そのマニュアル集に対してライセンスの複製を添付してください。"
 
 #. (itstool) path: legalnotice/para
 #: C/legal.xml:20
@@ -3273,9 +3304,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"企業は自分達の製品とサービスを区別するために使用する多くの名称が登録商標であると主張している。これらの名称が MATE "
-"のドキュメントの中に表記されていたり、これらの登録商標が MATE "
-"ドキュメンテーション・プロジェクトのメンバに提示している箇所は全部を大文字または最初の文字を大文字にしている。"
+"企業が自らの製品とサービスを区別する目的で使用する名称の多くは、登録商標であると主張しています。こうした名称が MATE "
+"の文書の中に記載されていて、この登録商標が MATE "
+"文書化プロジェクトのメンバーによって了解されている箇所については、名称が大文字または頭文字を大文字で表示しています。"
 
 #. (itstool) path: listitem/para
 #: C/legal.xml:36
@@ -3336,7 +3367,7 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"この文書およびその修正版は、以下の点を理解したという前提で、GNU 自由文書ライセンス "
+"この文書およびその修正版は、以下の点をさらに了解しているという前提で、GNU 自由文書ライセンス "
 "の条件の下で配布されています：<_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
@@ -3352,3 +3383,6 @@ msgid ""
 "the <link xlink:href=\"help:mate-user-guide/feedback\">MATE Feedback "
 "Page</link>."
 msgstr ""
+"<application>書庫マネージャ</application>・アプリケーションや本マニュアルに関する不具合や提案を報告する場合は、<ulink "
+"url=\"help:mate-user-guide/feedback\" type=\"help\">MATE "
+"フィードバック・ページ</ulink>の方法に従ってください。"
