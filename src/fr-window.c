@@ -7117,7 +7117,9 @@ fr_window_view_last_output (FrWindow   *window,
 
 	dialog = gtk_dialog_new_with_buttons (title,
 					      GTK_WINDOW (window),
-					      GTK_DIALOG_DESTROY_WITH_PARENT,
+					      /* Make this dialog modal, otherwise with most WMs
+					       * the focus can’t be regained without the mouse. */
+					      GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
 					      "gtk-close", GTK_RESPONSE_CLOSE,
 					      NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_CLOSE);
@@ -7140,7 +7142,9 @@ fr_window_view_last_output (FrWindow   *window,
 	text_view = gtk_text_view_new_with_buffer (text_buffer);
 	g_object_unref (text_buffer);
 	gtk_text_view_set_editable (GTK_TEXT_VIEW (text_view), FALSE);
-	gtk_text_view_set_cursor_visible (GTK_TEXT_VIEW (text_view), FALSE);
+	/* Although this isn’t an editable text area, we do want the
+	 * cursor for accessibility purposes. */
+	gtk_text_view_set_cursor_visible (GTK_TEXT_VIEW (text_view), TRUE);
 
 	/**/
 
@@ -7173,10 +7177,14 @@ fr_window_view_last_output (FrWindow   *window,
 	fr_window_view_last_output_print(text_buffer, &iter, window->archive->process->out.raw);
 	/* Show STDERR of process */
 	fr_window_view_last_output_print(text_buffer, &iter, window->archive->process->err.raw);
+	/* place the cursor at the start */
+	gtk_text_buffer_get_iter_at_offset (text_buffer, &iter, 0);
+	gtk_text_buffer_place_cursor(text_buffer, &iter);
 
 	/**/
 
 	pref_util_restore_window_geometry (GTK_WINDOW (dialog), LAST_OUTPUT_DIALOG_NAME);
+	gtk_widget_grab_focus (text_view);
 }
 
 /* -- fr_window_rename_selection -- */
