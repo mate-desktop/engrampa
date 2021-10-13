@@ -160,6 +160,11 @@
                         <property name="climb_rate">1</property>
                         <property name="digits">1</property>
                         <property name="numeric">True</property>
+                        <child internal-child="accessible">
+                          <object class="AtkObject">
+                            <property name="AtkObject::accessible-name" translatable="yes" comments="MB means megabytes">MB</property>
+                          </object>
+                        </child>
                       </object>
                       <packing>
                         <property name="expand">False</property>
