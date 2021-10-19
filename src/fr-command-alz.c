@@ -289,7 +289,7 @@ static void
 fr_command_alz_handle_error (FrCommand   *comm,
 			     FrProcError *error)
 {
-	if ((error->type == FR_PROC_ERROR_STOPPED)) {
+	if (error->type == FR_PROC_ERROR_STOPPED) {
 		if  (FR_COMMAND_ALZ (comm)->extract_none ||
 		     FR_COMMAND_ALZ (comm)->invalid_password ) {
 			error->type = FR_PROC_ERROR_ASK_PASSWORD;
