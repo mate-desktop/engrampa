@@ -305,9 +305,11 @@ dlg_package_installer (FrWindow  *window,
 	{
 		char      *secondary_text;
 		GtkWidget *dialog;
+		char      *description;
 
+		description = g_content_type_get_description (idata->archive->content_type);
 		secondary_text = g_strdup_printf (_("There is no command installed for %s files.\nDo you want to search for a command to open this file?"),
-						  g_content_type_get_description (idata->archive->content_type));
+		                                  description);
 		dialog = _gtk_message_dialog_new (GTK_WINDOW (idata->window),
 						  GTK_DIALOG_MODAL,
 						  "dialog-error",
@@ -328,6 +330,7 @@ dlg_package_installer (FrWindow  *window,
 		g_signal_connect (dialog, "response", G_CALLBACK (confirm_search_dialog_response_cb), idata);
 		gtk_widget_show (dialog);
 
+		g_free (description);
 		g_free (secondary_text);
 	}
 
