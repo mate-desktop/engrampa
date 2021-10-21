@@ -539,6 +539,7 @@ fr_window_free_private_data (FrWindow *window)
 	g_free (window->priv->add_default_dir);
 	g_free (window->priv->extract_default_dir);
 	g_free (window->priv->archive_uri);
+	g_free (window->priv->working_archive);
 
 	g_free (window->priv->password);
 	g_free (window->priv->password_for_paste);
@@ -941,7 +942,7 @@ sort_by_type (gconstpointer  ptr1,
 	FileData    *fdata1 = *((FileData **) ptr1);
 	FileData    *fdata2 = *((FileData **) ptr2);
 	int          result;
-	const char  *desc1, *desc2;
+	char        *desc1, *desc2;
 
 	if (file_data_is_dir (fdata1) != file_data_is_dir (fdata2)) {
 		if (file_data_is_dir (fdata1))
@@ -956,6 +957,9 @@ sort_by_type (gconstpointer  ptr1,
 	desc2 = g_content_type_get_description (fdata2->content_type);
 
 	result = strcasecmp (desc1, desc2);
+	g_free (desc1);
+	g_free (desc2);
+
 	if (result == 0)
 		return sort_by_name (ptr1, ptr2);
 	else
@@ -1500,7 +1504,7 @@ fr_window_populate_file_list (FrWindow  *window,
 			char       *utf8_path;
 			char       *s_size;
 			char       *s_time;
-			const char *desc;
+			char       *desc;
 
 			utf8_path = g_filename_display_name (fdata->path);
 
@@ -1523,6 +1527,7 @@ fr_window_populate_file_list (FrWindow  *window,
 			g_free (utf8_path);
 			g_free (s_size);
 			g_free (s_time);
+			g_free (desc);
 		}
 		g_free (utf8_name);
 		if (icon != NULL)
@@ -2331,9 +2336,10 @@ fr_window_working_archive_cb (FrCommand  *command,
 			      FrWindow   *window)
 {
 	g_free (window->priv->working_archive);
-	window->priv->working_archive = NULL;
 	if (archive_filename != NULL)
 		window->priv->working_archive = g_strdup (archive_filename);
+	else
+		window->priv->working_archive = NULL;
 	progress_dialog_update_action_description (window);
 
 	return TRUE;
@@ -2780,6 +2786,7 @@ fr_window_add_to_recent_list (FrWindow *window,
 		recent_data->app_exec = "engrampa";
 		gtk_recent_manager_add_full (gtk_recent_manager_get_default (), uri, recent_data);
 
+		g_free (recent_data->mime_type);
 		g_free (recent_data);
 	}
 	else
