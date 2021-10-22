@@ -103,10 +103,15 @@ file_data_get_type (void)
 void
 file_data_update_content_type (FileData *fdata)
 {
-	if (fdata->dir)
+	if (fdata->dir) {
 		fdata->content_type = MIME_TYPE_DIRECTORY;
-	else
-		fdata->content_type = get_static_string (g_content_type_guess (fdata->full_path, NULL, 0, NULL));
+	} else {
+		char *content_type;
+
+		content_type = g_content_type_guess (fdata->full_path, NULL, 0, NULL);
+		fdata->content_type = get_static_string (content_type);
+		g_free (content_type);
+	}
 }
 
 
