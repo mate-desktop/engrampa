@@ -137,8 +137,13 @@ process_line (char     *line,
 	}
 	g_free (name);
 	name = g_filename_from_utf8 (fdata->original_path, -1, NULL, NULL, NULL);
-	if (name)
-		fdata->original_path = name;
+	if (name) {
+		if (fdata->free_original_path)
+			g_free (fdata->original_path);
+		fdata->original_path = g_strdup (name);
+		fdata->free_original_path = TRUE;
+	}
+	g_free (name);
 
 	if (fields[1] != NULL)
 		fdata->link = g_strdup (fields[1]);
