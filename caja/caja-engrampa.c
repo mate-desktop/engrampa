@@ -26,6 +26,7 @@
 #include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 #include <libcaja-extension/caja-extension-types.h>
+#include <libcaja-extension/caja-menu-provider.h>
 #include <libcaja-extension/caja-file-info.h>
 #include <libcaja-extension/caja-menu-provider.h>
 #include "caja-engrampa.h"

@@ -22,6 +22,7 @@
 
 #include <config.h>
 #include <glib.h>
+#include <gio/gio.h>
 #include <string.h>
 #include <math.h>
 #include <sys/types.h>

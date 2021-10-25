@@ -25,6 +25,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <glib.h>
+#include <gio/gio.h>
 #include "file-data.h"
 #include "file-utils.h"
 #include "fr-command.h"
