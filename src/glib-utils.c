@@ -118,7 +118,7 @@ count_chars_to_escape (const char *str,
 	return n;
 }
 
-char*
+static char*
 escape_str_common (const char *str,
 		   const char *meta_chars,
 		   const char  prefix,
