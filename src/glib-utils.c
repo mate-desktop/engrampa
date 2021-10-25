@@ -85,19 +85,6 @@ str_substitute (const char *str,
 	return g_string_free (gstr, FALSE);
 }
 
-int
-strcmp_null_tolerant (const char *s1, const char *s2)
-{
-	if ((s1 == NULL) && (s2 == NULL))
-		return 0;
-	else if ((s1 != NULL) && (s2 == NULL))
-		return 1;
-	else if ((s1 == NULL) && (s2 != NULL))
-		return -1;
-	else
-		return strcmp (s1, s2);
-}
-
 /* counts how many characters to escape in @str. */
 static int
 count_chars_to_escape (const char *str,
