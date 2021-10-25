@@ -40,7 +40,6 @@ gboolean            strchrs                      (const char *str,
 char *              str_substitute               (const char *str,
 						  const char *from_str,
 						  const char *to_str);
-int                 strcmp_null_tolerant         (const char *s1, const char *s2);
 char*               escape_str                   (const char  *str,
 						  const char  *meta_chars);
 gboolean            match_regexps                (GRegex     **regexps,

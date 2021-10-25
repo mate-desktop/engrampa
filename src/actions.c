@@ -122,7 +122,7 @@ get_full_uri (DlgNewData *data)
 
         uri_ext = get_archive_filename_extension (uri);
         default_ext = mime_type_desc[data->supported_types[idx-1]].default_ext;
-        if (strcmp_null_tolerant (uri_ext, default_ext) != 0)
+        if (g_strcmp0 (uri_ext, default_ext) != 0)
             full_uri = g_strconcat (uri, default_ext, NULL);
     }
     if (full_uri == NULL)

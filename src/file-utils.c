@@ -1246,7 +1246,7 @@ int
 uricmp (const char *uri1,
 	const char *uri2)
 {
-	return strcmp_null_tolerant (uri1, uri2);
+	return g_strcmp0 (uri1, uri2);
 }
 
 char *
