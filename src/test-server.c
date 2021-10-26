@@ -39,7 +39,6 @@ engrampa_getsupportedtypes_ready_cb (GObject      *source_object,
 	values = g_dbus_proxy_call_finish (proxy, res, &error);
 	if (values == NULL) {
 		g_error ("%s\n", error->message);
-		g_clear_error (&error);
 	}
 	else {
 		GVariantIter  argument_iter;
@@ -103,7 +102,6 @@ engrampa_addtoarchive_ready_cb (GObject      *source_object,
 	values = g_dbus_proxy_call_finish (proxy, res, &error);
 	if (values == NULL) {
 		g_error ("%s\n", error->message);
-		g_clear_error (&error);
 	}
 
 	if (values != NULL)
