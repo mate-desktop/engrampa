@@ -44,7 +44,6 @@ static void fr_command_zip_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -90,7 +89,6 @@ mktime_from_string (char *datetime_s)
 
 	return mktime (&tm);
 }
-
 
 static void
 list__process_line (char     *line,
@@ -161,7 +159,6 @@ list__process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 add_password_arg (FrCommand  *comm,
 		  const char *password)
@@ -172,7 +169,6 @@ add_password_arg (FrCommand  *comm,
 	}
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -180,7 +176,6 @@ list__begin (gpointer data)
 
 	comm->is_empty = FALSE;
 }
-
 
 static void
 fr_command_zip_list (FrCommand  *comm)
@@ -195,7 +190,6 @@ fr_command_zip_list (FrCommand  *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 process_line__common (char     *line,
@@ -213,7 +207,6 @@ process_line__common (char     *line,
 	else
 		fr_command_message (comm, line);
 }
-
 
 static void
 fr_command_zip_add (FrCommand     *comm,
@@ -262,7 +255,6 @@ fr_command_zip_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_zip_delete (FrCommand  *comm,
 		       const char *from_file,
@@ -290,7 +282,6 @@ fr_command_zip_delete (FrCommand  *comm,
 
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_zip_extract (FrCommand  *comm,
@@ -337,7 +328,6 @@ fr_command_zip_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_zip_test (FrCommand   *comm)
 {
@@ -348,7 +338,6 @@ fr_command_zip_test (FrCommand   *comm)
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_zip_handle_error (FrCommand   *comm,
@@ -380,7 +369,6 @@ fr_command_zip_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *zip_mime_type[] = {
 				"application/epub+zip",
 				"application/vnd.oasis.opendocument.presentation",
@@ -395,7 +383,6 @@ const char *zip_mime_type[] = {
 				"application/x-war",
 				"application/zip", /* zip always at the end and the number of */
 				NULL };            /* place in fr_command_zip_get_mime_types  */
-
 
 static const char **
 fr_command_zip_get_mime_types (FrCommand *comm)
@@ -413,7 +400,6 @@ fr_command_zip_get_mime_types (FrCommand *comm)
 
 	return zip_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_zip_get_capabilities (FrCommand  *comm,
@@ -435,14 +421,12 @@ fr_command_zip_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_zip_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("zip,unzip");
 }
-
 
 static void
 fr_command_zip_class_init (FrCommandZipClass *class)
@@ -466,7 +450,6 @@ fr_command_zip_class_init (FrCommandZipClass *class)
 	afc->get_packages     = fr_command_zip_get_packages;
 }
 
-
 static void
 fr_command_zip_init (FrCommand *comm)
 {
@@ -482,7 +465,6 @@ fr_command_zip_init (FrCommand *comm)
 	FR_COMMAND_ZIP (comm)->is_empty = FALSE;
 }
 
-
 static void
 fr_command_zip_finalize (GObject *object)
 {
@@ -493,7 +475,6 @@ fr_command_zip_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_zip_get_type ()

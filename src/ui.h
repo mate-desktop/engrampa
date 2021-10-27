@@ -23,9 +23,7 @@
 #ifndef UI_H
 #define UI_H
 
-
 #include "actions.h"
-
 
 static GtkActionEntry action_entries[] = {
 	{ "FileMenu",         NULL, N_("_Archive"),       NULL, NULL, NULL },
@@ -211,7 +209,6 @@ static GtkActionEntry action_entries[] = {
 };
 static guint n_action_entries = G_N_ELEMENTS (action_entries);
 
-
 static GtkToggleActionEntry action_toggle_entries[] = {
 	{ "ViewToolbar", NULL,
 	  N_("_Toolbar"), NULL,
@@ -236,7 +233,6 @@ static GtkToggleActionEntry action_toggle_entries[] = {
 };
 static guint n_action_toggle_entries = G_N_ELEMENTS (action_toggle_entries);
 
-
 static GtkRadioActionEntry view_as_entries[] = {
 	{ "ViewAllFiles", NULL,
 	  N_("View All _Files"), "<control>1",
@@ -246,7 +242,6 @@ static GtkRadioActionEntry view_as_entries[] = {
 	  " ", FR_WINDOW_LIST_MODE_AS_DIR },
 };
 static guint n_view_as_entries = G_N_ELEMENTS (view_as_entries);
-
 
 static GtkRadioActionEntry sort_by_entries[] = {
 	{ "SortByName", NULL,
@@ -268,6 +263,5 @@ static GtkRadioActionEntry sort_by_entries[] = {
 	  N_("Sort file list by location"), FR_WINDOW_SORT_BY_PATH },
 };
 static guint n_sort_by_entries = G_N_ELEMENTS (sort_by_entries);
-
 
 #endif /* UI_H */

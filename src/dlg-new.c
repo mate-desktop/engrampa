@@ -31,11 +31,9 @@
 #include "fr-init.h"
 #include "preferences.h"
 
-
 #define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 #define DEFAULT_EXTENSION ".tar.gz"
 #define MEGABYTE (1024.0 * 1024.0)
-
 
 /* called when the main dialog is closed. */
 static void
@@ -45,7 +43,6 @@ destroy_cb (GtkWidget  *widget,
 	g_free (data);
 }
 
-
 static void
 update_sensitivity (DlgNewData *data)
 {
@@ -53,7 +50,6 @@ update_sensitivity (DlgNewData *data)
 	gtk_widget_set_sensitive (data->n_encrypt_header_checkbutton, data->can_encrypt_header);
 	gtk_widget_set_sensitive (data->n_volume_spinbutton, ! data->can_create_volumes || gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->n_volume_checkbutton)));
 }
-
 
 static void
 update_sensitivity_for_ext (DlgNewData *data,
@@ -95,7 +91,6 @@ update_sensitivity_for_ext (DlgNewData *data,
 	update_sensitivity (data);
 }
 
-
 static int
 get_archive_type (DlgNewData *data)
 {
@@ -120,7 +115,6 @@ get_archive_type (DlgNewData *data)
 
 	return get_mime_type_index (get_mime_type_from_extension (ext));
 }
-
 
 /* FIXME
 static void
@@ -166,7 +160,6 @@ archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 }
 */
 
-
 static void
 password_entry_changed_cb (GtkEditable *editable,
 			   gpointer     user_data)
@@ -174,14 +167,12 @@ password_entry_changed_cb (GtkEditable *editable,
 	update_sensitivity ((DlgNewData *) user_data);
 }
 
-
 static void
 volume_toggled_cb (GtkToggleButton *toggle_button,
 		   gpointer         user_data)
 {
 	update_sensitivity ((DlgNewData *) user_data);
 }
-
 
 static void
 format_chooser_selection_changed_cb (EggFileFormatChooser *format_chooser,
@@ -227,7 +218,6 @@ format_chooser_selection_changed_cb (EggFileFormatChooser *format_chooser,
 	}
 }
 
-
 static char *
 get_icon_name_for_type (const char *mime_type)
 {
@@ -250,14 +240,12 @@ get_icon_name_for_type (const char *mime_type)
 	return name;
 }
 
-
 static void
 options_expander_unmap_cb (GtkWidget *widget,
 			   gpointer   user_data)
 {
 	egg_file_format_chooser_emit_size_changed ((EggFileFormatChooser *) user_data);
 }
-
 
 static DlgNewData *
 dlg_new_archive (FrWindow  *window,
@@ -380,7 +368,6 @@ dlg_new_archive (FrWindow  *window,
 	return data;
 }
 
-
 DlgNewData *
 dlg_new (FrWindow *window)
 {
@@ -391,7 +378,6 @@ dlg_new (FrWindow *window)
 
 	return data;
 }
-
 
 DlgNewData *
 dlg_save_as (FrWindow   *window,
@@ -404,7 +390,6 @@ dlg_save_as (FrWindow   *window,
 
 	return data;
 }
-
 
 const char *
 dlg_new_data_get_password (DlgNewData *data)
@@ -421,7 +406,6 @@ dlg_new_data_get_password (DlgNewData *data)
 
 	return password;
 }
-
 
 gboolean
 dlg_new_data_get_encrypt_header (DlgNewData *data)
@@ -445,7 +429,6 @@ dlg_new_data_get_encrypt_header (DlgNewData *data)
 
 	return encrypt_header;
 }
-
 
 int
 dlg_new_data_get_volume_size (DlgNewData *data)

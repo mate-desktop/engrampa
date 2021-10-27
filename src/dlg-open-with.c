@@ -31,12 +31,10 @@
 #include "fr-window.h"
 #include "dlg-open-with.h"
 
-
 typedef struct {
 	FrWindow *window;
 	GList    *file_list;
 } OpenData;
-
 
 static void
 app_chooser_response_cb (GtkDialog *dialog,
@@ -68,7 +66,6 @@ app_chooser_response_cb (GtkDialog *dialog,
 	}
 }
 
-
 void
 dlg_open_with (FrWindow *window,
 	       GList    *file_list)
@@ -91,7 +88,6 @@ dlg_open_with (FrWindow *window,
 			  o_data);
 	gtk_widget_show (app_chooser);
 }
-
 
 void
 open_with_cb (GtkWidget *widget,

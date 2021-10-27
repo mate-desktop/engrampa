@@ -27,7 +27,6 @@
 #include "file-utils.h"
 #include "file-data.h"
 
-
 FileData *
 file_data_new (void)
 {
@@ -40,7 +39,6 @@ file_data_new (void)
 
 	return fdata;
 }
-
 
 void
 file_data_free (FileData *fdata)
@@ -57,7 +55,6 @@ file_data_free (FileData *fdata)
 	g_free (fdata->sort_key);
 	g_free (fdata);
 }
-
 
 FileData *
 file_data_copy (FileData *src)
@@ -87,7 +84,6 @@ file_data_copy (FileData *src)
 	return fdata;
 }
 
-
 GType
 file_data_get_type (void)
 {
@@ -99,7 +95,6 @@ file_data_get_type (void)
 	return type;
 }
 
-
 void
 file_data_update_content_type (FileData *fdata)
 {
@@ -109,13 +104,11 @@ file_data_update_content_type (FileData *fdata)
 		fdata->content_type = get_static_string (g_content_type_guess (fdata->full_path, NULL, 0, NULL));
 }
 
-
 gboolean
 file_data_is_dir (FileData *fdata)
 {
 	return fdata->dir || fdata->list_dir;
 }
-
 
 void
 file_data_set_list_name (FileData   *fdata,
@@ -131,7 +124,6 @@ file_data_set_list_name (FileData   *fdata,
 		fdata->sort_key = NULL;
 }
 
-
 int
 file_data_compare_by_path (gconstpointer a,
 			   gconstpointer b)
@@ -141,7 +133,6 @@ file_data_compare_by_path (gconstpointer a,
 
 	return strcmp (data_a->full_path, data_b->full_path);
 }
-
 
 int
 find_path_in_file_data_array (GPtrArray  *array,

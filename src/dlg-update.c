@@ -58,7 +58,6 @@ typedef struct {
 	GtkTreeModel *list_model;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 dlg_update__destroy_cb (GtkWidget  *widget,
@@ -69,7 +68,6 @@ dlg_update__destroy_cb (GtkWidget  *widget,
 		g_list_free (data->file_list);
 	g_free (data);
 }
-
 
 static GList*
 get_selected_files (DialogData *data)
@@ -95,7 +93,6 @@ get_selected_files (DialogData *data)
 	return g_list_reverse (selection);
 }
 
-
 static void
 update_cb (GtkWidget *widget,
 	   gpointer   callback_data)
@@ -116,7 +113,6 @@ update_cb (GtkWidget *widget,
 	if (selection != NULL)
 		g_list_free (selection);
 }
-
 
 static void
 update_file_list (DialogData *data)
@@ -234,7 +230,6 @@ update_file_list (DialogData *data)
 	}
 }
 
-
 static int
 n_selected (DialogData *data)
 {
@@ -253,7 +248,6 @@ n_selected (DialogData *data)
 
 	return n;
 }
-
 
 static void
 is_selected_toggled (GtkCellRendererToggle *cell,
@@ -274,7 +268,6 @@ is_selected_toggled (GtkCellRendererToggle *cell,
 
 	gtk_widget_set_sensitive (data->update_files_ok_button, n_selected (data) > 0);
 }
-
 
 gpointer
 dlg_update (FrWindow *window)
@@ -368,7 +361,6 @@ dlg_update (FrWindow *window)
 
 	return data;
 }
-
 
 void
 dlg_update_add_file (gpointer  dialog,

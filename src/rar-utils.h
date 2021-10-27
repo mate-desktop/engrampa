@@ -22,7 +22,6 @@
 #ifndef RAR_UTILS_H
 #define RAR_UTILS_H
 
-
 #include "fr-command.h"
 
 void rar_check_multi_volume (FrCommand *comm);

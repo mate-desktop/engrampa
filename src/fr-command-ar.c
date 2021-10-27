@@ -119,7 +119,6 @@ process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_ar_list (FrCommand *comm)
 {
@@ -131,7 +130,6 @@ fr_command_ar_list (FrCommand *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_ar_add (FrCommand     *comm,
@@ -161,7 +159,6 @@ fr_command_ar_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_ar_delete (FrCommand  *comm,
 		      const char *from_file,
@@ -176,7 +173,6 @@ fr_command_ar_delete (FrCommand  *comm,
 		fr_process_add_arg (comm->process, scan->data);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_ar_extract (FrCommand  *comm,
@@ -201,7 +197,6 @@ fr_command_ar_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_ar_handle_error (FrCommand   *comm,
 			    FrProcError *error)
@@ -209,18 +204,15 @@ fr_command_ar_handle_error (FrCommand   *comm,
 	/* FIXME */
 }
 
-
 const char *ar_mime_type[] = { "application/x-archive",
                                "application/vnd.debian.binary-package",
                                NULL };
-
 
 static const char **
 fr_command_ar_get_mime_types (FrCommand *comm)
 {
 	return ar_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_ar_get_capabilities (FrCommand  *comm,
@@ -240,14 +232,12 @@ fr_command_ar_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_ar_get_packages (FrCommand  *comm,
 			    const char *mime_type)
 {
 	return PACKAGES ("binutils");
 }
-
 
 static void
 fr_command_ar_class_init (FrCommandArClass *class)
@@ -270,7 +260,6 @@ fr_command_ar_class_init (FrCommandArClass *class)
 	afc->get_packages     = fr_command_ar_get_packages;
 }
 
-
 static void
 fr_command_ar_init (FrCommand *comm)
 {
@@ -284,7 +273,6 @@ fr_command_ar_init (FrCommand *comm)
 	comm->propTest                     = FALSE;
 }
 
-
 static void
 fr_command_ar_finalize (GObject *object)
 {
@@ -295,7 +283,6 @@ fr_command_ar_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_ar_get_type ()

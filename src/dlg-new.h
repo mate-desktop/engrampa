@@ -27,7 +27,6 @@
 #include "eggfileformatchooser.h"
 #include "fr-window.h"
 
-
 typedef struct {
 	FrWindow   *window;
 	int        *supported_types;
@@ -47,7 +46,6 @@ typedef struct {
 	GtkWidget  *n_volume_box;
 	EggFileFormatChooser *format_chooser;
 } DlgNewData;
-
 
 DlgNewData *    dlg_new                          (FrWindow   *window);
 DlgNewData *    dlg_save_as                      (FrWindow   *window,

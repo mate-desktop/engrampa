@@ -53,7 +53,6 @@ static void fr_process_class_init (FrProcessClass *class);
 static void fr_process_init       (FrProcess      *process);
 static void fr_process_finalize   (GObject        *object);
 
-
 typedef struct {
 	GList        *args;              /* command to execute */
 	char         *dir;               /* working directory */
@@ -71,7 +70,6 @@ typedef struct {
 	gpointer      end_data;
 } FrCommandInfo;
 
-
 static FrCommandInfo *
 fr_command_info_new (void)
 {
@@ -85,7 +83,6 @@ fr_command_info_new (void)
 
 	return info;
 }
-
 
 static void
 fr_command_info_free (FrCommandInfo *info)
@@ -106,7 +103,6 @@ fr_command_info_free (FrCommandInfo *info)
 	g_free (info);
 }
 
-
 static void
 fr_channel_data_init (FrChannelData *channel)
 {
@@ -115,7 +111,6 @@ fr_channel_data_init (FrChannelData *channel)
 	channel->status = G_IO_STATUS_NORMAL;
 	channel->error = NULL;
 }
-
 
 static void
 fr_channel_data_close_source (FrChannelData *channel)
@@ -126,7 +121,6 @@ fr_channel_data_close_source (FrChannelData *channel)
 		channel->source = NULL;
 	}
 }
-
 
 static GIOStatus
 fr_channel_data_read (FrChannelData *channel)
@@ -153,7 +147,6 @@ fr_channel_data_read (FrChannelData *channel)
 	return channel->status;
 }
 
-
 static GIOStatus
 fr_channel_data_flush (FrChannelData *channel)
 {
@@ -166,7 +159,6 @@ fr_channel_data_flush (FrChannelData *channel)
 	return status;
 }
 
-
 static void
 fr_channel_data_reset (FrChannelData *channel)
 {
@@ -178,13 +170,11 @@ fr_channel_data_reset (FrChannelData *channel)
 	}
 }
 
-
 static void
 fr_channel_data_free (FrChannelData *channel)
 {
 	fr_channel_data_reset (channel);
 }
-
 
 static void
 fr_channel_data_set_fd (FrChannelData *channel,
@@ -200,10 +190,8 @@ fr_channel_data_set_fd (FrChannelData *channel,
 		g_io_channel_set_encoding (channel->source, charset, NULL);
 }
 
-
 const char *try_charsets[] = { "UTF-8", "ISO-8859-1", "WINDOW-1252" };
 int n_charsets = G_N_ELEMENTS (try_charsets);
-
 
 struct _FrProcessPrivate {
 	GPtrArray   *comm;                /* FrCommandInfo elements. */
@@ -226,7 +214,6 @@ struct _FrProcessPrivate {
 			 		   * commands. */
 	int          current_charset;
 };
-
 
 GType
 fr_process_get_type (void)
@@ -255,7 +242,6 @@ fr_process_get_type (void)
 
 	return type;
 }
-
 
 static void
 fr_process_class_init (FrProcessClass *class)
@@ -296,7 +282,6 @@ fr_process_class_init (FrProcessClass *class)
 	class->done  = NULL;
 }
 
-
 static void
 fr_process_init (FrProcess *process)
 {
@@ -325,13 +310,11 @@ fr_process_init (FrProcess *process)
 	process->priv->use_standard_locale = FALSE;
 }
 
-
 FrProcess *
 fr_process_new (void)
 {
 	return FR_PROCESS (g_object_new (FR_TYPE_PROCESS, NULL));
 }
-
 
 static void fr_process_stop_priv (FrProcess *process, gboolean emit_signal);
 static int  fr_switch_process_state (FrProcess *process);
@@ -365,7 +348,6 @@ fr_process_finalize (GObject *object)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
-
 void
 fr_process_begin_command (FrProcess  *process,
 			  const char *arg)
@@ -382,7 +364,6 @@ fr_process_begin_command (FrProcess  *process,
 	process->priv->n_comm++;
 	process->priv->current_comm = process->priv->n_comm;
 }
-
 
 void
 fr_process_begin_command_at (FrProcess  *process,
@@ -407,7 +388,6 @@ fr_process_begin_command_at (FrProcess  *process,
 	g_ptr_array_index (process->priv->comm, index) = info;
 }
 
-
 void
 fr_process_set_working_dir (FrProcess  *process,
 			    const char *dir)
@@ -423,7 +403,6 @@ fr_process_set_working_dir (FrProcess  *process,
 	info->dir = g_strdup (dir);
 }
 
-
 void
 fr_process_set_sticky (FrProcess *process,
 		       gboolean   sticky)
@@ -436,7 +415,6 @@ fr_process_set_sticky (FrProcess *process,
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_comm);
 	info->sticky = sticky;
 }
-
 
 void
 fr_process_set_ignore_error (FrProcess *process,
@@ -451,7 +429,6 @@ fr_process_set_ignore_error (FrProcess *process,
 	info->ignore_error = ignore_error;
 }
 
-
 void
 fr_process_add_arg (FrProcess  *process,
 		    const char *arg)
@@ -464,7 +441,6 @@ fr_process_add_arg (FrProcess  *process,
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_comm);
 	info->args = g_list_prepend (info->args, g_strdup (arg));
 }
-
 
 void
 fr_process_add_arg_concat (FrProcess  *process,
@@ -486,7 +462,6 @@ fr_process_add_arg_concat (FrProcess  *process,
 	g_string_free (arg, TRUE);
 }
 
-
 void
 fr_process_add_arg_printf (FrProcess    *fr_proc,
 			   const char   *format,
@@ -503,7 +478,6 @@ fr_process_add_arg_printf (FrProcess    *fr_proc,
 
 	g_free (arg);
 }
-
 
 void
 fr_process_set_arg_at (FrProcess  *process,
@@ -524,7 +498,6 @@ fr_process_set_arg_at (FrProcess  *process,
 	arg->data = g_strdup (arg_value);
 }
 
-
 void
 fr_process_set_begin_func (FrProcess    *process,
 			   ProcFunc      func,
@@ -539,7 +512,6 @@ fr_process_set_begin_func (FrProcess    *process,
 	info->begin_data = func_data;
 }
 
-
 void
 fr_process_set_end_func (FrProcess    *process,
 			 ProcFunc      func,
@@ -553,7 +525,6 @@ fr_process_set_end_func (FrProcess    *process,
 	info->end_func = func;
 	info->end_data = func_data;
 }
-
 
 void
 fr_process_set_continue_func (FrProcess    *process,
@@ -572,7 +543,6 @@ fr_process_set_continue_func (FrProcess    *process,
 	info->continue_data = func_data;
 }
 
-
 void
 fr_process_end_command (FrProcess *process)
 {
@@ -583,7 +553,6 @@ fr_process_end_command (FrProcess *process)
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_comm);
 	info->args = g_list_reverse (info->args);
 }
-
 
 void
 fr_process_clear (FrProcess *process)
@@ -607,7 +576,6 @@ fr_process_clear (FrProcess *process)
 	process->priv->current_comm = -1;
 }
 
-
 void
 fr_process_set_out_line_func (FrProcess *process,
 			      LineFunc   func,
@@ -618,7 +586,6 @@ fr_process_set_out_line_func (FrProcess *process,
 	process->out.line_func = func;
 	process->out.line_data = data;
 }
-
 
 void
 fr_process_set_err_line_func (FrProcess *process,
@@ -631,9 +598,7 @@ fr_process_set_err_line_func (FrProcess *process,
 	process->err.line_data = data;
 }
 
-
 static gboolean check_child (gpointer data);
-
 
 static void
 child_setup (gpointer user_data)
@@ -656,7 +621,6 @@ child_setup (gpointer user_data)
 	setpgid (0, 0);
 }
 
-
 static const char *
 fr_process_get_charset (FrProcess *process)
 {
@@ -669,7 +633,6 @@ fr_process_get_charset (FrProcess *process)
 
 	return charset;
 }
-
 
 static void
 start_current_command (FrProcess *process)
@@ -804,7 +767,6 @@ start_current_command (FrProcess *process)
 					              process);
 }
 
-
 static gboolean
 command_is_sticky (FrProcess *process,
 		   int        i)
@@ -814,7 +776,6 @@ command_is_sticky (FrProcess *process,
 	info = g_ptr_array_index (process->priv->comm, i);
 	return info->sticky;
 }
-
 
 static void
 allow_sticky_processes_only (FrProcess *process,
@@ -837,7 +798,6 @@ allow_sticky_processes_only (FrProcess *process,
 			       0);
 }
 
-
 static void
 fr_process_set_error (FrProcess       *process,
 		      FrProcErrorType  type,
@@ -852,7 +812,6 @@ fr_process_set_error (FrProcess       *process,
 			process->error.gerror = g_error_copy (gerror);
 	}
 }
-
 
 static gint
 check_child (gpointer data)
@@ -1008,7 +967,6 @@ check_child (gpointer data)
 	return FALSE;
 }
 
-
 void
 fr_process_use_standard_locale (FrProcess *process,
 				gboolean   use_stand_locale)
@@ -1016,7 +974,6 @@ fr_process_use_standard_locale (FrProcess *process,
 	g_return_if_fail (process != NULL);
 	process->priv->use_standard_locale = use_stand_locale;
 }
-
 
 void
 fr_process_start (FrProcess *process)
@@ -1140,7 +1097,6 @@ fr_process_stop_priv (FrProcess *process,
 				       &process->error);
 	}
 }
-
 
 void
 fr_process_stop (FrProcess *process)

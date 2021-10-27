@@ -71,7 +71,6 @@ recursive_rmdir (const char *path)
 	g_dir_close (dir);
 }
 
-
 /* unstuff doesn't like file paths starting with /, that's so shite */
 static char *
 unstuff_is_shit_with_filenames (const char *orig)
@@ -101,7 +100,6 @@ unstuff_is_shit_with_filenames (const char *orig)
 
 	return filename;
 }
-
 
 static void
 process_line (char     *line,
@@ -178,7 +176,6 @@ process_line (char     *line,
 	g_free (real_filename);
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -186,7 +183,6 @@ list__begin (gpointer data)
 
 	comm->fdata = NULL;
 }
-
 
 static void
 fr_command_unstuff_list (FrCommand *comm)
@@ -217,7 +213,6 @@ fr_command_unstuff_list (FrCommand *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_unstuff_extract (FrCommand  *comm,
@@ -263,7 +258,6 @@ fr_command_unstuff_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_unstuff_handle_error (FrCommand   *comm,
 				 FrProcError *error)
@@ -275,16 +269,13 @@ fr_command_unstuff_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *unstuff_mime_type[] = { "application/x-stuffit", NULL };
-
 
 static const char **
 fr_command_unstuff_get_mime_types (FrCommand *comm)
 {
 	return unstuff_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_unstuff_get_capabilities (FrCommand  *comm,
@@ -300,14 +291,12 @@ fr_command_unstuff_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_unstaff_get_packages (FrCommand  *comm,
 			         const char *mime_type)
 {
 	return PACKAGES ("unstaff");
 }
-
 
 static void
 fr_command_unstuff_class_init (FrCommandUnstuffClass *class)
@@ -330,7 +319,6 @@ fr_command_unstuff_class_init (FrCommandUnstuffClass *class)
 	afc->get_packages     = fr_command_unstaff_get_packages;
 }
 
-
 static void
 fr_command_unstuff_init (FrCommand *comm)
 {
@@ -342,7 +330,6 @@ fr_command_unstuff_init (FrCommand *comm)
 	comm->propPassword                 = TRUE;
 	comm->propTest                     = FALSE;
 }
-
 
 static void
 fr_command_unstuff_finalize (GObject *object)
@@ -360,7 +347,6 @@ fr_command_unstuff_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_unstuff_get_type ()

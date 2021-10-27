@@ -27,12 +27,9 @@
 #include "file-utils.h"
 #include "gio-utils.h"
 
-
 #define N_FILES_PER_REQUEST 128
 
-
 /* -- filter -- */
-
 
 typedef enum {
 	FILTER_DEFAULT = 0,
@@ -41,13 +38,11 @@ typedef enum {
 	FILTER_NOBACKUPFILES = 1 << 3
 } FilterOptions;
 
-
 typedef struct {
 	char           *pattern;
 	FilterOptions   options;
 	GRegex        **regexps;
 } Filter;
-
 
 static Filter *
 filter_new (const char    *pattern,
@@ -71,7 +66,6 @@ filter_new (const char    *pattern,
 	return filter;
 }
 
-
 static void
 filter_destroy (Filter *filter)
 {
@@ -83,7 +77,6 @@ filter_destroy (Filter *filter)
 		free_regexps (filter->regexps);
 	g_free (filter);
 }
-
 
 static gboolean
 filter_matches (Filter     *filter,
@@ -115,16 +108,13 @@ filter_matches (Filter     *filter,
 	return matched;
 }
 
-
 static gboolean
 filter_empty (Filter *filter)
 {
 	return ((filter->pattern == NULL) || (strcmp (filter->pattern, "*") == 0));
 }
 
-
 /* -- g_directory_foreach_child -- */
-
 
 typedef struct {
 	GFile                *base_directory;
@@ -146,7 +136,6 @@ typedef struct {
 	guint                 source_id;
 } ForEachChildData;
 
-
 static void
 for_each_child_data_free (ForEachChildData *fec)
 {
@@ -163,7 +152,6 @@ for_each_child_data_free (ForEachChildData *fec)
 		g_list_free (fec->to_visit);
 	g_free (fec);
 }
-
 
 static gboolean
 for_each_child_done_cb (gpointer user_data)
@@ -182,16 +170,13 @@ for_each_child_done_cb (gpointer user_data)
 	return FALSE;
 }
 
-
 static void
 for_each_child_done (ForEachChildData *fec)
 {
 	fec->source_id = g_idle_add (for_each_child_done_cb, fec);
 }
 
-
 static void for_each_child_start_current (ForEachChildData *fec);
-
 
 static gboolean
 for_each_child_start_cb (gpointer user_data)
@@ -204,13 +189,11 @@ for_each_child_start_cb (gpointer user_data)
 	return FALSE;
 }
 
-
 static void
 for_each_child_start (ForEachChildData *fec)
 {
 	fec->source_id = g_idle_add (for_each_child_start_cb, fec);
 }
-
 
 static void
 for_each_child_set_current_uri (ForEachChildData *fec,
@@ -220,7 +203,6 @@ for_each_child_set_current_uri (ForEachChildData *fec,
 		g_object_unref (fec->current);
 	fec->current = g_file_new_for_uri (directory);
 }
-
 
 static void
 for_each_child_set_current (ForEachChildData *fec,
@@ -253,7 +235,6 @@ for_each_child_start_next_sub_directory (ForEachChildData *fec)
 		for_each_child_done (fec);
 }
 
-
 static void
 for_each_child_close_enumerator (GObject      *source_object,
 	              		 GAsyncResult *result,
@@ -277,7 +258,6 @@ for_each_child_close_enumerator (GObject      *source_object,
 	else
 		for_each_child_done (fec);
 }
-
 
 static void
 for_each_child_next_files_ready (GObject      *source_object,
@@ -354,7 +334,6 @@ for_each_child_ready (GObject      *source_object,
                                             for_each_child_next_files_ready,
                                             fec);
 }
-
 
 static void
 for_each_child_start_current (ForEachChildData *fec)
@@ -444,9 +423,7 @@ g_directory_foreach_child (GFile                *directory,
 	for_each_child_start_current (fec);
 }
 
-
 /* -- get_file_list_data -- */
-
 
 typedef struct {
 	GList             *files;
@@ -463,7 +440,6 @@ typedef struct {
 	Filter            *exclude_folders_filter;
 	guint              visit_timeout;
 } GetFileListData;
-
 
 static void
 get_file_list_data_free (GetFileListData *gfl)
@@ -484,9 +460,7 @@ get_file_list_data_free (GetFileListData *gfl)
 	g_free (gfl);
 }
 
-
 /* -- g_directory_list_async -- */
-
 
 static GList*
 get_relative_file_list (GList *rel_list,
@@ -512,7 +486,6 @@ get_relative_file_list (GList *rel_list,
 
 	return rel_list;
 }
-
 
 static GList*
 get_dir_list_from_file_list (GHashTable *h_dirs,
@@ -564,7 +537,6 @@ get_dir_list_from_file_list (GHashTable *h_dirs,
 
 	return dir_list;
 }
-
 
 static void
 get_file_list_done (GError   *error,
@@ -636,7 +608,6 @@ get_file_list_done (GError   *error,
 	get_file_list_data_free (gfl);
 }
 
-
 static void
 get_file_list_for_each_file (const char *uri,
 			     GFileInfo  *info,
@@ -655,7 +626,6 @@ get_file_list_for_each_file (const char *uri,
 	}
 }
 
-
 static DirOp
 get_file_list_start_dir (const char  *uri,
 			 GError     **error,
@@ -670,7 +640,6 @@ get_file_list_start_dir (const char  *uri,
 	else
 		return DIR_OP_SKIP;
 }
-
 
 void
 g_directory_list_async (const char        *directory,
@@ -717,12 +686,9 @@ g_directory_list_async (const char        *directory,
 				   gfl);
 }
 
-
 /* -- g_list_items_async -- */
 
-
 static void get_items_for_current_dir (GetFileListData *gfl);
-
 
 static gboolean
 get_items_for_next_dir_idle_cb (gpointer data)
@@ -737,7 +703,6 @@ get_items_for_next_dir_idle_cb (gpointer data)
 
 	return FALSE;
 }
-
 
 static void
 get_items_for_current_dir_done (GList    *files,
@@ -761,7 +726,6 @@ get_items_for_current_dir_done (GList    *files,
 
 	gfl->visit_timeout = g_idle_add (get_items_for_next_dir_idle_cb, gfl);
 }
-
 
 static void
 get_items_for_current_dir (GetFileListData *gfl)
@@ -803,7 +767,6 @@ get_items_for_current_dir (GetFileListData *gfl)
 	g_object_unref (current_dir);
 }
 
-
 void
 g_list_items_async (GList             *items,
 		    const char        *base_dir,
@@ -844,9 +807,7 @@ g_list_items_async (GList             *items,
 	get_items_for_current_dir (gfl);
 }
 
-
 /* -- g_copy_files_async -- */
-
 
 typedef struct {
 	GList                 *sources;
@@ -864,7 +825,6 @@ typedef struct {
 	int                    n_file;
 	int                    tot_files;
 } CopyFilesData;
-
 
 static CopyFilesData*
 copy_files_data_new (GList                 *sources,
@@ -898,7 +858,6 @@ copy_files_data_new (GList                 *sources,
 	return cfd;
 }
 
-
 static void
 copy_files_data_free (CopyFilesData *cfd)
 {
@@ -909,9 +868,7 @@ copy_files_data_free (CopyFilesData *cfd)
 	g_free (cfd);
 }
 
-
 static void g_copy_current_file (CopyFilesData *cfd);
-
 
 static void
 g_copy_next_file (CopyFilesData *cfd)
@@ -922,7 +879,6 @@ g_copy_next_file (CopyFilesData *cfd)
 
 	g_copy_current_file (cfd);
 }
-
 
 static void
 g_copy_files_ready_cb (GObject      *source_object,
@@ -957,7 +913,6 @@ g_copy_files_ready_cb (GObject      *source_object,
 	g_copy_next_file (cfd);
 }
 
-
 static void
 g_copy_files_progress_cb (goffset  current_num_bytes,
                           goffset  total_num_bytes,
@@ -974,7 +929,6 @@ g_copy_files_progress_cb (goffset  current_num_bytes,
 					total_num_bytes,
 					cfd->progress_callback_data);
 }
-
 
 static void
 g_copy_current_file (CopyFilesData *cfd)
@@ -996,7 +950,6 @@ g_copy_current_file (CopyFilesData *cfd)
 			   g_copy_files_ready_cb,
 			   cfd);
 }
-
 
 void
 g_copy_files_async (GList                 *sources,
@@ -1022,7 +975,6 @@ g_copy_files_async (GList                 *sources,
 				   user_data);
 	g_copy_current_file (cfd);
 }
-
 
 void
 g_copy_file_async (GFile                 *source,
@@ -1055,15 +1007,12 @@ g_copy_file_async (GFile                 *source,
 	g_list_free (destination_files);
 }
 
-
 /* -- g_directory_copy_async -- */
-
 
 typedef struct {
 	char      *uri;
 	GFileInfo *info;
 } ChildData;
-
 
 static ChildData*
 child_data_new (const char *uri,
@@ -1078,7 +1027,6 @@ child_data_new (const char *uri,
 	return data;
 }
 
-
 static void
 child_data_free (ChildData *child)
 {
@@ -1088,7 +1036,6 @@ child_data_free (ChildData *child)
 	g_object_unref (child->info);
 	g_free (child);
 }
-
 
 typedef struct {
 	GFile                 *source;
@@ -1109,7 +1056,6 @@ typedef struct {
 	int                    n_file, tot_files;
 	guint                  source_id;
 } DirectoryCopyData;
-
 
 static void
 directory_copy_data_free (DirectoryCopyData *dcd)
@@ -1133,7 +1079,6 @@ directory_copy_data_free (DirectoryCopyData *dcd)
 	g_free (dcd);
 }
 
-
 static gboolean
 g_directory_copy_done (gpointer user_data)
 {
@@ -1149,7 +1094,6 @@ g_directory_copy_done (gpointer user_data)
 
 	return FALSE;
 }
-
 
 static GFile *
 get_destination_for_uri (DirectoryCopyData *dcd,
@@ -1172,9 +1116,7 @@ get_destination_for_uri (DirectoryCopyData *dcd,
 	return destination_file;
 }
 
-
 static void g_directory_copy_current_child (DirectoryCopyData *dcd);
-
 
 static gboolean
 g_directory_copy_next_child (gpointer user_data)
@@ -1190,7 +1132,6 @@ g_directory_copy_next_child (gpointer user_data)
 	return FALSE;
 }
 
-
 static void
 g_directory_copy_child_done_cb (GObject      *source_object,
                         	GAsyncResult *result,
@@ -1205,7 +1146,6 @@ g_directory_copy_child_done_cb (GObject      *source_object,
 
 	dcd->source_id = g_idle_add (g_directory_copy_next_child, dcd);
 }
-
 
 static void
 g_directory_copy_child_progress_cb (goffset  current_num_bytes,
@@ -1223,7 +1163,6 @@ g_directory_copy_child_progress_cb (goffset  current_num_bytes,
 					total_num_bytes,
 					dcd->progress_callback_data);
 }
-
 
 static void
 g_directory_copy_current_child (DirectoryCopyData *dcd)
@@ -1312,7 +1251,6 @@ g_directory_copy_current_child (DirectoryCopyData *dcd)
 		dcd->source_id = g_idle_add (g_directory_copy_next_child, dcd);
 }
 
-
 static gboolean
 g_directory_copy_start_copying (gpointer user_data)
 {
@@ -1327,7 +1265,6 @@ g_directory_copy_start_copying (gpointer user_data)
 
 	return FALSE;
 }
-
 
 static void
 g_directory_copy_list_ready (GError   *error,
@@ -1344,7 +1281,6 @@ g_directory_copy_list_ready (GError   *error,
 	dcd->source_id = g_idle_add (g_directory_copy_start_copying, dcd);
 }
 
-
 static void
 g_directory_copy_for_each_file (const char *uri,
 				GFileInfo  *info,
@@ -1355,7 +1291,6 @@ g_directory_copy_for_each_file (const char *uri,
 	dcd->to_copy = g_list_prepend (dcd->to_copy, child_data_new (uri, info));
 	dcd->tot_files++;
 }
-
 
 static DirOp
 g_directory_copy_start_dir (const char  *uri,
@@ -1374,7 +1309,6 @@ g_directory_copy_start_dir (const char  *uri,
 
 	return DIR_OP_CONTINUE;
 }
-
 
 void
 g_directory_copy_async (const char            *source,
@@ -1410,7 +1344,6 @@ g_directory_copy_async (const char            *source,
 			           g_directory_copy_list_ready,
 			           dcd);
 }
-
 
 gboolean
 g_load_file_in_buffer (GFile   *file,

@@ -37,7 +37,6 @@ typedef struct {
 	GtkWidget *pw_encrypt_header_checkbutton;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -45,7 +44,6 @@ destroy_cb (GtkWidget  *widget,
 {
 	g_free (data);
 }
-
 
 static void
 response_cb (GtkWidget  *dialog,
@@ -77,7 +75,6 @@ response_cb (GtkWidget  *dialog,
 
 	gtk_widget_destroy (data->dialog);
 }
-
 
 void
 dlg_password (GtkWidget *widget,

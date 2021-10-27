@@ -41,9 +41,7 @@ static void fr_command_alz_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
-
 
 static time_t
 mktime_from_string (char *date_s,
@@ -78,7 +76,6 @@ mktime_from_string (char *date_s,
 	return mktime (&tm);
 }
 
-
 static void
 process_line (char     *line,
 	      gpointer  data)
@@ -92,7 +89,6 @@ process_line (char     *line,
 	gsize	       name_len;
 
 	g_return_if_fail (line != NULL);
-
 
 	if (! alz_comm->list_started) {
 		if (strncmp (line, "-----", 5 ) == 0 )
@@ -156,7 +152,6 @@ process_line (char     *line,
 	g_strfreev (fields);
 }
 
-
 static void
 add_codepage_arg (FrCommand *comm)
 {
@@ -182,7 +177,6 @@ add_codepage_arg (FrCommand *comm)
 	fr_process_add_arg (comm->process, arg);
 }
 
-
 static void
 add_password_arg (FrCommand  *comm,
 		  const char *password,
@@ -198,7 +192,6 @@ add_password_arg (FrCommand  *comm,
 	}
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -207,7 +200,6 @@ list__begin (gpointer data)
 	comm->list_started = FALSE;
 	comm->invalid_password = FALSE;
 }
-
 
 static void
 fr_command_alz_list (FrCommand  *comm)
@@ -223,7 +215,6 @@ fr_command_alz_list (FrCommand  *comm)
 	fr_process_use_standard_locale (comm->process, TRUE);
 	fr_process_start (comm->process);
 }
-
 
 /* -- extract -- */
 
@@ -252,7 +243,6 @@ process_extract_line (char     *line,
 		return;
 	}
 }
-
 
 static void
 fr_command_alz_extract (FrCommand  *comm,
@@ -284,7 +274,6 @@ fr_command_alz_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_alz_handle_error (FrCommand   *comm,
 			     FrProcError *error)
@@ -297,16 +286,13 @@ fr_command_alz_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *alz_mime_type[] = { "application/x-alz", NULL };
-
 
 static const char **
 fr_command_alz_get_mime_types (FrCommand *comm)
 {
 	return alz_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_alz_get_capabilities (FrCommand  *comm,
@@ -322,14 +308,12 @@ fr_command_alz_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_alz_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("unalz");
 }
-
 
 static void
 fr_command_alz_class_init (FrCommandAlzClass *class)
@@ -352,7 +336,6 @@ fr_command_alz_class_init (FrCommandAlzClass *class)
 	afc->get_packages     = fr_command_alz_get_packages;
 }
 
-
 static void
 fr_command_alz_init (FrCommand *comm)
 {
@@ -365,7 +348,6 @@ fr_command_alz_init (FrCommand *comm)
 	comm->propTest                     = FALSE;
 }
 
-
 static void
 fr_command_alz_finalize (GObject *object)
 {
@@ -376,7 +358,6 @@ fr_command_alz_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_alz_get_type ()

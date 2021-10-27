@@ -45,7 +45,6 @@ static void fr_command_rar_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* rar 5.30 and later uses YYYY-MM-DD instead DD-MM-YY in the listing output */
 
 static gboolean date_newstyle = FALSE;
@@ -55,7 +54,6 @@ have_rar (void)
 {
 	return is_program_in_path ("rar");
 }
-
 
 /* -- list -- */
 
@@ -76,8 +74,6 @@ Details: RAR 4
 ----------- ---------  -------- ----- ---------- -----  --------  ----
                  3165      1318  41%                              2
 
-
-
 // SAMPLE RAR VERSION 5.00 TO 5.21 LISTING OUTPUT:
 
 RAR 5.21   Copyright (c) 1993-2015 Alexander Roshal   15 Feb 2015
@@ -92,8 +88,6 @@ Details: RAR 4
  -rw-rw-r--         0         8   0%  07-03-17 21:36  00000000  file2.empty
 ----------- ---------  -------- ----- -------- -----  --------  ----
                  3165      1318  41%                            2
-
-
 
 // SAMPLE RAR VERSION 4.20 AND OLDER LISTING OUTPUT:
 
@@ -351,7 +345,6 @@ process_line (char     *line,
 		rar_comm->rar4_odd_line = ! rar_comm->rar4_odd_line;
 }
 
-
 static void
 add_password_arg (FrCommand  *comm,
 		  const char *password,
@@ -367,7 +360,6 @@ add_password_arg (FrCommand  *comm,
 		fr_process_add_arg (comm->process, "-p-");
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -375,7 +367,6 @@ list__begin (gpointer data)
 
 	comm->list_started = FALSE;
 }
-
 
 static void
 fr_command_rar_list (FrCommand  *comm)
@@ -404,7 +395,6 @@ fr_command_rar_list (FrCommand  *comm)
 	fr_process_start (comm->process);
 }
 
-
 static void
 parse_progress_line (FrCommand  *comm,
 		     const char *prefix,
@@ -414,7 +404,6 @@ parse_progress_line (FrCommand  *comm,
 	if (strncmp (line, prefix, strlen (prefix)) == 0)
 		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }
-
 
 static void
 process_line__add (char     *line,
@@ -450,7 +439,6 @@ process_line__add (char     *line,
 	if (comm->n_files != 0)
 		parse_progress_line (comm, "Adding    ", _("Adding file: "), line);
 }
-
 
 static void
 fr_command_rar_add (FrCommand     *comm,
@@ -508,7 +496,6 @@ fr_command_rar_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 process_line__delete (char     *line,
 		      gpointer  data)
@@ -528,7 +515,6 @@ process_line__delete (char     *line,
 	if (comm->n_files != 0)
 		parse_progress_line (comm, "Deleting ", _("Removing file: "), line);
 }
-
 
 static void
 fr_command_rar_delete (FrCommand  *comm,
@@ -557,7 +543,6 @@ fr_command_rar_delete (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 process_line__extract (char     *line,
 		       gpointer  data)
@@ -577,7 +562,6 @@ process_line__extract (char     *line,
 	if (comm->n_files != 0)
 		parse_progress_line (comm, "Extracting  ", _("Extracting file: "), line);
 }
-
 
 static void
 fr_command_rar_extract (FrCommand  *comm,
@@ -636,7 +620,6 @@ fr_command_rar_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_rar_test (FrCommand   *comm)
 {
@@ -658,7 +641,6 @@ fr_command_rar_test (FrCommand   *comm)
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_rar_handle_error (FrCommand   *comm,
@@ -713,18 +695,15 @@ fr_command_rar_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *rar_mime_type[] = { "application/x-cbr",
 				"application/x-rar",
 				NULL };
-
 
 static const char **
 fr_command_rar_get_mime_types (FrCommand *comm)
 {
 	return rar_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_rar_get_capabilities (FrCommand  *comm,
@@ -746,14 +725,12 @@ fr_command_rar_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_rar_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("rar,unrar");
 }
-
 
 static void
 fr_command_rar_class_init (FrCommandRarClass *class)
@@ -777,7 +754,6 @@ fr_command_rar_class_init (FrCommandRarClass *class)
 	afc->get_packages     = fr_command_rar_get_packages;
 }
 
-
 static void
 fr_command_rar_init (FrCommand *comm)
 {
@@ -792,7 +768,6 @@ fr_command_rar_init (FrCommand *comm)
 	comm->propListFromFile             = TRUE;
 }
 
-
 static void
 fr_command_rar_finalize (GObject *object)
 {
@@ -803,7 +778,6 @@ fr_command_rar_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_rar_get_type ()

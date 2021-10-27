@@ -27,7 +27,6 @@
 #include "file-utils.h"
 #include "fr-window.h"
 
-
 void
 pref_util_save_window_geometry (GtkWindow  *window,
 				const char *dialog_id)
@@ -46,7 +45,6 @@ pref_util_save_window_geometry (GtkWindow  *window,
 	g_object_unref (settings);
 	g_free (schema);
 }
-
 
 void
 pref_util_restore_window_geometry (GtkWindow  *window,

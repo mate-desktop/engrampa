@@ -35,7 +35,6 @@
 #include "preferences.h"
 #include "typedefs.h"
 
-
 #define BAD_CHARS "/\\*"
 #define GET_ENTRY(x) (GTK_ENTRY (gtk_builder_get_object (data->builder, (x))))
 #define GET_FILE_CHOOSER(x) (GTK_FILE_CHOOSER (gtk_builder_get_object (data->builder, (x))))
@@ -45,7 +44,6 @@
 
 static gboolean has_password = FALSE;
 static gboolean can_encrypt_header = FALSE;
-
 
 typedef struct {
 	FrWindow   *window;
@@ -60,7 +58,6 @@ typedef struct {
 	gboolean    single_file;
 } DialogData;
 
-
 static const char *
 get_ext (DialogData *data)
 {
@@ -71,7 +68,6 @@ get_ext (DialogData *data)
 	return mime_type_desc[data->supported_types[idx]].default_ext;
 }
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -80,7 +76,6 @@ destroy_cb (GtkWidget  *widget,
 	g_settings_set_string (data->settings, PREF_BATCH_ADD_DEFAULT_EXTENSION, get_ext (data));
 	/*g_settings_set_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS, data->add_clicked ? FALSE : gtk_expander_get_expanded (GTK_EXPANDER (GET_WIDGET ("a_other_options_expander"))));*/
 	g_settings_set_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER, gtk_toggle_button_get_active (GET_TOGGLE_BUTTON ("a_encrypt_header_checkbutton")));
-
 
 	if (! data->add_clicked) {
 		fr_window_pop_message (data->window);
@@ -92,7 +87,6 @@ destroy_cb (GtkWidget  *widget,
 	g_object_unref (data->settings);
 	g_free (data);
 }
-
 
 static void
 set_archive_options (DialogData *data)
@@ -126,14 +120,12 @@ set_archive_options (DialogData *data)
 	}
 }
 
-
 static void
 help_clicked_cb (GtkWidget  *widget,
 		 DialogData *data)
 {
 	show_help_dialog (GET_WINDOW ("dialog"), "engrampa-fmgr-add");
 }
-
 
 static void
 add_clicked_cb (GtkWidget  *widget,
@@ -359,7 +351,6 @@ add_clicked_cb (GtkWidget  *widget,
 	g_free (archive_file);
 }
 
-
 static void
 update_sensitivity_for_mime_type (DialogData *data,
 				  const char *mime_type)
@@ -396,7 +387,6 @@ update_sensitivity_for_mime_type (DialogData *data,
 	}
 }
 
-
 static void
 archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 				   DialogData  *data)
@@ -413,7 +403,6 @@ archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 	}
 	update_sensitivity_for_mime_type (data, mime_type);
 }
-
 
 static void
 update_archive_type_combo_box_from_ext (DialogData  *data,
@@ -436,7 +425,6 @@ update_archive_type_combo_box_from_ext (DialogData  *data,
 	gtk_combo_box_set_active (GTK_COMBO_BOX (data->archive_type_combo_box), idx);
 }
 
-
 static void
 update_sensitivity (DialogData *data)
 {
@@ -451,7 +439,6 @@ update_sensitivity (DialogData *data)
 	gtk_widget_set_sensitive (GET_WIDGET ("a_encrypt_header_checkbutton"), can_encrypt_header ? has_password : FALSE);
 }
 
-
 static void
 password_entry_notify_text_cb (GObject    *object,
 			       GParamSpec *spec,
@@ -460,14 +447,12 @@ password_entry_notify_text_cb (GObject    *object,
 	update_sensitivity ((DialogData *) user_data);
 }
 
-
 static void
 volume_toggled_cb (GtkToggleButton *toggle_button,
 		   gpointer         user_data)
 {
 	update_sensitivity ((DialogData *) user_data);
 }
-
 
 void
 dlg_batch_add_files (FrWindow *window,
@@ -497,7 +482,6 @@ dlg_batch_add_files (FrWindow *window,
 	gtk_expander_set_expanded (GTK_EXPANDER (GET_WIDGET ("a_other_options_expander")), FALSE /*g_settings_get_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS)*/);
 	gtk_toggle_button_set_active (GET_TOGGLE_BUTTON ("a_encrypt_header_checkbutton"), g_settings_get_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER));
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON (GET_WIDGET ("a_volume_spinbutton")), g_settings_get_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
-
 
 	first_filename = (char*) file_list->data;
 	parent = remove_level_from_path (first_filename);

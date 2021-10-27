@@ -49,9 +49,7 @@ static gboolean password_handled = FALSE;
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
-
 
 static time_t
 mktime_from_string (char *date_s,
@@ -87,7 +85,6 @@ mktime_from_string (char *date_s,
 
 	return mktime (&tm);
 }
-
 
 static void
 list__process_line (char     *line,
@@ -204,7 +201,6 @@ list__process_line (char     *line,
 	g_strfreev (fields);
 }
 
-
 static void
 fr_command_7z_begin_command (FrCommand *comm)
 {
@@ -215,7 +211,6 @@ fr_command_7z_begin_command (FrCommand *comm)
 	else if (is_program_in_path ("7zr"))
 		fr_process_begin_command (comm->process, "7zr");
 }
-
 
 static void
 add_password_arg (FrCommand     *comm,
@@ -232,7 +227,6 @@ add_password_arg (FrCommand     *comm,
 	}
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -244,7 +238,6 @@ list__begin (gpointer data)
 	}
 	p7z_comm->list_started = FALSE;
 }
-
 
 static void
 fr_command_7z_list (FrCommand  *comm)
@@ -267,7 +260,6 @@ fr_command_7z_list (FrCommand  *comm)
 	fr_process_start (comm->process);
 }
 
-
 static void
 parse_progress_line (FrCommand  *comm,
 		     const char *prefix,
@@ -280,7 +272,6 @@ parse_progress_line (FrCommand  *comm,
 	if (strncmp (line, prefix, prefix_len) == 0)
 		fr_command_progress (comm, (double) ++comm->n_file / (comm->n_files + 1));
 }
-
 
 static void
 process_line__add (char     *line,
@@ -306,7 +297,6 @@ process_line__add (char     *line,
 	if (comm->n_files != 0)
 		parse_progress_line (comm, "Compressing  ", _("Adding file: "), line);
 }
-
 
 static void
 fr_command_7z_add (FrCommand     *comm,
@@ -403,7 +393,6 @@ fr_command_7z_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_7z_delete (FrCommand  *comm,
 		      const char *from_file,
@@ -442,7 +431,6 @@ fr_command_7z_delete (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 process_line__extract (char     *line,
 		       gpointer  data)
@@ -452,7 +440,6 @@ process_line__extract (char     *line,
 	if (comm->n_files != 0)
 		parse_progress_line (comm, "Extracting  ", _("Extracting file: "), line);
 }
-
 
 static void
 fr_command_7z_extract (FrCommand  *comm,
@@ -507,7 +494,6 @@ fr_command_7z_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_7z_test (FrCommand   *comm)
 {
@@ -520,7 +506,6 @@ fr_command_7z_test (FrCommand   *comm)
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_7z_handle_error (FrCommand   *comm,
@@ -577,7 +562,6 @@ fr_command_7z_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *sevenz_mime_types[] = { "application/epub+zip",
 				    "application/x-7z-compressed",
 				    "application/x-arj",
@@ -590,7 +574,6 @@ const char *sevenz_mime_types[] = { "application/epub+zip",
 				    "application/x-rar",
 				    "application/zip", /* zip always at the end and the number of */
 				    NULL };            /* place in fr_command_7z_get_mime_types   */
-
 
 static const char **
 fr_command_7z_get_mime_types (FrCommand *comm)
@@ -608,7 +591,6 @@ fr_command_7z_get_mime_types (FrCommand *comm)
 
 	return sevenz_mime_types;
 }
-
 
 static FrCommandCap
 fr_command_7z_get_capabilities (FrCommand  *comm,
@@ -668,7 +650,6 @@ fr_command_7z_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_7z_get_packages (FrCommand  *comm,
 			    const char *mime_type)
@@ -680,7 +661,6 @@ fr_command_7z_get_packages (FrCommand  *comm,
 	else
 		return PACKAGES ("p7zip");
 }
-
 
 static void
 fr_command_7z_class_init (FrCommand7zClass *class)
@@ -704,7 +684,6 @@ fr_command_7z_class_init (FrCommand7zClass *class)
 	afc->get_packages     = fr_command_7z_get_packages;
 }
 
-
 static void
 fr_command_7z_init (FrCommand *comm)
 {
@@ -719,7 +698,6 @@ fr_command_7z_init (FrCommand *comm)
 	comm->propListFromFile             = TRUE;
 }
 
-
 static void
 fr_command_7z_finalize (GObject *object)
 {
@@ -730,7 +708,6 @@ fr_command_7z_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_7z_get_type ()

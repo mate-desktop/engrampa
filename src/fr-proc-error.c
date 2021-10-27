@@ -22,7 +22,6 @@
 #include <config.h>
 #include "fr-proc-error.h"
 
-
 static gpointer
 fr_proc_error_copy (gpointer boxed)
 {
@@ -37,7 +36,6 @@ fr_proc_error_copy (gpointer boxed)
 	return new_error;
 }
 
-
 static void
 fr_proc_error_free (gpointer boxed)
 {
@@ -47,7 +45,6 @@ fr_proc_error_free (gpointer boxed)
 		g_error_free (error->gerror);
 	g_free (error);
 }
-
 
 G_DEFINE_BOXED_TYPE (FrProcError,
 		     fr_proc_error,

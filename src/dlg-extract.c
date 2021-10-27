@@ -46,7 +46,6 @@ typedef struct {
 	gboolean      extract_clicked;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -62,7 +61,6 @@ destroy_cb (GtkWidget  *widget,
 	g_object_unref (data->settings);
 	g_free (data);
 }
-
 
 static int
 extract_cb (GtkWidget   *w,
@@ -244,7 +242,6 @@ extract_cb (GtkWidget   *w,
 	return TRUE;
 }
 
-
 static int
 file_sel_response_cb (GtkWidget    *widget,
 		      int           response,
@@ -266,7 +263,6 @@ file_sel_response_cb (GtkWidget    *widget,
 	return FALSE;
 }
 
-
 static void
 files_entry_changed_cb (GtkWidget  *widget,
 			DialogData *data)
@@ -274,7 +270,6 @@ files_entry_changed_cb (GtkWidget  *widget,
 	if (! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("file_pattern_radiobutton"))))
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("file_pattern_radiobutton")), TRUE);
 }
-
 
 static void
 overwrite_toggled_cb (GtkToggleButton *button,
@@ -284,7 +279,6 @@ overwrite_toggled_cb (GtkToggleButton *button,
 	gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("not_newer_checkbutton")), !active);
 	gtk_widget_set_sensitive (GET_WIDGET ("not_newer_checkbutton"), active);
 }
-
 
 static void
 dlg_extract__common (FrWindow *window,
@@ -339,7 +333,6 @@ dlg_extract__common (FrWindow *window,
 	gtk_widget_show (data->dialog);
 }
 
-
 void
 dlg_extract (GtkWidget *widget,
 	     gpointer   callback_data)
@@ -351,7 +344,6 @@ dlg_extract (GtkWidget *widget,
 	files = fr_window_get_selection (window, FALSE, &base_dir);
 	dlg_extract__common (window, files, base_dir);
 }
-
 
 void
 dlg_extract_folder_from_sidebar (GtkWidget *widget,

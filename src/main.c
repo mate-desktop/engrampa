@@ -236,14 +236,12 @@ prepare_app (void)
 	g_free (extract_to_uri);
 }
 
-
 static void
 startup_cb (GApplication *application)
 {
 	initialize_data ();
 	prepare_app ();
 }
-
 
 static void
 activate_cb (GApplication *application)
@@ -258,7 +256,6 @@ activate_cb (GApplication *application)
 			gtk_widget_show (GTK_WIDGET (link->data));
 	}
 }
-
 
 static void
 fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
@@ -304,7 +301,6 @@ fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
 
 	g_key_file_set_integer (state, "Session", "archives", i);
 }
-
 
 int
 main (int argc, char **argv)

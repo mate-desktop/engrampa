@@ -29,14 +29,12 @@
 #include "gtk-utils.h"
 #include "fr-init.h"
 
-
 typedef struct {
 	FrWindow   *window;
 	FrArchive  *archive;
 	FrAction    action;
 	const char *packages;
 } InstallerData;
-
 
 static void
 installer_data_free (InstallerData *idata)
@@ -45,7 +43,6 @@ installer_data_free (InstallerData *idata)
 	g_object_unref (idata->window);
 	g_free (idata);
 }
-
 
 static void
 package_installer_terminated (InstallerData   *idata,
@@ -75,9 +72,7 @@ package_installer_terminated (InstallerData   *idata,
 	installer_data_free (idata);
 }
 
-
 #ifdef ENABLE_PACKAGEKIT
-
 
 static void
 packagekit_install_package_names_ready_cb (GObject      *source_object,
@@ -119,7 +114,6 @@ packagekit_install_package_names_ready_cb (GObject      *source_object,
 	g_object_unref (proxy);
 }
 
-
 static char **
 get_packages_real_names (char **names)
 {
@@ -151,7 +145,6 @@ get_packages_real_names (char **names)
 
 	return real_names;
 }
-
 
 static void
 install_packages (InstallerData *idata)
@@ -226,7 +219,6 @@ install_packages (InstallerData *idata)
 	}
 }
 
-
 static void
 confirm_search_dialog_response_cb (GtkDialog *dialog,
 				   int        response_id,
@@ -267,7 +259,6 @@ create_button (const char *icon_name,
 }
 
 #endif /* ENABLE_PACKAGEKIT */
-
 
 void
 dlg_package_installer (FrWindow  *window,

@@ -30,9 +30,7 @@
 #include <libcaja-extension/caja-menu-provider.h>
 #include "caja-engrampa.h"
 
-
 static GObjectClass *parent_class;
-
 
 static void
 extract_to_callback (CajaMenuItem *item,
@@ -71,7 +69,6 @@ extract_to_callback (CajaMenuItem *item,
 	g_free (quoted_default_dir);
 }
 
-
 static void
 extract_here_callback (CajaMenuItem *item,
 		       gpointer          user_data)
@@ -102,7 +99,6 @@ extract_here_callback (CajaMenuItem *item,
 
 	g_string_free (cmd, TRUE);
 }
-
 
 static void
 add_callback (CajaMenuItem *item,
@@ -139,7 +135,6 @@ add_callback (CajaMenuItem *item,
 
 	g_string_free (cmd, TRUE);
 }
-
 
 static struct {
 	const char *mime_type;
@@ -202,13 +197,11 @@ static struct {
 		{ NULL, FALSE }
 };
 
-
 typedef struct {
       gboolean is_archive;
       gboolean is_derived_archive;
       gboolean is_compressed_archive;
 } FileMimeInfo;
-
 
 static FileMimeInfo
 get_file_mime_info (CajaFileInfo *file)
@@ -246,7 +239,6 @@ get_file_mime_info (CajaFileInfo *file)
 	return file_mime_info;
 }
 
-
 static gboolean
 unsupported_scheme (CajaFileInfo *file)
 {
@@ -271,7 +263,6 @@ unsupported_scheme (CajaFileInfo *file)
 
 	return result;
 }
-
 
 static GList *
 caja_fr_get_file_items (CajaMenuProvider *provider,
@@ -387,19 +378,16 @@ caja_fr_get_file_items (CajaMenuProvider *provider,
 	return items;
 }
 
-
 static void
 caja_fr_menu_provider_iface_init (CajaMenuProviderIface *iface)
 {
 	iface->get_file_items = caja_fr_get_file_items;
 }
 
-
 static void
 caja_fr_instance_init (CajaFr *fr)
 {
 }
-
 
 static void
 caja_fr_class_init (CajaFrClass *class)
@@ -407,16 +395,13 @@ caja_fr_class_init (CajaFrClass *class)
 	parent_class = g_type_class_peek_parent (class);
 }
 
-
 static GType fr_type = 0;
-
 
 GType
 caja_fr_get_type (void)
 {
 	return fr_type;
 }
-
 
 void
 caja_fr_register_type (GTypeModule *module)

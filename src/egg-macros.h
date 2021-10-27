@@ -88,7 +88,6 @@ type_as_function ## _get_type (void)					\
 			    parent_type, parent_type_macro)		\
 	g_type_register_static (parent_type_macro, #type, &object_info, 0)
 
-
 #define EGG_DEFINE_BOXED_TYPE(TN, t_n) \
 EGG_DEFINE_BOXED_TYPE_WITH_CODE(TN, t_n, {});
 

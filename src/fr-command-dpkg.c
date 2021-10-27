@@ -160,7 +160,6 @@ process_data_line (char     *line,
                 fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_dpkg_list (FrCommand *comm)
 {
@@ -178,7 +177,6 @@ fr_command_dpkg_list (FrCommand *comm)
         fr_process_end_command (comm->process);
         fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_dpkg_extract (FrCommand  *comm,
@@ -210,16 +208,13 @@ fr_command_dpkg_extract (FrCommand  *comm,
         fr_process_end_command (comm->process);
 }
 
-
 const char *dpkg_mime_type[] = { "application/vnd.debian.binary-package", NULL };
-
 
 static const char **
 fr_command_dpkg_get_mime_types (FrCommand *comm)
 {
         return dpkg_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_dpkg_get_capabilities (FrCommand  *comm,
@@ -235,14 +230,12 @@ fr_command_dpkg_get_capabilities (FrCommand  *comm,
         return capabilities;
 }
 
-
 static const char *
 fr_command_dpkg_get_packages (FrCommand  *comm,
                               const char *mime_type)
 {
         return PACKAGES ("dpkg");
 }
-
 
 static void
 fr_command_dpkg_class_init (FrCommandDpkgClass *class)
@@ -262,7 +255,6 @@ fr_command_dpkg_class_init (FrCommandDpkgClass *class)
         afc->get_packages     = fr_command_dpkg_get_packages;
 }
 
-
 static void
 fr_command_dpkg_init (FrCommand *comm)
 {
@@ -275,7 +267,6 @@ fr_command_dpkg_init (FrCommand *comm)
         comm->propTest                     = FALSE;
 }
 
-
 static void
 fr_command_dpkg_finalize (GObject *object)
 {
@@ -286,7 +277,6 @@ fr_command_dpkg_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
                 G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_dpkg_get_type ()

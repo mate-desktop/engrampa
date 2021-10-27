@@ -28,7 +28,6 @@
 #include "typedefs.h"
 #include "fr-archive.h"
 
-
 enum {
 	COLUMN_FILE_DATA,
 	COLUMN_ICON,

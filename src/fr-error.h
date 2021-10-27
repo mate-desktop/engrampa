@@ -28,5 +28,4 @@
 #define FR_ERROR fr_error_quark ()
 GQuark fr_error_quark (void);
 
-
 #endif /* __FR_ERROR_H__ */

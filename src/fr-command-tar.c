@@ -50,7 +50,6 @@ static void fr_command_tar_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -61,7 +60,6 @@ mktime_from_string (const char *time_s)
 	strptime (time_s, LSTAR_DATE_FORMAT, &tm);
 	return mktime (&tm);
 }
-
 
 static char*
 tar_get_last_field (const char *line,
@@ -91,7 +89,6 @@ tar_get_last_field (const char *line,
 
 	return g_strdup (f_start);
 }
-
 
 static void
 process_line (char     *line,
@@ -161,7 +158,6 @@ process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 add_compress_arg (FrCommand *comm)
 {
@@ -211,7 +207,6 @@ add_compress_arg (FrCommand *comm)
 	}
 }
 
-
 static void
 begin_tar_command (FrCommand *comm)
 {
@@ -233,7 +228,6 @@ begin_tar_command (FrCommand *comm)
 	g_free (command);
 }
 
-
 static void
 fr_command_tar_list (FrCommand *comm)
 {
@@ -249,13 +243,11 @@ fr_command_tar_list (FrCommand *comm)
 	fr_process_start (comm->process);
 }
 
-
 static gboolean
 can_create_a_compressed_archive (FrCommand *comm)
 {
 	return comm->creating_archive && ! is_mime_type (comm->mime_type, "application/x-7z-compressed-tar");
 }
-
 
 static void
 process_line__generic (char     *line,
@@ -281,7 +273,6 @@ process_line__generic (char     *line,
 	}
 }
 
-
 static void
 process_line__add (char     *line,
 		   gpointer  data)
@@ -289,7 +280,6 @@ process_line__add (char     *line,
 	/* Translators: after the colon there is a filename. */
 	process_line__generic (line, data, _("Adding file: "));
 }
-
 
 static void
 fr_command_tar_add (FrCommand     *comm,
@@ -347,7 +337,6 @@ fr_command_tar_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 process_line__delete (char     *line,
 		      gpointer  data)
@@ -356,7 +345,6 @@ process_line__delete (char     *line,
 	process_line__generic (line, data, _("Removing file: "));
 }
 
-
 static void
 begin_func__delete (gpointer data)
 {
@@ -364,7 +352,6 @@ begin_func__delete (gpointer data)
 	fr_command_progress (comm, -1.0);
 	fr_command_message (comm, _("Deleting files from archive"));
 }
-
 
 static void
 fr_command_tar_delete (FrCommand  *comm,
@@ -402,7 +389,6 @@ fr_command_tar_delete (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 process_line__extract (char     *line,
 		       gpointer  data)
@@ -410,7 +396,6 @@ process_line__extract (char     *line,
 	/* Translators: after the colon there is a filename. */
 	process_line__generic (line, data, _("Extracting file: "));
 }
-
 
 static void
 fr_command_tar_extract (FrCommand  *comm,
@@ -462,7 +447,6 @@ fr_command_tar_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 begin_func__recompress (gpointer data)
 {
@@ -470,7 +454,6 @@ begin_func__recompress (gpointer data)
 	fr_command_progress (comm, -1.0);
 	fr_command_message (comm, _("Recompressing archive"));
 }
-
 
 static gboolean
 gzip_continue_func (gpointer user_data)
@@ -487,7 +470,6 @@ gzip_continue_func (gpointer user_data)
 
 	return comm->process->error.status == 0;
 }
-
 
 static void
 fr_command_tar_recompress (FrCommand *comm)
@@ -722,7 +704,6 @@ fr_command_tar_recompress (FrCommand *comm)
 	c_tar->uncomp_filename = NULL;
 }
 
-
 static void
 begin_func__uncompress (gpointer data)
 {
@@ -730,7 +711,6 @@ begin_func__uncompress (gpointer data)
 	fr_command_progress (comm, -1.0);
 	fr_command_message (comm, _("Decompressing archive"));
 }
-
 
 static char *
 get_uncompressed_name (FrCommandTar *c_tar,
@@ -835,7 +815,6 @@ get_uncompressed_name (FrCommandTar *c_tar,
 	return new_name;
 }
 
-
 static char *
 get_temp_name (FrCommandTar *c_tar,
 	       const char   *filepath)
@@ -852,7 +831,6 @@ get_temp_name (FrCommandTar *c_tar,
 
 	return temp_name;
 }
-
 
 static void
 fr_command_tar_uncompress (FrCommand *comm)
@@ -995,7 +973,6 @@ fr_command_tar_uncompress (FrCommand *comm)
 	g_free (tmp_name);
 }
 
-
 static void
 fr_command_tar_handle_error (FrCommand   *comm,
 			     FrProcError *error)
@@ -1005,7 +982,6 @@ fr_command_tar_handle_error (FrCommand   *comm,
 			error->type = FR_PROC_ERROR_NONE;
 	}
 }
-
 
 const char *tar_mime_types[] = { "application/x-compressed-tar",
 				 "application/x-brotli-compressed-tar",
@@ -1021,13 +997,11 @@ const char *tar_mime_types[] = { "application/x-compressed-tar",
 				 "application/x-zstd-compressed-tar",
 			         NULL };
 
-
 static const char **
 fr_command_tar_get_mime_types (FrCommand *comm)
 {
 	return tar_mime_types;
 }
-
 
 static FrCommandCap
 fr_command_tar_get_capabilities (FrCommand  *comm,
@@ -1102,7 +1076,6 @@ fr_command_tar_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static void
 fr_command_tar_set_mime_type (FrCommand  *comm,
 		 	      const char *mime_type)
@@ -1123,7 +1096,6 @@ fr_command_tar_set_mime_type (FrCommand  *comm,
 		}
 	}
 }
-
 
 static const char *
 fr_command_tar_get_packages (FrCommand  *comm,
@@ -1157,7 +1129,6 @@ fr_command_tar_get_packages (FrCommand  *comm,
 	return NULL;
 }
 
-
 static void
 fr_command_tar_class_init (FrCommandTarClass *class)
 {
@@ -1182,7 +1153,6 @@ fr_command_tar_class_init (FrCommandTarClass *class)
 	afc->get_packages     = fr_command_tar_get_packages;
 }
 
-
 static void
 fr_command_tar_init (FrCommand *comm)
 {
@@ -1203,7 +1173,6 @@ fr_command_tar_init (FrCommand *comm)
 	comm_tar->msg = NULL;
 	comm_tar->uncomp_filename = NULL;
 }
-
 
 static void
 fr_command_tar_finalize (GObject *object)
@@ -1234,7 +1203,6 @@ fr_command_tar_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_tar_get_type ()

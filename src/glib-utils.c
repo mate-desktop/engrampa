@@ -29,12 +29,9 @@
 #include <glib-object.h>
 #include "glib-utils.h"
 
-
 #define MAX_PATTERNS 128
 
-
 /* gobject utils*/
-
 
 void
 _g_object_unref (gpointer object)
@@ -42,7 +39,6 @@ _g_object_unref (gpointer object)
 	if (object != NULL)
 		g_object_unref (object);
 }
-
 
 /* string utils */
 
@@ -56,7 +52,6 @@ strchrs (const char *str,
 			return TRUE;
 	return FALSE;
 }
-
 
 char *
 str_substitute (const char *str,
@@ -90,7 +85,6 @@ str_substitute (const char *str,
 	return g_string_free (gstr, FALSE);
 }
 
-
 int
 strcmp_null_tolerant (const char *s1, const char *s2)
 {
@@ -103,7 +97,6 @@ strcmp_null_tolerant (const char *s1, const char *s2)
 	else
 		return strcmp (s1, s2);
 }
-
 
 /* counts how many characters to escape in @str. */
 static int
@@ -124,7 +117,6 @@ count_chars_to_escape (const char *str,
 	}
 	return n;
 }
-
 
 char*
 escape_str_common (const char *str,
@@ -166,7 +158,6 @@ escape_str_common (const char *str,
 	return escaped;
 }
 
-
 /* escape with backslash the string @str. */
 char*
 escape_str (const char *str,
@@ -174,7 +165,6 @@ escape_str (const char *str,
 {
 	return escape_str_common (str, meta_chars, '\\', 0);
 }
-
 
 static const char *
 g_utf8_strstr (const char *haystack, const char *needle)
@@ -194,7 +184,6 @@ g_utf8_strstr (const char *haystack, const char *needle)
 
 	return NULL;
 }
-
 
 static char**
 g_utf8_strsplit (const char *string,
@@ -249,7 +238,6 @@ g_utf8_strsplit (const char *string,
 	return str_array;
 }
 
-
 static char*
 g_utf8_strchug (char *string)
 {
@@ -269,7 +257,6 @@ g_utf8_strchug (char *string)
 
 	return string;
 }
-
 
 static char*
 g_utf8_strchomp (char *string)
@@ -298,9 +285,7 @@ g_utf8_strchomp (char *string)
 	return string;
 }
 
-
 #define g_utf8_strstrip(string)    g_utf8_strchomp (g_utf8_strchug (string))
-
 
 gboolean
 match_regexps (GRegex           **regexps,
@@ -326,7 +311,6 @@ match_regexps (GRegex           **regexps,
 	return matched;
 }
 
-
 void
 free_regexps (GRegex **regexps)
 {
@@ -339,7 +323,6 @@ free_regexps (GRegex **regexps)
 		g_regex_unref (regexps[i]);
 	g_free (regexps);
 }
-
 
 char **
 search_util_get_patterns (const char *pattern_string)
@@ -365,7 +348,6 @@ search_util_get_patterns (const char *pattern_string)
 	return patterns;
 }
 
-
 GRegex **
 search_util_get_regexps (const char         *pattern_string,
 			 GRegexCompileFlags  compile_options)
@@ -389,7 +371,6 @@ search_util_get_regexps (const char         *pattern_string,
 	return regexps;
 }
 
-
 const char *
 eat_spaces (const char *line)
 {
@@ -399,7 +380,6 @@ eat_spaces (const char *line)
 		line++;
 	return line;
 }
-
 
 char **
 split_line (const char *line,
@@ -428,7 +408,6 @@ split_line (const char *line,
 	return fields;
 }
 
-
 const char *
 get_last_field (const char *line,
 		int         last_field)
@@ -450,7 +429,6 @@ get_last_field (const char *line,
 
 	return field;
 }
-
 
 void
 debug (const char *file,
@@ -475,9 +453,7 @@ debug (const char *file,
 #endif
 }
 
-
 GHashTable *static_strings = NULL;
-
 
 const char *
 get_static_string (const char *s)
@@ -500,7 +476,6 @@ get_static_string (const char *s)
         return result;
 }
 
-
 char*
 g_uri_display_basename (const char  *uri)
 {
@@ -512,7 +487,6 @@ g_uri_display_basename (const char  *uri)
 
 	return name;
 }
-
 
 const gchar *
 _g_path_get_file_name (const gchar *file_name)
@@ -537,7 +511,6 @@ _g_path_get_file_name (const gchar *file_name)
 
 	return base + 1;
 }
-
 
 const char *
 _g_path_get_base_name (const char *path,

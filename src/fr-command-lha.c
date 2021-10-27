@@ -40,7 +40,6 @@ static void fr_command_lha_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -93,7 +92,6 @@ mktime_from_string (char *month,
 	return mktime (&tm);
 }
 
-
 static char **
 split_line_lha (char *line)
 {
@@ -141,7 +139,6 @@ split_line_lha (char *line)
 	return fields;
 }
 
-
 static const char *
 get_last_field_lha (char *line)
 {
@@ -169,7 +166,6 @@ get_last_field_lha (char *line)
 
 	return field;
 }
-
 
 static void
 process_line (char     *line,
@@ -219,7 +215,6 @@ process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_lha_list (FrCommand  *comm)
 {
@@ -231,7 +226,6 @@ fr_command_lha_list (FrCommand  *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_lha_add (FrCommand     *comm,
@@ -256,7 +250,6 @@ fr_command_lha_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_lha_delete (FrCommand  *comm,
 		       const char *from_file,
@@ -271,7 +264,6 @@ fr_command_lha_delete (FrCommand  *comm,
 		fr_process_add_arg (comm->process, scan->data);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_lha_extract (FrCommand  *comm,
@@ -311,7 +303,6 @@ fr_command_lha_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_lha_test (FrCommand   *comm)
 {
@@ -321,16 +312,13 @@ fr_command_lha_test (FrCommand   *comm)
 	fr_process_end_command (comm->process);
 }
 
-
 const char *lha_mime_type[] = { "application/x-lzh-compressed", "application/x-lha",  NULL };
-
 
 static const char **
 fr_command_lha_get_mime_types (FrCommand *comm)
 {
 	return lha_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_lha_get_capabilities (FrCommand  *comm,
@@ -346,14 +334,12 @@ fr_command_lha_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_lha_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("lha");
 }
-
 
 static void
 fr_command_lha_class_init (FrCommandLhaClass *class)
@@ -376,7 +362,6 @@ fr_command_lha_class_init (FrCommandLhaClass *class)
 	afc->get_packages     = fr_command_lha_get_packages;
 }
 
-
 static void
 fr_command_lha_init (FrCommand *comm)
 {
@@ -390,7 +375,6 @@ fr_command_lha_init (FrCommand *comm)
 	comm->propTest                     = TRUE;
 }
 
-
 static void
 fr_command_lha_finalize (GObject *object)
 {
@@ -401,7 +385,6 @@ fr_command_lha_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_lha_get_type ()
