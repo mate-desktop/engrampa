@@ -103,13 +103,11 @@ static GtkTargetEntry folder_tree_targets[] = {
 	{ "XdndDirectSave0", 0, 2 }
 };
 
-
 typedef struct {
 	FrBatchActionType type;
 	void *            data;
 	GFreeFunc         free_func;
 } FRBatchAction;
-
 
 typedef struct {
 	guint      converting : 1;
@@ -121,12 +119,10 @@ typedef struct {
 	char      *new_file;
 } FRConvertData;
 
-
 typedef enum {
 	FR_CLIPBOARD_OP_CUT,
 	FR_CLIPBOARD_OP_COPY
 } FRClipboardOp;
-
 
 typedef struct {
 	GList       *file_list;
@@ -140,7 +136,6 @@ typedef struct {
 	gboolean     ask_to_open_destination;
 } ExtractData;
 
-
 typedef enum {
 	FR_WINDOW_AREA_MENUBAR,
 	FR_WINDOW_AREA_TOOLBAR,
@@ -150,7 +145,6 @@ typedef enum {
 	FR_WINDOW_AREA_STATUSBAR,
 } FrWindowArea;
 
-
 typedef enum {
 	DIALOG_RESPONSE_NONE = 1,
 	DIALOG_RESPONSE_OPEN_ARCHIVE,
@@ -159,9 +153,7 @@ typedef enum {
 	DIALOG_RESPONSE_QUIT
 } DialogResponse;
 
-
 /* -- FrClipboardData -- */
-
 
 typedef struct {
 	int            refs;
@@ -174,7 +166,6 @@ typedef struct {
 	char          *current_dir;
 } FrClipboardData;
 
-
 static FrClipboardData*
 fr_clipboard_data_new (void)
 {
@@ -186,14 +177,12 @@ fr_clipboard_data_new (void)
 	return data;
 }
 
-
 static FrClipboardData *
 fr_clipboard_data_ref (FrClipboardData *clipboard_data)
 {
 	clipboard_data->refs++;
 	return clipboard_data;
 }
-
 
 static void
 fr_clipboard_data_unref (FrClipboardData *clipboard_data)
@@ -212,7 +201,6 @@ fr_clipboard_data_unref (FrClipboardData *clipboard_data)
 	g_free (clipboard_data);
 }
 
-
 static void
 fr_clipboard_data_set_password (FrClipboardData *clipboard_data,
 				const char      *password)
@@ -222,7 +210,6 @@ fr_clipboard_data_set_password (FrClipboardData *clipboard_data,
 	if (password != NULL)
 		clipboard_data->archive_password = g_strdup (password);
 }
-
 
 /**/
 
@@ -397,9 +384,7 @@ struct _FrWindowPrivateData {
 	GtkWindow        *error_dialog_parent;
 };
 
-
 /* -- fr_window_free_private_data -- */
-
 
 static void
 fr_window_free_batch_data (FrWindow *window)
@@ -422,7 +407,6 @@ fr_window_free_batch_data (FrWindow *window)
 	window->priv->batch_title = NULL;
 }
 
-
 static void
 gh_unref_pixbuf (gpointer key,
 		 gpointer value,
@@ -430,7 +414,6 @@ gh_unref_pixbuf (gpointer key,
 {
 	g_object_unref (value);
 }
-
 
 static void
 fr_window_clipboard_remove_file_list (FrWindow *window,
@@ -472,7 +455,6 @@ fr_window_clipboard_remove_file_list (FrWindow *window,
 	}
 }
 
-
 static void
 fr_window_history_clear (FrWindow *window)
 {
@@ -483,7 +465,6 @@ fr_window_history_clear (FrWindow *window)
 	g_free (window->priv->last_location);
 	window->priv->last_location = NULL;
 }
-
 
 static void
 fr_window_free_open_files (FrWindow *window)
@@ -500,7 +481,6 @@ fr_window_free_open_files (FrWindow *window)
 	g_list_free (window->priv->open_files);
 	window->priv->open_files = NULL;
 }
-
 
 static void
 fr_window_convert_data_free (FrWindow   *window,
@@ -528,7 +508,6 @@ fr_window_convert_data_free (FrWindow   *window,
 		window->priv->convert_data.password = NULL;
 	}
 }
-
 
 static void
 fr_window_free_private_data (FrWindow *window)
@@ -624,7 +603,6 @@ fr_window_free_private_data (FrWindow *window)
 		_g_object_unref (window->priv->settings_caja);
 }
 
-
 static void
 fr_window_finalize (GObject *object)
 {
@@ -656,14 +634,12 @@ fr_window_finalize (GObject *object)
 	G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
-
 static gboolean
 close__step2 (gpointer data)
 {
 	gtk_widget_destroy (GTK_WIDGET (data));
 	return FALSE;
 }
-
 
 void
 fr_window_close (FrWindow *window)
@@ -692,7 +668,6 @@ fr_window_close (FrWindow *window)
 
 	g_idle_add (close__step2, window);
 }
-
 
 static void
 fr_window_class_init (FrWindowClass *class)
@@ -734,9 +709,7 @@ fr_window_class_init (FrWindowClass *class)
 	gobject_class->finalize = fr_window_finalize;
 }
 
-
 static void fr_window_update_paste_command_sensitivity (FrWindow *, GtkClipboard *);
-
 
 static void
 clipboard_owner_change_cb (GtkClipboard *clipboard,
@@ -745,7 +718,6 @@ clipboard_owner_change_cb (GtkClipboard *clipboard,
 {
 	fr_window_update_paste_command_sensitivity ((FrWindow *) user_data, clipboard);
 }
-
 
 static void
 fr_window_realized (GtkWidget *window,
@@ -760,7 +732,6 @@ fr_window_realized (GtkWidget *window,
 			  window);
 }
 
-
 static void
 fr_window_unrealized (GtkWidget *window,
 		      gpointer  *data)
@@ -772,7 +743,6 @@ fr_window_unrealized (GtkWidget *window,
 					      G_CALLBACK (clipboard_owner_change_cb),
 					      window);
 }
-
 
 static void
 fr_window_init (FrWindow *window)
@@ -798,7 +768,6 @@ fr_window_init (FrWindow *window)
 			  G_CALLBACK (fr_window_unrealized),
 			  NULL);
 }
-
 
 GType
 fr_window_get_type (void)
@@ -828,9 +797,7 @@ fr_window_get_type (void)
 	return type;
 }
 
-
 /* -- window history -- */
-
 
 #if 0
 static void
@@ -846,7 +813,6 @@ fr_window_history_print (FrWindow *window)
 	g_print ("\n");
 }
 #endif
-
 
 static void
 fr_window_history_add (FrWindow   *window,
@@ -886,7 +852,6 @@ fr_window_history_add (FrWindow   *window,
 	}
 }
 
-
 static void
 fr_window_history_pop (FrWindow *window)
 {
@@ -903,9 +868,7 @@ fr_window_history_pop (FrWindow *window)
 	g_list_free (first);
 }
 
-
 /* -- window_update_file_list -- */
-
 
 static GPtrArray *
 fr_window_get_current_dir_list (FrWindow *window)
@@ -926,7 +889,6 @@ fr_window_get_current_dir_list (FrWindow *window)
 	return files;
 }
 
-
 static gint
 sort_by_name (gconstpointer  ptr1,
 	      gconstpointer  ptr2)
@@ -943,7 +905,6 @@ sort_by_name (gconstpointer  ptr1,
 
 	return strcmp (fdata1->sort_key, fdata2->sort_key);
 }
-
 
 static gint
 sort_by_size (gconstpointer  ptr1,
@@ -973,7 +934,6 @@ sort_by_size (gconstpointer  ptr1,
 		return -1;
 }
 
-
 static gint
 sort_by_type (gconstpointer  ptr1,
 	      gconstpointer  ptr2)
@@ -1002,7 +962,6 @@ sort_by_type (gconstpointer  ptr1,
 		return result;
 }
 
-
 static gint
 sort_by_time (gconstpointer  ptr1,
 	      gconstpointer  ptr2)
@@ -1026,7 +985,6 @@ sort_by_time (gconstpointer  ptr1,
 	else
 		return -1;
 }
-
 
 static gint
 sort_by_path (gconstpointer  ptr1,
@@ -1054,7 +1012,6 @@ sort_by_path (gconstpointer  ptr1,
 		return result;
 }
 
-
 static guint64
 get_dir_size (FrWindow   *window,
 	      const char *current_dir,
@@ -1081,7 +1038,6 @@ get_dir_size (FrWindow   *window,
 	return size;
 }
 
-
 static gboolean
 file_data_respects_filter (FrWindow *window,
 			   FileData *fdata)
@@ -1097,7 +1053,6 @@ file_data_respects_filter (FrWindow *window,
 
 	return strncasecmp (fdata->name, filter, strlen (filter)) == 0;
 }
-
 
 static gboolean
 compute_file_list_name (FrWindow   *window,
@@ -1157,7 +1112,6 @@ compute_file_list_name (FrWindow   *window,
 	return TRUE;
 }
 
-
 static void
 fr_window_compute_list_names (FrWindow  *window,
 			      GPtrArray *files)
@@ -1198,7 +1152,6 @@ fr_window_compute_list_names (FrWindow  *window,
 	g_hash_table_destroy (names_hash);
 }
 
-
 static gboolean
 fr_window_dir_exists_in_archive (FrWindow   *window,
 				 const char *dir_name)
@@ -1233,7 +1186,6 @@ fr_window_dir_exists_in_archive (FrWindow   *window,
 	return FALSE;
 }
 
-
 static char *
 get_parent_dir (const char *current_dir)
 {
@@ -1261,9 +1213,7 @@ get_parent_dir (const char *current_dir)
 	return retval;
 }
 
-
 static void fr_window_update_statusbar_list_info (FrWindow *window);
-
 
 static GdkPixbuf *
 get_mime_type_icon (const char *mime_type)
@@ -1287,7 +1237,6 @@ get_mime_type_icon (const char *mime_type)
 	return pixbuf;
 }
 
-
 static GdkPixbuf *
 get_icon (FileData  *fdata)
 {
@@ -1301,7 +1250,6 @@ get_icon (FileData  *fdata)
 	return get_mime_type_icon (content_type);
 }
 
-
 static GdkPixbuf *
 get_emblem (FileData  *fdata)
 {
@@ -1310,7 +1258,6 @@ get_emblem (FileData  *fdata)
 
 	return get_mime_type_icon ("emblem-nowrite");
 }
-
 
 static int
 get_column_from_sort_method (FrWindowSortMethod sort_method)
@@ -1328,7 +1275,6 @@ get_column_from_sort_method (FrWindowSortMethod sort_method)
 	return COLUMN_NAME;
 }
 
-
 static int
 get_sort_method_from_column (int column_id)
 {
@@ -1345,7 +1291,6 @@ get_sort_method_from_column (int column_id)
 	return FR_WINDOW_SORT_BY_NAME;
 }
 
-
 static void
 add_selected_from_list_view (GtkTreeModel *model,
 			     GtkTreePath  *path,
@@ -1361,7 +1306,6 @@ add_selected_from_list_view (GtkTreeModel *model,
 	*list = g_list_prepend (*list, fdata);
 }
 
-
 static void
 add_selected_from_tree_view (GtkTreeModel *model,
 			     GtkTreePath  *path,
@@ -1376,7 +1320,6 @@ add_selected_from_tree_view (GtkTreeModel *model,
 			    -1);
 	*list = g_list_prepend (*list, dir_path);
 }
-
 
 static void
 add_selected_fd (GtkTreeModel *model,
@@ -1394,7 +1337,6 @@ add_selected_fd (GtkTreeModel *model,
 		*list = g_list_prepend (*list, fdata);
 }
 
-
 static GList *
 get_selection_as_fd (FrWindow *window)
 {
@@ -1411,7 +1353,6 @@ get_selection_as_fd (FrWindow *window)
 
 	return list;
 }
-
 
 static void
 fr_window_update_statusbar_list_info (FrWindow *window)
@@ -1487,7 +1428,6 @@ fr_window_update_statusbar_list_info (FrWindow *window)
 	g_free (selected_info);
 	g_free (info);
 }
-
 
 static void
 fr_window_populate_file_list (FrWindow  *window,
@@ -1599,7 +1539,6 @@ fr_window_populate_file_list (FrWindow  *window,
 	fr_window_stop_activity_mode (window);
 }
 
-
 static int
 path_compare (gconstpointer a,
 	      gconstpointer b)
@@ -1609,7 +1548,6 @@ path_compare (gconstpointer a,
 
 	return strcmp (path_a, path_b);
 }
-
 
 static gboolean
 get_tree_iter_from_path (FrWindow    *window,
@@ -1647,7 +1585,6 @@ get_tree_iter_from_path (FrWindow    *window,
 	return result;
 }
 
-
 static void
 set_sensitive (FrWindow   *window,
 	       const char *action_name,
@@ -1658,7 +1595,6 @@ set_sensitive (FrWindow   *window,
 	action = gtk_action_group_get_action (window->priv->actions, action_name);
 	g_object_set (action, "sensitive", sensitive, NULL);
 }
-
 
 static void
 fr_window_update_current_location (FrWindow *window)
@@ -1702,7 +1638,6 @@ fr_window_update_current_location (FrWindow *window)
 	}
 	g_free (path);
 }
-
 
 static void
 fr_window_update_dir_tree (FrWindow *window)
@@ -1833,7 +1768,6 @@ fr_window_update_dir_tree (FrWindow *window)
 	fr_window_update_current_location (window);
 }
 
-
 static void
 fr_window_update_filter_bar_visibility (FrWindow *window)
 {
@@ -1845,7 +1779,6 @@ fr_window_update_filter_bar_visibility (FrWindow *window)
 	else
 		gtk_widget_show (window->priv->filter_bar);
 }
-
 
 static void
 fr_window_update_file_list (FrWindow *window,
@@ -1926,13 +1859,11 @@ fr_window_update_file_list (FrWindow *window,
 		g_ptr_array_free (files, TRUE);
 }
 
-
 void
 fr_window_update_list_order (FrWindow *window)
 {
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (window->priv->list_store), get_column_from_sort_method (window->priv->sort_method), window->priv->sort_type);
 }
-
 
 static void
 fr_window_update_title (FrWindow *window)
@@ -1954,7 +1885,6 @@ fr_window_update_title (FrWindow *window)
 	}
 }
 
-
 static void
 check_whether_has_a_dir (GtkTreeModel *model,
 			 GtkTreePath  *path,
@@ -1970,7 +1900,6 @@ check_whether_has_a_dir (GtkTreeModel *model,
 	if (file_data_is_dir (fdata))
 		*has_a_dir = TRUE;
 }
-
 
 static gboolean
 selection_has_a_dir (FrWindow *window)
@@ -1992,7 +1921,6 @@ selection_has_a_dir (FrWindow *window)
 	return has_a_dir;
 }
 
-
 static void
 set_active (FrWindow   *window,
 	    const char *action_name,
@@ -2003,7 +1931,6 @@ set_active (FrWindow   *window,
 	action = gtk_action_group_get_action (window->priv->actions, action_name);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), is_active);
 }
-
 
 static void
 fr_window_update_paste_command_sensitivity (FrWindow     *window,
@@ -2026,7 +1953,6 @@ fr_window_update_paste_command_sensitivity (FrWindow     *window,
 
 	set_sensitive (window, "Paste", ! no_archive && ! ro && ! running && ! compr_file && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT) && gtk_clipboard_wait_is_target_available (clipboard, FR_SPECIAL_URI_LIST));
 }
-
 
 static void
 fr_window_update_sensitivity (FrWindow *window)
@@ -2103,7 +2029,6 @@ fr_window_update_sensitivity (FrWindow *window)
 	set_sensitive (window, "ViewAsFolder", ! window->priv->filter_mode);
 }
 
-
 static gboolean
 location_entry_key_press_event_cb (GtkWidget   *widget,
 				   GdkEventKey *event,
@@ -2118,7 +2043,6 @@ location_entry_key_press_event_cb (GtkWidget   *widget,
 
 	return FALSE;
 }
-
 
 static gboolean
 real_close_progress_dialog (gpointer data)
@@ -2135,7 +2059,6 @@ real_close_progress_dialog (gpointer data)
 
 	return FALSE;
 }
-
 
 static void close_suspend_process(FrWindow *window)
 {
@@ -2176,7 +2099,6 @@ close_progress_dialog (FrWindow *window,
     close_suspend_process(window);
 }
 
-
 static gboolean
 progress_dialog_delete_event (GtkWidget *caller,
 			      GdkEvent  *event,
@@ -2189,7 +2111,6 @@ progress_dialog_delete_event (GtkWidget *caller,
 
 	return TRUE;
 }
-
 
 static void
 open_folder (GtkWindow  *parent,
@@ -2222,7 +2143,6 @@ open_folder (GtkWindow  *parent,
 		g_clear_error (&error);
 	}
 }
-
 
 static void
 fr_window_view_extraction_destination_folder (FrWindow *window)
@@ -2310,7 +2230,6 @@ progress_dialog_response (GtkDialog *dialog,
 	}
 }
 
-
 static char*
 get_action_description (FrAction    action,
 			const char *uri)
@@ -2376,7 +2295,6 @@ get_action_description (FrAction    action,
 	return message;
 }
 
-
 static void
 progress_dialog_update_action_description (FrWindow *window)
 {
@@ -2407,7 +2325,6 @@ progress_dialog_update_action_description (FrWindow *window)
 	g_free (description);
 }
 
-
 static gboolean
 fr_window_working_archive_cb (FrCommand  *command,
 			      const char *archive_filename,
@@ -2421,7 +2338,6 @@ fr_window_working_archive_cb (FrCommand  *command,
 
 	return TRUE;
 }
-
 
 static gboolean
 fr_window_message_cb (FrCommand  *command,
@@ -2479,7 +2395,6 @@ fr_window_message_cb (FrCommand  *command,
 	return TRUE;
 }
 
-
 static GtkWidget*
 dialog_add_button_with_icon_name (GtkDialog   *dialog,
                                   const gchar *button_text,
@@ -2499,7 +2414,6 @@ dialog_add_button_with_icon_name (GtkDialog   *dialog,
 
 	return button;
 }
-
 
 static void
 create_the_progress_dialog (FrWindow *window)
@@ -2626,7 +2540,6 @@ create_the_progress_dialog (FrWindow *window)
 			  window);
 }
 
-
 static gboolean
 display_progress_dialog (gpointer data)
 {
@@ -2650,7 +2563,6 @@ display_progress_dialog (gpointer data)
 
 	return FALSE;
 }
-
 
 static void
 open_progress_dialog (FrWindow *window,
@@ -2690,7 +2602,6 @@ open_progress_dialog (FrWindow *window,
 								display_progress_dialog,
 								window);
 }
-
 
 static gboolean
 fr_window_progress_cb (FrArchive *archive,
@@ -2743,7 +2654,6 @@ fr_window_progress_cb (FrArchive *archive,
 	return TRUE;
 }
 
-
 static void
 open_progress_dialog_with_open_destination (FrWindow *window)
 {
@@ -2771,7 +2681,6 @@ open_progress_dialog_with_open_destination (FrWindow *window)
 	fr_window_message_cb (NULL, _("Extraction completed successfully"), window);
 }
 
-
 static void
 open_progress_dialog_with_open_archive (FrWindow *window)
 {
@@ -2796,7 +2705,6 @@ open_progress_dialog_with_open_archive (FrWindow *window)
 	fr_window_message_cb (NULL, _("Archive created successfully"), window);
 }
 
-
 void
 fr_window_push_message (FrWindow   *window,
 			const char *msg)
@@ -2809,7 +2717,6 @@ fr_window_push_message (FrWindow   *window,
 			    msg);
 }
 
-
 void
 fr_window_pop_message (FrWindow *window)
 {
@@ -2819,7 +2726,6 @@ fr_window_pop_message (FrWindow *window)
 	if (window->priv->progress_dialog != NULL)
 		gtk_label_set_text (GTK_LABEL (window->priv->pd_message), "");
 }
-
 
 static void
 action_started (FrArchive *archive,
@@ -2855,7 +2761,6 @@ action_started (FrArchive *archive,
 	}
 }
 
-
 static void
 fr_window_add_to_recent_list (FrWindow *window,
 			      char     *uri)
@@ -2881,7 +2786,6 @@ fr_window_add_to_recent_list (FrWindow *window,
 		gtk_recent_manager_add_item (gtk_recent_manager_get_default (), uri);
 }
 
-
 static void
 fr_window_remove_from_recent_list (FrWindow *window,
 				   char     *filename)
@@ -2889,7 +2793,6 @@ fr_window_remove_from_recent_list (FrWindow *window,
 	if (filename != NULL)
 		gtk_recent_manager_remove_item (gtk_recent_manager_get_default (), filename, NULL);
 }
-
 
 static void
 error_dialog_response_cb (GtkDialog *dialog,
@@ -2909,7 +2812,6 @@ error_dialog_response_cb (GtkDialog *dialog,
 	if (window->priv->destroy_with_error_dialog)
 		gtk_widget_destroy (GTK_WIDGET (window));
 }
-
 
 static void
 fr_window_show_error_dialog (FrWindow   *window,
@@ -2949,13 +2851,11 @@ fr_window_show_error_dialog (FrWindow   *window,
 	window->priv->error_dialog_parent = dialog_parent;
 }
 
-
 void
 fr_window_destroy_with_error_dialog (FrWindow *window)
 {
 	window->priv->destroy_with_error_dialog = TRUE;
 }
-
 
 static gboolean
 handle_errors (FrWindow    *window,
@@ -3085,7 +2985,6 @@ handle_errors (FrWindow    *window,
 	return TRUE;
 }
 
-
 static void
 convert__action_performed (FrArchive   *archive,
 			   FrAction     action,
@@ -3119,9 +3018,7 @@ convert__action_performed (FrArchive   *archive,
 	fr_window_update_statusbar_list_info (window);
 }
 
-
 static void fr_window_exec_next_batch_action (FrWindow *window);
-
 
 static void
 action_performed (FrArchive   *archive,
@@ -3312,12 +3209,9 @@ action_performed (FrArchive   *archive,
 	}
 }
 
-
 /* -- selections -- */
 
-
 #undef DEBUG_GET_DIR_LIST_FROM_PATH
-
 
 static GList *
 get_dir_list_from_path (FrWindow *window,
@@ -3366,7 +3260,6 @@ get_dir_list_from_path (FrWindow *window,
 	return g_list_reverse (list);
 }
 
-
 static GList *
 get_dir_list_from_file_data (FrWindow *window,
 				   FileData *fdata)
@@ -3382,7 +3275,6 @@ get_dir_list_from_file_data (FrWindow *window,
 
 	return list;
 }
-
 
 GList *
 fr_window_get_file_list_selection (FrWindow *window,
@@ -3425,7 +3317,6 @@ fr_window_get_file_list_selection (FrWindow *window,
 	return g_list_reverse (list);
 }
 
-
 GList *
 fr_window_get_folder_tree_selection (FrWindow *window,
 				     gboolean  recursive,
@@ -3462,7 +3353,6 @@ fr_window_get_folder_tree_selection (FrWindow *window,
 
 	return g_list_reverse (list);
 }
-
 
 GList *
 fr_window_get_file_list_from_path_list (FrWindow *window,
@@ -3522,7 +3412,6 @@ fr_window_get_file_list_from_path_list (FrWindow *window,
 	return g_list_reverse (list);
 }
 
-
 GList *
 fr_window_get_file_list_pattern (FrWindow    *window,
 				 const char  *pattern)
@@ -3554,7 +3443,6 @@ fr_window_get_file_list_pattern (FrWindow    *window,
 	return g_list_reverse (list);
 }
 
-
 static GList *
 fr_window_get_file_list (FrWindow *window)
 {
@@ -3572,16 +3460,13 @@ fr_window_get_file_list (FrWindow *window)
 	return g_list_reverse (list);
 }
 
-
 int
 fr_window_get_n_selected_files (FrWindow *window)
 {
 	return gtk_tree_selection_count_selected_rows (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
 }
 
-
 /**/
-
 
 static int
 dir_tree_button_press_cb (GtkWidget      *widget,
@@ -3637,7 +3522,6 @@ dir_tree_button_press_cb (GtkWidget      *widget,
 	return FALSE;
 }
 
-
 static FileData *
 fr_window_get_selected_item_from_file_list (FrWindow *window)
 {
@@ -3665,7 +3549,6 @@ fr_window_get_selected_item_from_file_list (FrWindow *window)
 	return fdata;
 }
 
-
 static char *
 fr_window_get_selected_folder_in_tree_view (FrWindow *window)
 {
@@ -3689,7 +3572,6 @@ fr_window_get_selected_folder_in_tree_view (FrWindow *window)
 
 	return path;
 }
-
 
 void
 fr_window_current_folder_activated (FrWindow *window,
@@ -3721,7 +3603,6 @@ fr_window_current_folder_activated (FrWindow *window,
 
 	g_free (dir_path);
 }
-
 
 static gboolean
 row_activated_cb (GtkTreeView       *tree_view,
@@ -3759,7 +3640,6 @@ row_activated_cb (GtkTreeView       *tree_view,
 
 	return FALSE;
 }
-
 
 static int
 file_button_press_cb (GtkWidget      *widget,
@@ -3848,7 +3728,6 @@ file_button_press_cb (GtkWidget      *widget,
 	return FALSE;
 }
 
-
 static int
 file_button_release_cb (GtkWidget      *widget,
 			GdkEventButton *event,
@@ -3900,7 +3779,6 @@ file_button_release_cb (GtkWidget      *widget,
 
 	return FALSE;
 }
-
 
 static gboolean
 file_motion_notify_callback (GtkWidget *widget,
@@ -3960,7 +3838,6 @@ file_motion_notify_callback (GtkWidget *widget,
  	return FALSE;
 }
 
-
 static gboolean
 file_leave_notify_callback (GtkWidget *widget,
 			    GdkEventCrossing *event,
@@ -3984,9 +3861,7 @@ file_leave_notify_callback (GtkWidget *widget,
 	return FALSE;
 }
 
-
 /* -- drag and drop -- */
-
 
 static GList *
 get_uri_list_from_selection_data (char *uri_list)
@@ -4005,7 +3880,6 @@ get_uri_list_from_selection_data (char *uri_list)
 
 	return g_list_reverse (list);
 }
-
 
 static gboolean
 fr_window_drag_motion (GtkWidget      *widget,
@@ -4027,9 +3901,7 @@ fr_window_drag_motion (GtkWidget      *widget,
 	return TRUE;
 }
 
-
 static void fr_window_paste_from_clipboard_data (FrWindow *window, FrClipboardData *data);
-
 
 static FrClipboardData*
 get_clipboard_data_from_selection_data (FrWindow   *window,
@@ -4059,7 +3931,6 @@ get_clipboard_data_from_selection_data (FrWindow   *window,
 
 	return clipboard_data;
 }
-
 
 static void
 fr_window_drag_data_received  (GtkWidget          *widget,
@@ -4229,7 +4100,6 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 	debug (DEBUG_INFO, "::DragDataReceived <--\n");
 }
 
-
 static gboolean
 file_list_drag_begin (GtkWidget          *widget,
 		      GdkDragContext     *context,
@@ -4256,7 +4126,6 @@ file_list_drag_begin (GtkWidget          *widget,
 
 	return TRUE;
 }
-
 
 static void
 file_list_drag_end (GtkWidget      *widget,
@@ -4292,7 +4161,6 @@ file_list_drag_end (GtkWidget      *widget,
 	debug (DEBUG_INFO, "::DragEnd <--\n");
 }
 
-
 /* The following three functions taken from bugzilla
  * (http://bugzilla.mate.org/attachment.cgi?id=49362&action=view)
  * Author: Christian Neumair
@@ -4321,14 +4189,12 @@ get_xds_atom_value (GdkDragContext *context)
 	return ret;
 }
 
-
 static gboolean
 context_offers_target (GdkDragContext *context,
 		       GdkAtom target)
 {
 	return (g_list_find (gdk_drag_context_list_targets (context), target) != NULL);
 }
-
 
 static gboolean
 caja_xds_dnd_is_valid_xds_context (GdkDragContext *context)
@@ -4348,7 +4214,6 @@ caja_xds_dnd_is_valid_xds_context (GdkDragContext *context)
 
 	return ret;
 }
-
 
 static char *
 get_selection_data_from_clipboard_data (FrWindow        *window,
@@ -4379,7 +4244,6 @@ get_selection_data_from_clipboard_data (FrWindow        *window,
 
 	return g_string_free (list, FALSE);
 }
-
 
 static gboolean
 fr_window_folder_tree_drag_data_get (GtkWidget        *widget,
@@ -4463,7 +4327,6 @@ fr_window_folder_tree_drag_data_get (GtkWidget        *widget,
 	return TRUE;
 }
 
-
 gboolean
 fr_window_file_list_drag_data_get (FrWindow         *window,
 				   GdkDragContext   *context,
@@ -4543,9 +4406,7 @@ fr_window_file_list_drag_data_get (FrWindow         *window,
 	return TRUE;
 }
 
-
 /* -- window_new -- */
-
 
 static void
 fr_window_deactivate_filter (FrWindow *window)
@@ -4563,7 +4424,6 @@ fr_window_deactivate_filter (FrWindow *window)
 	fr_window_update_dir_tree (window);
 	fr_window_update_current_location (window);
 }
-
 
 static gboolean
 key_press_cb (GtkWidget   *widget,
@@ -4657,7 +4517,6 @@ key_press_cb (GtkWidget   *widget,
 	return retval;
 }
 
-
 static gboolean
 dir_tree_selection_changed_cb (GtkTreeSelection *selection,
 			       gpointer          user_data)
@@ -4679,7 +4538,6 @@ dir_tree_selection_changed_cb (GtkTreeSelection *selection,
 	return FALSE;
 }
 
-
 static gboolean
 selection_changed_cb (GtkTreeSelection *selection,
 		      gpointer          user_data)
@@ -4692,7 +4550,6 @@ selection_changed_cb (GtkTreeSelection *selection,
 	return FALSE;
 }
 
-
 static void
 fr_window_delete_event_cb (GtkWidget *caller,
 			   GdkEvent  *event,
@@ -4700,7 +4557,6 @@ fr_window_delete_event_cb (GtkWidget *caller,
 {
 	fr_window_close (window);
 }
-
 
 static gboolean
 is_single_click_policy (FrWindow *window)
@@ -4717,7 +4573,6 @@ is_single_click_policy (FrWindow *window)
 
 	return result;
 }
-
 
 static void
 filename_cell_data_func (GtkTreeViewColumn *column,
@@ -4756,7 +4611,6 @@ filename_cell_data_func (GtkTreeViewColumn *column,
 
 	g_free (text);
 }
-
 
 static void
 add_dir_tree_columns (FrWindow    *window,
@@ -4801,7 +4655,6 @@ add_dir_tree_columns (FrWindow    *window,
 
 	gtk_tree_view_append_column (GTK_TREE_VIEW (treeview), column);
 }
-
 
 static void
 add_file_list_columns (FrWindow    *window,
@@ -4894,7 +4747,6 @@ add_file_list_columns (FrWindow    *window,
 	}
 }
 
-
 static int
 name_column_sort_func (GtkTreeModel *model,
 		       GtkTreeIter  *a,
@@ -4908,7 +4760,6 @@ name_column_sort_func (GtkTreeModel *model,
 
 	return sort_by_name (&fdata1, &fdata2);
 }
-
 
 static int
 size_column_sort_func (GtkTreeModel *model,
@@ -4924,7 +4775,6 @@ size_column_sort_func (GtkTreeModel *model,
 	return sort_by_size (&fdata1, &fdata2);
 }
 
-
 static int
 type_column_sort_func (GtkTreeModel *model,
 		       GtkTreeIter  *a,
@@ -4938,7 +4788,6 @@ type_column_sort_func (GtkTreeModel *model,
 
 	return sort_by_type (&fdata1, &fdata2);
 }
-
 
 static int
 time_column_sort_func (GtkTreeModel *model,
@@ -4954,7 +4803,6 @@ time_column_sort_func (GtkTreeModel *model,
 	return sort_by_time (&fdata1, &fdata2);
 }
 
-
 static int
 path_column_sort_func (GtkTreeModel *model,
 		       GtkTreeIter  *a,
@@ -4969,7 +4817,6 @@ path_column_sort_func (GtkTreeModel *model,
 	return sort_by_path (&fdata1, &fdata2);
 }
 
-
 static int
 no_sort_column_sort_func (GtkTreeModel *model,
 			  GtkTreeIter  *a,
@@ -4978,7 +4825,6 @@ no_sort_column_sort_func (GtkTreeModel *model,
 {
 	return -1;
 }
-
 
 static void
 sort_column_changed_cb (GtkTreeSortable *sortable,
@@ -5000,7 +4846,6 @@ sort_column_changed_cb (GtkTreeSortable *sortable,
 	set_active (window, "SortReverseOrder", (window->priv->sort_type == GTK_SORT_DESCENDING));*/
 }
 
-
 static gboolean
 fr_window_show_cb (GtkWidget *widget,
 		   FrWindow  *window)
@@ -5018,9 +4863,7 @@ fr_window_show_cb (GtkWidget *widget,
 	return TRUE;
 }
 
-
 /* preferences changes notification callbacks */
-
 
 static void
 pref_history_len_changed (GSettings *settings,
@@ -5040,7 +4883,6 @@ pref_history_len_changed (GSettings *settings,
 	gtk_recent_chooser_set_limit (GTK_RECENT_CHOOSER (action), limit);
 }
 
-
 static void
 pref_view_toolbar_changed (GSettings *settings,
                            const char *key,
@@ -5050,7 +4892,6 @@ pref_view_toolbar_changed (GSettings *settings,
 
 	fr_window_set_toolbar_visibility (window, g_settings_get_boolean (settings, key));
 }
-
 
 static void
 pref_view_statusbar_changed (GSettings *settings,
@@ -5062,7 +4903,6 @@ pref_view_statusbar_changed (GSettings *settings,
 	fr_window_set_statusbar_visibility (window, g_settings_get_boolean (settings, key));
 }
 
-
 static void
 pref_view_folders_changed (GSettings *settings,
                            const char *key,
@@ -5073,7 +4913,6 @@ pref_view_folders_changed (GSettings *settings,
 	fr_window_set_folders_visibility (window, g_settings_get_boolean (settings, key));
 }
 
-
 static void
 pref_show_field_changed (GSettings *settings,
                          const char *key,
@@ -5083,7 +4922,6 @@ pref_show_field_changed (GSettings *settings,
 
 	fr_window_update_columns_visibility (window);
 }
-
 
 static void
 pref_click_policy_changed (GSettings *settings,
@@ -5101,7 +4939,6 @@ pref_click_policy_changed (GSettings *settings,
 	if (display != NULL)
 		gdk_display_flush (display);
 }
-
 
 static void
 pref_use_mime_icons_changed (GSettings *settings,
@@ -5122,7 +4959,6 @@ pref_use_mime_icons_changed (GSettings *settings,
 	fr_window_update_dir_tree (window);
 }
 
-
 static void
 theme_changed_cb (GtkIconTheme *theme, FrWindow *window)
 {
@@ -5140,7 +4976,6 @@ theme_changed_cb (GtkIconTheme *theme, FrWindow *window)
 	fr_window_update_dir_tree (window);
 }
 
-
 static gboolean
 fr_window_stoppable_cb (FrCommand  *command,
 			gboolean    stoppable,
@@ -5154,7 +4989,6 @@ fr_window_stoppable_cb (FrCommand  *command,
 						   stoppable);
 	return TRUE;
 }
-
 
 static gboolean
 fr_window_fake_load (FrArchive *archive,
@@ -5205,7 +5039,6 @@ fr_window_fake_load (FrArchive *archive,
 #endif
 }
 
-
 static void
 menu_item_select_cb (GtkMenuItem *proxy,
 		     FrWindow    *window)
@@ -5224,7 +5057,6 @@ menu_item_select_cb (GtkMenuItem *proxy,
 	}
 }
 
-
 static void
 menu_item_deselect_cb (GtkMenuItem *proxy,
 		       FrWindow    *window)
@@ -5232,7 +5064,6 @@ menu_item_deselect_cb (GtkMenuItem *proxy,
 	gtk_statusbar_pop (GTK_STATUSBAR (window->priv->statusbar),
 			   window->priv->help_message_cid);
 }
-
 
 static void
 disconnect_proxy_cb (GtkUIManager *manager,
@@ -5248,7 +5079,6 @@ disconnect_proxy_cb (GtkUIManager *manager,
 	}
 }
 
-
 static void
 connect_proxy_cb (GtkUIManager *manager,
 		  GtkAction    *action,
@@ -5263,7 +5093,6 @@ connect_proxy_cb (GtkUIManager *manager,
 	}
 }
 
-
 static void
 view_as_radio_action (GtkAction      *action,
 		      GtkRadioAction *current,
@@ -5272,7 +5101,6 @@ view_as_radio_action (GtkAction      *action,
 	FrWindow *window = data;
 	fr_window_set_list_mode (window, gtk_radio_action_get_current_value (current));
 }
-
 
 static void
 sort_by_radio_action (GtkAction      *action,
@@ -5286,7 +5114,6 @@ sort_by_radio_action (GtkAction      *action,
 	fr_window_update_list_order (window);
 }
 
-
 static void
 recent_chooser_item_activated_cb (GtkRecentChooser *chooser,
 				  FrWindow         *window)
@@ -5299,7 +5126,6 @@ recent_chooser_item_activated_cb (GtkRecentChooser *chooser,
 		g_free (uri);
 	}
 }
-
 
 static void
 fr_window_init_recent_chooser (FrWindow         *window,
@@ -5328,14 +5154,12 @@ fr_window_init_recent_chooser (FrWindow         *window,
 			  window);
 }
 
-
 static void
 close_sidepane_button_clicked_cb (GtkButton *button,
 				  FrWindow  *window)
 {
 	fr_window_set_folders_visibility (window, FALSE);
 }
-
 
 static void
 fr_window_activate_filter (FrWindow *window)
@@ -5356,14 +5180,12 @@ fr_window_activate_filter (FrWindow *window)
 	fr_window_update_current_location (window);
 }
 
-
 static void
 filter_entry_activate_cb (GtkEntry *entry,
 			  FrWindow *window)
 {
 	fr_window_activate_filter (window);
 }
-
 
 static void
 filter_entry_icon_release_cb (GtkEntry             *entry,
@@ -5376,7 +5198,6 @@ filter_entry_icon_release_cb (GtkEntry             *entry,
 	if ((event->button == 1) && (icon_pos == GTK_ENTRY_ICON_SECONDARY))
 		fr_window_deactivate_filter (window);
 }
-
 
 static void
 fr_window_attach (FrWindow      *window,
@@ -5426,7 +5247,6 @@ fr_window_attach (FrWindow      *window,
 			 1, 1);
 }
 
-
 static void
 set_action_important (GtkUIManager *ui,
 		      const char   *action_name)
@@ -5437,7 +5257,6 @@ set_action_important (GtkUIManager *ui,
 	g_object_set (action, "is_important", TRUE, NULL);
 	g_object_unref (action);
 }
-
 
 static void
 fr_window_construct (FrWindow *window)
@@ -5916,7 +5735,6 @@ fr_window_construct (FrWindow *window)
 				 GDK_KEY_q, GDK_CONTROL_MASK, 0,
 				 g_cclosure_new_swap (G_CALLBACK (fr_window_close), window, NULL));
 
-
 	if (! gtk_ui_manager_add_ui_from_resource (ui, ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "menus-toolbars.ui", &error)) {
 		g_message ("building menus failed: %s", error->message);
 		g_error_free (error);
@@ -6088,7 +5906,6 @@ fr_window_construct (FrWindow *window)
 	gtk_widget_grab_focus (window->priv->list_view);
 }
 
-
 GtkWidget *
 fr_window_new (void)
 {
@@ -6100,7 +5917,6 @@ fr_window_new (void)
 	return window;
 }
 
-
 static void
 fr_window_set_archive_uri (FrWindow   *window,
 			   const char *uri)
@@ -6109,7 +5925,6 @@ fr_window_set_archive_uri (FrWindow   *window,
 			g_free (window->priv->archive_uri);
 		window->priv->archive_uri = g_strdup (uri);
 }
-
 
 gboolean
 fr_window_archive_new (FrWindow   *window,
@@ -6141,7 +5956,6 @@ fr_window_archive_new (FrWindow   *window,
 	return TRUE;
 }
 
-
 FrWindow *
 fr_window_archive_open (FrWindow   *current_window,
 			const char *uri,
@@ -6171,7 +5985,6 @@ fr_window_archive_open (FrWindow   *current_window,
 	return window;
 }
 
-
 void
 fr_window_archive_close (FrWindow *window)
 {
@@ -6199,7 +6012,6 @@ fr_window_archive_close (FrWindow *window)
 	fr_window_update_statusbar_list_info (window);
 }
 
-
 const char *
 fr_window_get_archive_uri (FrWindow *window)
 {
@@ -6207,7 +6019,6 @@ fr_window_get_archive_uri (FrWindow *window)
 
 	return window->priv->archive_uri;
 }
-
 
 const char *
 fr_window_get_paste_archive_uri (FrWindow *window)
@@ -6220,7 +6031,6 @@ fr_window_get_paste_archive_uri (FrWindow *window)
 		return NULL;
 }
 
-
 gboolean
 fr_window_archive_is_present (FrWindow *window)
 {
@@ -6229,14 +6039,12 @@ fr_window_archive_is_present (FrWindow *window)
 	return window->priv->archive_present;
 }
 
-
 typedef struct {
 	char     *uri;
 	char     *password;
 	gboolean  encrypt_header;
 	guint     volume_size;
 } SaveAsData;
-
 
 static SaveAsData *
 save_as_data_new (const char *uri,
@@ -6257,7 +6065,6 @@ save_as_data_new (const char *uri,
 	return sdata;
 }
 
-
 static void
 save_as_data_free (SaveAsData *sdata)
 {
@@ -6267,7 +6074,6 @@ save_as_data_free (SaveAsData *sdata)
 	g_free (sdata->password);
 	g_free (sdata);
 }
-
 
 void
 fr_window_archive_save_as (FrWindow   *window,
@@ -6363,7 +6169,6 @@ fr_window_archive_save_as (FrWindow   *window,
 	fr_process_start (window->archive->process);
 }
 
-
 void
 fr_window_archive_reload (FrWindow *window)
 {
@@ -6377,9 +6182,7 @@ fr_window_archive_reload (FrWindow *window)
 	fr_archive_reload (window->archive, window->priv->password);
 }
 
-
 /**/
-
 
 void
 fr_window_archive_add_files (FrWindow *window,
@@ -6429,7 +6232,6 @@ fr_window_archive_add_files (FrWindow *window,
 	g_object_unref (base);
 }
 
-
 void
 fr_window_archive_add_with_wildcard (FrWindow      *window,
 				     const char    *include_files,
@@ -6454,7 +6256,6 @@ fr_window_archive_add_with_wildcard (FrWindow      *window,
 				      window->priv->volume_size);
 }
 
-
 void
 fr_window_archive_add_directory (FrWindow      *window,
 				 const char    *directory,
@@ -6472,7 +6273,6 @@ fr_window_archive_add_directory (FrWindow      *window,
 				  window->priv->compression,
 				  window->priv->volume_size);
 }
-
 
 void
 fr_window_archive_add_items (FrWindow      *window,
@@ -6492,7 +6292,6 @@ fr_window_archive_add_items (FrWindow      *window,
 			      window->priv->volume_size);
 }
 
-
 void
 fr_window_archive_add_dropped_items (FrWindow *window,
 				     GList    *item_list,
@@ -6509,7 +6308,6 @@ fr_window_archive_add_dropped_items (FrWindow *window,
 				      window->priv->volume_size);
 }
 
-
 void
 fr_window_archive_remove (FrWindow      *window,
 			  GList         *file_list)
@@ -6521,9 +6319,7 @@ fr_window_archive_remove (FrWindow      *window,
 	fr_process_start (window->archive->process);
 }
 
-
 /* -- window_archive_extract -- */
-
 
 static ExtractData*
 extract_data_new (GList       *file_list,
@@ -6552,7 +6348,6 @@ extract_data_new (GList       *file_list,
 	return edata;
 }
 
-
 static ExtractData*
 extract_to_data_new (const char *extract_to_dir)
 {
@@ -6566,7 +6361,6 @@ extract_to_data_new (const char *extract_to_dir)
 				 FALSE);
 }
 
-
 static void
 extract_data_free (ExtractData *edata)
 {
@@ -6578,7 +6372,6 @@ extract_data_free (ExtractData *edata)
 
 	g_free (edata);
 }
-
 
 static gboolean
 archive_is_encrypted (FrWindow *window,
@@ -6625,7 +6418,6 @@ archive_is_encrypted (FrWindow *window,
 	return encrypted;
 }
 
-
 void
 fr_window_archive_extract_here (FrWindow   *window,
 				gboolean    skip_older,
@@ -6665,9 +6457,7 @@ fr_window_archive_extract_here (FrWindow   *window,
 	}
 }
 
-
 /* -- fr_window_archive_extract -- */
-
 
 typedef struct {
 	FrWindow    *window;
@@ -6676,11 +6466,9 @@ typedef struct {
 	gboolean     extract_all;
 } OverwriteData;
 
-
 #define _FR_RESPONSE_OVERWRITE_YES_ALL 100
 #define _FR_RESPONSE_OVERWRITE_YES     101
 #define _FR_RESPONSE_OVERWRITE_NO      102
-
 
 static void
 _fr_window_archive_extract_from_edata (FrWindow    *window,
@@ -6700,9 +6488,7 @@ _fr_window_archive_extract_from_edata (FrWindow    *window,
 	fr_process_start (window->archive->process);
 }
 
-
 static void _fr_window_ask_overwrite_dialog (OverwriteData *odata);
-
 
 static void
 overwrite_dialog_response_cb (GtkDialog *dialog,
@@ -6751,7 +6537,6 @@ overwrite_dialog_response_cb (GtkDialog *dialog,
 
 	_fr_window_ask_overwrite_dialog (odata);
 }
-
 
 static void
 _fr_window_ask_overwrite_dialog (OverwriteData *odata)
@@ -6854,7 +6639,6 @@ _fr_window_ask_overwrite_dialog (OverwriteData *odata)
 	}
 	g_free (odata);
 }
-
 
 void
 fr_window_archive_extract (FrWindow    *window,
@@ -6978,7 +6762,6 @@ fr_window_archive_extract (FrWindow    *window,
 		_fr_window_archive_extract_from_edata (window, edata);
 }
 
-
 void
 fr_window_archive_test (FrWindow *window)
 {
@@ -6988,7 +6771,6 @@ fr_window_archive_test (FrWindow *window)
 					    NULL);
 	fr_archive_test (window->archive, window->priv->password);
 }
-
 
 void
 fr_window_set_password (FrWindow   *window,
@@ -7028,7 +6810,6 @@ fr_window_get_password (FrWindow *window)
 	return window->priv->password;
 }
 
-
 void
 fr_window_set_encrypt_header (FrWindow *window,
 			      gboolean  encrypt_header)
@@ -7038,13 +6819,11 @@ fr_window_set_encrypt_header (FrWindow *window,
 	window->priv->encrypt_header = encrypt_header;
 }
 
-
 gboolean
 fr_window_get_encrypt_header (FrWindow *window)
 {
 	return window->priv->encrypt_header;
 }
-
 
 void
 fr_window_set_compression (FrWindow      *window,
@@ -7055,13 +6834,11 @@ fr_window_set_compression (FrWindow      *window,
 	window->priv->compression = compression;
 }
 
-
 FrCompression
 fr_window_get_compression (FrWindow *window)
 {
 	return window->priv->compression;
 }
-
 
 void
 fr_window_set_volume_size (FrWindow *window,
@@ -7072,13 +6849,11 @@ fr_window_set_volume_size (FrWindow *window,
 	window->priv->volume_size = volume_size;
 }
 
-
 guint
 fr_window_get_volume_size (FrWindow *window)
 {
 	return window->priv->volume_size;
 }
-
 
 void
 fr_window_go_to_location (FrWindow   *window,
@@ -7112,7 +6887,6 @@ fr_window_go_to_location (FrWindow   *window,
 		g_free (dir);
 }
 
-
 const char *
 fr_window_get_current_location (FrWindow *window)
 {
@@ -7123,7 +6897,6 @@ fr_window_get_current_location (FrWindow *window)
 	else
 		return (const char*) window->priv->history_current->data;
 }
-
 
 void
 fr_window_go_up_one_level (FrWindow *window)
@@ -7136,7 +6909,6 @@ fr_window_go_up_one_level (FrWindow *window)
 	fr_window_go_to_location (window, parent_dir, FALSE);
 	g_free (parent_dir);
 }
-
 
 void
 fr_window_go_back (FrWindow *window)
@@ -7154,7 +6926,6 @@ fr_window_go_back (FrWindow *window)
 	fr_window_go_to_location (window, window->priv->history_current->data, FALSE);
 }
 
-
 void
 fr_window_go_forward (FrWindow *window)
 {
@@ -7170,7 +6941,6 @@ fr_window_go_forward (FrWindow *window)
 
 	fr_window_go_to_location (window, window->priv->history_current->data, FALSE);
 }
-
 
 void
 fr_window_set_list_mode (FrWindow         *window,
@@ -7192,13 +6962,11 @@ fr_window_set_list_mode (FrWindow         *window,
 	fr_window_update_current_location (window);
 }
 
-
 GtkTreeModel *
 fr_window_get_list_store (FrWindow *window)
 {
 	return GTK_TREE_MODEL (window->priv->list_store);
 }
-
 
 void
 fr_window_find (FrWindow *window)
@@ -7208,20 +6976,17 @@ fr_window_find (FrWindow *window)
 	gtk_widget_grab_focus (window->priv->filter_entry);
 }
 
-
 void
 fr_window_select_all (FrWindow *window)
 {
 	gtk_tree_selection_select_all (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
 }
 
-
 void
 fr_window_unselect_all (FrWindow *window)
 {
 	gtk_tree_selection_unselect_all (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
 }
-
 
 void
 fr_window_set_sort_type (FrWindow     *window,
@@ -7230,7 +6995,6 @@ fr_window_set_sort_type (FrWindow     *window,
 	window->priv->sort_type = sort_type;
 	fr_window_update_list_order (window);
 }
-
 
 void
 fr_window_stop (FrWindow *window)
@@ -7245,9 +7009,7 @@ fr_window_stop (FrWindow *window)
 		fr_window_convert_data_free (window, TRUE);
 }
 
-
 /* -- start/stop activity mode -- */
-
 
 static int
 activity_cb (gpointer data)
@@ -7262,7 +7024,6 @@ activity_cb (gpointer data)
 	return TRUE;
 }
 
-
 void
 fr_window_start_activity_mode (FrWindow *window)
 {
@@ -7276,7 +7037,6 @@ fr_window_start_activity_mode (FrWindow *window)
 							       window);
 	fr_window_update_sensitivity (window);
 }
-
 
 void
 fr_window_stop_activity_mode (FrWindow *window)
@@ -7310,7 +7070,6 @@ fr_window_stop_activity_mode (FrWindow *window)
 	}
 }
 
-
 static gboolean
 last_output_window__unrealize_cb (GtkWidget  *widget,
 				  gpointer    data)
@@ -7318,7 +7077,6 @@ last_output_window__unrealize_cb (GtkWidget  *widget,
 	pref_util_save_window_geometry (GTK_WINDOW (widget), LAST_OUTPUT_DIALOG_NAME);
 	return FALSE;
 }
-
 
 static void
 fr_window_view_last_output_print(GtkTextBuffer *text_buffer,
@@ -7419,9 +7177,7 @@ fr_window_view_last_output (FrWindow   *window,
 	pref_util_restore_window_geometry (GTK_WINDOW (dialog), LAST_OUTPUT_DIALOG_NAME);
 }
 
-
 /* -- fr_window_rename_selection -- */
-
 
 typedef struct {
 	char     *path_to_rename;
@@ -7432,7 +7188,6 @@ typedef struct {
 	gboolean  dir_in_archive;
 	char     *original_path;
 } RenameData;
-
 
 static RenameData*
 rename_data_new (const char *path_to_rename,
@@ -7461,7 +7216,6 @@ rename_data_new (const char *path_to_rename,
 	return rdata;
 }
 
-
 static void
 rename_data_free (RenameData *rdata)
 {
@@ -7474,7 +7228,6 @@ rename_data_free (RenameData *rdata)
 	g_free (rdata->original_path);
 	g_free (rdata);
 }
-
 
 static void
 rename_selection (FrWindow   *window,
@@ -7631,7 +7384,6 @@ rename_selection (FrWindow   *window,
 	g_free (tmp_dir);
 }
 
-
 static gboolean
 valid_name (const char  *new_name,
 	    const char  *old_name,
@@ -7663,7 +7415,6 @@ valid_name (const char  *new_name,
 
 	return retval;
 }
-
 
 static gboolean
 name_is_present (FrWindow    *window,
@@ -7704,7 +7455,6 @@ name_is_present (FrWindow    *window,
 
 	return retval;
 }
-
 
 void
 fr_window_rename_selection (FrWindow *window,
@@ -7833,7 +7583,6 @@ fr_window_rename_selection (FrWindow *window,
 	g_free (original_path);
 }
 
-
 static void
 fr_clipboard_get (GtkClipboard     *clipboard,
 		  GtkSelectionData *selection_data,
@@ -7855,7 +7604,6 @@ fr_clipboard_get (GtkClipboard     *clipboard,
 	g_free (data);
 }
 
-
 static void
 fr_clipboard_clear (GtkClipboard *clipboard,
 		    gpointer      user_data_or_owner)
@@ -7867,7 +7615,6 @@ fr_clipboard_clear (GtkClipboard *clipboard,
 		window->priv->copy_data = NULL;
 	}
 }
-
 
 GList *
 fr_window_get_selection (FrWindow   *window,
@@ -7906,7 +7653,6 @@ fr_window_get_selection (FrWindow   *window,
 	return files;
 }
 
-
 static void
 fr_window_copy_or_cut_selection (FrWindow      *window,
 				 FRClipboardOp  op,
@@ -7936,14 +7682,12 @@ fr_window_copy_or_cut_selection (FrWindow      *window,
 	fr_window_update_sensitivity (window);
 }
 
-
 void
 fr_window_copy_selection (FrWindow *window,
 			  gboolean  from_sidebar)
 {
 	fr_window_copy_or_cut_selection (window, FR_CLIPBOARD_OP_COPY, from_sidebar);
 }
-
 
 void
 fr_window_cut_selection (FrWindow *window,
@@ -7952,14 +7696,12 @@ fr_window_cut_selection (FrWindow *window,
 	fr_window_copy_or_cut_selection (window, FR_CLIPBOARD_OP_CUT, from_sidebar);
 }
 
-
 static gboolean
 always_fake_load (FrArchive *archive,
 		  gpointer   data)
 {
 	return TRUE;
 }
-
 
 static void
 add_pasted_files (FrWindow        *window,
@@ -8021,7 +7763,6 @@ add_pasted_files (FrWindow        *window,
 
 	fr_process_start (window->archive->process);
 }
-
 
 static void
 copy_from_archive_action_performed_cb (FrArchive   *archive,
@@ -8087,7 +7828,6 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 		break;
 	}
 }
-
 
 static void
 fr_window_paste_from_clipboard_data (FrWindow        *window,
@@ -8166,7 +7906,6 @@ fr_window_paste_from_clipboard_data (FrWindow        *window,
 			       data->archive_password);
 }
 
-
 static void
 fr_window_paste_selection_to (FrWindow   *window,
 			      const char *current_dir)
@@ -8186,7 +7925,6 @@ fr_window_paste_selection_to (FrWindow   *window,
 
 	gtk_selection_data_free (selection_data);
 }
-
 
 void
 fr_window_paste_selection (FrWindow *window,
@@ -8228,9 +7966,7 @@ fr_window_paste_selection (FrWindow *window,
 	g_free (current_dir);
 }
 
-
 /* -- fr_window_open_files -- */
-
 
 void
 fr_window_open_files_with_command (FrWindow *window,
@@ -8252,7 +7988,6 @@ fr_window_open_files_with_command (FrWindow *window,
 
 	fr_window_open_files_with_application (window, file_list, app);
 }
-
 
 void
 fr_window_open_files_with_application (FrWindow *window,
@@ -8289,14 +8024,12 @@ fr_window_open_files_with_application (FrWindow *window,
 	path_list_free (uris);
 }
 
-
 typedef struct {
 	FrWindow    *window;
 	GList       *file_list;
 	gboolean     ask_application;
 	CommandData *cdata;
 } OpenFilesData;
-
 
 static OpenFilesData*
 open_files_data_new (FrWindow *window,
@@ -8331,7 +8064,6 @@ open_files_data_new (FrWindow *window,
 	return odata;
 }
 
-
 static void
 open_files_data_free (OpenFilesData *odata)
 {
@@ -8341,13 +8073,11 @@ open_files_data_free (OpenFilesData *odata)
 	g_free (odata);
 }
 
-
 void
 fr_window_update_dialog_closed (FrWindow *window)
 {
 	window->priv->update_dialog = NULL;
 }
-
 
 gboolean
 fr_window_update_files (FrWindow *window,
@@ -8386,7 +8116,6 @@ fr_window_update_files (FrWindow *window,
 	return TRUE;
 }
 
-
 static void
 open_file_modified_cb (GFileMonitor     *monitor,
 		       GFile            *monitor_file,
@@ -8423,7 +8152,6 @@ open_file_modified_cb (GFileMonitor     *monitor,
 	dlg_update_add_file (window->priv->update_dialog, file);
 }
 
-
 static void
 fr_window_monitor_open_file (FrWindow *window,
 			     OpenFile *file)
@@ -8439,7 +8167,6 @@ fr_window_monitor_open_file (FrWindow *window,
 			  window);
 	g_object_unref (f);
 }
-
 
 static void
 monitor_extracted_files (OpenFilesData *odata)
@@ -8460,7 +8187,6 @@ monitor_extracted_files (OpenFilesData *odata)
 			fr_window_monitor_open_file (window, ofile);
 	}
 }
-
 
 static gboolean
 fr_window_open_extracted_files (OpenFilesData *odata)
@@ -8542,7 +8268,6 @@ fr_window_open_extracted_files (OpenFilesData *odata)
 	return result;
 }
 
-
 static void
 fr_window_open_files__extract_done_cb (FrArchive   *archive,
 				       FrAction     action,
@@ -8561,7 +8286,6 @@ fr_window_open_files__extract_done_cb (FrArchive   *archive,
 	if (error->type == FR_PROC_ERROR_NONE)
 		fr_window_open_extracted_files (odata);
 }
-
 
 void
 fr_window_open_files (FrWindow *window,
@@ -8596,9 +8320,7 @@ fr_window_open_files (FrWindow *window,
 	fr_process_start (window->archive->process);
 }
 
-
 /**/
-
 
 static char*
 get_default_dir (const char *dir)
@@ -8608,7 +8330,6 @@ get_default_dir (const char *dir)
 	else
 		return NULL;
 }
-
 
 void
 fr_window_set_open_default_dir (FrWindow   *window,
@@ -8622,7 +8343,6 @@ fr_window_set_open_default_dir (FrWindow   *window,
 	window->priv->open_default_dir = get_default_dir (default_dir);
 }
 
-
 const char *
 fr_window_get_open_default_dir (FrWindow *window)
 {
@@ -8631,7 +8351,6 @@ fr_window_get_open_default_dir (FrWindow *window)
 	else
 		return  window->priv->open_default_dir;
 }
-
 
 void
 fr_window_set_add_default_dir (FrWindow   *window,
@@ -8645,7 +8364,6 @@ fr_window_set_add_default_dir (FrWindow   *window,
 	window->priv->add_default_dir = get_default_dir (default_dir);
 }
 
-
 const char *
 fr_window_get_add_default_dir (FrWindow *window)
 {
@@ -8654,7 +8372,6 @@ fr_window_get_add_default_dir (FrWindow *window)
 	else
 		return  window->priv->add_default_dir;
 }
-
 
 void
 fr_window_set_extract_default_dir (FrWindow   *window,
@@ -8676,7 +8393,6 @@ fr_window_set_extract_default_dir (FrWindow   *window,
 	window->priv->extract_default_dir = get_default_dir (default_dir);
 }
 
-
 const char *
 fr_window_get_extract_default_dir (FrWindow *window)
 {
@@ -8685,7 +8401,6 @@ fr_window_get_extract_default_dir (FrWindow *window)
 	else
 		return  window->priv->extract_default_dir;
 }
-
 
 void
 fr_window_set_default_dir (FrWindow   *window,
@@ -8701,7 +8416,6 @@ fr_window_set_default_dir (FrWindow   *window,
 	fr_window_set_add_default_dir (window, default_dir);
 	fr_window_set_extract_default_dir (window, default_dir, FALSE);
 }
-
 
 void
 fr_window_update_columns_visibility (FrWindow *window)
@@ -8722,7 +8436,6 @@ fr_window_update_columns_visibility (FrWindow *window)
 	gtk_tree_view_column_set_visible (column, g_settings_get_boolean (window->priv->settings_listing, PREF_LISTING_SHOW_PATH));
 }
 
-
 void
 fr_window_set_toolbar_visibility (FrWindow *window,
 				  gboolean  visible)
@@ -8736,7 +8449,6 @@ fr_window_set_toolbar_visibility (FrWindow *window,
 
 	set_active (window, "ViewToolbar", visible);
 }
-
 
 void
 fr_window_set_statusbar_visibility  (FrWindow *window,
@@ -8752,7 +8464,6 @@ fr_window_set_statusbar_visibility  (FrWindow *window,
 	set_active (window, "ViewStatusbar", visible);
 }
 
-
 void
 fr_window_set_folders_visibility (FrWindow   *window,
 				  gboolean    value)
@@ -8765,7 +8476,6 @@ fr_window_set_folders_visibility (FrWindow   *window,
 	set_active (window, "ViewFolders", window->priv->view_folders);
 }
 
-
 void
 fr_window_use_progress_dialog (FrWindow *window,
 			       gboolean  value)
@@ -8773,12 +8483,9 @@ fr_window_use_progress_dialog (FrWindow *window,
 	window->priv->use_progress_dialog = value;
 }
 
-
 /* -- batch mode procedures -- */
 
-
 static void fr_window_exec_current_batch_action (FrWindow *window);
-
 
 static void
 fr_window_exec_batch_action (FrWindow      *window,
@@ -8925,7 +8632,6 @@ fr_window_exec_batch_action (FrWindow      *window,
 	}
 }
 
-
 void
 fr_window_reset_current_batch_action (FrWindow *window)
 {
@@ -8937,7 +8643,6 @@ fr_window_reset_current_batch_action (FrWindow *window)
 	adata->data = NULL;
 	adata->free_func = NULL;
 }
-
 
 void
 fr_window_set_current_batch_action (FrWindow          *window,
@@ -8954,13 +8659,11 @@ fr_window_set_current_batch_action (FrWindow          *window,
 	adata->free_func = free_func;
 }
 
-
 void
 fr_window_restart_current_batch_action (FrWindow *window)
 {
 	fr_window_exec_batch_action (window, &window->priv->current_batch_action);
 }
-
 
 void
 fr_window_append_batch_action (FrWindow          *window,
@@ -8980,7 +8683,6 @@ fr_window_append_batch_action (FrWindow          *window,
 	window->priv->batch_action_list = g_list_append (window->priv->batch_action_list, a_desc);
 }
 
-
 static void
 fr_window_exec_current_batch_action (FrWindow *window)
 {
@@ -8994,7 +8696,6 @@ fr_window_exec_current_batch_action (FrWindow *window)
 	fr_window_exec_batch_action (window, action);
 }
 
-
 static void
 fr_window_exec_next_batch_action (FrWindow *window)
 {
@@ -9004,7 +8705,6 @@ fr_window_exec_next_batch_action (FrWindow *window)
 		window->priv->batch_action = window->priv->batch_action_list;
 	fr_window_exec_current_batch_action (window);
 }
-
 
 void
 fr_window_start_batch (FrWindow *window)
@@ -9027,7 +8727,6 @@ fr_window_start_batch (FrWindow *window)
 
 	fr_window_exec_current_batch_action (window);
 }
-
 
 void
 fr_window_stop_batch (FrWindow *window)
@@ -9052,20 +8751,17 @@ fr_window_stop_batch (FrWindow *window)
 	window->priv->batch_mode = FALSE;
 }
 
-
 void
 fr_window_resume_batch (FrWindow *window)
 {
 	fr_window_exec_current_batch_action (window);
 }
 
-
 gboolean
 fr_window_is_batch_mode (FrWindow *window)
 {
 	return window->priv->batch_mode;
 }
-
 
 void
 fr_window_new_batch (FrWindow   *window,
@@ -9076,7 +8772,6 @@ fr_window_new_batch (FrWindow   *window,
 	g_free (window->priv->batch_title);
 	window->priv->batch_title = g_strdup (title);
 }
-
 
 void
 fr_window_set_batch__extract_here (FrWindow   *window,
@@ -9098,7 +8793,6 @@ fr_window_set_batch__extract_here (FrWindow   *window,
 				       NULL,
 				       NULL);
 }
-
 
 void
 fr_window_set_batch__extract (FrWindow   *window,
@@ -9127,7 +8821,6 @@ fr_window_set_batch__extract (FrWindow   *window,
 				       NULL,
 				       NULL);
 }
-
 
 void
 fr_window_set_batch__add (FrWindow   *window,

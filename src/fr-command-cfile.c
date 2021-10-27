@@ -37,11 +37,9 @@
 #include "fr-command.h"
 #include "fr-command-cfile.h"
 
-
 /* Parent Class */
 
 static FrCommandClass *parent_class = NULL;
-
 
 static char *
 get_uncompressed_name_from_archive (FrCommand  *comm,
@@ -94,7 +92,6 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 	return filename;
 }
 
-
 static void
 list__process_line (char     *line,
 		    gpointer  data)
@@ -135,7 +132,6 @@ list__process_line (char     *line,
 	else
 		fr_command_add_file (comm, fdata);
 }
-
 
 static void
 fr_command_cfile_list (FrCommand  *comm)
@@ -193,7 +189,6 @@ fr_command_cfile_list (FrCommand  *comm)
 				       &comm_cfile->error);
 	}
 }
-
 
 static void
 fr_command_cfile_add (FrCommand     *comm,
@@ -333,7 +328,6 @@ fr_command_cfile_add (FrCommand     *comm,
 	g_free (temp_dir);
 }
 
-
 static void
 fr_command_cfile_delete (FrCommand  *comm,
 			 const char *from_file,
@@ -341,7 +335,6 @@ fr_command_cfile_delete (FrCommand  *comm,
 {
 	/* never called */
 }
-
 
 static void
 fr_command_cfile_extract (FrCommand  *comm,
@@ -545,13 +538,11 @@ const char *cfile_mime_type[] = { "application/x-gzip",
 				  ZSTD_MIME_TYPE,
 				  NULL };
 
-
 static const char **
 fr_command_cfile_get_mime_types (FrCommand *comm)
 {
 	return cfile_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_cfile_get_capabilities (FrCommand  *comm,
@@ -607,7 +598,6 @@ fr_command_cfile_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static void
 fr_command_cfile_finalize (GObject *object)
 {
@@ -618,7 +608,6 @@ fr_command_cfile_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 static const char *
 fr_command_cfile_get_packages (FrCommand  *comm,
@@ -648,7 +637,6 @@ fr_command_cfile_get_packages (FrCommand  *comm,
 	return NULL;
 }
 
-
 static void
 fr_command_cfile_class_init (FrCommandCFileClass *class)
 {
@@ -670,7 +658,6 @@ fr_command_cfile_class_init (FrCommandCFileClass *class)
 	afc->get_packages     = fr_command_cfile_get_packages;
 }
 
-
 static void
 fr_command_cfile_init (FrCommand *comm)
 {
@@ -682,7 +669,6 @@ fr_command_cfile_init (FrCommand *comm)
 	comm->propPassword                 = FALSE;
 	comm->propTest                     = TRUE;
 }
-
 
 GType
 fr_command_cfile_get_type ()

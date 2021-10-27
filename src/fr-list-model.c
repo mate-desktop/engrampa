@@ -25,9 +25,7 @@
 #include "fr-list-model.h"
 #include "fr-window.h"
 
-
 static GtkListStoreClass *parent_class;
-
 
 static gboolean
 fr_list_model_multi_row_draggable (EggTreeMultiDragSource *drag_source,
@@ -66,7 +64,6 @@ fr_list_model_multi_row_draggable (EggTreeMultiDragSource *drag_source,
 	return FALSE;
 }
 
-
 static gboolean
 fr_list_model_multi_drag_data_get (EggTreeMultiDragSource *drag_source,
 				   GdkDragContext         *context,
@@ -84,14 +81,12 @@ fr_list_model_multi_drag_data_get (EggTreeMultiDragSource *drag_source,
 						  path_list);
 }
 
-
 static gboolean
 fr_list_model_multi_drag_data_delete (EggTreeMultiDragSource *drag_source,
 				      GList                  *path_list)
 {
 	return TRUE;
 }
-
 
 static void
 fr_list_model_finalize (GObject *object)
@@ -100,12 +95,10 @@ fr_list_model_finalize (GObject *object)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
-
 static void
 fr_list_model_init (FRListModel *model)
 {
 }
-
 
 static void
 fr_list_model_class_init (FRListModelClass *klass)
@@ -118,8 +111,6 @@ fr_list_model_class_init (FRListModelClass *klass)
 	object_class->finalize = fr_list_model_finalize;
 }
 
-
-
 static void
 fr_list_model_multi_drag_source_init (EggTreeMultiDragSourceIface *iface)
 {
@@ -127,7 +118,6 @@ fr_list_model_multi_drag_source_init (EggTreeMultiDragSourceIface *iface)
 	iface->drag_data_get = fr_list_model_multi_drag_data_get;
 	iface->drag_data_delete = fr_list_model_multi_drag_data_delete;
 }
-
 
 GType
 fr_list_model_get_type (void)
@@ -162,7 +152,6 @@ fr_list_model_get_type (void)
 
 	return object_type;
 }
-
 
 GtkListStore *
 fr_list_model_new (int n_columns, ...)

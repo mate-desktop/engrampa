@@ -36,7 +36,6 @@ typedef struct {
 	GtkWidget *dialog;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -45,7 +44,6 @@ destroy_cb (GtkWidget  *widget,
 	g_free (data);
 }
 
-
 static int
 help_cb (GtkWidget   *w,
 	 DialogData  *data)
@@ -53,7 +51,6 @@ help_cb (GtkWidget   *w,
 	show_help_dialog (GTK_WINDOW (data->dialog), "engrampa-view-archive-properties");
 	return TRUE;
 }
-
 
 void
 dlg_prop (FrWindow *window)

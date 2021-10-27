@@ -24,7 +24,6 @@
 #include "open-file.h"
 #include "file-utils.h"
 
-
 OpenFile*
 open_file_new (const char *path,
 	       const char *extracted_path,
@@ -45,7 +44,6 @@ open_file_new (const char *path,
 	return ofile;
 }
 
-
 void
 open_file_free (OpenFile *ofile)
 {
@@ -58,7 +56,6 @@ open_file_free (OpenFile *ofile)
 	g_free (ofile->temp_dir);
 	g_free (ofile);
 }
-
 
 OpenFile *
 open_file_copy (OpenFile *src)
@@ -73,7 +70,6 @@ open_file_copy (OpenFile *src)
 
 	return ofile;
 }
-
 
 GType
 open_file_get_type (void)

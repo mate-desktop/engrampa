@@ -46,9 +46,7 @@ static void fr_command_unarchiver_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
-
 
 static void
 process_line (char     *line,
@@ -57,7 +55,6 @@ process_line (char     *line,
 	FrCommandUnarchiver *unar_comm = FR_COMMAND_UNARCHIVER (data);
 	g_memory_input_stream_add_data (G_MEMORY_INPUT_STREAM (unar_comm->stream), line, -1, NULL);
 }
-
 
 static time_t
 mktime_from_string (const char *time_s)
@@ -125,7 +122,6 @@ list_command_completed (gpointer data)
 	g_object_unref (parser);
 }
 
-
 static void
 fr_command_unarchiver_list (FrCommand  *comm)
 {
@@ -146,7 +142,6 @@ fr_command_unarchiver_list (FrCommand  *comm)
 
 	fr_process_start (comm->process);
 }
-
 
 static void
 process_line__extract (char     *line,
@@ -171,7 +166,6 @@ process_line__extract (char     *line,
 	else
 		fr_command_message (comm, line);
 }
-
 
 static void
 fr_command_unarchiver_extract (FrCommand  *comm,
@@ -220,7 +214,6 @@ fr_command_unarchiver_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_unarchiver_handle_error (FrCommand   *comm,
 				    FrProcError *error)
@@ -251,19 +244,16 @@ fr_command_unarchiver_handle_error (FrCommand   *comm,
 	}
 }
 
-
 const char *unarchiver_mime_type[] = { "application/zip",
 				       "application/x-cbr",
 				       "application/x-rar",
 				       NULL };
-
 
 static const char **
 fr_command_unarchiver_get_mime_types (FrCommand *comm)
 {
 	return unarchiver_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_unarchiver_get_capabilities (FrCommand  *comm,
@@ -279,14 +269,12 @@ fr_command_unarchiver_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_unarchiver_get_packages (FrCommand  *comm,
 				    const char *mime_type)
 {
 	return PACKAGES ("unarchiver");
 }
-
 
 static void
 fr_command_unarchiver_class_init (FrCommandUnarchiverClass *class)
@@ -307,7 +295,6 @@ fr_command_unarchiver_class_init (FrCommandUnarchiverClass *class)
 	afc->get_packages     = fr_command_unarchiver_get_packages;
 }
 
-
 static void
 fr_command_unarchiver_init (FrCommand *comm)
 {
@@ -324,7 +311,6 @@ fr_command_unarchiver_init (FrCommand *comm)
 	unar_comm->stream = NULL;
 }
 
-
 static void
 fr_command_unarchiver_finalize (GObject *object)
 {
@@ -340,7 +326,6 @@ fr_command_unarchiver_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_unarchiver_get_type ()

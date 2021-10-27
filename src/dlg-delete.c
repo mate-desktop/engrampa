@@ -40,7 +40,6 @@ typedef struct {
 	GtkWidget *d_files_entry;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -49,7 +48,6 @@ destroy_cb (GtkWidget  *widget,
 	path_list_free (data->selected_files);
 	g_free (data);
 }
-
 
 /* called when the "ok" button is pressed. */
 static void
@@ -92,7 +90,6 @@ ok_clicked_cb (GtkWidget  *widget,
 	path_list_free (file_list);
 }
 
-
 static void
 entry_changed_cb (GtkWidget  *widget,
 		  DialogData *data)
@@ -100,7 +97,6 @@ entry_changed_cb (GtkWidget  *widget,
 	if (! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (data->d_files_radio)))
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->d_files_radio), TRUE);
 }
-
 
 static void
 dlg_delete__common (FrWindow *window,
@@ -156,7 +152,6 @@ dlg_delete__common (FrWindow *window,
 	gtk_widget_show (data->dialog);
 }
 
-
 void
 dlg_delete (GtkWidget *widget,
 	    gpointer   callback_data)
@@ -165,7 +160,6 @@ dlg_delete (GtkWidget *widget,
 	dlg_delete__common (window,
 			    fr_window_get_file_list_selection (window, TRUE, NULL));
 }
-
 
 void
 dlg_delete_from_sidebar (GtkWidget *widget,

@@ -24,7 +24,6 @@
  * Boston, MA 02110-1301, USA.
  */
 
-
 #include <string.h>
 #include <gtk/gtk.h>
 #include "eggtreemultidnd.h"
@@ -47,7 +46,6 @@ typedef struct
   GSList *event_list;
   gboolean pending_event;
 } EggTreeMultiDndData;
-
 
 GType
 egg_tree_multi_drag_source_get_type (void)
@@ -79,7 +77,6 @@ egg_tree_multi_drag_source_get_type (void)
   return our_type;
 }
 
-
 /**
  * egg_tree_multi_drag_source_row_draggable:
  * @drag_source: a #EggTreeMultiDragSource
@@ -107,7 +104,6 @@ egg_tree_multi_drag_source_row_draggable (EggTreeMultiDragSource *drag_source,
     return TRUE;
 }
 
-
 /**
  * egg_tree_multi_drag_source_drag_data_delete:
  * @drag_source: a #EggTreeMultiDragSource
@@ -133,7 +129,6 @@ egg_tree_multi_drag_source_drag_data_delete (EggTreeMultiDragSource *drag_source
 
   return (* iface->drag_data_delete) (drag_source, path_list);
 }
-
 
 /**
  * egg_tree_multi_drag_source_drag_data_get:
@@ -164,7 +159,6 @@ egg_tree_multi_drag_source_drag_data_get (EggTreeMultiDragSource *drag_source,
   return (* iface->drag_data_get) (drag_source, context, selection_data, path_list);
 }
 
-
 static void
 stop_drag_check (GtkWidget *widget)
 {
@@ -190,7 +184,6 @@ stop_drag_check (GtkWidget *widget)
   }
 }
 
-
 static gboolean
 egg_tree_multi_drag_button_release_event (GtkWidget      *widget,
 					  GdkEventButton *event,
@@ -209,7 +202,6 @@ egg_tree_multi_drag_button_release_event (GtkWidget      *widget,
   return FALSE;
 }
 
-
 static void
 selection_foreach (GtkTreeModel *model,
 		   GtkTreePath  *path,
@@ -223,14 +215,12 @@ selection_foreach (GtkTreeModel *model,
   *list_ptr = g_list_prepend (*list_ptr, gtk_tree_row_reference_new (model, path));
 }
 
-
 static void
 path_list_free (GList *path_list)
 {
   g_list_foreach (path_list, (GFunc) gtk_tree_row_reference_free, NULL);
   g_list_free (path_list);
 }
-
 
 static void
 set_context_data (GdkDragContext *context,
@@ -242,14 +232,12 @@ set_context_data (GdkDragContext *context,
                           (GDestroyNotify) path_list_free);
 }
 
-
 static GList *
 get_context_data (GdkDragContext *context)
 {
   return g_object_get_data (G_OBJECT (context),
 			    "egg-tree-view-multi-source-row");
 }
-
 
 static gboolean
 egg_tree_multi_drag_drag_data_get (GtkWidget        *widget,
@@ -284,7 +272,6 @@ egg_tree_multi_drag_drag_data_get (GtkWidget        *widget,
 						   selection_data,
 						   path_list);
 }
-
 
 static gboolean
 egg_tree_multi_drag_motion_event (GtkWidget      *widget,
@@ -363,7 +350,6 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
 
   return TRUE;
 }
-
 
 static gboolean
 egg_tree_multi_drag_button_press_event (GtkWidget      *widget,
@@ -470,7 +456,6 @@ egg_tree_multi_drag_button_press_event (GtkWidget      *widget,
 
   return FALSE;
 }
-
 
 void
 egg_tree_multi_drag_add_drag_support (GtkTreeView *tree_view)

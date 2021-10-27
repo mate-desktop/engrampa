@@ -40,7 +40,6 @@ typedef struct {
 	GtkWidget *add_if_newer_checkbutton;
 } DialogData;
 
-
 static void
 open_file_destroy_cb (GtkWidget  *file_sel,
 		      DialogData *data)
@@ -48,7 +47,6 @@ open_file_destroy_cb (GtkWidget  *file_sel,
 	g_object_unref (data->settings);
 	g_free (data);
 }
-
 
 static int
 file_sel_response_cb (GtkWidget      *widget,
@@ -76,7 +74,6 @@ file_sel_response_cb (GtkWidget      *widget,
 		g_settings_set_string (data->settings, PREF_ADD_FILENAME, uri);
 		g_free (uri);
 	}
-
 
 	if ((response == GTK_RESPONSE_CANCEL) || (response == GTK_RESPONSE_DELETE_EVENT)) {
 		gtk_widget_destroy (data->dialog);
@@ -131,7 +128,6 @@ file_sel_response_cb (GtkWidget      *widget,
 
 	return TRUE;
 }
-
 
 /* create the "add" dialog. */
 void

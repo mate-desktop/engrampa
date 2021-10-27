@@ -26,7 +26,6 @@
 #include <gtk/gtk.h>
 #include "gtk-utils.h"
 
-
 GtkWidget*
 _gtk_message_dialog_new (GtkWindow        *parent,
 			 GtkDialogFlags    flags,
@@ -124,7 +123,6 @@ _gtk_message_dialog_new (GtkWindow        *parent,
 	return dialog;
 }
 
-
 static GtkWidget *
 create_button (const char *icon_name,
 	       const char *text)
@@ -145,7 +143,6 @@ create_button (const char *icon_name,
 
 	return button;
 }
-
 
 char *
 _gtk_request_dialog_run (GtkWindow        *parent,
@@ -234,7 +231,6 @@ _gtk_request_dialog_run (GtkWindow        *parent,
 
 	return result;
 }
-
 
 GtkWidget*
 _gtk_error_dialog_new (GtkWindow        *parent,
@@ -378,7 +374,6 @@ _gtk_error_dialog_new (GtkWindow        *parent,
 	return dialog;
 }
 
-
 void
 _gtk_error_dialog_run (GtkWindow        *parent,
 		       const gchar      *main_message,
@@ -409,7 +404,6 @@ _gtk_error_dialog_run (GtkWindow        *parent,
 	gtk_widget_show (d);
 }
 
-
 void
 _gtk_entry_set_locale_text (GtkEntry   *entry,
 			    const char *text)
@@ -427,7 +421,6 @@ _gtk_entry_set_locale_text (GtkEntry   *entry,
 	g_free (utf8_text);
 }
 
-
 char *
 _gtk_entry_get_locale_text (GtkEntry *entry)
 {
@@ -443,7 +436,6 @@ _gtk_entry_get_locale_text (GtkEntry *entry)
 	return text;
 }
 
-
 void
 _gtk_entry_set_filename_text (GtkEntry   *entry,
 			      const char *text)
@@ -457,7 +449,6 @@ _gtk_entry_set_filename_text (GtkEntry   *entry,
 	} else
 		gtk_entry_set_text (entry, "");
 }
-
 
 static GdkPixbuf *
 get_themed_icon_pixbuf (GThemedIcon  *icon,
@@ -487,7 +478,6 @@ get_themed_icon_pixbuf (GThemedIcon  *icon,
 	return pixbuf;
 }
 
-
 static GdkPixbuf *
 get_file_icon_pixbuf (GFileIcon *icon,
 		      int        size)
@@ -505,7 +495,6 @@ get_file_icon_pixbuf (GFileIcon *icon,
 	return pixbuf;
 }
 
-
 GdkPixbuf *
 get_icon_pixbuf (GIcon        *icon,
 		 int           size,
@@ -519,7 +508,6 @@ get_icon_pixbuf (GIcon        *icon,
 		return get_file_icon_pixbuf (G_FILE_ICON (icon), size);
 	return NULL;
 }
-
 
 GdkPixbuf *
 get_mime_type_pixbuf (const char   *mime_type,
@@ -571,7 +559,6 @@ show_help_dialog (GtkWindow  *parent,
 	}
 	g_free (uri);
 }
-
 
 int
 _gtk_widget_lookup_for_size (GtkWidget *widget,

@@ -23,9 +23,7 @@
 #ifndef DLG_DELETE_H
 #define DLG_DELETE_H
 
-
 void dlg_delete (GtkWidget *widget, gpointer data);
 void dlg_delete_from_sidebar (GtkWidget *widget, gpointer data);
-
 
 #endif /* DLG_DELETE_H */

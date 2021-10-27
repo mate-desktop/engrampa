@@ -36,7 +36,6 @@
 
 #define INITIAL_SIZE 256
 
-
 /* Signals */
 enum {
 	START,
@@ -115,12 +114,10 @@ fr_command_get_type ()
 	return type;
 }
 
-
 static void
 base_fr_command_list (FrCommand  *comm)
 {
 }
-
 
 static void
 base_fr_command_add (FrCommand     *comm,
@@ -132,14 +129,12 @@ base_fr_command_add (FrCommand     *comm,
 {
 }
 
-
 static void
 base_fr_command_delete (FrCommand  *comm,
 		        const char *from_file,
 			GList       *file_list)
 {
 }
-
 
 static void
 base_fr_command_extract (FrCommand  *comm,
@@ -152,24 +147,20 @@ base_fr_command_extract (FrCommand  *comm,
 {
 }
 
-
 static void
 base_fr_command_test (FrCommand *comm)
 {
 }
-
 
 static void
 base_fr_command_uncompress (FrCommand *comm)
 {
 }
 
-
 static void
 base_fr_command_recompress (FrCommand *comm)
 {
 }
-
 
 static void
 base_fr_command_handle_error (FrCommand   *comm,
@@ -177,16 +168,13 @@ base_fr_command_handle_error (FrCommand   *comm,
 {
 }
 
-
 const char **void_mime_types = { NULL };
-
 
 static const char **
 base_fr_command_get_mime_types (FrCommand *comm)
 {
 	return void_mime_types;
 }
-
 
 static FrCommandCap
 base_fr_command_get_capabilities (FrCommand  *comm,
@@ -196,7 +184,6 @@ base_fr_command_get_capabilities (FrCommand  *comm,
 	return FR_COMMAND_CAN_DO_NOTHING;
 }
 
-
 static void
 base_fr_command_set_mime_type (FrCommand  *comm,
 			       const char *mime_type)
@@ -205,14 +192,12 @@ base_fr_command_set_mime_type (FrCommand  *comm,
 	fr_command_update_capabilities (comm);
 }
 
-
 static const char *
 base_fr_command_get_packages (FrCommand  *comm,
 			      const char *mime_type)
 {
 	return NULL;
 }
-
 
 static void
 fr_command_start (FrProcess *process,
@@ -225,7 +210,6 @@ fr_command_start (FrProcess *process,
 		       0,
 		       comm->action);
 }
-
 
 static void
 fr_command_done (FrProcess   *process,
@@ -254,7 +238,6 @@ fr_command_done (FrProcess   *process,
 		       comm->action,
 		       error);
 }
-
 
 static void
 fr_command_set_process (FrCommand *comm,
@@ -285,7 +268,6 @@ fr_command_set_process (FrCommand *comm,
 			  G_CALLBACK (fr_command_done),
 			  comm);
 }
-
 
 static void
 fr_command_set_property (GObject      *object,
@@ -325,7 +307,6 @@ fr_command_set_property (GObject      *object,
 	}
 }
 
-
 static void
 fr_command_get_property (GObject    *object,
 			 guint       prop_id,
@@ -363,7 +344,6 @@ fr_command_get_property (GObject    *object,
 		break;
 	}
 }
-
 
 static void
 fr_command_class_init (FrCommandClass *class)
@@ -502,7 +482,6 @@ fr_command_class_init (FrCommandClass *class)
 							    G_PARAM_READWRITE));
 }
 
-
 static void
 fr_command_init (FrCommand *comm)
 {
@@ -530,7 +509,6 @@ fr_command_init (FrCommand *comm)
 	comm->propListFromFile = FALSE;
 }
 
-
 static void
 fr_command_finalize (GObject *object)
 {
@@ -552,7 +530,6 @@ fr_command_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 static void
 fr_command_set_filename (FrCommand  *comm,
@@ -593,7 +570,6 @@ fr_command_set_filename (FrCommand  *comm,
 	fr_command_working_archive (comm, comm->filename);
 }
 
-
 void
 fr_command_set_file (FrCommand *comm,
 		     GFile     *file)
@@ -606,7 +582,6 @@ fr_command_set_file (FrCommand *comm,
 	g_free (filename);
 }
 
-
 void
 fr_command_set_multi_volume (FrCommand *comm,
 			     GFile     *file)
@@ -614,7 +589,6 @@ fr_command_set_multi_volume (FrCommand *comm,
 	comm->multi_volume = TRUE;
 	fr_command_set_file (comm, file);
 }
-
 
 void
 fr_command_list (FrCommand *comm)
@@ -644,7 +618,6 @@ fr_command_list (FrCommand *comm)
 			       &comm->process->error);
 }
 
-
 void
 fr_command_add (FrCommand     *comm,
 		const char    *from_file,
@@ -667,7 +640,6 @@ fr_command_add (FrCommand     *comm,
 						     recursive);
 }
 
-
 void
 fr_command_delete (FrCommand   *comm,
 		   const char  *from_file,
@@ -681,7 +653,6 @@ fr_command_delete (FrCommand   *comm,
 
 	FR_COMMAND_GET_CLASS (G_OBJECT (comm))->delete (comm, from_file, file_list);
 }
-
 
 void
 fr_command_extract (FrCommand  *comm,
@@ -707,7 +678,6 @@ fr_command_extract (FrCommand  *comm,
 							 junk_paths);
 }
 
-
 void
 fr_command_test (FrCommand *comm)
 {
@@ -720,14 +690,12 @@ fr_command_test (FrCommand *comm)
 	FR_COMMAND_GET_CLASS (G_OBJECT (comm))->test (comm);
 }
 
-
 void
 fr_command_uncompress (FrCommand *comm)
 {
 	fr_command_progress (comm, -1.0);
 	FR_COMMAND_GET_CLASS (G_OBJECT (comm))->uncompress (comm);
 }
-
 
 void
 fr_command_recompress (FrCommand *comm)
@@ -736,20 +704,17 @@ fr_command_recompress (FrCommand *comm)
 	FR_COMMAND_GET_CLASS (G_OBJECT (comm))->recompress (comm);
 }
 
-
 const char **
 fr_command_get_mime_types (FrCommand *comm)
 {
 	return FR_COMMAND_GET_CLASS (G_OBJECT (comm))->get_mime_types (comm);
 }
 
-
 void
 fr_command_update_capabilities (FrCommand *comm)
 {
 	comm->capabilities = fr_command_get_capabilities (comm, comm->mime_type, TRUE);
 }
-
 
 FrCommandCap
 fr_command_get_capabilities (FrCommand  *comm,
@@ -759,7 +724,6 @@ fr_command_get_capabilities (FrCommand  *comm,
 	return FR_COMMAND_GET_CLASS (G_OBJECT (comm))->get_capabilities (comm, mime_type, check_command);
 }
 
-
 gboolean
 fr_command_is_capable_of (FrCommand     *comm,
 			  FrCommandCaps  requested_capabilities)
@@ -767,14 +731,12 @@ fr_command_is_capable_of (FrCommand     *comm,
 	return (((comm->capabilities ^ requested_capabilities) & requested_capabilities) == 0);
 }
 
-
 const char *
 fr_command_get_packages (FrCommand  *comm,
 			 const char *mime_type)
 {
 	return FR_COMMAND_GET_CLASS (G_OBJECT (comm))->get_packages (comm, mime_type);
 }
-
 
 /* fraction == -1 means : I don't known how much time the current operation
  *                        will take, the dialog will display this info pulsing
@@ -792,7 +754,6 @@ fr_command_progress (FrCommand *comm,
 		       fraction);
 }
 
-
 void
 fr_command_message (FrCommand  *comm,
 		    const char *msg)
@@ -802,7 +763,6 @@ fr_command_message (FrCommand  *comm,
 		       0,
 		       msg);
 }
-
 
 void
 fr_command_working_archive (FrCommand  *comm,
@@ -814,7 +774,6 @@ fr_command_working_archive (FrCommand  *comm,
 		       archive_name);
 }
 
-
 void
 fr_command_set_n_files (FrCommand *comm,
 			int        n_files)
@@ -822,7 +781,6 @@ fr_command_set_n_files (FrCommand *comm,
 	comm->n_files = n_files;
 	comm->n_file = 0;
 }
-
 
 void
 fr_command_add_file (FrCommand *comm,
@@ -834,14 +792,12 @@ fr_command_add_file (FrCommand *comm,
 		comm->n_regular_files++;
 }
 
-
 void
 fr_command_set_mime_type (FrCommand  *comm,
 			  const char *mime_type)
 {
 	FR_COMMAND_GET_CLASS (G_OBJECT (comm))->set_mime_type (comm, mime_type);
 }
-
 
 void
 fr_command_handle_error (FrCommand   *comm,

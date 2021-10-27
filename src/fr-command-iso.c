@@ -41,7 +41,6 @@ static void fr_command_iso_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 static time_t
 mktime_from_string (char *month,
 		    char *mday,
@@ -68,7 +67,6 @@ mktime_from_string (char *month,
 
 	return mktime (&tm);
 }
-
 
 static void
 list__process_line (char     *line,
@@ -128,7 +126,6 @@ list__process_line (char     *line,
 	}
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -137,7 +134,6 @@ list__begin (gpointer data)
 	g_free (comm->cur_path);
 	comm->cur_path = NULL;
 }
-
 
 static void
 fr_command_iso_list (FrCommand *comm)
@@ -154,7 +150,6 @@ fr_command_iso_list (FrCommand *comm)
 
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_iso_extract (FrCommand  *comm,
@@ -200,16 +195,13 @@ fr_command_iso_extract (FrCommand  *comm,
 	}
 }
 
-
 const char *iso_mime_type[] = { "application/x-cd-image", NULL };
-
 
 static const char **
 fr_command_iso_get_mime_types (FrCommand *comm)
 {
 	return iso_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_iso_get_capabilities (FrCommand  *comm,
@@ -225,14 +217,12 @@ fr_command_iso_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_iso_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("genisoimage");
 }
-
 
 static void
 fr_command_iso_class_init (FrCommandIsoClass *class)
@@ -252,7 +242,6 @@ fr_command_iso_class_init (FrCommandIsoClass *class)
 	afc->get_packages     = fr_command_iso_get_packages;
 }
 
-
 static void
 fr_command_iso_init (FrCommand *comm)
 {
@@ -271,7 +260,6 @@ fr_command_iso_init (FrCommand *comm)
 	comm->propCanExtractAll            = FALSE;
 }
 
-
 static void
 fr_command_iso_finalize (GObject *object)
 {
@@ -289,7 +277,6 @@ fr_command_iso_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_iso_get_type ()

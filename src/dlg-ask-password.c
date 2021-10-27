@@ -44,7 +44,6 @@ typedef struct {
 	GtkWidget      *pw_password_entry;
 } DialogData;
 
-
 /* called when the main dialog is closed. */
 static void
 destroy_cb (GtkWidget  *widget,
@@ -52,7 +51,6 @@ destroy_cb (GtkWidget  *widget,
 {
 	g_free (data);
 }
-
 
 static void
 ask_password__response_cb (GtkWidget  *dialog,
@@ -85,7 +83,6 @@ ask_password__response_cb (GtkWidget  *dialog,
 
 	gtk_widget_destroy (data->dialog);
 }
-
 
 static void
 dlg_ask_password__common (FrWindow       *window,
@@ -147,13 +144,11 @@ dlg_ask_password__common (FrWindow       *window,
 	gtk_widget_show (data->dialog);
 }
 
-
 void
 dlg_ask_password (FrWindow *window)
 {
 	dlg_ask_password__common (window, FR_PASSWORD_TYPE_MAIN);
 }
-
 
 void
 dlg_ask_password_for_paste_operation (FrWindow *window)

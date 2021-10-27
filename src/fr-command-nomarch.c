@@ -44,7 +44,6 @@ static void fr_command_nomarch_finalize    (GObject               *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -95,7 +94,6 @@ list__process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_nomarch_list (FrCommand *comm)
 {
@@ -107,7 +105,6 @@ fr_command_nomarch_list (FrCommand *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_nomarch_add (FrCommand     *comm,
@@ -137,7 +134,6 @@ fr_command_nomarch_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_nomarch_delete (FrCommand  *comm,
                            const char *from_file,
@@ -154,7 +150,6 @@ fr_command_nomarch_delete (FrCommand  *comm,
 		fr_process_add_arg (comm->process, scan->data);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_nomarch_extract (FrCommand  *comm,
@@ -180,7 +175,6 @@ fr_command_nomarch_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_nomarch_test (FrCommand   *comm)
 {
@@ -189,7 +183,6 @@ fr_command_nomarch_test (FrCommand   *comm)
 	fr_process_add_arg (comm->process, comm->filename);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_nomarch_handle_error (FrCommand   *comm,
@@ -203,16 +196,13 @@ fr_command_nomarch_handle_error (FrCommand   *comm,
  	}
 }
 
-
 const char *nomarch_mime_type[] = { "application/x-arc", NULL };
-
 
 static const char **
 fr_command_nomarch_get_mime_types (FrCommand *comm)
 {
 	return nomarch_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_nomarch_get_capabilities (FrCommand  *comm,
@@ -230,14 +220,12 @@ fr_command_nomarch_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_nomarch_get_packages (FrCommand  *comm,
                                  const char *mime_type)
 {
 	return PACKAGES ("nomarch,arc");
 }
-
 
 static void
 fr_command_nomarch_class_init (FrCommandNomarchClass *class)
@@ -261,7 +249,6 @@ fr_command_nomarch_class_init (FrCommandNomarchClass *class)
 	afc->get_packages     = fr_command_nomarch_get_packages;
 }
 
-
 static void
 fr_command_nomarch_init (FrCommand *comm)
 {
@@ -280,7 +267,6 @@ fr_command_nomarch_init (FrCommand *comm)
 	nomarch_comm->fdata = FALSE;
 }
 
-
 static void
 fr_command_nomarch_finalize (GObject *object)
 {
@@ -291,7 +277,6 @@ fr_command_nomarch_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_nomarch_get_type ()

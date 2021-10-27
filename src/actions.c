@@ -44,9 +44,7 @@
 #include "fr-init.h"
 #include "typedefs.h"
 
-
 /* -- new archive -- */
-
 
 static void
 new_archive (DlgNewData *data,
@@ -81,7 +79,6 @@ new_archive (DlgNewData *data,
         gtk_widget_destroy (archive_window);
 }
 
-
 /* when on Automatic the user provided extension needs to be supported,
    otherwise an existing unsupported archive can be deleted (if the user
    provided name matches with its name) before we find out that the
@@ -98,7 +95,6 @@ is_supported_extension (GtkWidget *file_sel,
             return TRUE;
     return FALSE;
 }
-
 
 static char *
 get_full_uri (DlgNewData *data)
@@ -136,7 +132,6 @@ get_full_uri (DlgNewData *data)
 
     return full_uri;
 }
-
 
 static char *
 get_archive_filename_from_selector (DlgNewData *data)
@@ -263,7 +258,6 @@ get_archive_filename_from_selector (DlgNewData *data)
     return uri;
 }
 
-
 static void
 new_file_response_cb (GtkWidget  *w,
               int         response,
@@ -292,7 +286,6 @@ new_file_response_cb (GtkWidget  *w,
     }
 }
 
-
 void
 show_new_archive_dialog (FrWindow   *window,
              const char *archive_name)
@@ -311,7 +304,6 @@ show_new_archive_dialog (FrWindow   *window,
     gtk_window_present (GTK_WINDOW (data->dialog));
 }
 
-
 void
 activate_action_new (GtkAction *action,
              gpointer   data)
@@ -319,9 +311,7 @@ activate_action_new (GtkAction *action,
     show_new_archive_dialog ((FrWindow*)data, NULL);
 }
 
-
 /* -- open archive -- */
-
 
 static void
 window_archive_loaded_cb (FrWindow  *window,
@@ -338,7 +328,6 @@ window_archive_loaded_cb (FrWindow  *window,
             fr_window_destroy_with_error_dialog (window);
     }
 }
-
 
 static void
 open_file_response_cb (GtkWidget *w,
@@ -369,7 +358,6 @@ open_file_response_cb (GtkWidget *w,
 
     g_free (uri);
 }
-
 
 void
 activate_action_open (GtkAction *action,
@@ -415,9 +403,7 @@ activate_action_open (GtkAction *action,
     gtk_widget_show (file_sel);
 }
 
-
 /* -- save archive -- */
-
 
 static void
 save_file_response_cb (GtkWidget  *w,
@@ -457,7 +443,6 @@ save_file_response_cb (GtkWidget  *w,
 
     g_free (path);
 }
-
 
 void
 activate_action_save_as (GtkAction *action,
@@ -500,7 +485,6 @@ activate_action_save_as (GtkAction *action,
     g_free (archive_name);
 }
 
-
 void
 activate_action_test_archive (GtkAction *action,
                   gpointer   data)
@@ -509,7 +493,6 @@ activate_action_test_archive (GtkAction *action,
 
     fr_window_archive_test (window);
 }
-
 
 void
 activate_action_properties (GtkAction *action,
@@ -520,7 +503,6 @@ activate_action_properties (GtkAction *action,
     dlg_prop (window);
 }
 
-
 void
 activate_action_close (GtkAction *action,
                gpointer   data)
@@ -530,14 +512,12 @@ activate_action_close (GtkAction *action,
     fr_window_close (window);
 }
 
-
 void
 activate_action_add_files (GtkAction *action,
                gpointer   data)
 {
     add_files_cb (NULL, data);
 }
-
 
 void
 activate_action_add_folder (GtkAction *action,
@@ -546,14 +526,12 @@ activate_action_add_folder (GtkAction *action,
     add_folder_cb (NULL, data);
 }
 
-
 void
 activate_action_extract (GtkAction *action,
              gpointer   data)
 {
     dlg_extract (NULL, data);
 }
-
 
 void
 activate_action_extract_folder_from_sidebar (GtkAction *action,
@@ -562,14 +540,12 @@ activate_action_extract_folder_from_sidebar (GtkAction *action,
     dlg_extract_folder_from_sidebar (NULL, data);
 }
 
-
 void
 activate_action_copy (GtkAction *action,
               gpointer   data)
 {
     fr_window_copy_selection ((FrWindow*) data, FALSE);
 }
-
 
 void
 activate_action_cut (GtkAction *action,
@@ -578,14 +554,12 @@ activate_action_cut (GtkAction *action,
     fr_window_cut_selection ((FrWindow*) data, FALSE);
 }
 
-
 void
 activate_action_paste (GtkAction *action,
                gpointer   data)
 {
     fr_window_paste_selection ((FrWindow*) data, FALSE);
 }
-
 
 void
 activate_action_rename (GtkAction *action,
@@ -594,14 +568,12 @@ activate_action_rename (GtkAction *action,
     fr_window_rename_selection ((FrWindow*) data, FALSE);
 }
 
-
 void
 activate_action_delete (GtkAction *action,
             gpointer   data)
 {
     dlg_delete (NULL, data);
 }
-
 
 void
 activate_action_copy_folder_from_sidebar (GtkAction *action,
@@ -610,14 +582,12 @@ activate_action_copy_folder_from_sidebar (GtkAction *action,
     fr_window_copy_selection ((FrWindow*) data, TRUE);
 }
 
-
 void
 activate_action_cut_folder_from_sidebar (GtkAction *action,
                          gpointer   data)
 {
     fr_window_cut_selection ((FrWindow*) data, TRUE);
 }
-
 
 void
 activate_action_paste_folder_from_sidebar (GtkAction *action,
@@ -626,7 +596,6 @@ activate_action_paste_folder_from_sidebar (GtkAction *action,
     fr_window_paste_selection ((FrWindow*) data, TRUE);
 }
 
-
 void
 activate_action_rename_folder_from_sidebar (GtkAction *action,
                         gpointer   data)
@@ -634,14 +603,12 @@ activate_action_rename_folder_from_sidebar (GtkAction *action,
     fr_window_rename_selection ((FrWindow*) data, TRUE);
 }
 
-
 void
 activate_action_delete_folder_from_sidebar (GtkAction *action,
                         gpointer   data)
 {
     dlg_delete_from_sidebar (NULL, data);
 }
-
 
 void
 activate_action_find (GtkAction *action,
@@ -652,7 +619,6 @@ activate_action_find (GtkAction *action,
     fr_window_find (window);
 }
 
-
 void
 activate_action_select_all (GtkAction *action,
                 gpointer   data)
@@ -661,7 +627,6 @@ activate_action_select_all (GtkAction *action,
 
     fr_window_select_all (window);
 }
-
 
 void
 activate_action_deselect_all (GtkAction *action,
@@ -672,14 +637,12 @@ activate_action_deselect_all (GtkAction *action,
     fr_window_unselect_all (window);
 }
 
-
 void
 activate_action_open_with (GtkAction *action,
                gpointer   data)
 {
     open_with_cb (NULL, (FrWindow*) data);
 }
-
 
 void
 activate_action_view_or_open (GtkAction *action,
@@ -695,7 +658,6 @@ activate_action_view_or_open (GtkAction *action,
     path_list_free (file_list);
 }
 
-
 void
 activate_action_open_folder (GtkAction *action,
                  gpointer   data)
@@ -703,7 +665,6 @@ activate_action_open_folder (GtkAction *action,
     FrWindow *window = data;
     fr_window_current_folder_activated (window, FALSE);
 }
-
 
 void
 activate_action_open_folder_from_sidebar (GtkAction *action,
@@ -713,14 +674,12 @@ activate_action_open_folder_from_sidebar (GtkAction *action,
     fr_window_current_folder_activated (window, TRUE);
 }
 
-
 void
 activate_action_password (GtkAction *action,
               gpointer   data)
 {
     dlg_password (NULL, (FrWindow*) data);
 }
-
 
 void
 activate_action_view_toolbar (GtkAction *action,
@@ -733,7 +692,6 @@ activate_action_view_toolbar (GtkAction *action,
     g_object_unref (settings);
 }
 
-
 void
 activate_action_view_statusbar (GtkAction *action,
                 gpointer   data)
@@ -744,7 +702,6 @@ activate_action_view_statusbar (GtkAction *action,
     g_settings_set_boolean (settings, PREF_UI_VIEW_STATUSBAR, gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)));
     g_object_unref (settings);
 }
-
 
 void
 activate_action_view_folders (GtkAction *action,
@@ -757,7 +714,6 @@ activate_action_view_folders (GtkAction *action,
     g_object_unref (settings);
 }
 
-
 void
 activate_action_stop (GtkAction *action,
               gpointer   data)
@@ -765,7 +721,6 @@ activate_action_stop (GtkAction *action,
     FrWindow *window = data;
     fr_window_stop (window);
 }
-
 
 void
 activate_action_reload (GtkAction *action,
@@ -776,7 +731,6 @@ activate_action_reload (GtkAction *action,
     fr_window_archive_reload (window);
 }
 
-
 void
 activate_action_sort_reverse_order (GtkAction *action,
                     gpointer   data)
@@ -786,7 +740,6 @@ activate_action_sort_reverse_order (GtkAction *action,
     fr_window_set_sort_type (window, gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)) ? GTK_SORT_DESCENDING : GTK_SORT_ASCENDING);
 }
 
-
 void
 activate_action_last_output (GtkAction *action,
                  gpointer   data)
@@ -794,7 +747,6 @@ activate_action_last_output (GtkAction *action,
     FrWindow *window = data;
     fr_window_view_last_output (window, _("Last Output"));
 }
-
 
 void
 activate_action_go_back (GtkAction *action,
@@ -804,7 +756,6 @@ activate_action_go_back (GtkAction *action,
     fr_window_go_back (window);
 }
 
-
 void
 activate_action_go_forward (GtkAction *action,
                 gpointer   data)
@@ -812,7 +763,6 @@ activate_action_go_forward (GtkAction *action,
     FrWindow *window = data;
     fr_window_go_forward (window);
 }
-
 
 void
 activate_action_go_up (GtkAction *action,
@@ -822,7 +772,6 @@ activate_action_go_up (GtkAction *action,
     fr_window_go_up_one_level (window);
 }
 
-
 void
 activate_action_go_home (GtkAction *action,
              gpointer   data)
@@ -830,7 +779,6 @@ activate_action_go_home (GtkAction *action,
     FrWindow *window = data;
     fr_window_go_to_location (window, "/", FALSE);
 }
-
 
 void
 activate_action_manual (GtkAction *action,
@@ -840,7 +788,6 @@ activate_action_manual (GtkAction *action,
 
     show_help_dialog (GTK_WINDOW (window) , NULL);
 }
-
 
 #define ABOUT_GROUP "About"
 #define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))

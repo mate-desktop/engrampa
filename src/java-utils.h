@@ -23,9 +23,7 @@
 #ifndef JAVA_UTILS_H
 #define JAVA_UTILS_H
 
-
 char* get_package_name_from_class_file (char *fname);
 char* get_package_name_from_java_file  (char *fname);
-
 
 #endif /* JAVA_UTILS_H */

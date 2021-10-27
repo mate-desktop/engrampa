@@ -54,7 +54,6 @@ typedef struct {
 	char        *last_options;
 } DialogData;
 
-
 static void
 open_file_destroy_cb (GtkWidget  *widget,
 		      DialogData *data)
@@ -63,7 +62,6 @@ open_file_destroy_cb (GtkWidget  *widget,
 	g_free (data->last_options);
 	g_free (data);
 }
-
 
 static gboolean
 utf8_only_spaces (const char *text)
@@ -82,9 +80,7 @@ utf8_only_spaces (const char *text)
 	return TRUE;
 }
 
-
 static void dlg_add_folder_save_last_options (DialogData *data);
-
 
 static int
 file_sel_response_cb (GtkWidget    *widget,
@@ -100,7 +96,6 @@ file_sel_response_cb (GtkWidget    *widget,
 	const char     *exclude_folders;
 	char           *dest_dir;
 	char           *local_filename;
-
 
 	dlg_add_folder_save_last_options (data);
 
@@ -178,7 +173,6 @@ file_sel_response_cb (GtkWidget    *widget,
 	return TRUE;
 }
 
-
 static int
 include_subfold_toggled_cb (GtkWidget *widget,
 			    gpointer   callback_data)
@@ -191,12 +185,10 @@ include_subfold_toggled_cb (GtkWidget *widget,
 	return FALSE;
 }
 
-
 static void load_options_cb (GtkWidget *w, DialogData *data);
 static void save_options_cb (GtkWidget *w, DialogData *data);
 static void clear_options_cb (GtkWidget *w, DialogData *data);
 static void dlg_add_folder_load_last_options (DialogData *data);
-
 
 /* create the "add" dialog. */
 void
@@ -239,9 +231,7 @@ add_folder_cb (GtkWidget *widget,
 	gtk_widget_show (data->dialog);
 }
 
-
 /* load/save the dialog options */
-
 
 static void
 dlg_add_folder_save_last_used_options (DialogData *data,
@@ -250,7 +240,6 @@ dlg_add_folder_save_last_used_options (DialogData *data,
 	g_free (data->last_options);
 	data->last_options = g_strdup (file_name_from_path (options_path));
 }
-
 
 static void
 sync_widgets_with_options (DialogData *data,
@@ -282,7 +271,6 @@ sync_widgets_with_options (DialogData *data,
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (data->exclude_symlinks), no_symlinks);
 }
 
-
 static void
 clear_options_cb (GtkWidget  *w,
 		  DialogData *data)
@@ -297,7 +285,6 @@ clear_options_cb (GtkWidget  *w,
 				   TRUE,
 				   FALSE);
 }
-
 
 static gboolean
 dlg_add_folder_load_options (DialogData *data,
@@ -365,7 +352,6 @@ dlg_add_folder_load_options (DialogData *data,
 	return TRUE;
 }
 
-
 static void
 dlg_add_folder_load_last_options (DialogData *data)
 {
@@ -404,7 +390,6 @@ dlg_add_folder_load_last_options (DialogData *data)
 	g_free (exclude_folders);
 }
 
-
 static void
 get_options_from_widgets (DialogData  *data,
 			  char       **base_dir,
@@ -434,7 +419,6 @@ get_options_from_widgets (DialogData  *data,
 	if (utf8_only_spaces (*exclude_folders))
 		*exclude_folders = "";
 }
-
 
 static void
 dlg_add_folder_save_current_options (DialogData *data,
@@ -479,7 +463,6 @@ dlg_add_folder_save_current_options (DialogData *data,
 	g_free (filename);
 }
 
-
 static void
 dlg_add_folder_save_last_options (DialogData *data)
 {
@@ -515,7 +498,6 @@ dlg_add_folder_save_last_options (DialogData *data)
 	g_free (filename);
 }
 
-
 typedef struct {
 	DialogData   *data;
 	GtkWidget    *dialog;
@@ -523,14 +505,12 @@ typedef struct {
 	GtkTreeModel *aod_model;
 } LoadOptionsDialogData;
 
-
 static void
 aod_destroy_cb (GtkWidget             *widget,
 		LoadOptionsDialogData *aod_data)
 {
 	g_free (aod_data);
 }
-
 
 static void
 aod_apply_cb (GtkWidget *widget,
@@ -554,7 +534,6 @@ aod_apply_cb (GtkWidget *widget,
 	gtk_widget_destroy (aod_data->dialog);
 }
 
-
 static void
 aod_activated_cb (GtkTreeView       *tree_view,
 		  GtkTreePath       *path,
@@ -563,7 +542,6 @@ aod_activated_cb (GtkTreeView       *tree_view,
 {
 	aod_apply_cb (NULL, callback_data);
 }
-
 
 static void
 aod_update_option_list (LoadOptionsDialogData *aod_data)
@@ -619,7 +597,6 @@ aod_update_option_list (LoadOptionsDialogData *aod_data)
 	g_object_unref (options_dir);
 }
 
-
 static void
 aod_remove_cb (GtkWidget             *widget,
 	       LoadOptionsDialogData *aod_data)
@@ -649,7 +626,6 @@ aod_remove_cb (GtkWidget             *widget,
 	g_object_unref (options_dir);
 	g_free (filename);
 }
-
 
 static void
 load_options_cb (GtkWidget  *w,
@@ -718,7 +694,6 @@ load_options_cb (GtkWidget  *w,
 	gtk_window_set_modal (GTK_WINDOW (aod_data->dialog), TRUE);
 	gtk_widget_show (aod_data->dialog);
 }
-
 
 static void
 save_options_cb (GtkWidget  *w,

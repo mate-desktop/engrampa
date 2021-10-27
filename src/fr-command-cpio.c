@@ -41,7 +41,6 @@ static void fr_command_cpio_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -84,7 +83,6 @@ mktime_from_string (char *month,
 
 	return mktime (&tm);
 }
-
 
 static void
 list__process_line (char     *line,
@@ -170,7 +168,6 @@ list__process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_cpio_list (FrCommand  *comm)
 {
@@ -182,7 +179,6 @@ fr_command_cpio_list (FrCommand  *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_cpio_extract (FrCommand *comm,
@@ -223,16 +219,13 @@ fr_command_cpio_extract (FrCommand *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 const char *cpio_mime_type[] = { "application/x-cpio", NULL };
-
 
 static const char **
 fr_command_cpio_get_mime_types (FrCommand *comm)
 {
 	return cpio_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_cpio_get_capabilities (FrCommand  *comm,
@@ -248,14 +241,12 @@ fr_command_cpio_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_cpio_get_packages (FrCommand  *comm,
 			      const char *mime_type)
 {
 	return PACKAGES ("cpio");
 }
-
 
 static void
 fr_command_cpio_class_init (FrCommandCpioClass *class)
@@ -275,7 +266,6 @@ fr_command_cpio_class_init (FrCommandCpioClass *class)
 	afc->get_packages     = fr_command_cpio_get_packages;
 }
 
-
 static void
 fr_command_cpio_init (FrCommand *comm)
 {
@@ -289,7 +279,6 @@ fr_command_cpio_init (FrCommand *comm)
 	comm->propTest                     = FALSE;
 }
 
-
 static void
 fr_command_cpio_finalize (GObject *object)
 {
@@ -300,7 +289,6 @@ fr_command_cpio_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_cpio_get_type ()

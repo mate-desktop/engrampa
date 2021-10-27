@@ -42,9 +42,7 @@
 #include "glib-utils.h"
 #include "fr-init.h"
 
-
 #define SPECIAL_DIR(x) ((strcmp ((x), "..") == 0) || (strcmp ((x), ".") == 0))
-
 
 gboolean
 uri_exists (const char *uri)
@@ -61,7 +59,6 @@ uri_exists (const char *uri)
 
 	return exists;
 }
-
 
 static gboolean
 uri_is_filetype (const char *uri,
@@ -94,20 +91,17 @@ uri_is_filetype (const char *uri,
 	return result;
 }
 
-
 gboolean
 uri_is_file (const char *uri)
 {
 	return uri_is_filetype (uri, G_FILE_TYPE_REGULAR);
 }
 
-
 gboolean
 uri_is_dir (const char *uri)
 {
 	return uri_is_filetype (uri, G_FILE_TYPE_DIRECTORY);
 }
-
 
 gboolean
 path_is_dir (const char *path)
@@ -127,7 +121,6 @@ uri_is_local (const char  *uri)
 {
 	return strncmp (uri, "file://", 7) == 0;
 }
-
 
 gboolean
 dir_is_empty (const char *uri)
@@ -169,7 +162,6 @@ dir_is_empty (const char *uri)
 
 	return (n == 0);
 }
-
 
 gboolean
 dir_contains_one_object (const char *uri)
@@ -223,7 +215,6 @@ dir_contains_one_object (const char *uri)
 
 	return (n == 1);
 }
-
 
 char *
 get_dir_content_if_unique (const char  *uri)
@@ -286,7 +277,6 @@ get_dir_content_if_unique (const char  *uri)
 	return content_uri;
 }
 
-
 /* Check whether the dirname is contained in filename */
 gboolean
 path_in_path (const char *dirname,
@@ -318,7 +308,6 @@ path_in_path (const char *dirname,
 		&& (filename[separator_position] == '/'));
 }
 
-
 goffset
 get_file_size (const char *uri)
 {
@@ -346,7 +335,6 @@ get_file_size (const char *uri)
 	return size;
 }
 
-
 goffset
 get_file_size_for_path (const char *path)
 {
@@ -359,7 +347,6 @@ get_file_size_for_path (const char *path)
 
 	return result;
 }
-
 
 static time_t
 get_file_time_type (const char *uri,
@@ -390,13 +377,11 @@ get_file_time_type (const char *uri,
 	return result;
 }
 
-
 time_t
 get_file_mtime (const char *uri)
 {
 	return get_file_time_type (uri, G_FILE_ATTRIBUTE_TIME_MODIFIED);
 }
-
 
 time_t
 get_file_mtime_for_path (const char *path)
@@ -411,13 +396,11 @@ get_file_mtime_for_path (const char *path)
 	return result;
 }
 
-
 time_t
 get_file_ctime (const char *uri)
 {
 	return get_file_time_type (uri, G_FILE_ATTRIBUTE_TIME_CREATED);
 }
-
 
 gboolean
 file_is_hidden (const gchar *name)
@@ -428,7 +411,6 @@ file_is_hidden (const gchar *name)
 
 	return TRUE;
 }
-
 
 /* like g_path_get_basename but does not warn about NULL and does not
  * alloc a new string. */
@@ -455,7 +437,6 @@ const gchar* file_name_from_path(const gchar *file_name)
 	return base + 1;
 }
 
-
 char *
 dir_name_from_path (const gchar *path)
 {
@@ -478,7 +459,6 @@ dir_name_from_path (const gchar *path)
 
 	return g_strndup (path + base + 1, last_char - base);
 }
-
 
 gchar *
 remove_level_from_path (const gchar *path)
@@ -503,7 +483,6 @@ remove_level_from_path (const gchar *path)
 	return new_path;
 }
 
-
 char *
 remove_ending_separator (const char *path)
 {
@@ -518,7 +497,6 @@ remove_ending_separator (const char *path)
 
 	return g_strndup (path, copy_len);
 }
-
 
 char *
 build_uri (const char *base, ...)
@@ -539,7 +517,6 @@ build_uri (const char *base, ...)
 
 	return g_string_free (uri, FALSE);
 }
-
 
 gchar *
 remove_extension_from_path (const gchar *path)
@@ -565,7 +542,6 @@ remove_extension_from_path (const gchar *path)
 
 	return new_path;
 }
-
 
 gboolean
 make_directory_tree (GFile    *dir,
@@ -603,7 +579,6 @@ make_directory_tree (GFile    *dir,
 	return success;
 }
 
-
 gboolean
 ensure_dir_exists (const char  *uri,
 		   mode_t       mode,
@@ -629,7 +604,6 @@ ensure_dir_exists (const char  *uri,
 	return TRUE;
 }
 
-
 gboolean
 make_directory_tree_from_path (const char  *path,
 		   	       mode_t       mode,
@@ -644,7 +618,6 @@ make_directory_tree_from_path (const char  *path,
 
 	return result;
 }
-
 
 const char *
 get_file_extension (const char *filename)
@@ -676,7 +649,6 @@ get_file_extension (const char *filename)
 	return ext;
 }
 
-
 gboolean
 file_extension_is (const char *filename,
 		   const char *ext)
@@ -691,14 +663,12 @@ file_extension_is (const char *filename,
 	return strcasecmp (filename + filename_l - ext_l, ext) == 0;
 }
 
-
 gboolean
 is_mime_type (const char *mime_type,
 	      const char *pattern)
 {
 	return (strcasecmp (mime_type, pattern) == 0);
 }
-
 
 const char*
 get_file_mime_type (const char *uri,
@@ -729,7 +699,6 @@ get_file_mime_type (const char *uri,
 	return result;
 }
 
-
 const char*
 get_file_mime_type_for_path (const char  *filename,
                     	     gboolean     fast_file_type)
@@ -744,7 +713,6 @@ get_file_mime_type_for_path (const char  *filename,
 	return mime_type;
 }
 
-
 void
 path_list_free (GList *path_list)
 {
@@ -752,7 +720,6 @@ path_list_free (GList *path_list)
 		return;
 	g_list_free_full (path_list, g_free);
 }
-
 
 GList *
 path_list_dup (GList *path_list)
@@ -765,7 +732,6 @@ path_list_dup (GList *path_list)
 
 	return g_list_reverse (new_list);
 }
-
 
 guint64
 get_dest_free_space (const char *path)
@@ -789,7 +755,6 @@ get_dest_free_space (const char *path)
 
 	return freespace;
 }
-
 
 static gboolean
 delete_directory_recursive (GFile   *dir,
@@ -841,7 +806,6 @@ delete_directory_recursive (GFile   *dir,
 	return ! error_occurred;
 }
 
-
 gboolean
 remove_directory (const char *uri)
 {
@@ -860,7 +824,6 @@ remove_directory (const char *uri)
 	return result;
 }
 
-
 gboolean
 remove_local_directory (const char *path)
 {
@@ -877,9 +840,7 @@ remove_local_directory (const char *path)
 	return result;
 }
 
-
 static const char *try_folder[] = { "cache", "~", "tmp", NULL };
-
 
 static char *
 ith_temp_folder_to_try (int n)
@@ -896,7 +857,6 @@ ith_temp_folder_to_try (int n)
 
 	return g_strdup (folder);
 }
-
 
 char *
 get_temp_work_dir (const char *parent_folder)
@@ -942,7 +902,6 @@ get_temp_work_dir (const char *parent_folder)
 	return result;
 }
 
-
 gboolean
 is_temp_work_dir (const char *dir)
 {
@@ -967,7 +926,6 @@ is_temp_work_dir (const char *dir)
 	return FALSE;
 }
 
-
 gboolean
 is_temp_dir (const char *dir)
 {
@@ -981,9 +939,7 @@ is_temp_dir (const char *dir)
 		return is_temp_work_dir (dir);
 }
 
-
 /* file list utils */
-
 
 gboolean
 file_list__match_pattern (const char *line,
@@ -1018,7 +974,6 @@ file_list__match_pattern (const char *line,
 	return (*p == 0);
 }
 
-
 int
 file_list__get_index_from_pattern (const char *line,
 				   const char *pattern)
@@ -1038,7 +993,6 @@ file_list__get_index_from_pattern (const char *line,
 
 	return -1;
 }
-
 
 char*
 file_list__get_next_field (const char *line,
@@ -1069,7 +1023,6 @@ file_list__get_next_field (const char *line,
 	return g_strndup (f_start, f_end - f_start);
 }
 
-
 char*
 file_list__get_prev_field (const char *line,
 			   int         start_from,
@@ -1097,7 +1050,6 @@ file_list__get_prev_field (const char *line,
 	return g_strndup (f_start + 1, f_end - f_start);
 }
 
-
 gboolean
 check_permissions (const char *uri,
 		   int         mode)
@@ -1112,7 +1064,6 @@ check_permissions (const char *uri,
 
 	return result;
 }
-
 
 gboolean
 check_file_permissions (GFile *file,
@@ -1156,7 +1107,6 @@ check_file_permissions (GFile *file,
 	return result;
 }
 
-
 gboolean
 is_program_in_path (const char *filename)
 {
@@ -1183,14 +1133,12 @@ is_program_in_path (const char *filename)
 	return result;
 }
 
-
 gboolean
 is_program_available (const char *filename,
 		      gboolean    check)
 {
 	return ! check || is_program_in_path (filename);
 }
-
 
 const char *
 get_home_uri (void)
@@ -1201,7 +1149,6 @@ get_home_uri (void)
 	return home_uri;
 }
 
-
 char *
 get_home_relative_uri (const char *partial_uri)
 {
@@ -1210,7 +1157,6 @@ get_home_relative_uri (const char *partial_uri)
 			    partial_uri,
 			    NULL);
 }
-
 
 GFile *
 get_home_relative_file (const char *partial_uri)
@@ -1224,7 +1170,6 @@ get_home_relative_file (const char *partial_uri)
 
 	return file;
 }
-
 
 GFile *
 get_user_config_subdirectory (const char *child_name,
@@ -1248,7 +1193,6 @@ get_user_config_subdirectory (const char *child_name,
 	return file;
 }
 
-
 const char *
 remove_host_from_uri (const char *uri)
 {
@@ -1269,7 +1213,6 @@ remove_host_from_uri (const char *uri)
         return sep;
 }
 
-
 char *
 get_uri_host (const char *uri)
 {
@@ -1283,7 +1226,6 @@ get_uri_host (const char *uri)
 		return NULL;
 	return g_strndup (uri, (idx - uri));
 }
-
 
 char *
 get_uri_root (const char *uri)
@@ -1300,14 +1242,12 @@ get_uri_root (const char *uri)
 	return root;
 }
 
-
 int
 uricmp (const char *uri1,
 	const char *uri2)
 {
 	return strcmp_null_tolerant (uri1, uri2);
 }
-
 
 char *
 get_alternative_uri (const char *folder,
@@ -1328,7 +1268,6 @@ get_alternative_uri (const char *folder,
 	return new_uri;
 }
 
-
 char *
 get_alternative_uri_for_uri (const char *uri)
 {
@@ -1342,7 +1281,6 @@ get_alternative_uri_for_uri (const char *uri)
 	return new_uri;
 }
 
-
 GList *
 gio_file_list_dup (GList *l)
 {
@@ -1351,7 +1289,6 @@ gio_file_list_dup (GList *l)
 		r = g_list_prepend (r, g_file_dup ((GFile*)scan->data));
 	return g_list_reverse (r);
 }
-
 
 void
 gio_file_list_free (GList *l)
@@ -1362,7 +1299,6 @@ gio_file_list_free (GList *l)
 	g_list_free (l);
 }
 
-
 GList *
 gio_file_list_new_from_uri_list (GList *uris)
 {
@@ -1371,7 +1307,6 @@ gio_file_list_new_from_uri_list (GList *uris)
 		r = g_list_prepend (r, g_file_new_for_uri ((char*)scan->data));
 	return g_list_reverse (r);
 }
-
 
 void
 g_key_file_save (GKeyFile *key_file,

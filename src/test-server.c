@@ -22,9 +22,7 @@
 #include <config.h>
 #include <gio/gio.h>
 
-
 GMainLoop *loop;
-
 
 static void
 engrampa_getsupportedtypes_ready_cb (GObject      *source_object,
@@ -89,7 +87,6 @@ engrampa_getsupportedtypes_ready_cb (GObject      *source_object,
 	g_main_loop_quit (loop);
 }
 
-
 static void
 engrampa_addtoarchive_ready_cb (GObject      *source_object,
 				  GAsyncResult *res,
@@ -113,7 +110,6 @@ engrampa_addtoarchive_ready_cb (GObject      *source_object,
 	g_main_loop_quit (loop);
 }
 
-
 static void
 on_signal (GDBusProxy *proxy,
 	   char       *sender_name,
@@ -131,7 +127,6 @@ on_signal (GDBusProxy *proxy,
 		g_free (details);
 	}
 }
-
 
 int
 main (int argc, char *argv[])

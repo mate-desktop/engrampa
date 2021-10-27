@@ -40,9 +40,7 @@ static void fr_command_ace_finalize    (GObject          *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
-
 
 static time_t
 mktime_from_string (char *date,
@@ -84,7 +82,6 @@ mktime_from_string (char *date,
 
 	return mktime (&tm);
 }
-
 
 static void
 process_line (char     *line,
@@ -164,7 +161,6 @@ process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 list__begin (gpointer data)
 {
@@ -173,7 +169,6 @@ list__begin (gpointer data)
 	comm->list_started = FALSE;
 	comm->command_type = FR_ACE_COMMAND_UNKNOWN;
 }
-
 
 static void
 fr_command_ace_list (FrCommand  *comm)
@@ -188,7 +183,6 @@ fr_command_ace_list (FrCommand  *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_ace_extract (FrCommand   *comm,
@@ -219,7 +213,6 @@ fr_command_ace_extract (FrCommand   *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_ace_test (FrCommand   *comm)
 {
@@ -230,7 +223,6 @@ fr_command_ace_test (FrCommand   *comm)
         fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_ace_handle_error (FrCommand   *comm,
 			     FrProcError *error)
@@ -238,16 +230,13 @@ fr_command_ace_handle_error (FrCommand   *comm,
 	/* FIXME */
 }
 
-
 const char *ace_mime_type[] = { "application/x-ace", NULL };
-
 
 static const char **
 fr_command_ace_get_mime_types (FrCommand *comm)
 {
 	return ace_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_ace_get_capabilities (FrCommand  *comm,
@@ -263,14 +252,12 @@ fr_command_ace_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_ace_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("unace");
 }
-
 
 static void
 fr_command_ace_class_init (FrCommandAceClass *class)
@@ -292,7 +279,6 @@ fr_command_ace_class_init (FrCommandAceClass *class)
 	afc->get_packages     = fr_command_ace_get_packages;
 }
 
-
 static void
 fr_command_ace_init (FrCommand *comm)
 {
@@ -305,7 +291,6 @@ fr_command_ace_init (FrCommand *comm)
 	comm->propTest                     = TRUE;
 }
 
-
 static void
 fr_command_ace_finalize (GObject *object)
 {
@@ -316,7 +301,6 @@ fr_command_ace_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_ace_get_type ()

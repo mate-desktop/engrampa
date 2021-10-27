@@ -19,7 +19,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include <config.h>
 #include <string.h>
 #include "file-utils.h"
@@ -27,13 +26,11 @@
 #include "gio-utils.h"
 #include "rar-utils.h"
 
-
 typedef enum {
 	FIRST_VOLUME_IS_000,
 	FIRST_VOLUME_IS_001,
 	FIRST_VOLUME_IS_RAR
 } FirstVolumeExtension;
-
 
 static char *
 get_first_volume_name (const char           *name,
@@ -89,7 +86,6 @@ get_first_volume_name (const char           *name,
 
 	return volume_name;
 }
-
 
 void
 rar_check_multi_volume (FrCommand *comm)

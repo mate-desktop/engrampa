@@ -31,7 +31,6 @@
 #include "fr-command-jar.h"
 #include "java-utils.h"
 
-
 typedef struct {
 	char *filename;
 	char *rel_path;
@@ -39,14 +38,11 @@ typedef struct {
 	char *link_name;		/* package dir = package_minus_one_level + '/' + link_name */
 } JarData;
 
-
 static void fr_command_jar_class_init  (FrCommandJarClass *class);
 static void fr_command_jar_init        (FrCommand         *afile);
 static void fr_command_jar_finalize    (GObject           *object);
 
-
 static FrCommandClass *parent_class = NULL;
-
 
 static void
 fr_command_jar_add (FrCommand     *comm,
@@ -145,17 +141,14 @@ fr_command_jar_add (FrCommand     *comm,
 	g_free (tmp_dir);
 }
 
-
 const char *jar_mime_type[] = { "application/x-java-archive",
 				NULL };
-
 
 static const char **
 fr_command_jar_get_mime_types (FrCommand *comm)
 {
 	return jar_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_jar_get_capabilities (FrCommand  *comm,
@@ -171,14 +164,12 @@ fr_command_jar_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_jar_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("zip,unzip");
 }
-
 
 static void
 fr_command_jar_class_init (FrCommandJarClass *class)
@@ -196,12 +187,10 @@ fr_command_jar_class_init (FrCommandJarClass *class)
 	afc->get_packages     = fr_command_jar_get_packages;
 }
 
-
 static void
 fr_command_jar_init (FrCommand *comm)
 {
 }
-
 
 static void
 fr_command_jar_finalize (GObject *object)
@@ -213,7 +202,6 @@ fr_command_jar_finalize (GObject *object)
         if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_jar_get_type ()

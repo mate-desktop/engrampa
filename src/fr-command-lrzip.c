@@ -28,9 +28,7 @@ static void fr_command_lrzip_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
-
 
 static void
 list__process_line (char     *line,
@@ -82,7 +80,6 @@ list__process_line (char     *line,
 		fr_command_add_file (comm, fdata);
 }
 
-
 static void
 fr_command_lrzip_list (FrCommand  *comm)
 {
@@ -94,7 +91,6 @@ fr_command_lrzip_list (FrCommand  *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_lrzip_add (FrCommand  *comm,
@@ -152,7 +148,6 @@ fr_command_lrzip_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 /*
 static void
 fr_command_lrzip_test (FrCommand   *comm)
@@ -164,16 +159,13 @@ fr_command_lrzip_test (FrCommand   *comm)
 }
 */
 
-
 const char *lrzip_mime_type[] = { "application/x-lrzip", NULL };
-
 
 static const char **
 fr_command_lrzip_get_mime_types (FrCommand *comm)
 {
 	return lrzip_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_lrzip_get_capabilities (FrCommand  *comm,
@@ -188,14 +180,12 @@ fr_command_lrzip_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_lrzip_get_packages (FrCommand  *comm,
 			       const char *mime_type)
 {
 	return PACKAGES ("lrzip");
 }
-
 
 static void
 fr_command_lrzip_class_init (FrCommandLrzipClass *class)
@@ -216,7 +206,6 @@ fr_command_lrzip_class_init (FrCommandLrzipClass *class)
 	afc->get_packages     = fr_command_lrzip_get_packages;
 }
 
-
 static void
 fr_command_lrzip_init (FrCommand *comm)
 {
@@ -230,7 +219,6 @@ fr_command_lrzip_init (FrCommand *comm)
 	comm->propTest                     = FALSE;
 }
 
-
 static void
 fr_command_lrzip_finalize (GObject *object)
 {
@@ -241,7 +229,6 @@ fr_command_lrzip_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_lrzip_get_type ()

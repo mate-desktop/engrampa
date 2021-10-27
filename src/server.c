@@ -27,10 +27,8 @@
 #include "file-utils.h"
 #include "fr-init.h"
 
-
 #define FR_SERVICE_NAME "org.mate.Engrampa"
 #define FR_SERVICE_PATH "/org/mate/Engrampa"
-
 
 static const char introspection_xml[] =
 	"<node>"
@@ -173,7 +171,6 @@ static const char introspection_xml[] =
 
 static GDBusNodeInfo *introspection_data = NULL;
 
-
 static void
 window_ready_cb (GtkWidget *widget,
 		 GError    *error,
@@ -188,7 +185,6 @@ window_ready_cb (GtkWidget *widget,
 						       "%s",
 						       error->message);
 }
-
 
 static gboolean
 window_progress_cb (FrWindow *window,
@@ -210,7 +206,6 @@ window_progress_cb (FrWindow *window,
 
 	return TRUE;
 }
-
 
 static void
 handle_method_call (GDBusConnection       *connection,
@@ -385,13 +380,11 @@ handle_method_call (GDBusConnection       *connection,
 	}
 }
 
-
 static const GDBusInterfaceVTable interface_vtable = {
 	handle_method_call,
 	NULL, 			/* handle_get_property */
 	NULL 			/* handle_set_property */
 };
-
 
 static void
 on_bus_acquired (GDBusConnection *connection,
@@ -412,14 +405,12 @@ on_bus_acquired (GDBusConnection *connection,
 	initialize_data ();
 }
 
-
 static void
 on_name_acquired (GDBusConnection *connection,
 		  const char      *name,
 		  gpointer         user_data)
 {
 }
-
 
 static void
 on_name_lost (GDBusConnection *connection,
@@ -428,7 +419,6 @@ on_name_lost (GDBusConnection *connection,
 {
 	gtk_main_quit ();
 }
-
 
 int
 main (int argc, char *argv[])

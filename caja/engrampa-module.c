@@ -27,7 +27,6 @@
 #include <glib/gi18n-lib.h>
 #include "caja-engrampa.h"
 
-
 void
 caja_module_initialize (GTypeModule*module)
 {
@@ -37,12 +36,10 @@ caja_module_initialize (GTypeModule*module)
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 }
 
-
 void
 caja_module_shutdown (void)
 {
 }
-
 
 void
 caja_module_list_types (const GType **types,

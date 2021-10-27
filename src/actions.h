@@ -78,5 +78,4 @@ void activate_action_go_home (GtkAction *action, gpointer data);
 void activate_action_manual (GtkAction *action, gpointer data);
 void activate_action_about (GtkAction *action, gpointer data);
 
-
 #endif /* ACTIONS_H */

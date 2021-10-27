@@ -29,13 +29,11 @@
 #include <glib.h>
 #include "java-utils.h"
 
-
 /*
  * The following code conforms to the JVM specification.(Java 2 Platform)
  * For further changes to the classfile structure, please update the
  * following macros.
  */
-
 
 /* Tags that identify structures */
 
@@ -62,7 +60,6 @@
 #define CONST_LONG_INFO				 8
 #define CONST_DOUBLE_INFO			 8
 #define CONST_NAMEANDTYPE_INFO			 4
-
 
 /* represents the utf8 strings in class file */
 struct utf_string
@@ -107,7 +104,6 @@ typedef struct {
 #endif
 } JavaClassFile;
 
-
 static JavaClassFile*
 java_class_file_new (void)
 {
@@ -118,7 +114,6 @@ java_class_file_new (void)
 
 	return cfile;
 }
-
 
 static void
 java_class_file_free (JavaClassFile *cfile)
@@ -141,7 +136,6 @@ java_class_file_free (JavaClassFile *cfile)
 
 	g_free (cfile);
 }
-
 
 /* The following function loads the utf8 strings and class structures from the
  * class file. */
@@ -231,14 +225,12 @@ load_constant_pool_utfs (JavaClassFile *cfile)
 #endif
 }
 
-
 static char*
 close_and_exit (JavaClassFile *cfile)
 {
 	java_class_file_free (cfile);
 	return NULL;
 }
-
 
 /* This function extracts the package name from a class file */
 char*
@@ -318,7 +310,6 @@ get_package_name_from_class_file (char *fname)
 	return package;
 }
 
-
 /* This function consumes a comment from the java file
  * multiline = TRUE implies that comment is multiline */
 static void
@@ -359,7 +350,6 @@ consume_comment (int      fdesc,
 		}
 	}
 }
-
 
 /* This function extracts package name from a java file */
 char*

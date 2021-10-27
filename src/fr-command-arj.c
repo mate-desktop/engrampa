@@ -40,7 +40,6 @@ static void fr_command_arj_finalize    (GObject           *object);
 
 static FrCommandClass *parent_class = NULL;
 
-
 /* -- list -- */
 
 static time_t
@@ -83,7 +82,6 @@ mktime_from_string (char *date_s,
 
 	return mktime (&tm);
 }
-
 
 static void
 list__process_line (char     *line,
@@ -158,7 +156,6 @@ list__process_line (char     *line,
 	arj_comm->line_no++;
 }
 
-
 static void
 fr_command_arj_list (FrCommand *comm)
 {
@@ -172,7 +169,6 @@ fr_command_arj_list (FrCommand *comm)
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
 }
-
 
 static void
 fr_command_arj_add (FrCommand     *comm,
@@ -220,7 +216,6 @@ fr_command_arj_add (FrCommand     *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_arj_delete (FrCommand  *comm,
 		       const char *from_file,
@@ -241,7 +236,6 @@ fr_command_arj_delete (FrCommand  *comm,
 		fr_process_add_arg (comm->process, scan->data);
 	fr_process_end_command (comm->process);
 }
-
 
 static void
 fr_command_arj_extract (FrCommand  *comm,
@@ -287,7 +281,6 @@ fr_command_arj_extract (FrCommand  *comm,
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_arj_test (FrCommand   *comm)
 {
@@ -302,7 +295,6 @@ fr_command_arj_test (FrCommand   *comm)
 	fr_process_end_command (comm->process);
 }
 
-
 static void
 fr_command_arj_handle_error (FrCommand   *comm,
 			     FrProcError *error)
@@ -315,16 +307,13 @@ fr_command_arj_handle_error (FrCommand   *comm,
  	}
 }
 
-
 const char *arj_mime_type[] = { "application/x-arj", NULL };
-
 
 static const char **
 fr_command_arj_get_mime_types (FrCommand *comm)
 {
 	return arj_mime_type;
 }
-
 
 static FrCommandCap
 fr_command_arj_get_capabilities (FrCommand  *comm,
@@ -340,14 +329,12 @@ fr_command_arj_get_capabilities (FrCommand  *comm,
 	return capabilities;
 }
 
-
 static const char *
 fr_command_arj_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
 	return PACKAGES ("arj");
 }
-
 
 static void
 fr_command_arj_class_init (FrCommandArjClass *class)
@@ -371,7 +358,6 @@ fr_command_arj_class_init (FrCommandArjClass *class)
 	afc->get_packages     = fr_command_arj_get_packages;
 }
 
-
 static void
 fr_command_arj_init (FrCommand *comm)
 {
@@ -392,7 +378,6 @@ fr_command_arj_init (FrCommand *comm)
 	arj_comm->filename_line_regex = g_regex_new ("[0-9]+\\) ", G_REGEX_OPTIMIZE, 0, NULL);
 }
 
-
 static void
 fr_command_arj_finalize (GObject *object)
 {
@@ -408,7 +393,6 @@ fr_command_arj_finalize (GObject *object)
 	if (G_OBJECT_CLASS (parent_class)->finalize)
 		G_OBJECT_CLASS (parent_class)->finalize (object);
 }
-
 
 GType
 fr_command_arj_get_type ()

@@ -59,7 +59,6 @@ gboolean egg_tree_multi_drag_source_row_draggable    (EggTreeMultiDragSource *dr
 gboolean egg_tree_multi_drag_source_drag_data_delete (EggTreeMultiDragSource *drag_source,
 						      GList                  *path_list);
 
-
 /* Fills in selection_data with type selection_data->target based on the row
  * denoted by path, returns TRUE if it does anything
  */

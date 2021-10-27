@@ -54,7 +54,6 @@
 #include "typedefs.h"
 #include "preferences.h"
 
-
 /* The capabilities are computed automatically in
  * compute_supported_archive_types() so it's correct to initialize to 0 here. */
 FrMimeTypeDescription mime_type_desc[] = {
@@ -189,7 +188,6 @@ FrExtensionType file_ext_type[] = {
 	{ NULL, NULL }
 };
 
-
 GList        *CommandList;
 gint          ForceDirectoryCreation;
 GHashTable   *ProgramsCache;
@@ -198,7 +196,6 @@ int           single_file_save_type[G_N_ELEMENTS (mime_type_desc)];
 int           save_type[G_N_ELEMENTS (mime_type_desc)];
 int           open_type[G_N_ELEMENTS (mime_type_desc)];
 int           create_type[G_N_ELEMENTS (mime_type_desc)];
-
 
 static void
 migrate_options_directory (void)
@@ -225,9 +222,7 @@ migrate_options_directory (void)
 	g_free (old_directory_path);
 }
 
-
 /* -- FrRegisteredCommand -- */
-
 
 static FrRegisteredCommand *
 fr_registered_command_new (GType command_type)
@@ -269,13 +264,11 @@ fr_registered_command_new (GType command_type)
 	return reg_com;
 }
 
-
 G_GNUC_UNUSED static void
 fr_registered_command_ref (FrRegisteredCommand *reg_com)
 {
 	reg_com->ref++;
 }
-
 
 static void
 fr_registered_command_unref (FrRegisteredCommand *reg_com)
@@ -287,7 +280,6 @@ fr_registered_command_unref (FrRegisteredCommand *reg_com)
 	g_ptr_array_free (reg_com->caps, TRUE);
 	g_free (reg_com);
 }
-
 
 static FrCommandCaps
 fr_registered_command_get_capabilities (FrRegisteredCommand *reg_com,
@@ -305,7 +297,6 @@ fr_registered_command_get_capabilities (FrRegisteredCommand *reg_com,
 
 	return FR_COMMAND_CAN_DO_NOTHING;
 }
-
 
 static FrCommandCaps
 fr_registered_command_get_potential_capabilities (FrRegisteredCommand *reg_com,
@@ -327,7 +318,6 @@ fr_registered_command_get_potential_capabilities (FrRegisteredCommand *reg_com,
 	return FR_COMMAND_CAN_DO_NOTHING;
 }
 
-
 static void
 register_command (GType command_type)
 {
@@ -335,7 +325,6 @@ register_command (GType command_type)
 		Registered_Commands = g_ptr_array_sized_new (5);
 	g_ptr_array_add (Registered_Commands, fr_registered_command_new (command_type));
 }
-
 
 G_GNUC_UNUSED static gboolean
 unregister_command (GType command_type)
@@ -355,7 +344,6 @@ unregister_command (GType command_type)
 
 	return FALSE;
 }
-
 
 static void
 register_commands (void)
@@ -390,7 +378,6 @@ register_commands (void)
 #endif
 }
 
-
 GType
 get_command_type_from_mime_type (const char    *mime_type,
 				 FrCommandCaps  requested_capabilities)
@@ -415,7 +402,6 @@ get_command_type_from_mime_type (const char    *mime_type,
 	return 0;
 }
 
-
 GType
 get_preferred_command_for_mime_type (const char    *mime_type,
 				     FrCommandCaps  requested_capabilities)
@@ -436,7 +422,6 @@ get_preferred_command_for_mime_type (const char    *mime_type,
 
 	return 0;
 }
-
 
 void
 update_registered_commands_capabilities (void)
@@ -463,7 +448,6 @@ update_registered_commands_capabilities (void)
 	}
 }
 
-
 const char *
 get_mime_type_from_extension (const char *ext)
 {
@@ -481,7 +465,6 @@ get_mime_type_from_extension (const char *ext)
 
 	return NULL;
 }
-
 
 const char *
 get_archive_filename_extension (const char *filename)
@@ -529,7 +512,6 @@ get_mime_type_index (const char *mime_type)
 	return -1;
 }
 
-
 static void
 add_if_non_present (int *a,
 	            int *n,
@@ -545,7 +527,6 @@ add_if_non_present (int *a,
 	*n = *n + 1;
 }
 
-
 static int
 cmp_mime_type_by_extension (const void *p1,
 			    const void *p2)
@@ -556,7 +537,6 @@ cmp_mime_type_by_extension (const void *p1,
 	return strcmp (mime_type_desc[i1].default_ext, mime_type_desc[i2].default_ext);
 }
 
-
 static int
 cmp_mime_type_by_description (const void *p1,
 			      const void *p2)
@@ -566,7 +546,6 @@ cmp_mime_type_by_description (const void *p1,
 
 	return g_utf8_collate (_(mime_type_desc[i1].name), _(mime_type_desc[i2].name));
 }
-
 
 static void
 sort_mime_types (int *a,
@@ -579,20 +558,17 @@ sort_mime_types (int *a,
 	qsort (a, n, sizeof (int), compar);
 }
 
-
 void
 sort_mime_types_by_extension (int *a)
 {
 	sort_mime_types (a, cmp_mime_type_by_extension);
 }
 
-
 void
 sort_mime_types_by_description (int *a)
 {
 	sort_mime_types (a, cmp_mime_type_by_description);
 }
-
 
 static void
 compute_supported_archive_types (void)
@@ -637,7 +613,6 @@ compute_supported_archive_types (void)
 	create_type[c_i] = -1;
 }
 
-
 static gboolean initialized = FALSE;
 
 void
@@ -656,7 +631,6 @@ initialize_data (void)
 	register_commands ();
 	compute_supported_archive_types ();
 }
-
 
 static void
 command_done (CommandData *cdata)
@@ -689,7 +663,6 @@ command_done (CommandData *cdata)
 	CommandList = g_list_remove (CommandList, cdata);
 	g_free (cdata);
 }
-
 
 void
 release_data (void)
