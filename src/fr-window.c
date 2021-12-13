@@ -3488,7 +3488,7 @@ dir_tree_button_press_cb (GtkWidget      *widget,
 		GtkTreeIter  iter;
 
 		if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (window->priv->tree_view),
-						   event->x, event->y,
+						   (int) event->x, (int) event->y,
 						   &path, NULL, NULL, NULL)) {
 
 			if (! gtk_tree_model_get_iter (GTK_TREE_MODEL (window->priv->tree_store), &iter, path)) {
@@ -3667,7 +3667,7 @@ file_button_press_cb (GtkWidget      *widget,
 		int          n_selected;
 
 		if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (window->priv->list_view),
-						   event->x, event->y,
+						   (int) event->x, (int) event->y,
 						   &path, NULL, NULL, NULL)) {
 
 			if (! gtk_tree_model_get_iter (GTK_TREE_MODEL (window->priv->list_store), &iter, path)) {
@@ -3697,7 +3697,7 @@ file_button_press_cb (GtkWidget      *widget,
 		GtkTreePath *path = NULL;
 
 		if (! gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (window->priv->list_view),
-						     event->x, event->y,
+						     (int) event->x, (int) event->y,
 						     &path, NULL, NULL, NULL)) {
 			gtk_tree_selection_unselect_all (selection);
 		}
@@ -3752,7 +3752,7 @@ file_button_release_cb (GtkWidget      *widget,
 		GtkTreePath *path = NULL;
 
 		if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (window->priv->list_view),
-						   event->x, event->y,
+						   (int) event->x, (int) event->y,
 						   &path, NULL, NULL, NULL)) {
 
 			if ((gtk_tree_path_compare (window->priv->path_clicked, path) == 0)
@@ -3800,7 +3800,7 @@ file_motion_notify_callback (GtkWidget *widget,
 	last_hover_path = window->priv->list_hover_path;
 
 	gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
-				       event->x, event->y,
+				       (int) event->x, (int) event->y,
 				       &window->priv->list_hover_path,
 				       NULL, NULL, NULL);
 

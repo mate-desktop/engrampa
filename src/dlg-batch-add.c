@@ -114,7 +114,7 @@ set_archive_options (DialogData *data)
 		int    size;
 
 		value = gtk_spin_button_get_value (GTK_SPIN_BUTTON (GET_WIDGET ("a_volume_spinbutton")));
-		size = floor (value * MEGABYTE);
+		size = (int) (value * MEGABYTE);
 		g_settings_set_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE, size);
 		fr_window_set_volume_size (data->window, (guint) size);
 	}
@@ -464,6 +464,7 @@ dlg_batch_add_files (FrWindow *window,
 	const char   *first_filename;
 	char         *parent;
 	int           i;
+	int           size;
 
 	if (file_list == NULL)
 		return;
@@ -481,7 +482,9 @@ dlg_batch_add_files (FrWindow *window,
 
 	gtk_expander_set_expanded (GTK_EXPANDER (GET_WIDGET ("a_other_options_expander")), FALSE /*g_settings_get_boolean (data->settings, PREF_BATCH_ADD_OTHER_OPTIONS)*/);
 	gtk_toggle_button_set_active (GET_TOGGLE_BUTTON ("a_encrypt_header_checkbutton"), g_settings_get_boolean (data->settings_general, PREF_GENERAL_ENCRYPT_HEADER));
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON (GET_WIDGET ("a_volume_spinbutton")), g_settings_get_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
+	size = g_settings_get_int (data->settings, PREF_BATCH_ADD_VOLUME_SIZE);
+	gtk_spin_button_set_value (GTK_SPIN_BUTTON (GET_WIDGET ("a_volume_spinbutton")),
+	                           ((gdouble) size) / MEGABYTE);
 
 	first_filename = (char*) file_list->data;
 	parent = remove_level_from_path (first_filename);
