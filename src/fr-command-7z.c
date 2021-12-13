@@ -592,12 +592,12 @@ fr_command_7z_get_mime_types (FrCommand *comm)
 	return sevenz_mime_types;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_7z_get_capabilities (FrCommand  *comm,
 				const char *mime_type,
 				gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
 	if (! is_program_available ("7za", check_command) && ! is_program_available ("7zr", check_command) && ! is_program_available ("7z", check_command))

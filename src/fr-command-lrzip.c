@@ -167,12 +167,12 @@ fr_command_lrzip_get_mime_types (FrCommand *comm)
 	return lrzip_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_lrzip_get_capabilities (FrCommand  *comm,
 				   const char *mime_type,
 				   gboolean    check_command)
 {
-	FrCommandCap capabilities = FR_COMMAND_CAN_DO_NOTHING;
+	FrCommandCaps capabilities = FR_COMMAND_CAN_DO_NOTHING;
 
 	if (is_program_available ("lrzip", check_command))
 		capabilities |= FR_COMMAND_CAN_READ_WRITE;

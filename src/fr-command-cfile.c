@@ -544,12 +544,12 @@ fr_command_cfile_get_mime_types (FrCommand *comm)
 	return cfile_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_cfile_get_capabilities (FrCommand  *comm,
 				   const char *mime_type,
 				   gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_DO_NOTHING;
 	if (is_mime_type (mime_type, "application/x-gzip")) {

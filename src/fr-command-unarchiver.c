@@ -255,12 +255,12 @@ fr_command_unarchiver_get_mime_types (FrCommand *comm)
 	return unarchiver_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_unarchiver_get_capabilities (FrCommand  *comm,
 					const char *mime_type,
 					gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_DO_NOTHING;
 	if (is_program_available ("lsar", check_command) && is_program_available ("unar", check_command))
