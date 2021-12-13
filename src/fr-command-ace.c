@@ -238,12 +238,12 @@ fr_command_ace_get_mime_types (FrCommand *comm)
 	return ace_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_ace_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
 	if (is_program_available ("unace", check_command))

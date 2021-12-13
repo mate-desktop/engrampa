@@ -1003,12 +1003,12 @@ fr_command_tar_get_mime_types (FrCommand *comm)
 	return tar_mime_types;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_tar_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
 

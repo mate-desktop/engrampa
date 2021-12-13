@@ -705,12 +705,12 @@ fr_command_rar_get_mime_types (FrCommand *comm)
 	return rar_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_rar_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES | FR_COMMAND_CAN_ENCRYPT | FR_COMMAND_CAN_ENCRYPT_HEADER;
 	if (is_program_available ("rar", check_command))

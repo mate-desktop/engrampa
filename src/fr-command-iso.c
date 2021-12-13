@@ -203,12 +203,12 @@ fr_command_iso_get_mime_types (FrCommand *comm)
 	return iso_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_iso_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
 	if (is_program_available ("isoinfo", check_command))

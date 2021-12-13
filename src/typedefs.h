@@ -85,11 +85,9 @@ typedef enum { /*< skip >*/
 	FR_COMMAND_CAN_ENCRYPT = 1 << 3,
 	FR_COMMAND_CAN_ENCRYPT_HEADER = 1 << 4,
 	FR_COMMAND_CAN_CREATE_VOLUMES = 1 << 5
-} FrCommandCap;
+} FrCommandCaps;
 
 #define FR_COMMAND_CAN_READ_WRITE (FR_COMMAND_CAN_READ | FR_COMMAND_CAN_WRITE)
-
-typedef guint8 FrCommandCaps;
 
 typedef struct {
 	const char    *mime_type;

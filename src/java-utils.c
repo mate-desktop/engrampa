@@ -297,9 +297,9 @@ get_package_name_from_class_file (char *fname)
 
 	if (package != NULL) {
 		int j;
-		for (j = length; (j >= 0) && (end == 0); j--)
+		for (j = (int) length; (j >= 0) && (end == 0); j--)
 			if (package[j] == '/')
-				end = j;
+				end = (guint16) j;
 		char *package_padded = g_strndup (package, end);
 		g_free(package);
 		package = package_padded;

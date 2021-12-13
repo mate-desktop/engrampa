@@ -401,12 +401,12 @@ fr_command_zip_get_mime_types (FrCommand *comm)
 	return zip_mime_type;
 }
 
-static FrCommandCap
+static FrCommandCaps
 fr_command_zip_get_capabilities (FrCommand  *comm,
 			         const char *mime_type,
 				 gboolean    check_command)
 {
-	FrCommandCap capabilities;
+	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES | FR_COMMAND_CAN_ENCRYPT;
 	if (is_program_available ("zip", check_command)) {

@@ -176,7 +176,7 @@ base_fr_command_get_mime_types (FrCommand *comm)
 	return void_mime_types;
 }
 
-static FrCommandCap
+static FrCommandCaps
 base_fr_command_get_capabilities (FrCommand  *comm,
 			          const char *mime_type,
 			          gboolean    check_command)
@@ -716,7 +716,7 @@ fr_command_update_capabilities (FrCommand *comm)
 	comm->capabilities = fr_command_get_capabilities (comm, comm->mime_type, TRUE);
 }
 
-FrCommandCap
+FrCommandCaps
 fr_command_get_capabilities (FrCommand  *comm,
 			     const char *mime_type,
 			     gboolean    check_command)
