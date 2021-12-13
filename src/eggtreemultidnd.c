@@ -285,8 +285,8 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
   if (gtk_drag_check_threshold (widget,
 				priv_data->x,
 				priv_data->y,
-				event->x,
-				event->y))
+				(gint) event->x,
+				(gint) event->y))
     {
       GList            *path_list = NULL;
       GtkTreeSelection *selection;
@@ -316,8 +316,8 @@ egg_tree_multi_drag_motion_event (GtkWidget      *widget,
 	                                             GDK_ACTION_COPY,
 	                                             priv_data->pressed_button,
 	                                             (GdkEvent*) event,
-	                                             event->x,
-	                                             event->y);
+	                                             (gint) event->x,
+	                                             (gint) event->y);
 	  set_context_data (context, path_list);
 
 	  if (gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (widget),
@@ -395,7 +395,7 @@ egg_tree_multi_drag_button_press_event (GtkWidget      *widget,
     return FALSE;
 
   gtk_tree_view_get_path_at_pos (tree_view,
-				 event->x, event->y,
+				 (gint) event->x, (gint) event->y,
 				 &path, &column,
 				 &cell_x, &cell_y);
 
@@ -413,8 +413,8 @@ egg_tree_multi_drag_button_press_event (GtkWidget      *widget,
       if (gtk_tree_selection_path_is_selected (selection, path))
     {
       priv_data->pressed_button = event->button;
-      priv_data->x = event->x;
-      priv_data->y = event->y;
+      priv_data->x = (gint) event->x;
+      priv_data->y = (gint) event->y;
 
       priv_data->pending_event = TRUE;
       if (!call_parent)

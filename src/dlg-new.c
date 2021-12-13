@@ -30,10 +30,10 @@
 #include "gtk-utils.h"
 #include "fr-init.h"
 #include "preferences.h"
+#include "typedefs.h"
 
 #define GET_WIDGET(x) (GTK_WIDGET (gtk_builder_get_object (builder, (x))))
 #define DEFAULT_EXTENSION ".tar.gz"
-#define MEGABYTE (1024.0 * 1024.0)
 
 /* called when the main dialog is closed. */
 static void
@@ -256,6 +256,7 @@ dlg_new_archive (FrWindow  *window,
 	DlgNewData    *data;
 	GSettings     *settings;
 	int            i;
+	int            size;
 
 	data = g_new0 (DlgNewData, 1);
 	builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "new.ui");
@@ -292,7 +293,9 @@ dlg_new_archive (FrWindow  *window,
         g_object_unref (settings);
 
         settings = g_settings_new (ENGRAMPA_SCHEMA_BATCH_ADD);
-        gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton), g_settings_get_int (settings, PREF_BATCH_ADD_VOLUME_SIZE) / MEGABYTE);
+        size = g_settings_get_int (settings, PREF_BATCH_ADD_VOLUME_SIZE);
+        gtk_spin_button_set_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton),
+                                   ((gdouble) size) / MEGABYTE);
         g_object_unref (settings);
 
 	/* format chooser */
@@ -433,8 +436,7 @@ dlg_new_data_get_encrypt_header (DlgNewData *data)
 int
 dlg_new_data_get_volume_size (DlgNewData *data)
 {
-	guint volume_size = 0;
-	int   idx;
+	int idx;
 
 	idx = get_archive_type (data);
 	if (idx < 0)
@@ -446,9 +448,9 @@ dlg_new_data_get_volume_size (DlgNewData *data)
 		double value;
 
 		value = gtk_spin_button_get_value (GTK_SPIN_BUTTON (data->n_volume_spinbutton));
-		volume_size = floor (value * MEGABYTE);
+		return (int) (value * MEGABYTE);
 
 	}
 
-	return volume_size;
+	return 0;
 }
