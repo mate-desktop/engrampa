@@ -6421,7 +6421,7 @@ archive_is_encrypted (FrWindow *window,
 void
 fr_window_archive_extract_here (FrWindow   *window,
 				gboolean    skip_older,
-				gboolean    overwrite,
+				FrOverwrite overwrite,
 				gboolean    junk_paths)
 {
 	ExtractData *edata;
@@ -8538,7 +8538,7 @@ fr_window_exec_batch_action (FrWindow      *window,
 
 		fr_window_archive_extract_here (window,
 						FALSE,
-						TRUE,
+						FR_OVERWRITE_NO,
 						FALSE);
 		break;
 

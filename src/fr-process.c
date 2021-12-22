@@ -413,7 +413,7 @@ fr_process_set_sticky (FrProcess *process,
 	g_return_if_fail (process->priv->current_comm >= 0);
 
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_comm);
-	info->sticky = sticky;
+	info->sticky = (sticky != FALSE);
 }
 
 void
@@ -426,7 +426,7 @@ fr_process_set_ignore_error (FrProcess *process,
 	g_return_if_fail (process->priv->current_comm >= 0);
 
 	info = g_ptr_array_index (process->priv->comm, process->priv->current_comm);
-	info->ignore_error = ignore_error;
+	info->ignore_error = (ignore_error != FALSE);
 }
 
 void
