@@ -85,22 +85,16 @@ fr_command_info_new (void)
 }
 
 static void
-fr_command_info_free (FrCommandInfo *info)
+fr_command_info_free (gpointer data)
 {
+	FrCommandInfo *info = data;
+
 	if (info == NULL)
 		return;
 
-	if (info->args != NULL) {
-		g_list_free_full (info->args, g_free);
-		info->args = NULL;
-	}
-
-	if (info->dir != NULL) {
-		g_free (info->dir);
-		info->dir = NULL;
-	}
-
-	g_free (info);
+	g_list_free_full (info->args, g_free);
+	g_free (info->dir);
+	g_clear_pointer (&info, g_free);
 }
 
 static void
@@ -289,7 +283,7 @@ fr_process_init (FrProcess *process)
 
 	process->term_on_stop = TRUE;
 
-	process->priv->comm = g_ptr_array_new ();
+	process->priv->comm = g_ptr_array_new_with_free_func (fr_command_info_free);
 	process->priv->n_comm = -1;
 	process->priv->current_comm = -1;
 
@@ -330,9 +324,8 @@ fr_process_finalize (GObject *object)
 	process = FR_PROCESS (object);
 
 	fr_process_stop_priv (process, FALSE);
-	fr_process_clear (process);
 
-	g_ptr_array_free (process->priv->comm, FALSE);
+	g_ptr_array_free (process->priv->comm, TRUE);
 
 	fr_channel_data_free (&process->out);
 	fr_channel_data_free (&process->err);
@@ -378,9 +371,7 @@ fr_process_begin_command_at (FrProcess  *process,
 	process->priv->current_comm = index;
 
 	old_c_info = g_ptr_array_index (process->priv->comm, index);
-
-	if (old_c_info != NULL)
-		fr_command_info_free (old_c_info);
+	fr_command_info_free (old_c_info);
 
 	info = fr_command_info_new ();
 	info->args = g_list_prepend (NULL, g_strdup (arg));
@@ -560,14 +551,6 @@ fr_process_clear (FrProcess *process)
 	gint i;
 
 	g_return_if_fail (process != NULL);
-
-	for (i = 0; i <= process->priv->n_comm; i++) {
-		FrCommandInfo *info;
-
-		info = g_ptr_array_index (process->priv->comm, i);
-		fr_command_info_free (info);
-		g_ptr_array_index (process->priv->comm, i) = NULL;
-	}
 
 	for (i = 0; i <= process->priv->n_comm; i++)
 		g_ptr_array_remove_index_fast (process->priv->comm, 0);
