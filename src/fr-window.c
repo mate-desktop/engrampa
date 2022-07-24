@@ -5776,7 +5776,7 @@ fr_window_construct (FrWindow *window)
 	gtk_entry_set_icon_from_icon_name (GTK_ENTRY (window->priv->location_entry),
 				       GTK_ENTRY_ICON_PRIMARY,
 				       "folder");
-	gtk_label_set_mnemonic_widget (window->priv->location_label,
+	gtk_label_set_mnemonic_widget (GTK_LABEL (window->priv->location_label),
 				       window->priv->location_entry);
 
 	gtk_box_pack_start (GTK_BOX (location_box),
