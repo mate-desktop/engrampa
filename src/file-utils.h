@@ -42,8 +42,6 @@ gboolean            uri_is_file                  (const char  *uri);
 gboolean            uri_is_dir                   (const char  *uri);
 gboolean            path_is_dir                  (const char  *path);
 gboolean            uri_is_local                 (const char  *uri);
-gboolean            dir_is_empty                 (const char  *uri);
-gboolean            dir_contains_one_object      (const char  *uri);
 char *              get_dir_content_if_unique    (const char  *uri);
 gboolean            path_in_path                 (const char  *path_src,
 						  const char  *path_dest);
@@ -51,7 +49,6 @@ goffset             get_file_size                (const char  *uri);
 goffset             get_file_size_for_path       (const char  *path);
 time_t              get_file_mtime               (const char  *uri);
 time_t              get_file_mtime_for_path      (const char  *path);
-time_t              get_file_ctime               (const char  *uri);
 gboolean            make_directory_tree          (GFile       *dir,
 		     				  mode_t       mode,
 		     				  GError     **error);
@@ -61,7 +58,6 @@ gboolean            ensure_dir_exists            (const char  *uri,
 gboolean            make_directory_tree_from_path (const char  *path,
 		   	                           mode_t       mode,
 		   	                           GError     **error);
-gboolean            file_is_hidden               (const char  *name);
 const char* file_name_from_path(const char* path);
 char *              dir_name_from_path           (const char  *path);
 char *              remove_level_from_path       (const char  *path);
@@ -90,9 +86,6 @@ gboolean            file_list__match_pattern     (const char *line,
 						  const char *pattern);
 int                 file_list__get_index_from_pattern (const char *line,
 						       const char *pattern);
-char*               file_list__get_next_field    (const char *line,
-						  int         start_from,
-						  int         field_n);
 char*               file_list__get_prev_field    (const char *line,
 						  int         start_from,
 						  int         field_n);
@@ -107,13 +100,8 @@ gboolean 	    is_program_available	 (const char *filename,
 /* URI utils */
 
 const char *        get_home_uri                 (void);
-char *              get_home_relative_uri        (const char *partial_uri);
-GFile *             get_home_relative_file       (const char *partial_uri);
 GFile *             get_user_config_subdirectory (const char *child_name,
 						  gboolean    create_);
-const char *        remove_host_from_uri         (const char *uri);
-char *              get_uri_host                 (const char *uri);
-char *              get_uri_root                 (const char *uri);
 int                 uricmp                       (const char *uri1,
 						  const char *uri2);
 char *              get_alternative_uri          (const char *folder,
@@ -125,7 +113,6 @@ GList *             path_list_dup                (GList       *path_list);
 
 GList *             gio_file_list_dup               (GList *l);
 void                gio_file_list_free              (GList *l);
-GList *             gio_file_list_new_from_uri_list (GList *uris);
 void                g_key_file_save                 (GKeyFile *key_file,
 						     GFile    *file);
 
