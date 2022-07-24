@@ -122,100 +122,6 @@ uri_is_local (const char  *uri)
 	return strncmp (uri, "file://", 7) == 0;
 }
 
-gboolean
-dir_is_empty (const char *uri)
-{
-	GFile           *file;
-	GFileEnumerator *file_enum;
-	GFileInfo       *info;
-	GError          *error = NULL;
-	int              n = 0;
-
-	file = g_file_new_for_uri (uri);
-
-	if (! g_file_query_exists (file, NULL)) {
-		g_object_unref (file);
-		return TRUE;
-	}
-
-	file_enum = g_file_enumerate_children (file, G_FILE_ATTRIBUTE_STANDARD_NAME, 0, NULL, &error);
-	if (error != NULL) {
-		g_warning ("Failed to enumerate children of %s: %s", uri, error->message);
-		g_error_free (error);
-		g_object_unref (file_enum);
-		g_object_unref (file);
-		return TRUE;
-	}
-
-	while ((n == 0) && ((info = g_file_enumerator_next_file (file_enum, NULL, &error)) != NULL)) {
-		if (error != NULL) {
-			g_warning ("Encountered error while enumerating children of %s (ignoring): %s", uri, error->message);
-			g_error_free (error);
-		}
-		else if (! SPECIAL_DIR (g_file_info_get_name (info)))
-			n++;
-		g_object_unref (info);
-	}
-
-	g_object_unref (file);
-	g_object_unref (file_enum);
-
-	return (n == 0);
-}
-
-gboolean
-dir_contains_one_object (const char *uri)
-{
-	GFile           *file;
-	GFileEnumerator *file_enum;
-	GFileInfo       *info;
-	GError          *err = NULL;
-	int              n = 0;
-
-	file = g_file_new_for_uri (uri);
-
-	if (! g_file_query_exists (file, NULL)) {
-		g_object_unref (file);
-		return FALSE;
-	}
-
-	file_enum = g_file_enumerate_children (file, G_FILE_ATTRIBUTE_STANDARD_NAME, 0, NULL, &err);
-	if (err != NULL) {
-		g_warning ("Failed to enumerate children of %s: %s", uri, err->message);
-		g_error_free (err);
-		g_object_unref (file_enum);
-		g_object_unref (file);
-		return FALSE;
-	}
-
-	while ((info = g_file_enumerator_next_file (file_enum, NULL, &err)) != NULL) {
-		const char *name;
-
-		if (err != NULL) {
-			g_warning ("Encountered error while enumerating children of %s, ignoring: %s", uri, err->message);
-			g_error_free (err);
-			g_object_unref (info);
-			continue;
-		}
-
-		name = g_file_info_get_name (info);
-		if (strcmp (name, ".") == 0 || strcmp (name, "..") == 0) {
-			g_object_unref (info);
- 			continue;
-		}
-
-		g_object_unref (info);
-
-		if (++n > 1)
-			break;
-	}
-
-	g_object_unref (file);
-	g_object_unref (file_enum);
-
-	return (n == 1);
-}
-
 char *
 get_dir_content_if_unique (const char  *uri)
 {
@@ -394,22 +300,6 @@ get_file_mtime_for_path (const char *path)
 	g_free (uri);
 
 	return result;
-}
-
-time_t
-get_file_ctime (const char *uri)
-{
-	return get_file_time_type (uri, G_FILE_ATTRIBUTE_TIME_CREATED);
-}
-
-gboolean
-file_is_hidden (const gchar *name)
-{
-	if (name[0] != '.') return FALSE;
-	if (name[1] == '\0') return FALSE;
-	if ((name[1] == '.') && (name[2] == '\0')) return FALSE;
-
-	return TRUE;
 }
 
 /* like g_path_get_basename but does not warn about NULL and does not
@@ -995,35 +885,6 @@ file_list__get_index_from_pattern (const char *line,
 }
 
 char*
-file_list__get_next_field (const char *line,
-			   int         start_from,
-			   int         field_n)
-{
-	const char *f_start, *f_end;
-
-	line = line + start_from;
-
-	f_start = line;
-	while ((*f_start == ' ') && (*f_start != *line))
-		f_start++;
-	f_end = f_start;
-
-	while ((field_n > 0) && (*f_end != 0)) {
-		if (*f_end == ' ') {
-			field_n--;
-			if (field_n != 0) {
-				while ((*f_end == ' ') && (*f_end != *line))
-					f_end++;
-				f_start = f_end;
-			}
-		} else
-			f_end++;
-	}
-
-	return g_strndup (f_start, f_end - f_start);
-}
-
-char*
 file_list__get_prev_field (const char *line,
 			   int         start_from,
 			   int         field_n)
@@ -1149,28 +1010,6 @@ get_home_uri (void)
 	return home_uri;
 }
 
-char *
-get_home_relative_uri (const char *partial_uri)
-{
-	return g_strconcat (get_home_uri (),
-			    "/",
-			    partial_uri,
-			    NULL);
-}
-
-GFile *
-get_home_relative_file (const char *partial_uri)
-{
-	GFile *file;
-	char  *uri;
-
-	uri = g_strconcat (get_home_uri (), "/", partial_uri, NULL);
-	file = g_file_new_for_uri (uri);
-	g_free (uri);
-
-	return file;
-}
-
 GFile *
 get_user_config_subdirectory (const char *child_name,
 			      gboolean    create_child)
@@ -1191,55 +1030,6 @@ get_user_config_subdirectory (const char *child_name,
 	}
 
 	return file;
-}
-
-const char *
-remove_host_from_uri (const char *uri)
-{
-        const char *idx, *sep;
-
-        if (uri == NULL)
-                return NULL;
-
-        idx = strstr (uri, "://");
-        if (idx == NULL)
-                return uri;
-        idx += 3;
-        if (*idx == '\0')
-                return "/";
-        sep = strstr (idx, "/");
-        if (sep == NULL)
-                return idx;
-        return sep;
-}
-
-char *
-get_uri_host (const char *uri)
-{
-	const char *idx;
-
-	idx = strstr (uri, "://");
-	if (idx == NULL)
-		return NULL;
-	idx = strstr (idx + 3, "/");
-	if (idx == NULL)
-		return NULL;
-	return g_strndup (uri, (idx - uri));
-}
-
-char *
-get_uri_root (const char *uri)
-{
-	char *host;
-	char *root;
-
-	host = get_uri_host (uri);
-	if (host == NULL)
-		return NULL;
-	root = g_strconcat (host, "/", NULL);
-	g_free (host);
-
-	return root;
 }
 
 int
@@ -1297,15 +1087,6 @@ gio_file_list_free (GList *l)
 	for (scan = l; scan; scan = scan->next)
 		g_object_unref (scan->data);
 	g_list_free (l);
-}
-
-GList *
-gio_file_list_new_from_uri_list (GList *uris)
-{
-	GList *r = NULL, *scan;
-	for (scan = uris; scan; scan = scan->next)
-		r = g_list_prepend (r, g_file_new_for_uri ((char*)scan->data));
-	return g_list_reverse (r);
 }
 
 void
