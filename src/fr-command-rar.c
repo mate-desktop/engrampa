@@ -151,7 +151,7 @@ mktime_from_string (const char *date_s,
 }
 
 static gboolean
-attribute_field_with_space (char *line)
+attribute_field_with_space (const char *line)
 {
 	/* sometimes when the archive is encrypted the attributes field is
 	* like this: "* ..A...."
