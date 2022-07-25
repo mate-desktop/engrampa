@@ -124,7 +124,7 @@ AC_CHECK_LIB(m, floor)
 dnl ==========================================================================
 
 AC_ARG_ENABLE(packagekit,
-	      [AC_HELP_STRING([--disable-packagekit],[build without PackageKit support])],,
+	      [AS_HELP_STRING([--disable-packagekit],[build without PackageKit support])],,
 	      [enable_packagekit=yes])
 if test "x$enable_packagekit" != "xno"; then
 	AC_DEFINE(ENABLE_PACKAGEKIT, 1, [define to enable PackageKit installer])
