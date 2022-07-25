@@ -373,7 +373,7 @@ dlg_update_add_file (gpointer  dialog,
 
 	for (scan = data->file_list; scan; scan = scan->next) {
 		OpenFile *test = scan->data;
-		if (uricmp (test->extracted_uri, file->extracted_uri) == 0)
+		if (g_strcmp0 (test->extracted_uri, file->extracted_uri) == 0)
 			return;
 	}
 

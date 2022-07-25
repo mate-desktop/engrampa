@@ -756,7 +756,7 @@ move_here (FrArchive *archive)
 
 	parent = remove_level_from_path (content_uri);
 
-	if (uricmp (parent, archive->priv->extraction_destination) == 0) {
+	if (g_strcmp0 (parent, archive->priv->extraction_destination) == 0) {
 		char *new_uri;
 
 		new_uri = get_alternative_uri_for_uri (archive->priv->extraction_destination);
@@ -2368,7 +2368,7 @@ fr_archive_add_dropped_items (FrArchive     *archive,
 	/* FIXME: make this check for all the add actions */
 	archive_uri = g_file_get_uri (archive->file);
 	for (scan = item_list; scan; scan = scan->next) {
-		if (uricmp (scan->data, archive_uri) == 0) {
+		if (g_strcmp0 (scan->data, archive_uri) == 0) {
 			g_free (archive_uri);
 			fr_archive_action_completed (archive,
 						     FR_ACTION_ADDING_FILES,

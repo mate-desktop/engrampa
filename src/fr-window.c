@@ -8155,7 +8155,7 @@ open_file_modified_cb (GFileMonitor     *monitor,
 	file = NULL;
 	for (scan = window->priv->open_files; scan; scan = scan->next) {
 		OpenFile *test = scan->data;
-		if (uricmp (test->extracted_uri, monitor_uri) == 0) {
+		if (g_strcmp0 (test->extracted_uri, monitor_uri) == 0) {
 			file = test;
 			break;
 		}

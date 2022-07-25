@@ -114,8 +114,6 @@ GFile *             get_user_config_subdirectory (const char *child_name,
 const char *        remove_host_from_uri         (const char *uri);
 char *              get_uri_host                 (const char *uri);
 char *              get_uri_root                 (const char *uri);
-int                 uricmp                       (const char *uri1,
-						  const char *uri2);
 char *              get_alternative_uri          (const char *folder,
 	     					  const char *name);
 char *              get_alternative_uri_for_uri  (const char *uri);
