@@ -20,6 +20,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#define _XOPEN_SOURCE 700
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -112,40 +114,13 @@ static time_t
 mktime_from_string (const char *date_s,
 		    const char *time_s)
 {
-	struct tm   tm = {0, };
-	char      **fields;
+	struct tm tm = {0, };
+	char *date_time_s;
 
 	tm.tm_isdst = -1;
-
-	/* date */
-
-	fields = g_strsplit (date_s, "-", 3);
-	if (fields[0] != NULL) {
-		if (date_newstyle)
-			tm.tm_year = atoi (fields[0]) - 1900;
-		else
-			tm.tm_mday = atoi (fields[0]);
-		if (fields[1] != NULL) {
-			tm.tm_mon = atoi (fields[1]) - 1;
-			if (fields[2] != NULL) {
-				if (date_newstyle)
-					tm.tm_mday = atoi (fields[2]);
-				else
-					tm.tm_year = 100 + atoi (fields[2]);
-			}
-		}
-	}
-	g_strfreev (fields);
-
-	/* time */
-
-	fields = g_strsplit (time_s, ":", 2);
-	if (fields[0] != NULL) {
-		tm.tm_hour = atoi (fields[0]);
-		if (fields[1] != NULL)
-			tm.tm_min = atoi (fields[1]);
-	}
-	g_strfreev (fields);
+	date_time_s = g_strjoin (" ", date_s, time_s, NULL);
+	strptime (date_time_s, date_newstyle ? "%Y-%m-%d %H:%M" : "%d-%m-%y %H:%M", &tm);
+	g_free (date_time_s);
 
 	return mktime (&tm);
 }
