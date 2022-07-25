@@ -208,6 +208,27 @@ attr_field_is_dir (const char   *attr_field,
         return FALSE;
 }
 
+static gboolean
+has_date_newstyle (const char *line,
+                   gboolean    is_rar,
+                   gboolean   *rar5)
+{
+	int   version_major;
+	int   version_minor;
+
+	sscanf (line, is_rar ? "RAR %d.%d" : "UNRAR %d.%d",
+	        &version_major, &version_minor);
+	*rar5 = (version_major >= 5);
+
+	if (version_major > 5)
+		return TRUE;
+
+	if ((version_major == 5) && (version_minor >= 30))
+		return TRUE;
+
+	return FALSE;
+}
+
 static void
 process_line (char     *line,
 	      gpointer  data)
@@ -219,36 +240,10 @@ process_line (char     *line,
 	g_return_if_fail (line != NULL);
 
 	if (! rar_comm->list_started) {
-		if (strncmp (line, "RAR ", 4) == 0) {
-			int version;
-			sscanf (line, "RAR %d.", &version);
-			rar_comm->rar5 = (version >= 5);
-
-			if (version > 5)
-				date_newstyle = TRUE;
-			else if (version == 5)
-			{
-				sscanf (line, "RAR 5.%d ", &version);
-				if (version >= 30)
-					date_newstyle = TRUE;
-			}
-
-		}
-		else if (strncmp (line, "UNRAR ", 6) == 0) {
-			int version;
-			sscanf (line, "UNRAR %d.", &version);
-			rar_comm->rar5 = (version >= 5);
-
-			if (version > 5)
-				date_newstyle = TRUE;
-			else if (version == 5)
-			{
-				sscanf (line, "UNRAR 5.%d ", &version);
-				if (version >= 30)
-					date_newstyle = TRUE;
-			}
-
-		}
+		if (strncmp (line, "RAR ", 4) == 0)
+			date_newstyle = has_date_newstyle (line, TRUE, &rar_comm->rar5);
+		else if (strncmp (line, "UNRAR ", 6) == 0)
+			date_newstyle = has_date_newstyle (line, FALSE, &rar_comm->rar5);
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
 			if (! rar_comm->rar5)
