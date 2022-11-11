@@ -1,3 +1,28 @@
+### engrampa 1.27.0
+
+  * tx: sync with transifex
+  * configure.ac: The macro 'AC_HELP_STRING' is obsolete
+  * tx: update resource
+  * tx: migrate config file
+  * Fix corrupted engrampa_main_window.png files in userguide for ca, de, el, fi, fr, it and uk.
+  * Enable mouse-less navigation & reading for output dialogs
+  * Accessibility: add proper mnemonic relations and labelling
+  * Fix implicit conversion changes signedness: 'gboolean'
+  * CI: Drop -Wunused-parameter for debian build
+  * file-data: fix memory leak
+  * fr-command-tar: fix memory leak
+  * fr-window: fix memory leak
+  * dlg-package-installer: fix memory leak
+  * Fix build warnings about missing field initializer
+  * Fix some -Wfloat-conversion warnings
+  * Fix -Wimplicit-int-conversion warning
+  * build: fix -Wmissing-prototypes warning
+  * glib-utils: drop strcmp_null_tolerant
+  * test-server: Remove unreachable code after calling g_error
+  * glib-utils: escape_str_common should be static
+  * equality comparison with extraneous parentheses
+  * Use a blank line at most
+
 ### engrampa 1.26.0
 
   * Translations update
