@@ -394,11 +394,28 @@ fr_command_7z_add (FrCommand     *comm,
 }
 
 static void
+process_line__delete (char     *line,
+		      gpointer  data)
+{
+	FrCommand *comm = FR_COMMAND (data);
+
+	if ((strstr (line, "Wrong password?") != NULL)
+	    || (strstr (line, "Enter password") != NULL))
+	{
+		password_required = TRUE;
+	}
+}
+
+static void
 fr_command_7z_delete (FrCommand  *comm,
 		      const char *from_file,
 		      GList      *file_list)
 {
 	GList *scan;
+
+	fr_process_set_out_line_func (comm->process,
+			      process_line__delete,
+			      comm);
 
 	fr_command_7z_begin_command (comm);
 	fr_process_add_arg (comm->process, "d");

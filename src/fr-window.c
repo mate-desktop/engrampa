@@ -6317,14 +6317,34 @@ fr_window_archive_add_dropped_items (FrWindow *window,
 				      window->priv->volume_size);
 }
 
+static void
+remove_data_free (GList *rdata)
+{
+	g_list_free_full(rdata, g_free);
+}
+
 void
 fr_window_archive_remove (FrWindow      *window,
 			  GList         *file_list)
 {
+	char  *password;
+	GList *remove_list;
+
 	fr_window_clipboard_remove_file_list (window, file_list);
 
 	fr_process_clear (window->archive->process);
-	fr_archive_remove (window->archive, file_list, window->priv->compression);
+
+	remove_list = g_list_copy_deep (file_list, (GCopyFunc) g_strdup, NULL);
+	fr_window_set_current_batch_action (window,
+					    FR_BATCH_ACTION_DELETE,
+					    remove_list,
+					    (GFreeFunc) remove_data_free);
+
+	password = window->priv->password;
+	if (password != NULL && password[0] != '\0')
+		g_object_set (window->archive->command, "password", password, NULL);
+
+	fr_archive_remove (window->archive, remove_list, window->priv->compression);
 	fr_process_start (window->archive->process);
 }
 
@@ -8527,6 +8547,12 @@ fr_window_exec_batch_action (FrWindow      *window,
 		debug (DEBUG_INFO, "[BATCH] ADD\n");
 
 		fr_window_archive_add_dropped_items (window, (GList*) action->data, FALSE);
+		break;
+
+	case FR_BATCH_ACTION_DELETE:
+		debug (DEBUG_INFO, "[BATCH] DELETE\n");
+
+		fr_window_archive_remove (window, (GList*) action->data);
 		break;
 
 	case FR_BATCH_ACTION_OPEN:
