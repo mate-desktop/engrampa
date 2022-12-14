@@ -608,14 +608,19 @@ fr_command_list (FrCommand *comm)
 	fr_process_use_standard_locale (comm->process, TRUE);
 	comm->multi_volume = FALSE;
 
-	if (! comm->fake_load)
+	if (! comm->fake_load) {
 		FR_COMMAND_GET_CLASS (G_OBJECT (comm))->list (comm);
-	else
+	} else {
+		comm->process->error.type = FR_PROC_ERROR_NONE;
+		comm->process->error.status = 0;
+		g_clear_error (&comm->process->error.gerror);
+
 		g_signal_emit (G_OBJECT (comm),
 			       fr_command_signals[DONE],
 			       0,
 			       comm->action,
 			       &comm->process->error);
+	}
 }
 
 void
