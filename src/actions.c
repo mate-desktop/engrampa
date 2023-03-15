@@ -203,6 +203,22 @@ get_archive_filename_from_selector (DlgNewData *data)
     }
     g_object_unref (info);
     g_object_unref (dir);
+    if ((data->original_file != NULL) && (g_file_equal (file, data->original_file))) {
+        GtkWidget *dialog;
+        dialog = _gtk_error_dialog_new (GTK_WINDOW (data->dialog),
+                        GTK_DIALOG_MODAL,
+                        NULL,
+                        _("Could not create the archive"),
+                        "%s",
+                        _("New name is the same as old one, please type other name."));
+        gtk_dialog_run (GTK_DIALOG (dialog));
+
+        gtk_widget_destroy (GTK_WIDGET (dialog));
+        g_object_unref (info);
+        g_object_unref (file);
+
+        return NULL;
+    }
 
     /* if the user did not specify a valid extension use the filetype combobox current type
      * or tar.gz if automatic is selected. */
@@ -465,11 +481,11 @@ activate_action_save_as (GtkAction *action,
 {
     FrWindow   *window = callback_data;
     DlgNewData *data;
+    GFile      *file = NULL;
     char       *archive_name = NULL;
 
     if (fr_window_get_archive_uri (window)) {
         const char *uri;
-        GFile      *file;
         GFileInfo  *info;
         GError     *err = NULL;
 
@@ -487,10 +503,10 @@ activate_action_save_as (GtkAction *action,
             archive_name = g_strdup (g_file_info_get_display_name (info));
 
         g_object_unref (info);
-        g_object_unref (file);
     }
 
     data = dlg_save_as (window, archive_name);
+    data->original_file = file;
     g_signal_connect (G_OBJECT (data->dialog),
               "response",
               G_CALLBACK (save_file_response_cb),

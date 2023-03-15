@@ -36,6 +36,7 @@ typedef struct {
 	gboolean    can_create_volumes;
 	GtkBuilder *builder;
 
+	GFile      *original_file;
 	GtkWidget  *dialog;
 	/*GtkWidget  *n_archive_type_combo_box;*/
 	GtkWidget  *n_other_options_expander;
