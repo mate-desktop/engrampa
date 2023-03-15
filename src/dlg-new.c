@@ -40,6 +40,8 @@ static void
 destroy_cb (GtkWidget  *widget,
 	    DlgNewData *data)
 {
+	if (data->original_file != NULL)
+		g_object_unref (data->original_file);
 	g_free (data);
 }
 

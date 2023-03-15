@@ -6171,8 +6171,8 @@ fr_window_archive_save_as (FrWindow   *window,
 				     NULL,
 				     window->priv->convert_data.temp_dir,
 				     NULL,
-				     TRUE,
 				     FALSE,
+				     TRUE,
 				     FALSE,
 				     window->priv->password);
 	fr_process_start (window->archive->process);
