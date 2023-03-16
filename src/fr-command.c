@@ -79,7 +79,7 @@ const char *action_names[] = { "NONE",
                                "CREATING_ARCHIVE",
                                "SAVING_REMOTE_ARCHIVE" };
 
-#if MATE_ENABLE_DEBUG
+#ifdef MATE_ENABLE_DEBUG
 const char * get_action_name (FrAction action)
 {
 	return action_names[action];
