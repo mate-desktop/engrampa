@@ -664,7 +664,8 @@ fr_command_tar_recompress (FrCommand *comm)
 		fr_process_add_arg (comm->process, "a");
 		fr_process_add_arg (comm->process, "-bd");
 		fr_process_add_arg (comm->process, "-y");
-		fr_process_add_arg (comm->process, "-l");
+		if (g_strcmp0 (comm_tar->compress_command, "7zzs") != 0 && g_strcmp0 (comm_tar->compress_command, "7zz") != 0)
+			fr_process_add_arg (comm->process, "-l");
 
 		new_name = g_strconcat (c_tar->uncomp_filename, ".7z", NULL);
 		fr_process_add_arg_concat (comm->process, new_name, NULL);
@@ -1061,7 +1062,7 @@ fr_command_tar_get_capabilities (FrCommand  *comm,
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
 	else if (is_mime_type (mime_type, "application/x-7z-compressed-tar")) {
-		const char *try_command[3] = { "7za", "7zr", "7z" };
+		const char *try_command[5] = { "7zzs", "7zz", "7za", "7zr", "7z" };
 		size_t i;
 
 		for (i = 0; i < G_N_ELEMENTS (try_command); i++) {
@@ -1088,7 +1089,7 @@ fr_command_tar_set_mime_type (FrCommand  *comm,
 	FR_COMMAND_CLASS (parent_class)->set_mime_type (comm, mime_type);
 
 	if (is_mime_type (mime_type, "application/x-7z-compressed-tar")) {
-		const char *try_command[3] = { "7za", "7zr", "7z" };
+		const char *try_command[5] = { "7zzs", "7zz", "7za", "7zr", "7z" };
 		size_t i;
 
 		for (i = 0; i < G_N_ELEMENTS (try_command); i++) {
@@ -1125,7 +1126,7 @@ fr_command_tar_get_packages (FrCommand  *comm,
 	else if (is_mime_type (mime_type, "application/x-lzop-compressed-tar"))
 		return PACKAGES ("tar,lzop");
 	else if (is_mime_type (mime_type, "application/x-7z-compressed-tar"))
-		return PACKAGES ("tar,p7zip");
+		return PACKAGES ("tar,7zip");
 	else if (is_mime_type (mime_type, "application/x-zstd-compressed-tar"))
 		return PACKAGES ("tar,zstd");
 
