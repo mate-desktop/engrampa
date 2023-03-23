@@ -394,13 +394,18 @@ archive_type_combo_box_changed_cb (GtkComboBox *combo_box,
 	const char *mime_type;
 	int         idx = gtk_combo_box_get_active (combo_box);
 	char       *icon_name;
+	char       *content_type;
 
 	mime_type = mime_type_desc[data->supported_types[idx]].mime_type;
-	if ((icon_name = g_content_type_get_generic_icon_name (mime_type)) != NULL) {
+	content_type = g_content_type_from_mime_type (mime_type);
+	if ((icon_name = g_content_type_get_generic_icon_name (content_type)) != NULL) {
 		gtk_image_set_from_icon_name (GTK_IMAGE (GET_WIDGET ("archive_icon_image")),
 		                              icon_name, GTK_ICON_SIZE_DIALOG);
+
 		g_free (icon_name);
 	}
+
+	g_free (content_type);
 	update_sensitivity_for_mime_type (data, mime_type);
 }
 
