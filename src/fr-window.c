@@ -382,6 +382,8 @@ struct _FrWindowPrivateData {
 	GtkWindow        *load_error_parent_window;
 	gboolean          showing_error_dialog;
 	GtkWindow        *error_dialog_parent;
+
+	gboolean          close_dialog;
 };
 
 /* -- fr_window_free_private_data -- */
@@ -2685,6 +2687,10 @@ open_progress_dialog_with_open_destination (FrWindow *window)
 	display_progress_dialog (window);
 	fr_window_progress_cb (NULL, 1.0, window);
 	fr_window_message_cb (NULL, _("Extraction completed successfully"), window);
+
+	if (window->priv->close_dialog)
+		close_progress_dialog (window, TRUE);
+
 }
 
 static void
@@ -8890,4 +8896,13 @@ fr_window_set_batch__add (FrWindow   *window,
 				       FR_BATCH_ACTION_CLOSE,
 				       NULL,
 				       NULL);
+}
+
+void
+fr_window_set_close_dialog (FrWindow *window,
+			     gboolean  state)
+{
+	g_return_if_fail (window != NULL);
+
+	window->priv->close_dialog = state;
 }
