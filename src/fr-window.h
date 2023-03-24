@@ -317,4 +317,6 @@ gboolean   fr_window_file_list_drag_data_get (FrWindow         *window,
 
 void       fr_window_update_dialog_closed    (FrWindow *window);
 
+void       fr_window_set_close_dialog        (FrWindow *window,
+				               gboolean  state);
 #endif /* FR_WINDOW_H */

@@ -281,11 +281,20 @@ overwrite_toggled_cb (GtkToggleButton *button,
 }
 
 static void
+close_dialog_changed_cb (GtkToggleButton *button,
+                         FrWindow        *window)
+{
+	gboolean active = gtk_toggle_button_get_active (button);
+	fr_window_set_close_dialog (window, active);
+}
+
+static void
 dlg_extract__common (FrWindow *window,
 	             GList    *selected_files,
 	             char     *base_dir_for_selection)
 {
 	DialogData *data;
+	GtkWidget  *button;
 
 	data = g_new0 (DialogData, 1);
 	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "dlg-extract.ui");
@@ -316,6 +325,17 @@ dlg_extract__common (FrWindow *window,
 	}
 
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("recreate_dir_checkbutton")), g_settings_get_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS));
+
+	button = GET_WIDGET ("close_dialog_checkbutton");
+	g_settings_bind (data->settings,
+                   PREF_EXTRACT_CLOSE_DIALOG,
+                   GTK_TOGGLE_BUTTON (button),
+                  "active",
+                   G_SETTINGS_BIND_GET);
+	g_signal_connect (button,
+			  "toggled",
+			  G_CALLBACK (close_dialog_changed_cb),
+			  window);
 
 	/* Set the signals handlers. */
 
