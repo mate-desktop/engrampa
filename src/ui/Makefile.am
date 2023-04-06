@@ -1,6 +1,5 @@
 EXTRA_DIST = 			\
 	add-options.ui		\
-	app-menu.ui		\
 	batch-add-files.ui	\
 	batch-password.ui	\
 	delete.ui		\
