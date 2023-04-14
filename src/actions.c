@@ -748,15 +748,6 @@ activate_action_reload (GtkAction *action,
 }
 
 void
-activate_action_sort_reverse_order (GtkAction *action,
-                    gpointer   data)
-{
-    FrWindow *window = data;
-
-    fr_window_set_sort_type (window, gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action)) ? GTK_SORT_DESCENDING : GTK_SORT_ASCENDING);
-}
-
-void
 activate_action_last_output (GtkAction *action,
                  gpointer   data)
 {
