@@ -217,9 +217,6 @@ GtkTreeModel *
 void       fr_window_find                         (FrWindow    *window);
 void       fr_window_select_all                   (FrWindow    *window);
 void       fr_window_unselect_all                 (FrWindow    *window);
-void       fr_window_set_sort_type                (FrWindow    *window,
-						   GtkSortType  sort_type);
-
 /**/
 
 void       fr_window_rename_selection             (FrWindow    *window,

@@ -4854,9 +4854,6 @@ sort_column_changed_cb (GtkTreeSortable *sortable,
 
 	window->priv->sort_method = get_sort_method_from_column (column_id);
 	window->priv->sort_type = order;
-
-	/*set_active (window, get_action_from_sort_method (window->priv->sort_method), TRUE);
-	set_active (window, "SortReverseOrder", (window->priv->sort_type == GTK_SORT_DESCENDING));*/
 }
 
 static gboolean
@@ -5113,18 +5110,6 @@ view_as_radio_action (GtkAction      *action,
 {
 	FrWindow *window = data;
 	fr_window_set_list_mode (window, gtk_radio_action_get_current_value (current));
-}
-
-static void
-sort_by_radio_action (GtkAction      *action,
-		      GtkRadioAction *current,
-		      gpointer        data)
-{
-	FrWindow *window = data;
-
-	window->priv->sort_method = gtk_radio_action_get_current_value (current);
-	window->priv->sort_type = GTK_SORT_ASCENDING;
-	fr_window_update_list_order (window);
 }
 
 static void
@@ -5726,12 +5711,6 @@ fr_window_construct (FrWindow *window)
 					    n_view_as_entries,
 					    window->priv->list_mode,
 					    G_CALLBACK (view_as_radio_action),
-					    window);
-	gtk_action_group_add_radio_actions (actions,
-					    sort_by_entries,
-					    n_sort_by_entries,
-					    window->priv->sort_type,
-					    G_CALLBACK (sort_by_radio_action),
 					    window);
 
 	g_signal_connect (ui, "connect_proxy",
@@ -7021,14 +7000,6 @@ void
 fr_window_unselect_all (FrWindow *window)
 {
 	gtk_tree_selection_unselect_all (gtk_tree_view_get_selection (GTK_TREE_VIEW (window->priv->list_view)));
-}
-
-void
-fr_window_set_sort_type (FrWindow     *window,
-			 GtkSortType   sort_type)
-{
-	window->priv->sort_type = sort_type;
-	fr_window_update_list_order (window);
 }
 
 void
