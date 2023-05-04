@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Denis <prohibiti@gmail.com>, 2018
-# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2018
-# zubr139, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# Yuri Chornoivan <yurchor@ukr.net>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Юрій Яновський <lytvyn349@ukr.net>, 2021
+# zubr139, 2021
+# Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Микола Ткач <chistomov@gmail.com>, 2021
+# Denis <prohibiti@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
-"Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
+"Last-Translator: Denis <prohibiti@gmail.com>, 2021\n"
+"Language-Team: Ukrainian (https://app.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,7 +51,7 @@ msgstr "Невідомий параметр запуску: %d"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "Неможливо передати URI документа у лейбу типу «Посилання»"
+msgstr "Неможливо передати URI документу в лейбу типу «Посилання»"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
@@ -62,7 +63,7 @@ msgstr "Заборонити під’єднання до керівника с�
 
 #: mate-submodules/libegg/eggsmclient.c:238
 msgid "Specify file containing saved configuration"
-msgstr "Вказати файл, що містить збережені налаштування"
+msgstr "Вказати файл, який містить збережені налаштування"
 
 #: mate-submodules/libegg/eggsmclient.c:238
 msgid "FILE"
@@ -412,7 +413,7 @@ msgstr "Не перезаписувати файли, які вже існуют
 
 #: data/org.mate.engrampa.gschema.xml.in:151
 msgid "Recreate the folders stored in the archive"
-msgstr "Відновити теки збережені в архіві"
+msgstr "Відновити теки збережені у архіві"
 
 #: data/org.mate.engrampa.gschema.xml.in:189
 msgid "Default volume size"
@@ -433,7 +434,7 @@ msgstr "Розпакувати виділений архів у поточну �
 
 #: caja/caja-engrampa.c:352
 msgid "Extract To..."
-msgstr "Розпакувати у..."
+msgstr "Розпакувати в..."
 
 #: caja/caja-engrampa.c:353
 msgid "Extract the selected archive"
@@ -546,7 +547,8 @@ msgid "translator-credits"
 msgstr ""
 "Yarema aka Knedlyk <yupadmin@gmail.com>,\n"
 "Микола Ткач <Stuartlittle1970@gmail.com>,\n"
-"Oleh Tsyupka <myr4yk@gmail.com>"
+"Oleh Tsyupka <myr4yk@gmail.com>\n"
+"Юрій Яновський <lytvyn349@ukr.net>"
 
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:130
 msgid "Could not add the files to the archive"
@@ -1047,7 +1049,7 @@ msgstr "Тека"
 
 #: src/fr-window.c:1949
 msgid "[read only]"
-msgstr "[лише для зчитування]"
+msgstr "[лише для читання]"
 
 #: src/fr-window.c:2209
 #, c-format
@@ -1092,7 +1094,7 @@ msgstr "Читання \"%s\""
 #: src/fr-window.c:2339
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr "Вилучення файлів з \"%s\""
+msgstr "Вилучення файлів із \"%s\""
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2343
@@ -1120,7 +1122,7 @@ msgstr "Додавання файлів до \"%s\""
 #: src/fr-window.c:2358
 #, c-format
 msgid "Extracting files from \"%s\""
-msgstr "Розпаковування файлів з \"%s\""
+msgstr "Розпаковування файлів із \"%s\""
 
 #: src/fr-window.c:2361
 msgid "Copying the extracted files to the destination"
@@ -1193,7 +1195,7 @@ msgstr "Помилка при вилученні файлів із архіву.
 
 #: src/fr-window.c:3037
 msgid "An error occurred while adding files to the archive."
-msgstr "Помилка при додаванні файлів у архів."
+msgstr "Помилка при додаванні файлів до архіву."
 
 #: src/fr-window.c:3041
 msgid "An error occurred while testing archive."
@@ -1353,13 +1355,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Файл з назвою \"%s\" вже існує.\n"
+"Файл із назвою \"%s\" вже існує.\n"
 "\n"
 "%s"
 
 #: src/fr-window.c:7766
 msgid "Rename"
-msgstr "Змінити назву"
+msgstr "Перейменувати"
 
 #: src/fr-window.c:7767
 msgid "_New folder name:"

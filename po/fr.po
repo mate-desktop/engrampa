@@ -4,37 +4,36 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# jeremy shields <jeremy.shields@orange.fr>, 2018
-# mauron, 2018
-# yoplait <yoplait@tememe.org>, 2018
-# Charles Monzat <c.monzat@laposte.net>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2019
-# roxfr <roxfr@outlook.fr>, 2020
-# clefebvre <clement.lefebvre@linuxmint.com>, 2020
-# Yoan Mollard <yoan@aubrune.eu>, 2020
-# Étienne Deparis <etienne@depar.is>, 2021
-# Laurent Napias, 2021
-# David D, 2021
+# jeremy shields <jeremy.shields@orange.fr>, 2021
+# mauron, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Charles Monzat <c.monzat@laposte.net>, 2021
+# roxfr <roxfr@outlook.fr>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Tubuntu, 2021
-# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Étienne Deparis <etienne@depar.is>, 2021
+# yoplait <yoplait@tememe.org>, 2021
+# Laurent Napias, 2021
+# Yoan Mollard <yoan@aubrune.eu>, 2021
+# David D, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2021\n"
-"Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
+"Last-Translator: David D, 2021\n"
+"Language-Team: French (https://app.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
-msgstr "Le fichier n'est pas un fichier .desktop valide"
+msgstr "Le fichier n'est pas un fichier .desktop valable"
 
 #: mate-submodules/libegg/eggdesktopfile.c:193
 #, c-format
@@ -53,13 +52,13 @@ msgstr "L'application n'accepte pas les documents en ligne de commande"
 #: mate-submodules/libegg/eggdesktopfile.c:1185
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Option de lancement non reconnue : %d"
+msgstr "Option de lancement non reconnue : %d"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr ""
-"Impossible de passer les URI de documents vers une entrée .desktop de type «"
-" Type=Link »"
+"Impossible de passer les URI de documents vers une entrée .desktop de type "
+"« Type=Link »"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
@@ -257,7 +256,7 @@ msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
-"Quel critère doit être utilisé pour ranger les fichiers. Valeurs possibles :"
+"Quel critère doit être utilisé pour ranger les fichiers. Valeurs possibles :"
 " nom, taille, type, temps, chemin."
 
 #: data/org.mate.engrampa.gschema.xml.in:43
@@ -270,7 +269,7 @@ msgid ""
 "ascending, descending."
 msgstr ""
 "Indique si il faut trier dans le sens ascendant ou descendant. Les valeurs "
-"possibles sont : ascendant, descendant."
+"possibles sont : ascendant, descendant."
 
 #: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
@@ -557,7 +556,7 @@ msgstr ""
 #: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet MATE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
@@ -731,9 +730,13 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Le fichier a été modifié par une application externe. Si vous ne mettez pas "
+"%u fichier a été modifié par une application externe. Si vous ne mettez pas "
 "à jour ce fichier dans l'archive, toutes vos modifications seront perdues."
 msgstr[1] ""
+"%u fichiers ont été modifiés par une application externe. Si vous ne mettez "
+"pas à jour ces fichiers dans l'archive, toutes vos modifications seront "
+"perdues."
+msgstr[2] ""
 "%u fichiers ont été modifiés par une application externe. Si vous ne mettez "
 "pas à jour ces fichiers dans l'archive, toutes vos modifications seront "
 "perdues."
@@ -1062,13 +1065,15 @@ msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
 msgstr[0] "%lu objet (%s)"
 msgstr[1] "%lu objets (%s)"
+msgstr[2] "%lu objets (%s)"
 
 #: src/fr-window.c:1475
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] "%lu objet selectionné (%s)"
-msgstr[1] "%lu objets selectionnés (%s)"
+msgstr[0] "%lu objet sélectionné (%s)"
+msgstr[1] "%lu objets sélectionnés (%s)"
+msgstr[2] "%lu objets sélectionnés (%s)"
 
 #: src/fr-window.c:1549
 msgid "Folder"
@@ -1188,6 +1193,7 @@ msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
 msgstr[0] "%lu fichier restant"
 msgstr[1] "%lu fichiers restants"
+msgstr[2] "%lu fichiers restants"
 
 #: src/fr-window.c:2771
 msgid "Extraction completed successfully"
@@ -1514,11 +1520,11 @@ msgstr "Enleve_r"
 #: src/ui/dlg-extract.ui:41 src/ui.h:34 src/ui/new.ui:268
 #: src/ui/properties.ui:34
 msgid "_Help"
-msgstr "Aid_e"
+msgstr "Aide"
 
 #: src/ui/app-menu.ui:10
 msgid "_About Archive Manager"
-msgstr "À propos du gestionnaire d'_archive"
+msgstr "À propos du gestionnaire d'_archives"
 
 #: src/ui/batch-add-files.ui:62 src/ui/new.ui:251
 msgid "C_reate"
@@ -1550,7 +1556,7 @@ msgstr "Mio"
 #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
 #: src/ui/password.ui:126
 msgid "_Password:"
-msgstr "_Mot de passe :"
+msgstr "Mot de _passe :"
 
 #: src/ui/batch-add-files.ui:365 src/ui/new.ui:197
 msgid "_Other Options"
@@ -1590,7 +1596,7 @@ msgstr "_Fichiers :"
 
 #: src/ui/dlg-add-files.ui:71 src/ui/dlg-add-folder.ui:72
 msgid "_Add"
-msgstr "A_jouter"
+msgstr "_Ajouter"
 
 #: src/ui/dlg-add-files.ui:105 src/ui/dlg-add-folder.ui:145
 msgid "Add only if _newer"
@@ -1667,11 +1673,11 @@ msgstr "_Archive"
 
 #: src/ui.h:32
 msgid "_Edit"
-msgstr "Éditio_n"
+msgstr "Édit_er"
 
 #: src/ui.h:33
 msgid "_View"
-msgstr "_Affichage"
+msgstr "Affichage"
 
 #: src/ui.h:35
 msgid "_Arrange Files"
@@ -1892,7 +1898,7 @@ msgstr "Va à votre dossier personnel"
 
 #: src/ui.h:217
 msgid "_Toolbar"
-msgstr "Barre d'_outils"
+msgstr "Barre d'ou_tils"
 
 #: src/ui.h:218
 msgid "View the main toolbar"

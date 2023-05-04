@@ -4,28 +4,32 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dianjin Wang <1132321739qq@gmail.com>, 2018
-# 775405984, 2018
-# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
-# Christopher M <i@cicku.me>, 2018
-# shuyu liu <liushuyu011@gmail.com>, 2018
-# biqiu-ssw <shenshuaiwen@gmail.com>, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2019
-# Baron Hou <houbaron@gmail.com>, 2019
-# Skylee Ming-Tian Yang <i@skylee.xyz>, 2020
-# liulitchi <xingzuo88@qq.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# 775405984, 2021
+# biqiu-ssw <shenshuaiwen@gmail.com>, 2021
+# a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2021
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2021
+# ᴄʜʀɪsᴛᴏᴘʜᴇʀ ᴍᴇɴɢ, 2021
+# Dianjin Wang <1132321739qq@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# OkayPJ <1535253694@qq.com>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# liu lizhi <xingzuo88@qq.com>, 2021
 # 玉堂白鹤 <yjwork@qq.com>, 2021
-# Wenbin Lv <wenbin816@gmail.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
+# shuyu liu <liushuyu011@gmail.com>, 2021
+# Baron Hou <houbaron@gmail.com>, 2021
+# Skylee Ming-Tian Yang <i@skylee.xyz>, 2021
+# Wenbin Lv <wenbin816@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2022\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -522,17 +526,18 @@ msgstr "Engrampa 为 MATE 桌面的归档管理器。"
 #: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
+"Christopher Meng , 2012-2013\n"
+"ravix , 2013\n"
 "Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016\n"
-"Mingtian Yang <i@skylee.xyz>, 2020"
+"Cravix , 2013\n"
+"nyanyh , 2013\n"
+"liulitchi , 2013\n"
+"玉堂白鹤 , 2015\n"
+"Mingye Wang , 2015-2016\n"
+"白铭骢 , 2015-2016\n"
+"刘子兴 , 2015-2016\n"
+"比丘 , 2018-2019\n"
+"OkayPJ , 2020"
 
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:130
 msgid "Could not add the files to the archive"
@@ -603,7 +608,7 @@ msgstr ""
 
 #: src/dlg-batch-add.c:237 src/dlg-extract.c:108 src/fr-window.c:6914
 msgid "Create _Folder"
-msgstr "新建文件夹(_F)"
+msgstr "创建文件夹(_F)"
 
 #: src/dlg-batch-add.c:256 src/dlg-extract.c:128 src/fr-window.c:6931
 #, c-format
@@ -1282,7 +1287,7 @@ msgstr "跳过 (_S)"
 
 #: src/fr-window.c:6806
 msgid "_Replace"
-msgstr "替换 (_R)"
+msgstr "替换(_R)"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1416,7 +1421,7 @@ msgstr "“--add”和“--extract”命令所使用的默认文件夹"
 
 #: src/main.c:80
 msgid "Create destination folder without asking confirmation"
-msgstr "不请求确认就创建目的文件夹"
+msgstr "不请求确认直接创建目的文件夹"
 
 #: src/main.c:85
 msgid "Show the application's version"
@@ -1592,7 +1597,7 @@ msgstr "不解压缩旧文件(_X)"
 
 #: src/ui/dlg-extract.ui:299
 msgid "Actions"
-msgstr "操作"
+msgstr "动作"
 
 #: src/ui.h:31
 msgid "_Archive"

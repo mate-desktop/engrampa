@@ -4,39 +4,40 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Matheus Macabu <mkbu95@gmail.com>, 2018
-# Samuel Henrique <samueloph@debian.org>, 2018
-# Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2018
-# 642cf48d39bca7f9ad9d185d4bcea8c8, 2018
-# Allan Richardson <luke.downhill@gmail.com>, 2018
-# Herick Vinicius <herick.gustavo@gmail.com>, 2018
-# Felipe Rozelio <feliperozelio@gmail.com>, 2018
-# Aldo Oliveira <america103@gmail.com>, 2018
-# 65f2af3cfa184c075942a0418b98d2de_d688669, 2018
-# Victor Gonçalves <hotcyv@gmail.com>, 2018
-# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2018
-# Lucas Dias <lucasdiaas@outlook.com>, 2018
-# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2019
-# Danylo Sa <kaiserblast@gmail.com>, 2019
-# gustavo s, 2020
-# Roger Araújo <roger.rf@gmail.com>, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Samuel Henrique <samueloph@debian.org>, 2021
+# Willian Nunes de Oliveira <williangd@yahoo.com.br>, 2021
+# Allan Richardson <luke.downhill@gmail.com>, 2021
+# Herick Vinicius <herick.gustavo@gmail.com>, 2021
+# Josué Teodoro Moreira <jteodomo@gmail.com>, 2021
+# 808007d4a0e569ece8fbccc32b57c592_b53d1a5, 2021
+# Matheus Macabu <mkbu95@gmail.com>, 2021
+# Marcelo Ghelman <marcelo.ghelman@gmail.com>, 2021
+# 65f2af3cfa184c075942a0418b98d2de_d688669, 2021
 # 18ab4449a00621534598e84a949423ea, 2021
-# LemFre, 2021
+# Roger Araújo <roger.rf@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Felipe Rozelio <feliperozelio@gmail.com>, 2021
+# Aldo Oliveira <america103@gmail.com>, 2021
+# Victor Gonçalves <hotcyv@gmail.com>, 2021
+# Gilberto José Souza Coutinho <gilberto.jsc@gmail.com>, 2021
+# Lucas Dias <lucasdiaas@outlook.com>, 2021
+# Danylo Sa <kaiserblast@gmail.com>, 2021
+# gustavo s, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: LemFre, 2021\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/mate/teams/13566/pt_BR/)\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
+"Last-Translator: gustavo s, 2021\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/mate/teams/13566/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
@@ -569,7 +570,10 @@ msgstr ""
 "Matheus Martins https://www.transifex.com/accounts/profile/Matheus_Martins\n"
 "Michele dos Santos da Silva https://www.transifex.com/accounts/profile/mchelem\n"
 "Thiago Cangussu https://www.transifex.com/accounts/profile/cangussu.thg\n"
-"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti"
+"vitorgatti https://www.transifex.com/accounts/profile/vitorgatti\n"
+"Ítalo Rangel Penaforte https://www.transifex.com/accounts/profile/italo.penaforte\n"
+"George Salu da Silva https://www.transifex.com/user/profile/George_salu_da_silva/\n"
+"Josué Teodoro Moreira https://www.transifex.com/user/profile/J0sueTM/"
 
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:130
 msgid "Could not add the files to the archive"
@@ -730,6 +734,7 @@ msgid_plural ""
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: src/dlg-update.c:195
 #, c-format
@@ -870,7 +875,7 @@ msgstr "7-Zip"
 
 #: src/fr-init.c:71
 msgid "Tar compressed with 7z"
-msgstr "Tar comprimido com 7z"
+msgstr "Tar compactado com 7z"
 
 #: src/fr-init.c:72
 msgid "Ace"
@@ -878,7 +883,7 @@ msgstr "Ace"
 
 #: src/fr-init.c:73
 msgid "ALZip archive"
-msgstr "arquivo alzip"
+msgstr "Arquivo alzip"
 
 #: src/fr-init.c:74
 msgid "ARC archive"
@@ -902,19 +907,19 @@ msgstr "Tar compactado com brotli"
 
 #: src/fr-init.c:79
 msgid "Bzip2 compressed file"
-msgstr "Arquivo comprimido com Bzip2"
+msgstr "Arquivo compactado com BZIP2"
 
 #: src/fr-init.c:80
 msgid "Tar compressed with bzip2"
-msgstr "Tar compactado com bzip2"
+msgstr "Tar compactado com BZIP2"
 
 #: src/fr-init.c:81
 msgid "Bzip compressed file"
-msgstr "Arquivo compactado Bzip"
+msgstr "Arquivo compactado BZIP"
 
 #: src/fr-init.c:82
 msgid "Tar compressed with bzip"
-msgstr "Tar compactado com bzip"
+msgstr "Tar compactado com BZIP"
 
 #: src/fr-init.c:83
 msgid "Rar Archived Comic Book"
@@ -934,7 +939,7 @@ msgstr ""
 
 #: src/fr-init.c:87
 msgid "Tar compressed with gzip"
-msgstr "Tar compactado com gzip"
+msgstr "Tar compactado com GZIP"
 
 #: src/fr-init.c:88
 msgid "Unix CPIO Archive"
@@ -946,7 +951,7 @@ msgstr ""
 
 #: src/fr-init.c:90
 msgid "GZip compressed file"
-msgstr "Arquivo compactado GZip"
+msgstr "Arquivo comprimido GZIP"
 
 #: src/fr-init.c:91
 msgid "Jar"
@@ -962,15 +967,15 @@ msgstr ""
 
 #: src/fr-init.c:94
 msgid "Tar compressed with lrzip"
-msgstr "Tar compactado com Irzip"
+msgstr "Tar compactado com LZIP"
 
 #: src/fr-init.c:95
 msgid "LZip compressed file"
-msgstr "Arquivo compactado lzip"
+msgstr "Arquivo compactado LZIP"
 
 #: src/fr-init.c:96
 msgid "Tar compressed with lzip"
-msgstr "Tar compactado com lzip"
+msgstr "Tar compactado com LZIP"
 
 #: src/fr-init.c:97
 msgid "LZMA compressed file"
@@ -1026,7 +1031,7 @@ msgstr ""
 
 #: src/fr-init.c:110
 msgid "Xz compressed file"
-msgstr "Arquivo compactado Xz"
+msgstr "Arquivo compactado XZ"
 
 #: src/fr-init.c:111
 msgid "Tar compressed with xz"
@@ -1054,6 +1059,7 @@ msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: src/fr-window.c:1475
 #, c-format
@@ -1061,6 +1067,7 @@ msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: src/fr-window.c:1549
 msgid "Folder"
@@ -1180,6 +1187,7 @@ msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: src/fr-window.c:2771
 msgid "Extraction completed successfully"

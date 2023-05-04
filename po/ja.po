@@ -4,24 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# あわしろいくや <ikunya@gmail.com>, 2018
-# Mika Kobayashi, 2018
-# Rockers <sumorock@hotmail.com>, 2018
-# Ikuru K <kanumaiku@gmail.com>, 2018
-# ABE Tsunehiko, 2020
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Yoshifumi Kinoshita <yoshifumi1975@gmail.com>, 2021
 # pivo thusr, 2021
-# Green, 2021
+# ABE Tsunehiko, 2021
+# あわしろいくや <ikunya@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# fbc955180bc2b956cb4ef52d00eb80a0_91487f8, 2021
+# Rockers <sumorock@hotmail.com>, 2021
+# Ikuru K <kanumaiku@gmail.com>, 2021
+# Green <usergreen@users.osdn.me>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Green, 2021\n"
-"Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
+"Last-Translator: Green <usergreen@users.osdn.me>, 2021\n"
+"Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,7 +44,7 @@ msgstr "%s の起動中です"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1117
 msgid "Application does not accept documents on command line"
-msgstr "コマンドラインからドキュメントにはアクセスできません"
+msgstr "コマンドラインからは、文書にアクセスできません"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1185
 #, c-format
@@ -53,7 +53,7 @@ msgstr "不明な起動オプションです: %d"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "'Type=Link' の .desktop エントリーにはドキュメントの URI を渡せません"
+msgstr "'Type=Link' の .desktop エントリーには文書の URI を渡せません"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
@@ -285,7 +285,7 @@ msgstr "サイズ列をメインウィンドウに表示する"
 
 #: data/org.mate.engrampa.gschema.xml.in:63
 msgid "Display time"
-msgstr "表示時刻"
+msgstr "時刻表示"
 
 #: data/org.mate.engrampa.gschema.xml.in:64
 msgid "Display the Time column in the main window."
@@ -421,7 +421,7 @@ msgstr "指定した書庫を現在の場所に展開します"
 
 #: caja/caja-engrampa.c:352
 msgid "Extract To..."
-msgstr "展開..."
+msgstr "展開先..."
 
 #: caja/caja-engrampa.c:353
 msgid "Extract the selected archive"
@@ -530,19 +530,19 @@ msgstr "Engrampa は MATEデスクトップ環境用の書庫マネージャで�
 #: src/actions.c:905
 msgid "translator-credits"
 msgstr ""
-"相花 毅 \n"
-"佐藤 暁 \n"
-"KAMAGASAKO Masatoshi \n"
-"Akira TAGOH \n"
-"Yukihiro Nakai \n"
-"Yuusuke Tahara \n"
-"Akira Higuchi \n"
-"やまね ひでき \n"
-"草野 貴之 \n"
-"松澤 二郎 \n"
+"相花 毅 <takeshi.aihana@gmail.com>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Akira TAGOH <tagoh@gnome.gr.jp>\n"
+"Yukihiro Nakai <nakai@gnome.gr.jp>\n"
+"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
+"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
+"やまね ひでき <henrich@debian.or.jp>\n"
+"草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
+"松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "Green, alias usergreen\n"
 "日本GNOMEユーザー会 http://www.gnome.gr.jp/\n"
-"MATE 文書化チーム https://www.transifex.com/mate/ "
+"MATE文書化チーム https://www.transifex.com/mate/"
 
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:130
 msgid "Could not add the files to the archive"
@@ -572,7 +572,7 @@ msgstr "キャンセル(_C)"
 
 #: src/dlg-add-folder.c:742
 msgid "_Save"
-msgstr "サーバ(_S)"
+msgstr "保存(_S)"
 
 #: src/dlg-ask-password.c:116
 #, c-format
@@ -978,7 +978,7 @@ msgstr "RZip 圧縮ファイル"
 
 #: src/fr-init.c:106
 msgid "StuffIt Archive"
-msgstr "StuffIt 形式フォーマット"
+msgstr "StuffIt 形式"
 
 #: src/fr-init.c:107
 msgid "Tar uncompressed"
@@ -1020,13 +1020,13 @@ msgstr "ZIP"
 #, c-format
 msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
-msgstr[0] "%lu の対象 (%s)"
+msgstr[0] "%lu 個の対象 (%s)"
 
 #: src/fr-window.c:1475
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] "%lu を対象に選択 (%s)"
+msgstr[0] "%lu 個を対象に選択 (%s)"
 
 #: src/fr-window.c:1549
 msgid "Folder"
@@ -1047,7 +1047,7 @@ msgstr "_一時停止"
 
 #: src/fr-window.c:2242
 msgid "Process paused"
-msgstr "プロセスの停止"
+msgstr "プロセスの一時停止"
 
 #: src/fr-window.c:2244
 msgid "_Resume"
@@ -1144,7 +1144,7 @@ msgstr "閉じる(_C)"
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
-msgstr[0] "%lu ファイルが残っています"
+msgstr[0] "%lu 個のファイルが残っています"
 
 #: src/fr-window.c:2771
 msgid "Extraction completed successfully"
@@ -1410,7 +1410,7 @@ msgstr "書庫を指定したフォルダに展開してプログラムを終了
 
 #: src/main.c:65 src/main.c:77
 msgid "FOLDER"
-msgstr "FOLDER"
+msgstr "フォルダ"
 
 #: src/main.c:68
 msgid "Extract archives asking the destination folder and quit the program"
@@ -1604,7 +1604,7 @@ msgstr "古いファイルは展開しない(_X)"
 
 #: src/ui/dlg-extract.ui:299
 msgid "Actions"
-msgstr "オプション"
+msgstr "各種の操作"
 
 #: src/ui.h:31
 msgid "_Archive"

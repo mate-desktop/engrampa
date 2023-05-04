@@ -4,14 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Simone Centonze <mypythonit@gmail.com>, 2018
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# Marco Bartolucci <nap.84@live.it>, 2018
-# Marco Z. <minaz666@gmail.com>, 2018
-# Enrico B. <enricobe@hotmail.com>, 2020
-# 6d1bb5d393520b00f70a137a58397ea1_b5ba1e2 <22cc5e560e0d5b6554809bfb51b90403_882095>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# 6d1bb5d393520b00f70a137a58397ea1_b5ba1e2 <22cc5e560e0d5b6554809bfb51b90403_882095>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Dario Di Nucci <linkin88mail@gmail.com>, 2021
 # Giuseppe Pignataro <rogepix@gmail.com>, 2021
+# Enrico B. <enricobe@hotmail.com>, 2021
+# Marco Bartolucci, 2021
+# Marco Z. <minaz666@gmail.com>, 2021
 # Alessandro Volturno <alelvb@inwind.it>, 2021
 # 
 msgid ""
@@ -19,28 +19,28 @@ msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:168
 msgid "File is not a valid .desktop file"
-msgstr "Il file non è un file .desktop valido"
+msgstr "Non è un file .desktop valido"
 
 #: mate-submodules/libegg/eggdesktopfile.c:193
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Versione «%s» del file desktop non riconosciuta"
+msgstr "Versione '%s' del file desktop non riconosciuta"
 
 #: mate-submodules/libegg/eggdesktopfile.c:975
 #, c-format
 msgid "Starting %s"
-msgstr "Avvio di «%s»"
+msgstr "Avvio di %s"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1117
 msgid "Application does not accept documents on command line"
@@ -49,7 +49,7 @@ msgstr "L'applicazione non accetta documenti sulla riga di comando"
 #: mate-submodules/libegg/eggdesktopfile.c:1185
 #, c-format
 msgid "Unrecognized launch option: %d"
-msgstr "Opzione di lancio non riconosciuta: %d"
+msgstr "Opzione di avvio non riconosciuta: %d"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1401
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: mate-submodules/libegg/eggdesktopfile.c:1422
 msgid "Not a launchable item"
-msgstr "Non è un oggetto lanciabile"
+msgstr "Non è un oggetto avviabile"
 
 #: mate-submodules/libegg/eggsmclient.c:233
 msgid "Disable connection to session manager"
@@ -75,7 +75,7 @@ msgstr "FILE"
 
 #: mate-submodules/libegg/eggsmclient.c:243
 msgid "Specify session management ID"
-msgstr "Specifica l'ID della gestione della sessione"
+msgstr "Specifica l'ID di gestione della sessione"
 
 #: mate-submodules/libegg/eggsmclient.c:243
 msgid "ID"
@@ -87,7 +87,7 @@ msgstr "Opzioni di gestione della sessione:"
 
 #: mate-submodules/libegg/eggsmclient.c:270
 msgid "Show session management options"
-msgstr "Mostra le opzioni di gestione sessione"
+msgstr "Mostra le opzioni di gestione della sessione"
 
 #: data/engrampa.appdata.xml.in.in:7 data/engrampa.desktop.in.in:3
 #: src/main.c:47
@@ -267,7 +267,7 @@ msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
-msgstr "Modalità Elenco"
+msgstr "Modalità Lista"
 
 #: data/org.mate.engrampa.gschema.xml.in:49
 msgid ""
@@ -287,7 +287,7 @@ msgstr "Visualizza la colonna Tipo nella finestra principale."
 
 #: data/org.mate.engrampa.gschema.xml.in:58
 msgid "Display size"
-msgstr "Dimensione schermo"
+msgstr "Mostra la dimensione"
 
 #: data/org.mate.engrampa.gschema.xml.in:59
 msgid "Display the Size column in the main window."
@@ -383,8 +383,8 @@ msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
-"Livello di compressione usato nell'aggiunta di file ad un archivio. I valori"
-" possibili sono: molto veloce, veloce, normale, massimo."
+"Livello di compressione utilizzato quando si aggiungono file ad un archivio."
+" I valori possibili sono: molto veloce, veloce, normale, massimo."
 
 #: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
@@ -531,8 +531,8 @@ msgid ""
 "St, Fifth Floor, Boston, MA  02110-1301 USA"
 msgstr ""
 "Una copia della GNU General Public License dovrebbe essere stata fornita con"
-" Engrampa. In caso contrario scrivere a: Free Software Foundation, Inc. 51 "
-"Franklin St, Fifth Floor, Boston, MA 02110-1307 USA"
+" Engrampa. In caso contrario scrivere a:  Free Software Foundation, Inc. 51 "
+"Franklin St, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: src/actions.c:900
 msgid ""
@@ -548,9 +548,7 @@ msgstr "Engrampa è un gestore di archivi per l'Ambiente Desktop MATE. "
 
 #: src/actions.c:905
 msgid "translator-credits"
-msgstr ""
-"Enrico Bella, 2020\n"
-"Alessandro Volturno, 2020"
+msgstr "Alessandro Volturno, 2021"
 
 #: src/dlg-add-files.c:104 src/dlg-add-folder.c:130
 msgid "Could not add the files to the archive"
@@ -576,7 +574,7 @@ msgstr "Nome _Opzioni:"
 #: src/ui/dlg-extract.ui:56 src/ui/new.ui:235 src/ui/password.ui:37
 #: src/ui/update.ui:33 src/ui/update.ui:190
 msgid "_Cancel"
-msgstr "A_nnulla"
+msgstr "Annulla"
 
 #: src/dlg-add-folder.c:742
 msgid "_Save"
@@ -623,7 +621,7 @@ msgstr ""
 
 #: src/dlg-batch-add.c:237 src/dlg-extract.c:108 src/fr-window.c:6914
 msgid "Create _Folder"
-msgstr "C_rea cartella"
+msgstr "C_rea una cartella"
 
 #: src/dlg-batch-add.c:256 src/dlg-extract.c:128 src/fr-window.c:6931
 #, c-format
@@ -636,7 +634,7 @@ msgstr "Archivio non creato"
 
 #: src/dlg-batch-add.c:321
 msgid "The archive is already present.  Do you want to overwrite it?"
-msgstr "L'archivio esiste già. Sovrascriverlo veramente?"
+msgstr "L'archivio esiste già. Si desidera sovrascriverlo?"
 
 #: src/dlg-batch-add.c:324
 msgid "_Overwrite"
@@ -685,7 +683,7 @@ msgstr "Impossibile aprire questo tipo di file"
 
 #: src/dlg-package-installer.c:323
 msgid "_Search Command"
-msgstr "Comando Ce_rca"
+msgstr "Comando _Cerca"
 
 #: src/dlg-prop.c:97
 #, c-format
@@ -710,9 +708,13 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"%ufile è stato modificato con una applicazione esterna. Se non si aggiorna "
+"Il file è stato modificato da una applicazione esterna. Se non si aggiorna "
 "il file nell'archivio, tutte le modifiche apportate saranno perse."
 msgstr[1] ""
+"%u file sono stati modificati con una applicazione esterna. Se non si "
+"aggiornano questi file nell'archivio, tutte le modifiche apportate saranno "
+"perse."
+msgstr[2] ""
 "%u file sono stati modificati con una applicazione esterna. Se non si "
 "aggiornano questi file nell'archivio, tutte le modifiche apportate saranno "
 "perse."
@@ -725,7 +727,7 @@ msgstr "Aggiorno i file nell'archivio «%s»?"
 #: src/eggfileformatchooser.c:224
 #, c-format
 msgid "File _Format: %s"
-msgstr "Formato del _file: %s"
+msgstr "_Formato del file: %s"
 
 #: src/eggfileformatchooser.c:385
 msgid "All Files"
@@ -745,7 +747,7 @@ msgstr "Formato del file"
 
 #: src/eggfileformatchooser.c:427
 msgid "Extension(s)"
-msgstr "Estensioni"
+msgstr "Estensione(i)"
 
 #: src/eggfileformatchooser.c:658
 #, c-format
@@ -1040,6 +1042,7 @@ msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
 msgstr[0] "%lu oggetto (%s)"
 msgstr[1] "%lu oggetti (%s)"
+msgstr[2] "%lu oggetti (%s)"
 
 #: src/fr-window.c:1475
 #, c-format
@@ -1047,6 +1050,7 @@ msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
 msgstr[0] "%lu oggetto selezionato (%s)"
 msgstr[1] "%lu oggetti selezionati (%s)"
+msgstr[2] "%lu oggetti selezionati (%s)"
 
 #: src/fr-window.c:1549
 msgid "Folder"
@@ -1141,7 +1145,7 @@ msgstr "Sto salvando  «%s» "
 
 #: src/fr-window.c:2535 src/ui/app-menu.ui:14
 msgid "_Quit"
-msgstr "_Esci"
+msgstr "Esci"
 
 #: src/fr-window.c:2536
 msgid "_Open the Archive"
@@ -1166,6 +1170,7 @@ msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
 msgstr[0] "%lu file rimanente"
 msgstr[1] "%lu file rimanenti"
+msgstr[2] "%lu file rimanenti"
 
 #: src/fr-window.c:2771
 msgid "Extraction completed successfully"
@@ -1291,7 +1296,7 @@ msgstr "Apre un archivio usato di recente"
 #. Translators: after the colon there is a folder name.
 #: src/fr-window.c:5946 src/ui/batch-add-files.ui:209
 msgid "_Location:"
-msgstr "Posi_zione:"
+msgstr "Per_corso:"
 
 #: src/fr-window.c:6295
 #, c-format
@@ -1306,7 +1311,7 @@ msgstr "Sostituire il file «%s»?"
 #: src/fr-window.c:6797
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
-msgstr "In «%s» è già presente un altro file con lo stesso nome."
+msgstr "Un altro file con lo stesso nome è già presente in «%s»."
 
 #: src/fr-window.c:6804
 msgid "Replace _All"
@@ -1324,7 +1329,7 @@ msgstr "_Sostituisci"
 #. when renaming a file.
 #: src/fr-window.c:7648
 msgid "New name is void, please type a name."
-msgstr "Il nuovo nome è vuoto, immetti un nome."
+msgstr "Il nuovo nome è vuoto, immettere un nome."
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1399,7 +1404,7 @@ msgstr "_Cartella di destinazione:"
 
 #: src/fr-window.c:8212 src/ui.h:75 src/ui.h:96
 msgid "_Paste"
-msgstr "_Incolla"
+msgstr "Incolla"
 
 #: src/fr-window.c:8811
 msgid "Add files to an archive"
@@ -1489,7 +1494,7 @@ msgstr "_Rimuovi"
 #: src/ui/dlg-extract.ui:41 src/ui.h:34 src/ui/new.ui:268
 #: src/ui/properties.ui:34
 msgid "_Help"
-msgstr "_Aiuto"
+msgstr "Aiuto"
 
 #: src/ui/app-menu.ui:10
 msgid "_About Archive Manager"
@@ -1525,7 +1530,7 @@ msgstr "MB"
 #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
 #: src/ui/password.ui:126
 msgid "_Password:"
-msgstr "Pass_word:"
+msgstr "_Password:"
 
 #: src/ui/batch-add-files.ui:365 src/ui/new.ui:197
 msgid "_Other Options"
@@ -1545,7 +1550,7 @@ msgstr "Elimina"
 
 #: src/ui/delete.ui:52 src/ui.h:83 src/ui.h:104
 msgid "_Delete"
-msgstr "_Elimina"
+msgstr "Elimina"
 
 #: src/ui/delete.ui:86 src/ui/dlg-extract.ui:122
 msgid "_All files"
@@ -1565,7 +1570,7 @@ msgstr "_File:"
 
 #: src/ui/dlg-add-files.ui:71 src/ui/dlg-add-folder.ui:72
 msgid "_Add"
-msgstr "A_ggiungi"
+msgstr "_Aggiungi"
 
 #: src/ui/dlg-add-files.ui:105 src/ui/dlg-add-folder.ui:145
 msgid "Add only if _newer"
@@ -1577,7 +1582,7 @@ msgstr "Aggiungi una cartella"
 
 #: src/ui/dlg-add-folder.ui:111
 msgid "_Include subfolders"
-msgstr "Includi _sotto-cartelle"
+msgstr ":Includi sottocartelle"
 
 #: src/ui/dlg-add-folder.ui:128
 msgid "Exclude folders that are symbolic lin_ks"
@@ -1598,7 +1603,7 @@ msgstr "Escl_udi i file:"
 
 #: src/ui/dlg-add-folder.ui:247
 msgid "_Exclude folders:"
-msgstr "Escludi le c_artelle:"
+msgstr "_Escludere le cartelle:"
 
 #: src/ui/dlg-add-folder.ui:300
 msgid "_Load Options"
@@ -1622,7 +1627,7 @@ msgstr "_Estrai"
 
 #: src/ui/dlg-extract.ui:244
 msgid "Re-crea_te folders"
-msgstr "Ricr_ea le cartelle"
+msgstr "Ri-creare le car_telle"
 
 #: src/ui/dlg-extract.ui:260
 msgid "Over_write existing files"
@@ -1642,7 +1647,7 @@ msgstr "_Archivio"
 
 #: src/ui.h:32
 msgid "_Edit"
-msgstr "_Modifica"
+msgstr "Modifica"
 
 #: src/ui.h:33
 msgid "_View"
@@ -1654,7 +1659,7 @@ msgstr "_Ordina file"
 
 #: src/ui.h:38
 msgid "_About"
-msgstr "_Informazioni"
+msgstr "Informazioni"
 
 #: src/ui.h:39
 msgid "Information about the program"
@@ -1666,7 +1671,7 @@ msgstr "_Aggiungi file..."
 
 #: src/ui.h:43 src/ui.h:47
 msgid "Add files to the archive"
-msgstr "Aggiungi dei file all'archivio"
+msgstr "Aggiungi file all'archivio"
 
 #: src/ui.h:46
 msgid "Add Files"
@@ -1690,7 +1695,7 @@ msgstr "Chiude l'archivio corrente"
 
 #: src/ui.h:62
 msgid "Contents"
-msgstr "Sommario"
+msgstr "Contenuti"
 
 #: src/ui.h:63
 msgid "Display the Engrampa Manual"
@@ -1706,7 +1711,7 @@ msgstr "Copia la selezione"
 
 #: src/ui.h:71 src/ui.h:92
 msgid "Cu_t"
-msgstr "_Taglia"
+msgstr "Taglia"
 
 #: src/ui.h:72 src/ui.h:93
 msgid "Cut the selection"
@@ -1718,7 +1723,7 @@ msgstr "Incolla il contenuto degli appunti"
 
 #: src/ui.h:79 src/ui.h:100
 msgid "_Rename…"
-msgstr "_Rinomina"
+msgstr "_Rinomina..."
 
 #: src/ui.h:80 src/ui.h:101
 msgid "Rename the selection"
@@ -1774,7 +1779,7 @@ msgstr "Apre un archivio"
 
 #: src/ui.h:142 src/ui.h:178 src/ui.h:182 src/ui.h:186 src/ui.h:190
 msgid "_Open"
-msgstr "_Apri"
+msgstr "Apri"
 
 #: src/ui.h:146
 msgid "_Open With…"
@@ -1826,7 +1831,7 @@ msgstr "Seleziona tutti i file"
 
 #: src/ui.h:170
 msgid "_Stop"
-msgstr "_Stop"
+msgstr "_Ferma"
 
 #: src/ui.h:171
 msgid "Stop current operation"
@@ -1891,7 +1896,7 @@ msgstr "Inverte l'ordine dell'elenco"
 
 #: src/ui.h:232
 msgid "_Folders"
-msgstr "Ca_rtelle"
+msgstr "Cartelle"
 
 #: src/ui.h:242
 msgid "View All _Files"
@@ -1984,7 +1989,7 @@ msgstr "Numero dei file:"
 
 #: src/ui/properties.ui:253
 msgid "Location:"
-msgstr "Posizione:"
+msgstr "Percorso:"
 
 #: src/ui/properties.ui:269
 msgid "Last modified:"

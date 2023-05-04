@@ -4,10 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2018
-# Allan Nordhøy <epost@anotheragency.no>, 2019
-# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Kim Malmo <berencamlost@msn.com>, 2021
+# 87d96f43665dd9fb55eba4603e184cae, 2021
+# Kenneth Jenssen <kennethjenssen@yahoo.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Allan Nordhøy <epost@anotheragency.no>, 2021
 # heskjestad <cato@heskjestad.xyz>, 2021
 # 
 msgid ""
@@ -15,9 +16,9 @@ msgstr ""
 "Project-Id-Version: engrampa 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"PO-Revision-Date: 2021-09-18 19:17+0000\n"
 "Last-Translator: heskjestad <cato@heskjestad.xyz>, 2021\n"
-"Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
+"Language-Team: Norwegian Bokmål (https://app.transifex.com/mate/teams/13566/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -87,7 +88,7 @@ msgstr "Vis alternativer for øktbehandling"
 #: data/engrampa.appdata.xml.in.in:7 data/engrampa.desktop.in.in:3
 #: src/main.c:47
 msgid "Engrampa Archive Manager"
-msgstr "Engrampa arkivhåndtering"
+msgstr "Engrampa arkivbehandling"
 
 #: data/engrampa.appdata.xml.in.in:8
 msgid "An Archive Manager for the MATE desktop environment"
@@ -224,7 +225,7 @@ msgstr ""
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:1941 src/fr-window.c:5493
 msgid "Archive Manager"
-msgstr "Arkivhåndtering"
+msgstr "Arkivbehandling"
 
 #: data/engrampa.desktop.in.in:5
 msgid "Create and modify an archive"
@@ -389,8 +390,8 @@ msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
-"Hvorvbidt arkivhodet skal krypteres. Hvis hodet er kryptert vil passord også"
-" kreves for å liste opp arkivinnholdet."
+"Hvorvidt arkivhodet skal krypteres. Hvis hodet er kryptert vil passord også "
+"kreves for å liste opp arkivinnholdet."
 
 #: data/org.mate.engrampa.gschema.xml.in:131
 msgid "Adds 'unar' support over .zip archives."
@@ -708,11 +709,11 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Fila er endret med eksternt program. Hvis du ikke oppdaterer fila i arkivet "
-"vil alle endringene gå tapt."
+"Filen er endret med eksternt program. Alle endringer vil gå tapt hvis du "
+"ikke oppdaterer filen i arkivet."
 msgstr[1] ""
-"%u filer er endret med eksternt program. Hvis du ikke oppdaterer filene i "
-"arkivet vil alle endringene gå tapt."
+"%u filer er endret med eksternt program. Alle endringer vil gå tapt hvis du "
+"ikke oppdaterer filene i arkivet."
 
 #: src/dlg-update.c:195
 #, c-format
@@ -761,11 +762,11 @@ msgstr "Filformat ikke gjenkjent"
 
 #: src/fr-archive.c:1146
 msgid "File not found."
-msgstr "Filen ble ikke funnet."
+msgstr "Fant ikke filen."
 
 #: src/fr-archive.c:1252
 msgid "Archive not found"
-msgstr "Arkiv ikke funnet"
+msgstr "Fant ikke arkivet"
 
 #: src/fr-archive.c:2449
 msgid "You don't have the right permissions."
@@ -797,7 +798,7 @@ msgstr "Fjerner fil: "
 #: src/fr-command-rar.c:709
 #, c-format
 msgid "Could not find the volume: %s"
-msgstr "Kunne ikke finne volum: %s"
+msgstr "Fant ikke volum: %s"
 
 #: src/fr-command-tar.c:365
 msgid "Deleting files from archive"
@@ -813,7 +814,7 @@ msgstr "Dekomprimerer arkiv"
 
 #: src/fr-init.c:61
 msgid "Debian package"
-msgstr "Debian pakke"
+msgstr "Debian-pakke"
 
 #: src/fr-init.c:62
 msgid "Cabinet"
@@ -1211,7 +1212,7 @@ msgstr "En feil oppsto."
 
 #: src/fr-window.c:3055
 msgid "Command not found."
-msgstr "Kommando ikke funnet."
+msgstr "Fant ikke kommando."
 
 #: src/fr-window.c:3258
 msgid "Test Result"
@@ -1485,7 +1486,7 @@ msgstr "_Hjelp"
 
 #: src/ui/app-menu.ui:10
 msgid "_About Archive Manager"
-msgstr "_Om arkivhåndtering"
+msgstr "_Om arkivbehandling"
 
 #: src/ui/batch-add-files.ui:62 src/ui/new.ui:251
 msgid "C_reate"
@@ -1573,7 +1574,7 @@ msgstr "_Ta med undermapper"
 
 #: src/ui/dlg-add-folder.ui:128
 msgid "Exclude folders that are symbolic lin_ks"
-msgstr "Ekskluder kataloger som er symbolske len_ker"
+msgstr "Ekskluder mapper som er symbolske len_ker"
 
 #: src/ui/dlg-add-folder.ui:169
 msgid "Include _files:"
@@ -1646,7 +1647,7 @@ msgstr "_Plasser filer"
 
 #: src/ui.h:38
 msgid "_About"
-msgstr "Om"
+msgstr "_Om"
 
 #: src/ui.h:39
 msgid "Information about the program"
@@ -1778,7 +1779,7 @@ msgstr "Åpne valgte filer i et program"
 
 #: src/ui.h:150
 msgid "Pass_word…"
-msgstr "Adgangs_kode …"
+msgstr "_Passord …"
 
 #: src/ui.h:151
 msgid "Specify a password for this archive"
