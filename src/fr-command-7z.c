@@ -407,8 +407,6 @@ static void
 process_line__delete (char     *line,
 		      gpointer  data)
 {
-	FrCommand *comm = FR_COMMAND (data);
-
 	if ((strstr (line, "Wrong password?") != NULL)
 	    || (strstr (line, "Enter password") != NULL))
 	{

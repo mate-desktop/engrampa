@@ -1,102 +1,973 @@
-<ui>
-  <menubar name="MenuBar">
-    <menu name="Archive" action="FileMenu">
-      <menuitem action="New"/>
-      <menuitem action="Open"/>
-      <menuitem action="OpenRecent"/>
-      <menuitem action="SaveAs"/>
-      <separator/>
-      <menuitem action="Extract"/>
-      <menuitem action="TestArchive"/>
-      <separator/>
-      <menuitem action="Properties"/>
-      <separator/>
-      <menuitem action="Close"/>
-    </menu>
-    <menu action="EditMenu">
-      <menuitem action="Cut"/>
-      <menuitem action="Copy"/>
-      <menuitem action="Paste"/>
-      <menuitem action="Rename"/>
-      <menuitem action="Delete"/>
-      <separator/>
-      <menuitem action="SelectAll"/>
-      <menuitem action="DeselectAll"/>
-      <separator/>
-      <menuitem action="Find"/>
-      <separator/>
-      <menuitem action="AddFiles"/>
-      <menuitem action="AddFolder"/>
-      <separator/>
-      <menuitem action="Password"/>
-    </menu>
-    <menu action="ViewMenu">
-      <menuitem action="ViewToolbar"/>
-      <menuitem action="ViewStatusbar"/>
-      <menuitem action="ViewFolders"/>
-      <separator/>
-      <menuitem action="ViewAllFiles"/>
-      <menuitem action="ViewAsFolder"/>
-      <separator/>
-      <menuitem action="LastOutput"/>
-      <separator/>
-      <menuitem action="Stop"/>
-      <menuitem action="Reload"/>
-    </menu>
-    <menu action="HelpMenu">
-      <menuitem action="Contents"/>
-      <menuitem action="About"/>
-    </menu>
-  </menubar>
-  <toolbar name="ToolBar">
-    <toolitem action="New"/>
-    <toolitem action="OpenRecent_Toolbar"/>
-    <separator/>
-    <toolitem action="Extract_Toolbar"/>
-    <separator/>
-    <toolitem action="AddFiles_Toolbar"/>
-    <toolitem action="AddFolder_Toolbar"/>
-    <separator/>
-    <toolitem action="Stop"/>
-  </toolbar>
-  <toolbar name="LocationBar">
-    <toolitem action="GoBack"/>
-    <toolitem action="GoForward"/>
-    <toolitem action="GoUp"/>
-    <toolitem action="GoHome"/>
-  </toolbar>
-  <popup name="FilePopupMenu">
-    <menuitem action="ViewSelection"/>
-    <menuitem action="OpenSelection"/>
-    <separator/>
-    <menuitem action="Extract"/>
-    <separator/>
-    <menuitem action="Cut"/>
-    <menuitem action="Copy"/>
-    <menuitem action="Paste"/>
-    <menuitem action="Rename"/>
-    <menuitem action="Delete"/>
-  </popup>
-  <popup name="FolderPopupMenu">
-    <menuitem action="OpenFolder"/>
-    <separator/>
-    <menuitem action="Extract"/>
-    <separator/>
-    <menuitem action="Cut"/>
-    <menuitem action="Copy"/>
-    <menuitem action="Paste"/>
-    <menuitem action="Rename"/>
-    <menuitem action="Delete"/>
-  </popup>
-  <popup name="SidebarFolderPopupMenu">
-    <menuitem action="OpenFolderFromSidebar"/>
-    <separator/>
-    <menuitem action="ExtractFolderFromSidebar"/>
-    <separator/>
-    <menuitem action="CutFolderFromSidebar"/>
-    <menuitem action="CopyFolderFromSidebar"/>
-    <menuitem action="PasteFolderFromSidebar"/>
-    <menuitem action="RenameFolderFromSidebar"/>
-    <menuitem action="DeleteFolderFromSidebar"/>
-  </popup>
-</ui>
+<interface>
+  <object class="GtkImage" id="menu_icon_new">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-new</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_open">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-open</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_open1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-open</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_open2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-open</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_open3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-open</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_open_recent">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">gtk-open</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_save_as">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-save-as</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_extract">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">extract-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_extract1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">extract-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_extract2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">extract-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_extract3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">extract-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_properties">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">document-properties</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_close">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">window-close</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_copy">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-copy</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_copy1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-copy</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_copy2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-copy</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_copy3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-copy</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_cut">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-cut</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_cut1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-cut</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_cut2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-cut</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_cut3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-cut</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_paste">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-paste</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_paste1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-paste</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_paste2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-paste</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_paste3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-paste</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_delete">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-delete</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_delete1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-delete</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_delete2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-delete</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_delete3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-delete</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_select_all">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-select-all</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_find">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">edit-find</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_add_files">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">add-files-to-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_add_folder">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">add-folder-to-archive</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_stop">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">process-stop</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_reload">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">view-refresh</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_help">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">help-browser</property>
+  </object>
+  <object class="GtkImage" id="menu_icon_about">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon-name">help-about</property>
+  </object>
+
+  <object class="GtkMenuBar" id="engrampamenubar">
+    <property name="visible">1</property>
+    <child internal-child="accessible">
+      <object class="AtkObject" id="a11y-menubar">
+        <property name="AtkObject::accessible-name">The menubar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Archive</property>
+        <property name="use-underline">1</property>
+        <child type="submenu">
+          <object class="GtkMenu" id="file_menu">
+            <child>
+              <object class="GtkImageMenuItem" id="new_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">New…</property>
+                <property name="tooltip-text" translatable="yes">Create a new archive</property>
+                <property name="use-underline">1</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+                <property name="image">menu_icon_new</property>
+                <property name="action-name">win.New</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="open_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Open…</property>
+                <property name="tooltip-text" translatable="yes">Open archive</property>
+                <property name="use-underline">1</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+                <property name="image">menu_icon_open</property>
+                <property name="action-name">win.Open</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="open_recent_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Open _Recent</property>
+                <property name="tooltip-text" translatable="yes">Open a recently used archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_open_recent</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="open_saveas_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Save As…</property>
+                <property name="tooltip-text" translatable="yes">Save the current archive with a different name</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_save_as</property>
+                <property name="action-name">win.SaveAs</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="extract_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Extract…</property>
+                <property name="tooltip-text" translatable="yes">Extract files from the archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_extract</property>
+                <property name="action-name">win.Extract</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="test_integrity_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Test Integrity</property>
+                <property name="tooltip-text" translatable="yes">Test whether the archive contains errors</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.TestArchive</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="properties_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Properties</property>
+                <property name="tooltip-text" translatable="yes">Show archive properties</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_properties</property>
+                <property name="action-name">win.Properties</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="close_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Close</property>
+                <property name="tooltip-text" translatable="yes">Close the current archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_close</property>
+                <property name="action-name">win.Close</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Edit</property>
+        <property name="use-underline">1</property>
+        <child type="submenu">
+          <object class="GtkMenu">
+            <child>
+              <object class="GtkImageMenuItem" id="copy_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Copy</property>
+                <property name="tooltip-text" translatable="yes">Copy the selection</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_copy</property>
+                <property name="action-name">win.Copy</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="cut_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Cu_t</property>
+                <property name="tooltip-text" translatable="yes">Cut the selection</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_cut</property>
+                <property name="action-name">win.Cut</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="paste_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Paste</property>
+                <property name="tooltip-text" translatable="yes">Paste the clipboard</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_paste</property>
+                <property name="action-name">win.Paste</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="rename_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Rename…</property>
+                <property name="tooltip-text" translatable="yes">Rename the selection</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.Rename</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="delete_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Delete</property>
+                <property name="tooltip-text" translatable="yes">Delete the selection from the archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_delete</property>
+                <property name="action-name">win.Delete</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="select_all_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Select _All</property>
+                <property name="tooltip-text" translatable="yes">Select all files</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_select_all</property>
+                <property name="action-name">win.SelectAll</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="deselect_all_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Dese_lect All</property>
+                <property name="tooltip-text" translatable="yes">Deselect all files</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.DeselectAll</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="find_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Find…</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_find</property>
+                <property name="action-name">win.Find</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="add_files_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Add Files…</property>
+                <property name="tooltip-text" translatable="yes">Add files to the archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_add_files</property>
+                <property name="action-name">win.AddFiles</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="add_folder_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Add a _Folder…</property>
+                <property name="tooltip-text" translatable="yes">Add a folder to the archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_add_folder</property>
+                <property name="action-name">win.AddFolder</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="password_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Pass_word…</property>
+                <property name="tooltip-text" translatable="yes">Specify a password for this archive</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.Password</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_View</property>
+        <property name="use-underline">1</property>
+        <child type="submenu">
+          <object class="GtkMenu">
+            <child>
+              <object class="GtkCheckMenuItem" id="toolbar_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Toolbar</property>
+                <property name="tooltip-text" translatable="yes">View the main toolbar</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.ViewToolbar</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkCheckMenuItem" id="status_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Stat_usbar</property>
+                <property name="tooltip-text" translatable="yes">View the statusbar</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.ViewStatusbar</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkCheckMenuItem" id="view_folder_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Folders</property>
+                <property name="tooltip-text" translatable="yes">View the folders pane</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.ViewFolders</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+                <property name="use_action_appearance">0</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkRadioMenuItem" id="view_all_files_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">View All _Files</property>
+                <property name="active">True</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.ViewAllFiles</property>
+                <property name="action-target">'files'</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkRadioMenuItem" id="view_as_folder_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">View as a F_older</property>
+                <property name="use-underline">1</property>
+                <property name="group">view_all_files_item</property>
+                <property name="active">True</property>
+                <property name="action-name">win.ViewAllFiles</property>
+                <property name="action-target">'folder'</property>
+              </object>
+          </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+                <property name="use_action_appearance">0</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="last_output_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Last Output</property>
+                <property name="tooltip-text" translatable="yes">View the output produced by the last executed command</property>
+                <property name="use-underline">1</property>
+                <property name="action-name">win.LastOutput</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparatorMenuItem">
+                <property name="visible">1</property>
+                <property name="use_action_appearance">0</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="stop_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Stop</property>
+                <property name="tooltip-text" translatable="yes">Stop current operation</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_stop</property>
+                <property name="action-name">win.Stop</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="reload_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_Refresh</property>
+                <property name="tooltip-text" translatable="yes">Reload current archive</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_reload</property>
+                <property name="action-name">win.Reload</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Help</property>
+        <property name="use-underline">1</property>
+        <child type="submenu">
+          <object class="GtkMenu">
+            <child>
+              <object class="GtkImageMenuItem" id="help_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">Contents</property>
+                <property name="tooltip-text" translatable="yes">Dis_Archiveplay the Engrampa Manual</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_help</property>
+                <property name="action-name">win.Contents</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkImageMenuItem" id="about_item">
+                <property name="visible">1</property>
+                <property name="label" translatable="yes">_About</property>
+                <property name="tooltip-text" translatable="yes">Information about the program</property>
+                <property name="use-underline">1</property>
+                <property name="image">menu_icon_about</property>
+                <property name="action-name">win.About</property>
+                <signal name="select" handler="menu_item_select_cb" swapped="no"/>
+                <signal name="deselect" handler="menu_item_deselect_cb" swapped="no"/>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+</object>
+  <object class="GtkToolbar" id="engrampatoolbar">
+    <property name="visible">1</property>
+    <child internal-child="accessible">
+      <object class="AtkObject" id="a11y-toolbar">
+        <property name="AtkObject::accessible-name">The Toolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_new_item">
+        <property name="visible">1</property>
+        <property name="icon-name">document-new</property>
+        <property name="action-name">win.New</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuToolButton" id="tool_open_recent_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Open</property>
+        <property name="icon-name">document-open</property>
+        <property name="is-important">1</property>
+        <property name="tooltip-text" translatable="yes">Open a recently used archive</property>
+        <property name="action-name">win.OpenRecent_Toolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorToolItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_extract_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Extract</property>
+        <property name="icon-name">extract-archive</property>
+        <property name="tooltip-text" translatable="yes">Extract files from the archive</property>
+        <property name="action-name">win.ExtractToolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorToolItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_add_files_item">
+        <property name="visible">1</property>
+        <property name="icon-name">add-files-to-archive</property>
+        <property name="tooltip-text" translatable="yes">Add files to the archive</property>
+        <property name="action-name">win.AddFilesToolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_add_folder_item">
+        <property name="visible">1</property>
+        <property name="icon-name">add-folder-to-archive</property>
+        <property name="tooltip-text" translatable="yes">Add a folder to the archive</property>
+        <property name="action-name">win.AddFolderToolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorToolItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_stop_item">
+        <property name="visible">1</property>
+        <property name="icon-name">process-stop</property>
+        <property name="tooltip-text" translatable="yes">Stop current operation</property>
+        <property name="action-name">win.Stop</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkToolbar" id="locationbar">
+    <property name="visible">1</property>
+    <child internal-child="accessible">
+      <object class="AtkObject" id="location-toolbar">
+        <property name="AtkObject::accessible-name">The Location Toolbar</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_goback_item">
+        <property name="visible">1</property>
+        <property name="icon-name">go-previous</property>
+        <property name="tooltip-text" translatable="yes">Go to the previous visited location</property>
+        <property name="action-name">win.GoBack</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_gonext_item">
+        <property name="visible">1</property>
+        <property name="icon-name">go-next</property>
+        <property name="tooltip-text" translatable="yes">Go to the next visited location</property>
+        <property name="action-name">win.GoForward</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_goup_item">
+        <property name="visible">1</property>
+        <property name="icon-name">go-up</property>
+        <property name="tooltip-text" translatable="yes">Go up one level</property>
+        <property name="action-name">win.GoUp</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkToolButton" id="tool_gohome_item">
+        <property name="visible">1</property>
+        <property name="icon-name">go-home</property>
+        <property name="tooltip-text" translatable="yes">Go to the home location</property>
+        <property name="action-name">win.GoHome</property>
+      </object>
+    </child>
+  </object>
+
+  <object class="GtkMenu" id="FilePopupMenu">
+    <property name="visible">1</property>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_open_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Open</property>
+        <property name="tooltip-text" translatable="yes">Open the selected file</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_open1</property>
+      </object>
+  </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_open_select_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Open With…</property>
+        <property name="tooltip-text" translatable="yes">Open selected files with an application</property>
+        <property name="use_underline">1</property>
+      </object>
+  </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+  </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_extract_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Extract…</property>
+        <property name="tooltip-text" translatable="yes">Extract files from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_extract1</property>
+      </object>
+  </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_cut_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Cu_t</property>
+        <property name="tooltip-text" translatable="yes">Cut the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_cut1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_copy_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Copy</property>
+        <property name="tooltip-text" translatable="yes">Copy the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_copy1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_paste_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Paste</property>
+        <property name="tooltip-text" translatable="yes">Paste the clipboard</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_paste1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_rename_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Rename…</property>
+        <property name="tooltip-text" translatable="yes">Rename the selection</property>
+        <property name="use_underline">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_delete_item">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Delete</property>
+        <property name="tooltip-text" translatable="yes">Delete the selection from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_delete1</property>
+      </object>
+    </child>
+</object>
+  <object class="GtkMenu" id="FolderPopupMenu">
+    <property name="visible">1</property>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_open_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Open</property>
+        <property name="tooltip-text" translatable="yes">Open the selected folder</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_open2</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_extract_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Extract…</property>
+        <property name="tooltip-text" translatable="yes">Extract folder from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_extract2</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_cut_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Cu_t</property>
+        <property name="tooltip-text" translatable="yes">Cut the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_cut2</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_copy_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Copy</property>
+        <property name="tooltip-text" translatable="yes">Copy the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_copy2</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_paste_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Paste</property>
+        <property name="tooltip-text" translatable="yes">Paste the clipboard</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_paste2</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_rename_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Rename…</property>
+        <property name="tooltip-text" translatable="yes">Rename the selection</property>
+        <property name="use_underline">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_delete_item1">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Delete</property>
+        <property name="tooltip-text" translatable="yes">Delete the selection from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_delete2</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMenu" id="SidebarFolderPopupMenu">
+    <property name="visible">1</property>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_open_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Open</property>
+        <property name="tooltip-text" translatable="yes">Open the selected folder</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_open3</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_extract_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Extract…</property>
+        <property name="tooltip-text" translatable="yes">Extract folder from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_extract3</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_cut_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Cu_t</property>
+        <property name="tooltip-text" translatable="yes">Cut the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_cut3</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_copy_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Copy</property>
+        <property name="tooltip-text" translatable="yes">Copy the selection</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_copy3</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_paste_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Paste</property>
+        <property name="tooltip-text" translatable="yes">Paste the clipboard</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_paste3</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_rename_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Rename…</property>
+        <property name="tooltip-text" translatable="yes">Rename the selection</property>
+        <property name="use_underline">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="popup_delete_item2">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">_Delete</property>
+        <property name="tooltip-text" translatable="yes">Delete the selection from the archive</property>
+        <property name="use_underline">1</property>
+        <property name="image">menu_icon_delete3</property>
+      </object>
+    </child>
+  </object>
+</interface>
