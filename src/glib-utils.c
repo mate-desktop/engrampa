@@ -240,7 +240,7 @@ g_utf8_strchug (char *string)
 		c = g_utf8_get_char (scan);
 	}
 
-	g_memmove (string, scan, strlen (scan) + 1);
+	memmove (string, scan, strlen (scan) + 1);
 
 	return string;
 }

@@ -26,55 +26,189 @@
 #include <gtk/gtk.h>
 #include "fr-window.h"
 
-void show_new_archive_dialog (FrWindow *window, const char *archive_name);
+void show_new_archive_dialog                    (FrWindow      *window,
+                                                 const char    *archive_name);
 
-void activate_action_new (GtkAction *action, gpointer data);
-void activate_action_open (GtkAction *action, gpointer data);
-void activate_action_save_as (GtkAction *action, gpointer data);
-void activate_action_test_archive (GtkAction *action, gpointer data);
-void activate_action_properties (GtkAction *action, gpointer data);
-void activate_action_close (GtkAction *action, gpointer data);
-void activate_action_quit (GtkAction *action, gpointer data);
+void activate_action_new                        (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_add_files (GtkAction *action, gpointer data);
-void activate_action_add_folder (GtkAction *action, gpointer data);
-void activate_action_extract (GtkAction *action, gpointer data);
-void activate_action_extract_folder_from_sidebar (GtkAction *action, gpointer data);
+void activate_action_open                       (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_copy (GtkAction *action, gpointer data);
-void activate_action_cut (GtkAction *action, gpointer data);
-void activate_action_paste (GtkAction *action, gpointer data);
-void activate_action_rename (GtkAction *action, gpointer data);
-void activate_action_delete (GtkAction *action, gpointer data);
+void activate_action_save_as                    (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_copy_folder_from_sidebar (GtkAction *action, gpointer data);
-void activate_action_cut_folder_from_sidebar (GtkAction *action, gpointer data);
-void activate_action_paste_folder_from_sidebar (GtkAction *action, gpointer data);
-void activate_action_rename_folder_from_sidebar (GtkAction *action, gpointer data);
-void activate_action_delete_folder_from_sidebar (GtkAction *action, gpointer data);
+void activate_action_test_archive               (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_find (GtkAction *action, gpointer data);
-void activate_action_select_all (GtkAction *action, gpointer data);
-void activate_action_deselect_all (GtkAction *action, gpointer data);
-void activate_action_open_with (GtkAction *action, gpointer data);
-void activate_action_view_or_open (GtkAction *action, gpointer data);
-void activate_action_open_folder (GtkAction *action, gpointer data);
-void activate_action_open_folder_from_sidebar (GtkAction *action, gpointer data);
-void activate_action_password (GtkAction *action, gpointer data);
+void activate_action_properties                 (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_view_toolbar (GtkAction *action, gpointer data);
-void activate_action_view_statusbar (GtkAction *action, gpointer data);
-void activate_action_view_folders (GtkAction *action, gpointer data);
-void activate_action_stop (GtkAction *action, gpointer data);
-void activate_action_reload (GtkAction *action, gpointer data);
-void activate_action_last_output (GtkAction *action, gpointer data);
+void activate_action_close                      (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_go_back (GtkAction *action, gpointer data);
-void activate_action_go_forward (GtkAction *action, gpointer data);
-void activate_action_go_up (GtkAction *action, gpointer data);
-void activate_action_go_home (GtkAction *action, gpointer data);
+void activate_action_quit                       (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
-void activate_action_manual (GtkAction *action, gpointer data);
-void activate_action_about (GtkAction *action, gpointer data);
+void activate_action_add_files                  (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
 
+void activate_action_add_folder                 (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_extract                    (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_copy                       (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_cut                        (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_paste                      (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_rename                     (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_delete                     (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_find                       (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_select_all                 (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_deselect_all               (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_open_with                  (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_password                   (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_view_toolbar               (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_view_statusbar             (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_view_folders               (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_stop                       (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_reload                     (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_last_output                (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_go_back                    (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_go_forward                 (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_go_up                      (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_go_home                    (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_manual                     (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_action_about                      (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
+void activate_toggle                            (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       user_data);
+
+void activate_popup_open                        (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_open_select                 (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_extract                     (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_cut                         (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_paste                       (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_rename                      (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_delete                      (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void init_engramp_menu_popup                    (FrWindow      *window,
+                                                 GtkBuilder    *ui);
+
+void activate_popup_open_folder                 (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_copy                        (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_open_folder_from_sidebar    (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_extract_folder_from_sidebar (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_copy_folder_from_sidebar    (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_cut_folder_from_sidebar     (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_paste_folder_from_sidebar   (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_rename_folder_from_sidebar  (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
+
+void activate_popup_delete_folder_from_sidebar  (GtkMenuItem   *menuitem,
+                                                 gpointer       data);
 #endif /* ACTIONS_H */
