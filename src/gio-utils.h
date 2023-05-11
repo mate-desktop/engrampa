@@ -38,8 +38,9 @@ typedef DirOp (*StartDirCallback)    (const char  *uri,
 				      GError     **error,
 				      gpointer     user_data);
 typedef void (*ForEachChildCallback) (const char  *uri,
-				      GFileInfo   *info,
-				      gpointer     user_data);
+				       gboolean     follow_links,
+				       GFileInfo   *info,
+				       gpointer     user_data);
 typedef void (*ForEachDoneCallback)  (GError      *error,
 				      gpointer     data);
 typedef void (*ListReadyCallback)    (GList       *files,
