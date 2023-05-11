@@ -300,7 +300,7 @@ for_each_child_next_files_ready (GObject      *source_object,
 			}
 		}
 
-		fec->for_each_file_func (uri, child_info, fec->user_data);
+		fec->for_each_file_func (uri, fec->follow_links, child_info, fec->user_data);
 
 		g_free (uri);
 		g_object_unref (f);
@@ -360,9 +360,9 @@ for_each_child_start_current (ForEachChildData *fec)
 
 	g_file_enumerate_children_async (fec->current,
 					 "standard::name,standard::type",
-					 fec->follow_links ? G_FILE_QUERY_INFO_NONE : G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+					 G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
 					 G_PRIORITY_DEFAULT,
-                                         fec->cancellable,
+					 fec->cancellable,
 					 for_each_child_ready,
 					 fec);
 }
@@ -610,8 +610,9 @@ get_file_list_done (GError   *error,
 
 static void
 get_file_list_for_each_file (const char *uri,
-			     GFileInfo  *info,
-			     gpointer    user_data)
+			      gboolean    follow_links,
+			      GFileInfo  *info,
+			      gpointer    user_data)
 {
 	GetFileListData *gfl = user_data;
 
@@ -620,6 +621,12 @@ get_file_list_for_each_file (const char *uri,
 		if (filter_matches (gfl->include_filter, uri))
 			if ((gfl->exclude_filter->pattern == NULL) || ! filter_matches (gfl->exclude_filter, uri))
 				gfl->files = g_list_prepend (gfl->files, g_strdup (uri));
+		break;
+	case G_FILE_TYPE_SYMBOLIC_LINK:
+		if (follow_links)
+			if (filter_matches (gfl->include_filter, uri))
+				if ((gfl->exclude_filter->pattern == NULL) || ! filter_matches (gfl->exclude_filter, uri))
+					gfl->files = g_list_prepend (gfl->files, g_strdup (uri));
 		break;
 	default:
 		break;
@@ -1283,8 +1290,9 @@ g_directory_copy_list_ready (GError   *error,
 
 static void
 g_directory_copy_for_each_file (const char *uri,
-				GFileInfo  *info,
-				gpointer    user_data)
+				 gboolean    follow_links,
+				 GFileInfo  *info,
+				 gpointer    user_data)
 {
 	DirectoryCopyData *dcd = user_data;
 
