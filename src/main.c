@@ -284,7 +284,7 @@ fr_save_state (EggSMClient *client, GKeyFile *state, gpointer user_data)
 			FrWindow *session = window->data;
 			gchar *key;
 
-			key = g_strdup_printf ("archive%d", i);
+			key = g_strdup_printf ("archive%d", i+1);
 			if ((session->archive == NULL) || (session->archive->file == NULL)) {
 				g_key_file_set_string (state, "Session", key, "");
 			}
