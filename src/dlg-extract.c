@@ -295,6 +295,7 @@ dlg_extract__common (FrWindow *window,
 {
 	DialogData *data;
 	GtkWidget  *button;
+	const char *extract_default_dir;
 
 	data = g_new0 (DialogData, 1);
 	data->builder = gtk_builder_new_from_resource (ENGRAMPA_RESOURCE_UI_PATH G_DIR_SEPARATOR_S "dlg-extract.ui");
@@ -307,7 +308,12 @@ dlg_extract__common (FrWindow *window,
 
 	/* Set widgets data. */
 
-	gtk_file_chooser_set_current_folder_uri (GTK_FILE_CHOOSER (data->dialog), fr_window_get_extract_default_dir (window));
+	extract_default_dir = fr_window_get_extract_default_dir (window);
+	if (uri_is_local (extract_default_dir))
+	{
+		extract_default_dir  = g_filename_from_uri (extract_default_dir, NULL, NULL);
+	}
+	gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (data->dialog), extract_default_dir);
 
 	if (data->selected_files != NULL)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("selected_files_radiobutton")), TRUE);
