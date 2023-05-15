@@ -127,6 +127,7 @@ typedef enum {
 typedef struct {
 	GList       *file_list;
 	char        *extract_to_dir;
+	char        *sub_dir;
 	char        *base_dir;
 	gboolean     skip_older;
 	FrOverwrite  overwrite;
@@ -4181,6 +4182,7 @@ file_list_drag_end (GtkWidget      *widget,
 		fr_window_archive_extract (window,
 					   window->priv->drag_file_list,
 					   window->priv->drag_destination_folder,
+					   NULL,
 					   window->priv->drag_base_dir,
 					   FALSE,
 					   FR_OVERWRITE_ASK,
@@ -6310,6 +6312,7 @@ fr_window_archive_remove (FrWindow      *window,
 static ExtractData*
 extract_data_new (GList       *file_list,
 		  const char  *extract_to_dir,
+		  const char  *sub_dir,
 		  const char  *base_dir,
 		  gboolean     skip_older,
 		  FrOverwrite  overwrite,
@@ -6318,11 +6321,21 @@ extract_data_new (GList       *file_list,
 		  gboolean     ask_to_open_destination)
 {
 	ExtractData *edata;
+	int i = 1;
 
 	edata = g_new0 (ExtractData, 1);
 	edata->file_list = path_list_dup (file_list);
-	if (extract_to_dir != NULL)
+	if (sub_dir != NULL)
+		edata->sub_dir = g_strdup (sub_dir);
+	if (extract_to_dir != NULL && sub_dir == NULL) {
 		edata->extract_to_dir = g_strdup (extract_to_dir);
+	} else if (extract_to_dir != NULL && sub_dir != NULL) {
+		edata->extract_to_dir = g_build_filename (extract_to_dir, sub_dir, NULL);
+		while (uri_exists (edata->extract_to_dir) && uri_is_file (edata->extract_to_dir)) {
+			g_free (edata->extract_to_dir);
+			edata->extract_to_dir = g_strdup_printf ("%s/%s_%d", extract_to_dir, sub_dir, i++);
+		}
+	}
 	edata->skip_older = skip_older;
 	edata->overwrite = overwrite;
 	edata->junk_paths = junk_paths;
@@ -6340,6 +6353,7 @@ extract_to_data_new (const char *extract_to_dir)
 	return extract_data_new (NULL,
 				 extract_to_dir,
 				 NULL,
+				 NULL,
 				 FALSE,
 				 TRUE,
 				 FALSE,
@@ -6354,6 +6368,7 @@ extract_data_free (ExtractData *edata)
 
 	path_list_free (edata->file_list);
 	g_free (edata->extract_to_dir);
+	g_free (edata->sub_dir);
 	g_free (edata->base_dir);
 
 	g_free (edata);
@@ -6413,6 +6428,7 @@ fr_window_archive_extract_here (FrWindow   *window,
 	ExtractData *edata;
 
 	edata = extract_data_new (NULL,
+				  NULL,
 				  NULL,
 				  NULL,
 				  skip_older,
@@ -6630,6 +6646,7 @@ void
 fr_window_archive_extract (FrWindow    *window,
 			   GList       *file_list,
 			   const char  *extract_to_dir,
+			   const char  *sub_dir,
 			   const char  *base_dir,
 			   gboolean     skip_older,
 			   FrOverwrite  overwrite,
@@ -6642,6 +6659,7 @@ fr_window_archive_extract (FrWindow    *window,
 
 	edata = extract_data_new (file_list,
 				  extract_to_dir,
+				  sub_dir,
 				  base_dir,
 				  skip_older,
 				  overwrite,
@@ -8518,6 +8536,7 @@ fr_window_exec_batch_action (FrWindow      *window,
 		fr_window_archive_extract (window,
 					   edata->file_list,
 					   edata->extract_to_dir,
+					   edata->sub_dir,
 					   edata->base_dir,
 					   edata->skip_older,
 					   edata->overwrite,
@@ -8543,6 +8562,7 @@ fr_window_exec_batch_action (FrWindow      *window,
 			fr_window_archive_extract (window,
 						   NULL,
 						   window->priv->extract_default_dir,
+						   NULL,
 						   NULL,
 						   FALSE,
 						   FR_OVERWRITE_ASK,

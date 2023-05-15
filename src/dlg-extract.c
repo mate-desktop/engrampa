@@ -69,6 +69,8 @@ extract_cb (GtkWidget   *w,
 	FrWindow   *window = data->window;
 	gboolean    do_not_extract = FALSE;
 	char       *extract_to_dir;
+	char       *sub_dir;
+	gboolean    extract_sub_dir;
 	gboolean    overwrite;
 	gboolean    skip_newer;
 	gboolean    selected_files;
@@ -179,16 +181,18 @@ extract_cb (GtkWidget   *w,
 		return FALSE;
 	}
 
-	fr_window_set_extract_default_dir (window, extract_to_dir, TRUE);
-
 	overwrite = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("overwrite_checkbutton")));
 	skip_newer = ! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("not_newer_checkbutton"))) && gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("not_newer_checkbutton")));
 	junk_paths = ! gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("recreate_dir_checkbutton")));
+	extract_sub_dir = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("create_subdir_checkbutton")));
 
 	g_settings_set_boolean (data->settings, PREF_EXTRACT_OVERWRITE, overwrite);
 	if (! gtk_toggle_button_get_inconsistent (GTK_TOGGLE_BUTTON (GET_WIDGET ("not_newer_checkbutton"))))
 		g_settings_set_boolean (data->settings, PREF_EXTRACT_SKIP_NEWER, skip_newer);
 	g_settings_set_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS, ! junk_paths);
+	g_settings_set_boolean (data->settings, PREF_EXTRACT_CREATE_SUBDIR, extract_sub_dir);
+
+	fr_window_set_extract_default_dir (window, extract_to_dir, !extract_sub_dir);
 
 	selected_files = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("selected_files_radiobutton")));
 	pattern_files = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("file_pattern_radiobutton")));
@@ -220,6 +224,11 @@ extract_cb (GtkWidget   *w,
 	else
 		base_dir = NULL;
 
+	if (extract_sub_dir)
+		sub_dir = remove_extension_from_path (g_filename_display_basename (fr_window_get_archive_uri (window)));
+	else
+		sub_dir = NULL;
+
 	/* close the dialog. */
 
 	gtk_widget_destroy (data->dialog);
@@ -229,6 +238,7 @@ extract_cb (GtkWidget   *w,
 	fr_window_archive_extract (window,
 				   file_list,
 				   extract_to_dir,
+				   sub_dir,
 				   base_dir,
 				   skip_newer,
 				   overwrite ? FR_OVERWRITE_YES : FR_OVERWRITE_NO,
@@ -237,6 +247,7 @@ extract_cb (GtkWidget   *w,
 
 	path_list_free (file_list);
 	g_free (extract_to_dir);
+	g_free (sub_dir);
 	g_free (base_dir);
 
 	return TRUE;
@@ -325,6 +336,7 @@ dlg_extract__common (FrWindow *window,
 	}
 
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("recreate_dir_checkbutton")), g_settings_get_boolean (data->settings, PREF_EXTRACT_RECREATE_FOLDERS));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("create_subdir_checkbutton")), g_settings_get_boolean (data->settings, PREF_EXTRACT_CREATE_SUBDIR));
 
 	button = GET_WIDGET ("close_dialog_checkbutton");
 	g_settings_bind (data->settings,

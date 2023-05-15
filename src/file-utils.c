@@ -412,26 +412,16 @@ build_uri (const char *base, ...)
 gchar *
 remove_extension_from_path (const gchar *path)
 {
-	int         len;
-	int         p;
-	const char *ptr = path;
-	char       *new_path;
+        const char *ext;
 
-	if (! path)
-		return NULL;
+        if (path == NULL)
+                return NULL;
 
-	len = strlen (path);
-	if (len == 1)
-		return g_strdup (path);
-
-	p = len - 1;
-	while ((p > 0) && (ptr[p] != '.'))
-		p--;
-	if (p == 0)
-		p = len;
-	new_path = g_strndup (path, (guint) p);
-
-	return new_path;
+        ext = get_archive_filename_extension (path);
+        if (ext == NULL || strlen (ext) == strlen (path))
+                return g_strdup (path);
+        else
+                return g_strndup (path, strlen (path) - strlen (ext));
 }
 
 gboolean
@@ -517,6 +507,7 @@ get_file_extension (const char *filename)
 	int         len;
 	int         p;
 	const char *ext;
+	const char *tar_exts[] = {".7z", ".br", ".bz", ".bz2", ".gz", ".lrz", ".lz", ".lzma", ".lzo", ".xz", ".Z", ".xst", NULL};
 
 	if (filename == NULL)
 		return NULL;
@@ -532,10 +523,16 @@ get_file_extension (const char *filename)
 		return NULL;
 
 	ext = filename + p;
+	p = 0;
 	if (ext - 4 > filename) {
 		const char *test = ext - 4;
-		if (strncmp (test, ".tar", 4) == 0)
-			ext = ext - 4;
+		if (strncmp (test, ".tar", 4) == 0) {
+			while (tar_exts[p] != NULL) {
+				if (strcmp (ext, tar_exts[p]) == 0)
+					ext = ext - 4;
+				p++;
+			}
+		}
 	}
 	return ext;
 }
