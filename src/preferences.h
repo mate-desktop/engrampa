@@ -63,6 +63,7 @@
 #define PREF_EXTRACT_SKIP_NEWER		"skip-newer"
 #define PREF_EXTRACT_CLOSE_DIALOG	"close-dialog"
 #define PREF_EXTRACT_RECREATE_FOLDERS	"recreate-folders"
+#define PREF_EXTRACT_CREATE_SUBDIR	"create-subdirectory"
 
 #define PREF_ADD_CURRENT_FOLDER		"current-folder"
 #define PREF_ADD_FILENAME		"filename"
