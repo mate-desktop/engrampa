@@ -1103,9 +1103,9 @@ load_local_archive (FrArchive  *archive,
 	old_command = archive->command;
 
 #if ENABLE_MAGIC
-	mime_type = get_mime_type_from_magic_numbers (archive->local_copy);
-#else
  	mime_type = get_mime_type_from_filename (archive->local_copy);
+#else
+	mime_type = get_mime_type_from_magic_numbers (archive->local_copy);
 #endif
 
 	if (! create_command_to_load_archive (archive, mime_type)) {

@@ -292,7 +292,7 @@ fr_registered_command_get_capabilities (FrRegisteredCommand *reg_com,
 		FrMimeTypeCap *cap;
 
 		cap = g_ptr_array_index (reg_com->caps, i);
-		if (strcmp (mime_type, cap->mime_type) == 0)
+		if (is_mime_type (mime_type, cap->mime_type))
 			return cap->current_capabilities;
 	}
 
@@ -312,7 +312,7 @@ fr_registered_command_get_potential_capabilities (FrRegisteredCommand *reg_com,
 		FrMimeTypeCap *cap;
 
 		cap = g_ptr_array_index (reg_com->caps, i);
-		if ((cap->mime_type != NULL) && (strcmp (mime_type, cap->mime_type) == 0))
+		if ((cap->mime_type != NULL) && (is_mime_type (mime_type, cap->mime_type)))
 			return cap->potential_capabilities;
 	}
 
@@ -508,7 +508,7 @@ get_mime_type_index (const char *mime_type)
 	int i;
 
 	for (i = 0; mime_type_desc[i].mime_type != NULL; i++)
-		if (strcmp (mime_type_desc[i].mime_type, mime_type) == 0)
+		if (is_mime_type (mime_type_desc[i].mime_type, mime_type))
 			return i;
 	return -1;
 }
