@@ -555,7 +555,7 @@ gboolean
 is_mime_type (const char *mime_type,
 	      const char *pattern)
 {
-	return (strcasecmp (mime_type, pattern) == 0);
+	return g_content_type_equals (mime_type, pattern);
 }
 
 const char*
