@@ -1102,22 +1102,12 @@ load_local_archive (FrArchive  *archive,
 
 	old_command = archive->command;
 
-	/* With libmagic, give priority to magic match, and fall back on filename
-	 * match.  Do it the other way around if we don't have libmagic. */
-#if ENABLE_MAGIC
-	mime_type = get_mime_type_from_magic_numbers (archive->local_copy);
-#else
 	mime_type = get_mime_type_from_filename (archive->local_copy);
-#endif
 
 	if (! create_command_to_load_archive (archive, mime_type)) {
 		mime_type = get_mime_type_from_content (archive->local_copy);
 		if (! create_command_to_load_archive (archive, mime_type)) {
-#if ENABLE_MAGIC
-			mime_type = get_mime_type_from_filename (archive->local_copy);
-#else
 			mime_type = get_mime_type_from_magic_numbers (archive->local_copy);
-#endif
 			if (! create_command_to_load_archive (archive, mime_type)) {
 				archive->command = old_command;
 				archive->content_type = mime_type;
