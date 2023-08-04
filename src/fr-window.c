@@ -6419,6 +6419,34 @@ archive_is_encrypted (FrWindow *window,
 	return encrypted;
 }
 
+static gboolean
+archive_extract_check_disk_space_full (GPtrArray  *files,
+                                       const char *extract_to_dir)
+{
+	guint64 freespace;
+	guint64 archive_size = 0;
+	guint   i;
+
+	freespace = get_dest_free_space (g_filename_from_uri (extract_to_dir, NULL, NULL));
+
+	for (i = 0; i <files->len; i++)
+	{
+		FileData *fdata = g_ptr_array_index (files, i);
+		archive_size += fdata->size;
+	}
+	/* When the decompressed target file is less than 100MB,
+     2 * (target file size)  needs to disk space
+     and when it is greater than 100MB,
+     100MB + (target file size) needs to disk space */
+
+	if (archive_size <= 1024 * 1024 * 100)
+		archive_size = archive_size * 2;
+	else
+		archive_size += 1024 * 1024 * 100;
+
+	return freespace < archive_size * 2;
+}
+
 void
 fr_window_archive_extract_here (FrWindow   *window,
 				gboolean    skip_older,
@@ -6671,6 +6699,20 @@ fr_window_archive_extract (FrWindow    *window,
 					    FR_BATCH_ACTION_EXTRACT,
 					    edata,
 					    (GFreeFunc) extract_data_free);
+
+	if (archive_extract_check_disk_space_full (window->archive->command->files, extract_to_dir))
+	{
+		GtkWidget *d;
+
+		d = _gtk_error_dialog_new (GTK_WINDOW (window),
+					   GTK_DIALOG_MODAL,
+					   NULL,
+					   _("Insufficient remaining disk space"),
+					   NULL);
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy(d);
+		return;
+	}
 
 	if (archive_is_encrypted (window, edata->file_list) && (window->priv->password == NULL)) {
 		dlg_ask_password (window);
