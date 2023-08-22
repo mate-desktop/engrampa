@@ -1,3 +1,37 @@
+### engrampa 1.27.1
+
+  * update translations
+  * Check if the remaining disk space is sufficient when add extract
+  * Fix MIME detection logic
+  * Update to change the fallback and fix gzip issue
+  * Fixed libmagic bug
+  * Add "Extract to subdirectory" option
+  * Add meson compilation support
+  * Set the current folder of the file chooser dialog using a local file name
+  * Fix failure to extract multiple files
+  * Uniform file chooser dialog margin size
+  * Archive do not track symbolic link
+  * Fix failed restore of saved sessions
+  * Add MIME aliases for gzip and bzip2
+  * Replace deprecated functions and fix compilation warnings
+  * command-7z: Add new 7-zip(7zz and 7zzs) project support
+  * file-utils: Include <strings.h> for strcasecmp
+  * action: Delete unused sort_by_entries code
+  * fr-process: fix memory leak
+  * UI: Remove useless code and file
+  * Fix icon missing when compressing files with the right mouse button
+  * Extract: add the function of automatically closing the dialog box after decompression
+  * zstd: support both old and new mime type
+  * fr-command-rar: Parameter 'line' can be declared with const
+  * Fix archive file save as function
+  * glib-utils: redundant condition
+  * fix: Encrypted documents in all formats cannot be successfully pasted to the
+         specified directory after copying and cutting encrypted files and folders
+  * fix: Encrypted documents in. 7z format cannot delete locked files and folders
+  * fr-window: fix -Wincompatible-pointer-types warning
+  * file-utils: remove unused functions
+  * fr-command-rar: parse date & time using strptime
+
 ### engrampa 1.27.0
 
   * tx: sync with transifex
