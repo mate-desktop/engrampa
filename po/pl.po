@@ -22,7 +22,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Dominik Adrian Grzywak, 2021
 # Marcin GTriderXC <gtriderxc@yahoo.com>, 2021
-# Marek Adamski, 2021
+# Marek Adamski, 2023
 # 
 msgid ""
 msgstr ""
@@ -30,8 +30,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2022-10-29 15:23+0200\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Marek Adamski, 2021\n"
-"Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
+"Last-Translator: Marek Adamski, 2023\n"
+"Language-Team: Polish (https://app.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -345,7 +345,7 @@ msgstr "Maksymalna długość historii"
 
 #: data/org.mate.engrampa.gschema.xml.in:86
 msgid "Max number of items in the Open Recents menu."
-msgstr "Maksymalna liczba przedmiotów w menu Otwórz ostatnie"
+msgstr "Maksymalna liczba przedmiotów w menu Otwórz ostatnie."
 
 #: data/org.mate.engrampa.gschema.xml.in:99
 msgid "View toolbar"
@@ -808,17 +808,17 @@ msgstr "Nie można dodać pliku archiwum do niego samego."
 #. Translators: after the colon there is a filename.
 #: src/fr-command-7z.c:298 src/fr-command-rar.c:440 src/fr-command-tar.c:284
 msgid "Adding file: "
-msgstr "Dodawanie pliku:"
+msgstr "Dodawanie pliku: "
 
 #. Translators: after the colon there is a filename.
 #: src/fr-command-7z.c:441 src/fr-command-rar.c:563 src/fr-command-tar.c:400
 msgid "Extracting file: "
-msgstr "Rozpakowywanie pliku:"
+msgstr "Rozpakowywanie pliku: "
 
 #. Translators: after the colon there is a filename.
 #: src/fr-command-rar.c:516 src/fr-command-tar.c:348
 msgid "Removing file: "
-msgstr "Usuwanie pliku:"
+msgstr "Usuwanie pliku: "
 
 #: src/fr-command-rar.c:691
 #, c-format
@@ -851,7 +851,7 @@ msgstr "Prezentacja OpenDocument"
 
 #: src/fr-init.c:63
 msgid "OpenDocument Spreadsheet"
-msgstr "Arkusz kalkulacyjny OpenDocument "
+msgstr "Arkusz kalkulacyjny OpenDocument"
 
 #: src/fr-init.c:64
 msgid "OpenDocument Text"
@@ -863,7 +863,7 @@ msgstr "Szablon Prezentacji OpenDocument"
 
 #: src/fr-init.c:66
 msgid "OpenDocument Spreadsheet Template"
-msgstr "Szablon arkusza kalkulacyjnego OpenDocument "
+msgstr "Szablon arkusza kalkulacyjnego OpenDocument"
 
 #: src/fr-init.c:67
 msgid "OpenDocument Text Template"
@@ -1070,10 +1070,10 @@ msgstr[3] "%lu obiektów (%s)"
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] "Zaznaczono %lu obiekt (%s)"
-msgstr[1] "Zaznaczono %lu obiekty (%s)"
-msgstr[2] "Zaznaczono %lu obiektów (%s)"
-msgstr[3] "Zaznaczono %lu obiektów (%s)"
+msgstr[0] "zaznaczono %lu obiekt (%s)"
+msgstr[1] "zaznaczono %lu obiekty (%s)"
+msgstr[2] "zaznaczono %lu obiektów (%s)"
+msgstr[3] "zaznaczono %lu obiektów (%s)"
 
 #: src/fr-window.c:1493
 msgid "Folder"
@@ -1102,7 +1102,7 @@ msgstr "_Wznów"
 
 #: src/fr-window.c:2177 src/fr-window.c:2766
 msgid "Please wait…"
-msgstr "Proszę czekać..."
+msgstr "Proszę czekać…"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2251 src/fr-window.c:2289
@@ -1252,7 +1252,7 @@ msgstr "Wyniki testu"
 #: src/fr-window.c:3995 src/fr-window.c:7999 src/fr-window.c:8034
 #: src/fr-window.c:8275
 msgid "Could not perform the operation"
-msgstr "Nie można wykonać działania"
+msgstr "Nie można wykonać operacji"
 
 #: src/fr-window.c:4021
 msgid ""
@@ -1399,11 +1399,11 @@ msgstr "Zmień nazwę"
 
 #: src/fr-window.c:7534
 msgid "_New folder name:"
-msgstr "_Nowa nazwa katalogu"
+msgstr "_Nowa nazwa katalogu:"
 
 #: src/fr-window.c:7534
 msgid "_New file name:"
-msgstr "_Nowa nazwa pliku"
+msgstr "_Nowa nazwa pliku:"
 
 #: src/fr-window.c:7538
 msgid "_Rename"
@@ -1423,7 +1423,7 @@ msgstr "Wklejanie zaznaczenia"
 
 #: src/fr-window.c:7963
 msgid "_Destination folder:"
-msgstr "Katalog _docelowy"
+msgstr "Katalog _docelowy:"
 
 #: src/fr-window.c:7967 src/ui.h:73 src/ui.h:94
 msgid "_Paste"
@@ -1691,7 +1691,7 @@ msgstr "Informacje o programie"
 
 #: src/ui.h:40
 msgid "_Add Files…"
-msgstr "_Dodaj pliki..."
+msgstr "_Dodaj pliki…"
 
 #: src/ui.h:41 src/ui.h:45
 msgid "Add files to the archive"
@@ -1703,7 +1703,7 @@ msgstr "Dodaj pliki"
 
 #: src/ui.h:48
 msgid "Add a _Folder…"
-msgstr "Dodaj katal_og..."
+msgstr "Dodaj katal_og…"
 
 #: src/ui.h:49 src/ui.h:53
 msgid "Add a folder to the archive"
@@ -1747,7 +1747,7 @@ msgstr "Wkleja zawartość schowka"
 
 #: src/ui.h:77 src/ui.h:98
 msgid "_Rename…"
-msgstr "Zmień n_azwę..."
+msgstr "Zmień n_azwę…"
 
 #: src/ui.h:78 src/ui.h:99
 msgid "Rename the selection"
@@ -1759,7 +1759,7 @@ msgstr "Usuwa zaznaczone elementy z archiwum"
 
 #: src/ui.h:107
 msgid "Dese_lect All"
-msgstr "Odz_nacz wszystkie"
+msgstr "Odz_nacz wszystko"
 
 #: src/ui.h:108
 msgid "Deselect all files"
@@ -1767,7 +1767,7 @@ msgstr "Odznacza wszystkie pliki"
 
 #: src/ui.h:111 src/ui.h:115
 msgid "_Extract…"
-msgstr "R_ozpakuj..."
+msgstr "R_ozpakuj…"
 
 #: src/ui.h:112 src/ui.h:116 src/ui.h:120
 msgid "Extract files from the archive"
@@ -1775,7 +1775,7 @@ msgstr "Rozpakowuje pliki z archiwum"
 
 #: src/ui.h:123
 msgid "Find…"
-msgstr "Znajdź..."
+msgstr "Znajdź…"
 
 #: src/ui.h:128
 msgid "_Last Output"
@@ -1787,7 +1787,7 @@ msgstr "Wyświetla komunikaty wyjściowe ostatnio uruchomionego polecenia"
 
 #: src/ui.h:132
 msgid "New…"
-msgstr "Nowe..."
+msgstr "Nowe…"
 
 #: src/ui.h:133
 msgid "Create a new archive"
@@ -1795,7 +1795,7 @@ msgstr "Tworzy nowe archiwum"
 
 #: src/ui.h:136
 msgid "Open…"
-msgstr "Otwórz..."
+msgstr "Otwórz…"
 
 #: src/ui.h:137 src/ui.h:141
 msgid "Open archive"
@@ -1807,7 +1807,7 @@ msgstr "_Otwórz"
 
 #: src/ui.h:144
 msgid "_Open With…"
-msgstr "_Otwórz za pomocą..."
+msgstr "_Otwórz za pomocą…"
 
 #: src/ui.h:145
 msgid "Open selected files with an application"
@@ -1815,7 +1815,7 @@ msgstr "Otwiera zaznaczone pliki przy użyciu wybranego programu"
 
 #: src/ui.h:148
 msgid "Pass_word…"
-msgstr "_Hasło..."
+msgstr "_Hasło…"
 
 #: src/ui.h:149
 msgid "Specify a password for this archive"
@@ -1855,11 +1855,11 @@ msgstr "Zaznacza wszystkie pliki"
 
 #: src/ui.h:168
 msgid "_Stop"
-msgstr "_Stop"
+msgstr "Z_atrzymaj"
 
 #: src/ui.h:169
 msgid "Stop current operation"
-msgstr "Przerywa bieżące działanie"
+msgstr "Zatrzymuje bieżącą operację"
 
 #: src/ui.h:172
 msgid "_Test Integrity"
@@ -2006,7 +2006,7 @@ msgstr "Współczynnik kompresji:"
 
 #: src/ui/properties.ui:175
 msgid "Content size:"
-msgstr "Rozmiar zawartości"
+msgstr "Rozmiar zawartości:"
 
 #: src/ui/properties.ui:215
 msgid "Number of files:"
