@@ -390,6 +390,10 @@ split_line (const char *line,
 			fields[i] = g_strndup (scan, field_end - scan);
 			scan = eat_spaces (field_end);
 		}
+		else if (scan != NULL && i == n_fields - 1)
+		{
+			fields[i] = g_strdup (scan);
+		}
 	}
 
 	return fields;
