@@ -148,6 +148,7 @@ get_dir_content_if_unique (const char  *uri)
 
 	while ((info = g_file_enumerator_next_file (file_enum, NULL, &err)) != NULL) {
 		const char *name;
+		char *new_name;
 
 		if (err != NULL) {
 			g_warning ("Failed to get info while enumerating children: %s", err->message);
@@ -169,8 +170,10 @@ get_dir_content_if_unique (const char  *uri)
 			break;
 		}
 
-		content_uri = build_uri (uri, name, NULL);
+		new_name = g_uri_escape_string (name, NULL, TRUE);
+		content_uri = build_uri (uri, new_name, NULL);
 		g_object_unref (info);
+		g_free (new_name);
 	}
 
 	if (err != NULL) {
@@ -1043,16 +1046,19 @@ get_alternative_uri (const char *folder,
 {
 	char *new_uri = NULL;
 	int   n = 1;
+	char *new_name;
 
+	new_name = g_uri_escape_string (name, NULL, TRUE);
 	do {
 		g_free (new_uri);
 		if (n == 1)
-			new_uri = g_strconcat (folder, "/", name, NULL);
+			new_uri = g_strconcat (folder, "/", new_name, NULL);
 		else
-			new_uri = g_strdup_printf ("%s/%s%%20(%d)", folder, name, n);
+			new_uri = g_strdup_printf ("%s/%s%%20(%d)", folder, new_name, n);
 		n++;
 	} while (uri_exists (new_uri));
 
+	g_free (new_name);
 	return new_uri;
 }
 
