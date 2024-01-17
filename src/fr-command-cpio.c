@@ -219,7 +219,7 @@ fr_command_cpio_extract (FrCommand *comm,
 	fr_process_end_command (comm->process);
 }
 
-const char *cpio_mime_type[] = { "application/x-cpio", NULL };
+const char *cpio_mime_type[] = { /*"application/x-cpio",*/ NULL };
 
 static const char **
 fr_command_cpio_get_mime_types (FrCommand *comm)
@@ -235,8 +235,8 @@ fr_command_cpio_get_capabilities (FrCommand  *comm,
 	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
-	if (is_program_available (CPIO_PATH, check_command))
-		capabilities |= FR_COMMAND_CAN_READ;
+/*	if (is_program_available (CPIO_PATH, check_command))
+		capabilities |= FR_COMMAND_CAN_READ;*/
 
 	return capabilities;
 }
