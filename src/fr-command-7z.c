@@ -609,7 +609,7 @@ fr_command_7z_get_mime_types (FrCommand *comm)
 
 	if (g_settings_get_boolean (settings, "unar-open-zip") &&
 	    is_program_in_path ("unar") && is_program_in_path ("lsar"))
-		sevenz_mime_types [8] = NULL;
+		sevenz_mime_types [9] = NULL;
 	else
 		g_settings_set_boolean (settings, "unar-open-zip", FALSE);
 
