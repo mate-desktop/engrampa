@@ -1040,25 +1040,31 @@ uricmp (const char *uri1,
 	return g_strcmp0 (uri1, uri2);
 }
 
+/**
+ * get_alternative_uri:
+ * @folder_uri: The URI of the containing folder
+ * @escaped_name: The URI-escaped name of the member to find a name for
+ *
+ * Tries to find an unused name for @escaped_name in @folder_uri.
+ *
+ * Returns: The full URI for the free slot (including directory)
+ */
 char *
-get_alternative_uri (const char *folder,
-	     const char *name)
+get_alternative_uri (const char *folder_uri,
+	     const char *escaped_name)
 {
 	char *new_uri = NULL;
 	int   n = 1;
-	char *new_name;
 
-	new_name = g_uri_escape_string (name, NULL, TRUE);
 	do {
 		g_free (new_uri);
 		if (n == 1)
-			new_uri = g_strconcat (folder, "/", new_name, NULL);
+			new_uri = g_strconcat (folder_uri, "/", escaped_name, NULL);
 		else
-			new_uri = g_strdup_printf ("%s/%s%%20(%d)", folder, new_name, n);
+			new_uri = g_strdup_printf ("%s/%s%%20(%d)", folder_uri, escaped_name, n);
 		n++;
 	} while (uri_exists (new_uri));
 
-	g_free (new_name);
 	return new_uri;
 }
 
