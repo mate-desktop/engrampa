@@ -59,6 +59,10 @@ mktime_from_string (char *datetime_s)
 	char      *min;
 	char      *sec;
 
+	/* expected YYYYMMDD.HHMMSS */
+	if (strlen (datetime_s) < 15)
+		return mktime (&tm);
+
 	tm.tm_isdst = -1;
 
 	/* date */
@@ -124,9 +128,14 @@ list__process_line (char     *line,
 
 	/**/
 
+	fields = split_line (line, 7);
+	if (g_strv_length (fields) < 7) {
+		g_strfreev (fields);
+		return;
+	}
+
 	fdata = file_data_new ();
 
-	fields = split_line (line, 7);
 	fdata->size = g_ascii_strtoull (fields[3], NULL, 10);
 	fdata->modified = mktime_from_string (fields[6]);
 	fdata->encrypted = (*fields[4] == 'B') || (*fields[4] == 'T');
@@ -135,6 +144,8 @@ list__process_line (char     *line,
 	/* Full path */
 
 	name_field = get_last_field (line, 8);
+	if (name_field == NULL)
+		name_field = "";
 
 	if (*name_field == '/') {
 		fdata->full_path = g_strdup (name_field);
