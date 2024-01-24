@@ -194,35 +194,19 @@ process_line (char     *line,
 	g_return_if_fail (line != NULL);
 
 	if (! rar_comm->list_started) {
-		if (strncmp (line, "RAR ", 4) == 0) {
-			int version;
-			sscanf (line, "RAR %d.", &version);
+		int version = 0;
+
+		if (sscanf (line, "RAR %d.", &version) == 1 || sscanf (line, "UNRAR %d.", &version) == 1) {
 			rar_comm->rar5 = (version >= 5);
 
 			if (version > 5)
 				date_newstyle = TRUE;
-			else if (version == 5)
+			else if (version == 5 && (sscanf (line, "RAR 5.%d ", &version) == 1 ||
+			                          sscanf (line, "UNRAR 5.%d ", &version) == 1))
 			{
-				sscanf (line, "RAR 5.%d ", &version);
 				if (version >= 30)
 					date_newstyle = TRUE;
 			}
-
-		}
-		else if (strncmp (line, "UNRAR ", 6) == 0) {
-			int version;
-			sscanf (line, "UNRAR %d.", &version);
-			rar_comm->rar5 = (version >= 5);
-
-			if (version > 5)
-				date_newstyle = TRUE;
-			else if (version == 5)
-			{
-				sscanf (line, "UNRAR 5.%d ", &version);
-				if (version >= 30)
-					date_newstyle = TRUE;
-			}
-
 		}
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
