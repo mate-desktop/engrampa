@@ -229,29 +229,19 @@ process_line (char     *line,
 	if (! rar_comm->rar4_odd_line) {
 		FileData   *fdata;
 		const char *size_field, *ratio_field, *date_field, *time_field, *attr_field;
+		int n_fields;
+
+		if (rar_comm->rar5)
+			n_fields = 6 + (attribute_field_with_space (line) != 0);
+		else
+			n_fields = 6;
 
 		fdata = rar_comm->fdata;
 
 		/* read file info. */
 
-		fields = split_line (line, attribute_field_with_space (line) ? 7 : 6);
-		if (rar_comm->rar5) {
-			int offset = attribute_field_with_space (line) ? 1 : 0;
-
-			size_field = fields[1+offset];
-			ratio_field = fields[3+offset];
-			date_field = fields[4+offset];
-			time_field = fields[5+offset];
-			attr_field = fields[0+offset];
-		}
-		else {
-			size_field = fields[0];
-			ratio_field = fields[2];
-			date_field = fields[3];
-			time_field = fields[4];
-			attr_field = fields[5];
-		}
-		if (g_strv_length (fields) < 6) {
+		fields = split_line (line, n_fields);
+		if (g_strv_length (fields) < (guint) n_fields) {
 			/* wrong line format, treat this line as a filename line */
 			g_strfreev (fields);
 			file_data_free (rar_comm->fdata);
@@ -260,6 +250,23 @@ process_line (char     *line,
 			parse_name_field (line, rar_comm);
 		}
 		else {
+			if (rar_comm->rar5) {
+				int offset = attribute_field_with_space (line) ? 1 : 0;
+
+				size_field = fields[1+offset];
+				ratio_field = fields[3+offset];
+				date_field = fields[4+offset];
+				time_field = fields[5+offset];
+				attr_field = fields[0+offset];
+			}
+			else {
+				size_field = fields[0];
+				ratio_field = fields[2];
+				date_field = fields[3];
+				time_field = fields[4];
+				attr_field = fields[5];
+			}
+
 			if ((strcmp (ratio_field, "<->") == 0)
 			    || (strcmp (ratio_field, "<--") == 0))
 			{
