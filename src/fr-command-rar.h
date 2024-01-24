@@ -38,13 +38,20 @@
 typedef struct _FrCommandRar       FrCommandRar;
 typedef struct _FrCommandRarClass  FrCommandRarClass;
 
+typedef enum
+{
+	FR_COMMAND_RAR_TYPE_RAR4 = 0,
+	FR_COMMAND_RAR_TYPE_RAR5,
+	FR_COMMAND_RAR_TYPE_UNRAR_FREE,
+} FrCommandRarType;
+
 struct _FrCommandRar
 {
 	FrCommand  __parent;
 
 	gboolean  list_started;
 	gboolean  rar4_odd_line;
-	gboolean  rar5;
+	FrCommandRarType output_type;
 	FileData *fdata;
 };
 
