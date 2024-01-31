@@ -51,10 +51,26 @@ static FrCommandClass *parent_class = NULL;
 
 static gboolean date_newstyle = FALSE;
 
-static gboolean
-have_rar (void)
+static const struct {
+	const gchar *command;
+	FrCommandCaps capabilities;
+} candidate_commands[] = {
+	{ "rar", FR_COMMAND_CAN_READ_WRITE | FR_COMMAND_CAN_CREATE_VOLUMES },
+	{ "unrar", FR_COMMAND_CAN_READ },
+	{ "unrar-free", FR_COMMAND_CAN_READ }
+};
+
+static const gchar *
+get_rar_command (void)
 {
-	return is_program_in_path ("rar");
+	for (guint i = 0; i < G_N_ELEMENTS(candidate_commands); i++) {
+		if (is_program_in_path (candidate_commands[i].command))
+			return candidate_commands[i].command;
+	}
+
+	/* this should never happen as we shouldn't get called if none of the
+	 * candidate exist, but better safe than sorry */
+	return "unrar";
 }
 
 /* -- list -- */
@@ -354,10 +370,7 @@ fr_command_rar_list (FrCommand  *comm)
 
 	fr_process_set_out_line_func (comm->process, process_line, comm);
 
-	if (have_rar ())
-		fr_process_begin_command (comm->process, "rar");
-	else
-		fr_process_begin_command (comm->process, "unrar");
+	fr_process_begin_command (comm->process, get_rar_command ());
 	fr_process_set_begin_func (comm->process, list__begin, comm);
 	fr_process_add_arg (comm->process, "v");
 	fr_process_add_arg (comm->process, "-c-");
@@ -558,10 +571,7 @@ fr_command_rar_extract (FrCommand  *comm,
 				      process_line__extract,
 				      comm);
 
-	if (have_rar ())
-		fr_process_begin_command (comm->process, "rar");
-	else
-		fr_process_begin_command (comm->process, "unrar");
+	fr_process_begin_command (comm->process, get_rar_command ());
 
 	fr_process_add_arg (comm->process, "x");
 
@@ -602,10 +612,7 @@ fr_command_rar_extract (FrCommand  *comm,
 static void
 fr_command_rar_test (FrCommand   *comm)
 {
-	if (have_rar ())
-		fr_process_begin_command (comm->process, "rar");
-	else
-		fr_process_begin_command (comm->process, "unrar");
+	fr_process_begin_command (comm->process, get_rar_command ());
 
 	fr_process_add_arg (comm->process, "t");
 
@@ -692,10 +699,13 @@ fr_command_rar_get_capabilities (FrCommand  *comm,
 	FrCommandCaps capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES | FR_COMMAND_CAN_ENCRYPT | FR_COMMAND_CAN_ENCRYPT_HEADER;
-	if (is_program_available ("rar", check_command))
-		capabilities |= FR_COMMAND_CAN_READ_WRITE | FR_COMMAND_CAN_CREATE_VOLUMES;
-	else if (is_program_available ("unrar", check_command))
-		capabilities |= FR_COMMAND_CAN_READ;
+	/* add command-specific capabilities depending on availability */
+	for (guint i = 0; i < G_N_ELEMENTS (candidate_commands); i++) {
+		if (is_program_available (candidate_commands[i].command, check_command)) {
+			capabilities |= candidate_commands[i].capabilities;
+			break;
+		}
+	}
 
 	/* multi-volumes are read-only */
 	if ((comm->files->len > 0) && comm->multi_volume && (capabilities & FR_COMMAND_CAN_WRITE))
@@ -708,7 +718,7 @@ static const char *
 fr_command_rar_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
-	return PACKAGES ("rar,unrar");
+	return PACKAGES ("rar,unrar,unrar-free");
 }
 
 static void
