@@ -7,6 +7,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 趙惟倫 <bluebat@member.fsf.org>, 2021
 # 黃柏諺 <s8321414@gmail.com>, 2021
+# Woodman Tuen <wmtuen@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2021-06-04 23:14+0200\n"
 "PO-Revision-Date: 2021-09-18 19:17+0000\n"
-"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2021\n"
+"Last-Translator: Woodman Tuen <wmtuen@gmail.com>, 2024\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/mate/teams/13566/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -676,7 +677,7 @@ msgid ""
 msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
-msgstr[0] ""
+msgstr[0] "%u 個檔案已被外部應用程式所修改。如果不更新在壓縮檔中的檔案，將會失去所有變更。"
 
 #: src/dlg-update.c:195
 #, c-format
@@ -996,13 +997,13 @@ msgstr "Zip"
 #, c-format
 msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
-msgstr[0] ""
+msgstr[0] "%lu 個物件 (%s)"
 
 #: src/fr-window.c:1475
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] ""
+msgstr[0] "已選取 %lu 個物件 (%s)"
 
 #: src/fr-window.c:1549
 msgid "Folder"
@@ -1120,15 +1121,15 @@ msgstr "關閉(_C)"
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
-msgstr[0] ""
+msgstr[0] "剩餘 %lu 個檔案"
 
 #: src/fr-window.c:2771
 msgid "Extraction completed successfully"
-msgstr "解壓縮成功的結束"
+msgstr "解壓完成"
 
 #: src/fr-window.c:2796
 msgid "Archive created successfully"
-msgstr "壓縮檔已成功的建立"
+msgstr "成功建立壓縮檔"
 
 #: src/fr-window.c:2923 src/fr-window.c:3058
 msgid "Command exited abnormally."
@@ -1141,7 +1142,7 @@ msgstr "解開檔案時發生錯誤。"
 #: src/fr-window.c:3022
 #, c-format
 msgid "Could not open \"%s\""
-msgstr "無法開啟“%s”"
+msgstr "無法開啟「%s」"
 
 #: src/fr-window.c:3027
 msgid "An error occurred while loading the archive."
@@ -1225,7 +1226,7 @@ msgstr "名稱"
 
 #: src/fr-window.c:5734
 msgid "Find:"
-msgstr "尋找:"
+msgstr "尋找："
 
 #: src/fr-window.c:5825
 msgid "Close the folders pane"
@@ -1248,7 +1249,7 @@ msgstr "位置(_L):"
 #: src/fr-window.c:6295
 #, c-format
 msgid "Could not save the archive \"%s\""
-msgstr "無法儲存壓縮檔“%s”"
+msgstr "無法儲存壓縮檔「%s」"
 
 #: src/fr-window.c:6794
 #, c-format
@@ -1471,7 +1472,7 @@ msgstr "MB"
 #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
 #: src/ui/password.ui:126
 msgid "_Password:"
-msgstr "密碼(_P):"
+msgstr "密碼(_P)："
 
 #: src/ui/batch-add-files.ui:365 src/ui/new.ui:197
 msgid "_Other Options"
@@ -1507,7 +1508,7 @@ msgstr "例如：*.txt; *.doc"
 
 #: src/ui/delete.ui:133 src/ui/dlg-extract.ui:161
 msgid "_Files:"
-msgstr "檔案(_F):"
+msgstr "檔案(_F)："
 
 #: src/ui/dlg-add-files.ui:71 src/ui/dlg-add-folder.ui:72
 msgid "_Add"
@@ -1531,7 +1532,7 @@ msgstr "不包括是符號連結的資料夾(_K)"
 
 #: src/ui/dlg-add-folder.ui:169
 msgid "Include _files:"
-msgstr "包含檔案(_F):"
+msgstr "包含檔案(_F)："
 
 #: src/ui/dlg-add-folder.ui:186 src/ui/dlg-add-folder.ui:231
 #: src/ui/dlg-add-folder.ui:263
@@ -1540,11 +1541,11 @@ msgstr "例如： *.o; *.bak"
 
 #: src/ui/dlg-add-folder.ui:214
 msgid "E_xclude files:"
-msgstr "不包括檔案(_X):"
+msgstr "不包括檔案(_X)："
 
 #: src/ui/dlg-add-folder.ui:247
 msgid "_Exclude folders:"
-msgstr "排除的資料夾(_E):"
+msgstr "排除的資料夾(_E)："
 
 #: src/ui/dlg-add-folder.ui:300
 msgid "_Load Options"
