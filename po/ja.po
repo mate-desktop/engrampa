@@ -12,15 +12,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Yoshifumi Kinoshita <yoshifumi1975@gmail.com>, 2021
 # pivo thusr, 2021
-# Green <usergreen@users.osdn.me>, 2022
+# Green <usergreen@users.osdn.me>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
-"POT-Creation-Date: 2023-08-31 21:19+0200\n"
+"POT-Creation-Date: 2023-12-20 14:53+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Green <usergreen@users.osdn.me>, 2022\n"
+"Last-Translator: Green <usergreen@users.osdn.me>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,7 +53,7 @@ msgstr "不明な起動オプションです: %d"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
-msgstr "'Type=Link' の .desktop エントリーには文書の URI を渡せません"
+msgstr "'Type=Link' の .desktop エントリには文書の URI を渡せません"
 
 #: mate-submodules/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
@@ -259,7 +259,7 @@ msgstr "昇順、降順を指定指定します。可能な値はascending, desc
 
 #: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
-msgstr "一覧モード"
+msgstr "リストモード"
 
 #: data/org.mate.engrampa.gschema.xml.in:49
 msgid ""
@@ -317,7 +317,7 @@ msgstr "名前列の幅"
 
 #: data/org.mate.engrampa.gschema.xml.in:79
 msgid "The default width of the name column in the file list."
-msgstr "ファイルリストにおける名前列のデフォルトの幅です。"
+msgstr "ファイルリストにおける名前列の既定の幅です。"
 
 #: data/org.mate.engrampa.gschema.xml.in:85
 msgid "Max history length"
@@ -404,15 +404,15 @@ msgstr "書庫の中にあるフォルダを再作成する"
 
 #: data/org.mate.engrampa.gschema.xml.in:155
 msgid "Close dialog after decompression"
-msgstr ""
+msgstr "解凍後、ダイアログを閉じる"
 
 #: data/org.mate.engrampa.gschema.xml.in:159
 msgid "Create a folder with the archive name and extract there"
-msgstr ""
+msgstr "元の書庫名でフォルダを作成し、そこに解凍する"
 
 #: data/org.mate.engrampa.gschema.xml.in:197
 msgid "Default volume size"
-msgstr "デフォルトボリュームサイズ:"
+msgstr "既定のボリュームサイズ:"
 
 #: data/org.mate.engrampa.gschema.xml.in:198
 msgid "The default size for volumes."
@@ -627,7 +627,7 @@ msgstr ""
 
 #: src/dlg-batch-add.c:229 src/dlg-extract.c:108 src/fr-window.c:6744
 msgid "Create _Folder"
-msgstr "フォルダーの生成(_F)"
+msgstr "フォルダの生成(_F)"
 
 #: src/dlg-batch-add.c:248 src/dlg-extract.c:128 src/fr-window.c:6761
 #, c-format
@@ -1303,7 +1303,7 @@ msgstr "置換(_R)"
 
 #: src/fr-window.c:6710
 msgid "Insufficient remaining disk space"
-msgstr ""
+msgstr "ディスクの空き容量が不足しています"
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1348,7 +1348,7 @@ msgstr "名前の変更"
 
 #: src/fr-window.c:7563
 msgid "_New folder name:"
-msgstr "新しいフォルダー名(_N):"
+msgstr "新しいフォルダ名(_N):"
 
 #: src/fr-window.c:7563
 msgid "_New file name:"
@@ -1372,7 +1372,7 @@ msgstr "選択部分の貼り付け"
 
 #: src/fr-window.c:7992
 msgid "_Destination folder:"
-msgstr "送り先フォルダー(_D):"
+msgstr "送り先フォルダ(_D):"
 
 #: src/fr-window.c:7996 src/ui/menus-toolbars.ui:349
 #: src/ui/menus-toolbars.ui:799 src/ui/menus-toolbars.ui:874
@@ -1429,7 +1429,7 @@ msgstr "書庫フォルダ中の内容を指定したフォルダに展開して
 
 #: src/main.c:76
 msgid "Default folder to use for the '--add' and '--extract' commands"
-msgstr "'--add' と '--extract' コマンドで使用するデフォルトのフォルダ"
+msgstr "'--add' と '--extract' コマンドで使用する既定のフォルダ"
 
 #: src/main.c:80
 msgid "Create destination folder without asking confirmation"
@@ -1607,11 +1607,11 @@ msgstr "古いファイルは展開しない(_X)"
 
 #: src/ui/dlg-extract.ui:293
 msgid "close dialog after decompression"
-msgstr ""
+msgstr "解凍後、ダイアログを閉じる"
 
 #: src/ui/dlg-extract.ui:309
 msgid "Extract to s_ubdirectory"
-msgstr ""
+msgstr "サブディレクトリに展開する(_U)"
 
 #: src/ui/dlg-extract.ui:331
 msgid "Actions"
@@ -1832,8 +1832,8 @@ msgid "Contents"
 msgstr "目次"
 
 #: src/ui/menus-toolbars.ui:601
-msgid "Dis_Archiveplay the Engrampa Manual"
-msgstr ""
+msgid "Dis_play the Engrampa Manual"
+msgstr "Engrampa のマニュアルを表示 (_P)"
 
 #: src/ui/menus-toolbars.ui:612
 msgid "_About"
@@ -1882,7 +1882,7 @@ msgstr "選択したフォルダを開きます"
 
 #: src/ui/menus-toolbars.ui:843 src/ui/menus-toolbars.ui:918
 msgid "Extract folder from the archive"
-msgstr ""
+msgstr "書庫からフォルダを展開する"
 
 #: src/ui/password.ui:18
 msgid "Password"

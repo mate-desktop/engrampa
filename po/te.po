@@ -10,9 +10,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: engrampa 1.26.0\n"
+"Project-Id-Version: engrampa 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
-"POT-Creation-Date: 2022-10-29 15:23+0200\n"
+"POT-Creation-Date: 2023-12-20 14:53+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Telugu (https://app.transifex.com/mate/teams/13566/te/)\n"
@@ -22,62 +22,62 @@ msgstr ""
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: mate-submodules/libegg/eggdesktopfile.c:168
+#: mate-submodules/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
 msgstr "దస్త్రము చెల్లునటువంటి .desktop దస్త్రము కాదు"
 
-#: mate-submodules/libegg/eggdesktopfile.c:193
+#: mate-submodules/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
 msgstr "గుర్తించని డెస్కుటాపు దస్త్రము వర్షన్ '%s'"
 
-#: mate-submodules/libegg/eggdesktopfile.c:975
+#: mate-submodules/libegg/eggdesktopfile.c:984
 #, c-format
 msgid "Starting %s"
 msgstr "%s ను ప్రారంభించుచున్నాము"
 
-#: mate-submodules/libegg/eggdesktopfile.c:1117
+#: mate-submodules/libegg/eggdesktopfile.c:1126
 msgid "Application does not accept documents on command line"
 msgstr "అనువర్తనము ఆదేశ వరుసనందు పత్రములను ఆమోదించదు"
 
-#: mate-submodules/libegg/eggdesktopfile.c:1185
+#: mate-submodules/libegg/eggdesktopfile.c:1194
 #, c-format
 msgid "Unrecognized launch option: %d"
 msgstr "గుర్తించని ప్రారంభ ఐచ్చికము: %d"
 
-#: mate-submodules/libegg/eggdesktopfile.c:1401
+#: mate-submodules/libegg/eggdesktopfile.c:1410
 msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
 msgstr "పత్రము URIలను Type=Link' desktop entry కు పంపలేదు."
 
-#: mate-submodules/libegg/eggdesktopfile.c:1422
+#: mate-submodules/libegg/eggdesktopfile.c:1431
 msgid "Not a launchable item"
 msgstr "ఆరంభించదగిన అంశముకాదు"
 
-#: mate-submodules/libegg/eggsmclient.c:233
+#: mate-submodules/libegg/eggsmclient.c:234
 msgid "Disable connection to session manager"
 msgstr "సెషన్ నిర్వాహకునికి అనుసంధానమును అచేతనము చేయుము"
 
-#: mate-submodules/libegg/eggsmclient.c:238
+#: mate-submodules/libegg/eggsmclient.c:239
 msgid "Specify file containing saved configuration"
 msgstr "దాయబడిన ఆకృతీకరణను కలిగివున్న ఫైలును తెలుపుము"
 
-#: mate-submodules/libegg/eggsmclient.c:238
+#: mate-submodules/libegg/eggsmclient.c:239
 msgid "FILE"
 msgstr "FILE"
 
-#: mate-submodules/libegg/eggsmclient.c:243
+#: mate-submodules/libegg/eggsmclient.c:244
 msgid "Specify session management ID"
 msgstr "సెషన్ నిర్వహణ IDను తెలుపుము"
 
-#: mate-submodules/libegg/eggsmclient.c:243
+#: mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
 msgstr "ఐడి"
 
-#: mate-submodules/libegg/eggsmclient.c:269
+#: mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
 msgstr "సెషన్ నిర్వహణా ఐచ్చికములు:"
 
-#: mate-submodules/libegg/eggsmclient.c:270
+#: mate-submodules/libegg/eggsmclient.c:271
 msgid "Show session management options"
 msgstr "సెషన్ నిర్వహణా ఐచ్చికములను చూపుము"
 
@@ -205,7 +205,7 @@ msgid ""
 "project's home page."
 msgstr ""
 
-#: data/engrampa.desktop.in.in:4 src/fr-window.c:1877 src/fr-window.c:5319
+#: data/engrampa.desktop.in.in:4 src/fr-window.c:1889 src/fr-window.c:5293
 msgid "Archive Manager"
 msgstr "సంగ్రహ అభికర్త"
 
@@ -323,7 +323,7 @@ msgstr ""
 msgid "Whether to display the statusbar."
 msgstr ""
 
-#: data/org.mate.engrampa.gschema.xml.in:109 src/ui.h:230
+#: data/org.mate.engrampa.gschema.xml.in:109 src/ui/menus-toolbars.ui:505
 msgid "View the folders pane"
 msgstr "సంచయముల ఫలకంను దర్శించుము"
 
@@ -381,36 +381,44 @@ msgstr ""
 msgid "Recreate the folders stored in the archive"
 msgstr ""
 
-#: data/org.mate.engrampa.gschema.xml.in:189
+#: data/org.mate.engrampa.gschema.xml.in:155
+msgid "Close dialog after decompression"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:159
+msgid "Create a folder with the archive name and extract there"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:197
 msgid "Default volume size"
 msgstr ""
 
-#: data/org.mate.engrampa.gschema.xml.in:190
+#: data/org.mate.engrampa.gschema.xml.in:198
 msgid "The default size for volumes."
 msgstr ""
 
-#: caja/caja-engrampa.c:324
+#: caja/caja-engrampa.c:325
 msgid "Extract Here"
 msgstr "ఇక్కడ పొందు"
 
 #. Translators: the current position is the current folder
-#: caja/caja-engrampa.c:326
+#: caja/caja-engrampa.c:327
 msgid "Extract the selected archive to the current position"
 msgstr ""
 
-#: caja/caja-engrampa.c:343
+#: caja/caja-engrampa.c:344
 msgid "Extract To..."
 msgstr "పొందు..."
 
-#: caja/caja-engrampa.c:344
+#: caja/caja-engrampa.c:345
 msgid "Extract the selected archive"
 msgstr "ఈ ఎంపికైన సంగ్రహమును పొందు"
 
-#: caja/caja-engrampa.c:363
+#: caja/caja-engrampa.c:364
 msgid "Compress..."
 msgstr "కుదించు..."
 
-#: caja/caja-engrampa.c:364
+#: caja/caja-engrampa.c:365
 msgid "Create a compressed archive with the selected objects"
 msgstr "ఎంపికచేసిన ఆబ్జక్టులతో కుదించిన ఆర్చివ్‌ను సృష్టించుము"
 
@@ -423,47 +431,53 @@ msgstr "ఫైల్ రోలర్"
 msgid "Allows to create and extract archives"
 msgstr ""
 
-#: src/actions.c:153 src/actions.c:192 src/actions.c:228
+#: src/actions.c:182 src/actions.c:221 src/actions.c:235 src/actions.c:273
 #: src/dlg-batch-add.c:157 src/dlg-batch-add.c:173 src/dlg-batch-add.c:202
-#: src/dlg-batch-add.c:247 src/dlg-batch-add.c:293 src/fr-window.c:2918
+#: src/dlg-batch-add.c:247 src/dlg-batch-add.c:293 src/fr-window.c:2944
 msgid "Could not create the archive"
 msgstr "సంగ్రహము సృష్టించబడదు"
 
-#: src/actions.c:155 src/dlg-batch-add.c:159 src/dlg-batch-add.c:295
+#: src/actions.c:184 src/dlg-batch-add.c:159 src/dlg-batch-add.c:295
 msgid "You have to specify an archive name."
 msgstr " నీవు ఒక సంగ్రహము పేరును పేర్కొనవలెను"
 
-#: src/actions.c:194
+#: src/actions.c:223
 msgid "You don't have permission to create an archive in this folder"
 msgstr "ఈ సంచయంలో ఒక సంగ్రహమును సృష్టించుటకు నీకు అనుమతి లేదు"
 
-#: src/actions.c:230 src/dlg-package-installer.c:281
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: src/actions.c:237 src/fr-window.c:7451
+msgid "New name is the same as old one, please type other name."
+msgstr ""
+
+#: src/actions.c:275 src/dlg-package-installer.c:281
 #: src/dlg-package-installer.c:290 src/dlg-package-installer.c:330
-#: src/fr-archive.c:1116 src/fr-window.c:5951 src/fr-window.c:6118
+#: src/fr-archive.c:1117 src/fr-window.c:5910 src/fr-window.c:6077
 msgid "Archive type not supported."
 msgstr "సంగ్రహ రకము సహకరించలేదు."
 
-#: src/actions.c:244
+#: src/actions.c:289
 msgid "Could not delete the old archive."
 msgstr "ప్రాత సంగ్రహము తొలగించబడదు."
 
-#: src/actions.c:371 src/fr-window.c:5694
+#: src/actions.c:438 src/ui/menus-toolbars.ui:643
 msgid "Open"
 msgstr "తెరువు"
 
-#: src/actions.c:382 src/fr-window.c:5147
+#: src/actions.c:449 src/fr-window.c:5128
 msgid "All archives"
 msgstr "సమస్త సంగ్రహములు"
 
-#: src/actions.c:389
+#: src/actions.c:456
 msgid "All files"
 msgstr "సమస్త దస్త్రములు"
 
-#: src/actions.c:748 src/fr-window.c:7123
+#: src/actions.c:760 src/fr-window.c:7152
 msgid "Last Output"
 msgstr "వెనుక దిగుబడి"
 
-#: src/actions.c:806
+#: src/actions.c:824
 msgid ""
 "Engrampa is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -475,7 +489,7 @@ msgstr ""
 "చేయవచ్చు; మీరు అనుసరించవలిసినది లైసెన్సు యొక్క వర్షన్ 2, లేదా(మీ ఐచ్చికం "
 "వద్ద) దాని తరువాతి వర్షన్ కాని."
 
-#: src/actions.c:810
+#: src/actions.c:828
 msgid ""
 "Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -486,7 +500,7 @@ msgstr ""
 "వ్యాపారసంబంధితంగా కాని లేదా ప్రతిపాదిత ప్రయోజనం కొరకుకాని హామీ లేదు. "
 "అధికవివరములకొరకు GNU జనరల్ పబ్లిక్ లైసెన్సు నుచూడండి."
 
-#: src/actions.c:814
+#: src/actions.c:832
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
@@ -496,17 +510,17 @@ msgstr ""
 "ఉంటారు;పొందకపోతే, Free Software Foundation, Inc., 51 Franklin St, "
 "FifthFloor, Boston. MA  02110-1301, USA కు వ్రాయండి"
 
-#: src/actions.c:847
+#: src/actions.c:865
 msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
 
-#: src/actions.c:849
+#: src/actions.c:867
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
 msgstr ""
 
-#: src/actions.c:852
+#: src/actions.c:870
 msgid "translator-credits"
 msgstr "Praveen Illa <mail2ipn@gmail.com>, 2014"
 
@@ -528,10 +542,10 @@ msgid "_Options Name:"
 msgstr ""
 
 #: src/dlg-add-folder.c:716 src/dlg-package-installer.c:312
-#: src/fr-window.c:2460 src/fr-window.c:7537 src/fr-window.c:7966
+#: src/fr-window.c:2482 src/fr-window.c:7566 src/fr-window.c:7995
 #: src/ui/batch-add-files.ui:46 src/ui/batch-password.ui:36
 #: src/ui/delete.ui:36 src/ui/dlg-add-files.ui:56 src/ui/dlg-add-folder.ui:57
-#: src/ui/dlg-extract.ui:56 src/ui/new.ui:240 src/ui/password.ui:37
+#: src/ui/dlg-extract.ui:56 src/ui/new.ui:239 src/ui/password.ui:37
 #: src/ui/update.ui:33 src/ui/update.ui:190
 msgid "_Cancel"
 msgstr "రద్దు(_C)"
@@ -556,7 +570,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/dlg-batch-add.c:177 src/fr-window.c:7462 src/fr-window.c:7464
+#: src/dlg-batch-add.c:177 src/fr-window.c:7491 src/fr-window.c:7493
 msgid "Please use a different name."
 msgstr "దయచేసి ఒక భిన్నమైన నామమును వినియోగించు."
 
@@ -566,7 +580,7 @@ msgid ""
 " folder."
 msgstr "నీకు ఈ గమ్యసంచయంలో సంగ్రహమును సృష్టించుటకు  సరియైన అనుమతి లేదు ."
 
-#: src/dlg-batch-add.c:220 src/dlg-extract.c:97 src/fr-window.c:6698
+#: src/dlg-batch-add.c:220 src/dlg-extract.c:99 src/fr-window.c:6735
 #, c-format
 msgid ""
 "Destination folder \"%s\" does not exist.\n"
@@ -577,11 +591,11 @@ msgstr ""
 "\n"
 "మీరు దానిని సృష్టిద్దామని అనుకుంటున్నారా?"
 
-#: src/dlg-batch-add.c:229 src/dlg-extract.c:106 src/fr-window.c:6707
+#: src/dlg-batch-add.c:229 src/dlg-extract.c:108 src/fr-window.c:6744
 msgid "Create _Folder"
 msgstr "సంచయంను సృష్టించు(_F)"
 
-#: src/dlg-batch-add.c:248 src/dlg-extract.c:126 src/fr-window.c:6724
+#: src/dlg-batch-add.c:248 src/dlg-extract.c:128 src/fr-window.c:6761
 #, c-format
 msgid "Could not create the destination folder: %s."
 msgstr "గమ్యసంచయం సృష్టించబడదు: %s."
@@ -598,25 +612,25 @@ msgstr "ఈ సంగ్రహము ముందుగానే ఉన్నద
 msgid "_Overwrite"
 msgstr "చెరిపిరాత(_O)"
 
-#: src/dlg-extract.c:125 src/dlg-extract.c:143 src/dlg-extract.c:170
-#: src/fr-window.c:4150 src/fr-window.c:6640 src/fr-window.c:6645
-#: src/fr-window.c:6728 src/fr-window.c:6747 src/fr-window.c:6752
+#: src/dlg-extract.c:127 src/dlg-extract.c:145 src/dlg-extract.c:172
+#: src/fr-window.c:4176 src/fr-window.c:6661 src/fr-window.c:6666
+#: src/fr-window.c:6765 src/fr-window.c:6784 src/fr-window.c:6789
 msgid "Extraction not performed"
 msgstr "పొందుట నిర్వహించబడలేదు"
 
-#: src/dlg-extract.c:171 src/fr-window.c:4313 src/fr-window.c:4392
+#: src/dlg-extract.c:173 src/fr-window.c:4340 src/fr-window.c:4419
 #, c-format
 msgid ""
 "You don't have the right permissions to extract archives in the folder "
 "\"%s\""
 msgstr "నీకు సంగ్రహములను ఈ సంచయములోనికి పొందుటకు సరైన అనుమతి లేదు \"%s\""
 
-#: src/dlg-new.c:380
+#: src/dlg-new.c:382
 msgctxt "File"
 msgid "New"
 msgstr ""
 
-#: src/dlg-new.c:392
+#: src/dlg-new.c:394
 msgctxt "File"
 msgid "Save"
 msgstr "దాచు"
@@ -645,7 +659,7 @@ msgstr ""
 msgid "%s Properties"
 msgstr "%s లక్షణాలు"
 
-#: src/dlg-prop.c:104 src/fr-window.c:1484 src/fr-window.c:1513
+#: src/dlg-prop.c:104 src/fr-window.c:1496 src/fr-window.c:1525
 msgid "%d %B %Y, %H:%M"
 msgstr "%d %B %Y, %H:%M"
 
@@ -711,38 +725,38 @@ msgstr ""
 msgid "File not found."
 msgstr ""
 
-#: src/fr-archive.c:1198
+#: src/fr-archive.c:1199
 msgid "Archive not found"
 msgstr ""
 
-#: src/fr-archive.c:2364
+#: src/fr-archive.c:2365
 msgid "You don't have the right permissions."
 msgstr "నీకు సరియైన అనుమతి లేదు."
 
-#: src/fr-archive.c:2364
+#: src/fr-archive.c:2365
 msgid "This archive type cannot be modified"
 msgstr "ఆర్చివ్ రకము సవరించబడదు"
 
-#: src/fr-archive.c:2376
+#: src/fr-archive.c:2377
 msgid "You can't add an archive to itself."
 msgstr "నీవు ఒక సంగ్రహమును దానికే చేర్చలేవు."
 
 #. Translators: after the colon there is a filename.
-#: src/fr-command-7z.c:298 src/fr-command-rar.c:440 src/fr-command-tar.c:284
+#: src/fr-command-7z.c:306 src/fr-command-rar.c:415 src/fr-command-tar.c:284
 msgid "Adding file: "
 msgstr " చేర్చుతున్న  దస్త్రము: "
 
 #. Translators: after the colon there is a filename.
-#: src/fr-command-7z.c:441 src/fr-command-rar.c:563 src/fr-command-tar.c:400
+#: src/fr-command-7z.c:466 src/fr-command-rar.c:538 src/fr-command-tar.c:400
 msgid "Extracting file: "
 msgstr "పొందుతున్న దస్త్రము: "
 
 #. Translators: after the colon there is a filename.
-#: src/fr-command-rar.c:516 src/fr-command-tar.c:348
+#: src/fr-command-rar.c:491 src/fr-command-tar.c:348
 msgid "Removing file: "
 msgstr "తీసివేస్తున్న  దస్త్రము: "
 
-#: src/fr-command-rar.c:691
+#: src/fr-command-rar.c:666
 #, c-format
 msgid "Could not find the volume: %s"
 msgstr "వాల్యూమ్ కనుగొన లేకపోయింది: %s"
@@ -755,7 +769,7 @@ msgstr "సంగ్రహం నుండి దస్త్రములను 
 msgid "Recompressing archive"
 msgstr "సంగ్రహమును పునఃసంకుచితము చేయుట"
 
-#: src/fr-command-tar.c:715
+#: src/fr-command-tar.c:716
 msgid "Decompressing archive"
 msgstr "సంగ్రహమును "
 
@@ -967,210 +981,210 @@ msgstr ""
 msgid "Zoo"
 msgstr ""
 
-#: src/fr-init.c:112
+#: src/fr-init.c:112 src/fr-init.c:113
 msgid "Zstandard compressed file"
 msgstr ""
 
-#: src/fr-init.c:113
+#: src/fr-init.c:114
 msgid "Tar compressed with zstd"
 msgstr ""
 
-#: src/fr-init.c:114
+#: src/fr-init.c:115
 msgid "Zip"
 msgstr ""
 
-#: src/fr-window.c:1415
+#: src/fr-window.c:1427
 #, c-format
 msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/fr-window.c:1420
+#: src/fr-window.c:1432
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/fr-window.c:1493
+#: src/fr-window.c:1505
 msgid "Folder"
 msgstr "సంచయము"
 
-#: src/fr-window.c:1885
+#: src/fr-window.c:1897
 msgid "[read only]"
 msgstr "[చదువుట మాత్రమే]"
 
-#: src/fr-window.c:2135
+#: src/fr-window.c:2157
 #, c-format
 msgid "Could not display the folder \"%s\""
 msgstr "ఈ సంచయం ప్రదర్శించబడదు \"%s\""
 
-#: src/fr-window.c:2164 src/fr-window.c:2179 src/fr-window.c:2462
+#: src/fr-window.c:2186 src/fr-window.c:2201 src/fr-window.c:2484
 msgid "_Pause"
 msgstr ""
 
-#: src/fr-window.c:2167
+#: src/fr-window.c:2189
 msgid "Process paused"
 msgstr ""
 
-#: src/fr-window.c:2169
+#: src/fr-window.c:2191
 msgid "_Resume"
 msgstr ""
 
-#: src/fr-window.c:2177 src/fr-window.c:2766
+#: src/fr-window.c:2199 src/fr-window.c:2792
 msgid "Please wait…"
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2251 src/fr-window.c:2289
+#: src/fr-window.c:2273 src/fr-window.c:2311
 #, c-format
 msgid "Creating \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2255
+#: src/fr-window.c:2277
 #, c-format
 msgid "Loading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2259
+#: src/fr-window.c:2281
 #, c-format
 msgid "Reading \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2263
+#: src/fr-window.c:2285
 #, c-format
 msgid "Deleting files from \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2267
+#: src/fr-window.c:2289
 #, c-format
 msgid "Testing \"%s\""
 msgstr ""
 
-#: src/fr-window.c:2270
+#: src/fr-window.c:2292
 msgid "Getting the file list"
 msgstr "దస్త్రముల జాబితాను  తీసుకువచ్చుట"
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2274
+#: src/fr-window.c:2296
 #, c-format
 msgid "Copying the files to add to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2278
+#: src/fr-window.c:2300
 #, c-format
 msgid "Adding files to \"%s\""
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2282
+#: src/fr-window.c:2304
 #, c-format
 msgid "Extracting files from \"%s\""
 msgstr ""
 
-#: src/fr-window.c:2285
+#: src/fr-window.c:2307
 msgid "Copying the extracted files to the destination"
 msgstr ""
 
 #. Translators: %s is a filename
-#: src/fr-window.c:2293
+#: src/fr-window.c:2315
 #, c-format
 msgid "Saving \"%s\""
 msgstr ""
 
-#: src/fr-window.c:2455 src/ui/app-menu.ui:14
+#: src/fr-window.c:2477
 msgid "_Quit"
 msgstr "నిష్క్రమించు (_Q)"
 
-#: src/fr-window.c:2456
+#: src/fr-window.c:2478
 msgid "_Open the Archive"
 msgstr "ఆర్చివ్‌ను తెరువు (_O)"
 
-#: src/fr-window.c:2457
+#: src/fr-window.c:2479
 msgid "_Show the Files"
 msgstr "దస్త్రములను చూపుము (_S)"
 
-#: src/fr-window.c:2458
+#: src/fr-window.c:2480
 msgid "Show the _Files and Quit"
 msgstr ""
 
-#: src/fr-window.c:2459 src/ui/add-options.ui:40 src/ui.h:56
+#: src/fr-window.c:2481 src/ui/add-options.ui:40 src/ui/menus-toolbars.ui:302
 #: src/ui/properties.ui:52
 msgid "_Close"
 msgstr "మూసివేయి (_C)"
 
-#: src/fr-window.c:2635
+#: src/fr-window.c:2657
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/fr-window.c:2687
+#: src/fr-window.c:2709
 msgid "Extraction completed successfully"
 msgstr "బయల్పరపు(ఎక్స్‍‌ట్రాక్షన్) సమర్ధవంతంగా పూర్తైనది"
 
-#: src/fr-window.c:2711
+#: src/fr-window.c:2737
 msgid "Archive created successfully"
 msgstr "ఆర్చివ్ సమర్ధవంతంగా సృష్టించబడింది"
 
-#: src/fr-window.c:2832 src/fr-window.c:2965
+#: src/fr-window.c:2858 src/fr-window.c:2991
 msgid "Command exited abnormally."
 msgstr "ఆదేశం అసాధారణంగా బయటకు వచ్చింది."
 
-#: src/fr-window.c:2923
+#: src/fr-window.c:2949
 msgid "An error occurred while extracting files."
 msgstr "దస్త్రములను పొందుచున్నప్పుడు ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2929
+#: src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
 msgstr "తెరవబడదు \"%s\""
 
-#: src/fr-window.c:2934
+#: src/fr-window.c:2960
 msgid "An error occurred while loading the archive."
 msgstr "సంగ్రహములను దిగుమతి చేసుకుంటున్నప్పుడు  ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2938
+#: src/fr-window.c:2964
 msgid "An error occurred while deleting files from the archive."
 msgstr "ఈ సంగ్రహమునుండి దస్త్రములను తొలగించునపుడు  ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2944
+#: src/fr-window.c:2970
 msgid "An error occurred while adding files to the archive."
 msgstr "దస్త్రములను  ఈ సంగ్రహమునకు చేర్చుచున్నప్పుడు ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2948
+#: src/fr-window.c:2974
 msgid "An error occurred while testing archive."
 msgstr "సంగ్రహమును  పరీక్షిస్తున్నప్పుడు ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2952
+#: src/fr-window.c:2978
 msgid "An error occurred while saving the archive."
 msgstr "ఆర్చివ్‌ను భద్రపరుచుచున్నప్పుడు ఒక దోషం సంభవించినది."
 
-#: src/fr-window.c:2956
+#: src/fr-window.c:2982
 msgid "An error occurred."
 msgstr "దోషము సంభవించింది."
 
-#: src/fr-window.c:2962
+#: src/fr-window.c:2988
 msgid "Command not found."
 msgstr "ఆదేశం కనబడలేదు."
 
-#: src/fr-window.c:3162
+#: src/fr-window.c:3188
 msgid "Test Result"
 msgstr "ఫలితమును పరీక్షించు"
 
-#: src/fr-window.c:3995 src/fr-window.c:7999 src/fr-window.c:8034
-#: src/fr-window.c:8275
+#: src/fr-window.c:4021 src/fr-window.c:8028 src/fr-window.c:8063
+#: src/fr-window.c:8304
 msgid "Could not perform the operation"
 msgstr "ఈ కార్యం నిర్వహించబడదు"
 
-#: src/fr-window.c:4021
+#: src/fr-window.c:4047
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
@@ -1178,114 +1192,103 @@ msgstr ""
 "నీవు ఈ దస్త్రమును ప్రస్తుత సంగ్రహమునకు చేర్చాలనుకుంటున్నావా లేక  ఒక క్రొత్త "
 "సంగ్రహము వలెనా?"
 
-#: src/fr-window.c:4051
+#: src/fr-window.c:4077
 msgid "Do you want to create a new archive with these files?"
 msgstr "నీవు ఈ దస్త్రములతో ఒక క్రొత్త సంగ్రహమును సృష్టించాలనుకుంటున్నావా?"
 
-#: src/fr-window.c:4054
+#: src/fr-window.c:4080
 msgid "Create _Archive"
 msgstr "సంగ్రహమును సృష్టించు(_A)"
 
-#: src/fr-window.c:4633 src/fr-window.c:5641
+#: src/fr-window.c:4660 src/fr-window.c:5615
 msgid "Folders"
 msgstr "సంచయములు"
 
-#: src/fr-window.c:4670
+#: src/fr-window.c:4697
 msgctxt "File"
 msgid "Size"
 msgstr "పరిమాణం"
 
-#: src/fr-window.c:4671
+#: src/fr-window.c:4698
 msgctxt "File"
 msgid "Type"
 msgstr "రకము"
 
-#: src/fr-window.c:4672
+#: src/fr-window.c:4699
 msgctxt "File"
 msgid "Date Modified"
 msgstr "తేది మార్చబడినది"
 
-#: src/fr-window.c:4673
+#: src/fr-window.c:4700
 msgctxt "File"
 msgid "Location"
 msgstr "స్థానం"
 
-#: src/fr-window.c:4682
+#: src/fr-window.c:4709
 msgctxt "File"
 msgid "Name"
 msgstr "నామము"
 
-#: src/fr-window.c:5560
+#: src/fr-window.c:5534
 msgid "Find:"
 msgstr "కనుగొనుము:"
 
-#: src/fr-window.c:5651
+#: src/fr-window.c:5625
 msgid "Close the folders pane"
 msgstr "సంచయముల ఫలకంను మూయుము"
 
-#. Translators: this is the label for the "open recent file" sub-menu.
-#: src/fr-window.c:5682
-msgid "Open _Recent"
-msgstr "ఇటీవలివాటిని తెరువుము(_R)"
-
-#: src/fr-window.c:5683 src/fr-window.c:5695
-msgid "Open a recently used archive"
-msgstr "ఇంతకుముందు వినియోగించిన సంగ్రహమును తెరువు"
-
 #. Translators: after the colon there is a folder name.
-#: src/fr-window.c:5771 src/ui/batch-add-files.ui:209
+#: src/fr-window.c:5730 src/ui/batch-add-files.ui:209
 msgid "_Location:"
 msgstr "స్థానము(_L):"
 
-#: src/fr-window.c:6110
+#: src/fr-window.c:6069
 #, c-format
 msgid "Could not save the archive \"%s\""
 msgstr "ఈ సంగ్రహము దాచబడదు \"%s\""
 
-#: src/fr-window.c:6588
+#: src/fr-window.c:6609
 #, c-format
 msgid "Replace file \"%s\"?"
 msgstr ""
 
-#: src/fr-window.c:6591
+#: src/fr-window.c:6612
 #, c-format
 msgid "Another file with the same name already exists in \"%s\"."
 msgstr ""
 
-#: src/fr-window.c:6598
+#: src/fr-window.c:6619
 msgid "Replace _All"
 msgstr "అన్నిటినీ పునఃస్ధాపించు(_A)"
 
-#: src/fr-window.c:6599
+#: src/fr-window.c:6620
 msgid "_Skip"
 msgstr "వదిలవేయుము (_S)"
 
-#: src/fr-window.c:6600
+#: src/fr-window.c:6621
 msgid "_Replace"
 msgstr "పునఃస్థాపించు(_R)"
 
-#. Translators: the name references to a filename.  This message can appear
-#. when renaming a file.
-#: src/fr-window.c:7417
-msgid "New name is void, please type a name."
+#: src/fr-window.c:6710
+msgid "Insufficient remaining disk space"
 msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
-#: src/fr-window.c:7422
-msgid "New name is the same as old one, please type other name."
+#: src/fr-window.c:7446
+msgid "New name is void, please type a name."
 msgstr ""
 
 #. Translators: the %s references to a filename.  This message can appear when
 #. renaming a file.
-#: src/fr-window.c:7427
+#: src/fr-window.c:7456
 #, c-format
 msgid ""
 "Name \"%s\" is not valid because it contains at least one of the following "
 "characters: %s, please type other name."
 msgstr ""
 
-#: src/fr-window.c:7462
+#: src/fr-window.c:7491
 #, c-format
 msgid ""
 "A folder named \"%s\" already exists.\n"
@@ -1296,7 +1299,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/fr-window.c:7464
+#: src/fr-window.c:7493
 #, c-format
 msgid ""
 "A file named \"%s\" already exists.\n"
@@ -1307,47 +1310,49 @@ msgstr ""
 "\n"
 "%s"
 
-#: src/fr-window.c:7533
+#: src/fr-window.c:7562
 msgid "Rename"
 msgstr "పునర్నామకరణ"
 
-#: src/fr-window.c:7534
+#: src/fr-window.c:7563
 msgid "_New folder name:"
 msgstr ""
 
-#: src/fr-window.c:7534
+#: src/fr-window.c:7563
 msgid "_New file name:"
 msgstr ""
 
-#: src/fr-window.c:7538
+#: src/fr-window.c:7567
 msgid "_Rename"
 msgstr "పునర్నామకరణ(_R)"
 
-#: src/fr-window.c:7555 src/fr-window.c:7574
+#: src/fr-window.c:7584 src/fr-window.c:7603
 msgid "Could not rename the folder"
 msgstr "ఈ సంచయము పునర్నామకరణము చేయబడదు"
 
-#: src/fr-window.c:7555 src/fr-window.c:7574
+#: src/fr-window.c:7584 src/fr-window.c:7603
 msgid "Could not rename the file"
 msgstr "ఈ దస్త్రము పునర్నామకరణము చేయబడదు"
 
-#: src/fr-window.c:7962
+#: src/fr-window.c:7991
 msgid "Paste Selection"
 msgstr "ఎంపికను అతికించు"
 
-#: src/fr-window.c:7963
+#: src/fr-window.c:7992
 msgid "_Destination folder:"
 msgstr ""
 
-#: src/fr-window.c:7967 src/ui.h:73 src/ui.h:94
+#: src/fr-window.c:7996 src/ui/menus-toolbars.ui:349
+#: src/ui/menus-toolbars.ui:799 src/ui/menus-toolbars.ui:874
+#: src/ui/menus-toolbars.ui:949
 msgid "_Paste"
 msgstr "అతికించు (_P)"
 
-#: src/fr-window.c:8535
+#: src/fr-window.c:8570
 msgid "Add files to an archive"
 msgstr "దస్త్రములను ఒక సంగ్రహమునకు చేర్చు"
 
-#: src/fr-window.c:8578 src/main.c:195 src/server.c:324 src/server.c:349
+#: src/fr-window.c:8615 src/main.c:195 src/server.c:324 src/server.c:349
 #: src/server.c:372
 msgid "Extract archive"
 msgstr "సంగ్రహమును పొందు"
@@ -1426,20 +1431,15 @@ msgstr ""
 msgid "_Remove"
 msgstr "తీసివేయి (_R)"
 
-#: src/ui/app-menu.ui:6 src/ui/batch-add-files.ui:81
-#: src/ui/dlg-add-files.ui:41 src/ui/dlg-add-folder.ui:42
-#: src/ui/dlg-extract.ui:41 src/ui.h:32 src/ui/new.ui:273
-#: src/ui/properties.ui:34
-msgid "_Help"
-msgstr "సహాయం (_H)"
-
-#: src/ui/app-menu.ui:10
-msgid "_About Archive Manager"
-msgstr ""
-
-#: src/ui/batch-add-files.ui:62 src/ui/new.ui:256
+#: src/ui/batch-add-files.ui:62 src/ui/new.ui:255
 msgid "C_reate"
 msgstr "సృష్టించు(_r)"
+
+#: src/ui/batch-add-files.ui:81 src/ui/dlg-add-files.ui:41
+#: src/ui/dlg-add-folder.ui:42 src/ui/dlg-extract.ui:41
+#: src/ui/menus-toolbars.ui:593 src/ui/new.ui:272 src/ui/properties.ui:34
+msgid "_Help"
+msgstr "సహాయం (_H)"
 
 #: src/ui/batch-add-files.ui:142
 msgid "_Filename:"
@@ -1485,7 +1485,9 @@ msgstr "<span weight=\"bold\" size=\"larger\">సంకేతపదం అవస
 msgid "Delete"
 msgstr "తొలగించు"
 
-#: src/ui/delete.ui:52 src/ui.h:81 src/ui.h:102
+#: src/ui/delete.ui:52 src/ui/menus-toolbars.ui:372
+#: src/ui/menus-toolbars.ui:816 src/ui/menus-toolbars.ui:891
+#: src/ui/menus-toolbars.ui:966
 msgid "_Delete"
 msgstr "తొలగించుము(_D)"
 
@@ -1554,7 +1556,8 @@ msgstr "ఇచ్ఛాపూర్వకాలను దాచు(_v)"
 msgid "_Reset Options"
 msgstr "ఇచ్ఛాపూర్వకాలను తిరిగివుంచు (_R)"
 
-#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211 src/ui.h:119
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211
+#: src/ui/menus-toolbars.ui:658
 msgid "Extract"
 msgstr "పొందు"
 
@@ -1574,316 +1577,284 @@ msgstr "ఉన్న దస్త్రములను చెరిపిరా�
 msgid "Do not e_xtract older files"
 msgstr "ప్రాత దస్త్రములను పొందవద్దు(_x)"
 
-#: src/ui/dlg-extract.ui:299
+#: src/ui/dlg-extract.ui:293
+msgid "close dialog after decompression"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:309
+msgid "Extract to s_ubdirectory"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:331
 msgid "Actions"
 msgstr "క్రియలు"
 
-#: src/ui.h:29
+#: src/ui/menus-toolbars.ui:198
 msgid "_Archive"
 msgstr ""
 
-#: src/ui.h:30
-msgid "_Edit"
-msgstr "సరికూర్చు (_E)"
-
-#: src/ui.h:31
-msgid "_View"
-msgstr "చూడటం (_V)"
-
-#: src/ui.h:33
-msgid "_Arrange Files"
-msgstr "దస్త్రములను క్రమపఱచు(_A)"
-
-#: src/ui.h:36
-msgid "_About"
-msgstr "గురించి (_A)"
-
-#: src/ui.h:37
-msgid "Information about the program"
-msgstr " కార్యక్రమము గురించి సమాచారం"
-
-#: src/ui.h:40
-msgid "_Add Files…"
-msgstr ""
-
-#: src/ui.h:41 src/ui.h:45
-msgid "Add files to the archive"
-msgstr "దస్త్రములను  సంగ్రహమునకు చేర్చు"
-
-#: src/ui.h:44
-msgid "Add Files"
-msgstr "దస్త్రములను చేర్చు"
-
-#: src/ui.h:48
-msgid "Add a _Folder…"
-msgstr ""
-
-#: src/ui.h:49 src/ui.h:53
-msgid "Add a folder to the archive"
-msgstr "సంచయమును సంగ్రహమునకు చేర్చు"
-
-#: src/ui.h:52
-msgid "Add Folder"
-msgstr "సంచయమును జతచేయుము"
-
-#: src/ui.h:57
-msgid "Close the current archive"
-msgstr " ఈ ప్రస్తుత సంగ్రహమును మూయి"
-
-#: src/ui.h:60
-msgid "Contents"
-msgstr "సాములు"
-
-#: src/ui.h:61
-msgid "Display the Engrampa Manual"
-msgstr "ఈ ఫైల్ రోలర్ నిర్దేశికను ప్రదర్శించు"
-
-#: src/ui.h:65 src/ui.h:86
-msgid "_Copy"
-msgstr "నకలుతీయు(_C)"
-
-#: src/ui.h:66 src/ui.h:87
-msgid "Copy the selection"
-msgstr "ఎంపికను నకలు చేయి"
-
-#: src/ui.h:69 src/ui.h:90
-msgid "Cu_t"
-msgstr "కోయు (_t)"
-
-#: src/ui.h:70 src/ui.h:91
-msgid "Cut the selection"
-msgstr "ఈ ఎంపికను కోయు"
-
-#: src/ui.h:74 src/ui.h:95
-msgid "Paste the clipboard"
-msgstr "ఈ క్లిప్ బోర్డును అతికించు"
-
-#: src/ui.h:77 src/ui.h:98
-msgid "_Rename…"
-msgstr ""
-
-#: src/ui.h:78 src/ui.h:99
-msgid "Rename the selection"
-msgstr "ఎంపికకు పునర్నామకరణ చేయి"
-
-#: src/ui.h:82 src/ui.h:103
-msgid "Delete the selection from the archive"
-msgstr "ఎంపికను  ఈ సంగ్రహమునుండి తొలగించు"
-
-#: src/ui.h:107
-msgid "Dese_lect All"
-msgstr "సమస్తమును ఎంపికనుండి తొలగించు(_l)"
-
-#: src/ui.h:108
-msgid "Deselect all files"
-msgstr "సమస్త దస్త్రములను ఎంపికనుండి తొలగించు"
-
-#: src/ui.h:111 src/ui.h:115
-msgid "_Extract…"
-msgstr ""
-
-#: src/ui.h:112 src/ui.h:116 src/ui.h:120
-msgid "Extract files from the archive"
-msgstr "ఈ సంగ్రహమునుండి దస్త్రములను పొందుము"
-
-#: src/ui.h:123
-msgid "Find…"
-msgstr ""
-
-#: src/ui.h:128
-msgid "_Last Output"
-msgstr "వెనుక దిగుబడి(_L)"
-
-#: src/ui.h:129
-msgid "View the output produced by the last executed command"
-msgstr "వెనుక నిర్వర్తించిన ఆదేశమునకు ఉత్పత్తియైన దిగుబడిని దర్శించు"
-
-#: src/ui.h:132
+#: src/ui/menus-toolbars.ui:205
 msgid "New…"
 msgstr ""
 
-#: src/ui.h:133
+#: src/ui/menus-toolbars.ui:206
 msgid "Create a new archive"
 msgstr "ఒక క్రొత్త సంగ్రహమును సృష్ఠించు"
 
-#: src/ui.h:136
+#: src/ui/menus-toolbars.ui:217
 msgid "Open…"
 msgstr ""
 
-#: src/ui.h:137 src/ui.h:141
+#: src/ui/menus-toolbars.ui:218
 msgid "Open archive"
 msgstr "సంగ్రహమును తెరువు"
 
-#: src/ui.h:140 src/ui.h:176 src/ui.h:180 src/ui.h:184 src/ui.h:188
-msgid "_Open"
-msgstr "తెరచు(_O)"
+#: src/ui/menus-toolbars.ui:229
+msgid "Open _Recent"
+msgstr "ఇటీవలివాటిని తెరువుము(_R)"
 
-#: src/ui.h:144
-msgid "_Open With…"
-msgstr ""
+#: src/ui/menus-toolbars.ui:230 src/ui/menus-toolbars.ui:646
+msgid "Open a recently used archive"
+msgstr "ఇంతకుముందు వినియోగించిన సంగ్రహమును తెరువు"
 
-#: src/ui.h:145
-msgid "Open selected files with an application"
-msgstr "ఎంపికైన దస్త్రములను ఒక కార్యక్షేత్రముతో తెరువు"
-
-#: src/ui.h:148
-msgid "Pass_word…"
-msgstr ""
-
-#: src/ui.h:149
-msgid "Specify a password for this archive"
-msgstr " ఈ సంగ్రహమునకు  ఒక రహస్యపదమును నిర్దేశించుము "
-
-#: src/ui.h:152
-msgid "_Properties"
-msgstr "లక్షణాలు(_P)"
-
-#: src/ui.h:153
-msgid "Show archive properties"
-msgstr "సంగ్రహ లక్షణాలను కనబర్చు"
-
-#: src/ui.h:156
-msgid "_Refresh"
-msgstr "తాజాపర్చు (_R)"
-
-#: src/ui.h:157
-msgid "Reload current archive"
-msgstr "ప్రస్తుత సంగ్రహమును పునఃదిగుబడి చేయి"
-
-#: src/ui.h:160
+#: src/ui/menus-toolbars.ui:240
 msgid "Save As…"
 msgstr "ఇలా దాచును"
 
-#: src/ui.h:161
+#: src/ui/menus-toolbars.ui:241
 msgid "Save the current archive with a different name"
 msgstr "ఈ  ప్రస్తుత సంగ్రహమును భిన్నమైన నామముతో దాచు"
 
-#: src/ui.h:164
-msgid "Select _All"
-msgstr "అన్నింటిని ఎంపికచేయు (_A)"
+#: src/ui/menus-toolbars.ui:257 src/ui/menus-toolbars.ui:767
+#: src/ui/menus-toolbars.ui:842 src/ui/menus-toolbars.ui:917
+msgid "_Extract…"
+msgstr ""
 
-#: src/ui.h:165
-msgid "Select all files"
-msgstr "సమస్త  దస్త్రములను ఎంపిక చేయి"
+#: src/ui/menus-toolbars.ui:258 src/ui/menus-toolbars.ui:660
+#: src/ui/menus-toolbars.ui:768
+msgid "Extract files from the archive"
+msgstr "ఈ సంగ్రహమునుండి దస్త్రములను పొందుము"
 
-#: src/ui.h:168
-msgid "_Stop"
-msgstr "నిలిపి వేయు(_S)"
-
-#: src/ui.h:169
-msgid "Stop current operation"
-msgstr "ప్రస్తుతకార్యమును నిలిపి వేయి"
-
-#: src/ui.h:172
+#: src/ui/menus-toolbars.ui:269
 msgid "_Test Integrity"
 msgstr "పరీక్ష గొప్పతనము(_T)"
 
-#: src/ui.h:173
+#: src/ui/menus-toolbars.ui:270
 msgid "Test whether the archive contains errors"
 msgstr " ఈ సంగ్రహము దోషములను కలిగియున్నదేమో పరీక్షించు"
 
-#: src/ui.h:177 src/ui.h:181
-msgid "Open the selected file"
-msgstr "ఎంపికచేసిన దస్త్రమును తెరువుము"
+#: src/ui/menus-toolbars.ui:285
+msgid "_Properties"
+msgstr "లక్షణాలు(_P)"
 
-#: src/ui.h:185 src/ui.h:189
-msgid "Open the selected folder"
-msgstr "ఎంపికచేసిన సంచయంమును తెరువుము"
+#: src/ui/menus-toolbars.ui:286
+msgid "Show archive properties"
+msgstr "సంగ్రహ లక్షణాలను కనబర్చు"
 
-#: src/ui.h:194
-msgid "Go to the previous visited location"
-msgstr "పూర్వము చూచిన స్ధానముకు వెళ్ళు"
+#: src/ui/menus-toolbars.ui:303
+msgid "Close the current archive"
+msgstr " ఈ ప్రస్తుత సంగ్రహమును మూయి"
 
-#: src/ui.h:198
-msgid "Go to the next visited location"
-msgstr "తర్వాత చూచు స్ధానముకు వెళ్ళు"
+#: src/ui/menus-toolbars.ui:318
+msgid "_Edit"
+msgstr "సరికూర్చు (_E)"
 
-#: src/ui.h:202
-msgid "Go up one level"
-msgstr "ఒక స్ధాయి పైకి వెళ్ళు"
+#: src/ui/menus-toolbars.ui:325 src/ui/menus-toolbars.ui:790
+#: src/ui/menus-toolbars.ui:865 src/ui/menus-toolbars.ui:940
+msgid "_Copy"
+msgstr "నకలుతీయు(_C)"
 
-#. Translators: the home location is the home folder.
-#: src/ui.h:207
-msgid "Go to the home location"
-msgstr "నివాస స్ధానమునకు వెళ్ళు"
+#: src/ui/menus-toolbars.ui:326 src/ui/menus-toolbars.ui:791
+#: src/ui/menus-toolbars.ui:866 src/ui/menus-toolbars.ui:941
+msgid "Copy the selection"
+msgstr "ఎంపికను నకలు చేయి"
 
-#: src/ui.h:214
+#: src/ui/menus-toolbars.ui:337 src/ui/menus-toolbars.ui:781
+#: src/ui/menus-toolbars.ui:856 src/ui/menus-toolbars.ui:931
+msgid "Cu_t"
+msgstr "కోయు (_t)"
+
+#: src/ui/menus-toolbars.ui:338 src/ui/menus-toolbars.ui:782
+#: src/ui/menus-toolbars.ui:857 src/ui/menus-toolbars.ui:932
+msgid "Cut the selection"
+msgstr "ఈ ఎంపికను కోయు"
+
+#: src/ui/menus-toolbars.ui:350 src/ui/menus-toolbars.ui:800
+#: src/ui/menus-toolbars.ui:875 src/ui/menus-toolbars.ui:950
+msgid "Paste the clipboard"
+msgstr "ఈ క్లిప్ బోర్డును అతికించు"
+
+#: src/ui/menus-toolbars.ui:361 src/ui/menus-toolbars.ui:808
+#: src/ui/menus-toolbars.ui:883 src/ui/menus-toolbars.ui:958
+msgid "_Rename…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:362 src/ui/menus-toolbars.ui:809
+#: src/ui/menus-toolbars.ui:884 src/ui/menus-toolbars.ui:959
+msgid "Rename the selection"
+msgstr "ఎంపికకు పునర్నామకరణ చేయి"
+
+#: src/ui/menus-toolbars.ui:373 src/ui/menus-toolbars.ui:817
+#: src/ui/menus-toolbars.ui:892 src/ui/menus-toolbars.ui:967
+msgid "Delete the selection from the archive"
+msgstr "ఎంపికను  ఈ సంగ్రహమునుండి తొలగించు"
+
+#: src/ui/menus-toolbars.ui:389
+msgid "Select _All"
+msgstr "అన్నింటిని ఎంపికచేయు (_A)"
+
+#: src/ui/menus-toolbars.ui:390
+msgid "Select all files"
+msgstr "సమస్త  దస్త్రములను ఎంపిక చేయి"
+
+#: src/ui/menus-toolbars.ui:401
+msgid "Dese_lect All"
+msgstr "సమస్తమును ఎంపికనుండి తొలగించు(_l)"
+
+#: src/ui/menus-toolbars.ui:402
+msgid "Deselect all files"
+msgstr "సమస్త దస్త్రములను ఎంపికనుండి తొలగించు"
+
+#: src/ui/menus-toolbars.ui:417
+msgid "Find…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:431
+msgid "_Add Files…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:432 src/ui/menus-toolbars.ui:673
+msgid "Add files to the archive"
+msgstr "దస్త్రములను  సంగ్రహమునకు చేర్చు"
+
+#: src/ui/menus-toolbars.ui:443
+msgid "Add a _Folder…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:444 src/ui/menus-toolbars.ui:681
+msgid "Add a folder to the archive"
+msgstr "సంచయమును సంగ్రహమునకు చేర్చు"
+
+#: src/ui/menus-toolbars.ui:460
+msgid "Pass_word…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:461
+msgid "Specify a password for this archive"
+msgstr " ఈ సంగ్రహమునకు  ఒక రహస్యపదమును నిర్దేశించుము "
+
+#: src/ui/menus-toolbars.ui:475
+msgid "_View"
+msgstr "చూడటం (_V)"
+
+#: src/ui/menus-toolbars.ui:482
 msgid "_Toolbar"
 msgstr "పనిముట్ల పట్టా(_T)"
 
-#: src/ui.h:215
+#: src/ui/menus-toolbars.ui:483
 msgid "View the main toolbar"
 msgstr " ఈ ప్రాముఖ్య పనిముట్ల పట్టాను దర్శించు"
 
-#: src/ui.h:219
+#: src/ui/menus-toolbars.ui:493
 msgid "Stat_usbar"
 msgstr "సుస్థితి  పట్టీ(_u)"
 
-#: src/ui.h:220
+#: src/ui/menus-toolbars.ui:494
 msgid "View the statusbar"
 msgstr "ఈ సుస్థితి  పట్టీని దర్శించు"
 
-#: src/ui.h:224
-msgid "_Reversed Order"
-msgstr "ప్రత్యస్థ క్రమం(_R)"
-
-#: src/ui.h:225
-msgid "Reverse the list order"
-msgstr "జాబితాక్రమమును ప్రత్యస్థము చేయి "
-
-#: src/ui.h:229
+#: src/ui/menus-toolbars.ui:504
 msgid "_Folders"
 msgstr "సంచయములు(_F)"
 
-#: src/ui.h:238
+#: src/ui/menus-toolbars.ui:521
 msgid "View All _Files"
 msgstr "సమస్త దస్త్రములను దర్శించు(_F)"
 
-#: src/ui.h:241
+#: src/ui/menus-toolbars.ui:531
 msgid "View as a F_older"
 msgstr "ఒక సంచయము వలె దర్శించు(_o)"
 
-#: src/ui.h:248
-msgid "by _Name"
-msgstr "నామముతో(_N)"
+#: src/ui/menus-toolbars.ui:548
+msgid "_Last Output"
+msgstr "వెనుక దిగుబడి(_L)"
 
-#: src/ui.h:249
-msgid "Sort file list by name"
-msgstr "దస్త్రముల జాబితాను నామముతో చక్కదిద్దు"
+#: src/ui/menus-toolbars.ui:549
+msgid "View the output produced by the last executed command"
+msgstr "వెనుక నిర్వర్తించిన ఆదేశమునకు ఉత్పత్తియైన దిగుబడిని దర్శించు"
 
-#: src/ui.h:251
-msgid "by _Size"
-msgstr "పరిమాణముతో(_S)"
+#: src/ui/menus-toolbars.ui:565
+msgid "_Stop"
+msgstr "నిలిపి వేయు(_S)"
 
-#: src/ui.h:252
-msgid "Sort file list by file size"
-msgstr "దస్త్రముల జాబితాను దస్త్రపరిమాణముతో చక్కదిద్దు"
+#: src/ui/menus-toolbars.ui:566 src/ui/menus-toolbars.ui:694
+msgid "Stop current operation"
+msgstr "ప్రస్తుతకార్యమును నిలిపి వేయి"
 
-#: src/ui.h:254
-msgid "by T_ype"
-msgstr "రకముతో(_y)"
+#: src/ui/menus-toolbars.ui:577
+msgid "_Refresh"
+msgstr "తాజాపర్చు (_R)"
 
-#: src/ui.h:255
-msgid "Sort file list by type"
-msgstr "దస్త్రముల జాబితాను రకముతో చక్కదిద్దు"
+#: src/ui/menus-toolbars.ui:578
+msgid "Reload current archive"
+msgstr "ప్రస్తుత సంగ్రహమును పునఃదిగుబడి చేయి"
 
-#: src/ui.h:257
-msgid "by _Date Modified"
+#: src/ui/menus-toolbars.ui:600
+msgid "Contents"
+msgstr "సాములు"
+
+#: src/ui/menus-toolbars.ui:601
+msgid "Dis_play the Engrampa Manual"
 msgstr ""
 
-#: src/ui.h:258
-msgid "Sort file list by modification time"
-msgstr "దస్త్రముల జాబితాను మార్చబడిన సమయంతో చక్కదిద్దు"
+#: src/ui/menus-toolbars.ui:612
+msgid "_About"
+msgstr "గురించి (_A)"
 
-#. Translators: this is the "sort by file location" menu item
-#: src/ui.h:261
-msgid "by _Location"
-msgstr "స్ధానంతో(_L)"
+#: src/ui/menus-toolbars.ui:613
+msgid "Information about the program"
+msgstr " కార్యక్రమము గురించి సమాచారం"
 
-#. Translators: location is the file location
-#: src/ui.h:263
-msgid "Sort file list by location"
-msgstr "దస్త్రముల జాబితాను స్ధానంతో చక్కదిద్దు"
+#: src/ui/menus-toolbars.ui:710
+msgid "Go to the previous visited location"
+msgstr "పూర్వము చూచిన స్ధానముకు వెళ్ళు"
+
+#: src/ui/menus-toolbars.ui:718
+msgid "Go to the next visited location"
+msgstr "తర్వాత చూచు స్ధానముకు వెళ్ళు"
+
+#: src/ui/menus-toolbars.ui:726
+msgid "Go up one level"
+msgstr "ఒక స్ధాయి పైకి వెళ్ళు"
+
+#: src/ui/menus-toolbars.ui:734
+msgid "Go to the home location"
+msgstr "నివాస స్ధానమునకు వెళ్ళు"
+
+#: src/ui/menus-toolbars.ui:745 src/ui/menus-toolbars.ui:828
+#: src/ui/menus-toolbars.ui:903
+msgid "_Open"
+msgstr "తెరచు(_O)"
+
+#: src/ui/menus-toolbars.ui:746
+msgid "Open the selected file"
+msgstr "ఎంపికచేసిన దస్త్రమును తెరువుము"
+
+#: src/ui/menus-toolbars.ui:754
+msgid "_Open With…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:755
+msgid "Open selected files with an application"
+msgstr "ఎంపికైన దస్త్రములను ఒక కార్యక్షేత్రముతో తెరువు"
+
+#: src/ui/menus-toolbars.ui:829 src/ui/menus-toolbars.ui:904
+msgid "Open the selected folder"
+msgstr "ఎంపికచేసిన సంచయంమును తెరువుము"
+
+#: src/ui/menus-toolbars.ui:843 src/ui/menus-toolbars.ui:918
+msgid "Extract folder from the archive"
+msgstr ""
 
 #: src/ui/password.ui:18
 msgid "Password"
