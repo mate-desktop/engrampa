@@ -1,3 +1,20 @@
+### engrampa 1.28.0
+
+  * update translations
+  * Use unar instead of cpio for CPIO archives
+  * Add correct jar mime type
+  * Fix double URI escaping
+  * Escapes a string for use in a URI. replace special "# and ?" characters in uri
+  * rar: Actually accept unrar-free as the executable name
+  * rar: Add support for unrar-free
+  * rar: Fix out of bounds read on malformed output
+  * rar: Simplify and merge duplicate code
+  * zip: Fix crashes on buggy zip output
+  * 7z: Fix accepting RAR archives when unar-open-zip=true
+  * correct translation string
+  * Fix Segfault on opening .deb files after recent Debian Unstable updates
+  * fix warning in Japanese translations
+
 ### engrampa 1.27.1
 
   * update translations
