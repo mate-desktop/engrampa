@@ -31,6 +31,21 @@ EXTRA_DIST = 			\
 	README			\
 	autogen.sh
 
+# Distribute the Meson build system files as well
+EXTRA_DIST += \
+	meson.build			\
+	meson_options.txt		\
+	postinstall.py			\
+	caja/meson.build		\
+	data/meson.build		\
+	data/icons/meson.build		\
+	help/LINGUAS			\
+	help/meson.build		\
+	po/meson.build			\
+	src/meson.build			\
+	src/sh/meson.build		\
+	subprojects/mate-submodules.wrap
+
 DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS = \
