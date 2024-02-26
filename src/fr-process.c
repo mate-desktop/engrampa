@@ -842,10 +842,9 @@ check_child (gpointer data)
 				process->error.type = FR_PROC_ERROR_NONE;
 			else if (WEXITSTATUS (status) == 255)
 				process->error.type = FR_PROC_ERROR_COMMAND_NOT_FOUND;
-			else {
+			else
 				process->error.type = FR_PROC_ERROR_COMMAND_ERROR;
-				process->error.status = WEXITSTATUS (status);
-			}
+			process->error.status = WEXITSTATUS (status);
 		}
 		else {
 			process->error.type = FR_PROC_ERROR_EXITED_ABNORMALLY;
