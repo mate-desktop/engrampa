@@ -4161,6 +4161,25 @@ file_list_drag_begin (GtkWidget          *widget,
 }
 
 static void
+grab_widget (GtkWidget *widget)
+{
+
+    GdkWindow *window;
+    GdkDisplay *display;
+    GdkSeat *seat;
+
+    g_return_if_fail (widget != NULL);
+    window = gtk_widget_get_window (widget);
+    display = gdk_window_get_display (window);
+
+    seat = gdk_display_get_default_seat (display);
+    gdk_seat_grab (seat, window,
+                   GDK_SEAT_CAPABILITY_ALL, TRUE,
+                   NULL, NULL, NULL, NULL);
+    gdk_seat_ungrab (seat);
+}
+
+static void
 file_list_drag_end (GtkWidget      *widget,
 		    GdkDragContext *context,
 		    gpointer        data)
@@ -4168,6 +4187,33 @@ file_list_drag_end (GtkWidget      *widget,
 	FrWindow *window = data;
 
 	debug (DEBUG_INFO, "::DragEnd -->\n");
+	GtkWidget *xgrab_shell;
+	GtkWidget *parent;
+
+	parent = gtk_widget_get_parent (widget);
+	xgrab_shell = NULL;
+	while (parent)
+	{
+		gboolean viewable = TRUE;
+		GtkWidget *tmp = parent;
+		while (tmp)
+		{
+			if (!gtk_widget_get_mapped (tmp))
+			{
+				viewable = FALSE;
+				break;
+			}
+			tmp = gtk_widget_get_parent (tmp);
+			}
+
+		if (viewable)
+			xgrab_shell = parent;
+		parent = gtk_widget_get_parent (parent);
+	}
+	if (xgrab_shell)
+	{
+		grab_widget (widget);
+	}
 
 	gdk_property_delete (gdk_drag_context_get_source_window (context), XDS_ATOM);
 
