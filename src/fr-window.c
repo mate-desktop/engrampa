@@ -5047,8 +5047,7 @@ fr_window_fake_load (FrArchive *archive,
 			add_after_opening = TRUE;
 			break;
 		}
-		if ((action->type == FR_BATCH_ACTION_EXTRACT)
-		    || (action->type == FR_BATCH_ACTION_EXTRACT_HERE)
+		if ((action->type == FR_BATCH_ACTION_EXTRACT_HERE)
 		    || (action->type == FR_BATCH_ACTION_EXTRACT_INTERACT))
 		{
 			extract_after_opening = TRUE;
@@ -6465,7 +6464,7 @@ fr_window_archive_extract_here (FrWindow   *window,
 				  TRUE,
 				  FALSE);
 	fr_window_set_current_batch_action (window,
-					    FR_BATCH_ACTION_EXTRACT,
+					    FR_BATCH_ACTION_EXTRACT_INTERACT,
 					    edata,
 					    (GFreeFunc) extract_data_free);
 
@@ -6696,7 +6695,7 @@ fr_window_archive_extract (FrWindow    *window,
 				  ask_to_open_destination);
 
 	fr_window_set_current_batch_action (window,
-					    FR_BATCH_ACTION_EXTRACT,
+					    FR_BATCH_ACTION_EXTRACT_INTERACT,
 					    edata,
 					    (GFreeFunc) extract_data_free);
 
@@ -8571,21 +8570,6 @@ fr_window_exec_batch_action (FrWindow      *window,
 		dlg_batch_add_files (window, (GList*) action->data);
 		break;
 
-	case FR_BATCH_ACTION_EXTRACT:
-		debug (DEBUG_INFO, "[BATCH] EXTRACT\n");
-
-		edata = action->data;
-		fr_window_archive_extract (window,
-					   edata->file_list,
-					   edata->extract_to_dir,
-					   edata->sub_dir,
-					   edata->base_dir,
-					   edata->skip_older,
-					   edata->overwrite,
-					   edata->junk_paths,
-					   TRUE);
-		break;
-
 	case FR_BATCH_ACTION_EXTRACT_HERE:
 		debug (DEBUG_INFO, "[BATCH] EXTRACT HERE\n");
 
@@ -8862,7 +8846,7 @@ fr_window_set_batch__extract (FrWindow   *window,
 				       (GFreeFunc) g_free);
 	if (dest_dir != NULL)
 		fr_window_append_batch_action (window,
-					       FR_BATCH_ACTION_EXTRACT,
+					       FR_BATCH_ACTION_EXTRACT_INTERACT,
 					       extract_to_data_new (dest_dir),
 					       (GFreeFunc) extract_data_free);
 	else
