@@ -1,6 +1,6 @@
 project('engrampa', 'c',
   license : 'GPL2+',
-  version : '1.28.1',
+  version : '1.28.2',
   meson_version : '>=0.43'
 )
 
