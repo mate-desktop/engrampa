@@ -163,10 +163,12 @@ parse_name_field (char         *line,
 
 	fdata->encrypted = (line[0] == '*') ? TRUE : FALSE;
 
-	if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5)
+	if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5) {
+		const char *field = get_last_field (line, attribute_field_with_space (line) ? 9 : 8);
+
 		/* rar-5 output adds trailing spaces to short file names :( */
-		name_field = g_strchomp (g_strdup (get_last_field (line, attribute_field_with_space (line) ? 9 : 8)));
-	else
+		name_field = field ? g_strchomp (g_strdup (field)) : NULL;
+	} else
 		name_field = g_strdup (line + 1);
 
 	if (name_field == NULL)
@@ -246,7 +248,7 @@ process_line (char     *line,
 	if (rar_comm->rar4_odd_line || rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5)
 		parse_name_field (line, rar_comm);
 
-	if (! rar_comm->rar4_odd_line) {
+	if (! rar_comm->rar4_odd_line && rar_comm->fdata && rar_comm->fdata->full_path) {
 		FileData   *fdata;
 		const char *size_field, *ratio_field, *date_field, *time_field, *attr_field;
 		int n_fields;
