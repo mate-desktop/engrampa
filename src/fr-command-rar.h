@@ -40,9 +40,11 @@ typedef struct _FrCommandRarClass  FrCommandRarClass;
 
 typedef enum
 {
-	FR_COMMAND_RAR_TYPE_RAR4 = 0,
-	FR_COMMAND_RAR_TYPE_RAR5,
-	FR_COMMAND_RAR_TYPE_UNRAR_FREE,
+	FR_COMMAND_RAR_TYPE_RAR4 = 1<<0,
+	FR_COMMAND_RAR_TYPE_RAR5 = 1<<1,
+	FR_COMMAND_RAR_TYPE_UNRAR_FREE = 1<<2,
+	/* RAR5 + empty CRC for directories */
+	FR_COMMAND_RAR_TYPE_RAR7 = (1<<3) | FR_COMMAND_RAR_TYPE_RAR5,
 } FrCommandRarType;
 
 struct _FrCommandRar
