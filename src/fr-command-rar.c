@@ -39,6 +39,10 @@
 #include "fr-error.h"
 #include "rar-utils.h"
 
+
+#define IS_OUTPUT_TYPE(comm, type) ((comm)->output_type & (type))
+
+
 static void fr_command_rar_class_init  (FrCommandRarClass *class);
 static void fr_command_rar_init        (FrCommand         *afile);
 static void fr_command_rar_finalize    (GObject           *object);
@@ -150,6 +154,18 @@ attribute_field_with_space (const char *line)
 	return ((line[0] != ' ') && (line[1] == ' '));
 }
 
+static gboolean
+attr_field_is_dir (const char   *attr_field,
+                   FrCommandRar *rar_comm)
+{
+        if ((attr_field[0] == 'd') ||
+            (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5) && attr_field[3] == 'D') ||
+            (! IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5) && attr_field[1] == 'D'))
+                return TRUE;
+
+        return FALSE;
+}
+
 static void
 parse_name_field (char         *line,
 		  FrCommandRar *rar_comm)
@@ -163,9 +179,19 @@ parse_name_field (char         *line,
 
 	fdata->encrypted = (line[0] == '*') ? TRUE : FALSE;
 
-	if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5) {
-		const char *field = get_last_field (line, attribute_field_with_space (line) ? 9 : 8);
+	if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5)) {
+		int field_num = attribute_field_with_space (line) ? 9 : 8;
+		const char *field;
 
+		/* in RAR7 format, directories have a blank CRC32, not the
+		 * "????????" of the RAR5 format */
+		if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR7)) {
+			field = get_last_field (line, field_num - 8);
+			if (attr_field_is_dir (field, rar_comm))
+				field_num--;
+		}
+
+		field = get_last_field (line, field_num);
 		/* rar-5 output adds trailing spaces to short file names :( */
 		name_field = field ? g_strchomp (g_strdup (field)) : NULL;
 	} else
@@ -189,18 +215,6 @@ parse_name_field (char         *line,
 	g_free (name_field);
 }
 
-static gboolean
-attr_field_is_dir (const char   *attr_field,
-                   FrCommandRar *rar_comm)
-{
-        if ((attr_field[0] == 'd') ||
-            (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5 && attr_field[3] == 'D') ||
-            (rar_comm->output_type != FR_COMMAND_RAR_TYPE_RAR5 && attr_field[1] == 'D'))
-                return TRUE;
-
-        return FALSE;
-}
-
 static void
 process_line (char     *line,
 	      gpointer  data)
@@ -215,7 +229,12 @@ process_line (char     *line,
 		int version = 0;
 
 		if (sscanf (line, "RAR %d.", &version) == 1 || sscanf (line, "UNRAR %d.", &version) == 1) {
-			rar_comm->output_type = (version >= 5) ? FR_COMMAND_RAR_TYPE_RAR5 : FR_COMMAND_RAR_TYPE_RAR4;
+			if (version >= 7)
+				rar_comm->output_type = FR_COMMAND_RAR_TYPE_RAR7;
+			else if (version >= 5)
+				rar_comm->output_type = FR_COMMAND_RAR_TYPE_RAR5;
+			else
+				rar_comm->output_type = FR_COMMAND_RAR_TYPE_RAR4;
 
 			if (version > 5)
 				date_newstyle = TRUE;
@@ -232,7 +251,7 @@ process_line (char     *line,
 		}
 		else if (strncmp (line, "--------", 8) == 0) {
 			rar_comm->list_started = TRUE;
-			if (rar_comm->output_type != FR_COMMAND_RAR_TYPE_RAR5)
+			if (! IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5))
 			    rar_comm->rar4_odd_line = TRUE;
 		}
 		else if (strncmp (line, "Volume ", 7) == 0)
@@ -245,7 +264,7 @@ process_line (char     *line,
 		return;
 	}
 
-	if (rar_comm->rar4_odd_line || rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5)
+	if (rar_comm->rar4_odd_line || IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5))
 		parse_name_field (line, rar_comm);
 
 	if (! rar_comm->rar4_odd_line && rar_comm->fdata && rar_comm->fdata->full_path) {
@@ -253,9 +272,9 @@ process_line (char     *line,
 		const char *size_field, *ratio_field, *date_field, *time_field, *attr_field;
 		int n_fields;
 
-		if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5)
+		if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5))
 			n_fields = 6 + (attribute_field_with_space (line) != 0);
-		else if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_UNRAR_FREE)
+		else if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_UNRAR_FREE))
 			n_fields = 4;
 		else
 			n_fields = 6;
@@ -274,7 +293,7 @@ process_line (char     *line,
 			parse_name_field (line, rar_comm);
 		}
 		else {
-			if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_RAR5) {
+			if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5)) {
 				int offset = attribute_field_with_space (line) ? 1 : 0;
 
 				size_field = fields[1+offset];
@@ -283,7 +302,7 @@ process_line (char     *line,
 				time_field = fields[5+offset];
 				attr_field = fields[0+offset];
 			}
-			else if (rar_comm->output_type == FR_COMMAND_RAR_TYPE_UNRAR_FREE) {
+			else if (IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_UNRAR_FREE)) {
 				size_field = fields[0];
 				date_field = fields[1];
 				time_field = fields[2];
@@ -338,7 +357,7 @@ process_line (char     *line,
 		}
 	}
 
-	if (rar_comm->output_type != FR_COMMAND_RAR_TYPE_RAR5)
+	if (! IS_OUTPUT_TYPE (rar_comm, FR_COMMAND_RAR_TYPE_RAR5))
 		rar_comm->rar4_odd_line = ! rar_comm->rar4_odd_line;
 }
 
