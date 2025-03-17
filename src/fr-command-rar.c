@@ -697,7 +697,12 @@ fr_command_rar_handle_error (FrCommand   *comm,
 			volume_filename = g_path_get_basename (line + strlen ("Cannot find volume "));
 			error->gerror = g_error_new (FR_ERROR, error->status, _("Could not find the volume: %s"), volume_filename);
 			g_free (volume_filename);
-			break;
+
+			/* RAR7 complains about missing volume for incorrect passwords
+			 * as well, so don't make this a definite error in case we also
+			 * had an incorrect password one earlier */
+			if (! IS_OUTPUT_TYPE (FR_COMMAND_RAR (comm), FR_COMMAND_RAR_TYPE_RAR7))
+				break;
 		}
 	}
 }
