@@ -146,10 +146,6 @@ jobs:
             cppcheck ${DEB_LIBRARY_DEPS}
 
       # - define relevant configuration I can think of
-      #   - X11-related stuff
-      #   - Wayland-related stuff
-      #   - in-process for Wayland
-      #   - optional features
       #   - _Noreturn: this is to avoid false positive with functions that
       #     don't return, like g_assert(false).  Here, we rely on G_NORETURN
       #     (GLib 2.68+) using _Noreturn C11 attribute if __STDC_VERSION__ is
