@@ -151,6 +151,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".otp", "application/vnd.oasis.opendocument.presentation-template" },
 	{ ".ots", "application/vnd.oasis.opendocument.spreadsheet-template" },
 	{ ".ott", "application/vnd.oasis.opendocument.text-template" },
+	{ ".pkg", "application/x-xz-compressed-tar" },
 	{ ".rar", "application/x-rar" },
 	{ ".rpm", "application/x-rpm" },
 	{ ".rz", "application/x-rzip" },
