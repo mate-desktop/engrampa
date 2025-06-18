@@ -96,8 +96,8 @@ static char **
 split_line_lha (char *line)
 {
 	char       **fields;
-	int          n_fields = 7;
-	const char  *scan;
+	int          n_fields = 8;
+	const char  *scan, *field_end;
 	int          i;
 
 	fields = g_new0 (char *, n_fields + 1);
@@ -105,66 +105,48 @@ split_line_lha (char *line)
 
 	i = 0;
 
-	if (strncmp (line, "[MS-DOS]", 8) == 0) {
-		fields[i++] = g_strdup ("");
-		fields[i++] = g_strdup ("");
-		line += strlen ("[MS-DOS]");
-	}
-	else if (strncmp (line, "[generic]", 9) == 0) {
-		fields[i++] = g_strdup ("");
-		fields[i++] = g_strdup ("");
-		line += strlen ("[generic]");
-	}
-	else if (strncmp (line, "[unknown]", 9) == 0) {
-		fields[i++] = g_strdup ("");
-		fields[i++] = g_strdup ("");
-		line += strlen ("[unknown]");
-	}
-	else if (strncmp (line, "[Amiga]", 7) == 0) {
-		fields[i++] = g_strdup ("");
-		fields[i++] = g_strdup ("");
-		line += strlen ("[Amiga]");
-	}
-
+	/* First column either contains Unix permissions or OS type, depending
+	 * on what generated the archive. The OS type is enclosed in [brackets]
+	 * and may include a space. */
 	scan = eat_spaces (line);
-	for (; i < n_fields; i++) {
-		const char *field_end;
+	if (scan[0] == '[') {
+		field_end = strchr (scan, ']');
+		if (field_end != NULL) {
+			++field_end;
+		}
+	} else {
+		field_end = NULL;
+	}
 
-		if (NULL != (field_end = strchr (scan, ' '))) {
-			fields[i] = g_strndup (scan, field_end - scan);
-			scan = eat_spaces (field_end);
+	if (field_end == NULL) {
+		field_end = strchr (scan, ' ');
+		if (field_end == NULL) {
+			field_end = scan + strlen(scan);
 		}
 	}
 
-	return fields;
-}
+	fields[i++] = g_strndup (scan, field_end - scan);
+	scan = field_end;
 
-static const char *
-get_last_field_lha (char *line)
-{
-	int         i;
-	const char *field;
-	int         n = 7;
-
-	if (strncmp (line, "[MS-DOS]", 8) == 0)
-		n--;
-
-	if (strncmp (line, "[generic]", 9) == 0)
-		n--;
-
-	if (strncmp (line, "[unknown]", 9) == 0)
-		n--;
-
-	if (strncmp (line, "[Amiga]", 7) == 0)
-		n--;
-
-	field = eat_spaces (line);
-	for (i = 0; i < n; i++) {
-		field = strchr (field, ' ');
-		field = eat_spaces (field);
+	/* Second column contains Unix UID/GID, but if the archive was not
+	 * made on a Unix system it will be empty. Insert a dummy value so
+	 * we get a consistent result. */
+	if (g_str_has_prefix (scan, "           ")) {
+		fields[i++] = g_strdup("");
 	}
 
-	return field;
+	scan = eat_spaces (scan);
+	for (; i < n_fields; i++) {
+		field_end = strchr (scan, ' ');
+		if (field_end == NULL) {
+			field_end = scan + strlen(scan);
+		}
+
+		fields[i] = g_strndup (scan, field_end - scan);
+		scan = eat_spaces (field_end);
+	}
+
+	return fields;
 }
 
 static void
@@ -185,11 +167,10 @@ process_line (char     *line,
 	fdata->modified = mktime_from_string (fields[4],
 					      fields[5],
 					      fields[6]);
-	g_strfreev (fields);
 
 	/* Full path */
 
-	name_field = get_last_field_lha (line);
+	name_field = fields[7];
 
 	if (name_field && *name_field == '/') {
 		fdata->full_path = g_strdup (name_field);
@@ -198,6 +179,8 @@ process_line (char     *line,
 		fdata->full_path = g_strconcat ("/", name_field, NULL);
 		fdata->original_path = fdata->full_path + 1;
 	}
+
+	g_strfreev (fields);
 
 	fdata->link = NULL;
 
