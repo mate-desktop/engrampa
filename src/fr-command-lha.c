@@ -36,6 +36,18 @@ static void fr_command_lha_class_init  (FrCommandLhaClass *class);
 static void fr_command_lha_init        (FrCommand         *afile);
 static void fr_command_lha_finalize    (GObject           *object);
 
+enum {
+	FIELD_OS_OR_PERM,
+	FIELD_UID_GID,
+	FIELD_SIZE,
+	FIELD_RATIO,
+	FIELD_MONTH,
+	FIELD_DAY,
+	FIELD_TIME_OR_YEAR,
+	FIELD_FILENAME,
+	N_FIELDS
+};
+
 /* Parent Class */
 
 static FrCommandClass *parent_class = NULL;
@@ -96,12 +108,11 @@ static char **
 split_line_lha (char *line)
 {
 	char       **fields;
-	int          n_fields = 8;
 	const char  *scan, *field_end;
 	int          i;
 
-	fields = g_new0 (char *, n_fields + 1);
-	fields[n_fields] = NULL;
+	fields = g_new0 (char *, N_FIELDS + 1);
+	fields[N_FIELDS] = NULL;
 
 	i = 0;
 
@@ -136,7 +147,7 @@ split_line_lha (char *line)
 	}
 
 	scan = eat_spaces (scan);
-	for (; i < n_fields; i++) {
+	for (; i < N_FIELDS; i++) {
 		field_end = strchr (scan, ' ');
 		if (field_end == NULL) {
 			field_end = scan + strlen(scan);
@@ -163,14 +174,14 @@ process_line (char     *line,
 	fdata = file_data_new ();
 
 	fields = split_line_lha (line);
-	fdata->size = g_ascii_strtoull (fields[2], NULL, 10);
-	fdata->modified = mktime_from_string (fields[4],
-					      fields[5],
-					      fields[6]);
+	fdata->size = g_ascii_strtoull (fields[FIELD_SIZE], NULL, 10);
+	fdata->modified = mktime_from_string (fields[FIELD_MONTH],
+					      fields[FIELD_DAY],
+					      fields[FIELD_TIME_OR_YEAR]);
 
 	/* Full path */
 
-	name_field = fields[7];
+	name_field = fields[FIELD_FILENAME];
 
 	if (name_field && *name_field == '/') {
 		fdata->full_path = g_strdup (name_field);
