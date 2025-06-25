@@ -1493,8 +1493,12 @@ fr_window_populate_file_list (FrWindow  *window,
 			} else {
 				GDateTime *date_time;
 				date_time = g_date_time_new_from_unix_local (fdata->modified);
-				s_time = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
-				g_date_time_unref (date_time);
+				if (! date_time) {
+					s_time = g_strdup ("");
+				} else {
+					s_time = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
+					g_date_time_unref (date_time);
+				}
 			}
 
 			gtk_list_store_set (window->priv->list_store, &iter,
@@ -1522,8 +1526,12 @@ fr_window_populate_file_list (FrWindow  *window,
 
 			s_size = g_format_size (fdata->size);
 			date_time = g_date_time_new_from_unix_local (fdata->modified);
-			s_time = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
-			g_date_time_unref (date_time);
+			if (! date_time) {
+				s_time = g_strdup("");
+			} else {
+				s_time = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
+				g_date_time_unref (date_time);
+			}
 			desc = g_content_type_get_description (fdata->content_type);
 
 			gtk_list_store_set (window->priv->list_store, &iter,

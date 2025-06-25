@@ -101,10 +101,12 @@ dlg_prop (FrWindow *window)
 
 	GDateTime *date_time;
 	date_time = g_date_time_new_from_unix_local (get_file_mtime (fr_window_get_archive_uri (window)));
-	s = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
-	g_date_time_unref (date_time);
-	gtk_label_set_text (GET_LABEL ("p_date_label"), s);
-	g_free (s);
+	if (date_time) {
+		s = g_date_time_format (date_time, _("%d %B %Y, %H:%M"));
+		g_date_time_unref (date_time);
+		gtk_label_set_text (GET_LABEL ("p_date_label"), s);
+		g_free (s);
+	}
 
 	/**/
 
