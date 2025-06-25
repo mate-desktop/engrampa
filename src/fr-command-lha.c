@@ -149,7 +149,7 @@ split_line_lha (char *line)
 	scan = eat_spaces (scan);
 	for (; i < N_FIELDS; i++) {
 		field_end = strchr (scan, ' ');
-		if (field_end == NULL) {
+		if (field_end == NULL || (i + 1) == N_FIELDS) {
 			field_end = scan + strlen(scan);
 		}
 
