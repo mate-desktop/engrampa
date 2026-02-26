@@ -28,6 +28,9 @@
 #include <gio/gio.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
+#ifdef GDK_WINDOWING_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include "actions.h"
@@ -85,6 +88,7 @@ static int             file_list_icon_size = 0;
 #define XDS_ATOM   gdk_atom_intern  ("XdndDirectSave0", FALSE)
 #define TEXT_ATOM  gdk_atom_intern  ("text/plain", FALSE)
 #define XFR_ATOM   gdk_atom_intern  ("XdndEngrampa0", FALSE)
+#define URI_LIST_ATOM gdk_atom_intern ("text/uri-list", FALSE)
 
 #define FR_CLIPBOARD (gdk_atom_intern_static_string ("_RNGRAMPA_SPECIAL_CLIPBOARD"))
 #define FR_SPECIAL_URI_LIST (gdk_atom_intern_static_string ("application/engrampa-uri-list"))
@@ -100,7 +104,8 @@ static GtkTargetEntry target_table[] = {
 
 static GtkTargetEntry folder_tree_targets[] = {
 	{ "XdndEngrampa0", 0, 0 },
-	{ "XdndDirectSave0", 0, 2 }
+	{ "XdndDirectSave0", 0, 2 },
+	{ "text/uri-list", 0, 3 }
 };
 
 typedef struct {
@@ -4142,6 +4147,141 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 }
 
 static gboolean
+is_running_on_wayland (void)
+{
+#ifdef GDK_WINDOWING_WAYLAND
+	return GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ());
+#else
+	return FALSE;
+#endif
+}
+
+/* Build a double-encoded archive:// mount URI for the current archive.
+ * The archive:// scheme embeds a URI in its host component, so percent
+ * signs from the first encoding pass must themselves be encoded.
+ * Returns NULL if no archive is open.  Caller must g_free(). */
+static char *
+build_archive_mount_uri (FrWindow *window)
+{
+	char *archive_uri;
+	char *escaped;
+	char *encoded_uri;
+	char *mount_uri;
+
+	if (window->archive == NULL || window->archive->local_copy == NULL)
+		return NULL;
+
+	archive_uri = g_file_get_uri (window->archive->local_copy);
+	escaped = g_uri_escape_string (archive_uri, NULL, FALSE);
+	encoded_uri = g_uri_escape_string (escaped, NULL, FALSE);
+
+	mount_uri = g_strdup_printf ("archive://%s", encoded_uri);
+
+	g_free (encoded_uri);
+	g_free (escaped);
+	g_free (archive_uri);
+
+	return mount_uri;
+}
+
+/* Build a text/uri-list of GVFS archive:// URIs for the given files.
+ * This allows Wayland DnD to file managers that support GIO/GVFS,
+ * since the X11 XDS (XdndDirectSave0) protocol is unavailable. */
+static char *
+build_gvfs_uri_list (FrWindow *window,
+                     GList    *file_list)
+{
+	GString *uri_list;
+	char    *mount_uri;
+	GList   *scan;
+
+	mount_uri = build_archive_mount_uri (window);
+	if (mount_uri == NULL)
+		return g_strdup ("");
+
+	uri_list = g_string_new (NULL);
+	for (scan = file_list; scan; scan = scan->next) {
+		const char *path = scan->data;
+		const char *clean_path;
+		char       *encoded_path;
+
+		clean_path = (path[0] == '/') ? path + 1 : path;
+		encoded_path = g_uri_escape_string (clean_path, "/", FALSE);
+		g_string_append_printf (uri_list, "%s/%s\r\n",
+		                        mount_uri, encoded_path);
+		g_free (encoded_path);
+	}
+
+	g_free (mount_uri);
+
+	return g_string_free (uri_list, FALSE);
+}
+
+typedef struct {
+	GMainLoop *loop;
+	GError    *error;
+} MountSyncData;
+
+static void
+mount_sync_cb (GObject      *source,
+               GAsyncResult *result,
+               gpointer      user_data)
+{
+	MountSyncData *data = user_data;
+
+	g_file_mount_enclosing_volume_finish (G_FILE (source),
+	                                      result, &data->error);
+	g_main_loop_quit (data->loop);
+}
+
+/* Mount the archive via GVFS synchronously (nested main loop).
+ * Returns TRUE if the archive is mounted and archive:// URIs will
+ * work, FALSE on failure.  Safe to call if already mounted. */
+static gboolean
+ensure_gvfs_archive_mounted (FrWindow *window)
+{
+	char          *mount_uri;
+	GFile         *gfile;
+	GMount        *mount;
+	MountSyncData  data;
+	gboolean       ok;
+
+	mount_uri = build_archive_mount_uri (window);
+	if (mount_uri == NULL)
+		return FALSE;
+
+	gfile = g_file_new_for_uri (mount_uri);
+	g_free (mount_uri);
+
+	/* Fast path: already mounted from a previous drag. */
+	mount = g_file_find_enclosing_mount (gfile, NULL, NULL);
+	if (mount != NULL) {
+		g_object_unref (mount);
+		g_object_unref (gfile);
+		return TRUE;
+	}
+
+	/* Mount synchronously via nested main loop. */
+	data.loop  = g_main_loop_new (NULL, FALSE);
+	data.error = NULL;
+
+	g_file_mount_enclosing_volume (gfile, G_MOUNT_MOUNT_NONE,
+	                               NULL, NULL,
+	                               mount_sync_cb, &data);
+	g_main_loop_run (data.loop);
+
+	g_main_loop_unref (data.loop);
+	g_object_unref (gfile);
+
+	ok = (data.error == NULL ||
+	      g_error_matches (data.error, G_IO_ERROR,
+	                       G_IO_ERROR_ALREADY_MOUNTED));
+	g_clear_error (&data.error);
+
+	return ok;
+}
+
+static gboolean
 file_list_drag_begin (GtkWidget          *widget,
 		      GdkDragContext     *context,
 		      gpointer            data)
@@ -4159,11 +4299,13 @@ file_list_drag_begin (GtkWidget          *widget,
 	g_free (window->priv->drag_base_dir);
 	window->priv->drag_base_dir = NULL;
 
-	gdk_property_change (gdk_drag_context_get_source_window (context),
-			     XDS_ATOM, TEXT_ATOM,
-			     8, GDK_PROP_MODE_REPLACE,
-			     (guchar *) XDS_FILENAME,
-			     strlen (XDS_FILENAME));
+	if (!is_running_on_wayland ()) {
+		gdk_property_change (gdk_drag_context_get_source_window (context),
+				     XDS_ATOM, TEXT_ATOM,
+				     8, GDK_PROP_MODE_REPLACE,
+				     (guchar *) XDS_FILENAME,
+				     strlen (XDS_FILENAME));
+	}
 
 	return TRUE;
 }
@@ -4177,7 +4319,8 @@ file_list_drag_end (GtkWidget      *widget,
 
 	debug (DEBUG_INFO, "::DragEnd -->\n");
 
-	gdk_property_delete (gdk_drag_context_get_source_window (context), XDS_ATOM);
+	if (!is_running_on_wayland ())
+		gdk_property_delete (gdk_drag_context_get_source_window (context), XDS_ATOM);
 
 	if (window->priv->drag_error != NULL) {
 		_gtk_error_dialog_run (GTK_WINDOW (window),
@@ -4327,6 +4470,17 @@ fr_window_folder_tree_drag_data_get (GtkWidget        *widget,
 		return TRUE;
 	}
 
+	if (is_running_on_wayland () &&
+	    gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
+	    ensure_gvfs_archive_mounted (window)) {
+		char *uri_data = build_gvfs_uri_list (window, file_list);
+		gtk_selection_data_set (selection_data, URI_LIST_ATOM, 8,
+		                       (guchar *) uri_data, strlen (uri_data));
+		g_free (uri_data);
+		path_list_free (file_list);
+		return TRUE;
+	}
+
 	if (! caja_xds_dnd_is_valid_xds_context (context))
 		return FALSE;
 
@@ -4404,6 +4558,21 @@ fr_window_file_list_drag_data_get (FrWindow         *window,
 		g_free (data);
 
 		return TRUE;
+	}
+
+	if (is_running_on_wayland () &&
+	    gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
+	    ensure_gvfs_archive_mounted (window)) {
+		GList *file_list;
+		file_list = fr_window_get_file_list_from_path_list (window, path_list, NULL);
+		if (file_list != NULL) {
+			char *uri_data = build_gvfs_uri_list (window, file_list);
+			gtk_selection_data_set (selection_data, URI_LIST_ATOM, 8,
+			                       (guchar *) uri_data, strlen (uri_data));
+			g_free (uri_data);
+			path_list_free (file_list);
+			return TRUE;
+		}
 	}
 
 	if (! caja_xds_dnd_is_valid_xds_context (context))
