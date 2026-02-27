@@ -28,9 +28,6 @@
 #include <gio/gio.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
-#ifdef GDK_WINDOWING_WAYLAND
-#include <gdk/gdkwayland.h>
-#endif
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include "actions.h"
@@ -4146,16 +4143,6 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 	debug (DEBUG_INFO, "::DragDataReceived <--\n");
 }
 
-static gboolean
-is_running_on_wayland (void)
-{
-#ifdef GDK_WINDOWING_WAYLAND
-	return GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default ());
-#else
-	return FALSE;
-#endif
-}
-
 /* Build a double-encoded archive:// mount URI for the current archive.
  * The archive:// scheme embeds a URI in its host component, so percent
  * signs from the first encoding pass must themselves be encoded.
@@ -4299,13 +4286,11 @@ file_list_drag_begin (GtkWidget          *widget,
 	g_free (window->priv->drag_base_dir);
 	window->priv->drag_base_dir = NULL;
 
-	if (!is_running_on_wayland ()) {
-		gdk_property_change (gdk_drag_context_get_source_window (context),
-				     XDS_ATOM, TEXT_ATOM,
-				     8, GDK_PROP_MODE_REPLACE,
-				     (guchar *) XDS_FILENAME,
-				     strlen (XDS_FILENAME));
-	}
+	gdk_property_change (gdk_drag_context_get_source_window (context),
+			     XDS_ATOM, TEXT_ATOM,
+			     8, GDK_PROP_MODE_REPLACE,
+			     (guchar *) XDS_FILENAME,
+			     strlen (XDS_FILENAME));
 
 	return TRUE;
 }
@@ -4319,8 +4304,7 @@ file_list_drag_end (GtkWidget      *widget,
 
 	debug (DEBUG_INFO, "::DragEnd -->\n");
 
-	if (!is_running_on_wayland ())
-		gdk_property_delete (gdk_drag_context_get_source_window (context), XDS_ATOM);
+	gdk_property_delete (gdk_drag_context_get_source_window (context), XDS_ATOM);
 
 	if (window->priv->drag_error != NULL) {
 		_gtk_error_dialog_run (GTK_WINDOW (window),
@@ -4470,8 +4454,7 @@ fr_window_folder_tree_drag_data_get (GtkWidget        *widget,
 		return TRUE;
 	}
 
-	if (is_running_on_wayland () &&
-	    gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
+	if (gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
 	    ensure_gvfs_archive_mounted (window)) {
 		char *uri_data = build_gvfs_uri_list (window, file_list);
 		gtk_selection_data_set (selection_data, URI_LIST_ATOM, 8,
@@ -4560,8 +4543,7 @@ fr_window_file_list_drag_data_get (FrWindow         *window,
 		return TRUE;
 	}
 
-	if (is_running_on_wayland () &&
-	    gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
+	if (gtk_selection_data_get_target (selection_data) == URI_LIST_ATOM &&
 	    ensure_gvfs_archive_mounted (window)) {
 		GList *file_list;
 		file_list = fr_window_get_file_list_from_path_list (window, path_list, NULL);
