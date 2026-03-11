@@ -214,6 +214,7 @@ install_packages (InstallerData *idata)
 					   _("There was an internal error trying to search for applications:"),
 					   error->message);
 		package_installer_terminated (idata, FR_PROC_ERROR_GENERIC, message);
+		g_free (message);
 
 		g_clear_error (&error);
 	}

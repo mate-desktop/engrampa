@@ -207,6 +207,7 @@ load_constant_pool_utfs (JavaClassFile *cfile)
 			txt->length = GUINT16_FROM_BE (txt->length);
 			txt->str = g_new0 (char, txt->length);
 			if (read (cfile->fd, txt->str, txt->length) == -1) {
+				g_free (txt->str);
 				g_free (txt);
 				return;	/* error while reading */
 			}
