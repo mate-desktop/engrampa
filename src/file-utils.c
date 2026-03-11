@@ -144,6 +144,7 @@ get_dir_content_if_unique (const char  *uri)
 	if (err != NULL) {
 		g_warning ("Failed to enumerate children of %s: %s", uri, err->message);
 		g_error_free (err);
+		g_object_unref (file);
 		return NULL;
 	}
 
@@ -790,6 +791,8 @@ get_temp_work_dir (const char *parent_folder)
 		g_free (template);
 		result = NULL;
 	}
+
+	g_free (best_folder);
 
 	return result;
 }
