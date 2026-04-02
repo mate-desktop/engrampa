@@ -4257,6 +4257,11 @@ file_list_drag_begin (GtkWidget          *widget,
 	if (window->priv->activity_ref > 0)
 		return FALSE;
 
+	if (window->priv->path_clicked != NULL) {
+		gtk_tree_path_free (window->priv->path_clicked);
+		window->priv->path_clicked = NULL;
+	}
+
 	g_free (window->priv->drag_destination_folder);
 	window->priv->drag_destination_folder = NULL;
 
