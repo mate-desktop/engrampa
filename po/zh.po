@@ -1,0 +1,1879 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the engrampa package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Transifex Bot <>, 2026
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: engrampa 1.27.1\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
+"POT-Creation-Date: 2023-12-20 14:53+0100\n"
+"PO-Revision-Date: 2018-03-11 15:11+0000\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
+"Language-Team: Chinese (https://app.transifex.com/mate/teams/13566/zh/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: mate-submodules/libegg/eggdesktopfile.c:169
+msgid "File is not a valid .desktop file"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:194
+#, c-format
+msgid "Unrecognized desktop file Version '%s'"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:984
+#, c-format
+msgid "Starting %s"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:1126
+msgid "Application does not accept documents on command line"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:1194
+#, c-format
+msgid "Unrecognized launch option: %d"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:1410
+msgid "Can't pass document URIs to a 'Type=Link' desktop entry"
+msgstr ""
+
+#: mate-submodules/libegg/eggdesktopfile.c:1431
+msgid "Not a launchable item"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:234
+msgid "Disable connection to session manager"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:239
+msgid "Specify file containing saved configuration"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:239
+msgid "FILE"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:244
+msgid "Specify session management ID"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:244
+msgid "ID"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:270
+msgid "Session management options:"
+msgstr ""
+
+#: mate-submodules/libegg/eggsmclient.c:271
+msgid "Show session management options"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:7 data/engrampa.desktop.in.in:3
+#: src/main.c:47
+msgid "Engrampa Archive Manager"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:8
+msgid "An Archive Manager for the MATE desktop environment"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:10
+msgid ""
+"Engrampa is an archive manager for the MATE environment. It allows you to "
+"create and modify archives, view the contents of an archive, view a file "
+"contained in an archive, and extract files from archive."
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:15
+msgid ""
+"Engrampa is only a front-end (a graphical interface) to archiving programs "
+"like tar and zip. The supported file types are:"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:20
+msgid "7-Zip Compressed File (.7z)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:21
+msgid "WinAce Compressed File (.ace)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:22
+msgid "ALZip Compressed File (.alz)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:23
+msgid "AIX Small Indexed Archive (.ar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:24
+msgid "ARJ Compressed Archive (.arj)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:25
+msgid "Cabinet File (.cab)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:26
+msgid "UNIX CPIO Archive (.cpio)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:27
+msgid "Debian Package (.deb, .udeb) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:28
+msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:29
+msgid "Java Archive (.jar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:30
+msgid "Java Enterprise archive (.ear)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:31
+msgid "Java Web Archive (.war)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:32
+msgid "LHA Archive (.lzh, .lha)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:33
+msgid "WinRAR Compressed Archive (.rar)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:34
+msgid "RAR Archived Comic Book (.cbr)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:35
+msgid "RPM Package Manager (.rpm) [Read-only mode]"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:36
+msgid ""
+"Tape Archive File uncompressed (.tar) or compressed with: gzip (.tar.gz, "
+".tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), "
+"compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
+" (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:39
+msgid "Stuffit Archives (.bin, .sit)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:40
+msgid "ZIP Archive (.zip)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:41
+msgid "ZIP Archived Comic Book (.cbz)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:42
+msgid "ZOO Compressed Archive File (.zoo)"
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:43
+msgid ""
+"Single files compressed with gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
+"(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
+"(.xz)."
+msgstr ""
+
+#: data/engrampa.appdata.xml.in.in:46
+msgid ""
+"Engrampa is a fork of File Roller and part of the MATE Desktop Environment. "
+"If you would like to know more about MATE and Engrampa, please visit the "
+"project's home page."
+msgstr ""
+
+#: data/engrampa.desktop.in.in:4 src/fr-window.c:1889 src/fr-window.c:5293
+msgid "Archive Manager"
+msgstr ""
+
+#: data/engrampa.desktop.in.in:5
+msgid "Create and modify an archive"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/engrampa.desktop.in.in:17
+msgid "MATE;archive;manager;compression;"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:38
+msgid "How to sort files"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:39
+msgid ""
+"What criteria must be used to arrange files. Possible values: name, size, "
+"type, time, path."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:43
+msgid "Sort type"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:44
+msgid ""
+"Whether to sort in ascending or descending direction. Possible values: "
+"ascending, descending."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:48
+msgid "List Mode"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:49
+msgid ""
+"Whether to view all files in the archive (all_files), or view the archive as"
+" a folder (as_folder)."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:53
+msgid "Display type"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:54
+msgid "Display the Type column in the main window."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:58
+msgid "Display size"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:59
+msgid "Display the Size column in the main window."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:63
+msgid "Display time"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:64
+msgid "Display the Time column in the main window."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:68
+msgid "Display path"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:69
+msgid "Display the Path column in the main window."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:73
+msgid "Use MIME icons"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:74
+msgid ""
+"if TRUE will display icons depending on the file type (slower), otherwise "
+"will use always the same icon for all files (faster)."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:78
+msgid "Name column width"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:79
+msgid "The default width of the name column in the file list."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:85
+msgid "Max history length"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:86
+msgid "Max number of items in the Open Recents menu."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:99
+msgid "View toolbar"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:100
+msgid "Whether to display the toolbar."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:104
+msgid "View statusbar"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:105
+msgid "Whether to display the statusbar."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:109 src/ui/menus-toolbars.ui:505
+msgid "View the folders pane"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:110
+msgid "Whether to display the folders pane."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:116
+msgid "Editors"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:117
+msgid ""
+"List of applications entered in the Open file dialog and not associated with"
+" the file type."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:121
+msgid "Compression level"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:122
+msgid ""
+"Compression level used when adding files to an archive. Possible values: "
+"very_fast, fast, normal, maximum."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:126
+msgid "Encrypt the archive header"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:127
+msgid ""
+"Whether to encrypt the archive header. If the header is encrypted the "
+"password will be required to list the archive content as well."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:131
+msgid "Adds 'unar' support over .zip archives."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:132
+msgid "It enables the ability to support 'unar' over .zip archives."
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:143
+msgid "Overwrite existing files"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:147
+msgid "Do not overwrite newer files"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:151
+msgid "Recreate the folders stored in the archive"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:155
+msgid "Close dialog after decompression"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:159
+msgid "Create a folder with the archive name and extract there"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:197
+msgid "Default volume size"
+msgstr ""
+
+#: data/org.mate.engrampa.gschema.xml.in:198
+msgid "The default size for volumes."
+msgstr ""
+
+#: caja/caja-engrampa.c:325
+msgid "Extract Here"
+msgstr ""
+
+#. Translators: the current position is the current folder
+#: caja/caja-engrampa.c:327
+msgid "Extract the selected archive to the current position"
+msgstr ""
+
+#: caja/caja-engrampa.c:344
+msgid "Extract To..."
+msgstr ""
+
+#: caja/caja-engrampa.c:345
+msgid "Extract the selected archive"
+msgstr ""
+
+#: caja/caja-engrampa.c:364
+msgid "Compress..."
+msgstr ""
+
+#: caja/caja-engrampa.c:365
+msgid "Create a compressed archive with the selected objects"
+msgstr ""
+
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:5 src/main.c:340
+#: src/server.c:452
+msgid "Engrampa"
+msgstr ""
+
+#: caja/libcaja-engrampa.caja-extension.desktop.in.in:6
+msgid "Allows to create and extract archives"
+msgstr ""
+
+#: src/actions.c:182 src/actions.c:221 src/actions.c:235 src/actions.c:273
+#: src/dlg-batch-add.c:157 src/dlg-batch-add.c:173 src/dlg-batch-add.c:202
+#: src/dlg-batch-add.c:247 src/dlg-batch-add.c:293 src/fr-window.c:2944
+msgid "Could not create the archive"
+msgstr ""
+
+#: src/actions.c:184 src/dlg-batch-add.c:159 src/dlg-batch-add.c:295
+msgid "You have to specify an archive name."
+msgstr ""
+
+#: src/actions.c:223
+msgid "You don't have permission to create an archive in this folder"
+msgstr ""
+
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: src/actions.c:237 src/fr-window.c:7451
+msgid "New name is the same as old one, please type other name."
+msgstr ""
+
+#: src/actions.c:275 src/dlg-package-installer.c:281
+#: src/dlg-package-installer.c:290 src/dlg-package-installer.c:330
+#: src/fr-archive.c:1117 src/fr-window.c:5910 src/fr-window.c:6077
+msgid "Archive type not supported."
+msgstr ""
+
+#: src/actions.c:289
+msgid "Could not delete the old archive."
+msgstr ""
+
+#: src/actions.c:438 src/ui/menus-toolbars.ui:643
+msgid "Open"
+msgstr ""
+
+#: src/actions.c:449 src/fr-window.c:5128
+msgid "All archives"
+msgstr ""
+
+#: src/actions.c:456
+msgid "All files"
+msgstr ""
+
+#: src/actions.c:760 src/fr-window.c:7152
+msgid "Last Output"
+msgstr ""
+
+#: src/actions.c:824
+msgid ""
+"Engrampa is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+
+#: src/actions.c:828
+msgid ""
+"Engrampa is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#: src/actions.c:832
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Engrampa; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA  02110-1301 USA"
+msgstr ""
+
+#: src/actions.c:865
+msgid ""
+"Copyright © 2001–2010 Free Software Foundation, Inc.\n"
+"Copyright © 2012–2021 The MATE developers"
+msgstr ""
+
+#: src/actions.c:867
+msgid "Engrampa is an archive manager for the MATE Desktop Environment."
+msgstr ""
+
+#: src/actions.c:870
+msgid "translator-credits"
+msgstr ""
+
+#: src/dlg-add-files.c:101 src/dlg-add-folder.c:125
+msgid "Could not add the files to the archive"
+msgstr ""
+
+#: src/dlg-add-files.c:102 src/dlg-add-folder.c:126
+#, c-format
+msgid "You don't have the right permissions to read files from folder \"%s\""
+msgstr ""
+
+#: src/dlg-add-folder.c:712
+msgid "Save Options"
+msgstr ""
+
+#: src/dlg-add-folder.c:713
+msgid "_Options Name:"
+msgstr ""
+
+#: src/dlg-add-folder.c:716 src/dlg-package-installer.c:312
+#: src/fr-window.c:2482 src/fr-window.c:7566 src/fr-window.c:7995
+#: src/ui/batch-add-files.ui:46 src/ui/batch-password.ui:36
+#: src/ui/delete.ui:36 src/ui/dlg-add-files.ui:56 src/ui/dlg-add-folder.ui:57
+#: src/ui/dlg-extract.ui:56 src/ui/new.ui:239 src/ui/password.ui:37
+#: src/ui/update.ui:33 src/ui/update.ui:190
+msgid "_Cancel"
+msgstr ""
+
+#: src/dlg-add-folder.c:717
+msgid "_Save"
+msgstr ""
+
+#: src/dlg-ask-password.c:113
+#, c-format
+msgid "Enter the password for the archive '%s'."
+msgstr ""
+
+#: src/dlg-batch-add.c:174
+#, c-format
+msgid ""
+"The name \"%s\" is not valid because it cannot contain the characters: %s\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/dlg-batch-add.c:177 src/fr-window.c:7491 src/fr-window.c:7493
+msgid "Please use a different name."
+msgstr ""
+
+#: src/dlg-batch-add.c:204
+msgid ""
+"You don't have the right permissions to create an archive in the destination"
+" folder."
+msgstr ""
+
+#: src/dlg-batch-add.c:220 src/dlg-extract.c:99 src/fr-window.c:6735
+#, c-format
+msgid ""
+"Destination folder \"%s\" does not exist.\n"
+"\n"
+"Do you want to create it?"
+msgstr ""
+
+#: src/dlg-batch-add.c:229 src/dlg-extract.c:108 src/fr-window.c:6744
+msgid "Create _Folder"
+msgstr ""
+
+#: src/dlg-batch-add.c:248 src/dlg-extract.c:128 src/fr-window.c:6761
+#, c-format
+msgid "Could not create the destination folder: %s."
+msgstr ""
+
+#: src/dlg-batch-add.c:265
+msgid "Archive not created"
+msgstr ""
+
+#: src/dlg-batch-add.c:313
+msgid "The archive is already present.  Do you want to overwrite it?"
+msgstr ""
+
+#: src/dlg-batch-add.c:316
+msgid "_Overwrite"
+msgstr ""
+
+#: src/dlg-extract.c:127 src/dlg-extract.c:145 src/dlg-extract.c:172
+#: src/fr-window.c:4176 src/fr-window.c:6661 src/fr-window.c:6666
+#: src/fr-window.c:6765 src/fr-window.c:6784 src/fr-window.c:6789
+msgid "Extraction not performed"
+msgstr ""
+
+#: src/dlg-extract.c:173 src/fr-window.c:4340 src/fr-window.c:4419
+#, c-format
+msgid ""
+"You don't have the right permissions to extract archives in the folder "
+"\"%s\""
+msgstr ""
+
+#: src/dlg-new.c:382
+msgctxt "File"
+msgid "New"
+msgstr ""
+
+#: src/dlg-new.c:394
+msgctxt "File"
+msgid "Save"
+msgstr ""
+
+#: src/dlg-package-installer.c:103 src/dlg-package-installer.c:214
+msgid "There was an internal error trying to search for applications:"
+msgstr ""
+
+#: src/dlg-package-installer.c:302
+#, c-format
+msgid ""
+"There is no command installed for %s files.\n"
+"Do you want to search for a command to open this file?"
+msgstr ""
+
+#: src/dlg-package-installer.c:307
+msgid "Could not open this file type"
+msgstr ""
+
+#: src/dlg-package-installer.c:316
+msgid "_Search Command"
+msgstr ""
+
+#: src/dlg-prop.c:94
+#, c-format
+msgid "%s Properties"
+msgstr ""
+
+#: src/dlg-prop.c:104 src/fr-window.c:1496 src/fr-window.c:1525
+msgid "%d %B %Y, %H:%M"
+msgstr ""
+
+#: src/dlg-update.c:161
+#, c-format
+msgid "Update the file \"%s\" in the archive \"%s\"?"
+msgstr ""
+
+#: src/dlg-update.c:174 src/dlg-update.c:203 src/ui/update.ui:129
+#, c-format
+msgid ""
+"The file has been modified with an external application. If you don't update"
+" the file in the archive, all of your changes will be lost."
+msgid_plural ""
+"%u files have been modified with an external application. If you don't "
+"update the files in the archive, all of your changes will be lost."
+msgstr[0] ""
+
+#: src/dlg-update.c:191
+#, c-format
+msgid "Update the files in the archive \"%s\"?"
+msgstr ""
+
+#: src/eggfileformatchooser.c:224
+#, c-format
+msgid "File _Format: %s"
+msgstr ""
+
+#: src/eggfileformatchooser.c:385
+msgid "All Files"
+msgstr ""
+
+#: src/eggfileformatchooser.c:386
+msgid "All Supported Files"
+msgstr ""
+
+#: src/eggfileformatchooser.c:395
+msgid "By Extension"
+msgstr ""
+
+#: src/eggfileformatchooser.c:409
+msgid "File Format"
+msgstr ""
+
+#: src/eggfileformatchooser.c:427
+msgid "Extension(s)"
+msgstr ""
+
+#: src/eggfileformatchooser.c:658
+#, c-format
+msgid ""
+"The program was not able to find out the file format you want to use for "
+"`%s'. Please make sure to use a known extension for that file or manually "
+"choose a file format from the list below."
+msgstr ""
+
+#: src/eggfileformatchooser.c:665
+msgid "File format not recognized"
+msgstr ""
+
+#: src/fr-archive.c:1096
+msgid "File not found."
+msgstr ""
+
+#: src/fr-archive.c:1199
+msgid "Archive not found"
+msgstr ""
+
+#: src/fr-archive.c:2365
+msgid "You don't have the right permissions."
+msgstr ""
+
+#: src/fr-archive.c:2365
+msgid "This archive type cannot be modified"
+msgstr ""
+
+#: src/fr-archive.c:2377
+msgid "You can't add an archive to itself."
+msgstr ""
+
+#. Translators: after the colon there is a filename.
+#: src/fr-command-7z.c:306 src/fr-command-rar.c:415 src/fr-command-tar.c:284
+msgid "Adding file: "
+msgstr ""
+
+#. Translators: after the colon there is a filename.
+#: src/fr-command-7z.c:466 src/fr-command-rar.c:538 src/fr-command-tar.c:400
+msgid "Extracting file: "
+msgstr ""
+
+#. Translators: after the colon there is a filename.
+#: src/fr-command-rar.c:491 src/fr-command-tar.c:348
+msgid "Removing file: "
+msgstr ""
+
+#: src/fr-command-rar.c:666
+#, c-format
+msgid "Could not find the volume: %s"
+msgstr ""
+
+#: src/fr-command-tar.c:356
+msgid "Deleting files from archive"
+msgstr ""
+
+#: src/fr-command-tar.c:458
+msgid "Recompressing archive"
+msgstr ""
+
+#: src/fr-command-tar.c:716
+msgid "Decompressing archive"
+msgstr ""
+
+#: src/fr-init.c:60
+msgid "Debian package"
+msgstr ""
+
+#: src/fr-init.c:61
+msgid "Cabinet"
+msgstr ""
+
+#: src/fr-init.c:62
+msgid "OpenDocument Presentation"
+msgstr ""
+
+#: src/fr-init.c:63
+msgid "OpenDocument Spreadsheet"
+msgstr ""
+
+#: src/fr-init.c:64
+msgid "OpenDocument Text"
+msgstr ""
+
+#: src/fr-init.c:65
+msgid "OpenDocument Presentation Template"
+msgstr ""
+
+#: src/fr-init.c:66
+msgid "OpenDocument Spreadsheet Template"
+msgstr ""
+
+#: src/fr-init.c:67
+msgid "OpenDocument Text Template"
+msgstr ""
+
+#: src/fr-init.c:68
+msgid "Electronic Publication"
+msgstr ""
+
+#: src/fr-init.c:69
+msgid "7-Zip"
+msgstr ""
+
+#: src/fr-init.c:70
+msgid "Tar compressed with 7z"
+msgstr ""
+
+#: src/fr-init.c:71
+msgid "Ace"
+msgstr ""
+
+#: src/fr-init.c:72
+msgid "ALZip archive"
+msgstr ""
+
+#: src/fr-init.c:73
+msgid "ARC archive"
+msgstr ""
+
+#: src/fr-init.c:74
+msgid "Ar"
+msgstr ""
+
+#: src/fr-init.c:75
+msgid "Arj"
+msgstr ""
+
+#: src/fr-init.c:76
+msgid "Brotli compressed file"
+msgstr ""
+
+#: src/fr-init.c:77
+msgid "Tar compressed with brotli"
+msgstr ""
+
+#: src/fr-init.c:78
+msgid "Bzip2 compressed file"
+msgstr ""
+
+#: src/fr-init.c:79
+msgid "Tar compressed with bzip2"
+msgstr ""
+
+#: src/fr-init.c:80
+msgid "Bzip compressed file"
+msgstr ""
+
+#: src/fr-init.c:81
+msgid "Tar compressed with bzip"
+msgstr ""
+
+#: src/fr-init.c:82
+msgid "Rar Archived Comic Book"
+msgstr ""
+
+#: src/fr-init.c:83
+msgid "Zip Archived Comic Book"
+msgstr ""
+
+#: src/fr-init.c:84
+msgid "Disc Image File"
+msgstr ""
+
+#: src/fr-init.c:85
+msgid "Unix Compressed Archive file"
+msgstr ""
+
+#: src/fr-init.c:86
+msgid "Tar compressed with gzip"
+msgstr ""
+
+#: src/fr-init.c:87
+msgid "Unix CPIO Archive"
+msgstr ""
+
+#: src/fr-init.c:88
+msgid "Ear"
+msgstr ""
+
+#: src/fr-init.c:89
+msgid "GZip compressed file"
+msgstr ""
+
+#: src/fr-init.c:90
+msgid "Jar"
+msgstr ""
+
+#: src/fr-init.c:91
+msgid "Lha"
+msgstr ""
+
+#: src/fr-init.c:92
+msgid "Lrzip "
+msgstr ""
+
+#: src/fr-init.c:93
+msgid "Tar compressed with lrzip"
+msgstr ""
+
+#: src/fr-init.c:94
+msgid "LZip compressed file"
+msgstr ""
+
+#: src/fr-init.c:95
+msgid "Tar compressed with lzip"
+msgstr ""
+
+#: src/fr-init.c:96
+msgid "LZMA compressed file"
+msgstr ""
+
+#: src/fr-init.c:97
+msgid "Tar compressed with lzma"
+msgstr ""
+
+#: src/fr-init.c:98
+msgid "LZO compressed file"
+msgstr ""
+
+#: src/fr-init.c:99
+msgid "Tar compressed with lzop"
+msgstr ""
+
+#: src/fr-init.c:100
+msgid "Self-extracting zip"
+msgstr ""
+
+#: src/fr-init.c:101
+msgid "Windows Imaging Format"
+msgstr ""
+
+#: src/fr-init.c:102
+msgid "Rar"
+msgstr ""
+
+#: src/fr-init.c:103
+msgid "Red Hat Package Manager file"
+msgstr ""
+
+#: src/fr-init.c:104
+msgid "RZip compressed file"
+msgstr ""
+
+#: src/fr-init.c:105
+msgid "StuffIt Archive"
+msgstr ""
+
+#: src/fr-init.c:106
+msgid "Tar uncompressed"
+msgstr ""
+
+#: src/fr-init.c:107
+msgid "Tar compressed with compress"
+msgstr ""
+
+#: src/fr-init.c:108
+msgid "War"
+msgstr ""
+
+#: src/fr-init.c:109
+msgid "Xz compressed file"
+msgstr ""
+
+#: src/fr-init.c:110
+msgid "Tar compressed with xz"
+msgstr ""
+
+#: src/fr-init.c:111
+msgid "Zoo"
+msgstr ""
+
+#: src/fr-init.c:112 src/fr-init.c:113
+msgid "Zstandard compressed file"
+msgstr ""
+
+#: src/fr-init.c:114
+msgid "Tar compressed with zstd"
+msgstr ""
+
+#: src/fr-init.c:115
+msgid "Zip"
+msgstr ""
+
+#: src/fr-window.c:1427
+#, c-format
+msgid "%lu object (%s)"
+msgid_plural "%lu objects (%s)"
+msgstr[0] ""
+
+#: src/fr-window.c:1432
+#, c-format
+msgid "%lu object selected (%s)"
+msgid_plural "%lu objects selected (%s)"
+msgstr[0] ""
+
+#: src/fr-window.c:1505
+msgid "Folder"
+msgstr ""
+
+#: src/fr-window.c:1897
+msgid "[read only]"
+msgstr ""
+
+#: src/fr-window.c:2157
+#, c-format
+msgid "Could not display the folder \"%s\""
+msgstr ""
+
+#: src/fr-window.c:2186 src/fr-window.c:2201 src/fr-window.c:2484
+msgid "_Pause"
+msgstr ""
+
+#: src/fr-window.c:2189
+msgid "Process paused"
+msgstr ""
+
+#: src/fr-window.c:2191
+msgid "_Resume"
+msgstr ""
+
+#: src/fr-window.c:2199 src/fr-window.c:2792
+msgid "Please wait…"
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2273 src/fr-window.c:2311
+#, c-format
+msgid "Creating \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2277
+#, c-format
+msgid "Loading \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2281
+#, c-format
+msgid "Reading \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2285
+#, c-format
+msgid "Deleting files from \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2289
+#, c-format
+msgid "Testing \"%s\""
+msgstr ""
+
+#: src/fr-window.c:2292
+msgid "Getting the file list"
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2296
+#, c-format
+msgid "Copying the files to add to \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2300
+#, c-format
+msgid "Adding files to \"%s\""
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2304
+#, c-format
+msgid "Extracting files from \"%s\""
+msgstr ""
+
+#: src/fr-window.c:2307
+msgid "Copying the extracted files to the destination"
+msgstr ""
+
+#. Translators: %s is a filename
+#: src/fr-window.c:2315
+#, c-format
+msgid "Saving \"%s\""
+msgstr ""
+
+#: src/fr-window.c:2477
+msgid "_Quit"
+msgstr ""
+
+#: src/fr-window.c:2478
+msgid "_Open the Archive"
+msgstr ""
+
+#: src/fr-window.c:2479
+msgid "_Show the Files"
+msgstr ""
+
+#: src/fr-window.c:2480
+msgid "Show the _Files and Quit"
+msgstr ""
+
+#: src/fr-window.c:2481 src/ui/add-options.ui:40 src/ui/menus-toolbars.ui:302
+#: src/ui/properties.ui:52
+msgid "_Close"
+msgstr ""
+
+#: src/fr-window.c:2657
+#, c-format
+msgid "%lu file remaining"
+msgid_plural "%lu files remaining"
+msgstr[0] ""
+
+#: src/fr-window.c:2709
+msgid "Extraction completed successfully"
+msgstr ""
+
+#: src/fr-window.c:2737
+msgid "Archive created successfully"
+msgstr ""
+
+#: src/fr-window.c:2858 src/fr-window.c:2991
+msgid "Command exited abnormally."
+msgstr ""
+
+#: src/fr-window.c:2949
+msgid "An error occurred while extracting files."
+msgstr ""
+
+#: src/fr-window.c:2955
+#, c-format
+msgid "Could not open \"%s\""
+msgstr ""
+
+#: src/fr-window.c:2960
+msgid "An error occurred while loading the archive."
+msgstr ""
+
+#: src/fr-window.c:2964
+msgid "An error occurred while deleting files from the archive."
+msgstr ""
+
+#: src/fr-window.c:2970
+msgid "An error occurred while adding files to the archive."
+msgstr ""
+
+#: src/fr-window.c:2974
+msgid "An error occurred while testing archive."
+msgstr ""
+
+#: src/fr-window.c:2978
+msgid "An error occurred while saving the archive."
+msgstr ""
+
+#: src/fr-window.c:2982
+msgid "An error occurred."
+msgstr ""
+
+#: src/fr-window.c:2988
+msgid "Command not found."
+msgstr ""
+
+#: src/fr-window.c:3188
+msgid "Test Result"
+msgstr ""
+
+#: src/fr-window.c:4021 src/fr-window.c:8028 src/fr-window.c:8063
+#: src/fr-window.c:8304
+msgid "Could not perform the operation"
+msgstr ""
+
+#: src/fr-window.c:4047
+msgid ""
+"Do you want to add this file to the current archive or open it as a new "
+"archive?"
+msgstr ""
+
+#: src/fr-window.c:4077
+msgid "Do you want to create a new archive with these files?"
+msgstr ""
+
+#: src/fr-window.c:4080
+msgid "Create _Archive"
+msgstr ""
+
+#: src/fr-window.c:4660 src/fr-window.c:5615
+msgid "Folders"
+msgstr ""
+
+#: src/fr-window.c:4697
+msgctxt "File"
+msgid "Size"
+msgstr ""
+
+#: src/fr-window.c:4698
+msgctxt "File"
+msgid "Type"
+msgstr ""
+
+#: src/fr-window.c:4699
+msgctxt "File"
+msgid "Date Modified"
+msgstr ""
+
+#: src/fr-window.c:4700
+msgctxt "File"
+msgid "Location"
+msgstr ""
+
+#: src/fr-window.c:4709
+msgctxt "File"
+msgid "Name"
+msgstr ""
+
+#: src/fr-window.c:5534
+msgid "Find:"
+msgstr ""
+
+#: src/fr-window.c:5625
+msgid "Close the folders pane"
+msgstr ""
+
+#. Translators: after the colon there is a folder name.
+#: src/fr-window.c:5730 src/ui/batch-add-files.ui:209
+msgid "_Location:"
+msgstr ""
+
+#: src/fr-window.c:6069
+#, c-format
+msgid "Could not save the archive \"%s\""
+msgstr ""
+
+#: src/fr-window.c:6609
+#, c-format
+msgid "Replace file \"%s\"?"
+msgstr ""
+
+#: src/fr-window.c:6612
+#, c-format
+msgid "Another file with the same name already exists in \"%s\"."
+msgstr ""
+
+#: src/fr-window.c:6619
+msgid "Replace _All"
+msgstr ""
+
+#: src/fr-window.c:6620
+msgid "_Skip"
+msgstr ""
+
+#: src/fr-window.c:6621
+msgid "_Replace"
+msgstr ""
+
+#: src/fr-window.c:6710
+msgid "Insufficient remaining disk space"
+msgstr ""
+
+#. Translators: the name references to a filename.  This message can appear
+#. when renaming a file.
+#: src/fr-window.c:7446
+msgid "New name is void, please type a name."
+msgstr ""
+
+#. Translators: the %s references to a filename.  This message can appear when
+#. renaming a file.
+#: src/fr-window.c:7456
+#, c-format
+msgid ""
+"Name \"%s\" is not valid because it contains at least one of the following "
+"characters: %s, please type other name."
+msgstr ""
+
+#: src/fr-window.c:7491
+#, c-format
+msgid ""
+"A folder named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/fr-window.c:7493
+#, c-format
+msgid ""
+"A file named \"%s\" already exists.\n"
+"\n"
+"%s"
+msgstr ""
+
+#: src/fr-window.c:7562
+msgid "Rename"
+msgstr ""
+
+#: src/fr-window.c:7563
+msgid "_New folder name:"
+msgstr ""
+
+#: src/fr-window.c:7563
+msgid "_New file name:"
+msgstr ""
+
+#: src/fr-window.c:7567
+msgid "_Rename"
+msgstr ""
+
+#: src/fr-window.c:7584 src/fr-window.c:7603
+msgid "Could not rename the folder"
+msgstr ""
+
+#: src/fr-window.c:7584 src/fr-window.c:7603
+msgid "Could not rename the file"
+msgstr ""
+
+#: src/fr-window.c:7991
+msgid "Paste Selection"
+msgstr ""
+
+#: src/fr-window.c:7992
+msgid "_Destination folder:"
+msgstr ""
+
+#: src/fr-window.c:7996 src/ui/menus-toolbars.ui:349
+#: src/ui/menus-toolbars.ui:799 src/ui/menus-toolbars.ui:874
+#: src/ui/menus-toolbars.ui:949
+msgid "_Paste"
+msgstr ""
+
+#: src/fr-window.c:8570
+msgid "Add files to an archive"
+msgstr ""
+
+#: src/fr-window.c:8615 src/main.c:195 src/server.c:324 src/server.c:349
+#: src/server.c:372
+msgid "Extract archive"
+msgstr ""
+
+#: src/gtk-utils.c:313
+msgid "Command _Line Output"
+msgstr ""
+
+#: src/gtk-utils.c:544
+msgid "Could not display help"
+msgstr ""
+
+#: src/main.c:56
+msgid "Add files to the specified archive and quit the program"
+msgstr ""
+
+#: src/main.c:57
+msgid "ARCHIVE"
+msgstr ""
+
+#: src/main.c:60
+msgid "Add files asking the name of the archive and quit the program"
+msgstr ""
+
+#: src/main.c:64
+msgid "Extract archives to the specified folder and quit the program"
+msgstr ""
+
+#: src/main.c:65 src/main.c:77
+msgid "FOLDER"
+msgstr ""
+
+#: src/main.c:68
+msgid "Extract archives asking the destination folder and quit the program"
+msgstr ""
+
+#: src/main.c:72
+msgid ""
+"Extract the contents of the archives in the archive folder and quit the "
+"program"
+msgstr ""
+
+#: src/main.c:76
+msgid "Default folder to use for the '--add' and '--extract' commands"
+msgstr ""
+
+#: src/main.c:80
+msgid "Create destination folder without asking confirmation"
+msgstr ""
+
+#: src/main.c:85
+msgid "Show the application's version"
+msgstr ""
+
+#: src/main.c:175 src/server.c:291 src/ui/batch-add-files.ui:28
+msgid "Compress"
+msgstr ""
+
+#: src/main.c:322 src/server.c:437
+msgid "- Create and modify an archive"
+msgstr ""
+
+#: src/ui/add-options.ui:23
+msgid "Load Options"
+msgstr ""
+
+#: src/ui/add-options.ui:58
+msgid "_Apply"
+msgstr ""
+
+#: src/ui/add-options.ui:97
+msgid "_Remove"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:62 src/ui/new.ui:255
+msgid "C_reate"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:81 src/ui/dlg-add-files.ui:41
+#: src/ui/dlg-add-folder.ui:42 src/ui/dlg-extract.ui:41
+#: src/ui/menus-toolbars.ui:593 src/ui/new.ui:272 src/ui/properties.ui:34
+msgid "_Help"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:142
+msgid "_Filename:"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:158
+msgid "Location"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:246 src/ui/new.ui:103
+msgid "_Encrypt the file list too"
+msgstr ""
+
+#. this is part of a sentence, for example "split into volumes of 10.0 MB",
+#. where MB stands for megabyte.
+#: src/ui/batch-add-files.ui:261 src/ui/new.ui:140
+msgid "Split into _volumes of"
+msgstr ""
+
+#. MB means megabytes
+#: src/ui/batch-add-files.ui:300 src/ui/new.ui:165 src/ui/new.ui:179
+msgid "MB"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
+#: src/ui/password.ui:126
+msgid "_Password:"
+msgstr ""
+
+#: src/ui/batch-add-files.ui:366 src/ui/new.ui:202
+msgid "_Other Options"
+msgstr ""
+
+#: src/ui/batch-password.ui:53 src/ui/password.ui:54
+msgid "_OK"
+msgstr ""
+
+#: src/ui/batch-password.ui:116
+msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
+msgstr ""
+
+#: src/ui/delete.ui:18
+msgid "Delete"
+msgstr ""
+
+#: src/ui/delete.ui:52 src/ui/menus-toolbars.ui:372
+#: src/ui/menus-toolbars.ui:816 src/ui/menus-toolbars.ui:891
+#: src/ui/menus-toolbars.ui:966
+msgid "_Delete"
+msgstr ""
+
+#: src/ui/delete.ui:86 src/ui/dlg-extract.ui:122
+msgid "_All files"
+msgstr ""
+
+#: src/ui/delete.ui:103 src/ui/dlg-extract.ui:139
+msgid "_Selected files"
+msgstr ""
+
+#: src/ui/delete.ui:122 src/ui/dlg-extract.ui:183
+msgid "example: *.txt; *.doc"
+msgstr ""
+
+#: src/ui/delete.ui:133 src/ui/dlg-extract.ui:161
+msgid "_Files:"
+msgstr ""
+
+#: src/ui/dlg-add-files.ui:71 src/ui/dlg-add-folder.ui:72
+msgid "_Add"
+msgstr ""
+
+#: src/ui/dlg-add-files.ui:105 src/ui/dlg-add-folder.ui:145
+msgid "Add only if _newer"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:22
+msgid "Add a Folder"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:111
+msgid "_Include subfolders"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:128
+msgid "Exclude folders that are symbolic lin_ks"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:169
+msgid "Include _files:"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:186 src/ui/dlg-add-folder.ui:231
+#: src/ui/dlg-add-folder.ui:263
+msgid "example: *.o; *.bak"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:214
+msgid "E_xclude files:"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:247
+msgid "_Exclude folders:"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:300
+msgid "_Load Options"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:315
+msgid "Sa_ve Options"
+msgstr ""
+
+#: src/ui/dlg-add-folder.ui:330
+msgid "_Reset Options"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:22 src/ui/dlg-extract.ui:211
+#: src/ui/menus-toolbars.ui:658
+msgid "Extract"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:71
+msgid "_Extract"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:244
+msgid "Re-crea_te folders"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:260
+msgid "Over_write existing files"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:277
+msgid "Do not e_xtract older files"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:293
+msgid "close dialog after decompression"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:309
+msgid "Extract to s_ubdirectory"
+msgstr ""
+
+#: src/ui/dlg-extract.ui:331
+msgid "Actions"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:198
+msgid "_Archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:205
+msgid "New…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:206
+msgid "Create a new archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:217
+msgid "Open…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:218
+msgid "Open archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:229
+msgid "Open _Recent"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:230 src/ui/menus-toolbars.ui:646
+msgid "Open a recently used archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:240
+msgid "Save As…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:241
+msgid "Save the current archive with a different name"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:257 src/ui/menus-toolbars.ui:767
+#: src/ui/menus-toolbars.ui:842 src/ui/menus-toolbars.ui:917
+msgid "_Extract…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:258 src/ui/menus-toolbars.ui:660
+#: src/ui/menus-toolbars.ui:768
+msgid "Extract files from the archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:269
+msgid "_Test Integrity"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:270
+msgid "Test whether the archive contains errors"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:285
+msgid "_Properties"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:286
+msgid "Show archive properties"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:303
+msgid "Close the current archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:318
+msgid "_Edit"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:325 src/ui/menus-toolbars.ui:790
+#: src/ui/menus-toolbars.ui:865 src/ui/menus-toolbars.ui:940
+msgid "_Copy"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:326 src/ui/menus-toolbars.ui:791
+#: src/ui/menus-toolbars.ui:866 src/ui/menus-toolbars.ui:941
+msgid "Copy the selection"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:337 src/ui/menus-toolbars.ui:781
+#: src/ui/menus-toolbars.ui:856 src/ui/menus-toolbars.ui:931
+msgid "Cu_t"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:338 src/ui/menus-toolbars.ui:782
+#: src/ui/menus-toolbars.ui:857 src/ui/menus-toolbars.ui:932
+msgid "Cut the selection"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:350 src/ui/menus-toolbars.ui:800
+#: src/ui/menus-toolbars.ui:875 src/ui/menus-toolbars.ui:950
+msgid "Paste the clipboard"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:361 src/ui/menus-toolbars.ui:808
+#: src/ui/menus-toolbars.ui:883 src/ui/menus-toolbars.ui:958
+msgid "_Rename…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:362 src/ui/menus-toolbars.ui:809
+#: src/ui/menus-toolbars.ui:884 src/ui/menus-toolbars.ui:959
+msgid "Rename the selection"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:373 src/ui/menus-toolbars.ui:817
+#: src/ui/menus-toolbars.ui:892 src/ui/menus-toolbars.ui:967
+msgid "Delete the selection from the archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:389
+msgid "Select _All"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:390
+msgid "Select all files"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:401
+msgid "Dese_lect All"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:402
+msgid "Deselect all files"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:417
+msgid "Find…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:431
+msgid "_Add Files…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:432 src/ui/menus-toolbars.ui:673
+msgid "Add files to the archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:443
+msgid "Add a _Folder…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:444 src/ui/menus-toolbars.ui:681
+msgid "Add a folder to the archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:460
+msgid "Pass_word…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:461
+msgid "Specify a password for this archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:475
+msgid "_View"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:482
+msgid "_Toolbar"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:483
+msgid "View the main toolbar"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:493
+msgid "Stat_usbar"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:494
+msgid "View the statusbar"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:504
+msgid "_Folders"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:521
+msgid "View All _Files"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:531
+msgid "View as a F_older"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:548
+msgid "_Last Output"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:549
+msgid "View the output produced by the last executed command"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:565
+msgid "_Stop"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:566 src/ui/menus-toolbars.ui:694
+msgid "Stop current operation"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:577
+msgid "_Refresh"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:578
+msgid "Reload current archive"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:600
+msgid "Contents"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:601
+msgid "Dis_play the Engrampa Manual"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:612
+msgid "_About"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:613
+msgid "Information about the program"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:710
+msgid "Go to the previous visited location"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:718
+msgid "Go to the next visited location"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:726
+msgid "Go up one level"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:734
+msgid "Go to the home location"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:745 src/ui/menus-toolbars.ui:828
+#: src/ui/menus-toolbars.ui:903
+msgid "_Open"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:746
+msgid "Open the selected file"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:754
+msgid "_Open With…"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:755
+msgid "Open selected files with an application"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:829 src/ui/menus-toolbars.ui:904
+msgid "Open the selected folder"
+msgstr ""
+
+#: src/ui/menus-toolbars.ui:843 src/ui/menus-toolbars.ui:918
+msgid "Extract folder from the archive"
+msgstr ""
+
+#: src/ui/password.ui:18
+msgid "Password"
+msgstr ""
+
+#: src/ui/password.ui:94
+msgid "_Encrypt the file list"
+msgstr ""
+
+#: src/ui/password.ui:167
+msgid ""
+"<i><b>Note:</b> the password will be used to encrypt files you add to the "
+"current archive, and to decrypt files you extract from the current archive. "
+"When the archive is closed the password will be deleted.</i>"
+msgstr ""
+
+#: src/ui/properties.ui:89
+msgctxt "File"
+msgid "Name:"
+msgstr ""
+
+#: src/ui/properties.ui:106
+msgid "Archive size:"
+msgstr ""
+
+#: src/ui/properties.ui:147
+msgid "Compression ratio:"
+msgstr ""
+
+#: src/ui/properties.ui:175
+msgid "Content size:"
+msgstr ""
+
+#: src/ui/properties.ui:215
+msgid "Number of files:"
+msgstr ""
+
+#: src/ui/properties.ui:258
+msgid "Location:"
+msgstr ""
+
+#: src/ui/properties.ui:275
+msgid "Last modified:"
+msgstr ""
+
+#: src/ui/properties.ui:292
+msgid "Type:"
+msgstr ""
+
+#: src/ui/update.ui:50 src/ui/update.ui:207
+msgid "_Update"
+msgstr ""
+
+#: src/ui/update.ui:305
+msgid "S_elect the files you want to update:"
+msgstr ""
