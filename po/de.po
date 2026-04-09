@@ -6,17 +6,16 @@
 # Translators:
 # crazyd <lebendig2002@yahoo.de>, 2018
 # Xpistian <xpistianbecker2@web.de>, 2018
-# Wolfgang Ulbrich <raveit65.sun@gmail.com>, 2018
+# Wolfgang Ulbrich <mate@raveit.de>, 2018
 # Julian Rüger <jr98@gmx.net>, 2018
 # nautilusx, 2018
 # Stefan Kadow <git17@ska67.de>, 2019
+# Ettore Atalan <atalanttore@googlemail.com>, 2019
 # Tobias Bannert <tobannert@gmail.com>, 2020
-# Vinzenz Vietzke <vv@muibox.de>, 2021
+# Vinzenz Vietzke <vinz@vinzv.de>, 2021
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Lian Begett, 2022
 # andenbeere <andenbeere@gmx.net>, 2022
-# Ettore Atalan <atalanttore@googlemail.com>, 2025
-# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -24,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: andenbeere <andenbeere@gmx.net>, 2022\n"
 "Language-Team: German (https://app.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,14 +191,10 @@ msgid ""
 "compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
 " (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 msgstr ""
-"Bandarchiv-Datei unkomprimiert (.tar) oder komprimiert mit: gzip (.tar.gz, "
-".tgz), brotli (.tar.br), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2), "
-"compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
-" (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 
 #: data/engrampa.appdata.xml.in.in:39
 msgid "Stuffit Archives (.bin, .sit)"
-msgstr "Stuffit-Archive (.bin, .sit)"
+msgstr ""
 
 #: data/engrampa.appdata.xml.in.in:40
 msgid "ZIP Archive (.zip)"
@@ -219,9 +214,6 @@ msgid ""
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
 msgstr ""
-"Einzelne Dateien mit gzip komprimiert (.gz), brotli (.br), bzip (.bz), bzip2"
-" (.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz"
-" (.xz)."
 
 #: data/engrampa.appdata.xml.in.in:46
 msgid ""
@@ -427,11 +419,11 @@ msgstr "Im Archiv gespeicherte Ordner neu erstellen"
 
 #: data/org.mate.engrampa.gschema.xml.in:155
 msgid "Close dialog after decompression"
-msgstr "Dialog nach der Dekomprimierung schließen"
+msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:159
 msgid "Create a folder with the archive name and extract there"
-msgstr "Ordner mit dem Namen des Archivs erstellen und dort hinein entpacken"
+msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:197
 msgid "Default volume size"
@@ -742,11 +734,7 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Die Datei wurde mit einer externen Anwendung geändert. Wenn Sie die Datei im"
-" Archiv nicht aktualisieren, gehen alle Ihre Änderungen verloren."
 msgstr[1] ""
-"%u Dateien wurden mit einer externen Anwendung geändert. Wenn Sie die "
-"Dateien im Archiv nicht aktualisieren, gehen alle Ihre Änderungen verloren."
 
 #: src/dlg-update.c:191
 #, c-format
@@ -851,7 +839,7 @@ msgstr "Debian-Paket"
 
 #: src/fr-init.c:61
 msgid "Cabinet"
-msgstr "Cabinet"
+msgstr ""
 
 #: src/fr-init.c:62
 msgid "OpenDocument Presentation"
@@ -883,39 +871,39 @@ msgstr "Elektronische Publikation"
 
 #: src/fr-init.c:69
 msgid "7-Zip"
-msgstr "7-Zip"
+msgstr ""
 
 #: src/fr-init.c:70
 msgid "Tar compressed with 7z"
-msgstr "Tar mit 7z komprimiert"
+msgstr ""
 
 #: src/fr-init.c:71
 msgid "Ace"
-msgstr "Ace"
+msgstr ""
 
 #: src/fr-init.c:72
 msgid "ALZip archive"
-msgstr "ALZip-Archiv"
+msgstr ""
 
 #: src/fr-init.c:73
 msgid "ARC archive"
-msgstr "ARC-Archiv"
+msgstr ""
 
 #: src/fr-init.c:74
 msgid "Ar"
-msgstr "Ar"
+msgstr ""
 
 #: src/fr-init.c:75
 msgid "Arj"
-msgstr "Arj"
+msgstr ""
 
 #: src/fr-init.c:76
 msgid "Brotli compressed file"
-msgstr "Brotli-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:77
 msgid "Tar compressed with brotli"
-msgstr "Tar mit Brotli komprimiert"
+msgstr ""
 
 #: src/fr-init.c:78
 msgid "Bzip2 compressed file"
@@ -923,15 +911,15 @@ msgstr "Bzip2-komprimierte Datei"
 
 #: src/fr-init.c:79
 msgid "Tar compressed with bzip2"
-msgstr "Tar mit bzip2 komprimiert"
+msgstr ""
 
 #: src/fr-init.c:80
 msgid "Bzip compressed file"
-msgstr "Bzip-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:81
 msgid "Tar compressed with bzip"
-msgstr "Tar mit bzip komprimiert"
+msgstr ""
 
 #: src/fr-init.c:82
 msgid "Rar Archived Comic Book"
@@ -943,71 +931,71 @@ msgstr ""
 
 #: src/fr-init.c:84
 msgid "Disc Image File"
-msgstr "Disc-Abbild-Datei"
+msgstr ""
 
 #: src/fr-init.c:85
 msgid "Unix Compressed Archive file"
-msgstr "Unix-komprimierte Archivdatei"
+msgstr ""
 
 #: src/fr-init.c:86
 msgid "Tar compressed with gzip"
-msgstr "Tar mit gzip komprimiert"
+msgstr ""
 
 #: src/fr-init.c:87
 msgid "Unix CPIO Archive"
-msgstr "Unix-CPIO-Archiv"
+msgstr ""
 
 #: src/fr-init.c:88
 msgid "Ear"
-msgstr "Ear"
+msgstr ""
 
 #: src/fr-init.c:89
 msgid "GZip compressed file"
-msgstr "GZip-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:90
 msgid "Jar"
-msgstr "Jar"
+msgstr ""
 
 #: src/fr-init.c:91
 msgid "Lha"
-msgstr "Lha"
+msgstr ""
 
 #: src/fr-init.c:92
 msgid "Lrzip "
-msgstr "Lrzip "
+msgstr ""
 
 #: src/fr-init.c:93
 msgid "Tar compressed with lrzip"
-msgstr "Tar mit lrzip komprimiert"
+msgstr ""
 
 #: src/fr-init.c:94
 msgid "LZip compressed file"
-msgstr "LZip-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:95
 msgid "Tar compressed with lzip"
-msgstr "Tar mit lzip komprimiert"
+msgstr ""
 
 #: src/fr-init.c:96
 msgid "LZMA compressed file"
-msgstr "LZMA-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:97
 msgid "Tar compressed with lzma"
-msgstr "Tar mit lzma komprimiert"
+msgstr ""
 
 #: src/fr-init.c:98
 msgid "LZO compressed file"
-msgstr "LZO-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:99
 msgid "Tar compressed with lzop"
-msgstr "Tar mit lzop komprimiert"
+msgstr ""
 
 #: src/fr-init.c:100
 msgid "Self-extracting zip"
-msgstr "Selbstextrahierendes zip"
+msgstr ""
 
 #: src/fr-init.c:101
 msgid "Windows Imaging Format"
@@ -1019,23 +1007,23 @@ msgstr ""
 
 #: src/fr-init.c:103
 msgid "Red Hat Package Manager file"
-msgstr "Red Hat-Paketmanager-Datei"
+msgstr ""
 
 #: src/fr-init.c:104
 msgid "RZip compressed file"
-msgstr "RZip-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:105
 msgid "StuffIt Archive"
-msgstr "StuffIt-Archiv"
+msgstr ""
 
 #: src/fr-init.c:106
 msgid "Tar uncompressed"
-msgstr "Tar unkomprimiert"
+msgstr ""
 
 #: src/fr-init.c:107
 msgid "Tar compressed with compress"
-msgstr "Tar mit compress komprimiert"
+msgstr ""
 
 #: src/fr-init.c:108
 msgid "War"
@@ -1043,11 +1031,11 @@ msgstr ""
 
 #: src/fr-init.c:109
 msgid "Xz compressed file"
-msgstr "Xz-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:110
 msgid "Tar compressed with xz"
-msgstr "Tar mit xz komprimiert"
+msgstr ""
 
 #: src/fr-init.c:111
 msgid "Zoo"
@@ -1055,29 +1043,29 @@ msgstr ""
 
 #: src/fr-init.c:112 src/fr-init.c:113
 msgid "Zstandard compressed file"
-msgstr "Zstandard-komprimierte Datei"
+msgstr ""
 
 #: src/fr-init.c:114
 msgid "Tar compressed with zstd"
-msgstr "Tar mit zstd komprimiert"
+msgstr ""
 
 #: src/fr-init.c:115
 msgid "Zip"
-msgstr "Zip"
+msgstr ""
 
 #: src/fr-window.c:1427
 #, c-format
 msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
-msgstr[0] "%lu Objekt (%s)"
-msgstr[1] "%lu Objekte (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1432
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] "%lu Objekt ausgewählt (%s)"
-msgstr[1] "%lu Objekte ausgewählt (%s)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:1505
 msgid "Folder"
@@ -1195,8 +1183,8 @@ msgstr "S_chließen"
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
-msgstr[0] "%lu Datei verbleiben"
-msgstr[1] "%lu Dateien verbleiben"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/fr-window.c:2709
 msgid "Extraction completed successfully"
@@ -1343,7 +1331,7 @@ msgstr "_Ersetzen"
 
 #: src/fr-window.c:6710
 msgid "Insufficient remaining disk space"
-msgstr "Unzureichender verbleibender Festplattenplatz"
+msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1497,7 +1485,7 @@ msgstr "Optionen laden"
 
 #: src/ui/add-options.ui:58
 msgid "_Apply"
-msgstr "_Anwenden"
+msgstr ""
 
 #: src/ui/add-options.ui:97
 msgid "_Remove"
@@ -1651,11 +1639,11 @@ msgstr "_Keine älteren Dateien entpacken"
 
 #: src/ui/dlg-extract.ui:293
 msgid "close dialog after decompression"
-msgstr "Dialog nach der Dekomprimierung schließen"
+msgstr ""
 
 #: src/ui/dlg-extract.ui:309
 msgid "Extract to s_ubdirectory"
-msgstr "In _Unterverzeichnis extrahieren"
+msgstr ""
 
 #: src/ui/dlg-extract.ui:331
 msgid "Actions"
@@ -1926,7 +1914,7 @@ msgstr "Den gewählten Ordner anzeigen"
 
 #: src/ui/menus-toolbars.ui:843 src/ui/menus-toolbars.ui:918
 msgid "Extract folder from the archive"
-msgstr "Ordner aus dem Archiv extrahieren"
+msgstr ""
 
 #: src/ui/password.ui:18
 msgid "Password"

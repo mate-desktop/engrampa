@@ -14,8 +14,8 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Manel Tinoco <maneltinoco@gmail.com>, 2021
 # Guilherme Campos <guilhermemiguel97@hotmail.com>, 2021
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021
 # José Vieira <jvieira33@sapo.pt>, 2021
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2025
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2025\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2021\n"
 "Language-Team: Portuguese (https://app.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,12 +33,12 @@ msgstr ""
 
 #: mate-submodules/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
-msgstr "Não é um ficheiro .desktop válido"
+msgstr "O ficheiro não é um ficheiro .desktop válido"
 
 #: mate-submodules/libegg/eggdesktopfile.c:194
 #, c-format
 msgid "Unrecognized desktop file Version '%s'"
-msgstr "Versão de ficheiro .desktop '%s' não reconhecida"
+msgstr "Versão de ficheiro .desktop \"%s\" não reconhecida"
 
 #: mate-submodules/libegg/eggdesktopfile.c:984
 #, c-format
@@ -82,7 +82,7 @@ msgstr "Especifique a ID de gestão de sessão"
 
 #: mate-submodules/libegg/eggsmclient.c:244
 msgid "ID"
-msgstr "ID"
+msgstr "ID."
 
 #: mate-submodules/libegg/eggsmclient.c:270
 msgid "Session management options:"
@@ -107,7 +107,7 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
-"O Engrampa é um gestor de arquivos para o ambiente MATE. Permite criar e "
+"Engrampa é um gestor de arquivos para o ambiente MATE. Permite criar e "
 "modificar arquivos, ver os conteúdos dum arquivo, ver um ficheiro contido "
 "num arquivo, e extrair ficheiros de arquivos."
 
@@ -227,7 +227,7 @@ msgid ""
 "If you would like to know more about MATE and Engrampa, please visit the "
 "project's home page."
 msgstr ""
-"O Engrampa é uma derivação do File Roller e parte do ambiente de trabalho "
+"Engrampa é uma modificação do File Roller e parte do Ambiente de Trabalho "
 "MATE. Se gostaria de saber mais sobre o MATE e o Engrampa, visite a página "
 "do projecto."
 
@@ -243,7 +243,7 @@ msgstr "Criar e modificar um arquivo"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr "MATE;arquivo;gestor;compressão;comprimir;"
+msgstr "MATE;arquivo;gestor;compressão;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -271,7 +271,7 @@ msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:48
 msgid "List Mode"
-msgstr "Modo de lista"
+msgstr "Modo de Lista"
 
 #: data/org.mate.engrampa.gschema.xml.in:49
 msgid ""
@@ -322,7 +322,7 @@ msgid ""
 "if TRUE will display icons depending on the file type (slower), otherwise "
 "will use always the same icon for all files (faster)."
 msgstr ""
-"se VERDADEIRO, irá exibir ícones dependendo do tipo de ficheiro (mais "
+"Se VERDADEIRO, irá exibir ícones dependendo do tipo de ficheiro (mais "
 "lento); caso contrário, irá utilizar sempre o mesmo ícone para todos os "
 "ficheiros (mais rápido)."
 
@@ -399,16 +399,16 @@ msgid ""
 "Whether to encrypt the archive header. If the header is encrypted the "
 "password will be required to list the archive content as well."
 msgstr ""
-"Se encriptar o cabeçalho do arquivo. Se o cabeçalho está encriptado, a "
-"palavra-passe será necessária também para listar o conteúdo do arquivo."
+"Se encriptar o cabeçalho do arquivo. Se o cabeçalho está encriptado, a senha"
+" será necessária também para listar o conteúdo do arquivo."
 
 #: data/org.mate.engrampa.gschema.xml.in:131
 msgid "Adds 'unar' support over .zip archives."
-msgstr "Adiciona o suporte a 'unar' em arquivos .zip."
+msgstr "Adiciona o suporte a 'unar' em arquivos .zip"
 
 #: data/org.mate.engrampa.gschema.xml.in:132
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr "Ativa a funcionalidade de suportar 'unar' em arquivos .zip."
+msgstr "Ativa a funcionalidade de suportar 'unar' em arquivos .zip"
 
 #: data/org.mate.engrampa.gschema.xml.in:143
 msgid "Overwrite existing files"
@@ -424,11 +424,11 @@ msgstr "Recriar as pastas armazenadas no arquivo"
 
 #: data/org.mate.engrampa.gschema.xml.in:155
 msgid "Close dialog after decompression"
-msgstr "Fechar a janela após a descompressão"
+msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:159
 msgid "Create a folder with the archive name and extract there"
-msgstr "Crie uma pasta com o nome do arquivo e extraia-a para lá"
+msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:197
 msgid "Default volume size"
@@ -500,7 +500,7 @@ msgstr "Tipo de arquivo não suportado."
 
 #: src/actions.c:289
 msgid "Could not delete the old archive."
-msgstr "Não foi possível eliminar o arquivo antigo."
+msgstr "Incapaz de eliminar o arquivo antigo."
 
 #: src/actions.c:438 src/ui/menus-toolbars.ui:643
 msgid "Open"
@@ -562,11 +562,11 @@ msgstr ""
 
 #: src/actions.c:867
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
-msgstr "O Engrampa é um gestor de arquivos para o ambiente de trabalho MATE."
+msgstr "Engrampa é um gestor de arquivos para o ambiente de trabalho MATE."
 
 #: src/actions.c:870
 msgid "translator-credits"
-msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
+msgstr "Hugo Carvalho <hugokarvalho@gmail.com>"
 
 #: src/dlg-add-files.c:101 src/dlg-add-folder.c:125
 msgid "Could not add the files to the archive"
@@ -601,7 +601,7 @@ msgstr "_Guardar"
 #: src/dlg-ask-password.c:113
 #, c-format
 msgid "Enter the password for the archive '%s'."
-msgstr "Introduza a palavra-passe para o arquivo '%s'."
+msgstr "Introduza a senha para o arquivo \"%s\"."
 
 #: src/dlg-batch-add.c:174
 #, c-format
@@ -616,7 +616,7 @@ msgstr ""
 
 #: src/dlg-batch-add.c:177 src/fr-window.c:7491 src/fr-window.c:7493
 msgid "Please use a different name."
-msgstr "Use um nome diferente."
+msgstr "Por favor use um nome diferente."
 
 #: src/dlg-batch-add.c:204
 msgid ""
@@ -644,7 +644,7 @@ msgstr "Criar _pasta"
 #: src/dlg-batch-add.c:248 src/dlg-extract.c:128 src/fr-window.c:6761
 #, c-format
 msgid "Could not create the destination folder: %s."
-msgstr "Não foi possível criar a pasta de destino: %s."
+msgstr "Incapaz de criar a pasta de destino: %s"
 
 #: src/dlg-batch-add.c:265
 msgid "Archive not created"
@@ -701,7 +701,7 @@ msgstr "Incapaz de abrir este tipo de ficheiro"
 
 #: src/dlg-package-installer.c:316
 msgid "_Search Command"
-msgstr "Comando de _pesquisa"
+msgstr "Comando de _procura"
 
 #: src/dlg-prop.c:94
 #, c-format
@@ -747,7 +747,7 @@ msgstr "_Formato do ficheiro: %s"
 
 #: src/eggfileformatchooser.c:385
 msgid "All Files"
-msgstr "Todos os ficheiros"
+msgstr "Todos os Ficheiros"
 
 #: src/eggfileformatchooser.c:386
 msgid "All Supported Files"
@@ -934,7 +934,7 @@ msgstr "Ficheiro de Imagem de Disco"
 
 #: src/fr-init.c:85
 msgid "Unix Compressed Archive file"
-msgstr "Ficheiro de arquivo comprimido Unix"
+msgstr "Ficheiro de Arquivo Comprimido Unix "
 
 #: src/fr-init.c:86
 msgid "Tar compressed with gzip"
@@ -962,7 +962,7 @@ msgstr "Lha"
 
 #: src/fr-init.c:92
 msgid "Lrzip "
-msgstr "Lrzip "
+msgstr "Lrzip"
 
 #: src/fr-init.c:93
 msgid "Tar compressed with lrzip"
@@ -1095,7 +1095,7 @@ msgstr "_Continuar"
 
 #: src/fr-window.c:2199 src/fr-window.c:2792
 msgid "Please wait…"
-msgstr "Aguarde…"
+msgstr "Por favor aguarde..."
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2273 src/fr-window.c:2311
@@ -1119,7 +1119,7 @@ msgstr "A ler \"%s\""
 #: src/fr-window.c:2285
 #, c-format
 msgid "Deleting files from \"%s\""
-msgstr "A eliminar ficheiros de \"%s\""
+msgstr "A apagar ficheiros de \"%s\""
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2289
@@ -1173,7 +1173,7 @@ msgstr "_Mostrar ficheiros"
 
 #: src/fr-window.c:2480
 msgid "Show the _Files and Quit"
-msgstr "Mostrar os _ficheiros e sair"
+msgstr "Mostrar os _Ficheiros e Sair"
 
 #: src/fr-window.c:2481 src/ui/add-options.ui:40 src/ui/menus-toolbars.ui:302
 #: src/ui/properties.ui:52
@@ -1184,9 +1184,9 @@ msgstr "Fe_char"
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
-msgstr[0] "%lu ficheiro restante"
-msgstr[1] "%lu ficheiros restantes"
-msgstr[2] "%lu ficheiros restantes"
+msgstr[0] "ficheiro %lu restante"
+msgstr[1] "ficheiros %lu restantes"
+msgstr[2] "ficheiros %lu restantes"
 
 #: src/fr-window.c:2709
 msgid "Extraction completed successfully"
@@ -1207,19 +1207,19 @@ msgstr "Ocorreu um erro ao extrair os ficheiros."
 #: src/fr-window.c:2955
 #, c-format
 msgid "Could not open \"%s\""
-msgstr "Não foi possível abrir \"%s\""
+msgstr "Incapaz de abrir \"%s\""
 
 #: src/fr-window.c:2960
 msgid "An error occurred while loading the archive."
-msgstr "Ocorreu um erro ao carregar o arquivo."
+msgstr "Ocorreu um erro ao carregar o arquivo"
 
 #: src/fr-window.c:2964
 msgid "An error occurred while deleting files from the archive."
-msgstr "Ocorreu um erro ao eliminar ficheiros do arquivo."
+msgstr "Ocorreu um erro ao eliminar ficheiros do arquivo"
 
 #: src/fr-window.c:2970
 msgid "An error occurred while adding files to the archive."
-msgstr "Ocorreu um erro ao adicionar ficheiros ao arquivo."
+msgstr "Ocorreu um erro ao adicionar ficheiros ao arquivo"
 
 #: src/fr-window.c:2974
 msgid "An error occurred while testing archive."
@@ -1244,19 +1244,19 @@ msgstr "Resultado do teste"
 #: src/fr-window.c:4021 src/fr-window.c:8028 src/fr-window.c:8063
 #: src/fr-window.c:8304
 msgid "Could not perform the operation"
-msgstr "Não foi possível realizar a operação"
+msgstr "Incapaz de realizar a operação"
 
 #: src/fr-window.c:4047
 msgid ""
 "Do you want to add this file to the current archive or open it as a new "
 "archive?"
 msgstr ""
-"Pretende adicionar este ficheiro ao arquivo atual, ou deseja abri-lo como um"
-" novo arquivo?"
+"Deseja adicionar este ficheiro ao arquivo atual, ou deseja abri-lo como um "
+"novo arquivo?"
 
 #: src/fr-window.c:4077
 msgid "Do you want to create a new archive with these files?"
-msgstr "Pretende criar um novo arquivo com estes ficheiros?"
+msgstr "Deseja criar um novo arquivo com estes ficheiros?"
 
 #: src/fr-window.c:4080
 msgid "Create _Archive"
@@ -1321,7 +1321,7 @@ msgstr "Já existe outro ficheiro com o mesmo nome em \"%s\"."
 
 #: src/fr-window.c:6619
 msgid "Replace _All"
-msgstr "Substituir _tudo"
+msgstr "Substituir _Tudo"
 
 #: src/fr-window.c:6620
 msgid "_Skip"
@@ -1333,7 +1333,7 @@ msgstr "_Substituir"
 
 #: src/fr-window.c:6710
 msgid "Insufficient remaining disk space"
-msgstr "Espaço restante em disco insuficiente"
+msgstr ""
 
 #. Translators: the name references to a filename.  This message can appear
 #. when renaming a file.
@@ -1376,7 +1376,7 @@ msgstr ""
 
 #: src/fr-window.c:7562
 msgid "Rename"
-msgstr "Renomear"
+msgstr "Mudar nome"
 
 #: src/fr-window.c:7563
 msgid "_New folder name:"
@@ -1388,15 +1388,15 @@ msgstr "_Novo nome de ficheiro:"
 
 #: src/fr-window.c:7567
 msgid "_Rename"
-msgstr "_Renomear"
+msgstr "Muda_r nome"
 
 #: src/fr-window.c:7584 src/fr-window.c:7603
 msgid "Could not rename the folder"
-msgstr "Não foi possível renomear a pasta"
+msgstr "Incapaz de mudar o nome da pasta"
 
 #: src/fr-window.c:7584 src/fr-window.c:7603
 msgid "Could not rename the file"
-msgstr "Não foi possível renomear o ficheiro"
+msgstr "Incapaz de mudar o nome do ficheiro"
 
 #: src/fr-window.c:7991
 msgid "Paste Selection"
@@ -1527,7 +1527,7 @@ msgstr "MB"
 #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
 #: src/ui/password.ui:126
 msgid "_Password:"
-msgstr "_Palavra-passe:"
+msgstr "_Senha:"
 
 #: src/ui/batch-add-files.ui:366 src/ui/new.ui:202
 msgid "_Other Options"
@@ -1539,7 +1539,7 @@ msgstr "_OK"
 
 #: src/ui/batch-password.ui:116
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">Requer palavra-passe</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">Requer senha</span>"
 
 #: src/ui/delete.ui:18
 msgid "Delete"
@@ -1549,7 +1549,7 @@ msgstr "Eliminar"
 #: src/ui/menus-toolbars.ui:816 src/ui/menus-toolbars.ui:891
 #: src/ui/menus-toolbars.ui:966
 msgid "_Delete"
-msgstr "_Eliminar"
+msgstr "_Apagar"
 
 #: src/ui/delete.ui:86 src/ui/dlg-extract.ui:122
 msgid "_All files"
@@ -1639,11 +1639,11 @@ msgstr "Não e_xtrair ficheiros mais antigos"
 
 #: src/ui/dlg-extract.ui:293
 msgid "close dialog after decompression"
-msgstr "fechar a janela após a descompressão"
+msgstr ""
 
 #: src/ui/dlg-extract.ui:309
 msgid "Extract to s_ubdirectory"
-msgstr "Extrair para s_ubdiretório"
+msgstr ""
 
 #: src/ui/dlg-extract.ui:331
 msgid "Actions"
@@ -1655,7 +1655,7 @@ msgstr "_Arquivo"
 
 #: src/ui/menus-toolbars.ui:205
 msgid "New…"
-msgstr "Novo…"
+msgstr "Novo..."
 
 #: src/ui/menus-toolbars.ui:206
 msgid "Create a new archive"
@@ -1663,7 +1663,7 @@ msgstr "Criar um novo arquivo"
 
 #: src/ui/menus-toolbars.ui:217
 msgid "Open…"
-msgstr "Abrir…"
+msgstr "Abrir..."
 
 #: src/ui/menus-toolbars.ui:218
 msgid "Open archive"
@@ -1688,7 +1688,7 @@ msgstr "Gravar arquivo atual com um nome diferente"
 #: src/ui/menus-toolbars.ui:257 src/ui/menus-toolbars.ui:767
 #: src/ui/menus-toolbars.ui:842 src/ui/menus-toolbars.ui:917
 msgid "_Extract…"
-msgstr "_Extrair…"
+msgstr "_Extrair"
 
 #: src/ui/menus-toolbars.ui:258 src/ui/menus-toolbars.ui:660
 #: src/ui/menus-toolbars.ui:768
@@ -1747,12 +1747,12 @@ msgstr "Colar da área de transferência"
 #: src/ui/menus-toolbars.ui:361 src/ui/menus-toolbars.ui:808
 #: src/ui/menus-toolbars.ui:883 src/ui/menus-toolbars.ui:958
 msgid "_Rename…"
-msgstr "_Renomear…"
+msgstr "_Mudar nome..."
 
 #: src/ui/menus-toolbars.ui:362 src/ui/menus-toolbars.ui:809
 #: src/ui/menus-toolbars.ui:884 src/ui/menus-toolbars.ui:959
 msgid "Rename the selection"
-msgstr "Renomear a seleção"
+msgstr "Mudar nome da seleção"
 
 #: src/ui/menus-toolbars.ui:373 src/ui/menus-toolbars.ui:817
 #: src/ui/menus-toolbars.ui:892 src/ui/menus-toolbars.ui:967
@@ -1761,7 +1761,7 @@ msgstr "Eliminar seleção do arquivo"
 
 #: src/ui/menus-toolbars.ui:389
 msgid "Select _All"
-msgstr "Selecion_ar tudo"
+msgstr "Selecion_ar Tudo"
 
 #: src/ui/menus-toolbars.ui:390
 msgid "Select all files"
@@ -1777,11 +1777,11 @@ msgstr "Desmarcar todos os ficheiros"
 
 #: src/ui/menus-toolbars.ui:417
 msgid "Find…"
-msgstr "Localizar…"
+msgstr "Procurar..."
 
 #: src/ui/menus-toolbars.ui:431
 msgid "_Add Files…"
-msgstr "_Adicionar ficheiros…"
+msgstr "_Adicionar Ficheiros..."
 
 #: src/ui/menus-toolbars.ui:432 src/ui/menus-toolbars.ui:673
 msgid "Add files to the archive"
@@ -1789,7 +1789,7 @@ msgstr "Adicionar ficheiros ao arquivo"
 
 #: src/ui/menus-toolbars.ui:443
 msgid "Add a _Folder…"
-msgstr "Adicionar uma _pasta…"
+msgstr "Adicionar uma _Pasta..."
 
 #: src/ui/menus-toolbars.ui:444 src/ui/menus-toolbars.ui:681
 msgid "Add a folder to the archive"
@@ -1797,11 +1797,11 @@ msgstr "Adicionar uma pasta ao arquivo"
 
 #: src/ui/menus-toolbars.ui:460
 msgid "Pass_word…"
-msgstr "_Pala_vra-passe…"
+msgstr "_Senha..."
 
 #: src/ui/menus-toolbars.ui:461
 msgid "Specify a password for this archive"
-msgstr "Especifique a palavra-passe para este arquivo"
+msgstr "Especifique a senha para este arquivo"
 
 #: src/ui/menus-toolbars.ui:475
 msgid "_View"
@@ -1853,7 +1853,7 @@ msgstr "Parar a operação atual"
 
 #: src/ui/menus-toolbars.ui:577
 msgid "_Refresh"
-msgstr "Atua_lizar"
+msgstr "_Refrescar"
 
 #: src/ui/menus-toolbars.ui:578
 msgid "Reload current archive"
@@ -1865,7 +1865,7 @@ msgstr "Conteúdo"
 
 #: src/ui/menus-toolbars.ui:601
 msgid "Dis_play the Engrampa Manual"
-msgstr "Mos_trar o manual do Engrampa"
+msgstr ""
 
 #: src/ui/menus-toolbars.ui:612
 msgid "_About"
@@ -1902,7 +1902,7 @@ msgstr "Abrir o ficheiro selecionado"
 
 #: src/ui/menus-toolbars.ui:754
 msgid "_Open With…"
-msgstr "_Abrir com…"
+msgstr "_Abrir Com..."
 
 #: src/ui/menus-toolbars.ui:755
 msgid "Open selected files with an application"
@@ -1914,11 +1914,11 @@ msgstr "Abrir a pasta selecionada"
 
 #: src/ui/menus-toolbars.ui:843 src/ui/menus-toolbars.ui:918
 msgid "Extract folder from the archive"
-msgstr "Extrair a pasta do arquivo"
+msgstr ""
 
 #: src/ui/password.ui:18
 msgid "Password"
-msgstr "Palavra-passe"
+msgstr "Senha"
 
 #: src/ui/password.ui:94
 msgid "_Encrypt the file list"
@@ -1930,9 +1930,9 @@ msgid ""
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
-"<i><b>Nota:</b> a palavra-passe será utilizada para encriptar os ficheiros "
-"que adicionar ao arquivo atual, e para desencriptar ficheiros que extraia do"
-" arquivo atual. Ao fechar o arquivo, a palavra-passe será eliminada.</i>"
+"<i><b>Nota:</b> a senha será utilizada para encriptar os ficheiros que "
+"adicionar ao arquivo atual, e para desencriptar ficheiros que extraia do "
+"arquivo atual. Ao fechar o arquivo, a senha será apagada.</i>"
 
 #: src/ui/properties.ui:89
 msgctxt "File"
