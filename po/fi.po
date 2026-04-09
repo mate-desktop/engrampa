@@ -5,12 +5,14 @@
 # 
 # Translators:
 # Mikko Harhanen <gitti@mikkoharhanen.fi>, 2018
-# Lasse Liehu <larso@gmx.com>, 2018
+# Lasse Liehu-Inui <larso@gmx.com>, 2018
 # Eslam Ali <talvikahvi@gmail.com>, 2018
 # Ammuu5, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # nomen omen, 2021
 # Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021
+# Tommi Nieminen <translator@legisign.org>, 2026
+# Transifex Bot <>, 2026
 # 
 msgid ""
 msgstr ""
@@ -18,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
 "PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,76 +103,81 @@ msgid ""
 "create and modify archives, view the contents of an archive, view a file "
 "contained in an archive, and extract files from archive."
 msgstr ""
+"Engrampa on arkistonhallintaohjelma MATE-ympäristöön. Sillä voi luoda ja "
+"muokata arkistoja, tarkastella niiden sisältöä ja arkistoon sisältyviä "
+"tiedostoja ja purkaa tiedostoja arkistosta."
 
 #: data/engrampa.appdata.xml.in.in:15
 msgid ""
 "Engrampa is only a front-end (a graphical interface) to archiving programs "
 "like tar and zip. The supported file types are:"
 msgstr ""
+"Engrampa on vain graafinen käyttöliittymä arkistointiohjelmiin kuten tariin "
+"ja zipiin. Tuetut tiedostotyypit ovat:"
 
 #: data/engrampa.appdata.xml.in.in:20
 msgid "7-Zip Compressed File (.7z)"
-msgstr ""
+msgstr "7-Zip-pakattu tiedosto (.7z)"
 
 #: data/engrampa.appdata.xml.in.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr ""
+msgstr "WinAce-pakattu tiedosto (.ace)"
 
 #: data/engrampa.appdata.xml.in.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr ""
+msgstr "ALZip-pakattu tiedosto (.alz)"
 
 #: data/engrampa.appdata.xml.in.in:23
 msgid "AIX Small Indexed Archive (.ar)"
-msgstr ""
+msgstr "Pieni indeksoitu AIX-arkisto (.ar)"
 
 #: data/engrampa.appdata.xml.in.in:24
 msgid "ARJ Compressed Archive (.arj)"
-msgstr ""
+msgstr "ARJ-pakattu arkisto (.arj)"
 
 #: data/engrampa.appdata.xml.in.in:25
 msgid "Cabinet File (.cab)"
-msgstr ""
+msgstr "Cabinet-tiedosto (.cab)"
 
 #: data/engrampa.appdata.xml.in.in:26
 msgid "UNIX CPIO Archive (.cpio)"
-msgstr ""
+msgstr "UNIX-cpio-arkisto (.cpio)"
 
 #: data/engrampa.appdata.xml.in.in:27
 msgid "Debian Package (.deb, .udeb) [Read-only mode]"
-msgstr ""
+msgstr "Debian-paketti (.deb, .udeb) [vain luku -tila]"
 
 #: data/engrampa.appdata.xml.in.in:28
 msgid "ISO-9660 Disk Image (.iso) [Read-only mode]"
-msgstr ""
+msgstr "ISO-9660-levykuva (.iso) [vain luku -tila]"
 
 #: data/engrampa.appdata.xml.in.in:29
 msgid "Java Archive (.jar)"
-msgstr ""
+msgstr "Java-arkisto (.jar)"
 
 #: data/engrampa.appdata.xml.in.in:30
 msgid "Java Enterprise archive (.ear)"
-msgstr ""
+msgstr "Java Enterprise -arkisto (.ear)"
 
 #: data/engrampa.appdata.xml.in.in:31
 msgid "Java Web Archive (.war)"
-msgstr ""
+msgstr "Java-web-arkisto (.war)"
 
 #: data/engrampa.appdata.xml.in.in:32
 msgid "LHA Archive (.lzh, .lha)"
-msgstr ""
+msgstr "LHA-arkisto (.lzh, lha)"
 
 #: data/engrampa.appdata.xml.in.in:33
 msgid "WinRAR Compressed Archive (.rar)"
-msgstr ""
+msgstr "WinRAR-pakattu arkisto (.rar)"
 
 #: data/engrampa.appdata.xml.in.in:34
 msgid "RAR Archived Comic Book (.cbr)"
-msgstr ""
+msgstr "RAR-arkistoitu sarjakuvakirja (.cbr)"
 
 #: data/engrampa.appdata.xml.in.in:35
 msgid "RPM Package Manager (.rpm) [Read-only mode]"
-msgstr ""
+msgstr "RPM-paketinhallinta (.rpm) [vain luku -tila]"
 
 #: data/engrampa.appdata.xml.in.in:36
 msgid ""
@@ -179,22 +186,27 @@ msgid ""
 "compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, .tlz), lzop"
 " (.tar.lzo, .tzo), 7zip (.tar.7z), xz (.tar.xz), Zstandard (.zst)"
 msgstr ""
+"TAR-tiedosto pakkaamattomana (.tar) tai pakattuna jollakin seuraavista: GZip"
+" (.tar.gz, .tgz), Brotli (.tar.br), BZip (.tar.bz, .tbz), BZip2 (.tar.bz2, "
+".tbz2), compress (.tar.Z, .taz), lrzip (.tar.lrz, .tlrz), lzip (.tar.lz, "
+".tlz), lzop (.tar.lzo, .tzo), 7Zip, (.tar.7z), XZ (.tar.xz), Zstandard "
+"(.zst)"
 
 #: data/engrampa.appdata.xml.in.in:39
 msgid "Stuffit Archives (.bin, .sit)"
-msgstr ""
+msgstr "StuffIt-arkistot (.bin, .sit)"
 
 #: data/engrampa.appdata.xml.in.in:40
 msgid "ZIP Archive (.zip)"
-msgstr ""
+msgstr "ZIP-arkisto (.zip)"
 
 #: data/engrampa.appdata.xml.in.in:41
 msgid "ZIP Archived Comic Book (.cbz)"
-msgstr ""
+msgstr "Zip-arkistoitu sarjakuvakirja (.cbz)"
 
 #: data/engrampa.appdata.xml.in.in:42
 msgid "ZOO Compressed Archive File (.zoo)"
-msgstr ""
+msgstr "ZOO-pakattu arkistotiedosto (.zoo)"
 
 #: data/engrampa.appdata.xml.in.in:43
 msgid ""
@@ -202,6 +214,9 @@ msgid ""
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
 msgstr ""
+"Gzipillä (.gz), Brotlilla (.br), BZipillä (.bz), Bzip2:lla (.bz2), "
+"compressilla (.Z), lrzipllä (.lrz), lzipillä (.lz), lzopilla (.lzo), "
+"rzipillä (.rz) tai XZ:llä (.xz) pakatut yksittäiset tiedostot"
 
 #: data/engrampa.appdata.xml.in.in:46
 msgid ""
@@ -209,6 +224,8 @@ msgid ""
 "If you would like to know more about MATE and Engrampa, please visit the "
 "project's home page."
 msgstr ""
+"Engrampa on haarautus File Rollerista ja on osa MATE-työpöytäympäristöä. Jos"
+" haluat tietää lisää MATEsta ja Engrampasta, käy projektin kotisivulla."
 
 #: data/engrampa.desktop.in.in:4 src/fr-window.c:1889 src/fr-window.c:5293
 msgid "Archive Manager"
@@ -222,7 +239,7 @@ msgstr "Luo arkisto tai muokkaa arkistoa"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr ""
+msgstr "MATE;arkisto;hallinta;pakkaus;pakkaaminen;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -353,6 +370,8 @@ msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
+"Luettelo Avaa tiedosto -kyselyikkunaan annetuista sovelluksista, joita ei "
+"ole kytketty tiedostotyyppiin."
 
 #: data/org.mate.engrampa.gschema.xml.in:121
 msgid "Compression level"
@@ -363,6 +382,8 @@ msgid ""
 "Compression level used when adding files to an archive. Possible values: "
 "very_fast, fast, normal, maximum."
 msgstr ""
+"Pakkaustasoa käytetään lisättäessä tiedostoja arkistoon. Mahdolliset arvot: "
+"hyvin_nopea, nopea, tavallinen, maksimi."
 
 #: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
@@ -378,11 +399,11 @@ msgstr ""
 
 #: data/org.mate.engrampa.gschema.xml.in:131
 msgid "Adds 'unar' support over .zip archives."
-msgstr ""
+msgstr "Lisää ”unar”-tuen .zip-arkistoihin."
 
 #: data/org.mate.engrampa.gschema.xml.in:132
 msgid "It enables the ability to support 'unar' over .zip archives."
-msgstr ""
+msgstr "Mahdollistaa ”unar”-tuen .zip-arkistoihin."
 
 #: data/org.mate.engrampa.gschema.xml.in:143
 msgid "Overwrite existing files"
@@ -531,10 +552,12 @@ msgid ""
 "Copyright © 2001–2010 Free Software Foundation, Inc.\n"
 "Copyright © 2012–2021 The MATE developers"
 msgstr ""
+"Tekijänoikeudet © 2001–2010 Free Software Foundation, Inc.\n"
+"Tekijänoikeudet © 2012–2021 MATEn kehittäjät"
 
 #: src/actions.c:867
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
-msgstr ""
+msgstr "Engrampa on arkistonhallintaohjelma MATE-työpöytäympäristöön."
 
 #: src/actions.c:870
 msgid "translator-credits"
@@ -700,7 +723,11 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
+"Ulkoinen sovellus on muuttanut tiedostoa. Ellei arkiston tiedostoa "
+"päivitetä, muutokset menetetään."
 msgstr[1] ""
+"Ulkoinen sovellus on muuttanut%u tiedostoa. Ellei arkiston tiedostoja "
+"päivitetä, muutokset menetetään."
 
 #: src/dlg-update.c:191
 #, c-format
@@ -805,7 +832,7 @@ msgstr "Debian-paketti"
 
 #: src/fr-init.c:61
 msgid "Cabinet"
-msgstr ""
+msgstr "Cabinet"
 
 #: src/fr-init.c:62
 msgid "OpenDocument Presentation"
@@ -833,43 +860,43 @@ msgstr "OpenDocument-tekstiasiakirjan malli"
 
 #: src/fr-init.c:68
 msgid "Electronic Publication"
-msgstr ""
+msgstr "E-julkaisu"
 
 #: src/fr-init.c:69
 msgid "7-Zip"
-msgstr ""
+msgstr "7-Zip"
 
 #: src/fr-init.c:70
 msgid "Tar compressed with 7z"
-msgstr ""
+msgstr "7z:lla pakattu Tar"
 
 #: src/fr-init.c:71
 msgid "Ace"
-msgstr ""
+msgstr "Ace"
 
 #: src/fr-init.c:72
 msgid "ALZip archive"
-msgstr ""
+msgstr "ALZip-arkisto"
 
 #: src/fr-init.c:73
 msgid "ARC archive"
-msgstr ""
+msgstr "ARC-arkisto"
 
 #: src/fr-init.c:74
 msgid "Ar"
-msgstr ""
+msgstr "Ar"
 
 #: src/fr-init.c:75
 msgid "Arj"
-msgstr ""
+msgstr "Arj"
 
 #: src/fr-init.c:76
 msgid "Brotli compressed file"
-msgstr ""
+msgstr "Brotli-pakattu tiedosto"
 
 #: src/fr-init.c:77
 msgid "Tar compressed with brotli"
-msgstr ""
+msgstr "Brotlilla pakattu Tar"
 
 #: src/fr-init.c:78
 msgid "Bzip2 compressed file"
@@ -877,143 +904,143 @@ msgstr "Bzip2-tiivistetty tiedosto"
 
 #: src/fr-init.c:79
 msgid "Tar compressed with bzip2"
-msgstr ""
+msgstr "BZip2:lla pakattu Tar"
 
 #: src/fr-init.c:80
 msgid "Bzip compressed file"
-msgstr ""
+msgstr "Bzip-pakattu tiedosto"
 
 #: src/fr-init.c:81
 msgid "Tar compressed with bzip"
-msgstr ""
+msgstr "BZipillä pakattu Tar"
 
 #: src/fr-init.c:82
 msgid "Rar Archived Comic Book"
-msgstr ""
+msgstr "Rar-arkistoitu sarjakuvakirja"
 
 #: src/fr-init.c:83
 msgid "Zip Archived Comic Book"
-msgstr ""
+msgstr "Zip-arkistoitu sarjakuvakirja"
 
 #: src/fr-init.c:84
 msgid "Disc Image File"
-msgstr ""
+msgstr "Levykuvatiedosto"
 
 #: src/fr-init.c:85
 msgid "Unix Compressed Archive file"
-msgstr ""
+msgstr "Pakattu Unix-arkistotiedosto"
 
 #: src/fr-init.c:86
 msgid "Tar compressed with gzip"
-msgstr ""
+msgstr "GZipillä pakattu Tar"
 
 #: src/fr-init.c:87
 msgid "Unix CPIO Archive"
-msgstr ""
+msgstr "Unixin CPIO-arkisto"
 
 #: src/fr-init.c:88
 msgid "Ear"
-msgstr ""
+msgstr "Ear"
 
 #: src/fr-init.c:89
 msgid "GZip compressed file"
-msgstr ""
+msgstr "GZip-pakattu tiedosto"
 
 #: src/fr-init.c:90
 msgid "Jar"
-msgstr ""
+msgstr "Jar"
 
 #: src/fr-init.c:91
 msgid "Lha"
-msgstr ""
+msgstr "Lha"
 
 #: src/fr-init.c:92
 msgid "Lrzip "
-msgstr ""
+msgstr "Lrzip "
 
 #: src/fr-init.c:93
 msgid "Tar compressed with lrzip"
-msgstr ""
+msgstr "lrzipillä pakattu Tar"
 
 #: src/fr-init.c:94
 msgid "LZip compressed file"
-msgstr ""
+msgstr "LZip-pakattu tiedosto"
 
 #: src/fr-init.c:95
 msgid "Tar compressed with lzip"
-msgstr ""
+msgstr "lzipillä pakattu Tar"
 
 #: src/fr-init.c:96
 msgid "LZMA compressed file"
-msgstr ""
+msgstr "LZMA-pakattu tiedosto"
 
 #: src/fr-init.c:97
 msgid "Tar compressed with lzma"
-msgstr ""
+msgstr "lzma:lla pakattu Tar"
 
 #: src/fr-init.c:98
 msgid "LZO compressed file"
-msgstr ""
+msgstr "LZO-pakattu tiedosto"
 
 #: src/fr-init.c:99
 msgid "Tar compressed with lzop"
-msgstr ""
+msgstr "lzop:lla pakattu Tar"
 
 #: src/fr-init.c:100
 msgid "Self-extracting zip"
-msgstr ""
+msgstr "Itsensä purkava zip"
 
 #: src/fr-init.c:101
 msgid "Windows Imaging Format"
-msgstr ""
+msgstr "Windows-kuvatiedostomuoto"
 
 #: src/fr-init.c:102
 msgid "Rar"
-msgstr ""
+msgstr "Rar"
 
 #: src/fr-init.c:103
 msgid "Red Hat Package Manager file"
-msgstr ""
+msgstr "Red Hat Package Manager -tiedosto"
 
 #: src/fr-init.c:104
 msgid "RZip compressed file"
-msgstr ""
+msgstr "RZip-pakattu tiedosto"
 
 #: src/fr-init.c:105
 msgid "StuffIt Archive"
-msgstr ""
+msgstr "StuffIt-arkisto"
 
 #: src/fr-init.c:106
 msgid "Tar uncompressed"
-msgstr ""
+msgstr "Pakkaamaton Tar"
 
 #: src/fr-init.c:107
 msgid "Tar compressed with compress"
-msgstr ""
+msgstr "compressilla pakattu Tar"
 
 #: src/fr-init.c:108
 msgid "War"
-msgstr ""
+msgstr "War"
 
 #: src/fr-init.c:109
 msgid "Xz compressed file"
-msgstr ""
+msgstr "XZ-pakattu tiedosto"
 
 #: src/fr-init.c:110
 msgid "Tar compressed with xz"
-msgstr ""
+msgstr "xz:llä pakattu Tar"
 
 #: src/fr-init.c:111
 msgid "Zoo"
-msgstr ""
+msgstr "Zoo"
 
 #: src/fr-init.c:112 src/fr-init.c:113
 msgid "Zstandard compressed file"
-msgstr ""
+msgstr "Zstandard-pakattu tiedosto"
 
 #: src/fr-init.c:114
 msgid "Tar compressed with zstd"
-msgstr ""
+msgstr "zstd:llä pakattu Tar"
 
 #: src/fr-init.c:115
 msgid "Zip"
@@ -1023,15 +1050,15 @@ msgstr "Zip"
 #, c-format
 msgid "%lu object (%s)"
 msgid_plural "%lu objects (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu kohde (%s)"
+msgstr[1] "%lu kohdetta (%s)"
 
 #: src/fr-window.c:1432
 #, c-format
 msgid "%lu object selected (%s)"
 msgid_plural "%lu objects selected (%s)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu kohde valittu (%s)"
+msgstr[1] "%lu kohdetta valittu (%s)"
 
 #: src/fr-window.c:1505
 msgid "Folder"
@@ -1149,8 +1176,8 @@ msgstr "_Sulje"
 #, c-format
 msgid "%lu file remaining"
 msgid_plural "%lu files remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu tiedosto jäljellä"
+msgstr[1] "%lu tiedostoa jäljellä"
 
 #: src/fr-window.c:2709
 msgid "Extraction completed successfully"
