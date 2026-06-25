@@ -32,7 +32,8 @@
 
 static GtkTargetEntry target_table[] = {
         { "XdndDirectSave0", 0, 0 },
-        { "XdndEngrampa0", 0, 1 }
+        { "XdndEngrampa0", 0, 1 },
+        { "text/uri-list", 0, 2 }
 };
 
 typedef struct
