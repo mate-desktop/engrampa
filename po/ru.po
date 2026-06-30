@@ -1,9 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the engrampa package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2018
 # Дмитрий Михирев, 2018
 # AlexL <loginov.alex.valer@gmail.com>, 2018
@@ -18,20 +15,27 @@
 # Andrei Stepanov, 2023
 # Sergej A. <Ser82-png@yandex.ru>, 2025
 # user translate, 2025
-# 
+# "Sergey A." <Ser82-png@yandex.ru>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: user translate, 2025\n"
-"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
+"PO-Revision-Date: 2026-06-20 09:12+0000\n"
+"Last-Translator: \"Sergey A.\" <Ser82-png@yandex.ru>\n"
+"Language-Team: Russian <https://translate.fedoraproject.org/projects/mate-"
+"desktop/applications/engrampa/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
@@ -100,7 +104,7 @@ msgstr "Менеджер архивов Engrampa"
 
 #: data/engrampa.appdata.xml.in.in:8
 msgid "An Archive Manager for the MATE desktop environment"
-msgstr "Менеджер архивов рабочей среды MATE."
+msgstr "Менеджер архивов рабочей среды MATE"
 
 #: data/engrampa.appdata.xml.in.in:10
 msgid ""
@@ -254,8 +258,8 @@ msgid ""
 "What criteria must be used to arrange files. Possible values: name, size, "
 "type, time, path."
 msgstr ""
-"Какой критерий надо использовать для сортировки файлов. Допустимые значения:"
-" "
+"Какой критерий надо использовать для сортировки файлов. Допустимые значения: "
+"name, size, type, time, path."
 
 #: data/org.mate.engrampa.gschema.xml.in:43
 msgid "Sort type"
@@ -566,7 +570,40 @@ msgstr "Engrampa - это менеджер архивов для среды ра
 
 #: src/actions.c:870
 msgid "translator-credits"
-msgstr "Urmas <davian818@gmail.com>, 2011"
+msgstr ""
+"Александр Сапрыкин <xelfium@gmail.com>\n"
+"Александр Сигачёв <ajvol2@gmail.com>\n"
+"Александр Соколов\n"
+"Александр Хромин\n"
+"Алексей Рочев <equeim@gmail.com>\n"
+"Алексей Сорокин <sor.alexei@meowr.ru>\n"
+"Андрей Иванков\n"
+"Андрей Носенко <awn@bcs.zp.ua>\n"
+"Антон Резник <t0xa@opensuse.org>\n"
+"Валек Филиппов <frob@df.ru>\n"
+"Валентин Сайков <saikov.vb@gmail.com>\n"
+"Василий Литвинов\n"
+"Виктор Кукшиев <andrey0bolkonsky@gmail.com>\n"
+"Владислав Агафонов <vlad648@gmail.com>\n"
+"Влад Орлов <monsta@inbox.ru>\n"
+"Глеб Мехренин <mehrenin@gmail.com>\n"
+"Денис Арефьев <arefevdns@mail.ru>\n"
+"Дмитрий Астанков <mornie@basealt.ru>\n"
+"Дмитрий Мандрык <dmandryk@gmail.com>\n"
+"Дмитрий Мастрюков <dmitry@taurussoft.org>\n"
+"Дмитрий Михирев <mikhirev@gmail.com>\n"
+"Дмитрий Яценко <d.acenko@gmail.com>\n"
+"Евгений Самусев <samusev@gmail.com>\n"
+"Константин Гусев <kilolife@gmail.com>\n"
+"Леонид Кантер <leon@asplinux.ru>\n"
+"Макс Валянский <max.valjanski@gmail.com>\n"
+"Павел Жовнер <zhovner@ukr.net>\n"
+"Сергей Колосов <m17.admin@gmail.com>\n"
+"Сергей Панов <sipan@mit.edu>\n"
+"Сергей Яковлев\n"
+"Юрий Козлов <yuray@komyakino.ru>\n"
+"Evolve32 <evolve32@ya.ru>\n"
+"Артём Котлубай <artemkotlubai@yandex.ru>"
 
 #: src/dlg-add-files.c:101 src/dlg-add-folder.c:125
 msgid "Could not add the files to the archive"
@@ -716,7 +753,6 @@ msgstr "Обновить файл «%s» в архиве «%s»?"
 
 #: src/dlg-update.c:174 src/dlg-update.c:203 src/ui/update.ui:129
 #, c-format
-#, fuzzy
 msgid ""
 "The file has been modified with an external application. If you don't update"
 " the file in the archive, all of your changes will be lost."
@@ -724,14 +760,14 @@ msgid_plural ""
 "%u files have been modified with an external application. If you don't "
 "update the files in the archive, all of your changes will be lost."
 msgstr[0] ""
-"Файл был изменен с помощью внешнего приложения. Если вы не обновите файл в "
-"архиве, все ваши изменения будут потеряны."
+"%u файл был изменен с помощью внешнего приложения. Если вы не обновите файл "
+"в архиве, все ваши изменения будут потеряны."
 msgstr[1] ""
-"%u файлы были изменены с помощью внешнего приложения. Если вы не обновите "
+"%u файла были изменены с помощью внешнего приложения. Если вы не обновите "
 "файлы в архиве, все ваши изменения будут потеряны."
 msgstr[2] ""
-"%u файлы были изменены с помощью внешнего приложения. Если вы не обновите "
-"файлы в архиве, все ваши изменения будут потеряны."
+"%u файла(-ов) было изменено с помощью внешнего приложения. Если вы не "
+"обновите файлы в архиве, все ваши изменения будут потеряны."
 msgstr[3] ""
 "%u файлы были изменены с помощью внешнего приложения. Если вы не обновите "
 "файлы в архиве, все ваши изменения будут потеряны."
@@ -1352,7 +1388,7 @@ msgid ""
 "characters: %s, please type other name."
 msgstr ""
 "Имя «%s» недопустимо, потому что содержит хотя бы символ из %s, введите "
-"другое имя"
+"другое имя."
 
 #: src/fr-window.c:7491
 #, c-format
