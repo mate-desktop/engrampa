@@ -343,8 +343,6 @@ fr_command_7z_add (FrCommand     *comm,
 	fr_process_add_arg (comm->process, "-bd");
 	fr_process_add_arg (comm->process, "-bb1");
 	fr_process_add_arg (comm->process, "-y");
-	if (recursive)
-		fr_process_add_arg (comm->process, "-l");
 	add_password_arg (comm, comm->password, FALSE);
 	if ((comm->password != NULL)
 	    && (*comm->password != 0)
