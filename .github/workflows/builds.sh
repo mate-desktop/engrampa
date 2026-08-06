@@ -58,6 +58,14 @@ if [ -f autogen.sh ]; then
 	}
 	infoend
 
+	infobegin "CVE-2023-52138 regression test"
+	if [ -f tests/test-cve-2023-52138.sh ]; then
+		bash tests/test-cve-2023-52138.sh
+	else
+		echo "tests/test-cve-2023-52138.sh not found, skipping"
+	fi
+	infoend
+
 	infobegin "Distcheck (autotools)"
 	make -j ${CPUS} distcheck
 	infoend
