@@ -136,6 +136,14 @@ endif
 subdir('po')
 subdir('src')
 
+# Regression test for CVE-2023-52138 (cpio extraction path traversal)
+# Run with: ninja -C _build test
+test_script = files('tests/test-cve-2023-52138.sh')
+test('cve-2023-52138',
+     find_program('bash', 'sh'),
+     args : [test_script],
+     timeout : 120)
+
 # Summary
 
 summary = [

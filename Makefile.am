@@ -44,7 +44,8 @@ EXTRA_DIST += \
 	po/meson.build			\
 	src/meson.build			\
 	src/sh/meson.build		\
-	subprojects/mate-submodules.wrap
+	subprojects/mate-submodules.wrap	\
+	tests/test-cve-2023-52138.sh
 
 DISTCLEANFILES =
 
