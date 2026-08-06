@@ -208,7 +208,7 @@ fr_command_rpm_extract (FrCommand  *comm,
 
 	cmd = g_string_new ("rpm2cpio < ");
 	g_string_append (cmd, comm->e_filename);
-	g_string_append (cmd, " | cpio -idu");
+	g_string_append (cmd, " | cpio -idu --no-absolute-filenames");
 	for (scan = file_list; scan; scan = scan->next) {
 		g_string_append (cmd, " ");
 		char *filename = g_shell_quote (scan->data);
