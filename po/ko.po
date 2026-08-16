@@ -1,29 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR MATE Desktop Environment team
 # This file is distributed under the same license as the engrampa package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2019
 # Alan Lee <bkrhlim@aol.com>, 2019
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2021
 # JungHee Lee <daemul72@gmail.com>, 2021
 # Transifex Bot <>, 2026
-# 
+# 김인수 <simmon@nplob.com>, 2026.
+#
+# Translators:
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: engrampa 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
-"PO-Revision-Date: 2018-03-11 15:11+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
-"Language-Team: Korean (https://app.transifex.com/mate/teams/13566/ko/)\n"
+"PO-Revision-Date: 2026-06-16 07:10+0000\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
+"Language-Team: Korean <https://translate.fedoraproject.org/projects/mate-"
+"desktop/engrampa/ko/>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
@@ -362,7 +364,7 @@ msgstr "압축 레벨은 파일을 압축할 때 이용됩니다. 가능 값: �
 
 #: data/org.mate.engrampa.gschema.xml.in:126
 msgid "Encrypt the archive header"
-msgstr "압축 파일 헤더를 암호화 처리"
+msgstr "아카이브 헤더 암호화"
 
 #: data/org.mate.engrampa.gschema.xml.in:127
 msgid ""
@@ -532,14 +534,7 @@ msgstr ""
 
 #: src/actions.c:870
 msgid "translator-credits"
-msgstr ""
-"Elex https://launchpad.net/~mysticzizone\n"
-"Valmantas Palikša https://launchpad.net/~walmis\n"
-"Yoo Duk Nam https://launchpad.net/~yoo2001818\n"
-"onlyeriko https://launchpad.net/~onlyeriko\n"
-"Seong-ho Cho <darkcircle.0426@gmail.com>\n"
-"JungHee Lee <daemul72@gmail.com>\n"
-"MATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
+msgstr "김인수 <simmon@nplob.com>"
 
 #: src/dlg-add-files.c:101 src/dlg-add-folder.c:125
 msgid "Could not add the files to the archive"
@@ -574,7 +569,7 @@ msgstr "저장(_S)"
 #: src/dlg-ask-password.c:113
 #, c-format
 msgid "Enter the password for the archive '%s'."
-msgstr "압축 파일 '%s'의 암호를 입력하십시오."
+msgstr "아카이브 '%s'의 비밀번호를 입력하세요."
 
 #: src/dlg-batch-add.c:174
 #, c-format
@@ -1092,7 +1087,7 @@ msgstr "파일 목록 가져오는 중"
 #: src/fr-window.c:2296
 #, c-format
 msgid "Copying the files to add to \"%s\""
-msgstr " \"%s\"에 추가할 파일을 복사하는 중"
+msgstr "\"%s\"에 추가하려는 파일을 복사 중"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2300
@@ -1478,7 +1473,7 @@ msgstr "MB"
 #: src/ui/batch-add-files.ui:324 src/ui/batch-password.ui:147 src/ui/new.ui:92
 #: src/ui/password.ui:126
 msgid "_Password:"
-msgstr "암호(_P):"
+msgstr "비밀번호(_P):"
 
 #: src/ui/batch-add-files.ui:366 src/ui/new.ui:202
 msgid "_Other Options"
@@ -1490,7 +1485,7 @@ msgstr "확인(_O)"
 
 #: src/ui/batch-password.ui:116
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
-msgstr "<span weight=\"bold\" size=\"larger\">암호가 필요합니다</span>"
+msgstr "<span weight=\"bold\" size=\"larger\">비밀번호가 필요합니다</span>"
 
 #: src/ui/delete.ui:18
 msgid "Delete"
@@ -1748,11 +1743,11 @@ msgstr "압축 파일에 폴더를 추가합니다"
 
 #: src/ui/menus-toolbars.ui:460
 msgid "Pass_word…"
-msgstr "암호(_W)..."
+msgstr "비밀번호(_W)…"
 
 #: src/ui/menus-toolbars.ui:461
 msgid "Specify a password for this archive"
-msgstr "이 압축 파일의 암호를 지정합니다"
+msgstr "이 아카이브의 비밀번호를 지정합니다"
 
 #: src/ui/menus-toolbars.ui:475
 msgid "_View"
@@ -1869,7 +1864,7 @@ msgstr ""
 
 #: src/ui/password.ui:18
 msgid "Password"
-msgstr "암호"
+msgstr "비밀번호"
 
 #: src/ui/password.ui:94
 msgid "_Encrypt the file list"
@@ -1881,8 +1876,9 @@ msgid ""
 "current archive, and to decrypt files you extract from the current archive. "
 "When the archive is closed the password will be deleted.</i>"
 msgstr ""
-"<i><b>주의:</b> 암호는 압축 파일에 추가할 파일을 암호화하는 용도로도 사용하고, 압축 파일에서 파일을 풀면서 암호화를 해제하는 "
-"용도로도 사용합니다. 압축 파일을 닫으면 암호는 삭제됩니다.</i>"
+"<i><b>주의:</b> 비밀번호는 현재 아카이브로 추가하는 파일을 암호화하고, 현재 "
+"아카이브에서 파일을 풀면서 암호해제하는 용도로도 사용합니다. 아카이브를 "
+"닫으면 비밀번호는 삭제됩니다.</i>"
 
 #: src/ui/properties.ui:89
 msgctxt "File"
