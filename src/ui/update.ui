@@ -103,6 +103,7 @@
             </child>
             <child>
               <object class="GtkBox" id="vbox4">
+                <property name="width_request">470</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="orientation">vertical</property>
@@ -114,6 +115,7 @@
                     <property name="halign">start</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
+                    <property name="max_width_chars">60</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -128,6 +130,7 @@
                     <property name="halign">start</property>
                     <property name="label" translatable="yes">The file has been modified with an external application. If you don't update the file in the archive, all of your changes will be lost.</property>
                     <property name="wrap">True</property>
+                    <property name="max_width_chars">60</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
