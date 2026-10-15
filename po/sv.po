@@ -12,7 +12,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # Philip Andersen <renegadevi@codeofmagi.net>, 2021
 # Luna Jernberg <droidbittin@gmail.com>, 2025, 2026.
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025, 2026.
 #
 # Translators:
 #
@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: engrampa 1.27.1\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/engrampa/issues\n"
 "POT-Creation-Date: 2023-12-20 14:53+0100\n"
-"PO-Revision-Date: 2026-06-20 09:13+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2026-10-11 11:26+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/mate-"
 "desktop/applications/engrampa/sv/>\n"
 "Language: sv\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.10.1\n"
 
 #: mate-submodules/libegg/eggdesktopfile.c:169
 msgid "File is not a valid .desktop file"
@@ -372,8 +372,8 @@ msgid ""
 "List of applications entered in the Open file dialog and not associated with"
 " the file type."
 msgstr ""
-"Lista av applikationer som angivits i Öppna fil-dialogen och som ej är "
-"assosierade med filtypen."
+"Lista över program som har angetts i dialogrutan Öppna fil och som inte är "
+"kopplade till filtypen."
 
 #: data/org.mate.engrampa.gschema.xml.in:121
 msgid "Compression level"
@@ -650,7 +650,7 @@ msgstr "Arkivet finns redan. Vill du skriva över det?"
 
 #: src/dlg-batch-add.c:316
 msgid "_Overwrite"
-msgstr "Skriv _över"
+msgstr "S_kriv över"
 
 #: src/dlg-extract.c:127 src/dlg-extract.c:145 src/dlg-extract.c:172
 #: src/fr-window.c:4176 src/fr-window.c:6661 src/fr-window.c:6666
@@ -1154,7 +1154,7 @@ msgstr "_Avsluta"
 
 #: src/fr-window.c:2478
 msgid "_Open the Archive"
-msgstr "_Öppna arkivet"
+msgstr "Ö_ppna arkivet"
 
 #: src/fr-window.c:2479
 msgid "_Show the Files"
@@ -1488,7 +1488,7 @@ msgstr "S_kapa"
 #: src/ui/dlg-add-folder.ui:42 src/ui/dlg-extract.ui:41
 #: src/ui/menus-toolbars.ui:593 src/ui/new.ui:272 src/ui/properties.ui:34
 msgid "_Help"
-msgstr "_Hjälp"
+msgstr "_Bevaka"
 
 #: src/ui/batch-add-files.ui:142
 msgid "_Filename:"
@@ -1520,11 +1520,11 @@ msgstr "_Lösenord:"
 
 #: src/ui/batch-add-files.ui:366 src/ui/new.ui:202
 msgid "_Other Options"
-msgstr "_Övriga alternativ"
+msgstr "Ö_vriga alternativ"
 
 #: src/ui/batch-password.ui:53 src/ui/password.ui:54
 msgid "_OK"
-msgstr "Ok"
+msgstr "_OK"
 
 #: src/ui/batch-password.ui:116
 msgid "<span weight=\"bold\" size=\"larger\">Password required</span>"
@@ -1620,7 +1620,7 @@ msgstr "Å_terskapa mappar"
 
 #: src/ui/dlg-extract.ui:260
 msgid "Over_write existing files"
-msgstr "Skriv _över befintliga filer"
+msgstr "S_kriv över befintliga filer"
 
 #: src/ui/dlg-extract.ui:277
 msgid "Do not e_xtract older files"
@@ -1668,7 +1668,7 @@ msgstr "Öppna ett nyligen använt arkiv"
 
 #: src/ui/menus-toolbars.ui:240
 msgid "Save As…"
-msgstr "Spara som..."
+msgstr "Spara som…"
 
 #: src/ui/menus-toolbars.ui:241
 msgid "Save the current archive with a different name"
@@ -1883,7 +1883,7 @@ msgstr "Gå till hemplatsen"
 #: src/ui/menus-toolbars.ui:745 src/ui/menus-toolbars.ui:828
 #: src/ui/menus-toolbars.ui:903
 msgid "_Open"
-msgstr "_Öppna"
+msgstr "Ö_ppna"
 
 #: src/ui/menus-toolbars.ui:746
 msgid "Open the selected file"
@@ -1891,7 +1891,7 @@ msgstr "Öppna den markerade filen"
 
 #: src/ui/menus-toolbars.ui:754
 msgid "_Open With…"
-msgstr "_Öppna med..."
+msgstr "Ö_ppna med…"
 
 #: src/ui/menus-toolbars.ui:755
 msgid "Open selected files with an application"
