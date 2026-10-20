@@ -6712,7 +6712,7 @@ fr_window_archive_extract (FrWindow    *window,
 					    edata,
 					    (GFreeFunc) extract_data_free);
 
-	if (archive_extract_check_disk_space_full (window->archive->command->files, extract_to_dir))
+	if (archive_extract_check_disk_space_full (window->archive->command->files, edata->extract_to_dir))
 	{
 		GtkWidget *d;
 
