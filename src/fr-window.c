@@ -122,7 +122,8 @@ typedef struct {
 
 typedef enum {
 	FR_CLIPBOARD_OP_CUT,
-	FR_CLIPBOARD_OP_COPY
+	FR_CLIPBOARD_OP_COPY,
+	FR_CLIPBOARD_OP_MOVE
 } FRClipboardOp;
 
 typedef struct {
@@ -3947,6 +3948,139 @@ get_uri_list_from_selection_data (char *uri_list)
 }
 
 static gboolean
+fr_window_get_drop_folder (FrWindow  *window,
+			   GtkWidget *widget,
+			   gint       x,
+			   gint       y,
+			   char     **folder)
+{
+	GtkTreePath *path = NULL;
+	GtkTreeIter  iter;
+	FileData    *fdata = NULL;
+	gint         list_x;
+	gint         list_y;
+
+	*folder = NULL;
+
+	/* Moving is not possible in the flat (all files) view. */
+	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT)
+		return FALSE;
+
+	/* Convert window coordinates to file-list coordinates. */
+	if (! gtk_widget_translate_coordinates (widget,
+						window->priv->list_view,
+						x, y, &list_x, &list_y))
+		return FALSE;
+
+	/* gtk_tree_view_get_path_at_pos() expects bin_window coordinates
+	 * (the column header is not part of them). */
+	gtk_tree_view_convert_widget_to_bin_window_coords (
+			GTK_TREE_VIEW (window->priv->list_view),
+			list_x, list_y, &list_x, &list_y);
+
+	/* A drop is accepted only on an actual row. */
+	if (! gtk_tree_view_get_path_at_pos (
+		    GTK_TREE_VIEW (window->priv->list_view),
+		    list_x, list_y, &path, NULL, NULL, NULL))
+		return FALSE;
+
+	if (gtk_tree_model_get_iter (
+		    GTK_TREE_MODEL (window->priv->list_store),
+		    &iter, path))
+	{
+		gtk_tree_model_get (GTK_TREE_MODEL (window->priv->list_store),
+				    &iter,
+				    COLUMN_FILE_DATA, &fdata,
+				    -1);
+	}
+
+	gtk_tree_path_free (path);
+
+	/* Reject files and other non-directory rows. */
+	if ((fdata == NULL) || ! file_data_is_dir (fdata))
+		return FALSE;
+
+	/* Match the path construction used when opening a folder row. */
+	*folder = g_strconcat (fr_window_get_current_location (window),
+			       fdata->list_name,
+			       "/",
+			       NULL);
+
+	return TRUE;
+}
+
+/* Highlight the folder row that would receive the dropped files. */
+static void
+fr_window_set_drop_highlight (FrWindow  *window,
+			      GtkWidget *widget,
+			      gint       x,
+			      gint       y)
+{
+	GtkTreeView *view = GTK_TREE_VIEW (window->priv->list_view);
+	GtkTreePath *path = NULL;
+	gint         list_x;
+	gint         list_y;
+
+	if (gtk_widget_translate_coordinates (widget, window->priv->list_view,
+					      x, y, &list_x, &list_y)) {
+		gtk_tree_view_convert_widget_to_bin_window_coords (view,
+								   list_x, list_y,
+								   &list_x, &list_y);
+		gtk_tree_view_get_path_at_pos (view, list_x, list_y,
+					       &path, NULL, NULL, NULL);
+	}
+
+	if (path != NULL) {
+		gtk_tree_view_set_drag_dest_row (view, path,
+						 GTK_TREE_VIEW_DROP_INTO_OR_BEFORE);
+		gtk_tree_path_free (path);
+	}
+	else
+		gtk_tree_view_set_drag_dest_row (view, NULL,
+						 GTK_TREE_VIEW_DROP_BEFORE);
+}
+
+static void
+fr_window_clear_drop_highlight (FrWindow *window)
+{
+	gtk_tree_view_set_drag_dest_row (GTK_TREE_VIEW (window->priv->list_view),
+					 NULL,
+					 GTK_TREE_VIEW_DROP_BEFORE);
+}
+
+static void
+fr_window_drag_leave (GtkWidget      *widget,
+		      GdkDragContext *context,
+		      guint           time,
+		      gpointer        user_data)
+{
+	fr_window_clear_drop_highlight ((FrWindow *) user_data);
+}
+
+/* Color of the frame drawn around the drop target folder.
+ * Change the value of "border" to taste. */
+static void
+fr_window_install_drop_style (void)
+{
+	static gsize     installed = 0;
+	GtkCssProvider  *provider;
+
+	if (! g_once_init_enter (&installed))
+		return;
+
+	provider = gtk_css_provider_new ();
+	gtk_css_provider_load_from_data (provider,
+					 "treeview.view.dnd { border: 2px solid #e66100; }",
+					 -1, NULL);
+	gtk_style_context_add_provider_for_screen (gdk_screen_get_default (),
+						   GTK_STYLE_PROVIDER (provider),
+						   GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+	g_object_unref (provider);
+
+	g_once_init_leave (&installed, 1);
+}
+
+static gboolean
 fr_window_drag_motion (GtkWidget      *widget,
 		       GdkDragContext *context,
 		       gint            x,
@@ -3955,10 +4089,30 @@ fr_window_drag_motion (GtkWidget      *widget,
 		       gpointer        user_data)
 {
 	FrWindow  *window = user_data;
+	GtkWidget *source;
+	char      *destination_folder = NULL;
 
-	if ((gtk_drag_get_source_widget (context) == window->priv->list_view)
-	    || (gtk_drag_get_source_widget (context) == window->priv->tree_view))
-	{
+	source = gtk_drag_get_source_widget (context);
+
+	/* Allow internal file-list drags only when hovering over a folder. */
+	if (source == window->priv->list_view) {
+		if ((window->priv->activity_ref > 0)
+		    || ! fr_window_get_drop_folder (window, widget, x, y,
+						    &destination_folder))
+		{
+			fr_window_clear_drop_highlight (window);
+			gdk_drag_status (context, 0, time);
+			return TRUE;
+		}
+
+		g_free (destination_folder);
+		fr_window_set_drop_highlight (window, widget, x, y);
+		gdk_drag_status (context, GDK_ACTION_COPY, time);
+		return TRUE;
+	}
+
+	/* Keep the existing rejection of folder-tree-originated drags. */
+	if (source == window->priv->tree_view) {
 		gdk_drag_status (context, 0, time);
 		return FALSE;
 	}
@@ -4011,12 +4165,71 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 	GList     *list;
 	gboolean   one_file;
 	gboolean   is_an_archive;
+	GtkWidget *source;
+	char      *destination_folder = NULL;
 
 	debug (DEBUG_INFO, "::DragDataReceived -->\n");
 
-	if ((gtk_drag_get_source_widget (context) == window->priv->list_view)
-	    || (gtk_drag_get_source_widget (context) == window->priv->tree_view))
-	{
+	source = gtk_drag_get_source_widget (context);
+
+	/* Handle a drag originating from the archive file list. */
+	if (source == window->priv->list_view) {
+		FrClipboardData *dnd_data;
+
+		fr_window_clear_drop_highlight (window);
+
+		if ((window->priv->activity_ref > 0)
+		    || (gtk_selection_data_get_length (data) < 0)
+		    || (gtk_selection_data_get_format (data) != 8)
+		    || (gtk_selection_data_get_target (data) != XFR_ATOM)
+		    || ! fr_window_get_drop_folder (window, widget, x, y,
+						    &destination_folder))
+		{
+			g_free (destination_folder);
+			gtk_drag_finish (context, FALSE, FALSE, time);
+			return;
+		}
+
+		dnd_data = get_clipboard_data_from_selection_data (
+			window,
+			(char *) gtk_selection_data_get_data (data));
+
+		/* Never move a folder into itself or one of its subfolders. */
+		{
+			GList    *scan;
+			gboolean  invalid = FALSE;
+
+			for (scan = dnd_data->files; scan != NULL; scan = scan->next) {
+				const char *name = (const char *) scan->data;
+				size_t      len = strlen (name);
+
+				if ((len > 0) && (name[len - 1] == '/')
+				    && g_str_has_prefix (destination_folder, name))
+				{
+					invalid = TRUE;
+					break;
+				}
+			}
+
+			if (invalid) {
+				fr_clipboard_data_unref (dnd_data);
+				g_free (destination_folder);
+				gtk_drag_finish (context, FALSE, FALSE, time);
+				return;
+			}
+		}
+
+		/* Internal moves are distinct from clipboard cut/paste. */
+		dnd_data->op = FR_CLIPBOARD_OP_MOVE;
+		dnd_data->current_dir = destination_folder;
+
+		gtk_drag_finish (context, TRUE, FALSE, time);
+		fr_window_paste_from_clipboard_data (window, dnd_data);
+		return;
+	}
+
+	/* Preserve the existing rejection of folder-tree-originated drags. */
+	if (source == window->priv->tree_view) {
 		gtk_drag_finish (context, FALSE, FALSE, time);
 		return;
 	}
@@ -5363,6 +5576,11 @@ fr_window_construct (FrWindow *window)
 			  "drag_motion",
 			  G_CALLBACK (fr_window_drag_motion),
 			  window);
+	g_signal_connect (G_OBJECT (window),
+			  "drag_leave",
+			  G_CALLBACK (fr_window_drag_leave),
+			  window);
+	fr_window_install_drop_style ();
 
 	g_signal_connect (G_OBJECT (window),
 			  "key_press_event",
@@ -7969,7 +8187,8 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 		break;
 
 	case FR_ACTION_EXTRACTING_FILES:
-		if (window->priv->clipboard_data->op == FR_CLIPBOARD_OP_CUT) {
+		if ((window->priv->clipboard_data->op == FR_CLIPBOARD_OP_CUT)
+		    || (window->priv->clipboard_data->op == FR_CLIPBOARD_OP_MOVE)) {
 			fr_process_clear (window->priv->copy_from_archive->process);
 			fr_archive_remove (window->priv->copy_from_archive,
 					   window->priv->clipboard_data->files,
