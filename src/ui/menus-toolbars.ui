@@ -819,6 +819,19 @@
         <property name="image">menu_icon_delete1</property>
       </object>
     </child>
+    <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_create_empty_folder_FilePopupMenu">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Create Empty Folder…</property>
+        <property name="tooltip-text" translatable="yes">Create an empty folder in the archive</property>
+        <property name="action-name">win.CreateEmptyFolder</property>
+      </object>
+    </child>
 </object>
   <object class="GtkMenu" id="FolderPopupMenu">
     <property name="visible">1</property>
@@ -894,7 +907,20 @@
         <property name="image">menu_icon_delete2</property>
       </object>
     </child>
-  </object>
+      <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_create_empty_folder_FolderPopupMenu">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Create Empty Folder…</property>
+        <property name="tooltip-text" translatable="yes">Create an empty folder in the archive</property>
+        <property name="action-name">win.CreateEmptyFolder</property>
+      </object>
+    </child>
+</object>
   <object class="GtkMenu" id="SidebarFolderPopupMenu">
     <property name="visible">1</property>
     <child>
@@ -969,5 +995,18 @@
         <property name="image">menu_icon_delete3</property>
       </object>
     </child>
-  </object>
+      <child>
+      <object class="GtkSeparatorMenuItem">
+        <property name="visible">1</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="popup_create_empty_folder_SidebarFolderPopupMenu">
+        <property name="visible">1</property>
+        <property name="label" translatable="yes">Create Empty Folder…</property>
+        <property name="tooltip-text" translatable="yes">Create an empty folder in the archive</property>
+        <property name="action-name">win.CreateEmptyFolder</property>
+      </object>
+    </child>
+</object>
 </interface>

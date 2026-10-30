@@ -126,6 +126,8 @@ void        fr_window_archive_reload            (FrWindow      *window);
 void        fr_window_archive_add_files         (FrWindow      *window,
 						 GList         *file_list, /* GFile list */
 						 gboolean       update);
+gboolean    fr_window_archive_add_empty_folder  (FrWindow      *window,
+						 const char    *folder_name);
 void        fr_window_archive_add_with_wildcard (FrWindow      *window,
 						 const char    *include_files,
 						 const char    *exclude_files,

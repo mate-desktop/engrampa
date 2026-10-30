@@ -24,6 +24,7 @@
 #include <string.h>
 
 #include <glib.h>
+#include <glib/gstdio.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gdk/gdk.h>
@@ -306,6 +307,7 @@ struct _FrWindowPrivateData {
 						     * timeout handle. */
 
 	FRConvertData    convert_data;
+	char            *empty_folder_temp_dir;
 
 	gboolean         stoppable;
 	gboolean         closing;
@@ -568,6 +570,11 @@ fr_window_free_private_data (FrWindow *window)
 	fr_window_free_open_files (window);
 
 	fr_window_convert_data_free (window, TRUE);
+
+	if (window->priv->empty_folder_temp_dir != NULL) {
+		remove_local_directory (window->priv->empty_folder_temp_dir);
+		g_clear_pointer (&window->priv->empty_folder_temp_dir, g_free);
+	}
 
 	g_clear_error (&window->priv->drag_error);
 	path_list_free (window->priv->drag_file_list);
@@ -2010,6 +2017,17 @@ fr_window_update_sensitivity (FrWindow *window)
 	set_sensitive (window, "tool_add_files_item", ! no_archive && ! ro && ! running && ! compr_file);
 	set_sensitive (window, "add_folder_item", ! no_archive && ! ro && ! running && ! compr_file);
 	set_sensitive (window, "tool_add_folder_item", ! no_archive && ! ro && ! running && ! compr_file);
+
+	/* Enable Create Empty Folder only when the archive can be modified. */
+	GAction *create_empty_folder_action;
+	create_empty_folder_action =
+		g_action_map_lookup_action (G_ACTION_MAP (window->priv->actions),
+					    "CreateEmptyFolder");
+	if (create_empty_folder_action != NULL)
+		g_simple_action_set_enabled (G_SIMPLE_ACTION (create_empty_folder_action),
+					     ! no_archive && ! ro && ! running && ! compr_file);
+
+
 	set_sensitive (window, "copy_item", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
 	set_sensitive (window, "popup_copy_item", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
 	set_sensitive (window, "popup_copy_item1", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
@@ -3172,6 +3190,13 @@ action_performed (FrArchive   *archive,
 
 	case FR_ACTION_ADDING_FILES:
 		close_progress_dialog (window, FALSE);
+
+		/* The archive-add operation has completed. Keep the temporary
+		 * folder until this point because adding files is asynchronous. */
+		if (window->priv->empty_folder_temp_dir != NULL) {
+			remove_local_directory (window->priv->empty_folder_temp_dir);
+			g_clear_pointer (&window->priv->empty_folder_temp_dir, g_free);
+		}
 
 		/* update the uri because multi-volume archives can have
 		 * a different name after creation. */
@@ -5789,6 +5814,26 @@ fr_window_construct (FrWindow *window)
 	window->priv->folder_popup_menu = (GtkWidget *)gtk_builder_get_object (ui, "FolderPopupMenu");
 	window->priv->sidebar_folder_popup_menu = (GtkWidget *)gtk_builder_get_object (ui, "SidebarFolderPopupMenu");
 
+
+/*
+ * Popup menus are separate widgets. Register the window action group
+ * on each menu so that win.CreateEmptyFolder can be resolved.
+ */
+gtk_widget_insert_action_group (window->priv->file_popup_menu,
+                                "win",
+                                window->priv->actions);
+
+gtk_widget_insert_action_group (window->priv->folder_popup_menu,
+                                "win",
+                                window->priv->actions);
+
+gtk_widget_insert_action_group (window->priv->sidebar_folder_popup_menu,
+                                "win",
+                                window->priv->actions);
+
+
+
+
 	/* Create the statusbar. */
 
 	window->priv->statusbar = gtk_statusbar_new ();
@@ -6209,6 +6254,64 @@ fr_window_archive_add_files (FrWindow *window,
 	path_list_free (files);
 	g_free (base_dir);
 	g_object_unref (base);
+}
+
+gboolean
+fr_window_archive_add_empty_folder (FrWindow   *window,
+                                    const char *folder_name)
+{
+    char *temp_dir;
+    char *folder_path;
+    GFile *file;
+    GList *file_list = NULL;
+    GError *error = NULL;
+
+    g_return_val_if_fail (FR_IS_WINDOW (window), FALSE);
+    g_return_val_if_fail (folder_name != NULL, FALSE);
+
+    if (*folder_name == '\0'
+        || strcmp (folder_name, ".") == 0
+        || strcmp (folder_name, "..") == 0
+        || strchr (folder_name, '/') != NULL
+        || strchr (folder_name, '\\') != NULL)
+        return FALSE;
+
+    if (window->archive == NULL
+        || window->archive->read_only
+        || window->priv->empty_folder_temp_dir != NULL)
+        return FALSE;
+
+    temp_dir = g_dir_make_tmp ("engrampa-empty-folder-XXXXXX", &error);
+    if (temp_dir == NULL) {
+        g_warning ("Could not create temporary directory: %s",
+                   error != NULL ? error->message : "unknown error");
+        g_clear_error (&error);
+        return FALSE;
+    }
+
+    folder_path = g_build_filename (temp_dir, folder_name, NULL);
+
+    if (g_mkdir (folder_path, 0700) != 0) {
+        g_warning ("Could not create empty folder: %s", folder_path);
+        remove_local_directory (temp_dir);
+        g_free (folder_path);
+        g_free (temp_dir);
+        return FALSE;
+    }
+
+    /* Keep the temporary directory alive while the archive is updated. */
+    window->priv->empty_folder_temp_dir = temp_dir;
+
+    file = g_file_new_for_path (folder_path);
+    file_list = g_list_append (file_list, file);
+
+    fr_window_archive_add_files (window, file_list, FALSE);
+
+    g_list_free (file_list);
+    g_object_unref (file);
+    g_free (folder_path);
+
+    return TRUE;
 }
 
 void

@@ -600,6 +600,81 @@ activate_action_add_folder (GSimpleAction *action,
 }
 
 void
+activate_action_create_empty_folder (GSimpleAction *action,
+                                     GVariant      *parameter,
+                                     gpointer       data)
+{
+    FrWindow *window = FR_WINDOW (data);
+    GtkWidget *dialog;
+    GtkWidget *entry;
+    GtkWidget *content;
+    const char *entry_text;
+    char *folder_name;
+
+    (void) action;
+    (void) parameter;
+
+    dialog = gtk_dialog_new_with_buttons (
+        _("Create Empty Folder"),
+        GTK_WINDOW (window),
+        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+        _("_Cancel"), GTK_RESPONSE_CANCEL,
+        _("_Create"), GTK_RESPONSE_ACCEPT,
+        NULL);
+
+    gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+    content = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+    entry = gtk_entry_new ();
+    gtk_entry_set_activates_default (GTK_ENTRY (entry), TRUE);
+    gtk_entry_set_placeholder_text (GTK_ENTRY (entry), _("Folder name"));
+    gtk_box_pack_start (GTK_BOX (content), entry, TRUE, TRUE, 12);
+    gtk_widget_show_all (dialog);
+
+    if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_ACCEPT) {
+        gtk_widget_destroy (dialog);
+        return;
+    }
+
+    entry_text = gtk_entry_get_text (GTK_ENTRY (entry));
+    folder_name = g_strdup (entry_text);
+    g_strstrip (folder_name);
+    gtk_widget_destroy (dialog);
+
+    if (*folder_name == '\0'
+        || strcmp (folder_name, ".") == 0
+        || strcmp (folder_name, "..") == 0
+        || strchr (folder_name, '/') != NULL
+        || strchr (folder_name, '\\') != NULL) {
+        GtkWidget *message;
+
+        message = gtk_message_dialog_new (
+            GTK_WINDOW (window),
+            GTK_DIALOG_MODAL,
+            GTK_MESSAGE_ERROR,
+            GTK_BUTTONS_CLOSE,
+            "%s",
+            _("Please enter a valid folder name."));
+        gtk_dialog_run (GTK_DIALOG (message));
+        gtk_widget_destroy (message);
+    }
+    else if (!fr_window_archive_add_empty_folder (window, folder_name)) {
+        GtkWidget *message;
+
+        message = gtk_message_dialog_new (
+            GTK_WINDOW (window),
+            GTK_DIALOG_MODAL,
+            GTK_MESSAGE_ERROR,
+            GTK_BUTTONS_CLOSE,
+            "%s",
+            _("Could not create the empty folder."));
+        gtk_dialog_run (GTK_DIALOG (message));
+        gtk_widget_destroy (message);
+    }
+
+    g_free (folder_name);
+}
+
+void
 activate_action_extract (GSimpleAction *action,
                          GVariant      *parameter,
                          gpointer       data)
