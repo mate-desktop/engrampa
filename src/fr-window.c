@@ -4195,30 +4195,42 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 			(char *) gtk_selection_data_get_data (data));
 
 		/* Never move a folder into itself or one of its subfolders.
+		 *
 		 * The entry names have no leading slash, while the destination
-		 * folder starts with one ("/a/b/"), so compare without it. */
+		 * folder starts with one ("/a/b/"), so compare without it.
+		 *
+		 * The folder that is being moved is found from the first path
+		 * component of each entry below the current folder, so this works
+		 * even when the archive has no entry (or no trailing slash) for the
+		 * folder itself, as with some tar and 7z archives. */
 		{
 			const char *destination_relative = destination_folder + 1;
+			size_t      base_length = strlen (dnd_data->base_dir) - 1;
 			GList      *scan;
 			gboolean    invalid = FALSE;
 
 			for (scan = dnd_data->files; scan != NULL; scan = scan->next) {
 				const char *name = (const char *) scan->data;
-				char       *folder_name;
+				const char *relative;
+				const char *slash;
+				char       *moved_folder;
 
-				if (name[0] == '\0')
+				if (strlen (name) <= base_length)
 					continue;
 
-				/* A folder entry may or may not end with a slash. */
-				if (g_str_has_suffix (name, "/"))
-					folder_name = g_strdup (name);
+				relative = name + base_length;
+				slash = strchr (relative, '/');
+				if (slash != NULL)
+					/* "a/b/c" below the current folder: "a/" is moved. */
+					moved_folder = g_strndup (name, (slash - name) + 1);
 				else
-					folder_name = g_strconcat (name, "/", NULL);
+					/* A file, or a folder entry without a trailing slash. */
+					moved_folder = g_strconcat (name, "/", NULL);
 
-				if (g_str_has_prefix (destination_relative, folder_name))
+				if (g_str_has_prefix (destination_relative, moved_folder))
 					invalid = TRUE;
 
-				g_free (folder_name);
+				g_free (moved_folder);
 
 				if (invalid)
 					break;
