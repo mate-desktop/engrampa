@@ -6033,24 +6033,17 @@ fr_window_construct (FrWindow *window)
 	window->priv->sidebar_folder_popup_menu = (GtkWidget *)gtk_builder_get_object (ui, "SidebarFolderPopupMenu");
 
 
-/*
- * Popup menus are separate widgets. Register the window action group
- * on each menu so that win.CreateEmptyFolder can be resolved.
- */
-gtk_widget_insert_action_group (window->priv->file_popup_menu,
-                                "win",
-                                window->priv->actions);
-
-gtk_widget_insert_action_group (window->priv->folder_popup_menu,
-                                "win",
-                                window->priv->actions);
-
-gtk_widget_insert_action_group (window->priv->sidebar_folder_popup_menu,
-                                "win",
-                                window->priv->actions);
-
-
-
+	/* Popup menus are separate widgets. Register the window action group
+	 * on each menu so that win.CreateEmptyFolder can be resolved. */
+	gtk_widget_insert_action_group (window->priv->file_popup_menu,
+					"win",
+					window->priv->actions);
+	gtk_widget_insert_action_group (window->priv->folder_popup_menu,
+					"win",
+					window->priv->actions);
+	gtk_widget_insert_action_group (window->priv->sidebar_folder_popup_menu,
+					"win",
+					window->priv->actions);
 
 	/* Create the statusbar. */
 
@@ -6476,60 +6469,60 @@ fr_window_archive_add_files (FrWindow *window,
 
 gboolean
 fr_window_archive_add_empty_folder (FrWindow   *window,
-                                    const char *folder_name)
+				    const char *folder_name)
 {
-    char *temp_dir;
-    char *folder_path;
-    GFile *file;
-    GList *file_list = NULL;
-    GError *error = NULL;
+	char *temp_dir;
+	char *folder_path;
+	GFile *file;
+	GList *file_list = NULL;
+	GError *error = NULL;
 
-    g_return_val_if_fail (FR_IS_WINDOW (window), FALSE);
-    g_return_val_if_fail (folder_name != NULL, FALSE);
+	g_return_val_if_fail (FR_IS_WINDOW (window), FALSE);
+	g_return_val_if_fail (folder_name != NULL, FALSE);
 
-    if (*folder_name == '\0'
-        || strcmp (folder_name, ".") == 0
-        || strcmp (folder_name, "..") == 0
-        || strchr (folder_name, '/') != NULL
-        || strchr (folder_name, '\\') != NULL)
-        return FALSE;
+	if (*folder_name == '\0'
+	    || strcmp (folder_name, ".") == 0
+	    || strcmp (folder_name, "..") == 0
+	    || strchr (folder_name, '/') != NULL
+	    || strchr (folder_name, '\\') != NULL)
+		return FALSE;
 
-    if (window->archive == NULL
-        || window->archive->read_only
-        || window->priv->empty_folder_temp_dir != NULL)
-        return FALSE;
+	if (window->archive == NULL
+	    || window->archive->read_only
+	    || window->priv->empty_folder_temp_dir != NULL)
+		return FALSE;
 
-    temp_dir = g_dir_make_tmp ("engrampa-empty-folder-XXXXXX", &error);
-    if (temp_dir == NULL) {
-        g_warning ("Could not create temporary directory: %s",
-                   error != NULL ? error->message : "unknown error");
-        g_clear_error (&error);
-        return FALSE;
-    }
+	temp_dir = g_dir_make_tmp ("engrampa-empty-folder-XXXXXX", &error);
+	if (temp_dir == NULL) {
+		g_warning ("Could not create temporary directory: %s",
+			   error != NULL ? error->message : "unknown error");
+		g_clear_error (&error);
+		return FALSE;
+	}
 
-    folder_path = g_build_filename (temp_dir, folder_name, NULL);
+	folder_path = g_build_filename (temp_dir, folder_name, NULL);
 
-    if (g_mkdir (folder_path, 0700) != 0) {
-        g_warning ("Could not create empty folder: %s", folder_path);
-        remove_local_directory (temp_dir);
-        g_free (folder_path);
-        g_free (temp_dir);
-        return FALSE;
-    }
+	if (g_mkdir (folder_path, 0700) != 0) {
+		g_warning ("Could not create empty folder: %s", folder_path);
+		remove_local_directory (temp_dir);
+		g_free (folder_path);
+		g_free (temp_dir);
+		return FALSE;
+	}
 
-    /* Keep the temporary directory alive while the archive is updated. */
-    window->priv->empty_folder_temp_dir = temp_dir;
+	/* Keep the temporary directory alive while the archive is updated. */
+	window->priv->empty_folder_temp_dir = temp_dir;
 
-    file = g_file_new_for_path (folder_path);
-    file_list = g_list_append (file_list, file);
+	file = g_file_new_for_path (folder_path);
+	file_list = g_list_append (file_list, file);
 
-    fr_window_archive_add_files (window, file_list, FALSE);
+	fr_window_archive_add_files (window, file_list, FALSE);
 
-    g_list_free (file_list);
-    g_object_unref (file);
-    g_free (folder_path);
+	g_list_free (file_list);
+	g_object_unref (file);
+	g_free (folder_path);
 
-    return TRUE;
+	return TRUE;
 }
 
 void
