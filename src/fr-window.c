@@ -8116,11 +8116,31 @@ add_pasted_files (FrWindow        *window,
 	for (scan = data->files; scan; scan = scan->next) {
 		const char *old_name = (char*) scan->data;
 		char       *new_name = g_build_filename (current_dir_relative, old_name + strlen (data->base_dir) - 1, NULL);
+		char       *old_path;
+		gboolean    is_folder;
 
-		/* skip folders */
+		/* Folders are not moved, their content is moved one file at a
+		 * time.  Not every archive type puts a trailing slash on the
+		 * folder entries, so also look at the extracted files: moving a
+		 * folder onto the folder that already exists at the destination
+		 * would put it inside of it. */
 
-		if ((strcmp (old_name, new_name) != 0)
-		    && (old_name[strlen (old_name) - 1] != '/'))
+		old_path = g_build_filename (data->tmp_dir,
+					     (old_name[0] == '/') ? old_name + 1 : old_name,
+					     NULL);
+		is_folder = (old_name[strlen (old_name) - 1] == '/')
+			    || g_file_test (old_path, G_FILE_TEST_IS_DIR);
+		g_free (old_path);
+
+		if (is_folder) {
+			/* Make sure the destination folder exists, even if it
+			 * is empty. */
+			char *new_path = g_build_filename (data->tmp_dir, new_name, NULL);
+
+			g_mkdir_with_parents (new_path, 0700);
+			g_free (new_path);
+		}
+		else if (strcmp (old_name, new_name) != 0)
 		{
 			fr_process_begin_command (window->archive->process, "mv");
 			fr_process_set_working_dir (window->archive->process, data->tmp_dir);
