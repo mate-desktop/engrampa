@@ -24,6 +24,7 @@
 #include <string.h>
 
 #include <glib.h>
+#include <glib/gstdio.h>
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gdk/gdk.h>
@@ -121,7 +122,8 @@ typedef struct {
 
 typedef enum {
 	FR_CLIPBOARD_OP_CUT,
-	FR_CLIPBOARD_OP_COPY
+	FR_CLIPBOARD_OP_COPY,
+	FR_CLIPBOARD_OP_MOVE
 } FRClipboardOp;
 
 typedef struct {
@@ -306,6 +308,7 @@ struct _FrWindowPrivateData {
 						     * timeout handle. */
 
 	FRConvertData    convert_data;
+	char            *empty_folder_temp_dir;
 
 	gboolean         stoppable;
 	gboolean         closing;
@@ -568,6 +571,11 @@ fr_window_free_private_data (FrWindow *window)
 	fr_window_free_open_files (window);
 
 	fr_window_convert_data_free (window, TRUE);
+
+	if (window->priv->empty_folder_temp_dir != NULL) {
+		remove_local_directory (window->priv->empty_folder_temp_dir);
+		g_clear_pointer (&window->priv->empty_folder_temp_dir, g_free);
+	}
 
 	g_clear_error (&window->priv->drag_error);
 	path_list_free (window->priv->drag_file_list);
@@ -2010,6 +2018,17 @@ fr_window_update_sensitivity (FrWindow *window)
 	set_sensitive (window, "tool_add_files_item", ! no_archive && ! ro && ! running && ! compr_file);
 	set_sensitive (window, "add_folder_item", ! no_archive && ! ro && ! running && ! compr_file);
 	set_sensitive (window, "tool_add_folder_item", ! no_archive && ! ro && ! running && ! compr_file);
+
+	/* Enable Create Empty Folder only when the archive can be modified. */
+	GAction *create_empty_folder_action;
+	create_empty_folder_action =
+		g_action_map_lookup_action (G_ACTION_MAP (window->priv->actions),
+					    "CreateEmptyFolder");
+	if (create_empty_folder_action != NULL)
+		g_simple_action_set_enabled (G_SIMPLE_ACTION (create_empty_folder_action),
+					     ! no_archive && ! ro && ! running && ! compr_file);
+
+
 	set_sensitive (window, "copy_item", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
 	set_sensitive (window, "popup_copy_item", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
 	set_sensitive (window, "popup_copy_item1", ! no_archive && ! ro && ! running && ! compr_file && sel_not_null && (window->priv->list_mode != FR_WINDOW_LIST_MODE_FLAT));
@@ -3173,6 +3192,13 @@ action_performed (FrArchive   *archive,
 	case FR_ACTION_ADDING_FILES:
 		close_progress_dialog (window, FALSE);
 
+		/* The archive-add operation has completed. Keep the temporary
+		 * folder until this point because adding files is asynchronous. */
+		if (window->priv->empty_folder_temp_dir != NULL) {
+			remove_local_directory (window->priv->empty_folder_temp_dir);
+			g_clear_pointer (&window->priv->empty_folder_temp_dir, g_free);
+		}
+
 		/* update the uri because multi-volume archives can have
 		 * a different name after creation. */
 		g_free (window->priv->archive_uri);
@@ -3922,6 +3948,139 @@ get_uri_list_from_selection_data (char *uri_list)
 }
 
 static gboolean
+fr_window_get_drop_folder (FrWindow  *window,
+			   GtkWidget *widget,
+			   gint       x,
+			   gint       y,
+			   char     **folder)
+{
+	GtkTreePath *path = NULL;
+	GtkTreeIter  iter;
+	FileData    *fdata = NULL;
+	gint         list_x;
+	gint         list_y;
+
+	*folder = NULL;
+
+	/* Moving is not possible in the flat (all files) view. */
+	if (window->priv->list_mode == FR_WINDOW_LIST_MODE_FLAT)
+		return FALSE;
+
+	/* Convert window coordinates to file-list coordinates. */
+	if (! gtk_widget_translate_coordinates (widget,
+						window->priv->list_view,
+						x, y, &list_x, &list_y))
+		return FALSE;
+
+	/* gtk_tree_view_get_path_at_pos() expects bin_window coordinates
+	 * (the column header is not part of them). */
+	gtk_tree_view_convert_widget_to_bin_window_coords (
+			GTK_TREE_VIEW (window->priv->list_view),
+			list_x, list_y, &list_x, &list_y);
+
+	/* A drop is accepted only on an actual row. */
+	if (! gtk_tree_view_get_path_at_pos (
+		    GTK_TREE_VIEW (window->priv->list_view),
+		    list_x, list_y, &path, NULL, NULL, NULL))
+		return FALSE;
+
+	if (gtk_tree_model_get_iter (
+		    GTK_TREE_MODEL (window->priv->list_store),
+		    &iter, path))
+	{
+		gtk_tree_model_get (GTK_TREE_MODEL (window->priv->list_store),
+				    &iter,
+				    COLUMN_FILE_DATA, &fdata,
+				    -1);
+	}
+
+	gtk_tree_path_free (path);
+
+	/* Reject files and other non-directory rows. */
+	if ((fdata == NULL) || ! file_data_is_dir (fdata))
+		return FALSE;
+
+	/* Match the path construction used when opening a folder row. */
+	*folder = g_strconcat (fr_window_get_current_location (window),
+			       fdata->list_name,
+			       "/",
+			       NULL);
+
+	return TRUE;
+}
+
+/* Highlight the folder row that would receive the dropped files. */
+static void
+fr_window_set_drop_highlight (FrWindow  *window,
+			      GtkWidget *widget,
+			      gint       x,
+			      gint       y)
+{
+	GtkTreeView *view = GTK_TREE_VIEW (window->priv->list_view);
+	GtkTreePath *path = NULL;
+	gint         list_x;
+	gint         list_y;
+
+	if (gtk_widget_translate_coordinates (widget, window->priv->list_view,
+					      x, y, &list_x, &list_y)) {
+		gtk_tree_view_convert_widget_to_bin_window_coords (view,
+								   list_x, list_y,
+								   &list_x, &list_y);
+		gtk_tree_view_get_path_at_pos (view, list_x, list_y,
+					       &path, NULL, NULL, NULL);
+	}
+
+	if (path != NULL) {
+		gtk_tree_view_set_drag_dest_row (view, path,
+						 GTK_TREE_VIEW_DROP_INTO_OR_BEFORE);
+		gtk_tree_path_free (path);
+	}
+	else
+		gtk_tree_view_set_drag_dest_row (view, NULL,
+						 GTK_TREE_VIEW_DROP_BEFORE);
+}
+
+static void
+fr_window_clear_drop_highlight (FrWindow *window)
+{
+	gtk_tree_view_set_drag_dest_row (GTK_TREE_VIEW (window->priv->list_view),
+					 NULL,
+					 GTK_TREE_VIEW_DROP_BEFORE);
+}
+
+static void
+fr_window_drag_leave (GtkWidget      *widget,
+		      GdkDragContext *context,
+		      guint           time,
+		      gpointer        user_data)
+{
+	fr_window_clear_drop_highlight ((FrWindow *) user_data);
+}
+
+/* Color of the frame drawn around the drop target folder.
+ * Change the value of "border" to taste. */
+static void
+fr_window_install_drop_style (void)
+{
+	static gsize     installed = 0;
+	GtkCssProvider  *provider;
+
+	if (! g_once_init_enter (&installed))
+		return;
+
+	provider = gtk_css_provider_new ();
+	gtk_css_provider_load_from_data (provider,
+					 "treeview.view.dnd { border: 2px solid #e66100; }",
+					 -1, NULL);
+	gtk_style_context_add_provider_for_screen (gdk_screen_get_default (),
+						   GTK_STYLE_PROVIDER (provider),
+						   GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+	g_object_unref (provider);
+
+	g_once_init_leave (&installed, 1);
+}
+
+static gboolean
 fr_window_drag_motion (GtkWidget      *widget,
 		       GdkDragContext *context,
 		       gint            x,
@@ -3930,10 +4089,30 @@ fr_window_drag_motion (GtkWidget      *widget,
 		       gpointer        user_data)
 {
 	FrWindow  *window = user_data;
+	GtkWidget *source;
+	char      *destination_folder = NULL;
 
-	if ((gtk_drag_get_source_widget (context) == window->priv->list_view)
-	    || (gtk_drag_get_source_widget (context) == window->priv->tree_view))
-	{
+	source = gtk_drag_get_source_widget (context);
+
+	/* Allow internal file-list drags only when hovering over a folder. */
+	if (source == window->priv->list_view) {
+		if ((window->priv->activity_ref > 0)
+		    || ! fr_window_get_drop_folder (window, widget, x, y,
+						    &destination_folder))
+		{
+			fr_window_clear_drop_highlight (window);
+			gdk_drag_status (context, 0, time);
+			return TRUE;
+		}
+
+		g_free (destination_folder);
+		fr_window_set_drop_highlight (window, widget, x, y);
+		gdk_drag_status (context, GDK_ACTION_COPY, time);
+		return TRUE;
+	}
+
+	/* Keep the existing rejection of folder-tree-originated drags. */
+	if (source == window->priv->tree_view) {
 		gdk_drag_status (context, 0, time);
 		return FALSE;
 	}
@@ -3986,12 +4165,96 @@ fr_window_drag_data_received  (GtkWidget          *widget,
 	GList     *list;
 	gboolean   one_file;
 	gboolean   is_an_archive;
+	GtkWidget *source;
+	char      *destination_folder = NULL;
 
 	debug (DEBUG_INFO, "::DragDataReceived -->\n");
 
-	if ((gtk_drag_get_source_widget (context) == window->priv->list_view)
-	    || (gtk_drag_get_source_widget (context) == window->priv->tree_view))
-	{
+	source = gtk_drag_get_source_widget (context);
+
+	/* Handle a drag originating from the archive file list. */
+	if (source == window->priv->list_view) {
+		FrClipboardData *dnd_data;
+
+		fr_window_clear_drop_highlight (window);
+
+		if ((window->priv->activity_ref > 0)
+		    || (gtk_selection_data_get_length (data) < 0)
+		    || (gtk_selection_data_get_format (data) != 8)
+		    || (gtk_selection_data_get_target (data) != XFR_ATOM)
+		    || ! fr_window_get_drop_folder (window, widget, x, y,
+						    &destination_folder))
+		{
+			g_free (destination_folder);
+			gtk_drag_finish (context, FALSE, FALSE, time);
+			return;
+		}
+
+		dnd_data = get_clipboard_data_from_selection_data (
+			window,
+			(char *) gtk_selection_data_get_data (data));
+
+		/* Never move a folder into itself or one of its subfolders.
+		 *
+		 * The entry names have no leading slash, while the destination
+		 * folder starts with one ("/a/b/"), so compare without it.
+		 *
+		 * The folder that is being moved is found from the first path
+		 * component of each entry below the current folder, so this works
+		 * even when the archive has no entry (or no trailing slash) for the
+		 * folder itself, as with some tar and 7z archives. */
+		{
+			const char *destination_relative = destination_folder + 1;
+			size_t      base_length = strlen (dnd_data->base_dir) - 1;
+			GList      *scan;
+			gboolean    invalid = FALSE;
+
+			for (scan = dnd_data->files; scan != NULL; scan = scan->next) {
+				const char *name = (const char *) scan->data;
+				const char *relative;
+				const char *slash;
+				char       *moved_folder;
+
+				if (strlen (name) <= base_length)
+					continue;
+
+				relative = name + base_length;
+				slash = strchr (relative, '/');
+				if (slash != NULL)
+					/* "a/b/c" below the current folder: "a/" is moved. */
+					moved_folder = g_strndup (name, (slash - name) + 1);
+				else
+					/* A file, or a folder entry without a trailing slash. */
+					moved_folder = g_strconcat (name, "/", NULL);
+
+				if (g_str_has_prefix (destination_relative, moved_folder))
+					invalid = TRUE;
+
+				g_free (moved_folder);
+
+				if (invalid)
+					break;
+			}
+
+			if (invalid) {
+				fr_clipboard_data_unref (dnd_data);
+				g_free (destination_folder);
+				gtk_drag_finish (context, FALSE, FALSE, time);
+				return;
+			}
+		}
+
+		/* Internal moves are distinct from clipboard cut/paste. */
+		dnd_data->op = FR_CLIPBOARD_OP_MOVE;
+		dnd_data->current_dir = destination_folder;
+
+		gtk_drag_finish (context, TRUE, FALSE, time);
+		fr_window_paste_from_clipboard_data (window, dnd_data);
+		return;
+	}
+
+	/* Preserve the existing rejection of folder-tree-originated drags. */
+	if (source == window->priv->tree_view) {
 		gtk_drag_finish (context, FALSE, FALSE, time);
 		return;
 	}
@@ -5338,6 +5601,11 @@ fr_window_construct (FrWindow *window)
 			  "drag_motion",
 			  G_CALLBACK (fr_window_drag_motion),
 			  window);
+	g_signal_connect (G_OBJECT (window),
+			  "drag_leave",
+			  G_CALLBACK (fr_window_drag_leave),
+			  window);
+	fr_window_install_drop_style ();
 
 	g_signal_connect (G_OBJECT (window),
 			  "key_press_event",
@@ -5789,6 +6057,19 @@ fr_window_construct (FrWindow *window)
 	window->priv->folder_popup_menu = (GtkWidget *)gtk_builder_get_object (ui, "FolderPopupMenu");
 	window->priv->sidebar_folder_popup_menu = (GtkWidget *)gtk_builder_get_object (ui, "SidebarFolderPopupMenu");
 
+
+	/* Popup menus are separate widgets. Register the window action group
+	 * on each menu so that win.CreateEmptyFolder can be resolved. */
+	gtk_widget_insert_action_group (window->priv->file_popup_menu,
+					"win",
+					window->priv->actions);
+	gtk_widget_insert_action_group (window->priv->folder_popup_menu,
+					"win",
+					window->priv->actions);
+	gtk_widget_insert_action_group (window->priv->sidebar_folder_popup_menu,
+					"win",
+					window->priv->actions);
+
 	/* Create the statusbar. */
 
 	window->priv->statusbar = gtk_statusbar_new ();
@@ -6209,6 +6490,64 @@ fr_window_archive_add_files (FrWindow *window,
 	path_list_free (files);
 	g_free (base_dir);
 	g_object_unref (base);
+}
+
+gboolean
+fr_window_archive_add_empty_folder (FrWindow   *window,
+				    const char *folder_name)
+{
+	char *temp_dir;
+	char *folder_path;
+	GFile *file;
+	GList *file_list = NULL;
+	GError *error = NULL;
+
+	g_return_val_if_fail (FR_IS_WINDOW (window), FALSE);
+	g_return_val_if_fail (folder_name != NULL, FALSE);
+
+	if (*folder_name == '\0'
+	    || strcmp (folder_name, ".") == 0
+	    || strcmp (folder_name, "..") == 0
+	    || strchr (folder_name, '/') != NULL
+	    || strchr (folder_name, '\\') != NULL)
+		return FALSE;
+
+	if (window->archive == NULL
+	    || window->archive->read_only
+	    || window->priv->empty_folder_temp_dir != NULL)
+		return FALSE;
+
+	temp_dir = g_dir_make_tmp ("engrampa-empty-folder-XXXXXX", &error);
+	if (temp_dir == NULL) {
+		g_warning ("Could not create temporary directory: %s",
+			   error != NULL ? error->message : "unknown error");
+		g_clear_error (&error);
+		return FALSE;
+	}
+
+	folder_path = g_build_filename (temp_dir, folder_name, NULL);
+
+	if (g_mkdir (folder_path, 0700) != 0) {
+		g_warning ("Could not create empty folder: %s", folder_path);
+		remove_local_directory (temp_dir);
+		g_free (folder_path);
+		g_free (temp_dir);
+		return FALSE;
+	}
+
+	/* Keep the temporary directory alive while the archive is updated. */
+	window->priv->empty_folder_temp_dir = temp_dir;
+
+	file = g_file_new_for_path (folder_path);
+	file_list = g_list_append (file_list, file);
+
+	fr_window_archive_add_files (window, file_list, FALSE);
+
+	g_list_free (file_list);
+	g_object_unref (file);
+	g_free (folder_path);
+
+	return TRUE;
 }
 
 void
@@ -7777,11 +8116,31 @@ add_pasted_files (FrWindow        *window,
 	for (scan = data->files; scan; scan = scan->next) {
 		const char *old_name = (char*) scan->data;
 		char       *new_name = g_build_filename (current_dir_relative, old_name + strlen (data->base_dir) - 1, NULL);
+		char       *old_path;
+		gboolean    is_folder;
 
-		/* skip folders */
+		/* Folders are not moved, their content is moved one file at a
+		 * time.  Not every archive type puts a trailing slash on the
+		 * folder entries, so also look at the extracted files: moving a
+		 * folder onto the folder that already exists at the destination
+		 * would put it inside of it. */
 
-		if ((strcmp (old_name, new_name) != 0)
-		    && (old_name[strlen (old_name) - 1] != '/'))
+		old_path = g_build_filename (data->tmp_dir,
+					     (old_name[0] == '/') ? old_name + 1 : old_name,
+					     NULL);
+		is_folder = (old_name[strlen (old_name) - 1] == '/')
+			    || g_file_test (old_path, G_FILE_TEST_IS_DIR);
+		g_free (old_path);
+
+		if (is_folder) {
+			/* Make sure the destination folder exists, even if it
+			 * is empty. */
+			char *new_path = g_build_filename (data->tmp_dir, new_name, NULL);
+
+			g_mkdir_with_parents (new_path, 0700);
+			g_free (new_path);
+		}
+		else if (strcmp (old_name, new_name) != 0)
 		{
 			fr_process_begin_command (window->archive->process, "mv");
 			fr_process_set_working_dir (window->archive->process, data->tmp_dir);
@@ -7866,7 +8225,8 @@ copy_from_archive_action_performed_cb (FrArchive   *archive,
 		break;
 
 	case FR_ACTION_EXTRACTING_FILES:
-		if (window->priv->clipboard_data->op == FR_CLIPBOARD_OP_CUT) {
+		if ((window->priv->clipboard_data->op == FR_CLIPBOARD_OP_CUT)
+		    || (window->priv->clipboard_data->op == FR_CLIPBOARD_OP_MOVE)) {
 			fr_process_clear (window->priv->copy_from_archive->process);
 			fr_archive_remove (window->priv->copy_from_archive,
 					   window->priv->clipboard_data->files,

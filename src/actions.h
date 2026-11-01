@@ -65,6 +65,10 @@ void activate_action_add_folder                 (GSimpleAction *action,
                                                  GVariant      *parameter,
                                                  gpointer       data);
 
+void activate_action_create_empty_folder        (GSimpleAction *action,
+                                                 GVariant      *parameter,
+                                                 gpointer       data);
+
 void activate_action_extract                    (GSimpleAction *action,
                                                  GVariant      *parameter,
                                                  gpointer       data);

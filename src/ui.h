@@ -45,6 +45,7 @@ static GActionEntry action_entries[] = {
 	{ "Find", activate_action_find, NULL, NULL, NULL, { 0 } },
 	{ "AddFiles", activate_action_add_files, NULL, NULL, NULL, { 0 } },
 	{ "AddFolder", activate_action_add_folder, NULL, NULL, NULL, { 0 } },
+	{ "CreateEmptyFolder", activate_action_create_empty_folder, NULL, NULL, NULL, { 0 } },
 	{ "Password", activate_action_password, NULL, NULL, NULL, { 0 } },
 	/* ViewMenu */
 	{ "ViewToolbar", activate_toggle, NULL, "true", activate_action_view_toolbar, { 0 } },
