@@ -4596,12 +4596,16 @@ selection_changed_cb (GtkTreeSelection *selection,
 	return FALSE;
 }
 
-static void
+static gboolean
 fr_window_delete_event_cb (GtkWidget *caller,
 			   GdkEvent  *event,
 			   FrWindow  *window)
 {
 	fr_window_close (window);
+
+	/* The window is destroyed by fr_window_close() when it is idle, stop
+	 * the default handler so that it is not destroyed twice. */
+	return TRUE;
 }
 
 static gboolean
