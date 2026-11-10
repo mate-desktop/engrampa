@@ -124,11 +124,11 @@ msgstr "7-Zip-komprimerad fil (.7z)"
 
 #: data/engrampa.appdata.xml.in.in:21
 msgid "WinAce Compressed File (.ace)"
-msgstr "WinAce komprimerad fil  (.ace)"
+msgstr "WinAce-komprimerad fil (.ace)"
 
 #: data/engrampa.appdata.xml.in.in:22
 msgid "ALZip Compressed File (.alz)"
-msgstr "ALZip komprimerad fil  (.alz)"
+msgstr "ALZip-komprimerad fil (.alz)"
 
 #: data/engrampa.appdata.xml.in.in:23
 msgid "AIX Small Indexed Archive (.ar)"
@@ -215,10 +215,7 @@ msgid ""
 "Single files compressed with gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
 "(.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip(.rz), xz "
 "(.xz)."
-msgstr ""
-"Enstaka filer komprimerade med gzip (.gz), brotli (.br), bzip (.bz), bzip2 "
-"(.bz2), komprimerade (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo ), "
-"rzip(.rz), xz (.xz). "
+msgstr "Enstaka filer komprimerade med gzip (.gz), brotli (.br), bzip (.bz), bzip2 (.bz2), compress (.Z), lrzip (.lrz), lzip (.lz), lzop (.lzo), rzip (.rz) och xz (.xz)."
 
 #: data/engrampa.appdata.xml.in.in:46
 msgid ""
@@ -241,7 +238,7 @@ msgstr "Skapa och ändra ett arkiv"
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/engrampa.desktop.in.in:17
 msgid "MATE;archive;manager;compression;"
-msgstr "MATE;arkiv;hanterare;komprimering; "
+msgstr "MATE;arkiv;hanterare;komprimering;"
 
 #: data/org.mate.engrampa.gschema.xml.in:38
 msgid "How to sort files"
@@ -558,7 +555,7 @@ msgstr ""
 
 #: src/actions.c:867
 msgid "Engrampa is an archive manager for the MATE Desktop Environment."
-msgstr "Engrampa är en arkivhanterare för skrivbordsmiljön MATE"
+msgstr "Engrampa är en arkivhanterare för skrivbordsmiljön MATE."
 
 #: src/actions.c:870
 msgid "translator-credits"
@@ -913,7 +910,7 @@ msgstr "Tar komprimerat med bzip"
 
 #: src/fr-init.c:82
 msgid "Rar Archived Comic Book"
-msgstr "Rar-arkiverad serietidning "
+msgstr "RAR-arkiverad serietidning"
 
 #: src/fr-init.c:83
 msgid "Zip Archived Comic Book"
@@ -989,7 +986,7 @@ msgstr "Självuppackande zip"
 
 #: src/fr-init.c:101
 msgid "Windows Imaging Format"
-msgstr "Windows avbildsformat "
+msgstr "Windows avbildningsformat"
 
 #: src/fr-init.c:102
 msgid "Rar"
@@ -1084,7 +1081,7 @@ msgstr "_Fortsätt"
 
 #: src/fr-window.c:2199 src/fr-window.c:2792
 msgid "Please wait…"
-msgstr "Vänta..."
+msgstr "Vänta…"
 
 #. Translators: %s is a filename
 #: src/fr-window.c:2273 src/fr-window.c:2311
@@ -1644,7 +1641,7 @@ msgstr "_Arkiv"
 
 #: src/ui/menus-toolbars.ui:205
 msgid "New…"
-msgstr "Ny..."
+msgstr "Ny…"
 
 #: src/ui/menus-toolbars.ui:206
 msgid "Create a new archive"
@@ -1652,7 +1649,7 @@ msgstr "Skapa ett nytt arkiv"
 
 #: src/ui/menus-toolbars.ui:217
 msgid "Open…"
-msgstr "Öppna..."
+msgstr "Öppna…"
 
 #: src/ui/menus-toolbars.ui:218
 msgid "Open archive"
@@ -1677,7 +1674,7 @@ msgstr "Spara det aktuella arkivet med ett annat namn"
 #: src/ui/menus-toolbars.ui:257 src/ui/menus-toolbars.ui:767
 #: src/ui/menus-toolbars.ui:842 src/ui/menus-toolbars.ui:917
 msgid "_Extract…"
-msgstr "_Extrahera..."
+msgstr "_Extrahera…"
 
 #: src/ui/menus-toolbars.ui:258 src/ui/menus-toolbars.ui:660
 #: src/ui/menus-toolbars.ui:768
@@ -1736,7 +1733,7 @@ msgstr "Klistra in urklipp"
 #: src/ui/menus-toolbars.ui:361 src/ui/menus-toolbars.ui:808
 #: src/ui/menus-toolbars.ui:883 src/ui/menus-toolbars.ui:958
 msgid "_Rename…"
-msgstr "_Döp om..."
+msgstr "_Döp om…"
 
 #: src/ui/menus-toolbars.ui:362 src/ui/menus-toolbars.ui:809
 #: src/ui/menus-toolbars.ui:884 src/ui/menus-toolbars.ui:959
@@ -1766,11 +1763,11 @@ msgstr "Avmarkera alla filer"
 
 #: src/ui/menus-toolbars.ui:417
 msgid "Find…"
-msgstr "Hitta..."
+msgstr "Hitta…"
 
 #: src/ui/menus-toolbars.ui:431
 msgid "_Add Files…"
-msgstr "_Lägg till filer..."
+msgstr "_Lägg till filer…"
 
 #: src/ui/menus-toolbars.ui:432 src/ui/menus-toolbars.ui:673
 msgid "Add files to the archive"
@@ -1778,7 +1775,7 @@ msgstr "Lägg till filer till arkivet"
 
 #: src/ui/menus-toolbars.ui:443
 msgid "Add a _Folder…"
-msgstr "Lägg till en _Mapp..."
+msgstr "Lägg till en _mapp…"
 
 #: src/ui/menus-toolbars.ui:444 src/ui/menus-toolbars.ui:681
 msgid "Add a folder to the archive"
@@ -1786,7 +1783,7 @@ msgstr "Lägg till en mapp till arkivet"
 
 #: src/ui/menus-toolbars.ui:460
 msgid "Pass_word…"
-msgstr "Lösen_ord..."
+msgstr "Lösen_ord…"
 
 #: src/ui/menus-toolbars.ui:461
 msgid "Specify a password for this archive"
